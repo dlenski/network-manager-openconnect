@@ -1,3 +1,8 @@
+2008-12-15  Dan Williams  <dcbw@redhat.com>
+
+	* src/nm-openconnect-service-openconnect-helper.c
+		- (main): MTU entry in IP4 config hash is supposed to be a uint
+
 2008-11-26  David Woodhouse <dwmw2@infradead.org>
 
 	* New files, copied from vpnc support.

@@ -369,9 +369,19 @@ main (int argc, char *argv[])
 		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_BANNER, val);
 
 	/* MTU  */
-	val = str_to_gvalue (getenv ("INTERNAL_IP4_MTU"), TRUE);
-	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_MTU, val);
+	tmp = getenv ("INTERNAL_IP4_MTU");
+	if (tmp && strlen (tmp)) {
+		long int mtu;
+
+		errno = 0;
+		mtu = strtol (tmp, NULL, 10);
+		if (errno || mtu < 0 || mtu > 20000) {
+			nm_warning ("Ignoring invalid tunnel MTU '%s'", tmp);
+		} else {
+			val = uint_to_gvalue ((guint32) mtu);
+			g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_MTU, val);
+		}
+	}
 
 	/* Send the config info to nm-openconnect-service */
 	send_ip4_config (connection, config);
