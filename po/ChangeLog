@@ -1,3 +1,8 @@
+2008-12-16  Gabor Kelemen  <kelemeng@gnome.hu>
+
+	* LINGUAS: First! :)
+	* hu.po: Translation added.
+
 2008-11-26  David Woodhouse <dwmw2@infradead.org>
 
 	* LINGUAS: Empty file; no translations yet.
