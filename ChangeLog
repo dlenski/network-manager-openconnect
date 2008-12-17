@@ -2,6 +2,13 @@
 
 	Patch from David Woodhouse <dwmw2@infradead.org>
 
+	* COPYING
+		-add
+
+2008-12-17  Dan Williams  <dcbw@redhat.com>
+
+	Patch from David Woodhouse <dwmw2@infradead.org>
+
 	* configure.in
 		- Remove libgnomeui from configure.in. We don't need it.
 
