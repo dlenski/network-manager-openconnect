@@ -1,3 +1,8 @@
+2008-12-19  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Added Swedish translation
+	* LINGUAS: Added sv
+
 2008-12-16  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* LINGUAS: First! :)
