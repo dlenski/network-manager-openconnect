@@ -1,3 +1,8 @@
+2008-12-20  Mario Blättermann <mariobl@svn.gnome.org>
+
+	* de.po: Added German translation
+	* LINGUAS: Added de
+
 2008-12-19  Daniel Nylander <po@danielnylander.se>
 
 	* sv.po: Added Swedish translation
