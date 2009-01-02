@@ -1,3 +1,8 @@
+2009-01-02  Simos Xenitellis  <simos@gnome.org>
+
+	* el.po: Added Greek translation by Evgenia Petoumenou.
+	* LINGUAS: Added el.
+
 2008-12-29  Leonardo Ferreira Fontenelle  <leonardof@gnome.org>
 
 	* LINGUAS: Added pt_BR.
