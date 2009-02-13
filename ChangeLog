@@ -1,3 +1,8 @@
+2009-02-13  Dan Williams  <dcbw@redhat.com>
+
+	* nm-openconnect-service.conf
+		- Clean up dbus permissions; retain deny for compat with older dbus
+
 2008-12-17  Dan Williams  <dcbw@redhat.com>
 
 	Patch from David Woodhouse <dwmw2@infradead.org>
