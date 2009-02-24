@@ -1,3 +1,8 @@
+2009-02-24 Kenneth Nielsen <k.nielsen81@gmail.com>
+
+	* LINGUAS: Added "da" to list of languages
+	* da.po: Updated Danish translation by Mads Lundby
+
 2009-02-20  Nickolay V. Shmyrev  <nshmyrev@yandex.ru>
 
 	* ru.po: Added Russian translation by Artem Popov.
