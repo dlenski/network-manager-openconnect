@@ -1,3 +1,8 @@
+2009-03-06  Sandeep Shedmake  <sshedmak@redhat.com>
+
+	* LINGUAS: Added "mr" locale.
+	* mr.po: Added Marathi Translations.
+
 2009-02-24 Kenneth Nielsen <k.nielsen81@gmail.com>
 
 	* LINGUAS: Added "da" to list of languages
