@@ -1,0 +1,94 @@
+# Italian translation of NetworkManager-OpenConnect.
+# Copyright (C) 2006, 2007, 2008, 2009 the NetworkManager-OpenConnect'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the NetworkManager-OpenConnect package.
+# Francesco Marletta <francesco.marletta@tiscali.it>, 2006, 2007, 2008, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: NetworkManager-OpenConnect 0.7.1\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2009-03-06 05:30+0000\n"
+"PO-Revision-Date: 2009-03-07 23:44+0100\n"
+"Last-Translator: Francesco Marletta <francesco.marletta@tiscali.it>\n"
+"Language-Team: italian <tp@lists.linux.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../properties/auth-helpers.c:69
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Scegliere un certificato di una Certificate Authority..."
+
+#: ../properties/auth-helpers.c:89
+msgid "Choose your personal certificate..."
+msgstr "Scegliere un certificato personale..."
+
+#: ../properties/auth-helpers.c:107
+msgid "Choose your private key..."
+msgstr "Scegliere una chiave privata..."
+
+#: ../properties/auth-helpers.c:394
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Cetificati PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN compatibile con Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "VPN Compatibile con Cisco AnyConnect SSL. "
+
+#: ../properties/nm-openconnect.c:232
+msgid "Password / SecurID"
+msgstr "Password / SecurID"
+
+#: ../properties/nm-openconnect.c:244
+msgid "Certificate (TLS)"
+msgstr "Certificato (TLS)"
+
+#: ../properties/nm-openconnect.c:253
+msgid "Certificate (TLS) with TPM"
+msgstr "Certificato (TLS) con TPM"
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>Authentication</b>"
+msgstr "<b>Autenticazione</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "<b>General</b>"
+msgstr "<b>Generale</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CA Certificate:"
+msgstr "Certificato CA:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private Key:"
+msgstr "Chiave private:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "Seleziona un file"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Type:"
+msgstr "Tipo:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "User Certificate:"
+msgstr "Certificato utente:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "User name:"
+msgstr "Nome utente:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Gateway:"
+msgstr "_Gateway:"

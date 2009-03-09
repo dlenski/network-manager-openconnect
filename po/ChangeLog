@@ -1,3 +1,8 @@
+2009-03-09  Milo Casagrande  <milo@ubuntu.com>
+
+	* it.po: Added Italian translation by Francesco Marletta.
+	* LINGUAS: Added it.
+
 2009-03-06  Sandeep Shedmake  <sshedmak@redhat.com>
 
 	* LINGUAS: Added "mr" locale.
