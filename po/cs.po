@@ -1,0 +1,96 @@
+# Czech translation of network-manager-openconnect.
+# Copyright (C) 2008 the author(s) of network-manager-openconnect.
+# This file is distributed under the same license as the network-manager-openconnect package.
+# Zdeněk Hataš <zdenek.hatas@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-12 19:22+0100\n"
+"PO-Revision-Date: 2009-03-12 01:30+0000\n"
+"Last-Translator: Zdeněk Hataš <zdenek.hatas@gmail.com>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+
+#: ../properties/auth-helpers.c:69
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Zvolit certifikát certifikační autority..."
+
+#: ../properties/auth-helpers.c:89
+msgid "Choose your personal certificate..."
+msgstr "Zvolte svůj osobní certifikát..."
+
+#: ../properties/auth-helpers.c:107
+msgid "Choose your private key..."
+msgstr "Zvolte svůj soukromý klíč..."
+
+#: ../properties/auth-helpers.c:394
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certifikáty PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN kompatibilní s Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Kompatibilní s Cisco AnyConnect SSL VPN."
+
+#: ../properties/nm-openconnect.c:232
+msgid "Password / SecurID"
+msgstr "Heslo / SecurID:"
+
+#: ../properties/nm-openconnect.c:244
+msgid "Certificate (TLS)"
+msgstr "Certifikát (TLS)"
+
+#: ../properties/nm-openconnect.c:253
+msgid "Certificate (TLS) with TPM"
+msgstr "Certifikát (TLS) s TPM"
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+#, fuzzy
+msgid " "
+msgstr " "
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>Authentication</b>"
+msgstr "<b>Autentizace<b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "<b>General</b>"
+msgstr "<b>Obecné</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CA Certificate:"
+msgstr "Certifikát CA:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private Key:"
+msgstr "Soukromý klíč"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "Zvolte soubor"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Type:"
+msgstr "Typ:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "User Certificate:"
+msgstr "Certifikát uživatele:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "User name:"
+msgstr "Uživ. jméno:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Gateway:"
+msgstr "_Brána:"
