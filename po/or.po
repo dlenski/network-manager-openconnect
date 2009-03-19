@@ -1,0 +1,95 @@
+# translation of or.po to Oriya
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Manoj Kumar Giri <mgiri@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: or\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2009-03-14 21:15+0000\n"
+"PO-Revision-Date: 2009-03-19 15:22+0530\n"
+"Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
+"Language-Team: Oriya <oriya-it@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+
+#: ../properties/auth-helpers.c:69
+msgid "Choose a Certificate Authority certificate..."
+msgstr "ଗୋଟିଏ ପ୍ରମାଣପତ୍ର ଅଧିକାରୀ ପ୍ରମାଣପତ୍ର ବାଛନ୍ତୁ..."
+
+#: ../properties/auth-helpers.c:89
+msgid "Choose your personal certificate..."
+msgstr "ଆପଣଙ୍କର ବ୍ୟକ୍ତିଗତ ପ୍ରମାଣପତ୍ରକୁ ବାଛନ୍ତୁ..."
+
+#: ../properties/auth-helpers.c:107
+msgid "Choose your private key..."
+msgstr "ଆପଣଙ୍କର ବ୍ୟକ୍ତିଗତ କି କୁ ବାଛନ୍ତୁ..."
+
+#: ../properties/auth-helpers.c:394
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "PEM ପ୍ରମାଣପତ୍ରଗୁଡ଼ିକ (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Cisco ଯେକୌଣସି ସଂଯୋଗ ସୁସଂଗତ VPN (ଖୋଲା ସଂଯୋଗ)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Cisco ଯେକୌଣସି ସଂଯୋଗ SSL VPN ସହିତ ସୁସଂଗତ।"
+
+#: ../properties/nm-openconnect.c:232
+msgid "Password / SecurID"
+msgstr "ପ୍ରବେଶ ସଂକେତ / ସୁରକ୍ଷିତ ID"
+
+#: ../properties/nm-openconnect.c:244
+msgid "Certificate (TLS)"
+msgstr "ପ୍ରମାଣପତ୍ର (TLS)"
+
+#: ../properties/nm-openconnect.c:253
+msgid "Certificate (TLS) with TPM"
+msgstr "TPM ସହିତ ପ୍ରମାଣପତ୍ର (TLS)"
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>Authentication</b>"
+msgstr "<b>ବୈଧିକରଣ</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "<b>General</b>"
+msgstr "<b>ସାଧାରଣ</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CA Certificate:"
+msgstr "CA ପ୍ରମାଣପତ୍ର:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private Key:"
+msgstr "ବ୍ୟକ୍ତିଗତ କି:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "ଗୋଟିଏ ଫାଇଲ ବାଛନ୍ତୁ"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Type:"
+msgstr "ପ୍ରକାର:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "User Certificate:"
+msgstr "ଚାଳକ ପ୍ରମାଣପତ୍ର:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "User name:"
+msgstr "ଚାଳକ ନାମ:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Gateway:"
+msgstr "ପ୍ରବେଶ ଦ୍ୱାର (_G):"
+
