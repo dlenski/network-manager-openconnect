@@ -8,9 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: networkmanager openconnect\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-01-26 19:46+0000\n"
-"PO-Revision-Date: 2009-02-09 01:10+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2009-02-11 11:38+0000\n"
+"PO-Revision-Date: 2009-03-26 18:57+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -19,80 +20,59 @@ msgstr ""
 "X-Poedit-Language: Estonian\n"
 "X-Poedit-Country: Estonia\n"
 
-#: ../properties/auth-helpers.c:69
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Sertifikaadikeskuse serdi valimine..."
 
-#: ../properties/auth-helpers.c:89
 msgid "Choose your personal certificate..."
 msgstr "Vali isiklik sertifikaat..."
 
-#: ../properties/auth-helpers.c:107
 msgid "Choose your private key..."
 msgstr "Vali privaatvõti..."
 
-#: ../properties/auth-helpers.c:394
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM sertifikaadid (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect.c:50
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "Cisco AnyConnect-iga ühilduv VPN (openconnect)"
 
-#: ../properties/nm-openconnect.c:51
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Cisco AnyConnect SSL VPN-iga ühilduv."
 
-#: ../properties/nm-openconnect.c:232
 msgid "Password / SecurID"
 msgstr "Parool / SecurID"
 
-#: ../properties/nm-openconnect.c:244
 msgid "Certificate (TLS)"
 msgstr "Sert (TLS)"
 
-#: ../properties/nm-openconnect.c:253
 msgid "Certificate (TLS) with TPM"
 msgstr "Sert (TLS) TPM-iga"
 
-#: ../properties/nm-openconnect-dialog.glade.h:1
-#, fuzzy
 msgid " "
-msgstr ""
+msgstr " "
 
-#: ../properties/nm-openconnect-dialog.glade.h:2
 msgid "<b>Authentication</b>"
 msgstr "<b>Autentimine</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Üldine</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:4
 msgid "CA Certificate:"
 msgstr "Sertifikaadikeskuse sert:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
 msgid "Private Key:"
 msgstr "Privaatvõti:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Vali fail"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
 msgid "Type:"
 msgstr "Tüüp:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "User Certificate:"
 msgstr "Kasutaja sertifikaat:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "User name:"
 msgstr "Kasutajanimi:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Gateway:"
 msgstr "_Gateway:"
-
