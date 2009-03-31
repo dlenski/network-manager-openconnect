@@ -1,3 +1,10 @@
+2009-03-30 David Woodhouse <dwmw2@infradead.org>
+
+	* src/nm-openconnect-service.c
+	  src/nm-openconnect-service.h
+		- Add 'autoconnect' and 'lasthost' options to remember the last used
+			host, and to automatically connect to that host if desired
+
 2009-02-13  Dan Williams  <dcbw@redhat.com>
 
 	* nm-openconnect-service.conf

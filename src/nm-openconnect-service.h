@@ -27,6 +27,8 @@
 #define NM_OPENCONNECT_KEY_USERNAME "username"
 #define NM_OPENCONNECT_KEY_XMLCONFIG "xmlconfig"
 #define NM_OPENCONNECT_KEY_CERTSIGS "certsigs"
+#define NM_OPENCONNECT_KEY_LASTHOST "lasthost"
+#define NM_OPENCONNECT_KEY_AUTOCONNECT "autoconnect"
 
 #define NM_OPENCONNECT_AUTHTYPE_CERT "cert"
 #define NM_OPENCONNECT_AUTHTYPE_CERT_TPM "cert-tpm"
