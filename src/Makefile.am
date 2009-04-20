@@ -4,7 +4,6 @@ AM_CPPFLAGS = \
 	$(DBUS_CFLAGS) \
 	$(GTHREAD_CFLAGS) \
 	$(NM_UTILS_CFLAGS) \
-	-DDBUS_API_SUBJECT_TO_CHANGE \
 	-DG_DISABLE_DEPRECATED \
 	-DBINDIR=\"$(bindir)\" \
 	-DPREFIX=\""$(prefix)"\" \
