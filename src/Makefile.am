@@ -24,8 +24,7 @@ nm_openconnect_service_SOURCES = \
 nm_openconnect_service_LDADD = \
 				$(DBUS_LIBS) \
 				$(GTHREAD_LIBS) \
-				$(NM_UTILS_LIBS) \
-				-lnm_glib_vpn
+				$(NM_UTILS_LIBS)
 
 
 nm_openconnect_service_openconnect_helper_SOURCES = \
