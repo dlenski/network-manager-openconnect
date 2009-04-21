@@ -25,3 +25,5 @@ EXTRA_DIST = nm-openconnect-service.name.in \
 
 CLEANFILES = $(nmvpnservice_DATA) $(desktop_DATA) *~
 DISTCLEANFILES = intltool-extract intltool-merge intltool-update
+
+ACLOCAL_AMFLAGS = -I m4

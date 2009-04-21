@@ -5,6 +5,8 @@ AC_CONFIG_AUX_DIR(.)
 AM_INIT_AUTOMAKE([subdir-objects])
 AM_MAINTAINER_MODE
 
+AC_CONFIG_MACRO_DIR([m4])
+
 AC_CONFIG_HEADERS([config.h])
 
 dnl
