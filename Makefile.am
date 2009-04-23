@@ -1,9 +1,9 @@
 AUTOMAKE_OPTIONS = foreign
 
-if WITH_GNOME
-SUBDIRS = src properties po
-else
 SUBDIRS = src
+
+if WITH_GNOME
+SUBDIRS += properties po
 endif
 
 dbusservicedir = $(sysconfdir)/dbus-1/system.d
