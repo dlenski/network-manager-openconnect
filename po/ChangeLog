@@ -1,3 +1,9 @@
+2009-04-23  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
+
+	* LINGUAS: Added zh_HK zh_TW 
+	* zh_HK.po: Added Traditional Chinese translation(Hong Kong).
+	* zh_TW.po: Added Traditional Chinese translation(Taiwan).
+
 2009-03-27  Priit Laes  <plaes at svn dot gnome dot org>
 
 	* et.po: Translation updated by Mattias Põldaru
