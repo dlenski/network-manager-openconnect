@@ -83,38 +83,7 @@ PKG_CHECK_MODULES(NM_UTILS, NetworkManager >= 0.7.0 libnm-util libnm_glib libnm_
 AC_SUBST(NM_UTILS_CFLAGS)
 AC_SUBST(NM_UTILS_LIBS)
 
-AC_ARG_ENABLE(more-warnings,
-AS_HELP_STRING([--enable-more-warnings], [Maximum compiler warnings]),
-set_more_warnings="$enableval",[
-if test -d "$srcdir/{arch}" || test -d "$srcdir/CVS"; then
-	set_more_warnings=yes
-else
-	set_more_warnings=no
-fi
-])
-AC_MSG_CHECKING(for more warnings, including -Werror)
-if test "$GCC" = "yes" -a "$set_more_warnings" != "no"; then
-	AC_MSG_RESULT(yes)
-	CFLAGS="-Wall -Werror -std=gnu89 $CFLAGS"
-
-	for option in -Wno-unused -Wno-strict-aliasing -Wno-sign-compare -Wdeclaration-after-statement -Wno-pointer-sign ; do
-		SAVE_CFLAGS="$CFLAGS"
-		CFLAGS="$CFLAGS $option"
-		AC_MSG_CHECKING([whether gcc understands $option])
-		AC_TRY_COMPILE([], [],
-			has_option=yes,
-			has_option=no,)
-		if test $has_option = no; then
-			CFLAGS="$SAVE_CFLAGS"
-		fi
-		AC_MSG_RESULT($has_option)
-		unset has_option
-		unset SAVE_CFLAGS
-	done
-	unset option
-else
-	AC_MSG_RESULT(no)
-fi
+NM_COMPILER_WARNINGS
 
 AC_CONFIG_FILES([
 Makefile
