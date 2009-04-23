@@ -188,8 +188,10 @@ validate_tls (GladeXML *xml, const char *prefix, GError **error)
 gboolean
 auth_widget_check_validity (GladeXML *xml, const char *contype, GError **error)
 {
+#if 0
 	GtkWidget *widget;
 	const char *str;
+#endif
 
 	if (!strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT) ||
 		!strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT_TPM)) {
@@ -284,10 +286,6 @@ auth_widget_update_connection (GladeXML *xml,
                                const char *contype,
                                NMSettingVPN *s_vpn)
 {
-	GtkTreeModel *model;
-	GtkTreeIter iter;
-	GtkWidget *widget;
-
 	if (!strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT) ||
 		!strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT_TPM)) {
 		update_tls (xml, "cert", s_vpn);

@@ -286,7 +286,6 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	char *str;
 	GtkTreeModel *model;
 	GtkTreeIter iter;
-	gboolean valid = FALSE;
 	const char *auth_type = NULL;
 
 	if (!check_validity (self, error))
@@ -310,10 +309,7 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	}
 
 	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
-	valid = TRUE;
-
-done:
-	return valid;
+	return TRUE;
 }
 
 static gboolean

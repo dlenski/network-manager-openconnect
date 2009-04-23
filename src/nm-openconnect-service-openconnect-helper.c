@@ -334,13 +334,13 @@ main (int argc, char *argv[])
 	/* Netmask */
 	tmp = getenv ("INTERNAL_IP4_NETMASK");
 	if (tmp && inet_pton (AF_INET, tmp, &temp_addr) > 0) {
-		GValue *val;
+		GValue *value;
 
-		val = g_slice_new0 (GValue);
-		g_value_init (val, G_TYPE_UINT);
-		g_value_set_uint (val, nm_utils_ip4_netmask_to_prefix (temp_addr.s_addr));
+		value = g_slice_new0 (GValue);
+		g_value_init (value, G_TYPE_UINT);
+		g_value_set_uint (value, nm_utils_ip4_netmask_to_prefix (temp_addr.s_addr));
 
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_PREFIX, val);
+		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_PREFIX, value);
 	}
 
 	/* DNS */

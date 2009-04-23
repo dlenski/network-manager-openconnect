@@ -337,8 +337,6 @@ real_connect (NMVPNPlugin   *plugin,
 {
 	NMSettingVPN *s_vpn;
 	gint openconnect_fd = -1;
-	gboolean success = FALSE;
-	GHashTable *secrets;
 
 	s_vpn = NM_SETTING_VPN (nm_connection_get_setting (connection, NM_TYPE_SETTING_VPN));
 	g_assert (s_vpn);
@@ -453,7 +451,8 @@ quit_mainloop (NMOPENCONNECTPlugin *plugin, gpointer user_data)
 	g_main_loop_quit ((GMainLoop *) user_data);
 }
 
-void create_persistent_tundev(void)
+static void
+create_persistent_tundev(void)
 {
 	struct passwd *pw;
 	struct ifreq ifr;
@@ -501,7 +500,8 @@ void create_persistent_tundev(void)
 	close(fd);
 }
 
-void destroy_persistent_tundev(void)
+static void
+destroy_persistent_tundev(void)
 {
 	struct ifreq ifr;
 	int fd;
