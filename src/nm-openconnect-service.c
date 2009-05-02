@@ -36,7 +36,6 @@ static const char *openconnect_binary_paths[] =
 };
 
 #define NM_OPENCONNECT_HELPER_PATH		LIBEXECDIR"/nm-openconnect-service-openconnect-helper"
-#define NM_OPENCONNECT_UDP_ENCAPSULATION_PORT	0 /* random port */
 
 typedef struct {
 	const char *name;
@@ -55,6 +54,7 @@ static ValidProperty valid_properties[] = {
 	{ NM_OPENCONNECT_KEY_PRIVKEY,     G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_CERTSIGS,    G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_LASTHOST,    G_TYPE_STRING, 0, 0 },
+	{ NM_OPENCONNECT_KEY_MTU,         G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_AUTOCONNECT, G_TYPE_BOOLEAN, 0, 0 },
 	{ NULL,                           G_TYPE_NONE, 0, 0 }
 };
@@ -236,7 +236,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	GPtrArray *openconnect_argv;
 	GSource *openconnect_watch;
 	gint	stdin_fd;
-	const char *props_vpn_gw, *props_cookie, *props_cacert;
+	const char *props_vpn_gw, *props_cookie, *props_cacert, *props_mtu;
 	
 	/* Find openconnect */
 	openconnect_binary = openconnect_binary_paths;
@@ -278,6 +278,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	}
 
 	props_cacert = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT);
+	props_mtu = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_MTU);
 
 	openconnect_argv = g_ptr_array_new ();
 	g_ptr_array_add (openconnect_argv, (gpointer) (*openconnect_binary));
@@ -285,6 +286,11 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	if (props_cacert && strlen(props_cacert)) {
 		g_ptr_array_add (openconnect_argv, (gpointer) "--cafile");
 		g_ptr_array_add (openconnect_argv, (gpointer) props_cacert);
+	}
+
+	if (props_mtu && strlen(props_mtu)) {
+		g_ptr_array_add (openconnect_argv, (gpointer) "--mtu");
+		g_ptr_array_add (openconnect_argv, (gpointer) props_mtu);
 	}
 
 	g_ptr_array_add (openconnect_argv, (gpointer) "--syslog");
