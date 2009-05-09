@@ -133,7 +133,7 @@ validate_one_property (const char *key, const char *value, gpointer user_data)
 	}
 
 	/* Did not find the property from valid_properties or the type did not match */
-	if (!info->table[i].name) {
+	if (!info->table[i].name && strncmp(key, "form:", 5)) {
 		g_set_error (info->error,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
