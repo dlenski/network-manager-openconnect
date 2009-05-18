@@ -1,7 +1,5 @@
 /* -*- Mode: C; tab-width: 5; indent-tabs-mode: t; c-basic-offset: 5 -*- */
-/* nm-openconnect-service - openconnect integration with NetworkManager
- *
- * Dan Williams <dcbw@redhat.com>
+/* NetworkManager -- Network link manager
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +15,11 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2005 Red Hat, Inc.
+ *   Copyright © 2008 - 2009 Intel Corporation.
+ *
+ * Based on nm-openconnect-vpnc.c:
+ *   Copyright © 2005 - 2008 Red Hat, Inc.
+ *   Copyright © 2007 - 2008 Novell, Inc.
  */
 
 #include <glib.h>
