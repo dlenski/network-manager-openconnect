@@ -84,6 +84,7 @@ static ValidProperty valid_properties[] = {
 static ValidProperty valid_secrets[] = {
 	{ NM_OPENCONNECT_KEY_COOKIE,  G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_GATEWAY, G_TYPE_STRING, 0, 0 },
+	{ NM_OPENCONNECT_KEY_GWCERT,  G_TYPE_STRING, 0, 0 },
 	{ NULL,                       G_TYPE_NONE, 0, 0 }
 };
 
@@ -258,7 +259,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	GPtrArray *openconnect_argv;
 	GSource *openconnect_watch;
 	gint	stdin_fd;
-	const char *props_vpn_gw, *props_cookie, *props_cacert, *props_mtu;
+	const char *props_vpn_gw, *props_cookie, *props_cacert, *props_mtu, *props_gwcert;
 	
 	/* Find openconnect */
 	openconnect_binary = openconnect_binary_paths;
@@ -298,6 +299,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 		             "No WebVPN cookie provided.");
 		return -1;
 	}
+	props_gwcert = nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_GWCERT);
 
 	props_cacert = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT);
 	props_mtu = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_MTU);
@@ -305,7 +307,10 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	openconnect_argv = g_ptr_array_new ();
 	g_ptr_array_add (openconnect_argv, (gpointer) (*openconnect_binary));
 
-	if (props_cacert && strlen(props_cacert)) {
+	if (props_gwcert && strlen(props_gwcert)) {
+		g_ptr_array_add (openconnect_argv, (gpointer) "--servercert");
+		g_ptr_array_add (openconnect_argv, (gpointer) props_gwcert);
+	} else if (props_cacert && strlen(props_cacert)) {
 		g_ptr_array_add (openconnect_argv, (gpointer) "--cafile");
 		g_ptr_array_add (openconnect_argv, (gpointer) props_cacert);
 	}
@@ -410,6 +415,10 @@ real_need_secrets (NMVPNPlugin *plugin,
 		return TRUE;
 	}
 	if (!nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_COOKIE)) {
+		*setting_name = NM_SETTING_VPN_SETTING_NAME;
+		return TRUE;
+	}
+	if (!nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_GWCERT)) {
 		*setting_name = NM_SETTING_VPN_SETTING_NAME;
 		return TRUE;
 	}
