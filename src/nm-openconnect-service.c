@@ -78,6 +78,7 @@ static ValidProperty valid_properties[] = {
 	{ NM_OPENCONNECT_KEY_LASTHOST,    G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_MTU,         G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_AUTOCONNECT, G_TYPE_BOOLEAN, 0, 0 },
+	{ NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, G_TYPE_BOOLEAN, 0, 0 },
 	{ NULL,                           G_TYPE_NONE, 0, 0 }
 };
 
