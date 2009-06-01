@@ -1,0 +1,96 @@
+# translation of network-manager-openconnect.po.master.gu.po to Gujarati
+# Gujarati translation of network-manager-openconnect.
+# Copyright (C) 2009 network-manager-openconnect's COPYRIGHT HOLDER
+# This file is distributed under the same license as the network-manager-openconnect package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect.po.master.gu\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2009-05-28 19:42+0000\n"
+"PO-Revision-Date: 2009-06-01 14:51+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ../properties/auth-helpers.c:69
+msgid "Choose a Certificate Authority certificate..."
+msgstr "પ્રમાણપત્ર સત્તા પ્રમાણપત્રને પસંદ કરો..."
+
+#: ../properties/auth-helpers.c:89
+msgid "Choose your personal certificate..."
+msgstr "તમારા વ્યક્તિગત પ્રમાણપત્રને પસંદ કરો..."
+
+#: ../properties/auth-helpers.c:107
+msgid "Choose your private key..."
+msgstr "તમારી ખાનગી કી ને પસંદ કરો..."
+
+#: ../properties/auth-helpers.c:392
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "PEM પ્રમાણપત્રો (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Cisco AnyConnect Compatible VPN (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Cisco AnyConnect SSL VPN સાથે સુસંગત"
+
+#: ../properties/nm-openconnect.c:232
+msgid "Password / SecurID"
+msgstr "પાસવર્ડ / સુરક્ષિત ID"
+
+#: ../properties/nm-openconnect.c:244
+msgid "Certificate (TLS)"
+msgstr "પ્રમાણપત્ર (TLS)"
+
+#: ../properties/nm-openconnect.c:253
+msgid "Certificate (TLS) with TPM"
+msgstr "TPM સાથે પ્રમાણપત્ર (TLS)"
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>Authentication</b>"
+msgstr "<b>સત્તાધિકરણ</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "<b>General</b>"
+msgstr "<b>સામાન્ય</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CA Certificate:"
+msgstr "CA પ્રમાણપત્ર:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private Key:"
+msgstr "ખાનગી કી:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "ફાઇલને પસંદ કરો"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Type:"
+msgstr "પ્રકાર:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "User Certificate:"
+msgstr "વપરાશકર્તા પ્રમાણપત્ર:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "User name:"
+msgstr "વપરાશકર્તા નામ:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Gateway:"
+msgstr "ગેટવે (_G):"
+
