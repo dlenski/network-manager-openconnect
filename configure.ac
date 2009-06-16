@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT(NetworkManager-openconnect, 0.7.0, dcbw@redhat.com, NetworkManager-openconnect)
+AC_INIT(NetworkManager-openconnect, 0.7.995, dcbw@redhat.com, NetworkManager-openconnect)
 AM_INIT_AUTOMAKE([subdir-objects])
 AM_MAINTAINER_MODE
 
