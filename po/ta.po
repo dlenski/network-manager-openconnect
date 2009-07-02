@@ -1,0 +1,100 @@
+# translation of network-manager-openconnect.po.master.ta.po to Tamil
+# Tamil translation of network-manager-openconnect.
+# Copyright (C) 2009 network-manager-openconnect's COPYRIGHT HOLDER
+# This file is distributed under the same license as the network-manager-openconnect package.
+#
+# ifelix <ifelix25@gmail.com>, 2009.
+# I. Felix <ifelix@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect.po.master.ta\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2009-06-16 15:54+0000\n"
+"PO-Revision-Date: 2009-07-01 15:49+0530\n"
+"Last-Translator: I. Felix <ifelix@redhat.com>\n"
+"Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
+"\n"
+"\n"
+"\n"
+
+#: ../properties/auth-helpers.c:69
+msgid "Choose a Certificate Authority certificate..."
+msgstr "சான்றிதழ் அங்கீகார சான்றிதழை தேர்ந்தெடு..."
+
+#: ../properties/auth-helpers.c:89
+msgid "Choose your personal certificate..."
+msgstr "உங்களது தனிப்பட்ட சான்றிதழை தேர்ந்தெடுக்கவும்..."
+
+#: ../properties/auth-helpers.c:107
+msgid "Choose your private key..."
+msgstr "உங்களது தனிப்பட்ட விசையை தேர்ந்தெடுக்கவும்..."
+
+#: ../properties/auth-helpers.c:392
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "PEM சான்றிதழ்கள் (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Cisco AnyConnect ஏற்ற VPN (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Cisco AnyConnect SSL VPNக்கு ஏற்றது."
+
+#: ../properties/nm-openconnect.c:232
+msgid "Password / SecurID"
+msgstr "கடவுச்சொல் / பாதுகாப்பு குறியீடு"
+
+#: ../properties/nm-openconnect.c:244
+msgid "Certificate (TLS)"
+msgstr "சான்றிதழ் (TLS)"
+
+#: ../properties/nm-openconnect.c:253
+msgid "Certificate (TLS) with TPM"
+msgstr "TPM உடன் சான்றிதழ் e (TLh "
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>Authentication</b>"
+msgstr "<b>உறுதிப்படுத்து</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "<b>General</b>"
+msgstr "<b>பொதுவான</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CA Certificate:"
+msgstr "CA சான்றிதழ்:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private Key:"
+msgstr "தனிப்பட்ட விசை:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "ஒரு கோப்பினை தேர்ந்தெடு"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Type:"
+msgstr "வகை:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "User Certificate:"
+msgstr "பயனர் சான்றிதழ்:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "User name:"
+msgstr "பயனர் பெயர்:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Gateway:"
+msgstr "கேட்வே (_G):"
+
