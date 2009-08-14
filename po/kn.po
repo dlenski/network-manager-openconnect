@@ -1,94 +1,96 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of network-manager-openconnect.po.master.kn.po to Kannada
+# Kannada translation of network-manager-openconnect.
+# Copyright (C) 2009 network-manager-openconnect's COPYRIGHT HOLDER
+# This file is distributed under the same license as the network-manager-openconnect package.
 #
-#, fuzzy
+# Shankar Prasad <svenkate@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-03-14 21:15+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: network-manager-openconnect.po.master.kn\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2009-08-03 16:51+0000\n"
+"PO-Revision-Date: 2009-08-14 11:59+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../properties/auth-helpers.c:69
 msgid "Choose a Certificate Authority certificate..."
-msgstr ""
+msgstr "ಪ್ರಮಾಣಪತ್ರ ಅಥಾರಿಟಿಯ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ..."
 
 #: ../properties/auth-helpers.c:89
 msgid "Choose your personal certificate..."
-msgstr ""
+msgstr "ನಿಮ್ಮ ವಯಕ್ತಿಕ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ..."
 
 #: ../properties/auth-helpers.c:107
 msgid "Choose your private key..."
-msgstr ""
+msgstr "ನಿಮ್ಮ ಖಾಸಗಿ ಕೀಲಿಯನ್ನು ಆರಿಸಿ..."
 
-#: ../properties/auth-helpers.c:394
+#: ../properties/auth-helpers.c:392
 msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr ""
+msgstr "PEM ಪ್ರಮಾಣಪತ್ರಗಳು (*.pem, *.crt, *.key)"
 
 #: ../properties/nm-openconnect.c:50
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr ""
+msgstr "Cisco AnyConnect ಸಹವರ್ತನೀಯ VPN (ಓಪನ್‌ಕನೆಕ್ಟ್)"
 
 #: ../properties/nm-openconnect.c:51
 msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr ""
+msgstr "Cisco AnyConnect SSL VPN ನೊಂದಿಗೆ ಸಹವರ್ತನೀಯವಾಗಿದೆ."
 
 #: ../properties/nm-openconnect.c:232
 msgid "Password / SecurID"
-msgstr ""
+msgstr "ಗುಪ್ತಪದ/ SecurID"
 
 #: ../properties/nm-openconnect.c:244
 msgid "Certificate (TLS)"
-msgstr ""
+msgstr "ಪ್ರಮಾಣಪತ್ರ (TLS)"
 
 #: ../properties/nm-openconnect.c:253
 msgid "Certificate (TLS) with TPM"
-msgstr ""
+msgstr "TPM ದೊಂದಿಗಿನ ಪ್ರಮಾಣಪತ್ರ (TLS)"
 
 #: ../properties/nm-openconnect-dialog.glade.h:1
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
 msgid "<b>Authentication</b>"
-msgstr ""
+msgstr "<b>ದೃಢೀಕರಣ</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
-msgstr ""
+msgstr "<b>ಸಾಮಾನ್ಯ</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
 msgid "CA Certificate:"
-msgstr ""
+msgstr "CA ಪ್ರಮಾಣಪತ್ರ:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
 msgid "Private Key:"
-msgstr ""
+msgstr "ಖಾಸಗಿ ಕೀಲಿ:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
-msgstr ""
+msgstr "ಒಂದು ಕಡತವನ್ನು ಆಯ್ಕೆ ಮಾಡು"
 
 #: ../properties/nm-openconnect-dialog.glade.h:7
 msgid "Type:"
-msgstr ""
+msgstr "ಬಗೆ:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "User Certificate:"
-msgstr ""
+msgstr "ಬಳಕೆದಾರ ಪ್ರಮಾಣಪತ್ರ:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "User name:"
-msgstr ""
+msgstr "ಬಳಕೆದಾರ ಹೆಸರು:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Gateway:"
-msgstr ""
+msgstr "ಗೇಟ್‌ವೇ(_G):"
+
