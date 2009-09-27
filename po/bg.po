@@ -1,0 +1,93 @@
+# Bulgarian translation of network-manager-openconnect po-file
+# Copyright (C) 2009 Krasimir Chonov <mk2616@abv.bg>.
+# This file is distributed under the same license as the network-manager-openconnect package.
+# Krasimir Chonov <mk2616@abv.bg>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-09-27 12:20+0300\n"
+"PO-Revision-Date: 2009-09-03 10:21+0200\n"
+"Last-Translator: Krasimir Chonov <mk2616@abv.bg>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../properties/auth-helpers.c:69
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Избор на сертификат CA…"
+
+#: ../properties/auth-helpers.c:89
+msgid "Choose your personal certificate..."
+msgstr "Избор на собствен сетрификат…"
+
+#: ../properties/auth-helpers.c:107
+msgid "Choose your private key..."
+msgstr "Избор на частен ключ…"
+
+#: ../properties/auth-helpers.c:392
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Сертификати във формат PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "ВЧМ съвместима със Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "ВЧМ съвместима със AnyConnect SSL."
+
+#: ../properties/nm-openconnect.c:232
+msgid "Password / SecurID"
+msgstr "Парола/SecurID"
+
+#: ../properties/nm-openconnect.c:244
+msgid "Certificate (TLS)"
+msgstr "Сертификат (TLS)"
+
+#: ../properties/nm-openconnect.c:253
+msgid "Certificate (TLS) with TPM"
+msgstr "Сертификат (TLS) с TPM"
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>Authentication</b>"
+msgstr "<b>Идентификация</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "<b>General</b>"
+msgstr "<b>Общи</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CA Certificate:"
+msgstr "Сертификат CA:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private Key:"
+msgstr "Частен ключ:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "Избор на файл"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Type:"
+msgstr "Вид:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "User Certificate:"
+msgstr "Потребителски сертификат:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "User name:"
+msgstr "Потребител:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Gateway:"
+msgstr "_Шлюз:"
