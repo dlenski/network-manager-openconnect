@@ -1,0 +1,93 @@
+# Chinese (China) translation for network-manager-openconnect.
+# Copyright (C) 2009 network-manager-openconnect's COPYRIGHT HOLDER
+# This file is distributed under the same license as the network-manager-openconnect package.
+# weitao <weitao1979@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2009-10-08 12:43+0000\n"
+"PO-Revision-Date: 2009-11-18 17:44+0800\n"
+"Last-Translator: Tao Wei <weitao1979@gmail.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../properties/auth-helpers.c:69
+msgid "Choose a Certificate Authority certificate..."
+msgstr "选择一个证书颁发机构的证书..."
+
+#: ../properties/auth-helpers.c:89
+msgid "Choose your personal certificate..."
+msgstr "选择您的个人证书..."
+
+#: ../properties/auth-helpers.c:107
+msgid "Choose your private key..."
+msgstr "选择您的私人密钥..."
+
+#: ../properties/auth-helpers.c:392
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "PEM 证书 (*.pem，*.crt，*.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Cisco AnyConnect 兼容的 VPN (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "和 Cisco AnyConnect SSL VPN 兼容。"
+
+#: ../properties/nm-openconnect.c:232
+msgid "Password / SecurID"
+msgstr "密码/SecurID"
+
+#: ../properties/nm-openconnect.c:244
+msgid "Certificate (TLS)"
+msgstr "证书 (TLS)"
+
+#: ../properties/nm-openconnect.c:253
+msgid "Certificate (TLS) with TPM"
+msgstr "使用 TPM 的证书 (TLS)"
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>Authentication</b>"
+msgstr "<b>认证</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "<b>General</b>"
+msgstr "<b>一般</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CA Certificate:"
+msgstr "CA 证书："
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private Key:"
+msgstr "私人密钥："
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "选择一个文件"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Type:"
+msgstr "类型："
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "User Certificate:"
+msgstr "用户证书："
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "User name:"
+msgstr "用户名称："
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Gateway:"
+msgstr "网关(_G)："
