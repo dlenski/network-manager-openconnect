@@ -35,8 +35,6 @@ typedef void (*ChangedCallback) (GtkWidget *widget, gpointer user_data);
 void tls_pw_init_auth_widget (GladeXML *xml,
                               GtkSizeGroup *group,
                               NMSettingVPN *s_vpn,
-                              const char *contype,
-                              const char *prefix,
                               ChangedCallback changed_cb,
                               gpointer user_data);
 
@@ -46,7 +44,7 @@ void sk_init_auth_widget (GladeXML *xml,
                           ChangedCallback changed_cb,
                           gpointer user_data);
 
-gboolean auth_widget_check_validity (GladeXML *xml, const char *contype, GError **error);
+gboolean auth_widget_check_validity (GladeXML *xml, GError **error);
 
 gboolean auth_widget_update_connection (GladeXML *xml,
                                         const char *contype,

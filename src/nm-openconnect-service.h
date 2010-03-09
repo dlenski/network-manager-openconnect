@@ -54,10 +54,7 @@
 #define NM_OPENCONNECT_KEY_MTU "mtu"
 #define NM_OPENCONNECT_KEY_AUTOCONNECT "autoconnect"
 #define NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID "pem_passphrase_fsid"
-
-#define NM_OPENCONNECT_AUTHTYPE_CERT "cert"
-#define NM_OPENCONNECT_AUTHTYPE_CERT_TPM "cert-tpm"
-#define NM_OPENCONNECT_AUTHTYPE_PASSWORD "password"
+#define NM_OPENCONNECT_KEY_PROXY "proxy"
 
 typedef struct {
 	NMVPNPlugin parent;

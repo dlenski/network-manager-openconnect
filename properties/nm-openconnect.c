@@ -122,9 +122,6 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
 	GtkWidget *widget;
 	const char *str;
-	GtkTreeModel *model;
-	GtkTreeIter iter;
-	const char *contype = NULL;
 
 	widget = glade_xml_get_widget (priv->xml, "gateway_entry");
 	str = gtk_entry_get_text (GTK_ENTRY (widget));
@@ -136,13 +133,19 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 		return FALSE;
 	}
 
-	widget = glade_xml_get_widget (priv->xml, "auth_combo");
-	model = gtk_combo_box_get_model (GTK_COMBO_BOX (widget));
-	g_assert (model);
-	g_assert (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (widget), &iter));
 
-	gtk_tree_model_get (model, &iter, COL_AUTH_TYPE, &contype, -1);
-	if (!auth_widget_check_validity (priv->xml, contype, error))
+	widget = glade_xml_get_widget (priv->xml, "proxy_entry");
+	str = gtk_entry_get_text (GTK_ENTRY (widget));
+	if (str && str[0] &&
+		strncmp(str, "socks://", 8) && strncmp(str, "http://", 7)) {
+		g_set_error (error,
+		             OPENCONNECT_PLUGIN_UI_ERROR,
+		             OPENCONNECT_PLUGIN_UI_ERROR_INVALID_PROPERTY,
+		             NM_OPENCONNECT_KEY_PROXY);
+		return FALSE;
+	}
+
+	if (!auth_widget_check_validity (priv->xml, error))
 		return FALSE;
 
 	return TRUE;
@@ -154,40 +157,13 @@ stuff_changed_cb (GtkWidget *widget, gpointer user_data)
 	g_signal_emit_by_name (OPENCONNECT_PLUGIN_UI_WIDGET (user_data), "changed");
 }
 
-static void
-auth_combo_changed_cb (GtkWidget *combo, gpointer user_data)
-{
-	OpenconnectPluginUiWidget *self = OPENCONNECT_PLUGIN_UI_WIDGET (user_data);
-	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
-	GtkWidget *auth_notebook;
-	GtkTreeModel *model;
-	GtkTreeIter iter;
-	gint new_page = 0;
-
-	auth_notebook = glade_xml_get_widget (priv->xml, "auth_notebook");
-	g_assert (auth_notebook);
-
-	model = gtk_combo_box_get_model (GTK_COMBO_BOX (combo));
-	g_assert (model);
-	g_assert (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (combo), &iter));
-
-	gtk_tree_model_get (model, &iter, COL_AUTH_PAGE, &new_page, -1);
-	gtk_notebook_set_current_page (GTK_NOTEBOOK (auth_notebook), new_page);
-
-	stuff_changed_cb (combo, self);
-}
-
 static gboolean
 init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GError **error)
 {
 	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
 	NMSettingVPN *s_vpn;
 	GtkWidget *widget;
-	GtkListStore *store;
-	GtkTreeIter iter;
-	int active = -1;
 	const char *value;
-	const char *contype = NM_OPENCONNECT_AUTHTYPE_PASSWORD;
 
 	s_vpn = (NMSettingVPN *) nm_connection_get_setting (connection, NM_TYPE_SETTING_VPN);
 
@@ -204,63 +180,29 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-	widget = glade_xml_get_widget (priv->xml, "auth_combo");
+	widget = glade_xml_get_widget (priv->xml, "proxy_entry");
 	if (!widget)
 		return FALSE;
 	gtk_size_group_add_widget (priv->group, widget);
-
-	store = gtk_list_store_new (3, G_TYPE_STRING, G_TYPE_INT, G_TYPE_STRING);
-
 	if (s_vpn) {
-		contype = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_AUTHTYPE);
-		if (contype) {
-			if (   strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT)
-			    && strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT_TPM)
-			    && strcmp (contype, NM_OPENCONNECT_AUTHTYPE_PASSWORD))
-				contype = NM_OPENCONNECT_AUTHTYPE_PASSWORD;
-		} else
-			contype = NM_OPENCONNECT_AUTHTYPE_PASSWORD;
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY);
+		if (value)
+			gtk_entry_set_text (GTK_ENTRY (widget), value);
 	}
+	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-	/* SecurID/password auth widget */
+	widget = glade_xml_get_widget (priv->xml, "fsid_button");
+	if (!widget)
+		return FALSE;
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID);
+		if (value && !strcmp(value, "yes"))
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (widget), TRUE);
+	}
+	g_signal_connect (G_OBJECT (widget), "toggled", G_CALLBACK (stuff_changed_cb), self);
+
 	tls_pw_init_auth_widget (priv->xml, priv->group, s_vpn,
-							 NM_OPENCONNECT_AUTHTYPE_PASSWORD, "pw",
 							 stuff_changed_cb, self);
-
-	gtk_list_store_append (store, &iter);
-	gtk_list_store_set (store, &iter,
-	                    COL_AUTH_NAME, _("Password / SecurID"),
-	                    COL_AUTH_PAGE, 1,
-	                    COL_AUTH_TYPE, NM_OPENCONNECT_AUTHTYPE_PASSWORD,
-	                    -1);
-
-	/* Certificate auth widget */
-	tls_pw_init_auth_widget (priv->xml, priv->group, s_vpn,
-							 NM_OPENCONNECT_AUTHTYPE_CERT, "cert",
-							 stuff_changed_cb, self);
-
-	gtk_list_store_append (store, &iter);
-	gtk_list_store_set (store, &iter,
-	                    COL_AUTH_NAME, _("Certificate (TLS)"),
-	                    COL_AUTH_PAGE, 0,
-	                    COL_AUTH_TYPE, NM_OPENCONNECT_AUTHTYPE_CERT,
-	                    -1);
-	if ((active < 0) && !strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT))
-		active = 1;
-
-	gtk_list_store_append (store, &iter);
-	gtk_list_store_set (store, &iter,
-	                    COL_AUTH_NAME, _("Certificate (TLS) with TPM"),
-	                    COL_AUTH_PAGE, 0,
-	                    COL_AUTH_TYPE, NM_OPENCONNECT_AUTHTYPE_CERT_TPM,
-	                    -1);
-	if ((active < 0) && !strcmp (contype, NM_OPENCONNECT_AUTHTYPE_CERT_TPM))
-		active = 2;
-
-	gtk_combo_box_set_model (GTK_COMBO_BOX (widget), GTK_TREE_MODEL (store));
-	g_object_unref (store);
-	g_signal_connect (widget, "changed", G_CALLBACK (auth_combo_changed_cb), self);
-	gtk_combo_box_set_active (GTK_COMBO_BOX (widget), active < 0 ? 0 : active);
 
 	return TRUE;
 }
@@ -284,8 +226,6 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	NMSettingVPN *s_vpn;
 	GtkWidget *widget;
 	char *str;
-	GtkTreeModel *model;
-	GtkTreeIter iter;
 	const char *auth_type = NULL;
 
 	if (!check_validity (self, error))
@@ -294,19 +234,21 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	s_vpn = NM_SETTING_VPN (nm_setting_vpn_new ());
 	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_DBUS_SERVICE_OPENCONNECT, NULL);
 
-	/* Gateway */
 	widget = glade_xml_get_widget (priv->xml, "gateway_entry");
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY, str);
 
-	widget = glade_xml_get_widget (priv->xml, "auth_combo");
-	model = gtk_combo_box_get_model (GTK_COMBO_BOX (widget));
-	if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (widget), &iter)) {
-		gtk_tree_model_get (model, &iter, COL_AUTH_TYPE, &auth_type, -1);
-		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_AUTHTYPE, auth_type);
-		auth_widget_update_connection (priv->xml, auth_type, s_vpn);
-	}
+	widget = glade_xml_get_widget (priv->xml, "proxy_entry");
+	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
+	if (str && strlen (str))
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY, str);
+
+	widget = glade_xml_get_widget (priv->xml, "fsid_button");
+	str = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (widget))?"yes":"no";
+	nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, str);
+	
+	auth_widget_update_connection (priv->xml, auth_type, s_vpn);
 
 	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
 	return TRUE;
