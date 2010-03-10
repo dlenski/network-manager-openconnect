@@ -3,15 +3,15 @@
 # Copyright (C) 2009 The GNOME Project.
 # This file is distributed under the same license as the NetworkManager-openconnect package.
 #
-# Mattias Põldaru <mahfiaz@gmail.com>, 2009.
+# Mattias Põldaru <mahfiaz gmail com>, 2009-2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: networkmanager openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-02-11 11:38+0000\n"
-"PO-Revision-Date: 2009-03-26 18:57+0300\n"
+"POT-Creation-Date: 2010-03-09 01:08+0000\n"
+"PO-Revision-Date: 2010-03-09 12:10+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -38,41 +38,29 @@ msgstr "Cisco AnyConnect-iga ühilduv VPN (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Cisco AnyConnect SSL VPN-iga ühilduv."
 
-msgid "Password / SecurID"
-msgstr "Parool / SecurID"
-
-msgid "Certificate (TLS)"
-msgstr "Sert (TLS)"
-
-msgid "Certificate (TLS) with TPM"
-msgstr "Sert (TLS) TPM-iga"
-
-msgid " "
-msgstr " "
-
-msgid "<b>Authentication</b>"
-msgstr "<b>Autentimine</b>"
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Sertifikaadiga autentimine</b>"
 
 msgid "<b>General</b>"
 msgstr "<b>Üldine</b>"
 
-msgid "CA Certificate:"
-msgstr "Sertifikaadikeskuse sert:"
+msgid "C_A Certificate:"
+msgstr "Sertifitseerimis_keskuse sert:"
 
-msgid "Private Key:"
-msgstr "Privaatvõti:"
+msgid "Private _Key:"
+msgstr "Privaat_võti:"
 
 msgid "Select A File"
-msgstr "Vali fail"
+msgstr "Faili valimine"
 
-msgid "Type:"
-msgstr "Tüüp:"
+msgid "Use _FSID for key passphrase"
+msgstr "_FSID võtit kasutatakse parooliks"
 
-msgid "User Certificate:"
-msgstr "Kasutaja sertifikaat:"
-
-msgid "User name:"
-msgstr "Kasutajanimi:"
+msgid "User _Certificate:"
+msgstr "Kasutaja _sertifikaat:"
 
 msgid "_Gateway:"
 msgstr "_Gateway:"
+
+msgid "_Proxy:"
+msgstr "_Proksi:"
