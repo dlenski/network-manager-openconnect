@@ -201,6 +201,16 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "toggled", G_CALLBACK (stuff_changed_cb), self);
 
+	widget = glade_xml_get_widget (priv->xml, "csd_button");
+	if (!widget)
+		return FALSE;
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE);
+		if (value && !strcmp(value, "yes"))
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (widget), TRUE);
+	}
+	g_signal_connect (G_OBJECT (widget), "toggled", G_CALLBACK (stuff_changed_cb), self);
+
 	tls_pw_init_auth_widget (priv->xml, priv->group, s_vpn,
 							 stuff_changed_cb, self);
 
@@ -247,6 +257,10 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	widget = glade_xml_get_widget (priv->xml, "fsid_button");
 	str = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (widget))?"yes":"no";
 	nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, str);
+
+	widget = glade_xml_get_widget (priv->xml, "csd_button");
+	str = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (widget))?"yes":"no";
+	nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE, str);
 	
 	auth_widget_update_connection (priv->xml, auth_type, s_vpn);
 

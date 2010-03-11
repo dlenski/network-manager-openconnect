@@ -55,6 +55,7 @@
 #define NM_OPENCONNECT_KEY_AUTOCONNECT "autoconnect"
 #define NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID "pem_passphrase_fsid"
 #define NM_OPENCONNECT_KEY_PROXY "proxy"
+#define NM_OPENCONNECT_KEY_CSD_ENABLE "enable_csd_trojan"
 
 typedef struct {
 	NMVPNPlugin parent;
