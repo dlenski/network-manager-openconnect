@@ -1,12 +1,15 @@
-# German translation of NetworkManager-openconnect module
-# Mario Blättermann <mariobl@gnome.org>, 2008.
+# German translation of NetworkManager-openconnect module.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the network-manager-openconnect package.
+# Mario Blättermann <mariobl@gnome.org>, 2008, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager-openconnect\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-20 13:42+0100\n"
-"PO-Revision-Date: 2008-12-20 13:50+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2010-03-09 01:08+0000\n"
+"PO-Revision-Date: 2010-03-11 12:11+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,19 +18,19 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
-msgstr "Ein Zertifikat der »Certificate Authority« wählen …"
+msgstr "Ein Zertifikat der Zertifizierungsstelle wählen …"
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
 msgstr "Ihr persönliches Zertifikat wählen …"
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
 msgstr "Geheimen Schlüssel wählen …"
 
-#: ../properties/auth-helpers.c:394
+#: ../properties/auth-helpers.c:249
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM-Zertifikate (*.pem, *.crt, *.key)"
 
@@ -39,54 +42,60 @@ msgstr "Zu Cisco AnyConnect kompatible VPN-Verbindung (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Kompatibel zu Cisco AnyConnect SSL VPN."
 
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "Passwort / SecurID"
-
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "Zertifikat (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "Zertifikat (TLS) mit TPM"
-
 #: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
+#| msgid "<b>Authentication</b>"
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Zertifikat-Legitimierung</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>Legitimierung</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Allgemein</b>"
 
+#: ../properties/nm-openconnect-dialog.glade.h:3
+#| msgid "CA Certificate:"
+msgid "C_A Certificate:"
+msgstr "C_A-Zertifikat:"
+
 #: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "CA-Zertifikat:"
+#| msgid "Private Key:"
+msgid "Private _Key:"
+msgstr "Ge_heimer Schlüssel:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "Geheimer Schlüssel:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Datei auswählen"
 
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr "_FSID für Schlüsselkennwort verwenden"
+
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "Typ:"
+#| msgid "User Certificate:"
+msgid "User _Certificate:"
+msgstr "Benutzer_zertifikat:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "Benutzerzertifikat:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "Benutzername:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Gateway:"
 msgstr "_Gateway:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Passwort / SecurID"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Zertifikat (TLS)"
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Zertifikat (TLS) mit TPM"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Type:"
+#~ msgstr "Typ:"
+
+#~ msgid "User name:"
+#~ msgstr "Benutzername:"
