@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-11 22:12+0200\n"
-"PO-Revision-Date: 2010-03-11 22:12+0200\n"
+"POT-Creation-Date: 2010-03-11 22:16+0200\n"
+"PO-Revision-Date: 2010-03-11 22:16+0200\n"
 "Last-Translator: Krasimir Chonov <mk2616@abv.bg>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,8 +49,10 @@ msgid "<b>General</b>"
 msgstr "<b>Общи</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:3
-msgid "C_A Certificate:"
-msgstr "Сер_тификат на удостоверител:"
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr ""
+"Включване на _троянския кон от „сигурното място на Cisco“ (Cisco Secure "
+"Desktop)"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
 msgid "Private _Key:"
@@ -65,8 +67,8 @@ msgid "Use _FSID for key passphrase"
 msgstr "Използване на _FSID за ключ"
 
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "User _Certificate:"
-msgstr "Потребителски _сертификат:"
+msgid "_CA Certificate:"
+msgstr "Сер_тификат на удостоверител:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "_Gateway:"
@@ -75,3 +77,7 @@ msgstr "_Шлюз:"
 #: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "_Proxy:"
 msgstr "Сървър-_посредник:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "Потребителски _сертификат:"
