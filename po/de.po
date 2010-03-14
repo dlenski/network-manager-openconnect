@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the network-manager-openconnect package.
 # Mario Blättermann <mariobl@gnome.org>, 2008, 2010.
-#
+# Wolfgang Stöggl <c72578@yahoo.de>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager-openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2010-03-09 01:08+0000\n"
-"PO-Revision-Date: 2010-03-11 12:11+0100\n"
+"POT-Creation-Date: 2010-03-12 07:39+0000\n"
+"PO-Revision-Date: 2010-03-14 07:52+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,6 @@ msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Kompatibel zu Cisco AnyConnect SSL VPN."
 
 #: ../properties/nm-openconnect-dialog.glade.h:1
-#| msgid "<b>Authentication</b>"
 msgid "<b>Certificate Authentication</b>"
 msgstr "<b>Zertifikat-Legitimierung</b>"
 
@@ -51,13 +50,12 @@ msgstr "<b>Zertifikat-Legitimierung</b>"
 msgid "<b>General</b>"
 msgstr "<b>Allgemein</b>"
 
+# Wieso eigentlich?
 #: ../properties/nm-openconnect-dialog.glade.h:3
-#| msgid "CA Certificate:"
-msgid "C_A Certificate:"
-msgstr "C_A-Zertifikat:"
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "»Cisco Secure Desktop«-_Trojaner erlauben"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
-#| msgid "Private Key:"
 msgid "Private _Key:"
 msgstr "Ge_heimer Schlüssel:"
 
@@ -70,9 +68,8 @@ msgid "Use _FSID for key passphrase"
 msgstr "_FSID für Schlüsselkennwort verwenden"
 
 #: ../properties/nm-openconnect-dialog.glade.h:7
-#| msgid "User Certificate:"
-msgid "User _Certificate:"
-msgstr "Benutzer_zertifikat:"
+msgid "_CA Certificate:"
+msgstr "_CA-Zertifikat:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "_Gateway:"
@@ -81,6 +78,10 @@ msgstr "_Gateway:"
 #: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "_Proxy:"
 msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "Ben_utzerzertifikat:"
 
 #~ msgid "Password / SecurID"
 #~ msgstr "Passwort / SecurID"
