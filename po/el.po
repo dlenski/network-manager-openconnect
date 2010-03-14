@@ -5,10 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD.el\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&amp;component=general\n"
-"POT-Creation-Date: 2009-01-02 21:21+0000\n"
-"PO-Revision-Date: 2008-12-18 16:52+0100\n"
-"Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-14 12:34+0200\n"
+"PO-Revision-Date: 2010-03-14 12:37+0200\n"
+"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,19 +16,19 @@ msgstr ""
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Επιλέξτε πιστοποιητικό Αρχής Πιστοποίησης..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
 msgstr "Επιλέξτε το προσωπικό σας πιστοποιητικό..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
 msgstr "Επιλέξτε το ιδιωτικό σας κλειδί..."
 
-#: ../properties/auth-helpers.c:394
+#: ../properties/auth-helpers.c:249
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Πιστοποιητικά PEM (*.pem, *.crt, *.key)"
 
@@ -40,54 +40,56 @@ msgstr "Συμβατός με Cisco AnyConnect πελάτης VPN (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Συμβατός με το Cisco AnyConnect SSL VPN."
 
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "Συνθηματικό / SecurID"
-
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "Πιστοποιητικό (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "Πιστοποιητικό (TLS) με TPM"
-
 #: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Πιστοποίηση πιστοποιητικού</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>Πιστοποίηση</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Γενικά</b>"
 
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Μα επιτρέπεται το Cisco Secure Desktop _trojan"
+
 #: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "Πιστοποιητικό CA:"
+msgid "Private _Key:"
+msgstr "Ιδιωτικό _κλειδί:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "Ιδιωτικό κλειδί:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Επιλέξτε αρχείο"
 
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr "Χρήση  _FSID για το κλειδί της συνθηματικής φράσης"
+
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "Τύπος:"
+msgid "_CA Certificate:"
+msgstr "Πιστοποιητικό _CA:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "Πιστοποιητικό χρήστη:"
+msgid "_Gateway:"
+msgstr "_Gateway:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "Όνομα χρήστη:"
+msgid "_Proxy:"
+msgstr "_Proxy:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:10
-msgid "_Gateway:"
-msgstr "_Πύλη:"
+msgid "_User Certificate:"
+msgstr "Πιστοποιητικό _χρήστη:"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Συνθηματικό / SecurID"
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Πιστοποιητικό (TLS)"
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Πιστοποιητικό (TLS) με TPM"
+#~ msgid " "
+#~ msgstr " "
+#~ msgid "Type:"
+#~ msgstr "Τύπος:"
+#~ msgid "User name:"
+#~ msgstr "Όνομα χρήστη:"
+
