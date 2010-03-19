@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-10 13:49+0100\n"
-"PO-Revision-Date: 2010-03-10 13:48+0100\n"
+"POT-Creation-Date: 2010-03-19 13:10+0100\n"
+"PO-Revision-Date: 2010-03-19 13:09+0100\n"
 "Last-Translator: Tomasz Dominikowski <dominikowski@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -55,8 +55,8 @@ msgid "<b>General</b>"
 msgstr "<b>Ogólne</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:3
-msgid "C_A Certificate:"
-msgstr "Certyfikat C_A:"
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
 msgid "Private _Key:"
@@ -71,8 +71,8 @@ msgid "Use _FSID for key passphrase"
 msgstr "Użycie _FSID dla hasła klucza"
 
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "User _Certificate:"
-msgstr "_Certyfikat użytkownika:"
+msgid "_CA Certificate:"
+msgstr "Certyfikat _CA:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "_Gateway:"
@@ -81,3 +81,7 @@ msgstr "_Brama:"
 #: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "_Proxy:"
 msgstr "_Pośrednik:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "Certyfikat _użytkownika:"
