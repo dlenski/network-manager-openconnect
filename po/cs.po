@@ -1,15 +1,15 @@
 # Czech translation of network-manager-openconnect.
 # Copyright (C) 2008 the author(s) of network-manager-openconnect.
 # This file is distributed under the same license as the network-manager-openconnect package.
-# Zdeněk Hataš <zdenek.hatas@gmail.com>, 2009.
+# Zdeněk Hataš <zdenek.hatas@gmail.com>, 2009, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2010-03-10 12:50+0000\n"
-"PO-Revision-Date: 2010-03-10 16:04+0100\n"
+"POT-Creation-Date: 2010-03-12 07:39+0000\n"
+"PO-Revision-Date: 2010-03-13 10:14+0100\n"
 "Last-Translator: Zdeněk Hataš <zdenek.hatas@gmail.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -52,8 +52,8 @@ msgid "<b>General</b>"
 msgstr "<b>Obecné</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:3
-msgid "C_A Certificate:"
-msgstr "Certifikát C_A:"
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Povolit Cisco Secure Desktop _trojan"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
 msgid "Private _Key:"
@@ -68,8 +68,8 @@ msgid "Use _FSID for key passphrase"
 msgstr "Použít _FSID jako heslo klíče"
 
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "User _Certificate:"
-msgstr "_Certifikát uživatele:"
+msgid "_CA Certificate:"
+msgstr "Certifikát _CA:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "_Gateway:"
@@ -78,4 +78,8 @@ msgstr "_Brána:"
 #: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "_Proxy:"
 msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "Certifikát _uživatele:"
 
