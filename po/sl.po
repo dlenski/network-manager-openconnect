@@ -1,14 +1,15 @@
 # Slovenian translation for network-manager-openconnect.
 # Copyright (C) 2009 network-manager-openconnect's COPYRIGHT HOLDER
 # This file is distributed under the same license as the network-manager-openconnect package.
-# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2009.
+#
+# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-09-28 16:19+0000\n"
-"PO-Revision-Date: 2009-10-06 10:46+0100\n"
+"POT-Creation-Date: 2010-04-02 11:39+0000\n"
+"PO-Revision-Date: 2010-04-03 08:47+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,79 +20,80 @@ msgstr ""
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
-msgstr "Izbor izdajatelja potrdila ..."
+msgstr "Izbor pooblastitelja overitve potrdila ..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
 msgstr "Izbor osebnega potrdila ..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
 msgstr "Izbor osebnega ključa ..."
 
-#: ../properties/auth-helpers.c:392
+#: ../properties/auth-helpers.c:249
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Potrdila PEM (*.pem, *.crt, *.key)"
 
 #: ../properties/nm-openconnect.c:50
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "Skladno s Cisco AnyConnect VPN (openconnect)"
+msgstr "Združljivo s Cisco AnyConnect VPN (openconnect)"
 
 #: ../properties/nm-openconnect.c:51
 msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Skladno s Cisco AnyConnect SSL VPN."
-
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "Geslo / Uporabniški ID"
-
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "Potrdilo (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "Potrdilo (TLS) z TPM"
+msgstr "Združljivo s Cisco AnyConnect SSL VPN."
 
 #: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Overitev potrdila</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>Overitev</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Splošno</b>"
 
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Dovoli Cisco Secure Desktop _trojan"
+
 #: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "Potrdilo CA:"
+msgid "Private _Key:"
+msgstr "_Osebni ključ:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "Osebni ključ:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Izbor datoteke"
 
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr "Uporabite _FSID za šifrirno geslo"
+
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "Vrsta:"
+msgid "_CA Certificate:"
+msgstr "Potrdilo _CA:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "Uporabniško potrdilo:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "Uporabniško ime:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Gateway:"
 msgstr "_Prehod:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "_Proxy:"
+msgstr "_Posredniški strežnik:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "_Uporabniško potrdilo:"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Geslo / Uporabniški ID"
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Potrdilo (TLS)"
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Potrdilo (TLS) s TPM"
+#~ msgid " "
+#~ msgstr " "
+#~ msgid "Type:"
+#~ msgstr "Vrsta:"
+#~ msgid "User name:"
+#~ msgstr "Uporabniško ime:"
 
