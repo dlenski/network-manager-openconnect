@@ -4,29 +4,31 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-08-26 19:31+0000\n"
-"PO-Revision-Date: 2009-09-25 19:21+0700\n"
+"POT-Creation-Date: 2010-04-03 06:49+0000\n"
+"PO-Revision-Date: 2010-04-04 10:25+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Indonesian Translators <id@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: Indonesia\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Pilih sebuah sertifikat Certificate Authority..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
 msgstr "Pilih sertifikat pribadi anda..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
 msgstr "Pilih kunci privat Anda..."
 
-#: ../properties/auth-helpers.c:392
+#: ../properties/auth-helpers.c:249
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Sertifikat PEM (*.pem, *.crt, *.key)"
 
@@ -38,55 +40,43 @@ msgstr "VPN Kompatibel AnyConnect Cisco (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Kompatibel dengan VPN SSL AnyConnect Cisco."
 
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "Kata Sandi / SecurID"
-
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "Sertifikat (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "Sertifikat (TLS) dengan TPM"
-
 #: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Otentikasi Sertifikat</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>Otentikasi</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Umum</b>"
 
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Ijinkan _trojan Cisco Secure Desktop"
+
 #: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "Sertifikat CA:"
+msgid "Private _Key:"
+msgstr "_Kunci Pribadi:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "Kunci Privat:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Pilih Berkas"
 
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr "Gunakan _FSID bagi frasa sandi kunci"
+
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "Jenis:"
+msgid "_CA Certificate:"
+msgstr "Sertifikat _CA :"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "Sertifikat Pengguna:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "Nama pengguna:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Gateway:"
 msgstr "_Gateway:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "_Proxy:"
+msgstr "_Proksi:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "Sertifikat Pengg_una:"
 
