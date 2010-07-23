@@ -82,6 +82,176 @@ typedef struct {
 #define COL_AUTH_PAGE 1
 #define COL_AUTH_TYPE 2
 
+static NMConnection *
+import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
+{
+	NMConnection *connection;
+	NMSettingConnection *s_con;
+	NMSettingVPN *s_vpn;
+	NMSettingIP4Config *s_ip4;
+	GKeyFile *keyfile;
+	GKeyFileFlags flags;
+	const char *buf;
+	gboolean bval;
+
+	keyfile = g_key_file_new ();
+	flags = G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS;
+
+	if (!g_key_file_load_from_file (keyfile, path, flags, error)) {
+		g_set_error (error, 0, 0, "does not look like a %s VPN connection (parse failed)", OPENCONNECT_PLUGIN_NAME);
+		return NULL;
+	}
+
+	connection = nm_connection_new ();
+	s_con = NM_SETTING_CONNECTION (nm_setting_connection_new ());
+	nm_connection_add_setting (connection, NM_SETTING (s_con));
+
+	s_vpn = NM_SETTING_VPN (nm_setting_vpn_new ());
+	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_DBUS_SERVICE_OPENCONNECT, NULL);
+	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
+
+	s_ip4 = NM_SETTING_IP4_CONFIG (nm_setting_ip4_config_new ());
+	nm_connection_add_setting (connection, NM_SETTING (s_ip4));
+
+	/* Host */
+	buf = g_key_file_get_string (keyfile, "openconnect", "Host", NULL);
+	if (buf) {
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY, buf);
+	} else {
+		g_set_error (error, 0, 0, "does not look like a %s VPN connection (no Host)", OPENCONNECT_PLUGIN_NAME);
+		g_object_unref (connection);
+		return NULL;
+	}
+
+	/* Optional Settings */
+
+	/* Description */
+	buf = g_key_file_get_string (keyfile, "openconnect", "Description", NULL);
+	if (buf)
+		g_object_set (s_con, NM_SETTING_CONNECTION_ID, buf, NULL);
+
+	/* CA Certificate */
+	buf = g_key_file_get_string (keyfile, "openconnect", "CACert", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT, buf);
+
+	/* Proxy */
+	buf = g_key_file_get_string (keyfile, "openconnect", "Proxy", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY, buf);
+
+	/* Cisco Secure Desktop */
+	bval = g_key_file_get_boolean (keyfile, "openconnect", "CSDEnable", NULL);
+	if (bval)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE, "yes");
+
+	/* User Certificate */
+	buf = g_key_file_get_string (keyfile, "openconnect", "UserCertificate", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_USERCERT, buf);
+
+	/* Private Key */
+	buf = g_key_file_get_string (keyfile, "openconnect", "PrivateKey", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PRIVKEY, buf);
+
+	/* FSID */
+	bval = g_key_file_get_boolean (keyfile, "openconnect", "FSID", NULL);
+	if (bval)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, "yes");
+
+	return connection;
+}
+
+static gboolean
+export (NMVpnPluginUiInterface *iface,
+        const char *path,
+        NMConnection *connection,
+        GError **error)
+{
+	NMSettingConnection *s_con;
+	NMSettingIP4Config *s_ip4;
+	NMSettingVPN *s_vpn;
+	const char *value;
+	const char *gateway = NULL;
+	const char *cacert = NULL;
+	const char *proxy = NULL;
+	gboolean csd_enable = FALSE;
+	const char *usercert = NULL;
+	const char *privkey = NULL;
+	gboolean pem_passphrase_fsid = FALSE;
+	gboolean success = FALSE;
+	FILE *f;
+
+	f = fopen (path, "w");
+	if (!f) {
+		g_set_error (error, 0, 0, "could not open file for writing");
+		return FALSE;
+	}
+
+	s_con = NM_SETTING_CONNECTION (nm_connection_get_setting (connection, NM_TYPE_SETTING_CONNECTION));
+	s_ip4 = (NMSettingIP4Config *) nm_connection_get_setting (connection, NM_TYPE_SETTING_IP4_CONFIG);
+
+	s_vpn = (NMSettingVPN *) nm_connection_get_setting (connection, NM_TYPE_SETTING_VPN);
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY);
+	if (value && strlen (value))
+		gateway = value;
+	else {
+		g_set_error (error, 0, 0, "connection was incomplete (missing gateway)");
+		goto done;
+	}
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT);
+	if (value && strlen (value))
+		cacert = value;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY);
+	if (value && strlen (value))
+		proxy = value;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE);
+	if (value && !strcmp (value, "yes"))
+		csd_enable = TRUE;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_USERCERT);
+	if (value && strlen (value))
+		usercert = value;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PRIVKEY);
+	if (value && strlen (value))
+		privkey = value;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID);
+	if (value && !strcmp (value, "yes"))
+		pem_passphrase_fsid = TRUE;
+
+	fprintf (f,
+		 "[openconnect]\n"
+		 "Description=%s\n"
+		 "Host=%s\n"
+		 "CACert=%s\n"
+		 "Proxy=%s\n"
+		 "CSDEnable=%s\n"
+		 "UserCertificate=%s\n"
+		 "PrivateKey=%s\n"
+		 "FSID=%s\n",
+		 /* Description */           nm_setting_connection_get_id (s_con),
+		 /* Host */                  gateway,
+		 /* CA Certificate */        cacert,
+		 /* Proxy */                 proxy ? proxy : "",
+		 /* Cisco Secure Desktop */  csd_enable ? "1" : "0",
+		 /* User Certificate */      usercert,
+		 /* Private Key */           privkey,
+		 /* FSID */                  pem_passphrase_fsid ? "1" : "0");
+
+	success = TRUE;
+
+done:
+	fclose (f);
+	return success;
+}
+
 GQuark
 openconnect_plugin_ui_error_quark (void)
 {
@@ -380,7 +550,7 @@ delete_connection (NMVpnPluginUiInterface *iface,
 static guint32
 get_capabilities (NMVpnPluginUiInterface *iface)
 {
-	return 0;
+	return (NM_VPN_PLUGIN_UI_CAPABILITY_IMPORT | NM_VPN_PLUGIN_UI_CAPABILITY_EXPORT);
 }
 
 static NMVpnPluginUiWidgetInterface *
@@ -440,6 +610,8 @@ openconnect_plugin_ui_interface_init (NMVpnPluginUiInterface *iface_class)
 	/* interface implementation */
 	iface_class->ui_factory = ui_factory;
 	iface_class->get_capabilities = get_capabilities;
+	iface_class->import = import;
+	iface_class->export = export;
 	iface_class->delete_connection = delete_connection;
 }
 
