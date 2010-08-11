@@ -8,27 +8,27 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-10-08 12:43+0000\n"
-"PO-Revision-Date: 2009-11-18 17:46+0800\n"
+"POT-Creation-Date: 2010-07-21 23:06+0000\n"
+"PO-Revision-Date: 2010-07-23 21:01+0800\n"
 "Last-Translator: Tao Wei <weitao1979@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
 msgstr "选择一个证书颁发机构的证书..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
 msgstr "选择您的个人证书..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
 msgstr "选择您的私人密钥..."
 
-#: ../properties/auth-helpers.c:392
+#: ../properties/auth-helpers.c:249
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM 证书(*.pem，*.crt，*.key)"
 
@@ -40,54 +40,60 @@ msgstr "Cisco AnyConnect 兼容的 VPN (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "和 Cisco AnyConnect SSL VPN 兼容。"
 
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "密码/SecurID"
-
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "证书(TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "使用 TPM 的证书(TLS)"
-
 #: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>证书认证</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>认证</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>一般</b>"
 
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "运行思科安全桌面木马(_T)"
+
 #: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "CA 证书："
+msgid "Private _Key:"
+msgstr "私钥(_K)："
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "私人密钥："
-
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "选择一个文件"
 
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr "为密钥口令句使用 _FSID"
+
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "类型："
+msgid "_CA Certificate:"
+msgstr "_CA 证书："
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "用户证书："
-
-#: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "用户名称："
-
-#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Gateway:"
 msgstr "网关(_G)："
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "_Proxy:"
+msgstr "代理服务器(_P)："
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "用户证书(_U)："
+
+#~ msgid "Password / SecurID"
+#~ msgstr "密码/SecurID"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "证书(TLS)"
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "使用 TPM 的证书(TLS)"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Type:"
+#~ msgstr "类型："
+
+#~ msgid "User name:"
+#~ msgstr "用户名称："
