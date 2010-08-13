@@ -15,10 +15,10 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- *   Copyright © 2008 - 2009 Intel Corporation.
+ *   Copyright © 2008 - 2010 Intel Corporation.
  *
  * Based on nm-openconnect-vpnc.c:
- *   Copyright © 2005 - 2008 Red Hat, Inc.
+ *   Copyright © 2005 - 2010 Red Hat, Inc.
  *   Copyright © 2007 - 2008 Novell, Inc.
  */
 
@@ -132,6 +132,17 @@ uint_to_gvalue (guint32 num)
 	g_value_init (val, G_TYPE_UINT);
 	g_value_set_uint (val, num);
 
+	return val;
+}
+
+static GValue *
+bool_to_gvalue (gboolean b)
+{
+	GValue *val;
+
+	val = g_slice_new0 (GValue);
+	g_value_init (val, G_TYPE_BOOLEAN);
+	g_value_set_boolean (val, b);
 	return val;
 }
 
@@ -362,9 +373,12 @@ main (int argc, char *argv[])
 
 	/* Routes */
 	val = get_routes ();
-	if (val)
+	if (val) {
 		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_ROUTES, val);
-
+		/* If routes-to-include were provided, that means no default route */
+		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_NEVER_DEFAULT,
+		                     bool_to_gvalue (TRUE));
+	}
 	/* Banner */
 	val = str_to_gvalue (getenv ("CISCO_BANNER"), TRUE);
 	if (val)
