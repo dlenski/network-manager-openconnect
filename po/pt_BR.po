@@ -2,17 +2,16 @@
 # Copyright (C) 2008 NETWORK-MANAGER-OPENCONNECT'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the network-manager-openconnect package.
 # Enrico Nicoletto <liverig@gmail.com>, 2008.
-#
+# Antonio Fernandes C. Neto <fernandes@pelivre.org>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=NetworkManager&amp;component=general\n"
-"POT-Creation-Date: 2008-12-27 14:20+0000\n"
-"PO-Revision-Date: 2008-12-27 23:02-0300\n"
-"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
-"Language-Team: Brazilian Portuguese Team <gnome-l10n-br@listas.cipsga.org."
-"br>\n"
+"product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2010-08-11 12:15+0000\n"
+"PO-Revision-Date: 2010-08-30 15:03-0300\n"
+"Last-Translator: Antonio Fernandes C. Neto <fernandes@pelivre.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,19 +19,19 @@ msgstr ""
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Escolha um certificado Certificate Authority..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
 msgstr "Escolha o seu certificado pessoal..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
 msgstr "Escolha a sua chave privada..."
 
-#: ../properties/auth-helpers.c:394
+#: ../properties/auth-helpers.c:249
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certificados PEM (*.pem, *.crt, *.key)"
 
@@ -44,54 +43,60 @@ msgstr "VPN Compatível com Cisco AnyConnect (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Compatível com Cisco AnyConnect SSL VPN."
 
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "Senha / SecurID"
-
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "Certificado (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "Certificado (TLS) com TPM"
-
 #: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Certificado de autenticação</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>Autenticação</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Geral</b>"
 
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Permitir _trojan Cisco Secure Desktop"
+
 #: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "Certificado CA:"
+msgid "Private _Key:"
+msgstr "_Chave privada:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "Chave privada:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Selecione um arquivo"
 
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr "Usar _FSID para frase secreta"
+
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "Tipo:"
+msgid "_CA Certificate:"
+msgstr "Certificado _CA:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "Certificado do usuário:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "Nome de usuário:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Gateway:"
 msgstr "_Gateway:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_User Certificate:"
+msgstr "Certificado de _usuário:"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Senha / SecurID"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Certificado (TLS)"
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Certificado (TLS) com TPM"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Type:"
+#~ msgstr "Tipo:"
+
+#~ msgid "User name:"
+#~ msgstr "Nome de usuário:"
