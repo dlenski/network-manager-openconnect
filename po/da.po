@@ -1,94 +1,101 @@
 # Danish translation of network-manager-openconnect.
 # Copyright (C) 2009
 # This file is distributed under the same license as the network-manager-openconnect package.
+#
 # Mads Bille Lundby <lundbymads@gmail.com>, 2009.
+# Kim Iskov <kimiskov@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-24 23:50+0100\n"
-"PO-Revision-Date: 2009-02-24 15:45+0100\n"
-"Last-Translator: Mads Lundby <lundbymads@gmail.com>\n"
-"Language-Team: Danskgruppen <dansk@dansk-gruppen.dk>\n"
+"POT-Creation-Date: 2010-09-27 00:40+0200\n"
+"PO-Revision-Date: 2010-09-24 01:18+0100\n"
+"Last-Translator: Kim Iskov <kimiskov@gmail.com>\n"
+"Language-Team: Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Danish\n"
-"X-Poedit-Country: DENMARK\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
-msgstr "Vælg et certifikat fra certifikatautoritet..."
+msgstr "Vælg certifikat for certificeringssgodkendelse..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
 msgstr "Vælg dit personlige certifikat..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
 msgstr "Vælg din private nøgle..."
 
-#: ../properties/auth-helpers.c:394
+#: ../properties/auth-helpers.c:249
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM-certifikater  (*.pem, *.crt, *.key)"
 
 #: ../properties/nm-openconnect.c:50
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "Cisco AnyConnect-kompatibelt VPN (openconnect)"
+msgstr "Cisco AnyConnect-kompatibel VPN (openconnect)"
 
 #: ../properties/nm-openconnect.c:51
 msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Kompatibelt med Cisco AnyConnect SSL VPN."
-
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "Adgangskode / SecurID"
-
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "Certifikat (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "Certifikat (TLS) med TPM"
+msgstr "Kompatibel med Cisco AnyConnect SSL VPN."
 
 #: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Identificeringscertifikat</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>Godkendelse</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Generelt</b>"
 
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Tillad sikker Cisco skrivebords_trojaner"
+
 #: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "CA-certifikat:"
+msgid "Private _Key:"
+msgstr "Privat _nøgle:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "Privat nøgle:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Vælg en fil"
 
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr "Brug _FSID til nøglesætning"
+
 #: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "Type:"
+msgid "_CA Certificate:"
+msgstr "_CA-certifikat:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "Brugercertifikat:"
+msgid "_Gateway:"
+msgstr "_Gateway:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "Brugernavn:"
+msgid "_Proxy:"
+msgstr "_Proxy:"
 
 #: ../properties/nm-openconnect-dialog.glade.h:10
-msgid "_Gateway:"
-msgstr "Ad_gangspunkt:"
+msgid "_User Certificate:"
+msgstr "Br_ugercertifikat:"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Adgangskode / SecurID"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Certifikat (TLS)"
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Certifikat (TLS) med TPM"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Type:"
+#~ msgstr "Type:"
+
+#~ msgid "User name:"
+#~ msgstr "Brugernavn:"
