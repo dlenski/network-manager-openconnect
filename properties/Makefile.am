@@ -15,7 +15,7 @@ libnm_openconnect_properties_la_CFLAGS =                          \
         $(GTK_CFLAGS)                                   \
         $(GCONF_CFLAGS)                                 \
         $(LIBGNOMEUI_CFLAGS)                            \
-        $(NM_UTILS_CFLAGS)                              \
+        $(NETWORKMANAGER_CFLAGS)                        \
         -DICONDIR=\""$(datadir)/pixmaps"\"              \
         -DGLADEDIR=\""$(gladedir)"\"                    \
         -DG_DISABLE_DEPRECATED                          \
@@ -29,7 +29,7 @@ libnm_openconnect_properties_la_LIBADD = \
         $(GTK_LIBS) \
         $(GCONF_LIBS) \
         $(LIBGNOMEUI_LIBS) \
-        $(NM_UTILS_LIBS)
+        $(NETWORKMANAGER_LIBS)
 
 libnm_openconnect_properties_la_LDFLAGS =      \
         -avoid-version
