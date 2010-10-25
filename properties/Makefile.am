@@ -14,7 +14,6 @@ libnm_openconnect_properties_la_CFLAGS =                          \
         $(GLADE_CFLAGS)                                 \
         $(GTK_CFLAGS)                                   \
         $(GCONF_CFLAGS)                                 \
-        $(LIBGNOMEUI_CFLAGS)                            \
         $(NETWORKMANAGER_CFLAGS)                        \
         -DICONDIR=\""$(datadir)/pixmaps"\"              \
         -DGLADEDIR=\""$(gladedir)"\"                    \
@@ -28,7 +27,6 @@ libnm_openconnect_properties_la_LIBADD = \
         $(GLADE_LIBS) \
         $(GTK_LIBS) \
         $(GCONF_LIBS) \
-        $(LIBGNOMEUI_LIBS) \
         $(NETWORKMANAGER_LIBS)
 
 libnm_openconnect_properties_la_LDFLAGS =      \
