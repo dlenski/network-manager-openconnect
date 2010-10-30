@@ -1,0 +1,108 @@
+# Catalan translations for network-manager-openconnect package
+# Traduccions al català del paquet «network-manager-openconnect».
+# Copyright (C) 2009 THE network-manager-openconnect'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the network-manager-openconnect package.
+# David Planella <david.planella@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2010-03-11 19:46+0000\n"
+"PO-Revision-Date: 2009-01-15 21:05+0100\n"
+"Last-Translator: David Planella <david.planella@gmail.com>\n"
+"Language-Team: Catalan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../properties/auth-helpers.c:63
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Trieu un certificat d'autoritat de certificació..."
+
+#: ../properties/auth-helpers.c:79
+msgid "Choose your personal certificate..."
+msgstr "Trieu el vostre certificat personal..."
+
+#: ../properties/auth-helpers.c:95
+msgid "Choose your private key..."
+msgstr "Trieu la vostra clau privada..."
+
+#: ../properties/auth-helpers.c:249
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certificats PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN compatible amb Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "VPN SSL compatible amb Cisco AnyConnect."
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+#, fuzzy
+#| msgid "<b>Authentication</b>"
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Autenticació</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>General</b>"
+msgstr "<b>General</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+#, fuzzy
+#| msgid "Private Key:"
+msgid "Private _Key:"
+msgstr "Clau privada:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Select A File"
+msgstr "Seleccioneu un fitxer"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Use _FSID for key passphrase"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+#, fuzzy
+#| msgid "CA Certificate:"
+msgid "_CA Certificate:"
+msgstr "Certificat d'autoritat de certificació:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "_Gateway:"
+msgstr "_Passarel·la:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "_Proxy:"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+#, fuzzy
+#| msgid "User Certificate:"
+msgid "_User Certificate:"
+msgstr "Certificat d'usuari:"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Contrasenya / SecurID"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Certificat (TLS)"
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Certificat (TLS) amb TPM"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Type:"
+#~ msgstr "Tipus:"
+
+#~ msgid "User name:"
+#~ msgstr "Nom d'usuari:"
