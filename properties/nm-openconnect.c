@@ -145,6 +145,11 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 	if (bval)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE, "yes");
 
+	/* Cisco Secure Desktop wrapper */
+	buf = g_key_file_get_string (keyfile, "openconnect", "CSDWrapper", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, buf);
+
 	/* User Certificate */
 	buf = g_key_file_get_string (keyfile, "openconnect", "UserCertificate", NULL);
 	if (buf)
@@ -177,6 +182,7 @@ export (NMVpnPluginUiInterface *iface,
 	const char *cacert = NULL;
 	const char *proxy = NULL;
 	gboolean csd_enable = FALSE;
+	const char *csd_wrapper = NULL;
 	const char *usercert = NULL;
 	const char *privkey = NULL;
 	gboolean pem_passphrase_fsid = FALSE;
@@ -214,6 +220,10 @@ export (NMVpnPluginUiInterface *iface,
 	if (value && !strcmp (value, "yes"))
 		csd_enable = TRUE;
 
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER);
+	if (value && strlen (value))
+		csd_wrapper = value;
+
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_USERCERT);
 	if (value && strlen (value))
 		usercert = value;
@@ -233,6 +243,7 @@ export (NMVpnPluginUiInterface *iface,
 		 "CACert=%s\n"
 		 "Proxy=%s\n"
 		 "CSDEnable=%s\n"
+		 "CSDWrapper=%s\n"
 		 "UserCertificate=%s\n"
 		 "PrivateKey=%s\n"
 		 "FSID=%s\n",
@@ -241,6 +252,7 @@ export (NMVpnPluginUiInterface *iface,
 		 /* CA Certificate */        cacert,
 		 /* Proxy */                 proxy ? proxy : "",
 		 /* Cisco Secure Desktop */  csd_enable ? "1" : "0",
+		 /* CSD Wrapper Script */    csd_wrapper ? csd_wrapper : "",
 		 /* User Certificate */      usercert,
 		 /* Private Key */           privkey,
 		 /* FSID */                  pem_passphrase_fsid ? "1" : "0");
@@ -381,6 +393,16 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "toggled", G_CALLBACK (stuff_changed_cb), self);
 
+	widget = glade_xml_get_widget (priv->xml, "csd_wrapper_entry");
+	if (!widget)
+		return FALSE;
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER);
+		if (value)
+			gtk_entry_set_text (GTK_ENTRY (widget), value);
+	}
+	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
+
 	tls_pw_init_auth_widget (priv->xml, priv->group, s_vpn,
 							 stuff_changed_cb, self);
 
@@ -431,6 +453,11 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	widget = glade_xml_get_widget (priv->xml, "csd_button");
 	str = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (widget))?"yes":"no";
 	nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE, str);
+
+	widget = glade_xml_get_widget (priv->xml, "csd_wrapper_entry");
+	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
+	if (str && strlen (str))
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, str);
 	
 	auth_widget_update_connection (priv->xml, auth_type, s_vpn);
 
