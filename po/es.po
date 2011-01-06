@@ -2,14 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2008, 2010.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2010-03-11 19:46+0000\n"
-"PO-Revision-Date: 2010-03-14 23:09+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2011-01-05 02:08+0000\n"
+"PO-Revision-Date: 2011-01-05 13:11+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +31,7 @@ msgstr "Elija su certificado personal…"
 msgid "Choose your private key..."
 msgstr "Elija su clave privada…"
 
-#: ../properties/auth-helpers.c:249
+#: ../properties/auth-helpers.c:255
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certificados PEM (*.pem, *.crt, *.key)"
 
@@ -54,32 +56,34 @@ msgid "Allow Cisco Secure Desktop _trojan"
 msgstr "Permitir el _troyano de escritorio Cisco Secure"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "Script CSD _envolvente:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
 msgid "Private _Key:"
 msgstr "Clave pri_vada:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
+#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Seleccione un archivo"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.glade.h:7
 msgid "Use _FSID for key passphrase"
 msgstr "Usar _FSID para la frase de paso de la clave"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
-#| msgid "C_A Certificate:"
+#: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "_CA Certificate:"
 msgstr "Certificado _CA:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
+#: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "_Gateway:"
 msgstr "_Pasarela:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
+#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Proxy:"
 msgstr "_Proxy:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
-#| msgid "User _Certificate:"
+#: ../properties/nm-openconnect-dialog.glade.h:11
 msgid "_User Certificate:"
 msgstr "Certificado del _usuario:"
 
