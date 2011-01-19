@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun.org>, 2009.
-# Fran Diéguez <frandieguez@ubuntu.com>, 2010.
+# Fran Diéguez <frandieguez@ubuntu.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-23 00:26+0200\n"
-"PO-Revision-Date: 2010-04-23 00:26+0200\n"
+"POT-Creation-Date: 2011-01-19 14:59+0100\n"
+"PO-Revision-Date: 2011-01-19 14:59+0100\n"
 "Last-Translator: Fran Diéguez <frandieguez@ubuntu.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
+"Language-Team: Galician <gnome-gl-list@gnome.org>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
@@ -30,7 +31,7 @@ msgstr "Seleccione o seu certificado persoal..."
 msgid "Choose your private key..."
 msgstr "Seleccione a súa chave privada..."
 
-#: ../properties/auth-helpers.c:249
+#: ../properties/auth-helpers.c:255
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certificados PEM (*.pem, *.crt, *.key)"
 
@@ -55,30 +56,34 @@ msgid "Allow Cisco Secure Desktop _trojan"
 msgstr "Permitir o _troiano Cisco Secure Desktop"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "Script CSD _envolvente:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
 msgid "Private _Key:"
 msgstr "_Chave privada:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
+#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Seleccione un ficheiro"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.glade.h:7
 msgid "Use _FSID for key passphrase"
 msgstr "Usar o _FSID para a frase de paso da chave"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
+#: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "_CA Certificate:"
 msgstr "Certificado da _CA:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
+#: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "_Gateway:"
 msgstr "_Pasarela:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
+#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Proxy:"
 msgstr "_Proxy:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.glade.h:11
 msgid "_User Certificate:"
 msgstr "Certificado de _usuario:"
 
