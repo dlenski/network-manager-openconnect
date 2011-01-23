@@ -1,0 +1,88 @@
+# Hebrew translations for PACKAGE package.
+# Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: NetworkManager-openconnect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-23 12:52+0200\n"
+"PO-Revision-Date: 2011-01-23 13:29+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <sh.yaron@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../properties/auth-helpers.c:63
+msgid "Choose a Certificate Authority certificate..."
+msgstr "נא לבחור אישור של רשות אישורים..."
+
+#: ../properties/auth-helpers.c:79
+msgid "Choose your personal certificate..."
+msgstr "נא לבחור את האישור האישי שלך..."
+
+#: ../properties/auth-helpers.c:95
+msgid "Choose your private key..."
+msgstr "נא לבחור את המפתח הפרטי שלך..."
+
+#: ../properties/auth-helpers.c:255
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "אישורי PEM ‏(‎*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN התואם ל־Cisco AnyConnect‏ (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "תואם ל־VPN מסוג Cisco AnyConnect SSL."
+
+#: ../properties/nm-openconnect-dialog.glade.h:1
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>אימות בעזרת אישור</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:2
+msgid "<b>General</b>"
+msgstr "<b>כללי</b>"
+
+#: ../properties/nm-openconnect-dialog.glade.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "מתן אישור לסוס ה_טרויאני Cisco Secure Desktop"
+
+#: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "_סקריפט CSD Wrapper"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
+msgid "Private _Key:"
+msgstr "מפתח פר_טי"
+
+#: ../properties/nm-openconnect-dialog.glade.h:6
+msgid "Select A File"
+msgstr "נא לבחור בקובץ"
+
+#: ../properties/nm-openconnect-dialog.glade.h:7
+msgid "Use _FSID for key passphrase"
+msgstr "שימוש ב־FSID למילת צופן למ_פתח"
+
+#: ../properties/nm-openconnect-dialog.glade.h:8
+msgid "_CA Certificate:"
+msgstr "_אישור CA:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:9
+msgid "_Gateway:"
+msgstr "שער _גישה:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:10
+msgid "_Proxy:"
+msgstr "מת_ווך:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:11
+msgid "_User Certificate:"
+msgstr "אישור מש_תמש:"
