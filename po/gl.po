@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-19 14:59+0100\n"
-"PO-Revision-Date: 2011-01-19 14:59+0100\n"
+"POT-Creation-Date: 2011-01-27 03:13+0100\n"
+"PO-Revision-Date: 2011-01-24 18:01+0100\n"
 "Last-Translator: Fran Diéguez <frandieguez@ubuntu.com>\n"
 "Language-Team: Galician <gnome-gl-list@gnome.org>\n"
 "Language: gl\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: ../properties/auth-helpers.c:63
 msgid "Choose a Certificate Authority certificate..."
-msgstr "Seleccione un certificado de Autoridade de Certificación..."
+msgstr "Seleccione un certificado de Autoridade de Certificación…"
 
 #: ../properties/auth-helpers.c:79
 msgid "Choose your personal certificate..."
-msgstr "Seleccione o seu certificado persoal..."
+msgstr "Seleccione o seu certificado persoal…"
 
 #: ../properties/auth-helpers.c:95
 msgid "Choose your private key..."
-msgstr "Seleccione a súa chave privada..."
+msgstr "Seleccione a súa chave privada…"
 
 #: ../properties/auth-helpers.c:255
 msgid "PEM certificates (*.pem, *.crt, *.key)"
