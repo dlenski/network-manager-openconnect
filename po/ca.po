@@ -2,16 +2,16 @@
 # Traduccions al català del paquet «network-manager-openconnect».
 # Copyright (C) 2009 THE network-manager-openconnect'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the network-manager-openconnect package.
-# David Planella <david.planella@gmail.com>, 2009.
+# David Planella <david.planella@gmail.com>, 2009, 2011.
 # Jordi Estrada <jordi.estrada@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-25 22:02+0100\n"
-"PO-Revision-Date: 2010-12-04 00:17+0100\n"
-"Last-Translator: Jordi Estrada <jordi.estrada@gmail.com>\n"
+"POT-Creation-Date: 2011-01-31 09:07+0100\n"
+"PO-Revision-Date: 2011-01-30 11:13+0100\n"
+"Last-Translator: David Planella <david.planella@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -53,33 +53,37 @@ msgstr "<b>General</b>"
 
 #: ../properties/nm-openconnect-dialog.glade.h:3
 msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Permet el cavall de _Troia Cisco Secure Desktop"
+msgstr "Permet el cavall de _Troia del Cisco Secure Desktop"
 
 #: ../properties/nm-openconnect-dialog.glade.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "Script _embolcall del CSD:"
+
+#: ../properties/nm-openconnect-dialog.glade.h:5
 msgid "Private _Key:"
 msgstr "_Clau privada:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
+#: ../properties/nm-openconnect-dialog.glade.h:6
 msgid "Select A File"
 msgstr "Seleccioneu un fitxer"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.glade.h:7
 msgid "Use _FSID for key passphrase"
 msgstr "Utilitza el _FSID com a contrasenya de la clau"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
+#: ../properties/nm-openconnect-dialog.glade.h:8
 msgid "_CA Certificate:"
 msgstr "Certificat _CA:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
+#: ../properties/nm-openconnect-dialog.glade.h:9
 msgid "_Gateway:"
 msgstr "_Passarel·la:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
+#: ../properties/nm-openconnect-dialog.glade.h:10
 msgid "_Proxy:"
 msgstr "_Servidor intermediari:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.glade.h:11
 msgid "_User Certificate:"
 msgstr "Certificat d'_usuari:"
 
