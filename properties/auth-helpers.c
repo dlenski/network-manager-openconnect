@@ -2,6 +2,7 @@
 /***************************************************************************
  *
  * Copyright (C) 2008 Dan Williams, <dcbw@redhat.com>
+ * Copyright (C) 2008 - 2011 Red Hat, Inc.
  * Copyright (C) 2008 Tambet Ingo, <tambet@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -39,7 +40,7 @@
 #include "../src/nm-openconnect-service.h"
 
 void
-tls_pw_init_auth_widget (GladeXML *xml,
+tls_pw_init_auth_widget (GtkBuilder *builder,
                          GtkSizeGroup *group,
                          NMSettingVPN *s_vpn,
                          ChangedCallback changed_cb,
@@ -49,11 +50,11 @@ tls_pw_init_auth_widget (GladeXML *xml,
 	const char *value;
 	GtkFileFilter *filter;
 
-	g_return_if_fail (xml != NULL);
+	g_return_if_fail (builder != NULL);
 	g_return_if_fail (group != NULL);
 	g_return_if_fail (changed_cb != NULL);
 
-	widget = glade_xml_get_widget (xml, "ca_cert_chooser");
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "ca_cert_chooser"));
 
 	gtk_size_group_add_widget (group, widget);
 	filter = tls_file_chooser_filter_new ();
@@ -69,7 +70,7 @@ tls_pw_init_auth_widget (GladeXML *xml,
 			gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (widget), value);
 	}
 
-	widget = glade_xml_get_widget (xml, "cert_user_cert_chooser");
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "cert_user_cert_chooser"));
 
 	gtk_size_group_add_widget (group, widget);
 	filter = tls_file_chooser_filter_new ();
@@ -85,7 +86,7 @@ tls_pw_init_auth_widget (GladeXML *xml,
 			gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (widget), value);
 	}
 
-	widget = glade_xml_get_widget (xml, "cert_private_key_chooser");
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "cert_private_key_chooser"));
 
 	gtk_size_group_add_widget (group, widget);
 	filter = tls_file_chooser_filter_new ();
@@ -103,13 +104,13 @@ tls_pw_init_auth_widget (GladeXML *xml,
 }
 
 gboolean
-auth_widget_check_validity (GladeXML *xml, GError **error)
+auth_widget_check_validity (GtkBuilder *builder, GError **error)
 {
 	return TRUE;
 }
 
 static void
-update_from_filechooser (GladeXML *xml,
+update_from_filechooser (GtkBuilder *builder,
                          const char *key,
                          const char *widget_name,
                          NMSettingVPN *s_vpn)
@@ -118,12 +119,12 @@ update_from_filechooser (GladeXML *xml,
 	char *filename;
 	char *authtype;
 
-	g_return_if_fail (xml != NULL);
+	g_return_if_fail (builder != NULL);
 	g_return_if_fail (key != NULL);
 	g_return_if_fail (widget_name != NULL);
 	g_return_if_fail (s_vpn != NULL);
 
-	widget = glade_xml_get_widget (xml, widget_name);
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, widget_name));
 
 	filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (widget));
 	if (filename && strlen(filename)) {
@@ -140,13 +141,13 @@ update_from_filechooser (GladeXML *xml,
 }
 
 gboolean
-auth_widget_update_connection (GladeXML *xml,
+auth_widget_update_connection (GtkBuilder *builder,
                                const char *contype,
                                NMSettingVPN *s_vpn)
 {
-	update_from_filechooser (xml, NM_OPENCONNECT_KEY_CACERT, "ca_cert_chooser", s_vpn);
-	update_from_filechooser (xml, NM_OPENCONNECT_KEY_USERCERT, "cert_user_cert_chooser", s_vpn);
-	update_from_filechooser (xml, NM_OPENCONNECT_KEY_PRIVKEY, "cert_private_key_chooser", s_vpn);
+	update_from_filechooser (builder, NM_OPENCONNECT_KEY_CACERT, "ca_cert_chooser", s_vpn);
+	update_from_filechooser (builder, NM_OPENCONNECT_KEY_USERCERT, "cert_user_cert_chooser", s_vpn);
+	update_from_filechooser (builder, NM_OPENCONNECT_KEY_PRIVKEY, "cert_private_key_chooser", s_vpn);
 	return TRUE;
 }
 

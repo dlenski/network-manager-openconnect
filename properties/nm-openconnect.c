@@ -6,6 +6,7 @@
  *
  * Copyright (C) 2005 David Zeuthen, <davidz@redhat.com>
  * Copyright (C) 2005 - 2008 Dan Williams, <dcbw@redhat.com>
+ * Copyright (C) 2005 - 2011 Red Hat, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,7 +35,6 @@
 #include <glib/gi18n-lib.h>
 #include <string.h>
 #include <gtk/gtk.h>
-#include <glade/glade.h>
 
 #define NM_VPN_API_SUBJECT_TO_CHANGE
 
@@ -71,7 +71,7 @@ G_DEFINE_TYPE_EXTENDED (OpenconnectPluginUiWidget, openconnect_plugin_ui_widget,
 #define OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET, OpenconnectPluginUiWidgetPrivate))
 
 typedef struct {
-	GladeXML *xml;
+	GtkBuilder *builder;
 	GtkWidget *widget;
 	GtkSizeGroup *group;
 	GtkWindowGroup *window_group;
@@ -305,7 +305,7 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 	GtkWidget *widget;
 	const char *str;
 
-	widget = glade_xml_get_widget (priv->xml, "gateway_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "gateway_entry"));
 	str = gtk_entry_get_text (GTK_ENTRY (widget));
 	if (!str || !strlen (str)) {
 		g_set_error (error,
@@ -316,7 +316,7 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 	}
 
 
-	widget = glade_xml_get_widget (priv->xml, "proxy_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "proxy_entry"));
 	str = gtk_entry_get_text (GTK_ENTRY (widget));
 	if (str && str[0] &&
 		strncmp(str, "socks://", 8) && strncmp(str, "http://", 7)) {
@@ -327,7 +327,7 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 		return FALSE;
 	}
 
-	if (!auth_widget_check_validity (priv->xml, error))
+	if (!auth_widget_check_validity (priv->builder, error))
 		return FALSE;
 
 	return TRUE;
@@ -351,7 +351,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 
 	priv->group = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
 
-	widget = glade_xml_get_widget (priv->xml, "gateway_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "gateway_entry"));
 	if (!widget)
 		return FALSE;
 	gtk_size_group_add_widget (priv->group, widget);
@@ -362,7 +362,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-	widget = glade_xml_get_widget (priv->xml, "proxy_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "proxy_entry"));
 	if (!widget)
 		return FALSE;
 	gtk_size_group_add_widget (priv->group, widget);
@@ -373,7 +373,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-	widget = glade_xml_get_widget (priv->xml, "fsid_button");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "fsid_button"));
 	if (!widget)
 		return FALSE;
 	if (s_vpn) {
@@ -383,7 +383,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "toggled", G_CALLBACK (stuff_changed_cb), self);
 
-	widget = glade_xml_get_widget (priv->xml, "csd_button");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "csd_button"));
 	if (!widget)
 		return FALSE;
 	if (s_vpn) {
@@ -393,7 +393,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "toggled", G_CALLBACK (stuff_changed_cb), self);
 
-	widget = glade_xml_get_widget (priv->xml, "csd_wrapper_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "csd_wrapper_entry"));
 	if (!widget)
 		return FALSE;
 	if (s_vpn) {
@@ -403,8 +403,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-	tls_pw_init_auth_widget (priv->xml, priv->group, s_vpn,
-							 stuff_changed_cb, self);
+	tls_pw_init_auth_widget (priv->builder, priv->group, s_vpn, stuff_changed_cb, self);
 
 	return TRUE;
 }
@@ -436,30 +435,30 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	s_vpn = NM_SETTING_VPN (nm_setting_vpn_new ());
 	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_DBUS_SERVICE_OPENCONNECT, NULL);
 
-	widget = glade_xml_get_widget (priv->xml, "gateway_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "gateway_entry"));
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY, str);
 
-	widget = glade_xml_get_widget (priv->xml, "proxy_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "proxy_entry"));
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY, str);
 
-	widget = glade_xml_get_widget (priv->xml, "fsid_button");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "fsid_button"));
 	str = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (widget))?"yes":"no";
 	nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, str);
 
-	widget = glade_xml_get_widget (priv->xml, "csd_button");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "csd_button"));
 	str = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (widget))?"yes":"no";
 	nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE, str);
 
-	widget = glade_xml_get_widget (priv->xml, "csd_wrapper_entry");
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "csd_wrapper_entry"));
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, str);
 	
-	auth_widget_update_connection (priv->xml, auth_type, s_vpn);
+	auth_widget_update_connection (priv->builder, auth_type, s_vpn);
 
 	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
 	return TRUE;
@@ -479,7 +478,7 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 {
 	NMVpnPluginUiWidgetInterface *object;
 	OpenconnectPluginUiWidgetPrivate *priv;
-	char *glade_file;
+	char *ui_file;
 
 	if (error)
 		g_return_val_if_fail (*error == NULL, NULL);
@@ -492,18 +491,24 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 
 	priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (object);
 
-	glade_file = g_strdup_printf ("%s/%s", GLADEDIR, "nm-openconnect-dialog.glade");
-	priv->xml = glade_xml_new (glade_file, "openconnect-vbox", GETTEXT_PACKAGE);
-	if (priv->xml == NULL) {
+	ui_file = g_strdup_printf ("%s/%s", UIDIR, "nm-openconnect-dialog.ui");
+	priv->builder = gtk_builder_new ();
+
+	if (!gtk_builder_add_from_file (priv->builder, ui_file, error)) {
+		g_warning ("Couldn't load builder file: %s",
+		           error && *error ? (*error)->message : "(unknown)");
+		g_clear_error (error);
 		g_set_error (error, OPENCONNECT_PLUGIN_UI_ERROR, 0,
-		             "could not load required resources at %s", glade_file);
-		g_free (glade_file);
+		             "could not load required resources at %s", ui_file);
+		g_free (ui_file);
 		g_object_unref (object);
 		return NULL;
 	}
-	g_free (glade_file);
+	g_free (ui_file);
 
-	priv->widget = glade_xml_get_widget (priv->xml, "openconnect-vbox");
+	gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
+
+	priv->widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "openconnect-vbox"));
 	if (!priv->widget) {
 		g_set_error (error, OPENCONNECT_PLUGIN_UI_ERROR, 0, "could not load UI widget");
 		g_object_unref (object);
@@ -536,8 +541,8 @@ dispose (GObject *object)
 	if (priv->widget)
 		g_object_unref (priv->widget);
 
-	if (priv->xml)
-		g_object_unref (priv->xml);
+	if (priv->builder)
+		g_object_unref (priv->builder);
 
 	G_OBJECT_CLASS (openconnect_plugin_ui_widget_parent_class)->dispose (object);
 }

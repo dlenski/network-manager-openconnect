@@ -2,6 +2,7 @@
 /***************************************************************************
  *
  * Copyright (C) 2008 Dan Williams, <dcbw@redhat.com>
+ * Copyright (C) 2008 - 2011 Red Hat, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,28 +26,27 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <gtk/gtkfilefilter.h>
-#include <glade/glade.h>
 
 #include <nm-connection.h>
 #include <nm-setting-vpn.h>
 
 typedef void (*ChangedCallback) (GtkWidget *widget, gpointer user_data);
 
-void tls_pw_init_auth_widget (GladeXML *xml,
+void tls_pw_init_auth_widget (GtkBuilder *builder,
                               GtkSizeGroup *group,
                               NMSettingVPN *s_vpn,
                               ChangedCallback changed_cb,
                               gpointer user_data);
 
-void sk_init_auth_widget (GladeXML *xml,
+void sk_init_auth_widget (GtkBuilder *builder,
                           GtkSizeGroup *group,
                           NMSettingVPN *s_vpn,
                           ChangedCallback changed_cb,
                           gpointer user_data);
 
-gboolean auth_widget_check_validity (GladeXML *xml, GError **error);
+gboolean auth_widget_check_validity (GtkBuilder *builder, GError **error);
 
-gboolean auth_widget_update_connection (GladeXML *xml,
+gboolean auth_widget_update_connection (GtkBuilder *builder,
                                         const char *contype,
                                         NMSettingVPN *s_vpn);
 
