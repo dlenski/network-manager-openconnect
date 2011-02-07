@@ -2,7 +2,6 @@
 # Please keep this file sorted alphabetically.
 properties/auth-helpers.c
 properties/nm-openconnect.c
-properties/nm-openconnect-dialog.ui
+[type: gettext/glade]properties/nm-openconnect-dialog.ui
 src/nm-openconnect-service.c
-
 
