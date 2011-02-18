@@ -1,15 +1,15 @@
-# translation of network-manager-openconnect.po.master.gu.po to Gujarati
+# translation of gu.po to Gujarati
 # Gujarati translation of network-manager-openconnect.
 # Copyright (C) 2009 network-manager-openconnect's COPYRIGHT HOLDER
 # This file is distributed under the same license as the network-manager-openconnect package.
 #
-# Sweta Kothari <swkothar@redhat.com>, 2009.
+# Sweta Kothari <swkothar@redhat.com>, 2009, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: network-manager-openconnect.po.master.gu\n"
+"Project-Id-Version: gu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-05-28 19:42+0000\n"
-"PO-Revision-Date: 2009-06-01 14:51+0530\n"
+"POT-Creation-Date: 2011-02-07 14:19+0000\n"
+"PO-Revision-Date: 2011-02-18 11:06+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
 "MIME-Version: 1.0\n"
@@ -18,19 +18,19 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
 msgstr "પ્રમાણપત્ર સત્તા પ્રમાણપત્રને પસંદ કરો..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
 msgstr "તમારા વ્યક્તિગત પ્રમાણપત્રને પસંદ કરો..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
 msgstr "તમારી ખાનગી કી ને પસંદ કરો..."
 
-#: ../properties/auth-helpers.c:392
+#: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM પ્રમાણપત્રો (*.pem, *.crt, *.key)"
 
@@ -42,55 +42,51 @@ msgstr "Cisco AnyConnect Compatible VPN (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Cisco AnyConnect SSL VPN સાથે સુસંગત"
 
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "પાસવર્ડ / સુરક્ષિત ID"
+#: ../properties/nm-openconnect-dialog.ui.h:1
+#| msgid "<b>Authentication</b>"
+msgid "<b>Certificate Authentication</b>"
+msgstr "પ્રમાણપત્ર સત્તાધિકરણ"
 
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "પ્રમાણપત્ર (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "TPM સાથે પ્રમાણપત્ર (TLS)"
-
-#: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
-
-#: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>સત્તાધિકરણ</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>સામાન્ય</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "CA પ્રમાણપત્ર:"
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Cisco સુરક્ષિત ડેસ્કટોપ ટ્રોજનને પરવાનગી આપો (_t)"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "ખાનગી કી:"
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "CSD રૅપર સ્ક્રિપ્ટ (_W):"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:5
+#| msgid "Private Key:"
+msgid "Private _Key:"
+msgstr "ખાનગી કી (_K):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Select A File"
 msgstr "ફાઇલને પસંદ કરો"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "પ્રકાર:"
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Use _FSID for key passphrase"
+msgstr "કી પાસફ્રેજ માટે FSID ને વાપરો (_F)"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "વપરાશકર્તા પ્રમાણપત્ર:"
+#: ../properties/nm-openconnect-dialog.ui.h:8
+#| msgid "CA Certificate:"
+msgid "_CA Certificate:"
+msgstr "CA પ્રમાણપત્ર (_C):"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "વપરાશકર્તા નામ:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_Gateway:"
 msgstr "ગેટવે (_G):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_Proxy:"
+msgstr "પ્રોક્સી (_P):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+#| msgid "User Certificate:"
+msgid "_User Certificate:"
+msgstr "વપરાશકર્તા પ્રમાણપત્ર (_U):"
 
