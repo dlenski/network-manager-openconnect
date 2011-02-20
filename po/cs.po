@@ -1,17 +1,17 @@
 # Czech translation of network-manager-openconnect.
-# Copyright (C) 2008 the author(s) of network-manager-openconnect.
+# Copyright (C) 2008, 2009, 2010, 2011 the author(s) of network-manager-openconnect.
 # This file is distributed under the same license as the network-manager-openconnect package.
-# Zdeněk Hataš <zdenek.hatas@gmail.com>, 2009, 2010.
+# Zdeněk Hataš <zdenek.hatas@gmail.com>, 2009, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2010-03-12 07:39+0000\n"
-"PO-Revision-Date: 2010-03-13 10:14+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-02-21 00:06+0100\n"
+"PO-Revision-Date: 2011-02-17 22:24+0100\n"
 "Last-Translator: Zdeněk Hataš <zdenek.hatas@gmail.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,19 +19,19 @@ msgstr ""
 "X-Poedit-Language: Czech\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 
-#: ../properties/auth-helpers.c:63
+#: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Zvolit certifikát certifikační autority..."
 
-#: ../properties/auth-helpers.c:79
+#: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
 msgstr "Zvolte svůj osobní certifikát..."
 
-#: ../properties/auth-helpers.c:95
+#: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
 msgstr "Zvolte svůj soukromý klíč..."
 
-#: ../properties/auth-helpers.c:249
+#: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certifikáty PEM (*.pem, *.crt, *.key)"
 
@@ -43,43 +43,46 @@ msgstr "VPN kompatibilní s Cisco AnyConnect (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Kompatibilní s Cisco AnyConnect SSL VPN."
 
-#: ../properties/nm-openconnect-dialog.glade.h:1
+#: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>Certificate Authentication</b>"
 msgstr "<b>Autentizace certifikátem<b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:2
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>Obecné</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:3
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "Allow Cisco Secure Desktop _trojan"
 msgstr "Povolit Cisco Secure Desktop _trojan"
 
-#: ../properties/nm-openconnect-dialog.glade.h:4
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "CSD _obalující skript:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
 msgid "Private _Key:"
 msgstr "Soukromý _klíč"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
+#: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Select A File"
 msgstr "Zvolte soubor"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:7
 msgid "Use _FSID for key passphrase"
 msgstr "Použít _FSID jako heslo klíče"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
+#: ../properties/nm-openconnect-dialog.ui.h:8
 msgid "_CA Certificate:"
 msgstr "Certifikát _CA:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_Gateway:"
 msgstr "_Brána:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:10
 msgid "_Proxy:"
 msgstr "_Proxy:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:11
 msgid "_User Certificate:"
 msgstr "Certifikát _uživatele:"
-
