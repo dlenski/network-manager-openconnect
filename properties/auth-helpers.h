@@ -25,7 +25,6 @@
 
 #include <glib.h>
 #include <gtk/gtk.h>
-#include <gtk/gtkfilefilter.h>
 
 #include <nm-connection.h>
 #include <nm-setting-vpn.h>
