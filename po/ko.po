@@ -1,0 +1,85 @@
+# Korean translation for network-manager-openconnect.
+# This file is distributed under the same license as the network-manager-openconnect package.
+#
+# Changwoo Ryu <cwryu@debian.org>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2011-02-26 15:35+0000\n"
+"PO-Revision-Date: 2011-02-27 16:02+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr "인증 기관 인증서를 선택하십시오..."
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "개인 인증서를 선택하십시오..."
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "개인 키를 선택하십시오..."
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "PEM 인증서 (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Cisco AnyConnect 호환 VPN (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Cisco AnyConnect SSL VPN과 호환됩니다."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>인증 기관</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "<b>General</b>"
+msgstr "<b>일반</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Cisco Secure Desktop (CSD) 트로이 허용(_T)"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "CSD 래퍼 스크립트(_W):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "Private _Key:"
+msgstr "개인 키(_K):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Select A File"
+msgstr "파일을 선택하십시오"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Use _FSID for key passphrase"
+msgstr "키 암호글에 FSID 사용(_F)"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "_CA Certificate:"
+msgstr "인증 기관 인증서(_C):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_Gateway:"
+msgstr "게이트웨이(_G):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_Proxy:"
+msgstr "프록시(_P):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "_User Certificate:"
+msgstr "사용자 인증서(_U):"
