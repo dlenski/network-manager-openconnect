@@ -4,33 +4,34 @@
 #
 # Laurent Coudeur <laurentc@iol.ie>, 2009.
 # Nicolas Repentin <nicolas@shivaserv.fr>, 2010.
-#
+# Bruno Brouard <annoa.b@gmail.com>, 2011
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2010-03-12 07:39+0000\n"
-"PO-Revision-Date: 2010-04-22 11:45+0200\n"
-"Last-Translator: Nicolas Repentin <nicolas.repentin@gmail.com>\n"
+"POT-Creation-Date: 2011-02-23 17:39+0000\n"
+"PO-Revision-Date: 2011-03-03 12:25+0200\n"
+"Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../properties/auth-helpers.c:63
+#: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Choisissez un certificat d'autorité de certification..."
 
-#: ../properties/auth-helpers.c:79
+#: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
 msgstr "Choisissez votre certificat personnel..."
 
-#: ../properties/auth-helpers.c:95
+#: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
 msgstr "Choisissez votre clé privée..."
 
-#: ../properties/auth-helpers.c:249
+#: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certificats PEM (*.pem, *.crt, *.key)"
 
@@ -42,42 +43,46 @@ msgstr "VPN compatible Cisco AnyConnect (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Compatible avec Cisco AnyConnect SSL VPN."
 
-#: ../properties/nm-openconnect-dialog.glade.h:1
+#: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>Certificate Authentication</b>"
 msgstr "<b>Authentification du certificat</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:2
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>Général</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:3
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "Allow Cisco Secure Desktop _trojan"
 msgstr "Autoriser le _trojan Cisco Secure Desktop"
 
-#: ../properties/nm-openconnect-dialog.glade.h:4
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "Script en_veloppant CSD :"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
 msgid "Private _Key:"
 msgstr "_Clé privée :"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
+#: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Select A File"
 msgstr "Sélectionner un fichier"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:7
 msgid "Use _FSID for key passphrase"
 msgstr "Utiliser _FSID pour la phrase de passe"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
+#: ../properties/nm-openconnect-dialog.ui.h:8
 msgid "_CA Certificate:"
 msgstr "Certificat de l'_AC :"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_Gateway:"
 msgstr "_Passerelle :"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:10
 msgid "_Proxy:"
 msgstr "_Serveur mandataire :"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:11
 msgid "_User Certificate:"
 msgstr "Certificat _utilisateur :"
