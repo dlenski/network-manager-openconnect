@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\n"
 "POT-Creation-Date: 2011-02-07 14:19+0000\n"
-"PO-Revision-Date: 2011-03-04 16:23+0530\n"
+"PO-Revision-Date: 2011-03-04 16:30+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -74,10 +74,9 @@ msgid "Use _FSID for key passphrase"
 msgstr "କି ପ୍ରବେଶ ସଂକେତ ବାକ୍ୟାଂଶ ପାଇଁ FSID କୁ ବ୍ୟବହାର କରନ୍ତୁ (_F)"
 
 #: ../properties/nm-openconnect-dialog.ui.h:8
-#, fuzzy
 #| msgid "CA Certificate:"
 msgid "_CA Certificate:"
-msgstr "CA ପ୍ରମାଣପତ୍ର:"
+msgstr "CA ପ୍ରମାଣପତ୍ର (_C):"
 
 #: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_Gateway:"
@@ -85,13 +84,12 @@ msgstr "ପ୍ରବେଶ ଦ୍ୱାର (_G):"
 
 #: ../properties/nm-openconnect-dialog.ui.h:10
 msgid "_Proxy:"
-msgstr ""
+msgstr "ପ୍ରକ୍ସି (_P):"
 
 #: ../properties/nm-openconnect-dialog.ui.h:11
-#, fuzzy
 #| msgid "User Certificate:"
 msgid "_User Certificate:"
-msgstr "ଚାଳକ ପ୍ରମାଣପତ୍ର:"
+msgstr "ଚାଳକ ପ୍ରମାଣପତ୍ର (_U):"
 
 #~ msgid "Password / SecurID"
 #~ msgstr "ପ୍ରବେଶ ସଂକେତ / ସୁରକ୍ଷିତ ID"
