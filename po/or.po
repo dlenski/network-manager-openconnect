@@ -2,34 +2,36 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Manoj Kumar Giri <mgiri@redhat.com>, 2009.
+# Manoj Kumar Giri <mgiri@redhat.com>, 2009, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2009-03-14 21:15+0000\n"
-"PO-Revision-Date: 2009-03-19 15:22+0530\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=NetworkManager&component=general\n"
+"POT-Creation-Date: 2011-02-07 14:19+0000\n"
+"PO-Revision-Date: 2011-03-04 16:23+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
+"\n"
 
-#: ../properties/auth-helpers.c:69
+#: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
 msgstr "ଗୋଟିଏ ପ୍ରମାଣପତ୍ର ଅଧିକାରୀ ପ୍ରମାଣପତ୍ର ବାଛନ୍ତୁ..."
 
-#: ../properties/auth-helpers.c:89
+#: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
 msgstr "ଆପଣଙ୍କର ବ୍ୟକ୍ତିଗତ ପ୍ରମାଣପତ୍ରକୁ ବାଛନ୍ତୁ..."
 
-#: ../properties/auth-helpers.c:107
+#: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
 msgstr "ଆପଣଙ୍କର ବ୍ୟକ୍ତିଗତ କି କୁ ବାଛନ୍ତୁ..."
 
-#: ../properties/auth-helpers.c:394
+#: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM ପ୍ରମାଣପତ୍ରଗୁଡ଼ିକ (*.pem, *.crt, *.key)"
 
@@ -41,55 +43,70 @@ msgstr "Cisco ଯେକୌଣସି ସଂଯୋଗ ସୁସଂଗତ VPN (ଖ�
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Cisco ଯେକୌଣସି ସଂଯୋଗ SSL VPN ସହିତ ସୁସଂଗତ।"
 
-#: ../properties/nm-openconnect.c:232
-msgid "Password / SecurID"
-msgstr "ପ୍ରବେଶ ସଂକେତ / ସୁରକ୍ଷିତ ID"
+#: ../properties/nm-openconnect-dialog.ui.h:1
+#| msgid "<b>Authentication</b>"
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>ପ୍ରମାଣପତ୍ର ବୈଧିକରଣ</b>"
 
-#: ../properties/nm-openconnect.c:244
-msgid "Certificate (TLS)"
-msgstr "ପ୍ରମାଣପତ୍ର (TLS)"
-
-#: ../properties/nm-openconnect.c:253
-msgid "Certificate (TLS) with TPM"
-msgstr "TPM ସହିତ ପ୍ରମାଣପତ୍ର (TLS)"
-
-#: ../properties/nm-openconnect-dialog.glade.h:1
-msgid " "
-msgstr " "
-
-#: ../properties/nm-openconnect-dialog.glade.h:2
-msgid "<b>Authentication</b>"
-msgstr "<b>ବୈଧିକରଣ</b>"
-
-#: ../properties/nm-openconnect-dialog.glade.h:3
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>ସାଧାରଣ</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:4
-msgid "CA Certificate:"
-msgstr "CA ପ୍ରମାଣପତ୍ର:"
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Cisco ସୁରକ୍ଷିତ ଡେସ୍କଟପ ଟ୍ରଜାନକୁ ଅନୁମତି ଦିଅନ୍ତୁ (_t)"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
-msgid "Private Key:"
-msgstr "ବ୍ୟକ୍ତିଗତ କି:"
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "CSD ରାପର ସ୍କ୍ରିପ୍ଟ (_W):"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:5
+#| msgid "Private Key:"
+msgid "Private _Key:"
+msgstr "ବ୍ୟକ୍ତିଗତ କି (_K):"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Select A File"
 msgstr "ଗୋଟିଏ ଫାଇଲ ବାଛନ୍ତୁ"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
-msgid "Type:"
-msgstr "ପ୍ରକାର:"
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Use _FSID for key passphrase"
+msgstr "କି ପ୍ରବେଶ ସଂକେତ ବାକ୍ୟାଂଶ ପାଇଁ FSID କୁ ବ୍ୟବହାର କରନ୍ତୁ (_F)"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
-msgid "User Certificate:"
-msgstr "ଚାଳକ ପ୍ରମାଣପତ୍ର:"
+#: ../properties/nm-openconnect-dialog.ui.h:8
+#, fuzzy
+#| msgid "CA Certificate:"
+msgid "_CA Certificate:"
+msgstr "CA ପ୍ରମାଣପତ୍ର:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
-msgid "User name:"
-msgstr "ଚାଳକ ନାମ:"
-
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_Gateway:"
 msgstr "ପ୍ରବେଶ ଦ୍ୱାର (_G):"
 
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_Proxy:"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+#, fuzzy
+#| msgid "User Certificate:"
+msgid "_User Certificate:"
+msgstr "ଚାଳକ ପ୍ରମାଣପତ୍ର:"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "ପ୍ରବେଶ ସଂକେତ / ସୁରକ୍ଷିତ ID"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "ପ୍ରମାଣପତ୍ର (TLS)"
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "TPM ସହିତ ପ୍ରମାଣପତ୍ର (TLS)"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Type:"
+#~ msgstr "ପ୍ରକାର:"
+
+#~ msgid "User name:"
+#~ msgstr "ଚାଳକ ନାମ:"
