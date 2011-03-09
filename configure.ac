@@ -57,6 +57,10 @@ PKG_CHECK_MODULES(DBUS, dbus-glib-1 >= 0.74)
 AC_SUBST(DBUS_CFLAGS)
 AC_SUBST(DBUS_LIBS)
 
+PKG_CHECK_MODULES(OPENCONNECT, openconnect)
+AC_SUBST(OPENCONNECT_CFLAGS)
+AC_SUBST(OPENCONNECT_LIBS)
+
 if test x"$with_gnome" != xno; then
 	PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.6)
 	AC_SUBST(GTK_CFLAGS)
@@ -88,6 +92,7 @@ NM_COMPILER_WARNINGS
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
+auth-dialog/Makefile
 properties/Makefile
 po/Makefile.in
 ])
