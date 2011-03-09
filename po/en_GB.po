@@ -1,0 +1,86 @@
+# British English translation of NetworkManager-openconnect
+# Copyright (C) 2011 NetworkManager-openconnect'S COPYRIGHT HOLDER
+# This file is distributed under the same licence as the NetworkManager-openconnect package.
+# Bruce Cowan <bruce@bcowan.me.uk>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: NetworkManager-openconnect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-09 15:37+0000\n"
+"PO-Revision-Date: 2011-03-09 15:40+0100\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"Language-Team: British English <en@li.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.6.1\n"
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Choose a Certificate Authority certificate…"
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "Choose your personal certificate…"
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "Choose your private key…"
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "PEM certificates (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Cisco AnyConnect Compatible VPN (openconnect)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Compatible with Cisco AnyConnect SSL VPN."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Certificate Authentication</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "<b>General</b>"
+msgstr "<b>General</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Allow Cisco Secure Desktop _trojan"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "CSD _Wrapper Script:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "Private _Key:"
+msgstr "Private _Key:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Select A File"
+msgstr "Select A File"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Use _FSID for key passphrase"
+msgstr "Use _FSID for key passphrase"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "_CA Certificate:"
+msgstr "_CA Certificate:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_Gateway:"
+msgstr "_Gateway:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "_User Certificate:"
+msgstr "_User Certificate:"
