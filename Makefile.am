@@ -1,9 +1,13 @@
 AUTOMAKE_OPTIONS = foreign
 
-SUBDIRS = src auth-dialog
+SUBDIRS = src
 
 if WITH_GNOME
 SUBDIRS += properties po
+endif
+
+if WITH_AUTHDLG
+SUBDIRS += auth-dialog
 endif
 
 dbusservicedir = $(sysconfdir)/dbus-1/system.d
