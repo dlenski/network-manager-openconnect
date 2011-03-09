@@ -42,6 +42,9 @@ dnl
 AC_ARG_WITH(gnome, AS_HELP_STRING([--without-gnome], [Build NetworkManager-openconnect without GNOME support, e.g. vpn service only]))
 AM_CONDITIONAL(WITH_GNOME, test x"$with_gnome" != xno)
 
+AC_ARG_WITH(authdlg, AS_HELP_STRING([--without-authdlg], [Build NetworkManager-openconnect without authentication dialog]))
+AM_CONDITIONAL(WITH_AUTHDLG, test x"$with_authdlg" != xno)
+
 GETTEXT_PACKAGE=NetworkManager-openconnect
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
@@ -57,9 +60,11 @@ PKG_CHECK_MODULES(DBUS, dbus-glib-1 >= 0.74)
 AC_SUBST(DBUS_CFLAGS)
 AC_SUBST(DBUS_LIBS)
 
-PKG_CHECK_MODULES(OPENCONNECT, openconnect)
-AC_SUBST(OPENCONNECT_CFLAGS)
-AC_SUBST(OPENCONNECT_LIBS)
+if test x"$with_authdlg" != xno; then
+	PKG_CHECK_MODULES(OPENCONNECT, openconnect)
+	AC_SUBST(OPENCONNECT_CFLAGS)
+	AC_SUBST(OPENCONNECT_LIBS)
+fi
 
 if test x"$with_gnome" != xno; then
 	PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.6)
