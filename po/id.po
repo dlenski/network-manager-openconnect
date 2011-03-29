@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Language: Indonesian\n"
 "X-Poedit-Country: Indonesia\n"
 "X-Generator: Lokalize 1.1\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
