@@ -48,7 +48,7 @@ helper_failed (DBusGConnection *connection, const char *reason)
 	DBusGProxy *proxy;
 	GError *err = NULL;
 
-	nm_warning ("nm-nopenconnect-service-openconnect-helper did not receive a valid %s from openconnect", reason);
+	g_warning ("nm-nopenconnect-service-openconnect-helper did not receive a valid %s from openconnect", reason);
 
 	proxy = dbus_g_proxy_new_for_name (connection,
 								NM_DBUS_SERVICE_OPENCONNECT,
@@ -61,7 +61,7 @@ helper_failed (DBusGConnection *connection, const char *reason)
 				    G_TYPE_INVALID);
 
 	if (err) {
-		nm_warning ("Could not send failure information: %s", err->message);
+		g_warning ("Could not send failure information: %s", err->message);
 		g_error_free (err);
 	}
 
@@ -88,7 +88,7 @@ send_ip4_config (DBusGConnection *connection, GHashTable *config)
 				    G_TYPE_INVALID);
 
 	if (err) {
-		nm_warning ("Could not send failure information: %s", err->message);
+		g_warning ("Could not send failure information: %s", err->message);
 		g_error_free (err);
 	}
 
@@ -230,7 +230,7 @@ get_routes (void)
 		snprintf (buf, BUFLEN, "CISCO_SPLIT_INC_%d_ADDR", i);
 		tmp = getenv (buf);
 		if (!tmp || inet_pton (AF_INET, tmp, &network) <= 0) {
-			nm_warning ("Ignoring invalid static route address '%s'", tmp ? tmp : "NULL");
+			g_warning ("Ignoring invalid static route address '%s'", tmp ? tmp : "NULL");
 			continue;
 		}
 
@@ -242,7 +242,7 @@ get_routes (void)
 			errno = 0;
 			tmp_prefix = strtol (tmp, NULL, 10);
 			if (errno || tmp_prefix <= 0 || tmp_prefix > 32) {
-				nm_warning ("Ignoring invalid static route prefix '%s'", tmp ? tmp : "NULL");
+				g_warning ("Ignoring invalid static route prefix '%s'", tmp ? tmp : "NULL");
 				continue;
 			}
 			prefix = (guint32) tmp_prefix;
@@ -252,7 +252,7 @@ get_routes (void)
 			snprintf (buf, BUFLEN, "CISCO_SPLIT_INC_%d_MASK", i);
 			tmp = getenv (buf);
 			if (!tmp || inet_pton (AF_INET, tmp, &netmask) <= 0) {
-				nm_warning ("Ignoring invalid static route netmask '%s'", tmp ? tmp : "NULL");
+				g_warning ("Ignoring invalid static route netmask '%s'", tmp ? tmp : "NULL");
 				continue;
 			}
 			prefix = nm_utils_ip4_netmask_to_prefix (netmask.s_addr);
@@ -310,7 +310,7 @@ main (int argc, char *argv[])
 
 	connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &err);
 	if (!connection) {
-		nm_warning ("Could not get the system bus: %s", err->message);
+		g_warning ("Could not get the system bus: %s", err->message);
 		exit (1);
 	}
 
@@ -392,7 +392,7 @@ main (int argc, char *argv[])
 		errno = 0;
 		mtu = strtol (tmp, NULL, 10);
 		if (errno || mtu < 0 || mtu > 20000) {
-			nm_warning ("Ignoring invalid tunnel MTU '%s'", tmp);
+			g_warning ("Ignoring invalid tunnel MTU '%s'", tmp);
 		} else {
 			val = uint_to_gvalue ((guint32) mtu);
 			g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_MTU, val);

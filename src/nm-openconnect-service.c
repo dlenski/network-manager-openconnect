@@ -223,14 +223,14 @@ openconnect_watch_cb (GPid pid, gint status, gpointer user_data)
 	if (WIFEXITED (status)) {
 		error = WEXITSTATUS (status);
 		if (error != 0)
-			nm_warning ("openconnect exited with error code %d", error);
+			g_warning ("openconnect exited with error code %d", error);
 	}
 	else if (WIFSTOPPED (status))
-		nm_warning ("openconnect stopped unexpectedly with signal %d", WSTOPSIG (status));
+		g_warning ("openconnect stopped unexpectedly with signal %d", WSTOPSIG (status));
 	else if (WIFSIGNALED (status))
-		nm_warning ("openconnect died with signal %d", WTERMSIG (status));
+		g_warning ("openconnect died with signal %d", WTERMSIG (status));
 	else
-		nm_warning ("openconnect died from an unknown cause");
+		g_warning ("openconnect died from an unknown cause");
 
 	/* Reap child if needed. */
 	waitpid (priv->pid, NULL, WNOHANG);
@@ -351,16 +351,16 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 								   openconnect_drop_child_privs, NULL,
 								   &pid, &stdin_fd, NULL, NULL, error)) {
 		g_ptr_array_free (openconnect_argv, TRUE);
-		nm_warning ("openconnect failed to start.  error: '%s'", (*error)->message);
+		g_warning ("openconnect failed to start.  error: '%s'", (*error)->message);
 		return -1;
 	}
 	g_ptr_array_free (openconnect_argv, TRUE);
 
-	nm_info ("openconnect started with pid %d", pid);
+	g_message ("openconnect started with pid %d", pid);
 
 	if (write(stdin_fd, props_cookie, strlen(props_cookie)) != strlen(props_cookie) ||
 		write(stdin_fd, "\n", 1) != 1) {
-		nm_warning ("openconnect didn't eat the cookie we fed it");
+		g_warning ("openconnect didn't eat the cookie we fed it");
 		return -1;
 	}
 
@@ -459,7 +459,7 @@ real_disconnect (NMVPNPlugin   *plugin,
 		else
 			kill (priv->pid, SIGKILL);
 
-		nm_info ("Terminated openconnect daemon with PID %d.", priv->pid);
+		g_message ("Terminated openconnect daemon with PID %d.", priv->pid);
 		priv->pid = 0;
 	}
 
