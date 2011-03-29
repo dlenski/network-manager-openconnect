@@ -23,6 +23,10 @@
  *   Boston, MA 02110-1301 USA
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
@@ -35,6 +39,7 @@
 #include <gconf/gconf-client.h>
 
 #include <gtk/gtk.h>
+#include <glib/gi18n.h>
 
 #include "auth-dlg-settings.h"
 
@@ -650,8 +655,8 @@ static gboolean user_validate_cert(cert_data *data)
 	BIO_get_mem_ptr(bp, &certinfo);
 
 	title = get_title(data->ui_data->vpn_name);
-	msg = g_strdup_printf("Certificate from VPN server \"%s\" failed verification.\n"
-			      "Reason: %s\nDo you want to accept it?",
+	msg = g_strdup_printf(_("Certificate from VPN server \"%s\" failed verification.\n"
+			      "Reason: %s\nDo you want to accept it?"),
 			      openconnect_get_hostname(data->ui_data->vpninfo),
 			      data->reason);
 
@@ -1309,7 +1314,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_box_pack_start(GTK_BOX(vbox), hbox, FALSE, FALSE, 0);
 	gtk_widget_show(hbox);
 
-	label = gtk_label_new("VPN host");
+	label = gtk_label_new(_("VPN host"));
 	gtk_box_pack_start(GTK_BOX(hbox), label, FALSE, FALSE, 0);
 	gtk_widget_show(label);
 
@@ -1329,7 +1334,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 				 G_CALLBACK(queue_connect_host), ui_data);
 	gtk_widget_show(ui_data->connect_button);
 
-	autocon = gtk_check_button_new_with_label("Automatically start connecting next time");
+	autocon = gtk_check_button_new_with_label(_("Automatically start connecting next time"));
 	gtk_box_pack_start(GTK_BOX(vbox), autocon, FALSE, FALSE, 0);
 	if (get_gconf_autoconnect(gcl, config_path))
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(autocon), 1);
@@ -1346,12 +1351,12 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_container_add(GTK_CONTAINER(frame), frame_box);
 	gtk_widget_show(frame_box);
 
-	ui_data->no_form_label = gtk_label_new("Select a host to fetch the login form");
+	ui_data->no_form_label = gtk_label_new(_("Select a host to fetch the login form"));
 	gtk_widget_set_sensitive(ui_data->no_form_label, FALSE);
 	gtk_box_pack_start(GTK_BOX(frame_box), ui_data->no_form_label, FALSE, FALSE, 0);
 	gtk_widget_show(ui_data->no_form_label);
 
-	ui_data->getting_form_label = gtk_label_new("Contacting host, please wait...");
+	ui_data->getting_form_label = gtk_label_new(_("Contacting host, please wait..."));
 	gtk_widget_set_sensitive(ui_data->getting_form_label, FALSE);
 	gtk_box_pack_start(GTK_BOX(frame_box), ui_data->getting_form_label, FALSE, FALSE, 0);
 
@@ -1363,7 +1368,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_box_pack_end(GTK_BOX(frame_box), hbox, FALSE, FALSE, 0);
 	gtk_widget_show(hbox);
 
-	ui_data->login_button = gtk_button_new_with_mnemonic("_Login");
+	ui_data->login_button = gtk_button_new_with_mnemonic(_("_Login"));
 	image = gtk_image_new_from_stock(GTK_STOCK_APPLY, GTK_ICON_SIZE_BUTTON);
 	gtk_button_set_image (GTK_BUTTON(ui_data->login_button), image);
 	gtk_box_pack_end(GTK_BOX(hbox), ui_data->login_button, FALSE, FALSE, 0);
@@ -1377,7 +1382,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_widget_set_sensitive (ui_data->cancel_button, FALSE);
 	gtk_widget_show(ui_data->cancel_button);
 
-	exp = gtk_expander_new("Log");
+	exp = gtk_expander_new(_("Log"));
 	gtk_box_pack_end(GTK_BOX(vbox), exp, FALSE, FALSE, 0);
 	gtk_widget_show(exp);
 

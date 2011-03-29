@@ -22,6 +22,10 @@
  *   Copyright © 2007 - 2008 Novell, Inc.
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -36,6 +40,7 @@
 #include <net/if.h>
 #include <pwd.h>
 #include <grp.h>
+#include <glib/gi18n.h>
 
 #include <nm-setting-vpn.h>
 #include "nm-openconnect-service.h"
@@ -136,7 +141,7 @@ validate_one_property (const char *key, const char *value, gpointer user_data)
 			g_set_error (info->error,
 			             NM_VPN_PLUGIN_ERROR,
 			             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
-			             "invalid integer property '%s' or out of range [%d -> %d]",
+			             _("invalid integer property '%s' or out of range [%d -> %d]"),
 			             key, prop.int_min, prop.int_max);
 			break;
 		case G_TYPE_BOOLEAN:
@@ -146,14 +151,14 @@ validate_one_property (const char *key, const char *value, gpointer user_data)
 			g_set_error (info->error,
 			             NM_VPN_PLUGIN_ERROR,
 			             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
-			             "invalid boolean property '%s' (not yes or no)",
+			             _("invalid boolean property '%s' (not yes or no)"),
 			             key);
 			break;
 		default:
 			g_set_error (info->error,
 			             NM_VPN_PLUGIN_ERROR,
 			             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
-			             "unhandled property '%s' type %s",
+			             _("unhandled property '%s' type %s"),
 			             key, g_type_name (prop.type));
 			break;
 		}
@@ -164,7 +169,7 @@ validate_one_property (const char *key, const char *value, gpointer user_data)
 		g_set_error (info->error,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
-		             "property '%s' invalid or not supported",
+		             _("property '%s' invalid or not supported"),
 		             key);
 	}
 }
@@ -180,7 +185,7 @@ nm_openconnect_properties_validate (NMSettingVPN *s_vpn, GError **error)
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
 		             "%s",
-		             "No VPN configuration options.");
+		             _("No VPN configuration options."));
 		return FALSE;
 	}
 
@@ -198,7 +203,7 @@ nm_openconnect_secrets_validate (NMSettingVPN *s_vpn, GError **error)
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
 		             "%s",
-		             "No VPN secrets!");
+		             _("No VPN secrets!"));
 		return FALSE;
 	}
 
@@ -278,7 +283,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
 		             "%s",
-		             "Could not find openconnect binary.");
+		             _("Could not find openconnect binary."));
 		return -1;
 	}
 
@@ -290,7 +295,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
 		             "%s",
-		             "No VPN gateway specified.");
+		             _("No VPN gateway specified."));
 		return -1;
 	}
 
@@ -300,7 +305,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
 		             "%s",
-		             "No WebVPN cookie provided.");
+		             _("No WebVPN cookie provided."));
 		return -1;
 	}
 	props_gwcert = nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_GWCERT);
