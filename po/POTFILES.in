@@ -1,7 +1,7 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
+auth-dialog/main.c
 properties/auth-helpers.c
 properties/nm-openconnect.c
 [type: gettext/glade]properties/nm-openconnect-dialog.ui
 src/nm-openconnect-service.c
-
