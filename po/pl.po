@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-11 09:12+0100\n"
-"PO-Revision-Date: 2011-03-11 09:13+0100\n"
+"POT-Creation-Date: 2011-04-05 21:17+0200\n"
+"PO-Revision-Date: 2011-04-05 21:18+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -22,6 +22,41 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
+
+#: ../auth-dialog/main.c:658
+#, c-format
+msgid ""
+"Certificate from VPN server \"%s\" failed verification.\n"
+"Reason: %s\n"
+"Do you want to accept it?"
+msgstr ""
+"Sprawdzenie certyfikatu z serwera VPN \"%s\" się nie powiodło.\n"
+"Przyczyna: %s\n"
+"Zaakceptować go?"
+
+#: ../auth-dialog/main.c:1317
+msgid "VPN host"
+msgstr "Komputer VPN"
+
+#: ../auth-dialog/main.c:1337
+msgid "Automatically start connecting next time"
+msgstr "Automatyczne rozpoczynanie połączenie następnym razem"
+
+#: ../auth-dialog/main.c:1354
+msgid "Select a host to fetch the login form"
+msgstr "Wybór komputera, z którego pobrać login"
+
+#: ../auth-dialog/main.c:1359
+msgid "Contacting host, please wait..."
+msgstr "Łączenie się z komputerem, proszę czekać..."
+
+#: ../auth-dialog/main.c:1371
+msgid "_Login"
+msgstr "_Login"
+
+#: ../auth-dialog/main.c:1385
+msgid "Log"
+msgstr "Dziennik"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
@@ -90,3 +125,47 @@ msgstr "_Pośrednik:"
 #: ../properties/nm-openconnect-dialog.ui.h:11
 msgid "_User Certificate:"
 msgstr "Certyfikat _użytkownika:"
+
+#: ../src/nm-openconnect-service.c:144
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr ""
+"nieprawidłowa własność liczby całkowitej \"%s\" lub jest poza zakresem [%d -"
+"> %d]"
+
+#: ../src/nm-openconnect-service.c:154
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr ""
+"nieprawidłowa własność zmiennej logicznej \"%s\" (nie wynosi \"yes\" lub \"no"
+"\")"
+
+#: ../src/nm-openconnect-service.c:161
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "nieobsługiwana własność \"%s\" typu \"%s\""
+
+#: ../src/nm-openconnect-service.c:172
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "własność \"%s\" jest nieprawidłowa lub nieobsługiwana"
+
+#: ../src/nm-openconnect-service.c:188
+msgid "No VPN configuration options."
+msgstr "Brak opcji konfiguracji VPN."
+
+#: ../src/nm-openconnect-service.c:206
+msgid "No VPN secrets!"
+msgstr "Brak haseł VPN."
+
+#: ../src/nm-openconnect-service.c:286
+msgid "Could not find openconnect binary."
+msgstr "Nie można odnaleźć pliku binarnego openconnect."
+
+#: ../src/nm-openconnect-service.c:298
+msgid "No VPN gateway specified."
+msgstr "Nie podano bramy VPN."
+
+#: ../src/nm-openconnect-service.c:308
+msgid "No WebVPN cookie provided."
+msgstr "Nie podano ciasteczka WebVPN."
