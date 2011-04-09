@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-22 14:07+0100\n"
-"PO-Revision-Date: 2011-01-22 14:08+0100\n"
+"POT-Creation-Date: 2011-04-09 10:25+0200\n"
+"PO-Revision-Date: 2011-04-09 10:29+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,19 +16,54 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../properties/auth-helpers.c:63
+#: ../auth-dialog/main.c:658
+#, c-format
+msgid ""
+"Certificate from VPN server \"%s\" failed verification.\n"
+"Reason: %s\n"
+"Do you want to accept it?"
+msgstr ""
+"Certifikatet från VPN-servern \"%s\" klarade inte verifiering.\n"
+"Anledning: %s\n"
+"Accepterar du det?"
+
+#: ../auth-dialog/main.c:1317
+msgid "VPN host"
+msgstr "VPN-värd"
+
+#: ../auth-dialog/main.c:1337
+msgid "Automatically start connecting next time"
+msgstr "Påbörja anslutningen automatiskt nästa gång"
+
+#: ../auth-dialog/main.c:1354
+msgid "Select a host to fetch the login form"
+msgstr "Välj en värd att hämta inloggningsformuläret från"
+
+#: ../auth-dialog/main.c:1359
+msgid "Contacting host, please wait..."
+msgstr "Kontaktar värden, vänta..."
+
+#: ../auth-dialog/main.c:1371
+msgid "_Login"
+msgstr "_Logga in"
+
+#: ../auth-dialog/main.c:1385
+msgid "Log"
+msgstr "Logg"
+
+#: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Välj ett certifikatutfärdarcertifikat (CA)..."
 
-#: ../properties/auth-helpers.c:79
+#: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
 msgstr "Välj ditt personliga certifikat..."
 
-#: ../properties/auth-helpers.c:95
+#: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
 msgstr "Välj din privata nyckel..."
 
-#: ../properties/auth-helpers.c:255
+#: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM-certifikat (*.pem, *.crt, *.key)"
 
@@ -40,49 +75,89 @@ msgstr "Cisco AnyConnect-kompatibel VPN (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Kompatibel med Cisco AnyConnect SSL VPN."
 
-#: ../properties/nm-openconnect-dialog.glade.h:1
+#: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>Certificate Authentication</b>"
 msgstr "<b>Certifikatautentisering</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:2
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>Allmänt</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:3
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "Allow Cisco Secure Desktop _trojan"
 msgstr "Tillåt Cisco Secure Desktop-_trojan"
 
-#: ../properties/nm-openconnect-dialog.glade.h:4
+#: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "CSD _Wrapper Script:"
 msgstr "Omslagsskript för CSD:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
+#: ../properties/nm-openconnect-dialog.ui.h:5
 msgid "Private _Key:"
 msgstr "Privat _nyckel:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Select A File"
 msgstr "Välj en fil"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
+#: ../properties/nm-openconnect-dialog.ui.h:7
 msgid "Use _FSID for key passphrase"
 msgstr "Använd _FSID för nyckellösenfras"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
+#: ../properties/nm-openconnect-dialog.ui.h:8
 msgid "_CA Certificate:"
 msgstr "_CA-certifikat:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_Gateway:"
 msgstr "_Gateway:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:10
 msgid "_Proxy:"
 msgstr "_Proxyserver:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:11
+#: ../properties/nm-openconnect-dialog.ui.h:11
 msgid "_User Certificate:"
 msgstr "_Användarcertifikat:"
+
+#: ../src/nm-openconnect-service.c:144
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "ogiltig heltalsegenskap \"%s\" eller utanför intervallet [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:154
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "ogiltig boolesk egenskap \"%s\" (inte yes eller no)"
+
+#: ../src/nm-openconnect-service.c:161
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "ohanterad egenskap \"%s\" typ %s"
+
+#: ../src/nm-openconnect-service.c:172
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "egenskapen \"%s\" är ogiltig eller stöds inte"
+
+#: ../src/nm-openconnect-service.c:188
+msgid "No VPN configuration options."
+msgstr "Inga VPN-konfigurationsalternativ."
+
+#: ../src/nm-openconnect-service.c:206
+msgid "No VPN secrets!"
+msgstr "Inga VPN-hemligheter!"
+
+#: ../src/nm-openconnect-service.c:286
+msgid "Could not find openconnect binary."
+msgstr "Kunde inte hitta binärfilen openconnect."
+
+#: ../src/nm-openconnect-service.c:298
+msgid "No VPN gateway specified."
+msgstr "Ingen VPN-gateway har angivits."
+
+#: ../src/nm-openconnect-service.c:308
+msgid "No WebVPN cookie provided."
+msgstr "Ingen WebVPN-kaka tillhandahölls."
 
 #~ msgid "Password / SecurID"
 #~ msgstr "Lösenord / SecurID"
