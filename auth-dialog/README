@@ -1,0 +1,37 @@
+<dcbw> dwmw2: that auth dialog does a shitload of work
+
+Indeed. But it's quite simple really.
+
+The AnyConnect authentication works through arbitrary forms on a web server.
+
+We fill in the various forms, which may ask for various things like our
+username, our favourite colour, our password, a SecurID passcode, and even
+things which affect the network setup, by putting us on different networks
+or saying whether we want IPv6, whether we want the VPN to take the default
+route today or not, etc.
+
+As with normal web forms, we get text entry boxes of type 'text' as well as
+type 'password'. We don't yet support using gnome-keyring to store the
+values for the latter, but we *do* store values for the 'text' form entries
+in gconf alongside the rest of the VPN configuration, in keys whose names
+start with 'form:'.
+
+We may be required to use an SSL certificate to authenticate to the web
+server, too.
+
+Once the forms are filled in and we are authenticated, we are rewarded with
+an HTTP cookie named 'webvpn' which can be used to actually make the
+connection.
+
+Our "secrets" that we hand off to NetworkManager as the final result of the
+auth-dialog are therefore this 'webvpn' cookie, along with the address of
+the web server we finally ended up at after any HTTP redirections, and a
+sha1sum of its SSL certificate (in case we had to ask the user to manually
+accept the server certificate because it's expired or signed by an unknown
+authority, etc.).
+
+In theory we could use any HTTP client library for this, such as libsoup.
+But we use OpenConnect's own implementation because it works around certain
+bugs in Cisco's HTTP server, and because it actually lets you use an SSL
+certificate from a TPM; which none of the 'normal' HTTP client libraries
+actually manage to support sanely.
