@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the networkmanager-openconnect package.
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2008, 2010, 2011.
+# Mate Ory <orymate at ubuntu dot com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: networkmanager-openconnect master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-26 16:34+0100\n"
-"PO-Revision-Date: 2011-02-26 16:34+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"POT-Creation-Date: 2011-04-10 17:14+0200\n"
+"PO-Revision-Date: 2011-04-03 11:34+0200\n"
+"Last-Translator: Mate Ory <orymate at ubuntu dot com>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -17,6 +18,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../auth-dialog/main.c:658
+#, c-format
+msgid ""
+"Certificate from VPN server \"%s\" failed verification.\n"
+"Reason: %s\n"
+"Do you want to accept it?"
+msgstr ""
+"A(z) „%s” kiszolgáló által küldött tanúsítvány érvénytelen.\n"
+"%s\n"
+"Elfogadja ennek ellenére?"
+
+#: ../auth-dialog/main.c:1317
+msgid "VPN host"
+msgstr "VPN kiszolgáló"
+
+#: ../auth-dialog/main.c:1337
+msgid "Automatically start connecting next time"
+msgstr "A kapcsolat automatikus felépítése a jövőben"
+
+#: ../auth-dialog/main.c:1354
+msgid "Select a host to fetch the login form"
+msgstr "A bejelentkezéshez válasszon kiszolgálót"
+
+#: ../auth-dialog/main.c:1359
+msgid "Contacting host, please wait..."
+msgstr "Kapcsolódás a kiszolgálóhoz…"
+
+#: ../auth-dialog/main.c:1371
+msgid "_Login"
+msgstr "_Bejelentkezés"
+
+#: ../auth-dialog/main.c:1385
+msgid "Log"
+msgstr "Napló"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
@@ -86,3 +122,42 @@ msgstr "_Proxy:"
 msgid "_User Certificate:"
 msgstr "F_elhasználói tanúsítvány:"
 
+#: ../src/nm-openconnect-service.c:144
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "érvénytelen, vagy a(z) %2$d…%3$d tartományon kívüli egész érték: „%1$s”"
+
+#: ../src/nm-openconnect-service.c:154
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "érvénytelen logikai érték: „%s” (érvényes értékek: yes, no)"
+
+#: ../src/nm-openconnect-service.c:161
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "kezeletlen %2$s típusú érték: „%1$s”"
+
+#: ../src/nm-openconnect-service.c:172
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "érvénytelen vagy nem támogatott érték: „%s”"
+
+#: ../src/nm-openconnect-service.c:188
+msgid "No VPN configuration options."
+msgstr "Nincsenek VPN-beállítások."
+
+#: ../src/nm-openconnect-service.c:206
+msgid "No VPN secrets!"
+msgstr "Nincs VPN-titok!"
+
+#: ../src/nm-openconnect-service.c:286
+msgid "Could not find openconnect binary."
+msgstr "Nem található az openconnect program."
+
+#: ../src/nm-openconnect-service.c:298
+msgid "No VPN gateway specified."
+msgstr "Nincs megadva VPN-átjáró."
+
+#: ../src/nm-openconnect-service.c:308
+msgid "No WebVPN cookie provided."
+msgstr "Nincs WebVPN süti megadva."
