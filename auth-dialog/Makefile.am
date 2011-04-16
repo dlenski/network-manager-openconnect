@@ -9,6 +9,7 @@ nm_openconnect_auth_dialog_CPPFLAGS = \
 	$(GCONF_CFLAGS) \
 	$(OPENCONNECT_CFLAGS) \
 	$(GNOMEKEYRING_CFLAGS) \
+	$(LIBXML_CFLAGS) \
 	-DICONDIR=\""$(datadir)/pixmaps"\" \
 	-DBINDIR=\""$(bindir)"\" \
 	-DG_DISABLE_DEPRECATED \
@@ -25,7 +26,8 @@ nm_openconnect_auth_dialog_LDADD = \
 	$(GTK_LIBS) \
 	$(NETWORKMANAGER_LIBS) \
 	$(GCONF_LIBS) \
-	$(OPENCONNECT_LIBS)
+	$(OPENCONNECT_LIBS) \
+	$(LIBXML_LIBS)
 
 CLEANFILES = *~
 
