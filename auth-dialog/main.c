@@ -41,6 +41,8 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#include <nm-vpn-plugin-utils.h>
+
 #include "auth-dlg-settings.h"
 
 #include "openconnect.h"
@@ -48,9 +50,6 @@
 #include <openssl/ssl.h>
 #include <openssl/bio.h>
 #include <openssl/ui.h>
-
-static GConfClient *_gcl;
-static char *_config_path;
 
 static char *last_message;
 
@@ -79,6 +78,8 @@ struct gconf_key {
 
 typedef struct auth_ui_data {
 	char *vpn_name;
+	GHashTable *options;
+	GHashTable *secrets;
 	struct openconnect_info *vpninfo;
 	struct gconf_key *success_keys;
 	GtkWidget *dialog;
@@ -497,14 +498,13 @@ static void remember_gconf_key(auth_ui_data *ui_data, char *key, char *value)
 	}
 }
 
-static char *find_form_answer(struct oc_auth_form *form, struct oc_form_opt *opt)
+static char *find_form_answer(GHashTable *secrets, struct oc_auth_form *form,
+			      struct oc_form_opt *opt)
 {
-	char *config_path = _config_path; /* FIXME global */
-	GConfClient *gcl = _gcl; /* FIXME global */
 	char *key, *result;
-	key = g_strdup_printf("%s/vpn/form:%s:%s", config_path,
-			      form->auth_id, opt->name);
-	result = gconf_client_get_string(gcl, key, NULL);
+
+	key = g_strdup_printf ("form:%s:%s", form->auth_id, opt->name);
+	result = g_hash_table_lookup (secrets, key);
 	g_free(key);
 	return result;
 }
@@ -550,14 +550,16 @@ static gboolean ui_form (struct oc_auth_form *form)
 			g_queue_push_head(ui_data->form_entries, data);
 			g_mutex_unlock (ui_data->form_mutex);
 			if (opt->type != OC_FORM_OPT_PASSWORD)
-				data->entry_text = find_form_answer(form, opt);
+				data->entry_text = find_form_answer(ui_data->secrets,
+								    form, opt);
 
 			ui_write_prompt(data);
 		} else if (opt->type == OC_FORM_OPT_SELECT) {
 			g_mutex_lock (ui_data->form_mutex);
 			g_queue_push_head(ui_data->form_entries, data);
 			g_mutex_unlock (ui_data->form_mutex);
-			data->entry_text = find_form_answer(form, opt);
+			data->entry_text = find_form_answer(ui_data->secrets,
+							    form, opt);
 
 			ui_add_select(data);
 		} else
@@ -598,7 +600,7 @@ static int nm_process_auth_form (struct openconnect_info *vpninfo,
 			ui_fragment_data *data;
 			data = g_queue_pop_tail (ui_data->form_entries);
 			if (data->entry_text) {
-				data->opt->value = data->entry_text;
+				data->opt->value = g_strdup (data->entry_text);
 
 				if (data->opt->type == OC_FORM_OPT_TEXT ||
 				    data->opt->type == OC_FORM_OPT_SELECT) {
@@ -705,12 +707,9 @@ static gboolean user_validate_cert(cert_data *data)
 static int validate_peer_cert(struct openconnect_info *vpninfo,
 			      X509 *peer_cert, const char *reason)
 {
-	char *config_path = _config_path; /* FIXME global */
-	GConfClient *gcl = _gcl; /* FIXME global */
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
 	char fingerprint[EVP_MAX_MD_SIZE * 2 + 1];
 	char *certs_data;
-	char *key;
 	int ret = 0;
 	cert_data *data;
 
@@ -718,8 +717,7 @@ static int validate_peer_cert(struct openconnect_info *vpninfo,
 	if (ret)
 		return ret;
 
-	key = g_strdup_printf("%s/vpn/%s", config_path, "certsigs");
-	certs_data = gconf_client_get_string(gcl, key, NULL);
+	certs_data = g_hash_table_lookup (ui_data->secrets, "certsigs");
 	if (certs_data) {
 		char **certs = g_strsplit_set(certs_data, "\t", 0);
 		char **this = certs;
@@ -751,10 +749,11 @@ static int validate_peer_cert(struct openconnect_info *vpninfo,
 	if (ui_data->cert_response == CERT_ACCEPTED) {
 		if (certs_data) {
 			char *new = g_strdup_printf("%s\t%s", certs_data, fingerprint);
-			gconf_client_set_string(gcl, key, new, NULL);
-			g_free(new);
+			g_hash_table_insert (ui_data->secrets,
+					     g_strdup ("certsigs"), new);
 		} else {
-			gconf_client_set_string(gcl, key, fingerprint, NULL);
+			g_hash_table_insert (ui_data->secrets, g_strdup ("certsigs"),
+					     g_strdup (fingerprint));
 		}
 		ret = 0;
 	} else {
@@ -766,76 +765,20 @@ static int validate_peer_cert(struct openconnect_info *vpninfo,
 
  out:
 	g_free(certs_data);
-	g_free(key);
 	return ret;
 }
 
-static char *get_config_path(GConfClient *gcl, const char *vpn_uuid)
+static gboolean get_autoconnect(GHashTable *secrets)
 {
-	GSList *connections, *this;
-	char *key, *val;
-	char *config_path = NULL;
+	char *autoconnect = g_hash_table_lookup (secrets, "autoconnect");
 
-	connections = gconf_client_all_dirs(gcl,
-					    "/system/networking/connections",
-					    NULL);
+	if (autoconnect && !strcmp(autoconnect, "yes"))
+		return TRUE;
 
-	for (this = connections; this; this = this->next) {
-		const char *path = (const char *) this->data;
-
-		key = g_strdup_printf("%s/connection/type", path);
-		val = gconf_client_get_string(gcl, key, NULL);
-		g_free(key);
-
-		if (!val || strcmp(val, "vpn")) {
-			g_free(val);
-			continue;
-		}
-		g_free(val);
-
-		key = g_strdup_printf("%s/connection/uuid", path);
-		val = gconf_client_get_string(gcl, key, NULL);
-		g_free(key);
-
-		if (!val || strcmp(val, vpn_uuid)) {
-			g_free(val);
-			continue;
-		}
-		g_free(val);
-
-		config_path = g_strdup(path);
-		break;
-	}
-	g_slist_foreach(connections, (GFunc)g_free, NULL);
-	g_slist_free(connections);
-
-	return config_path;
+	return FALSE;
 }
 
-static char *get_gconf_setting(GConfClient *gcl, char *config_path,
-			       char *setting)
-{
-	char *result;
-	char *key = g_strdup_printf("%s/vpn/%s", config_path, setting);
-	result = gconf_client_get_string(gcl, key, NULL);
-	g_free(key);
-	return result;
-}
-
-static int get_gconf_autoconnect(GConfClient *gcl, char *config_path)
-{
-	char *autoconnect = get_gconf_setting(gcl, config_path, "autoconnect");
-	int ret = 0;
-
-	if (autoconnect) {
-		if (!strcmp(autoconnect, "yes"))
-			ret = 1;
-		g_free(autoconnect);
-	}
-	return ret;
-}
-
-static int parse_xmlconfig(char *xmlconfig)
+static int parse_xmlconfig(gchar *xmlconfig)
 {
 	xmlDocPtr xml_doc;
 	xmlNode *xml_node, *xml_node2;
@@ -906,10 +849,9 @@ static int parse_xmlconfig(char *xmlconfig)
 	return 0;
 }
 
-static int get_config(char *vpn_uuid, struct openconnect_info *vpninfo)
+static int get_config (GHashTable *options, GHashTable *secrets,
+		       struct openconnect_info *vpninfo)
 {
-	GConfClient *gcl;
-	char *config_path;
 	char *proxy;
 	char *xmlconfig;
 	char *hostname;
@@ -918,15 +860,9 @@ static int get_config(char *vpn_uuid, struct openconnect_info *vpninfo)
 	char *sslkey, *cert;
 	char *csd_wrapper;
 	char *pem_passphrase_fsid;
+	char *cafile;
 
-	_gcl = gcl = gconf_client_get_default();
-	_config_path = config_path = get_config_path(gcl, vpn_uuid);
-
-	if (!config_path)
-		return -EINVAL;
-
-	hostname = get_gconf_setting(gcl, config_path,
-				     NM_OPENCONNECT_KEY_GATEWAY);
+	hostname = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_GATEWAY);
 	if (!hostname) {
 		fprintf(stderr, "No gateway configured\n");
 		return -EINVAL;
@@ -937,75 +873,64 @@ static int get_config(char *vpn_uuid, struct openconnect_info *vpninfo)
 	if (!vpnhosts)
 		return -ENOMEM;
 	vpnhosts->hostname = g_strdup(hostname);
-	group = strchr(hostname, '/');
+	group = strchr(vpnhosts->hostname, '/');
 	if (group) {
 		*(group++) = 0;
 		vpnhosts->usergroup = g_strdup(group);
 	} else
 		vpnhosts->usergroup = NULL;
-	vpnhosts->hostaddress = hostname;
+	vpnhosts->hostaddress = g_strdup (hostname);
 	vpnhosts->next = NULL;
 
-if (0) {
-/* DEBUG add another copy of gateway to host list */
-	vpnhost *tmphost;
-	tmphost = malloc(sizeof(tmphost));
-	if (!tmphost)
-		return -ENOMEM;
-	tmphost->hostname = g_strdup("VPN Gateway 2");
-	tmphost->hostaddress = hostname;
-	tmphost->usergroup = NULL;
-	tmphost->next = NULL;
-	vpnhosts->next = tmphost;
-}
-	lasthost = get_gconf_setting(gcl, config_path, "lasthost");
+	lasthost = g_hash_table_lookup (secrets, "lasthost");
 
-	xmlconfig = get_gconf_setting(gcl, config_path, NM_OPENCONNECT_KEY_XMLCONFIG);
+	xmlconfig = g_hash_table_lookup (secrets, NM_OPENCONNECT_KEY_XMLCONFIG);
 	if (xmlconfig) {
+		gchar *config_str;
+		gsize config_len;
 		unsigned char sha1[SHA_DIGEST_LENGTH];
 		char sha1_text[SHA_DIGEST_LENGTH * 2];
 		EVP_MD_CTX c;
 		int i;
 
-		EVP_MD_CTX_init(&c);
-		EVP_Digest(xmlconfig, strlen(xmlconfig), sha1, NULL, EVP_sha1(), NULL);
-		EVP_MD_CTX_cleanup(&c);
+		config_str = (gchar *)g_base64_decode (xmlconfig, &config_len);
+
+		EVP_MD_CTX_init (&c);
+		EVP_Digest (config_str, config_len, sha1, NULL, EVP_sha1(), NULL);
+		EVP_MD_CTX_cleanup (&c);
 
 		for (i = 0; i < SHA_DIGEST_LENGTH; i++)
-			sprintf(&sha1_text[i*2], "%02x", sha1[i]);
+			sprintf (&sha1_text[i*2], "%02x", sha1[i]);
 
-		openconnect_set_xmlsha1(vpninfo, sha1_text, sizeof(sha1_text));
-		parse_xmlconfig(xmlconfig);
-		g_free(xmlconfig);
+		openconnect_set_xmlsha1 (vpninfo, sha1_text, sizeof(sha1_text));
+		parse_xmlconfig (config_str);
 	}
 
-	openconnect_set_cafile(vpninfo,
-			       get_gconf_setting(gcl, config_path, NM_OPENCONNECT_KEY_CACERT));
+	cafile = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_CACERT);
+	if (cafile)
+		openconnect_set_cafile(vpninfo, g_strdup (cafile));
 
-	csd = get_gconf_setting(gcl, config_path, "enable_csd_trojan");
+	csd = g_hash_table_lookup (options, "enable_csd_trojan");
 	if (csd && !strcmp(csd, "yes")) {
 		/* We're not running as root; we can't setuid(). */
-		csd_wrapper = get_gconf_setting(gcl, config_path, "csd_wrapper");
-		if (csd_wrapper && !csd_wrapper[0]) {
-			g_free(csd_wrapper);
+		csd_wrapper = g_hash_table_lookup (options, "csd_wrapper");
+		if (csd_wrapper && !csd_wrapper[0])
 			csd_wrapper = NULL;
-		}
-		openconnect_setup_csd(vpninfo, getuid(), 1, csd_wrapper);
-	}
-	g_free(csd);
 
-	proxy = get_gconf_setting(gcl, config_path, "proxy");
-	if (proxy && proxy[0] && openconnect_set_http_proxy(vpninfo, proxy))
+		openconnect_setup_csd(vpninfo, getuid(), 1, g_strdup (csd_wrapper));
+	}
+
+	proxy = g_hash_table_lookup (options, "proxy");
+	if (proxy && proxy[0] && openconnect_set_http_proxy(vpninfo, g_strdup (proxy)))
 		return -EINVAL;
 
-	cert = get_gconf_setting(gcl, config_path, NM_OPENCONNECT_KEY_USERCERT);
-	sslkey = get_gconf_setting(gcl, config_path, NM_OPENCONNECT_KEY_PRIVKEY);
-	openconnect_set_client_cert (vpninfo, cert, sslkey);
+	cert = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_USERCERT);
+	sslkey = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_PRIVKEY);
+	openconnect_set_client_cert (vpninfo, g_strdup (cert), g_strdup (sslkey));
 
-	pem_passphrase_fsid = get_gconf_setting(gcl, config_path, "pem_passphrase_fsid");
+	pem_passphrase_fsid = g_hash_table_lookup (options, "pem_passphrase_fsid");
 	if (pem_passphrase_fsid && cert && !strcmp(pem_passphrase_fsid, "yes"))
 		openconnect_passphrase_from_fsid(vpninfo);
-	g_free(pem_passphrase_fsid);
 
 	return 0;
 }
@@ -1029,22 +954,24 @@ static void populate_vpnhost_combo(auth_ui_data *ui_data)
 
 static int write_new_config(struct openconnect_info *vpninfo, char *buf, int buflen)
 {
-	char *config_path = _config_path; /* FIXME global */
-	GConfClient *gcl = _gcl; /* FIXME global */
-	char *key = g_strdup_printf("%s/vpn/%s", config_path,
-				    NM_OPENCONNECT_KEY_XMLCONFIG);
-	gconf_client_set_string(gcl, key, buf, NULL);
+	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+	g_hash_table_insert (ui_data->secrets, g_strdup ("xmlconfig"),
+			     g_base64_encode ((guchar *)buf, buflen));
+
 	return 0;
 }
 
 static void autocon_toggled(GtkWidget *widget)
 {
-	char *config_path = _config_path; /* FIXME global */
-	GConfClient *gcl = _gcl; /* FIXME global */
-	int enabled = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
-	char *key = g_strdup_printf("%s/vpn/autoconnect", config_path);
+	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+	gchar *enabled;
 
-	gconf_client_set_string(gcl, key, enabled ? "yes" : "no", NULL);
+	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON(widget)))
+		enabled = g_strdup ("yes");
+	else
+		enabled = g_strdup ("no");
+
+	g_hash_table_insert (ui_data->secrets, g_strdup ("autoconnect"), enabled);
 }
 
 static void scroll_log(GtkTextBuffer *log, GtkTextView *view)
@@ -1136,28 +1063,41 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 		}
 		ui_data->retval = 1;
 	} else if (!ui_data->cookie_retval) {
+		GHashTableIter iter;
+		gchar *key, *value;
+
 		/* got cookie */
 		while (ui_data->success_keys) {
-			char *config_path = _config_path; /* FIXME global */
-			GConfClient *gcl = _gcl; /* FIXME global */
 			struct gconf_key *k = ui_data->success_keys;
-			char *key = g_strdup_printf("%s/vpn/%s", config_path, k->key);
 
-			gconf_client_set_string(gcl, key, k->value, NULL);
-			g_free(key);
+			g_hash_table_insert (ui_data->secrets, k->key, k->value);
 
 			ui_data->success_keys = k->next;
-			g_free(k->key);
-			g_free(k->value);
 			g_free(k);
 		}
 
+		g_hash_table_iter_init (&iter, ui_data->secrets);
+		while (g_hash_table_iter_next (&iter, (gpointer *)&key,
+					       (gpointer *)&value)) {
+			int keylen = strlen (key);
+			if (keylen > 6 && strcmp (key + keylen - 6, "-flags")) {
+				printf("%s\n%s\n", key, value);
+				printf("%s-flags\n%d\n", key,
+				       NM_SETTING_SECRET_FLAG_NONE);
+			}
+		}
 		printf("%s\n%s:%d\n", NM_OPENCONNECT_KEY_GATEWAY,
 		       openconnect_get_hostname(ui_data->vpninfo),
 		       openconnect_get_port(ui_data->vpninfo));
+		printf("%s-flags\n%d\n", NM_OPENCONNECT_KEY_GATEWAY,
+		       NM_SETTING_SECRET_FLAG_AGENT_OWNED);
 		printf("%s\n%s\n", NM_OPENCONNECT_KEY_COOKIE,
 		       openconnect_get_cookie(ui_data->vpninfo));
+		printf("%s-flags\n%d\n", NM_OPENCONNECT_KEY_COOKIE,
+		       NM_SETTING_SECRET_FLAG_AGENT_OWNED);
 		print_peer_cert(ui_data->vpninfo);
+		printf("%s-flags\n%d\n", NM_OPENCONNECT_KEY_GWCERT,
+		       NM_SETTING_SECRET_FLAG_AGENT_OWNED);
 		openconnect_clear_cookie(ui_data->vpninfo);
 		printf("\n\n");
 		fflush(stdout);
@@ -1287,8 +1227,6 @@ static void login_clicked (GtkButton *btn, auth_ui_data *ui_data)
 
 static void build_main_dialog(auth_ui_data *ui_data)
 {
-	char *config_path = _config_path; /* FIXME global */
-	GConfClient *gcl = _gcl; /* FIXME global */
 	char *title;
 	GtkWidget *vbox, *hbox, *label, *frame, *image, *frame_box;
 	GtkWidget *exp, *scrolled, *view, *autocon;
@@ -1336,7 +1274,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 
 	autocon = gtk_check_button_new_with_label(_("Automatically start connecting next time"));
 	gtk_box_pack_start(GTK_BOX(vbox), autocon, FALSE, FALSE, 0);
-	if (get_gconf_autoconnect(gcl, config_path))
+	if (get_autoconnect (ui_data->secrets))
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(autocon), 1);
 	g_signal_connect(autocon, "toggled", G_CALLBACK(autocon_toggled), NULL);
 	gtk_widget_show(autocon);
@@ -1407,7 +1345,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	g_signal_connect(ui_data->log, "changed", G_CALLBACK(scroll_log), view);
 }
 
-static auth_ui_data *init_ui_data (char *vpn_name)
+static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTable *secrets)
 {
 	auth_ui_data *ui_data;
 
@@ -1420,6 +1358,8 @@ static auth_ui_data *init_ui_data (char *vpn_name)
 	ui_data->form_shown_changed = g_cond_new();
 	ui_data->cert_response_changed = g_cond_new();
 	ui_data->vpn_name = vpn_name;
+	ui_data->options = options;
+	ui_data->secrets = secrets;
 
 	ui_data->vpninfo = (void *)openconnect_vpninfo_new("OpenConnect VPN Agent (NetworkManager)",
 						   validate_peer_cert, write_new_config,
@@ -1437,21 +1377,28 @@ static struct option long_options[] = {
 	{"uuid", 1, 0, 'u'},
 	{"name", 1, 0, 'n'},
 	{"service", 1, 0, 's'},
+	{"allow-interaction", 0, 0, 'i'},
 	{NULL, 0, 0, 0},
 };
 
 int main (int argc, char **argv)
 {
 	char *vpn_name = NULL, *vpn_uuid = NULL, *vpn_service = NULL;
+	GHashTable *options = NULL, *secrets = NULL;
+	gboolean allow_interaction = FALSE;
 	int opt;
 
-	while ((opt = getopt_long(argc, argv, "ru:n:s:", long_options, NULL))) {
+	while ((opt = getopt_long(argc, argv, "ru:n:s:i", long_options, NULL))) {
 		if (opt < 0)
 			break;
 
 		switch(opt) {
 		case 'r':
 			/* Reprompt does nothing */
+			break;
+
+		case 'i':
+			allow_interaction = TRUE;
 			break;
 
 		case 'u':
@@ -1472,6 +1419,9 @@ int main (int argc, char **argv)
 		}
 	}
 
+	if (!allow_interaction)
+		return 0;
+
 	if (optind != argc) {
 		fprintf(stderr, "Superfluous command line options\n");
 		return 1;
@@ -1488,11 +1438,17 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
+	if (!nm_vpn_plugin_utils_read_vpn_details (0, &options, &secrets)) {
+		fprintf (stderr, "Failed to read '%s' (%s) data and secrets from stdin.\n",
+		         vpn_name, vpn_uuid);
+		return 1;
+	}
+
 	g_thread_init (NULL);
 	gtk_init(0, NULL);
 
-	_ui_data = init_ui_data(vpn_name);
-	if (get_config(vpn_uuid, _ui_data->vpninfo)) {
+	_ui_data = init_ui_data(vpn_name, options, secrets);
+	if (get_config(options, secrets, _ui_data->vpninfo)) {
 		fprintf(stderr, "Failed to find VPN UUID %s in gconf\n", vpn_uuid);
 		return 1;
 	}
@@ -1501,7 +1457,7 @@ int main (int argc, char **argv)
 	init_openssl_ui();
 	openconnect_init_openssl();
 
-	if (get_gconf_autoconnect(_gcl, _config_path))
+	if (get_autoconnect (secrets))
 		queue_connect_host(_ui_data);
 
 	gtk_window_present(GTK_WINDOW(_ui_data->dialog));

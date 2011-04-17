@@ -166,6 +166,8 @@ validate_one_property (const char *key, const char *value, gpointer user_data)
 
 	/* Did not find the property from valid_properties or the type did not match */
 	if (!info->table[i].name && strncmp(key, "form:", 5)) {
+		g_warning ("property '%s' unknown", key);
+		if (0)
 		g_set_error (info->error,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_BAD_ARGUMENTS,
@@ -426,7 +428,7 @@ real_need_secrets (NMVPNPlugin *plugin,
 	/* We just need the WebVPN cookie, and the final IP address of the gateway
 	   (after HTTP redirects, which do happen). All the certificate/SecurID 
 	   nonsense can be handled for us, in the user's context, by auth-dialog */
-	if (!nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY)) {
+	if (!nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_GATEWAY)) {
 		*setting_name = NM_SETTING_VPN_SETTING_NAME;
 		return TRUE;
 	}
@@ -434,7 +436,7 @@ real_need_secrets (NMVPNPlugin *plugin,
 		*setting_name = NM_SETTING_VPN_SETTING_NAME;
 		return TRUE;
 	}
-	if (!nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_GWCERT)) {
+	if (!nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_GWCERT)) {
 		*setting_name = NM_SETTING_VPN_SETTING_NAME;
 		return TRUE;
 	}
