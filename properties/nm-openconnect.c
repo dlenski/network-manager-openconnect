@@ -455,7 +455,13 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, str);
-	
+
+	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gwcert",
+								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
+	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "cookie",
+								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
+	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gateway",
+								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
 	auth_widget_update_connection (priv->builder, auth_type, s_vpn);
 
 	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
