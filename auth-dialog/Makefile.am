@@ -18,7 +18,6 @@ nm_openconnect_auth_dialog_CPPFLAGS = \
 	-DVERSION=\"$(VERSION)\"
 
 nm_openconnect_auth_dialog_SOURCES = \
-	auth-dlg-settings.h \
 	main.c \
 	$(NULL)
 
