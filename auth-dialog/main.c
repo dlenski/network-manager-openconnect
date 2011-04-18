@@ -43,7 +43,7 @@
 
 #include <nm-vpn-plugin-utils.h>
 
-#include "auth-dlg-settings.h"
+#include "src/nm-openconnect-service.h"
 
 #include "openconnect.h"
 
@@ -884,7 +884,7 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 
 	lasthost = g_hash_table_lookup (secrets, "lasthost");
 
-	xmlconfig = g_hash_table_lookup (secrets, NM_OPENCONNECT_KEY_XMLCONFIG);
+	xmlconfig = g_hash_table_lookup (secrets, "xmlconfig");
 	if (xmlconfig) {
 		gchar *config_str;
 		gsize config_len;
