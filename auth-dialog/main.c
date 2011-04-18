@@ -1082,22 +1082,14 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 			int keylen = strlen (key);
 			if (keylen > 6 && strcmp (key + keylen - 6, "-flags")) {
 				printf("%s\n%s\n", key, value);
-				printf("%s-flags\n%d\n", key,
-				       NM_SETTING_SECRET_FLAG_NONE);
 			}
 		}
 		printf("%s\n%s:%d\n", NM_OPENCONNECT_KEY_GATEWAY,
 		       openconnect_get_hostname(ui_data->vpninfo),
 		       openconnect_get_port(ui_data->vpninfo));
-		printf("%s-flags\n%d\n", NM_OPENCONNECT_KEY_GATEWAY,
-		       NM_SETTING_SECRET_FLAG_AGENT_OWNED);
 		printf("%s\n%s\n", NM_OPENCONNECT_KEY_COOKIE,
 		       openconnect_get_cookie(ui_data->vpninfo));
-		printf("%s-flags\n%d\n", NM_OPENCONNECT_KEY_COOKIE,
-		       NM_SETTING_SECRET_FLAG_AGENT_OWNED);
 		print_peer_cert(ui_data->vpninfo);
-		printf("%s-flags\n%d\n", NM_OPENCONNECT_KEY_GWCERT,
-		       NM_SETTING_SECRET_FLAG_AGENT_OWNED);
 		openconnect_clear_cookie(ui_data->vpninfo);
 		printf("\n\n");
 		fflush(stdout);
