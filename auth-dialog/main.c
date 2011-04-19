@@ -550,16 +550,16 @@ static gboolean ui_form (struct oc_auth_form *form)
 			g_queue_push_head(ui_data->form_entries, data);
 			g_mutex_unlock (ui_data->form_mutex);
 			if (opt->type != OC_FORM_OPT_PASSWORD)
-				data->entry_text = find_form_answer(ui_data->secrets,
-								    form, opt);
+				data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
+									      form, opt));
 
 			ui_write_prompt(data);
 		} else if (opt->type == OC_FORM_OPT_SELECT) {
 			g_mutex_lock (ui_data->form_mutex);
 			g_queue_push_head(ui_data->form_entries, data);
 			g_mutex_unlock (ui_data->form_mutex);
-			data->entry_text = find_form_answer(ui_data->secrets,
-							    form, opt);
+			data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
+								      form, opt));
 
 			ui_add_select(data);
 		} else
@@ -764,7 +764,6 @@ static int validate_peer_cert(struct openconnect_info *vpninfo,
 	g_slice_free(cert_data, data);
 
  out:
-	g_free(certs_data);
 	return ret;
 }
 
