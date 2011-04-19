@@ -1033,7 +1033,6 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 		}
 		ui_data->retval = 1;
 	} else if (!ui_data->cookie_retval) {
-		GHashTableIter iter;
 		X509 *cert;
 		gchar *key, *value;
 
@@ -1064,15 +1063,6 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 			g_hash_table_insert (ui_data->secrets, key, value);
 		}
 
-		/* Dump all secrets to stdout */
-		g_hash_table_iter_init (&iter, ui_data->secrets);
-		while (g_hash_table_iter_next (&iter, (gpointer *)&key,
-					       (gpointer *)&value))
-			printf("%s\n%s\n", key, value);
-
-
-		printf("\n\n");
-		fflush(stdout);
 		ui_data->retval = 0;
 
 		gtk_main_quit();
@@ -1355,6 +1345,8 @@ int main (int argc, char **argv)
 	char *vpn_name = NULL, *vpn_uuid = NULL, *vpn_service = NULL;
 	GHashTable *options = NULL, *secrets = NULL;
 	gboolean allow_interaction = FALSE;
+	GHashTableIter iter;
+	gchar *key, *value;
 	int opt;
 
 	while ((opt = getopt_long(argc, argv, "ru:n:s:i", long_options, NULL))) {
@@ -1431,6 +1423,15 @@ int main (int argc, char **argv)
 
 	gtk_window_present(GTK_WINDOW(_ui_data->dialog));
 	gtk_main();
+
+	/* Dump all secrets to stdout */
+	g_hash_table_iter_init (&iter, _ui_data->secrets);
+	while (g_hash_table_iter_next (&iter, (gpointer *)&key,
+				       (gpointer *)&value))
+		printf("%s\n%s\n", key, value);
+
+	printf("\n\n");
+	fflush(stdout);
 
 	return _ui_data->retval;
 }
