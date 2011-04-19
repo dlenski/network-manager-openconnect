@@ -1001,15 +1001,6 @@ static void write_progress(struct openconnect_info *info, int level, const char 
 	g_free(msg);
 }
 
-static void print_peer_cert(struct openconnect_info *vpninfo)
-{
-	char fingerprint[EVP_MAX_MD_SIZE * 2 + 1];
-	X509 *cert = openconnect_get_peer_cert(vpninfo);
-
-	if (cert && !openconnect_get_cert_sha1(vpninfo, cert, fingerprint))
-		printf("gwcert\n%s\n", fingerprint);
-}
-
 static gboolean hash_merge_one (gpointer key, gpointer value, gpointer new_hash)
 {
 	g_hash_table_insert (new_hash, key, value);
@@ -1043,24 +1034,43 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 		ui_data->retval = 1;
 	} else if (!ui_data->cookie_retval) {
 		GHashTableIter iter;
+		X509 *cert;
 		gchar *key, *value;
 
 		/* got cookie */
+
+		/* Merge in the secrets which we only wanted to remember if
+		   the connection was successful (lasthost, form entries) */
 		hash_table_merge (ui_data->success_secrets, ui_data->secrets);
 
+		/* Merge in the three *real* secrets that are actually used
+		   by nm-openconnect-service to make the connection */
+		key = g_strdup (NM_OPENCONNECT_KEY_GATEWAY);
+		value = g_strdup_printf ("%s:%d",
+					 openconnect_get_hostname(ui_data->vpninfo),
+					 openconnect_get_port(ui_data->vpninfo));
+		g_hash_table_insert (ui_data->secrets, key, value);
 
+		key = g_strdup (NM_OPENCONNECT_KEY_COOKIE);
+		value = g_strdup (openconnect_get_cookie (ui_data->vpninfo));
+		g_hash_table_insert (ui_data->secrets, key, value);
+		openconnect_clear_cookie(ui_data->vpninfo);
+
+		cert = openconnect_get_peer_cert (ui_data->vpninfo);
+		if (cert) {
+			key = g_strdup (NM_OPENCONNECT_KEY_GWCERT);
+			value = g_malloc0 (EVP_MAX_MD_SIZE * 2 + 1);
+			openconnect_get_cert_sha1(ui_data->vpninfo, cert, value);
+			g_hash_table_insert (ui_data->secrets, key, value);
+		}
+
+		/* Dump all secrets to stdout */
 		g_hash_table_iter_init (&iter, ui_data->secrets);
 		while (g_hash_table_iter_next (&iter, (gpointer *)&key,
 					       (gpointer *)&value))
 			printf("%s\n%s\n", key, value);
 
-		printf("%s\n%s:%d\n", NM_OPENCONNECT_KEY_GATEWAY,
-		       openconnect_get_hostname(ui_data->vpninfo),
-		       openconnect_get_port(ui_data->vpninfo));
-		printf("%s\n%s\n", NM_OPENCONNECT_KEY_COOKIE,
-		       openconnect_get_cookie(ui_data->vpninfo));
-		print_peer_cert(ui_data->vpninfo);
-		openconnect_clear_cookie(ui_data->vpninfo);
+
 		printf("\n\n");
 		fflush(stdout);
 		ui_data->retval = 0;
