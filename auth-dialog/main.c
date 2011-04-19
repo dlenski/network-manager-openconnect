@@ -80,8 +80,8 @@ typedef struct auth_ui_data {
 	char *vpn_name;
 	GHashTable *options;
 	GHashTable *secrets;
+	GHashTable *success_secrets;
 	struct openconnect_info *vpninfo;
-	struct gconf_key *success_keys;
 	GtkWidget *dialog;
 	GtkWidget *combo;
 	GtkWidget *connect_button;
@@ -473,31 +473,6 @@ static int init_openssl_ui(void)
 	return 0;
 }
 
-static void remember_gconf_key(auth_ui_data *ui_data, char *key, char *value)
-{
-	struct gconf_key *k = g_malloc(sizeof(*k));
-
-	if (!k)
-		return;
-
-	k->next = ui_data->success_keys;
-	k->key = key;
-	k->value = value;
-
-	ui_data->success_keys = k;
-	while (k->next) {
-		if (!strcmp(k->next->key, key)) {
-			struct gconf_key *old = k->next;
-			k->next = old->next;
-			g_free(old->key);
-			g_free(old->value);
-			g_free(old);
-			break;
-		}
-		k = k->next;
-	}
-}
-
 static char *find_form_answer(GHashTable *secrets, struct oc_auth_form *form,
 			      struct oc_form_opt *opt)
 {
@@ -606,7 +581,8 @@ static int nm_process_auth_form (struct openconnect_info *vpninfo,
 				    data->opt->type == OC_FORM_OPT_SELECT) {
 					char *keyname;
 					keyname = g_strdup_printf("form:%s:%s", form->auth_id, data->opt->name);
-					remember_gconf_key(ui_data, keyname, strdup(data->entry_text));
+					g_hash_table_insert (ui_data->success_secrets,
+							     keyname, g_strdup (data->entry_text));
 				}
 			}
 			g_slice_free (ui_fragment_data, data);
@@ -1034,6 +1010,17 @@ static void print_peer_cert(struct openconnect_info *vpninfo)
 		printf("gwcert\n%s\n", fingerprint);
 }
 
+static gboolean hash_merge_one (gpointer key, gpointer value, gpointer new_hash)
+{
+	g_hash_table_insert (new_hash, key, value);
+	return TRUE;
+}
+
+static void hash_table_merge (GHashTable *old_hash, GHashTable *new_hash)
+{
+	g_hash_table_foreach_steal (old_hash, &hash_merge_one, new_hash);
+}
+
 static gboolean cookie_obtained(auth_ui_data *ui_data)
 {
 	ui_data->getting_cookie = FALSE;
@@ -1041,14 +1028,7 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 
 	if (ui_data->cancelled) {
 		/* user has chosen a new host, start from beginning */
-		while (ui_data->success_keys) {
-			struct gconf_key *k = ui_data->success_keys;
-			
-			ui_data->success_keys = k->next;
-			g_free(k->key);
-			g_free(k->value);
-			g_free(k);
-		}			
+		g_hash_table_remove_all (ui_data->success_secrets);
 		connect_host(ui_data);
 		return FALSE;
 	}
@@ -1066,14 +1046,8 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 		gchar *key, *value;
 
 		/* got cookie */
-		while (ui_data->success_keys) {
-			struct gconf_key *k = ui_data->success_keys;
+		hash_table_merge (ui_data->success_secrets, ui_data->secrets);
 
-			g_hash_table_insert (ui_data->secrets, k->key, k->value);
-
-			ui_data->success_keys = k->next;
-			g_free(k);
-		}
 
 		g_hash_table_iter_init (&iter, ui_data->secrets);
 		while (g_hash_table_iter_next (&iter, (gpointer *)&key,
@@ -1098,14 +1072,7 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 		ui_data->retval = 1;
 	}
 
-	while (ui_data->success_keys) {
-		struct gconf_key *k = ui_data->success_keys;
-
-		ui_data->success_keys = k->next;
-		g_free(k->key);
-		g_free(k->value);
-		g_free(k);
-	}			
+	g_hash_table_remove_all (ui_data->success_secrets);
 
 	return FALSE;
 }
@@ -1157,7 +1124,9 @@ static void connect_host(auth_ui_data *ui_data)
 	if (!openconnect_get_urlpath(ui_data->vpninfo) && host->usergroup)
 		openconnect_set_urlpath(ui_data->vpninfo, g_strdup(host->usergroup));
 
-	remember_gconf_key(ui_data, g_strdup("lasthost"), g_strdup(host->hostname));
+
+	g_hash_table_insert (ui_data->success_secrets, g_strdup("lasthost"),
+			     g_strdup(host->hostname));
 
 	thread = g_thread_create((GThreadFunc)obtain_cookie, ui_data,
 				 FALSE, NULL);
@@ -1348,6 +1317,8 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	ui_data->vpn_name = vpn_name;
 	ui_data->options = options;
 	ui_data->secrets = secrets;
+	ui_data->success_secrets = g_hash_table_new_full (g_str_hash, g_str_equal,
+							  g_free, g_free);
 
 	ui_data->vpninfo = (void *)openconnect_vpninfo_new("OpenConnect VPN Agent (NetworkManager)",
 						   validate_peer_cert, write_new_config,
