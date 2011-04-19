@@ -1077,12 +1077,9 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 
 		g_hash_table_iter_init (&iter, ui_data->secrets);
 		while (g_hash_table_iter_next (&iter, (gpointer *)&key,
-					       (gpointer *)&value)) {
-			int keylen = strlen (key);
-			if (keylen > 6 && strcmp (key + keylen - 6, "-flags")) {
-				printf("%s\n%s\n", key, value);
-			}
-		}
+					       (gpointer *)&value))
+			printf("%s\n%s\n", key, value);
+
 		printf("%s\n%s:%d\n", NM_OPENCONNECT_KEY_GATEWAY,
 		       openconnect_get_hostname(ui_data->vpninfo),
 		       openconnect_get_port(ui_data->vpninfo));
