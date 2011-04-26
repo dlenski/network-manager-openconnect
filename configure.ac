@@ -71,7 +71,16 @@ if test x"$with_authdlg" != xno; then
 fi
 
 if test x"$with_gnome" != xno; then
-	PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.6)
+	AC_ARG_WITH([gtkver], AS_HELP_STRING([--with-gtkver], [The major version of GTK+ to build with]),
+	            with_gtkver="$withval",with_gtkver=3)
+	case "${with_gtkver}" in
+	       2) PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.24)
+	          gtkver=2
+	          ;;
+	       *) PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 2.91.4)
+	          gtkver=3
+	          ;;
+	esac
 	AC_SUBST(GTK_CFLAGS)
 	AC_SUBST(GTK_LIBS)
 
