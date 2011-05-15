@@ -1,0 +1,161 @@
+# Language network-manager-openconnect-master translations for F package.
+# Copyright (C) 2011 THE F'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the F package.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: F 677-CF0E\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-05-04 04:23+0000\n"
+"PO-Revision-Date: 2011-05-15 20:01+0200\n"
+"Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian <gnom@prevod.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: Serbian (sr)\n"
+"X-Generator: Virtaal 0.5.2\n"
+
+#: ../auth-dialog/main.c:636
+#, c-format
+msgid ""
+"Certificate from VPN server \"%s\" failed verification.\n"
+"Reason: %s\n"
+"Do you want to accept it?"
+msgstr ""
+"Nije uspelo potvrđivanje uverenja sa VPN servera „%s“.\n"
+"Razlog: %s\n"
+"Da li želite da ga prihvatite?"
+
+#: ../auth-dialog/main.c:1212
+msgid "VPN host"
+msgstr "VPN domaćin"
+
+#: ../auth-dialog/main.c:1232
+msgid "Automatically start connecting next time"
+msgstr "Automatski započni povezivanje sledeći put"
+
+#: ../auth-dialog/main.c:1249
+msgid "Select a host to fetch the login form"
+msgstr "Izaberite domaćina da nabavite formular za prijavljivanje"
+
+#: ../auth-dialog/main.c:1254
+msgid "Contacting host, please wait..."
+msgstr "Kontaktiram domaćina, molim sačekajte..."
+
+#: ../auth-dialog/main.c:1266
+msgid "_Login"
+msgstr "_Prijavi"
+
+#: ../auth-dialog/main.c:1280
+msgid "Log"
+msgstr "Dnevnik"
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Izaberite uverenje Nadležnosti uverenja..."
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "Izaberite vaše lično uverenje..."
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "Izaberite vaš privatni ključ..."
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "PEM uverenja (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Cisko EniKonekt kompatibilan VPN (slobodno povezivanje)"
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Kompatibilan sa Cisko EniKonekt SSL VPN."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Potvrđivanje uverenja</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "<b>General</b>"
+msgstr "<b>Opšte</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Dozvoli _trojanca Cisko bezbedne radne površi"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "CSD Skripta omotača:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "Private _Key:"
+msgstr "Privatni _ključ:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Select A File"
+msgstr "Izaberi datoteku"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Use _FSID for key passphrase"
+msgstr "Koristi _FSID za propusnu reč ključa"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "_CA Certificate:"
+msgstr "_CA uverenje:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_Gateway:"
+msgstr "_Mrežni prolaz:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_Proxy:"
+msgstr "_Posrednik:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "_User Certificate:"
+msgstr "Uverenje _korisnika:"
+
+#: ../src/nm-openconnect-service.c:139
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "neispravna svojstva celog broja „%s“ ili je izvan opsega [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:149
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "neispravna svojstva boleana „%s“ (nije da ili ne)"
+
+#: ../src/nm-openconnect-service.c:156
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "nerukovano svojstvo „%s“ tipa „%s“"
+
+#: ../src/nm-openconnect-service.c:169
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "svostvo „%s“ nije ispravno ili nije podržano"
+
+#: ../src/nm-openconnect-service.c:185
+msgid "No VPN configuration options."
+msgstr "Nema opcija VPN podešavanja."
+
+#: ../src/nm-openconnect-service.c:203
+msgid "No VPN secrets!"
+msgstr "Nema VPN tajni!"
+
+#: ../src/nm-openconnect-service.c:283
+msgid "Could not find openconnect binary."
+msgstr "Ne mogu da nađem izvršnu datoteku otvorenog povezivanja"
+
+#: ../src/nm-openconnect-service.c:295
+msgid "No VPN gateway specified."
+msgstr "Nije određen VPN mrežni prolaz."
+
+#: ../src/nm-openconnect-service.c:305
+msgid "No WebVPN cookie provided."
+msgstr "Nije obezbeđen VebVPN kolačić."
