@@ -456,12 +456,31 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, str);
 
+	/* These are different for every login session, and should not be stored */
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gwcert",
 								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "cookie",
 								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gateway",
 								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
+
+	/* These are purely internal data for the auth-dialog, and should be stored */
+	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "xmlconfig",
+								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "lasthost",
+								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "autoconnect",
+								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "certsigs",
+								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	/* Note that the auth-dialog will also store "extra" secrets for form
+	   entries, depending on the arbitrary forms that we're offered by the
+	   server during authentication. We can't know about those in advance,
+	   but the presence of the above four is sufficient to trigger a write
+	   of the new secrets, and the code in the keyfile plugin will treat the
+	   absence of a flags configuration for a given secret as equivalent to
+	   FLAG_NONE, and thus save our "extra" secrets too. */
+
 	auth_widget_update_connection (priv->builder, auth_type, s_vpn);
 
 	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
