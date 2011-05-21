@@ -4,10 +4,10 @@ SUBDIRS = src
 
 if WITH_GNOME
 SUBDIRS += properties po
-endif
 
 if WITH_AUTHDLG
 SUBDIRS += auth-dialog
+endif
 endif
 
 dbusservicedir = $(sysconfdir)/dbus-1/system.d

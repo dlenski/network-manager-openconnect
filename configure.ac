@@ -64,12 +64,6 @@ PKG_CHECK_MODULES(DBUS, dbus-glib-1 >= 0.74)
 AC_SUBST(DBUS_CFLAGS)
 AC_SUBST(DBUS_LIBS)
 
-if test x"$with_authdlg" != xno; then
-	PKG_CHECK_MODULES(OPENCONNECT, openconnect)
-	AC_SUBST(OPENCONNECT_CFLAGS)
-	AC_SUBST(OPENCONNECT_LIBS)
-fi
-
 if test x"$with_gnome" != xno; then
 	AC_ARG_WITH([gtkver], AS_HELP_STRING([--with-gtkver], [The major version of GTK+ to build with]),
 	            with_gtkver="$withval",with_gtkver=3)
@@ -95,6 +89,12 @@ if test x"$with_gnome" != xno; then
 	PKG_CHECK_MODULES(GNOMEKEYRING, gnome-keyring-1)
 	AC_SUBST(GNOMEKEYRING_CFLAGS)
 	AC_SUBST(GNOMEKEYRING_LIBS)
+
+	if test x"$with_authdlg" != xno; then
+		PKG_CHECK_MODULES(OPENCONNECT, openconnect)
+		AC_SUBST(OPENCONNECT_CFLAGS)
+		AC_SUBST(OPENCONNECT_LIBS)
+	fi
 fi
 
 PKG_CHECK_MODULES(NETWORKMANAGER,
