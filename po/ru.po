@@ -4,35 +4,69 @@
 # This file is distributed under the same license as the network-manager package.
 #
 # Артём Попов <artfwo@gmail.com>, 2009.
-# Yuri Kozlov <yuray@komyakino.ru>, 2010.
+# Yuri Kozlov <yuray@komyakino.ru>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect trunk\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-29 00:20+0300\n"
-"PO-Revision-Date: 2010-03-28 15:04+0400\n"
-"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-05-19 20:18+0000\n"
+"PO-Revision-Date: 2011-06-10 21:56+0300\n"
+"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../properties/auth-helpers.c:63
+#: ../auth-dialog/main.c:636
+#, c-format
+msgid ""
+"Certificate from VPN server \"%s\" failed verification.\n"
+"Reason: %s\n"
+"Do you want to accept it?"
+msgstr ""
+"Сертификат VPN-сервера «%s» не прошёл проверку.\n"
+"Причина: %s\n"
+"Хотите принять?"
+
+#: ../auth-dialog/main.c:1212
+msgid "VPN host"
+msgstr "Узел VPN"
+
+#: ../auth-dialog/main.c:1232
+msgid "Automatically start connecting next time"
+msgstr "Автоматически подключаться в следующий раз"
+
+#: ../auth-dialog/main.c:1249
+msgid "Select a host to fetch the login form"
+msgstr "Выберите узел для получения регистрационной формы"
+
+#: ../auth-dialog/main.c:1254
+msgid "Contacting host, please wait..."
+msgstr "Соединение с узлом, подождите…"
+
+#: ../auth-dialog/main.c:1266
+msgid "_Login"
+msgstr "_Войти"
+
+#: ../auth-dialog/main.c:1280
+msgid "Log"
+msgstr "Журнал"
+
+#: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
-msgstr "Выберите сертификат центра сертификации..."
+msgstr "Выберите сертификат центра сертификации…"
 
-#: ../properties/auth-helpers.c:79
+#: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
-msgstr "Выберите ваш личный сертификат..."
+msgstr "Выберите свой личный сертификат…"
 
-#: ../properties/auth-helpers.c:95
+#: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
-msgstr "Выберите ваш личный ключ..."
+msgstr "Выберите свой личный ключ…"
 
-#: ../properties/auth-helpers.c:249
+#: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Сертификаты PEM (*.pem, *.crt, *.key)"
 
@@ -44,42 +78,87 @@ msgstr "Cisco AnyConnect-совместимая VPN (openconnect)"
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "SSL VPN, совместимая с Cisco AnyConnect."
 
-#: ../properties/nm-openconnect-dialog.glade.h:1
+#: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>Certificate Authentication</b>"
 msgstr "<b>Сертификат аутентификации</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:2
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>Общие</b>"
 
-#: ../properties/nm-openconnect-dialog.glade.h:3
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Разрешить троян Cisco Secure Desktop"
+msgstr "Разрешить _троян Cisco Secure Desktop"
 
-#: ../properties/nm-openconnect-dialog.glade.h:4
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr "_Сценарий-обёртка CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
 msgid "Private _Key:"
-msgstr "Личный ключ:"
+msgstr "_Личный ключ:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:5
+#: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Select A File"
 msgstr "Выберите файл"
 
-#: ../properties/nm-openconnect-dialog.glade.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:7
 msgid "Use _FSID for key passphrase"
 msgstr "Использовать _FSID в качестве парольной фразы ключа"
 
-#: ../properties/nm-openconnect-dialog.glade.h:7
+#: ../properties/nm-openconnect-dialog.ui.h:8
 msgid "_CA Certificate:"
-msgstr "Сертификат CA:"
+msgstr "Сертификат _ЦС:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:8
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_Gateway:"
 msgstr "_Шлюз:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:10
 msgid "_Proxy:"
 msgstr "_Прокси:"
 
-#: ../properties/nm-openconnect-dialog.glade.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:11
 msgid "_User Certificate:"
-msgstr "Сертификат пользователя:"
+msgstr "_Сертификат пользователя:"
+
+#: ../src/nm-openconnect-service.c:139
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "неверное целочисленное свойство «%s» или выход из диапазона [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:149
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "неверное логическое свойство «%s» (ни «да», ни «нет»)"
+
+#: ../src/nm-openconnect-service.c:156
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "необрабатываемое свойство «%s» типа %s"
+
+#: ../src/nm-openconnect-service.c:169
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "неверное или неподдерживаемое свойство «%s»"
+
+#: ../src/nm-openconnect-service.c:185
+msgid "No VPN configuration options."
+msgstr "Нет параметров настройки VPN."
+
+#: ../src/nm-openconnect-service.c:203
+msgid "No VPN secrets!"
+msgstr "Нет VPN-ключей!"
+
+#: ../src/nm-openconnect-service.c:283
+msgid "Could not find openconnect binary."
+msgstr "Не удалось найти исполняемый файл openconnect."
+
+#: ../src/nm-openconnect-service.c:295
+msgid "No VPN gateway specified."
+msgstr "Не указан шлюз VPN."
+
+#: ../src/nm-openconnect-service.c:305
+msgid "No WebVPN cookie provided."
+msgstr "Не предоставлены cookie WebVPN."
+
