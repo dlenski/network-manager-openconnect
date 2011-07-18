@@ -8,7 +8,6 @@ nm_openconnect_auth_dialog_CPPFLAGS = \
 	$(GTK_CFLAGS) \
 	$(GCONF_CFLAGS) \
 	$(OPENCONNECT_CFLAGS) \
-	$(GNOMEKEYRING_CFLAGS) \
 	$(LIBXML_CFLAGS) \
 	-DICONDIR=\""$(datadir)/pixmaps"\" \
 	-DBINDIR=\""$(bindir)"\" \
