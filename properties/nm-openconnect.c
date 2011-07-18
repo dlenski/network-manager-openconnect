@@ -487,15 +487,6 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	return TRUE;
 }
 
-static gboolean
-save_secrets (NMVpnPluginUiWidgetInterface *iface,
-              NMConnection *connection,
-              GError **error)
-{
-	return TRUE;
-}
-
-
 static NMVpnPluginUiWidgetInterface *
 nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 {
@@ -591,15 +582,6 @@ openconnect_plugin_ui_widget_interface_init (NMVpnPluginUiWidgetInterface *iface
 	/* interface implementation */
 	iface_class->get_widget = get_widget;
 	iface_class->update_connection = update_connection;
-	iface_class->save_secrets = save_secrets;
-}
-
-static gboolean
-delete_connection (NMVpnPluginUiInterface *iface,
-                   NMConnection *connection,
-                   GError **error)
-{
-	return TRUE;
 }
 
 static guint32
@@ -667,7 +649,6 @@ openconnect_plugin_ui_interface_init (NMVpnPluginUiInterface *iface_class)
 	iface_class->get_capabilities = get_capabilities;
 	iface_class->import_from_file = import;
 	iface_class->export_to_file = export;
-	iface_class->delete_connection = delete_connection;
 }
 
 G_MODULE_EXPORT NMVpnPluginUiInterface *
