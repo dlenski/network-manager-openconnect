@@ -618,7 +618,7 @@ static gboolean user_validate_cert(cert_data *data)
 {
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
 	BIO *bp = BIO_new(BIO_s_mem());
-	char *msg, *title;
+	char *title;
 	BUF_MEM *certinfo;
 	char zero = 0;
 	GtkWidget *dlg, *text, *scroll;
@@ -633,14 +633,12 @@ static gboolean user_validate_cert(cert_data *data)
 	BIO_get_mem_ptr(bp, &certinfo);
 
 	title = get_title(data->ui_data->vpn_name);
-	msg = g_strdup_printf(_("Certificate from VPN server \"%s\" failed verification.\n"
-			      "Reason: %s\nDo you want to accept it?"),
-			      openconnect_get_hostname(data->ui_data->vpninfo),
-			      data->reason);
-
 	dlg = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION,
 				     GTK_BUTTONS_OK_CANCEL,
-				     msg);
+	                             _("Certificate from VPN server \"%s\" failed verification.\n"
+			             "Reason: %s\nDo you want to accept it?"),
+			             openconnect_get_hostname(data->ui_data->vpninfo),
+			             data->reason);
 	gtk_window_set_skip_taskbar_hint(GTK_WINDOW(dlg), FALSE);
 	gtk_window_set_skip_pager_hint(GTK_WINDOW(dlg), FALSE);
 	gtk_window_set_title(GTK_WINDOW(dlg), title);
@@ -649,7 +647,6 @@ static gboolean user_validate_cert(cert_data *data)
 	gtk_dialog_set_default_response(GTK_DIALOG(dlg), GTK_RESPONSE_CANCEL);
 
 	g_free(title);
-	g_free(msg);
 
 	scroll = gtk_scrolled_window_new(NULL, NULL);
 	gtk_box_pack_start(GTK_BOX (gtk_dialog_get_content_area(GTK_DIALOG (dlg))), scroll, TRUE, TRUE, 0);
