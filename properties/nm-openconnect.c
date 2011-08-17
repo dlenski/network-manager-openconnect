@@ -508,6 +508,8 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 	ui_file = g_strdup_printf ("%s/%s", UIDIR, "nm-openconnect-dialog.ui");
 	priv->builder = gtk_builder_new ();
 
+	gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
+
 	if (!gtk_builder_add_from_file (priv->builder, ui_file, error)) {
 		g_warning ("Couldn't load builder file: %s",
 		           error && *error ? (*error)->message : "(unknown)");
@@ -519,8 +521,6 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 		return NULL;
 	}
 	g_free (ui_file);
-
-	gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
 
 	priv->widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "openconnect-vbox"));
 	if (!priv->widget) {
