@@ -66,13 +66,19 @@ AC_SUBST(DBUS_LIBS)
 
 if test x"$with_gnome" != xno; then
 	AC_ARG_WITH([gtkver], AS_HELP_STRING([--with-gtkver], [The major version of GTK+ to build with]),
-	            with_gtkver="$withval",with_gtkver=3)
+	            with_gtkver="$withval",with_gtkver=0)
+
+	gtk2_req=2.24
+	gtk3_req=2.91.4
 	case "${with_gtkver}" in
-	       2) PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.24)
-	          gtkver=2
+	       0) PKG_CHECK_MODULES(GTK, gtk+-3.0 > $gtk3_req, ,
+	                            [PKG_CHECK_MODULES(GTK, gtk+-2.0 > $gtk2_req)])
+		  ;;
+	       2) PKG_CHECK_MODULES(GTK, gtk+-2.0 >= $gtk2_req)
 	          ;;
-	       *) PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 2.91.4)
-	          gtkver=3
+	       3) PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $gtk3_req)
+	          ;;
+	       *) AC_MSG_ERROR(unknown GTK+ version $with_gtkver!)
 	          ;;
 	esac
 	AC_SUBST(GTK_CFLAGS)
