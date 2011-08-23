@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT(NetworkManager-openconnect, 0.8.999, dcbw@redhat.com, NetworkManager-openconnect)
+AC_INIT(NetworkManager-openconnect, 0.9.0, dcbw@redhat.com, NetworkManager-openconnect)
 AM_INIT_AUTOMAKE([subdir-objects no-dist-gzip dist-bzip2])
 AM_MAINTAINER_MODE
 
@@ -96,10 +96,10 @@ if test x"$with_gnome" != xno; then
 fi
 
 PKG_CHECK_MODULES(NETWORKMANAGER,
-                  NetworkManager >= 0.8.1.997
-                  libnm-util >= 0.8.1.997
-                  libnm-glib  >= 0.8.1.997
-                  libnm-glib-vpn >= 0.8.1.997)
+                  NetworkManager >= 0.8.998
+                  libnm-util >= 0.8.998
+                  libnm-glib  >= 0.8.998
+                  libnm-glib-vpn >= 0.8.998)
 AC_SUBST(NETWORKMANAGER_CFLAGS)
 AC_SUBST(NETWORKMANAGER_LIBS)
 
