@@ -57,8 +57,11 @@ typedef struct {
 static const char *openconnect_binary_paths[] =
 {
 	"/usr/bin/openconnect",
+	"/usr/sbin/openconnect",
 	"/usr/local/bin/openconnect",
+	"/usr/local/sbin/openconnect",
 	"/opt/bin/openconnect",
+	"/opt/sbin/openconnect",
 	NULL
 };
 
