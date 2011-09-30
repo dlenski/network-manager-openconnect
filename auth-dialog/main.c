@@ -51,8 +51,6 @@
 #include <openssl/bio.h>
 #include <openssl/ui.h>
 
-static char *last_message;
-
 static char *lasthost;
 
 typedef struct vpnhost {
@@ -90,6 +88,7 @@ typedef struct auth_ui_data {
 	GtkWidget *ssl_box;
 	GtkWidget *cancel_button;
 	GtkWidget *login_button;
+	GtkWidget *last_notice_icon;
 	GtkTextBuffer *log;
 
 	int retval;
@@ -134,7 +133,6 @@ static void container_child_remove(GtkWidget *widget, gpointer data)
 static void ssl_box_add_error(auth_ui_data *ui_data, const char *msg)
 {
 	GtkWidget *hbox, *text, *image;
-	int width;
 
 	hbox = gtk_hbox_new(FALSE, 8);
 	gtk_box_pack_start(GTK_BOX(ui_data->ssl_box), hbox, FALSE, FALSE, 0);
@@ -145,10 +143,26 @@ static void ssl_box_add_error(auth_ui_data *ui_data, const char *msg)
 
 	text = gtk_label_new(msg);
 	gtk_label_set_line_wrap(GTK_LABEL(text), TRUE);
-	gtk_window_get_size(GTK_WINDOW(ui_data->dialog), &width, NULL);
-	/* FIXME: this is not very nice -- can't make the window thinner after this */
-	gtk_widget_set_size_request(text, width - 100, -1);
-	gtk_box_pack_start(GTK_BOX(hbox), text, FALSE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX(hbox), text, TRUE, TRUE, 0);
+	ui_data->last_notice_icon = NULL;
+}
+
+static void ssl_box_add_notice(auth_ui_data *ui_data, const char *msg)
+{
+	GtkWidget *hbox, *text, *image;
+
+	hbox = gtk_hbox_new(FALSE, 8);
+	gtk_box_pack_start(GTK_BOX(ui_data->ssl_box), hbox, FALSE, FALSE, 0);
+
+	image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_WARNING,
+					 GTK_ICON_SIZE_DIALOG);
+	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 0);
+
+	text = gtk_label_new(msg);
+	gtk_label_set_line_wrap(GTK_LABEL(text), TRUE);
+	gtk_box_pack_start(GTK_BOX(hbox), text, TRUE, TRUE, 0);
+	gtk_widget_show_all(ui_data->ssl_box);
+	ui_data->last_notice_icon = image;
 }
 
 static void ssl_box_add_info(auth_ui_data *ui_data, const char *msg)
@@ -168,6 +182,7 @@ static void ssl_box_clear(auth_ui_data *ui_data)
 {
 	gtk_widget_hide(ui_data->no_form_label);
 	gtk_widget_hide(ui_data->getting_form_label);
+	ui_data->last_notice_icon = NULL;
 	gtk_container_foreach(GTK_CONTAINER(ui_data->ssl_box),
 			      container_child_remove, ui_data->ssl_box);
 	gtk_widget_set_sensitive (ui_data->login_button, FALSE);
@@ -491,8 +506,6 @@ static gboolean ui_form (struct oc_auth_form *form)
 {
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
 	struct oc_form_opt *opt;
-
-	ssl_box_clear(ui_data);
 
 	g_mutex_lock(ui_data->form_mutex);
 	while (!g_queue_is_empty (ui_data->form_entries)) {
@@ -972,30 +985,37 @@ static gboolean write_progress_real(char *message)
 	return FALSE;
 }
 
+/* NOTE: write_progress_real() will free the given string */
+static gboolean write_notice_real(char *message)
+{
+	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+
+	g_return_val_if_fail(message, FALSE);
+
+	ssl_box_add_notice(ui_data, message);
+	g_free(message);
+
+	return FALSE;
+}
+
 /* runs in worker thread */
 static void write_progress(struct openconnect_info *info, int level, const char *fmt, ...)
 {
 	va_list args;
 	char *msg;
 
-	if (last_message) {
-		g_free(last_message);
-		last_message = NULL;
-	}
-
 	va_start(args, fmt);
 	msg = g_strdup_vprintf(fmt, args);
 	va_end(args);
 
-	if (level <= PRG_DEBUG) {
-		g_idle_add((GSourceFunc)write_progress_real, g_strdup(msg));
+	if (level <= PRG_ERR) {
+		g_idle_add((GSourceFunc)write_notice_real, g_strdup(msg));
 	}
 
-	if (level <= PRG_ERR) {
-		last_message = msg;
-		return;
-	}
-	g_free(msg);
+	if (level <= PRG_DEBUG)
+		g_idle_add((GSourceFunc)write_progress_real, msg);
+	else
+		g_free(msg);
 }
 
 static gboolean hash_merge_one (gpointer key, gpointer value, gpointer new_hash)
@@ -1023,8 +1043,10 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 
 	if (ui_data->cookie_retval < 0) {
 		/* error while getting cookie */
-		if (last_message) {
-			ssl_box_add_error(ui_data, last_message);
+		if (ui_data->last_notice_icon) {
+			gtk_image_set_from_stock(GTK_IMAGE (ui_data->last_notice_icon),
+						 GTK_STOCK_DIALOG_ERROR,
+						 GTK_ICON_SIZE_DIALOG);
 			gtk_widget_show_all(ui_data->ssl_box);
 			gtk_widget_set_sensitive(ui_data->cancel_button, TRUE);
 		}
