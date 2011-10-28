@@ -1,4 +1,16 @@
 =======================================================
+network-manager-openconnect-0.9.2
+Overview of changes since network-manager-openconnect-0.9.0
+=======================================================
+
+This is a new stable release of network-manager-openconnect.  Notable changes include:
+
+* Show errors in the auth dialog properly
+* Look for openconnect binary in /usr/sbin too
+* Updated translations
+
+
+=======================================================
 network-manager-openconnect-0.9.0
 Overview of changes since network-manager-openconnect-0.8.x
 =======================================================
@@ -6,5 +18,5 @@ Overview of changes since network-manager-openconnect-0.8.x
 This is a new stable release of network-manager-openconnect.  Notable changes include:
 
 * Updated for NM 0.9 simplified configuration and secrets handling
-* UPdated to build with GTK+ 3.0 and later
+* Updated to build with GTK+ 3.0 and later
 
