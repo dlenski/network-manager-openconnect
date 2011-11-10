@@ -25,8 +25,7 @@
 #ifndef NM_OPENCONNECT_PLUGIN_H
 #define NM_OPENCONNECT_PLUGIN_H
 
-#include <glib/gtypes.h>
-#include <glib-object.h>
+#include <glib.h>
 #include <nm-vpn-plugin.h>
 
 #define NM_TYPE_OPENCONNECT_PLUGIN            (nm_openconnect_plugin_get_type ())
