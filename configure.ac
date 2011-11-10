@@ -95,13 +95,13 @@ if test x"$with_gnome" != xno; then
 	fi
 fi
 
-PKG_CHECK_MODULES(NETWORKMANAGER,
+PKG_CHECK_MODULES(NM,
                   NetworkManager >= 0.9.3
                   libnm-util >= 0.9.3
                   libnm-glib  >= 0.9.3
                   libnm-glib-vpn >= 0.9.3)
-AC_SUBST(NETWORKMANAGER_CFLAGS)
-AC_SUBST(NETWORKMANAGER_LIBS)
+AC_SUBST(NM_CFLAGS)
+AC_SUBST(NM_LIBS)
 
 NM_COMPILER_WARNINGS
 

@@ -13,7 +13,7 @@ ui_DATA = nm-openconnect-dialog.ui
 libnm_openconnect_properties_la_CFLAGS =                \
         $(GTK_CFLAGS)                                   \
         $(GCONF_CFLAGS)                                 \
-        $(NETWORKMANAGER_CFLAGS)                        \
+        $(NM_CFLAGS)                        \
         -DICONDIR=\""$(datadir)/pixmaps"\"              \
         -DUIDIR=\""$(uidir)"\"                          \
         -DG_DISABLE_DEPRECATED                          \
@@ -25,7 +25,7 @@ libnm_openconnect_properties_la_CFLAGS =                \
 libnm_openconnect_properties_la_LIBADD = \
         $(GTK_LIBS) \
         $(GCONF_LIBS) \
-        $(NETWORKMANAGER_LIBS)
+        $(NM_LIBS)
 
 libnm_openconnect_properties_la_LDFLAGS =      \
         -avoid-version
