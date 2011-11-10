@@ -1460,7 +1460,6 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	g_thread_init (NULL);
 	gtk_init(0, NULL);
 
 	_ui_data = init_ui_data(vpn_name, options, secrets);
