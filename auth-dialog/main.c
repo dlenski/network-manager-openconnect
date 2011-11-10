@@ -134,7 +134,11 @@ static void ssl_box_add_error(auth_ui_data *ui_data, const char *msg)
 {
 	GtkWidget *hbox, *text, *image;
 
+#if GTK_CHECK_VERSION(3,1,6)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+#else
 	hbox = gtk_hbox_new(FALSE, 8);
+#endif
 	gtk_box_pack_start(GTK_BOX(ui_data->ssl_box), hbox, FALSE, FALSE, 0);
 
 	image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_ERROR,
@@ -151,7 +155,11 @@ static void ssl_box_add_notice(auth_ui_data *ui_data, const char *msg)
 {
 	GtkWidget *hbox, *text, *image;
 
+#if GTK_CHECK_VERSION(3,1,6)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+#else
 	hbox = gtk_hbox_new(FALSE, 8);
+#endif
 	gtk_box_pack_start(GTK_BOX(ui_data->ssl_box), hbox, FALSE, FALSE, 0);
 
 	image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_WARNING,
@@ -291,7 +299,11 @@ static gboolean ui_write_prompt (ui_fragment_data *data)
 		visible = (data->opt->type == OC_FORM_OPT_TEXT);
 	}
 
+#if GTK_CHECK_VERSION(3,1,6)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
 	hbox = gtk_hbox_new(FALSE, 0);
+#endif
 	gtk_box_pack_start(GTK_BOX(data->ui_data->ssl_box), hbox, FALSE, FALSE, 0);
 
 	text = gtk_label_new(label);
@@ -323,7 +335,11 @@ static gboolean ui_add_select (ui_fragment_data *data)
 	struct oc_form_opt_select *sopt = (void *)data->opt;
 	int i;
 
+#if GTK_CHECK_VERSION(3,1,6)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
 	hbox = gtk_hbox_new(FALSE, 0);
+#endif
 	gtk_box_pack_start(GTK_BOX(data->ui_data->ssl_box), hbox, FALSE, FALSE, 0);
 
 	text = gtk_label_new(data->opt->label);
@@ -1219,12 +1235,20 @@ static void build_main_dialog(auth_ui_data *ui_data)
 				 G_CALLBACK(gtk_main_quit), NULL);
 	g_free(title);
 
+#if GTK_CHECK_VERSION(3,1,6)
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 8);
+#else
 	vbox = gtk_vbox_new(FALSE, 8);
+#endif
 	gtk_box_pack_start(GTK_BOX (gtk_dialog_get_content_area(GTK_DIALOG (ui_data->dialog))), vbox, TRUE, TRUE, 0);
 	gtk_container_set_border_width(GTK_CONTAINER(vbox), 8);
 	gtk_widget_show(vbox);
 
+#if GTK_CHECK_VERSION(3,1,6)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 4);
+#else
 	hbox = gtk_hbox_new(FALSE, 4);
+#endif
 	gtk_box_pack_start(GTK_BOX(vbox), hbox, FALSE, FALSE, 0);
 	gtk_widget_show(hbox);
 
@@ -1260,7 +1284,11 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_widget_set_size_request(frame, -1, -1);
 	gtk_widget_show(frame);
 
+#if GTK_CHECK_VERSION(3,1,6)
+	frame_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 4);
+#else
 	frame_box = gtk_vbox_new(FALSE, 4);
+#endif
 	gtk_container_set_border_width(GTK_CONTAINER(frame_box), 8);
 	gtk_container_add(GTK_CONTAINER(frame), frame_box);
 	gtk_widget_show(frame_box);
@@ -1274,11 +1302,19 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_widget_set_sensitive(ui_data->getting_form_label, FALSE);
 	gtk_box_pack_start(GTK_BOX(frame_box), ui_data->getting_form_label, FALSE, FALSE, 0);
 
+#if GTK_CHECK_VERSION(3,1,6)
+	ui_data->ssl_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 4);
+#else
 	ui_data->ssl_box = gtk_vbox_new(FALSE, 4);
+#endif
 	gtk_box_pack_start(GTK_BOX(frame_box), ui_data->ssl_box, FALSE, FALSE, 0);
 	gtk_widget_show(ui_data->ssl_box);
 
+#if GTK_CHECK_VERSION(3,1,6)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+#else
 	hbox = gtk_hbox_new (FALSE, 6);
+#endif
 	gtk_box_pack_end(GTK_BOX(frame_box), hbox, FALSE, FALSE, 0);
 	gtk_widget_show(hbox);
 
