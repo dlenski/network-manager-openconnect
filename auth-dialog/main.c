@@ -109,6 +109,12 @@ typedef struct auth_ui_data {
 
 	GCond *cert_response_changed;
 	enum certificate_response cert_response;
+
+#if GLIB_CHECK_VERSION (2,31,0)
+	/* Ick. FFS, why does glib deprecate stuff so quickly? */
+	GCond _gconds[3];
+	GMutex _gmutex;
+#endif
 } auth_ui_data;
 
 enum {
@@ -1365,10 +1371,21 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	ui_data->retval = 1;
 
 	ui_data->form_entries = g_queue_new();
+#if GLIB_CHECK_VERSION(2,31,0)
+	ui_data->form_mutex = &ui_data->_gmutex;
+	ui_data->form_retval_changed = &ui_data->_gconds[0];
+	ui_data->form_shown_changed = &ui_data->_gconds[1];
+	ui_data->cert_response_changed = &ui_data->_gconds[2];
+	g_mutex_init(ui_data->form_mutex);
+	g_cond_init(ui_data->form_retval_changed);
+	g_cond_init(ui_data->form_shown_changed);
+	g_cond_init(ui_data->cert_response_changed);
+#else
 	ui_data->form_mutex = g_mutex_new();
 	ui_data->form_retval_changed = g_cond_new();
 	ui_data->form_shown_changed = g_cond_new();
 	ui_data->cert_response_changed = g_cond_new();
+#endif
 	ui_data->vpn_name = vpn_name;
 	ui_data->options = options;
 	ui_data->secrets = secrets;
