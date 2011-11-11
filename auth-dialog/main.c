@@ -1169,8 +1169,12 @@ static void connect_host(auth_ui_data *ui_data)
 	g_hash_table_insert (ui_data->success_secrets, g_strdup("lasthost"),
 			     g_strdup(host->hostname));
 
+#if GLIB_CHECK_VERSION(2,31,0)
+	thread = g_thread_new("obtain_cookie", (GThreadFunc)obtain_cookie, ui_data);
+#else
 	thread = g_thread_create((GThreadFunc)obtain_cookie, ui_data,
 				 FALSE, NULL);
+#endif
 	(void)thread;
 }
 
@@ -1477,6 +1481,9 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
+#if !GLIB_CHECK_VERSION(2,31,0)
+	g_thread_init (NULL);
+#endif
 	gtk_init(0, NULL);
 
 	_ui_data = init_ui_data(vpn_name, options, secrets);
