@@ -1,0 +1,159 @@
+# Esperanto translation for network-manager-openconnect.
+# Copyright (C) 2011 Free Software Foundation, Inc.
+# This file is distributed under the same license as the network-manager-openconnect package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-manager-openconnect master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-11-27 10:33+0000\n"
+"PO-Revision-Date: 2011-11-27 19:00+0100\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: ../auth-dialog/main.c:673
+#, c-format
+msgid ""
+"Certificate from VPN server \"%s\" failed verification.\n"
+"Reason: %s\n"
+"Do you want to accept it?"
+msgstr ""
+
+#: ../auth-dialog/main.c:1265
+msgid "VPN host"
+msgstr ""
+
+#: ../auth-dialog/main.c:1285
+msgid "Automatically start connecting next time"
+msgstr ""
+
+#: ../auth-dialog/main.c:1306
+msgid "Select a host to fetch the login form"
+msgstr ""
+
+#: ../auth-dialog/main.c:1311
+msgid "Contacting host, please wait..."
+msgstr ""
+
+#: ../auth-dialog/main.c:1331
+msgid "_Login"
+msgstr "Ensa_luti"
+
+#: ../auth-dialog/main.c:1345
+msgid "Log"
+msgstr ""
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr ""
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "Elekti vian personan atestilon..."
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "Elekti vian privatan ŝlosilon..."
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr ""
+
+#: ../properties/nm-openconnect.c:50
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr ""
+
+#: ../properties/nm-openconnect.c:51
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>Certificate Authentication</b>"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "<b>General</b>"
+msgstr "<b>Ĝenerale</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "CSD _Wrapper Script:"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "Private _Key:"
+msgstr "Privatan ŝ_losilo:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Select A File"
+msgstr "Elekti dosieron"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Use _FSID for key passphrase"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "_CA Certificate:"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_Gateway:"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_Proxy:"
+msgstr ""
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "_User Certificate:"
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:142
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:152
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:159
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:172
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:188
+msgid "No VPN configuration options."
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:206
+msgid "No VPN secrets!"
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:286
+msgid "Could not find openconnect binary."
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:298
+msgid "No VPN gateway specified."
+msgstr ""
+
+#: ../src/nm-openconnect-service.c:308
+msgid "No WebVPN cookie provided."
+msgstr ""
