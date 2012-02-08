@@ -2,24 +2,52 @@
 #
 # Copyright (C) 2009 The GNOME Project.
 # This file is distributed under the same license as the NetworkManager-openconnect package.
-#
-# Mattias Põldaru <mahfiaz gmail com>, 2009-2011.
+# Mattias Põldaru <mahfiaz@gmail.com>, 2009-2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: networkmanager openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=NetworkManager&component=general\n"
-"POT-Creation-Date: 2011-01-31 08:08+0000\n"
-"PO-Revision-Date: 2011-02-02 19:56+0300\n"
-"Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
-"Language-Team: Gnome Estonian Translation Team <gnome-et@linux.ee>\n"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-01-03 11:09+0000\n"
+"PO-Revision-Date: 2012-02-08 22:41+0200\n"
+"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
+"Language-Team: Estonian <>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
 "X-Poedit-Language: Estonian\n"
 "X-Poedit-Country: Estonia\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, c-format
+msgid ""
+"Certificate from VPN server \"%s\" failed verification.\n"
+"Reason: %s\n"
+"Do you want to accept it?"
+msgstr ""
+"VPN-serverist \"%s\" pärit serdi verifitseerimine nurjus.\n"
+"Põhjus: %s\n"
+"Kas sa tahad selle siiski heaks kiita?"
+
+msgid "VPN host"
+msgstr "VPNi host"
+
+msgid "Automatically start connecting next time"
+msgstr "Järgmisel korral ühendutatakse automaatselt"
+
+msgid "Select a host to fetch the login form"
+msgstr "Vali host, millest sisselogimise vorm hankida"
+
+msgid "Contacting host, please wait..."
+msgstr "Hostiga ühendumine, palun oota..."
+
+msgid "_Login"
+msgstr "_Logi sisse"
+
+msgid "Log"
+msgstr "Logi"
 
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Sertifikaadikeskuse serdi valimine..."
@@ -71,3 +99,36 @@ msgstr "_Proksi:"
 
 msgid "_User Certificate:"
 msgstr "Kasutaja _sertifikaat:"
+
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr ""
+"sobimatu täisarvulise omaduse '%s' väärtus või oli see väljaspool ulatust "
+"[%d -> %d]"
+
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "sobimatu tõeväärtusomaduse '%s' väärtus (ei olnud yes või no)"
+
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "'%s' omadus (liik %s) jäeti kasutamata"
+
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "omadus '%s' on sobimatu või pole toetatud"
+
+msgid "No VPN configuration options."
+msgstr "VPNi seadistuse valikuid pole."
+
+msgid "No VPN secrets!"
+msgstr "Pole ühtegi VPNi parooli!"
+
+msgid "Could not find openconnect binary."
+msgstr "openconnect binaarfaili ei leitud."
+
+msgid "No VPN gateway specified."
+msgstr "VPN lüüs (gateway) on määramata."
+
+msgid "No WebVPN cookie provided."
+msgstr "WebVPN küpsist pole antud."
