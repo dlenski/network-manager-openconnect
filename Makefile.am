@@ -19,6 +19,8 @@ nmvpnservice_DATA = nm-openconnect-service.name
 nm-openconnect-service.name: $(srcdir)/nm-openconnect-service.name.in
 	sed -e 's|[@]LIBEXECDIR[@]|$(libexecdir)|g' $< >$@
 
+DISTCHECK_CONFIGURE_FLAGS = --enable-more-warnings=yes
+
 EXTRA_DIST = nm-openconnect-service.name.in \
              $(dbusservice_DATA)  \
              $(desktop_in_files)  \
