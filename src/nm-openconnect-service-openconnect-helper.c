@@ -291,6 +291,26 @@ addr6_list_to_gvalue (const char *str)
 #define BUFLEN 256
 
 static GValue *
+split_dns_list_to_gvalue (const char *str)
+{
+	GValue *val;
+	char **split;
+
+	if (!str || strlen (str) < 1)
+		return NULL;
+
+	split = g_strsplit (str, ",", -1);
+	if (g_strv_length (split) == 0)
+		return NULL;
+
+	val = g_slice_new0 (GValue);
+	g_value_init (val, G_TYPE_STRV);
+	g_value_take_boxed (val, split);
+
+	return val;
+}
+
+static GValue *
 get_ip4_routes (void)
 {
 	GValue *value = NULL;
@@ -549,6 +569,11 @@ main (int argc, char *argv[])
 	val = addr4_list_to_gvalue (getenv ("INTERNAL_IP4_NBNS"));
 	if (val)
 		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_NBNS, val);
+
+	/* Split DNS domains */
+	val = split_dns_list_to_gvalue (getenv ("CISCO_SPLIT_DNS"));
+	if (val)
+		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_DOMAINS, val);
 
 	/* Routes */
 	val = get_ip4_routes ();
