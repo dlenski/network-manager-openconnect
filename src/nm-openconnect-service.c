@@ -213,8 +213,11 @@ nm_openconnect_secrets_validate (NMSettingVPN *s_vpn, GError **error)
 static void openconnect_drop_child_privs(gpointer user_data)
 {
 	if (tun_name) {
-		initgroups(NM_OPENCONNECT_USER, tun_group);
-		setuid((uid_t)tun_owner);
+		if (initgroups(NM_OPENCONNECT_USER, tun_group) ||
+			setgid(tun_group) || setuid(tun_owner)) {
+			g_warning ("Failed to drop privileges when spawning openconnect");
+			exit (1);
+		}
 	}
 }
 
