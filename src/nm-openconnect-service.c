@@ -50,6 +50,7 @@ G_DEFINE_TYPE (NMOPENCONNECTPlugin, nm_openconnect_plugin, NM_TYPE_VPN_PLUGIN)
 
 typedef struct {
 	GPid pid;
+	char *tun_name;
 } NMOPENCONNECTPluginPrivate;
 
 #define NM_OPENCONNECT_PLUGIN_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), NM_TYPE_OPENCONNECT_PLUGIN, NMOPENCONNECTPluginPrivate))
@@ -97,7 +98,6 @@ static ValidProperty valid_secrets[] = {
 
 static uid_t tun_owner;
 static gid_t tun_group;
-static char *tun_name = NULL;
 
 typedef struct ValidateInfo {
 	ValidProperty *table;
@@ -210,8 +210,86 @@ nm_openconnect_secrets_validate (NMSettingVPN *s_vpn, GError **error)
 	return *error ? FALSE : TRUE;
 }
 
+static char *
+create_persistent_tundev(void)
+{
+	struct passwd *pw;
+	struct ifreq ifr;
+	int fd;
+	int i;
+
+	pw = getpwnam(NM_OPENCONNECT_USER);
+	if (!pw)
+		return NULL;
+
+	tun_owner = pw->pw_uid;
+	tun_group = pw->pw_gid;
+
+	fd = open("/dev/net/tun", O_RDWR);
+	if (fd < 0) {
+		perror("open /dev/net/tun");
+		exit(EXIT_FAILURE);
+	}
+
+	memset(&ifr, 0, sizeof(ifr));
+	ifr.ifr_flags = IFF_TUN | IFF_NO_PI;
+
+	for (i = 0; i < 256; i++) {
+		sprintf(ifr.ifr_name, "vpn%d", i);
+
+		if (!ioctl(fd, TUNSETIFF, (void *)&ifr))
+			break;
+	}
+	if (i == 256)
+		exit(EXIT_FAILURE);
+
+	if (ioctl(fd, TUNSETOWNER, tun_owner) < 0) {
+		perror("TUNSETOWNER");
+		exit(EXIT_FAILURE);
+	}
+
+	if (ioctl(fd, TUNSETPERSIST, 1)) {
+		perror("TUNSETPERSIST");
+		exit(EXIT_FAILURE);
+	}
+	close(fd);
+	g_warning("Created tundev %s\n", ifr.ifr_name);
+	return g_strdup(ifr.ifr_name);
+}
+
+static void
+destroy_persistent_tundev(char *tun_name)
+{
+	struct ifreq ifr;
+	int fd;
+
+	fd = open("/dev/net/tun", O_RDWR);
+	if (fd < 0) {
+		perror("open /dev/net/tun");
+		exit(EXIT_FAILURE);
+	}
+
+	memset(&ifr, 0, sizeof(ifr));
+	ifr.ifr_flags = IFF_TUN | IFF_NO_PI;
+	strcpy(ifr.ifr_name, tun_name);
+
+	if (ioctl(fd, TUNSETIFF, (void *)&ifr) < 0) {
+		perror("TUNSETIFF");
+		exit(EXIT_FAILURE);
+	}
+
+	if (ioctl(fd, TUNSETPERSIST, 0)) {
+		perror("TUNSETPERSIST");
+		exit(EXIT_FAILURE);
+	}
+	g_warning("Destroyed  tundev %s\n", tun_name);
+	close(fd);
+}
+
 static void openconnect_drop_child_privs(gpointer user_data)
 {
+	char *tun_name = user_data;
+
 	if (tun_name) {
 		if (initgroups(NM_OPENCONNECT_USER, tun_group) ||
 			setgid(tun_group) || setuid(tun_owner)) {
@@ -244,6 +322,12 @@ openconnect_watch_cb (GPid pid, gint status, gpointer user_data)
 	waitpid (priv->pid, NULL, WNOHANG);
 	priv->pid = 0;
 
+	if (priv->tun_name) {
+		destroy_persistent_tundev (priv->tun_name);
+		g_free (priv->tun_name);
+		priv->tun_name = NULL;
+	}
+
 	/* Must be after data->state is set since signals use data->state */
 	switch (error) {
 	case 2:
@@ -266,6 +350,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 										 NMSettingVPN *s_vpn,
 										 GError **error)
 {
+	NMOPENCONNECTPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
 	GPid	pid;
 	const char **openconnect_binary = NULL;
 	GPtrArray *openconnect_argv;
@@ -345,9 +430,10 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	g_ptr_array_add (openconnect_argv, (gpointer) "--script");
 	g_ptr_array_add (openconnect_argv, (gpointer) NM_OPENCONNECT_HELPER_PATH);
 
-	if (tun_name) {
+	priv->tun_name = create_persistent_tundev ();
+	if (priv->tun_name) {
 		g_ptr_array_add (openconnect_argv, (gpointer) "--interface");
-		g_ptr_array_add (openconnect_argv, (gpointer) tun_name);
+		g_ptr_array_add (openconnect_argv, (gpointer) priv->tun_name);
 	}
 
 	g_ptr_array_add (openconnect_argv, (gpointer) props_vpn_gw);
@@ -356,7 +442,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 
 	if (!g_spawn_async_with_pipes (NULL, (char **) openconnect_argv->pdata, NULL,
 								   G_SPAWN_DO_NOT_REAP_CHILD,
-								   openconnect_drop_child_privs, NULL,
+								   openconnect_drop_child_privs, priv->tun_name,
 								   &pid, &stdin_fd, NULL, NULL, error)) {
 		g_ptr_array_free (openconnect_argv, TRUE);
 		g_warning ("openconnect failed to start.  error: '%s'", (*error)->message);
@@ -507,86 +593,6 @@ quit_mainloop (NMOPENCONNECTPlugin *plugin, gpointer user_data)
 	g_main_loop_quit ((GMainLoop *) user_data);
 }
 
-static void
-create_persistent_tundev(void)
-{
-	struct passwd *pw;
-	struct ifreq ifr;
-	int fd;
-	int i;
-
-	pw = getpwnam(NM_OPENCONNECT_USER);
-	if (!pw)
-		return;
-
-	tun_owner = pw->pw_uid;
-	tun_group = pw->pw_gid;
-
-	fd = open("/dev/net/tun", O_RDWR);
-	if (fd < 0) {
-		perror("open /dev/net/tun");
-		exit(EXIT_FAILURE);
-	}
-
-	memset(&ifr, 0, sizeof(ifr));
-	ifr.ifr_flags = IFF_TUN | IFF_NO_PI;
-
-	for (i = 0; i < 256; i++) {
-		if (tun_name)
-			g_free(tun_name);
-
-		sprintf(ifr.ifr_name, "vpn%d", i);
-		
-		if (!ioctl(fd, TUNSETIFF, (void *)&ifr))
-			break;
-	}
-	if (i == 256)
-		exit(EXIT_FAILURE);
-
-	if (ioctl(fd, TUNSETOWNER, tun_owner) < 0) {
-		perror("TUNSETOWNER");
-		exit(EXIT_FAILURE);
-	}
-
-	if (ioctl(fd, TUNSETPERSIST, 1)) {
-		perror("TUNSETPERSIST");
-		exit(EXIT_FAILURE);
-	}
-	tun_name = g_strdup(ifr.ifr_name);
-	close(fd);
-}
-
-static void
-destroy_persistent_tundev(void)
-{
-	struct ifreq ifr;
-	int fd;
-
-	if (!tun_name)
-		return;
-
-	fd = open("/dev/net/tun", O_RDWR);
-	if (fd < 0) {
-		perror("open /dev/net/tun");
-		exit(EXIT_FAILURE);
-	}
-
-	memset(&ifr, 0, sizeof(ifr));
-	ifr.ifr_flags = IFF_TUN | IFF_NO_PI;
-	strcpy(ifr.ifr_name, tun_name);
-	
-	if (ioctl(fd, TUNSETIFF, (void *)&ifr) < 0) {
-		perror("TUNSETIFF");
-		exit(EXIT_FAILURE);
-	}
-
-	if (ioctl(fd, TUNSETPERSIST, 0)) {
-		perror("TUNSETPERSIST");
-		exit(EXIT_FAILURE);
-	}
-	close(fd);
-}
-
 int main (int argc, char *argv[])
 {
 	NMOPENCONNECTPlugin *plugin;
@@ -596,8 +602,6 @@ int main (int argc, char *argv[])
 
 	if (system ("/sbin/modprobe tun") == -1)
 		exit (EXIT_FAILURE);
-
-	create_persistent_tundev();
 
 	plugin = nm_openconnect_plugin_new ();
 	if (!plugin)
@@ -613,8 +617,6 @@ int main (int argc, char *argv[])
 
 	g_main_loop_unref (main_loop);
 	g_object_unref (plugin);
-
-	destroy_persistent_tundev();
 
 	exit (EXIT_SUCCESS);
 }
