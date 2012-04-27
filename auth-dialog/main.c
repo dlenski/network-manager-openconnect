@@ -1407,6 +1407,30 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	return ui_data;
 }
 
+static void wait_for_quit (void)
+{
+	GString *str;
+	char c;
+	ssize_t n;
+	time_t start;
+
+	str = g_string_sized_new (10);
+	start = time (NULL);
+	do {
+		errno = 0;
+		n = read (0, &c, 1);
+		if (n == 0 || (n < 0 && errno == EAGAIN))
+			g_usleep (G_USEC_PER_SEC / 10);
+		else if (n == 1) {
+			g_string_append_c (str, c);
+			if (strstr (str->str, "QUIT") || (str->len > 10))
+				break;
+		} else
+			break;
+	} while (time (NULL) < start + 20);
+	g_string_free (str, TRUE);
+}
+
 static struct option long_options[] = {
 	{"reprompt", 0, 0, 'r'},
 	{"uuid", 1, 0, 'u'},
@@ -1510,6 +1534,8 @@ int main (int argc, char **argv)
 
 	printf("\n\n");
 	fflush(stdout);
+
+	wait_for_quit ();
 
 	return _ui_data->retval;
 }
