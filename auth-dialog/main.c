@@ -1,7 +1,7 @@
 /*
  * OpenConnect (SSL + DTLS) VPN client
  *
- * Copyright © 2008-2010 Intel Corporation.
+ * Copyright © 2008-2012 Intel Corporation.
  *
  * Authors: Jussi Kukkonen <jku@linux.intel.com>
  *          David Woodhouse <dwmw2@infradead.org>
@@ -40,6 +40,7 @@
 
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
+#include <glib-unix.h>
 
 #include <nm-vpn-plugin-utils.h>
 
@@ -94,6 +95,7 @@ typedef struct auth_ui_data {
 	int retval;
 	int cookie_retval;
 
+	int cancel_pipes[2];
 	gboolean cancelled; /* fully cancel the whole challenge-response series */
 	gboolean getting_cookie;
 
@@ -1121,9 +1123,13 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 static gpointer obtain_cookie (auth_ui_data *ui_data)
 {
 	int ret;
+	char cancelbuf;
 
 	ret = openconnect_obtain_cookie(ui_data->vpninfo);
 
+	/* Suck out the poison */
+	while (read(ui_data->cancel_pipes[0], &cancelbuf, 1) == 1)
+		;
 	ui_data->cookie_retval = ret;
 	g_idle_add ((GSourceFunc)cookie_obtained, ui_data);
 
@@ -1146,6 +1152,7 @@ static void connect_host(auth_ui_data *ui_data)
 
 	ssl_box_clear(ui_data);
 	gtk_widget_show(ui_data->getting_form_label);
+	gtk_widget_set_sensitive (ui_data->cancel_button, TRUE);
 
 	/* reset ssl context.
 	 * TODO: this is probably not the way to go... */
@@ -1200,6 +1207,8 @@ static void dialog_response (GtkDialog *dialog, int response, auth_ui_data *ui_d
 {
 	switch (response) {
 	case AUTH_DIALOG_RESPONSE_CANCEL:
+		write(ui_data->cancel_pipes[1], "x", 1);
+		/* Fall through... */
 	case AUTH_DIALOG_RESPONSE_LOGIN:
 		ssl_box_clear(ui_data);
 		if (ui_data->getting_cookie)
@@ -1395,10 +1404,18 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	ui_data->secrets = secrets;
 	ui_data->success_secrets = g_hash_table_new_full (g_str_hash, g_str_equal,
 							  g_free, g_free);
+	pipe(ui_data->cancel_pipes);
+	g_unix_set_fd_nonblocking(ui_data->cancel_pipes[0], TRUE, NULL);
+	g_unix_set_fd_nonblocking(ui_data->cancel_pipes[1], TRUE, NULL);
 
 	ui_data->vpninfo = (void *)openconnect_vpninfo_new("OpenConnect VPN Agent (NetworkManager)",
 						   validate_peer_cert, write_new_config,
 						   nm_process_auth_form, write_progress);
+
+#if OPENCONNECT_API_VERSION_MAJOR > 1 || (OPENCONNECT_API_VERSION_MAJOR == 1 && OPENCONNECT_API_VERSION_MINOR >= 4)
+
+	openconnect_set_cancel_fd (ui_data->vpninfo, ui_data->cancel_pipes[0]);
+#endif  
 
 #if 0
 	ui_data->vpninfo->proxy_factory = px_proxy_factory_new();
