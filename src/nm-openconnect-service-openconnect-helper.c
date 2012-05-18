@@ -51,14 +51,14 @@ helper_failed (DBusGConnection *connection, const char *reason)
 	g_warning ("nm-nopenconnect-service-openconnect-helper did not receive a valid %s from openconnect", reason);
 
 	proxy = dbus_g_proxy_new_for_name (connection,
-								NM_DBUS_SERVICE_OPENCONNECT,
-								NM_VPN_DBUS_PLUGIN_PATH,
-								NM_VPN_DBUS_PLUGIN_INTERFACE);
+	                                   NM_DBUS_SERVICE_OPENCONNECT,
+	                                   NM_VPN_DBUS_PLUGIN_PATH,
+	                                   NM_VPN_DBUS_PLUGIN_INTERFACE);
 
 	dbus_g_proxy_call (proxy, "SetFailure", &err,
-				    G_TYPE_STRING, reason,
-				    G_TYPE_INVALID,
-				    G_TYPE_INVALID);
+	                   G_TYPE_STRING, reason,
+	                   G_TYPE_INVALID,
+	                   G_TYPE_INVALID);
 
 	if (err) {
 		g_warning ("Could not send failure information: %s", err->message);
@@ -77,15 +77,15 @@ send_ip4_config (DBusGConnection *connection, GHashTable *config)
 	GError *err = NULL;
 
 	proxy = dbus_g_proxy_new_for_name (connection,
-								NM_DBUS_SERVICE_OPENCONNECT,
-								NM_VPN_DBUS_PLUGIN_PATH,
-								NM_VPN_DBUS_PLUGIN_INTERFACE);
+	                                   NM_DBUS_SERVICE_OPENCONNECT,
+	                                   NM_VPN_DBUS_PLUGIN_PATH,
+	                                   NM_VPN_DBUS_PLUGIN_INTERFACE);
 
 	dbus_g_proxy_call (proxy, "SetIp4Config", &err,
-				    dbus_g_type_get_map ("GHashTable", G_TYPE_STRING, G_TYPE_VALUE),
-				    config,
-				    G_TYPE_INVALID,
-				    G_TYPE_INVALID);
+	                   dbus_g_type_get_map ("GHashTable", G_TYPE_STRING, G_TYPE_VALUE),
+	                   config,
+	                   G_TYPE_INVALID,
+	                   G_TYPE_INVALID);
 
 	if (err) {
 		g_warning ("Could not send failure information: %s", err->message);

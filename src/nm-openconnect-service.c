@@ -292,7 +292,7 @@ static void openconnect_drop_child_privs(gpointer user_data)
 
 	if (tun_name) {
 		if (initgroups(NM_OPENCONNECT_USER, tun_group) ||
-			setgid(tun_group) || setuid(tun_owner)) {
+		    setgid(tun_group) || setuid(tun_owner)) {
 			g_warning ("Failed to drop privileges when spawning openconnect");
 			exit (1);
 		}
@@ -347,8 +347,8 @@ openconnect_watch_cb (GPid pid, gint status, gpointer user_data)
 
 static gint
 nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
-										 NMSettingVPN *s_vpn,
-										 GError **error)
+                                         NMSettingVPN *s_vpn,
+                                         GError **error)
 {
 	NMOPENCONNECTPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
 	GPid	pid;
@@ -441,9 +441,9 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	g_ptr_array_add (openconnect_argv, NULL);
 
 	if (!g_spawn_async_with_pipes (NULL, (char **) openconnect_argv->pdata, NULL,
-								   G_SPAWN_DO_NOT_REAP_CHILD,
-								   openconnect_drop_child_privs, priv->tun_name,
-								   &pid, &stdin_fd, NULL, NULL, error)) {
+	                               G_SPAWN_DO_NOT_REAP_CHILD,
+	                               openconnect_drop_child_privs, priv->tun_name,
+	                               &pid, &stdin_fd, NULL, NULL, error)) {
 		g_ptr_array_free (openconnect_argv, TRUE);
 		g_warning ("openconnect failed to start.  error: '%s'", (*error)->message);
 		return -1;
@@ -453,7 +453,7 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 	g_message ("openconnect started with pid %d", pid);
 
 	if (write(stdin_fd, props_cookie, strlen(props_cookie)) != strlen(props_cookie) ||
-		write(stdin_fd, "\n", 1) != 1) {
+	    write(stdin_fd, "\n", 1) != 1) {
 		g_warning ("openconnect didn't eat the cookie we fed it");
 		return -1;
 	}
@@ -504,7 +504,7 @@ real_need_secrets (NMVPNPlugin *plugin,
 
 	s_vpn = NM_SETTING_VPN (nm_connection_get_setting (connection, NM_TYPE_SETTING_VPN));
 	if (!s_vpn) {
-        g_set_error (error,
+		g_set_error (error,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_CONNECTION_INVALID,
 		             "%s",
@@ -543,7 +543,7 @@ ensure_killed (gpointer data)
 
 static gboolean
 real_disconnect (NMVPNPlugin   *plugin,
-			  GError       **err)
+                 GError       **err)
 {
 	NMOPENCONNECTPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
 
@@ -583,8 +583,8 @@ NMOPENCONNECTPlugin *
 nm_openconnect_plugin_new (void)
 {
 	return (NMOPENCONNECTPlugin *) g_object_new (NM_TYPE_OPENCONNECT_PLUGIN,
-								   NM_VPN_PLUGIN_DBUS_SERVICE_NAME, NM_DBUS_SERVICE_OPENCONNECT,
-								   NULL);
+	                                             NM_VPN_PLUGIN_DBUS_SERVICE_NAME, NM_DBUS_SERVICE_OPENCONNECT,
+	                                             NULL);
 }
 
 static void
@@ -610,8 +610,8 @@ int main (int argc, char *argv[])
 	main_loop = g_main_loop_new (NULL, FALSE);
 
 	g_signal_connect (plugin, "quit",
-				   G_CALLBACK (quit_mainloop),
-				   main_loop);
+	                  G_CALLBACK (quit_mainloop),
+	                  main_loop);
 
 	g_main_loop_run (main_loop);
 
