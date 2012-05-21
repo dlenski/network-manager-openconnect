@@ -1207,7 +1207,7 @@ static void dialog_response (GtkDialog *dialog, int response, auth_ui_data *ui_d
 {
 	switch (response) {
 	case AUTH_DIALOG_RESPONSE_CANCEL:
-		if (write(ui_data->cancel_pipes[1], "x", 1)) {
+		if (write(ui_data->cancel_pipes[1], "x", 1) < 0) {
 			/* Pfft. Not a lot we can do about it */
 		}
 		/* Fall through... */
