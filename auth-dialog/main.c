@@ -1072,7 +1072,7 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 						 GTK_STOCK_DIALOG_ERROR,
 						 GTK_ICON_SIZE_DIALOG);
 			gtk_widget_show_all(ui_data->ssl_box);
-			gtk_widget_set_sensitive(ui_data->cancel_button, TRUE);
+			gtk_widget_set_sensitive(ui_data->cancel_button, FALSE);
 		}
 		ui_data->retval = 1;
 	} else if (!ui_data->cookie_retval) {
@@ -1142,6 +1142,7 @@ static void connect_host(auth_ui_data *ui_data)
 	vpnhost *host;
 	int i;
 	int host_nr;
+	char cancelbuf;
 
 	ui_data->cancelled = FALSE;
 	ui_data->getting_cookie = TRUE;
@@ -1153,7 +1154,8 @@ static void connect_host(auth_ui_data *ui_data)
 	ssl_box_clear(ui_data);
 	gtk_widget_show(ui_data->getting_form_label);
 	gtk_widget_set_sensitive (ui_data->cancel_button, TRUE);
-
+	while (read(ui_data->cancel_pipes[0], &cancelbuf, 1) == 1)
+		;
 	/* reset ssl context.
 	 * TODO: this is probably not the way to go... */
 	openconnect_reset_ssl(ui_data->vpninfo);
