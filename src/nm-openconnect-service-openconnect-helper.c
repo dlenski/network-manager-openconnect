@@ -200,6 +200,28 @@ addr_list_to_gvalue (const char *str)
 }
 
 static GValue *
+addr6_to_gvalue (const char *str)
+{
+	struct in6_addr temp_addr;
+	GValue *val;
+	GByteArray *ba;
+
+	/* Empty */
+	if (!str || strlen (str) < 1)
+		return NULL;
+
+	if (inet_pton (AF_INET6, str, &temp_addr) <= 0)
+		return NULL;
+
+	val = g_slice_new0 (GValue);
+	g_value_init (val, DBUS_TYPE_G_UCHAR_ARRAY);
+	ba = g_byte_array_new ();
+	g_byte_array_append (ba, (guint8 *) &temp_addr, sizeof (temp_addr));
+	g_value_take_boxed (val, ba);
+	return val;
+}
+
+static GValue *
 get_routes (void)
 {
 	GValue *value = NULL;
@@ -318,6 +340,8 @@ main (int argc, char *argv[])
 
 	/* Gateway */
 	val = addr_to_gvalue (getenv ("VPNGATEWAY"));
+	if (!val)
+		val = addr6_to_gvalue (getenv ("VPNGATEWAY"));
 	if (val)
 		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_GATEWAY, val);
 	else
