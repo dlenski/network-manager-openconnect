@@ -34,6 +34,7 @@
 #include <dbus/dbus-glib-lowlevel.h>
 #include <dbus/dbus-glib.h>
 #include <NetworkManager.h>
+#include <nm-vpn-plugin-utils.h>
 
 #include "nm-openconnect-service.h"
 #include "nm-utils.h"
@@ -41,6 +42,9 @@
 /* These are here because nm-dbus-glib-types.h isn't exported */
 #define DBUS_TYPE_G_ARRAY_OF_UINT          (dbus_g_type_get_collection ("GArray", G_TYPE_UINT))
 #define DBUS_TYPE_G_ARRAY_OF_ARRAY_OF_UINT (dbus_g_type_get_collection ("GPtrArray", DBUS_TYPE_G_ARRAY_OF_UINT))
+#define DBUS_TYPE_G_MAP_OF_VARIANT         (dbus_g_type_get_map ("GHashTable", G_TYPE_STRING, G_TYPE_VALUE))
+#define DBUS_TYPE_G_IP6_ROUTE              (dbus_g_type_get_struct ("GValueArray", DBUS_TYPE_G_UCHAR_ARRAY, G_TYPE_UINT, DBUS_TYPE_G_UCHAR_ARRAY, G_TYPE_UINT, G_TYPE_INVALID))
+#define DBUS_TYPE_G_ARRAY_OF_IP6_ROUTE     (dbus_g_type_get_collection ("GPtrArray", DBUS_TYPE_G_IP6_ROUTE))
 
 static void
 helper_failed (DBusGConnection *connection, const char *reason)
@@ -71,7 +75,8 @@ helper_failed (DBusGConnection *connection, const char *reason)
 }
 
 static void
-send_ip4_config (DBusGConnection *connection, GHashTable *config)
+send_config (DBusGConnection *connection, GHashTable *config,
+             GHashTable *ip4config, GHashTable *ip6config)
 {
 	DBusGProxy *proxy;
 	GError *err = NULL;
@@ -81,14 +86,34 @@ send_ip4_config (DBusGConnection *connection, GHashTable *config)
 	                                   NM_VPN_DBUS_PLUGIN_PATH,
 	                                   NM_VPN_DBUS_PLUGIN_INTERFACE);
 
-	dbus_g_proxy_call (proxy, "SetIp4Config", &err,
-	                   dbus_g_type_get_map ("GHashTable", G_TYPE_STRING, G_TYPE_VALUE),
-	                   config,
-	                   G_TYPE_INVALID,
-	                   G_TYPE_INVALID);
+	if (!dbus_g_proxy_call (proxy, "SetConfig", &err,
+	                        DBUS_TYPE_G_MAP_OF_VARIANT,
+	                        config,
+	                        G_TYPE_INVALID,
+	                        G_TYPE_INVALID))
+		goto done;
 
+	if (ip4config) {
+		if (!dbus_g_proxy_call (proxy, "SetIp4Config", &err,
+		                        DBUS_TYPE_G_MAP_OF_VARIANT,
+		                        ip4config,
+		                        G_TYPE_INVALID,
+		                        G_TYPE_INVALID))
+			goto done;
+	}
+
+	if (ip6config) {
+		if (!dbus_g_proxy_call (proxy, "SetIp6Config", &err,
+		                        DBUS_TYPE_G_MAP_OF_VARIANT,
+		                        ip6config,
+		                        G_TYPE_INVALID,
+		                        G_TYPE_INVALID))
+			goto done;
+	}
+
+ done:
 	if (err) {
-		g_warning ("Could not send failure information: %s", err->message);
+		g_warning ("Could not send configuration information: %s", err->message);
 		g_error_free (err);
 	}
 
@@ -147,7 +172,7 @@ bool_to_gvalue (gboolean b)
 }
 
 static GValue *
-addr_to_gvalue (const char *str)
+addr4_to_gvalue (const char *str)
 {
 	struct in_addr	temp_addr;
 
@@ -162,7 +187,7 @@ addr_to_gvalue (const char *str)
 }
 
 static GValue *
-addr_list_to_gvalue (const char *str)
+addr4_list_to_gvalue (const char *str)
 {
 	GValue *val;
 	char **split;
@@ -222,15 +247,57 @@ addr6_to_gvalue (const char *str)
 }
 
 static GValue *
-get_routes (void)
+addr6_list_to_gvalue (const char *str)
+{
+	GValue *val;
+	char **split;
+	int i;
+	GPtrArray *array;
+	GByteArray *ba;
+
+	/* Empty */
+	if (!str || strlen (str) < 1)
+		return NULL;
+
+	split = g_strsplit (str, " ", -1);
+	if (g_strv_length (split) == 0)
+		return NULL;
+
+	array = g_ptr_array_new_full (g_strv_length (split),
+	                              (GDestroyNotify) g_byte_array_unref);
+	for (i = 0; split[i]; i++) {
+		struct in6_addr addr;
+
+		if (inet_pton (AF_INET6, split[i], &addr) > 0) {
+			ba = g_byte_array_new ();
+			g_byte_array_append (ba, (guint8 *) &addr, sizeof (addr));
+			g_ptr_array_add (array, ba);
+		} else {
+			g_strfreev (split);
+			g_ptr_array_free (array, TRUE);
+			return NULL;
+		}
+	}
+
+	g_strfreev (split);
+
+	val = g_slice_new0 (GValue);
+	g_value_init (val, DBUS_TYPE_G_ARRAY_OF_ARRAY_OF_UINT);
+	g_value_set_boxed (val, array);
+
+	return val;
+}
+
+#define BUFLEN 256
+
+static GValue *
+get_ip4_routes (void)
 {
 	GValue *value = NULL;
 	GPtrArray *routes;
 	char *tmp;
 	int num;
 	int i;
-
-#define BUFLEN 256
 
 	tmp = getenv ("CISCO_SPLIT_INC");
 	if (!tmp || strlen (tmp) < 1)
@@ -298,6 +365,77 @@ get_routes (void)
 	return value;
 }
 
+static GValue *
+get_ip6_routes (void)
+{
+	GValue *value = NULL;
+	GSList *routes;
+	char *tmp;
+	int num;
+	int i;
+
+	tmp = getenv ("CISCO_IPV6_SPLIT_INC");
+	if (!tmp || strlen (tmp) < 1)
+		return NULL;
+
+	num = atoi (tmp);
+	if (!num)
+		return NULL;
+
+	routes = NULL;
+
+	for (i = 0; i < num; i++) {
+		NMIP6Route *route;
+		char buf[BUFLEN];
+		struct in6_addr network;
+		guint32 prefix;
+
+		snprintf (buf, BUFLEN, "CISCO_IPV6_SPLIT_INC_%d_ADDR", i);
+		tmp = getenv (buf);
+		if (!tmp || inet_pton (AF_INET6, tmp, &network) <= 0) {
+			g_warning ("Ignoring invalid static route address '%s'", tmp ? tmp : "NULL");
+			continue;
+		}
+
+		snprintf (buf, BUFLEN, "CISCO_IPV6_SPLIT_INC_%d_MASKLEN", i);
+		tmp = getenv (buf);
+		if (tmp) {
+			long int tmp_prefix;
+
+			errno = 0;
+			tmp_prefix = strtol (tmp, NULL, 10);
+			if (errno || tmp_prefix <= 0 || tmp_prefix > 128) {
+				g_warning ("Ignoring invalid static route prefix '%s'", tmp ? tmp : "NULL");
+				continue;
+			}
+			prefix = (guint32) tmp_prefix;
+		} else {
+			g_warning ("Ignoring static route %d with no prefix length", i);
+			continue;
+		}
+
+		route = nm_ip6_route_new ();
+		nm_ip6_route_set_dest (route, &network);
+		nm_ip6_route_set_prefix (route, prefix);
+
+		routes = g_slist_append (routes, route);
+	}
+
+	if (routes) {
+		GSList *iter;
+
+		value = g_slice_new0 (GValue);
+		g_value_init (value, DBUS_TYPE_G_ARRAY_OF_IP6_ROUTE);
+		nm_utils_ip6_routes_to_gvalue (routes, value);
+
+		for (iter = routes; iter; iter = iter->next)
+			nm_ip6_route_unref (iter->data);
+		g_slist_free (routes);
+	}
+
+	return value;
+}
+
 /*
  * Environment variables passed back from 'openconnect':
  *
@@ -316,7 +454,7 @@ main (int argc, char *argv[])
 {
 	DBusGConnection *connection;
 	char *tmp;
-	GHashTable *config;
+	GHashTable *config, *ip4config, *ip6config;
 	GValue *val;
 	GError *err = NULL;
 	struct in_addr temp_addr;
@@ -337,76 +475,34 @@ main (int argc, char *argv[])
 	}
 
 	config = g_hash_table_new (g_str_hash, g_str_equal);
+	ip4config = g_hash_table_new (g_str_hash, g_str_equal);
+	ip6config = g_hash_table_new (g_str_hash, g_str_equal);
 
 	/* Gateway */
-	val = addr_to_gvalue (getenv ("VPNGATEWAY"));
+	val = addr4_to_gvalue (getenv ("VPNGATEWAY"));
 	if (!val)
 		val = addr6_to_gvalue (getenv ("VPNGATEWAY"));
 	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_GATEWAY, val);
+		g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_EXT_GATEWAY, val);
 	else
 		helper_failed (connection, "VPN Gateway");
 
 	/* Tunnel device */
 	val = str_to_gvalue (getenv ("TUNDEV"), FALSE);
 	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_TUNDEV, val);
+		g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_TUNDEV, val);
 	else
 		helper_failed (connection, "Tunnel Device");
 
-	/* IP address */
-	val = addr_to_gvalue (getenv ("INTERNAL_IP4_ADDRESS"));
+	/* Banner */
+	val = str_to_gvalue (getenv ("CISCO_BANNER"), TRUE);
 	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_ADDRESS, val);
-	else
-		helper_failed (connection, "IP4 Address");
-
-	/* PTP address; for openconnect PTP address == internal IP4 address */
-	val = addr_to_gvalue (getenv ("INTERNAL_IP4_ADDRESS"));
-	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_PTP, val);
-	else
-		helper_failed (connection, "IP4 PTP Address");
-
-	/* Netmask */
-	tmp = getenv ("INTERNAL_IP4_NETMASK");
-	if (tmp && inet_pton (AF_INET, tmp, &temp_addr) > 0) {
-		GValue *value;
-
-		value = g_slice_new0 (GValue);
-		g_value_init (value, G_TYPE_UINT);
-		g_value_set_uint (value, nm_utils_ip4_netmask_to_prefix (temp_addr.s_addr));
-
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_PREFIX, value);
-	}
-
-	/* DNS */
-	val = addr_list_to_gvalue (getenv ("INTERNAL_IP4_DNS"));
-	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_DNS, val);
-
-	/* WINS servers */
-	val = addr_list_to_gvalue (getenv ("INTERNAL_IP4_NBNS"));
-	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_NBNS, val);
+		g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_BANNER, val);
 
 	/* Default domain */
 	val = str_to_gvalue (getenv ("CISCO_DEF_DOMAIN"), TRUE);
 	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_DOMAIN, val);
-
-	/* Routes */
-	val = get_routes ();
-	if (val) {
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_ROUTES, val);
-		/* If routes-to-include were provided, that means no default route */
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_NEVER_DEFAULT,
-		                     bool_to_gvalue (TRUE));
-	}
-	/* Banner */
-	val = str_to_gvalue (getenv ("CISCO_BANNER"), TRUE);
-	if (val)
-		g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_BANNER, val);
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_DOMAIN, val);
 
 	/* MTU  */
 	tmp = getenv ("INTERNAL_IP4_MTU");
@@ -419,12 +515,105 @@ main (int argc, char *argv[])
 			g_warning ("Ignoring invalid tunnel MTU '%s'", tmp);
 		} else {
 			val = uint_to_gvalue ((guint32) mtu);
-			g_hash_table_insert (config, NM_VPN_PLUGIN_IP4_CONFIG_MTU, val);
+			g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_MTU, val);
 		}
 	}
 
+	/* IPv4 address */
+	val = addr4_to_gvalue (getenv ("INTERNAL_IP4_ADDRESS"));
+	if (val)
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_ADDRESS, val);
+	else
+		helper_failed (connection, "IP4 Address");
+
+	/* IPv4 PTP address; for openconnect PTP address == internal IPv4 address */
+	val = addr4_to_gvalue (getenv ("INTERNAL_IP4_ADDRESS"));
+	if (val)
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_PTP, val);
+	else
+		helper_failed (connection, "IP4 PTP Address");
+
+	/* IPv4 Netmask */
+	tmp = getenv ("INTERNAL_IP4_NETMASK");
+	if (tmp && inet_pton (AF_INET, tmp, &temp_addr) > 0) {
+		val = uint_to_gvalue (nm_utils_ip4_netmask_to_prefix (temp_addr.s_addr));
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_PREFIX, val);
+	}
+
+	/* DNS */
+	val = addr4_list_to_gvalue (getenv ("INTERNAL_IP4_DNS"));
+	if (val)
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_DNS, val);
+
+	/* WINS servers */
+	val = addr4_list_to_gvalue (getenv ("INTERNAL_IP4_NBNS"));
+	if (val)
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_NBNS, val);
+
+	/* Routes */
+	val = get_ip4_routes ();
+	if (val) {
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_ROUTES, val);
+		/* If routes-to-include were provided, that means no default route */
+		g_hash_table_insert (ip4config, NM_VPN_PLUGIN_IP4_CONFIG_NEVER_DEFAULT,
+		                     bool_to_gvalue (TRUE));
+	}
+
+	/* IPv6 address */
+	val = addr6_to_gvalue (getenv ("INTERNAL_IP6_ADDRESS"));
+	if (val)
+		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_ADDRESS, val);
+	else
+		helper_failed (connection, "IP6 Address");
+
+	/* IPv6 PTP address; for openconnect PTP address == internal IPv6 address */
+	val = addr6_to_gvalue (getenv ("INTERNAL_IP6_ADDRESS"));
+	if (val)
+		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_PTP, val);
+	else
+		helper_failed (connection, "IP6 PTP Address");
+
+	/* IPv6 Netmask */
+	tmp = getenv ("INTERNAL_IP6_NETMASK");
+	if (tmp)
+		tmp = strchr (tmp, '/');
+	if (tmp) {
+		val = uint_to_gvalue (strtol (tmp + 1, NULL, 10));
+		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_PREFIX, val);
+	}
+
+	/* DNS */
+	val = addr6_list_to_gvalue (getenv ("INTERNAL_IP6_DNS"));
+	if (val)
+		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_DNS, val);
+
+	/* Routes */
+	val = get_ip6_routes ();
+	if (val) {
+		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_ROUTES, val);
+		/* If routes-to-include were provided, that means no default route */
+		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_NEVER_DEFAULT,
+		                     bool_to_gvalue (TRUE));
+	}
+
+	if (g_hash_table_size (ip4config)) {
+		g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_HAS_IP4,
+							 bool_to_gvalue (TRUE));
+	} else {
+		g_hash_table_destroy (ip4config);
+		ip4config = NULL;
+	}
+
+	if (g_hash_table_size (ip6config)) {
+		g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_HAS_IP6,
+							 bool_to_gvalue (TRUE));
+	} else {
+		g_hash_table_destroy (ip6config);
+		ip6config = NULL;
+	}
+
 	/* Send the config info to nm-openconnect-service */
-	send_ip4_config (connection, config);
+	send_config (connection, config, ip4config, ip6config);
 
 	exit (0);
 }
