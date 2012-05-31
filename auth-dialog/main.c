@@ -915,23 +915,20 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 
 	xmlconfig = g_hash_table_lookup (secrets, "xmlconfig");
 	if (xmlconfig) {
+		GChecksum *sha1;
 		gchar *config_str;
 		gsize config_len;
-		unsigned char sha1[SHA_DIGEST_LENGTH];
-		char sha1_text[SHA_DIGEST_LENGTH * 2];
-		EVP_MD_CTX c;
-		int i;
+		const char *sha1_text;
 
 		config_str = (gchar *)g_base64_decode (xmlconfig, &config_len);
 
-		EVP_MD_CTX_init (&c);
-		EVP_Digest (config_str, config_len, sha1, NULL, EVP_sha1(), NULL);
-		EVP_MD_CTX_cleanup (&c);
+		sha1 = g_checksum_new (G_CHECKSUM_SHA1);
+		g_checksum_update (sha1, (gpointer) config_str, config_len);
+		sha1_text = g_checksum_get_string(sha1);
 
-		for (i = 0; i < SHA_DIGEST_LENGTH; i++)
-			sprintf (&sha1_text[i*2], "%02x", sha1[i]);
-
-		openconnect_set_xmlsha1 (vpninfo, sha1_text, sizeof(sha1_text));
+		openconnect_set_xmlsha1 (vpninfo, (char *)sha1_text, strlen(sha1_text) + 1);
+		g_checksum_free(sha1);
+		
 		parse_xmlconfig (config_str);
 	}
 
