@@ -89,7 +89,7 @@ if test x"$with_gnome" != xno; then
 	AC_SUBST(GCONF_LIBS)
 
 	if test x"$with_authdlg" != xno; then
-		PKG_CHECK_MODULES(OPENCONNECT, openconnect)
+		PKG_CHECK_MODULES(OPENCONNECT, openconnect >= 3.02)
 		AC_SUBST(OPENCONNECT_CFLAGS)
 		AC_SUBST(OPENCONNECT_LIBS)
 	fi

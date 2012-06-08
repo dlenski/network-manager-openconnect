@@ -48,6 +48,10 @@
 
 #include "openconnect.h"
 
+#if OPENCONNECT_API_VERSION_MAJOR == 1
+#define openconnect_vpninfo_new openconnect_vpninfo_new_with_cbdata
+#define openconnect_init_ssl openconnect_init_openssl
+#endif
 
 #ifndef OPENCONNECT_CHECK_VER
 #define OPENCONNECT_CHECK_VER(x,y) 0
@@ -606,10 +610,9 @@ static gboolean ui_form (struct oc_auth_form *form)
 	return ui_show(ui_data);
 }
 
-static int nm_process_auth_form (struct openconnect_info *vpninfo,
-				 struct oc_auth_form *form)
+static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 {
-	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+	auth_ui_data *ui_data = cbdata;
 	int response;
 
 	g_idle_add((GSourceFunc)ui_form, form);
@@ -751,16 +754,16 @@ static gboolean user_validate_cert(cert_data *data)
 }
 
 /* runs in worker thread */
-static int validate_peer_cert(struct openconnect_info *vpninfo,
+static int validate_peer_cert(void *cbdata,
 			      OPENCONNECT_X509 *peer_cert, const char *reason)
 {
-	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+	auth_ui_data *ui_data = cbdata;
 	char fingerprint[41];
 	char *certs_data;
 	int ret = 0;
 	cert_data *data;
 
-	ret = openconnect_get_cert_sha1(vpninfo, peer_cert, fingerprint);
+	ret = openconnect_get_cert_sha1(ui_data->vpninfo, peer_cert, fingerprint);
 	if (ret)
 		return ret;
 
@@ -995,9 +998,9 @@ static void populate_vpnhost_combo(auth_ui_data *ui_data)
 	}
 }
 
-static int write_new_config(struct openconnect_info *vpninfo, char *buf, int buflen)
+static int write_new_config(void *cbdata, char *buf, int buflen)
 {
-	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+	auth_ui_data *ui_data = cbdata;
 	g_hash_table_insert (ui_data->secrets, g_strdup ("xmlconfig"),
 			     g_base64_encode ((guchar *)buf, buflen));
 
@@ -1057,7 +1060,7 @@ static gboolean write_notice_real(char *message)
 }
 
 /* runs in worker thread */
-static void write_progress(struct openconnect_info *info, int level, const char *fmt, ...)
+static void write_progress(void *cbdata, int level, const char *fmt, ...)
 {
 	va_list args;
 	char *msg;
@@ -1453,8 +1456,9 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	g_unix_set_fd_nonblocking(ui_data->cancel_pipes[1], TRUE, NULL);
 
 	ui_data->vpninfo = (void *)openconnect_vpninfo_new("OpenConnect VPN Agent (NetworkManager)",
-						   validate_peer_cert, write_new_config,
-						   nm_process_auth_form, write_progress);
+							   validate_peer_cert, write_new_config,
+							   nm_process_auth_form, write_progress,
+							   ui_data);
 
 #if OPENCONNECT_CHECK_VER(1,4)
 	openconnect_set_cancel_fd (ui_data->vpninfo, ui_data->cancel_pipes[0]);
@@ -1580,7 +1584,7 @@ int main (int argc, char **argv)
 #ifdef OPENCONNECT_OPENSSL
 	init_openssl_ui();
 #endif
-	openconnect_init_openssl();
+	openconnect_init_ssl();
 
 	if (get_autoconnect (secrets))
 		queue_connect_host(_ui_data);
