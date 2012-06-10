@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager 0.9.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-19 13:27+0200\n"
-"PO-Revision-Date: 2011-07-19 13:29+0200\n"
+"POT-Creation-Date: 2012-06-10 19:08+0200\n"
+"PO-Revision-Date: 2012-06-10 19:09+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -18,7 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../auth-dialog/main.c:636
+#: ../auth-dialog/main.c:670
+#, c-format
+msgid "Connect to VPN '%s'"
+msgstr "Koble til VPN «%s»"
+
+#: ../auth-dialog/main.c:672
+msgid "Connect to VPN"
+msgstr "Koble til VPN"
+
+#: ../auth-dialog/main.c:715
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -29,28 +38,27 @@ msgstr ""
 "Årsak: %s\n"
 "Vil du godta det?"
 
-#: ../auth-dialog/main.c:1212
+#: ../auth-dialog/main.c:1315
 msgid "VPN host"
 msgstr "VPN-vert"
 
-#: ../auth-dialog/main.c:1232
+#: ../auth-dialog/main.c:1335
 msgid "Automatically start connecting next time"
 msgstr "Start tilkobling automatisk neste gang"
 
-#: ../auth-dialog/main.c:1249
-#, fuzzy
+#: ../auth-dialog/main.c:1356
 msgid "Select a host to fetch the login form"
-msgstr "Velg en vert å hente innlogging fra"
+msgstr "Velg en vert å hente innloggingsskjema fra"
 
-#: ../auth-dialog/main.c:1254
+#: ../auth-dialog/main.c:1361
 msgid "Contacting host, please wait..."
 msgstr "Kontakter vert, vennligst vent …"
 
-#: ../auth-dialog/main.c:1266
+#: ../auth-dialog/main.c:1381
 msgid "_Login"
-msgstr ""
+msgstr "_Login"
 
-#: ../auth-dialog/main.c:1280
+#: ../auth-dialog/main.c:1395
 msgid "Log"
 msgstr "Logg"
 
@@ -79,85 +87,85 @@ msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Kompatibel med Cisco AnyConnect SSL-VPN."
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Autentisering med sertifikat</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>Generelt</b>"
 
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Tillat Cisco Secure Desktop _trojaner"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "CSD _Wrapper Script:"
-msgstr "Skript for inpakking av _CSD:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "Private _Key:"
-msgstr "Privat nø_kkel:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "Select A File"
 msgstr "Velg en fil"
 
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Use _FSID for key passphrase"
-msgstr "Bruk _FSID for nøkkelpassord"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "_CA Certificate:"
-msgstr "_CA-sertifikat:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "_Gateway:"
 msgstr "_Gateway:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "_Proxy:"
 msgstr "_Proxy:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:11
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_CA Certificate:"
+msgstr "_CA-sertifikat:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Tillat Cisco Secure Desktop _trojaner"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Skript for inpakking av _CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Autentisering med sertifikat</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_User Certificate:"
 msgstr "Br_ukersertifikat:"
 
-#: ../src/nm-openconnect-service.c:139
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "Privat nø_kkel:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Bruk _FSID for nøkkelpassord"
+
+#: ../src/nm-openconnect-service.c:142
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr ""
 
-#: ../src/nm-openconnect-service.c:149
+#: ../src/nm-openconnect-service.c:152
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr ""
 
-#: ../src/nm-openconnect-service.c:156
+#: ../src/nm-openconnect-service.c:159
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr ""
 
-#: ../src/nm-openconnect-service.c:169
+#: ../src/nm-openconnect-service.c:172
 #, c-format
 msgid "property '%s' invalid or not supported"
 msgstr ""
 
-#: ../src/nm-openconnect-service.c:185
+#: ../src/nm-openconnect-service.c:188
 msgid "No VPN configuration options."
 msgstr ""
 
-#: ../src/nm-openconnect-service.c:203
+#: ../src/nm-openconnect-service.c:206
 msgid "No VPN secrets!"
-msgstr ""
+msgstr "Ingen VPN-hemmeligheter!"
 
-#: ../src/nm-openconnect-service.c:283
+#: ../src/nm-openconnect-service.c:374
 msgid "Could not find openconnect binary."
 msgstr ""
 
-#: ../src/nm-openconnect-service.c:295
+#: ../src/nm-openconnect-service.c:386
 msgid "No VPN gateway specified."
 msgstr ""
 
-#: ../src/nm-openconnect-service.c:305
+#: ../src/nm-openconnect-service.c:396
 msgid "No WebVPN cookie provided."
 msgstr ""
