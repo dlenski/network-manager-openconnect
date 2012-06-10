@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: NetworkManager 0.9.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-10 19:08+0200\n"
-"PO-Revision-Date: 2012-06-10 19:09+0200\n"
+"PO-Revision-Date: 2012-06-10 19:13+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -56,7 +56,7 @@ msgstr "Kontakter vert, vennligst vent …"
 
 #: ../auth-dialog/main.c:1381
 msgid "_Login"
-msgstr "_Login"
+msgstr "_Logg inn"
 
 #: ../auth-dialog/main.c:1395
 msgid "Log"
@@ -64,15 +64,15 @@ msgstr "Logg"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
-msgstr "Velg et Certificate Authority-sertifikat ..."
+msgstr "Velg et Certificate Authority-sertifikat …"
 
 #: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
-msgstr "Velg ditt personlige sertifikat ..."
+msgstr "Velg ditt personlige sertifikat …"
 
 #: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
-msgstr "Velg din private nøkkel ..."
+msgstr "Velg din private nøkkel …"
 
 #: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: ../src/nm-openconnect-service.c:188
 msgid "No VPN configuration options."
-msgstr ""
+msgstr "Ingen konfigurasjonsvalg for VPN."
 
 #: ../src/nm-openconnect-service.c:206
 msgid "No VPN secrets!"
@@ -160,12 +160,12 @@ msgstr "Ingen VPN-hemmeligheter!"
 
 #: ../src/nm-openconnect-service.c:374
 msgid "Could not find openconnect binary."
-msgstr ""
+msgstr "Fant ikke den kjørbare filen openconnect."
 
 #: ../src/nm-openconnect-service.c:386
 msgid "No VPN gateway specified."
-msgstr ""
+msgstr "Ingen VPN-portner oppgitt."
 
 #: ../src/nm-openconnect-service.c:396
 msgid "No WebVPN cookie provided."
-msgstr ""
+msgstr "Ingen WebVPN-informasjonskapsel gitt."
