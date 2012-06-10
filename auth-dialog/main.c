@@ -667,9 +667,9 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 static char* get_title(const char *vpn_name)
 {
 	if (vpn_name)
-		return g_strdup_printf("Connect to VPN '%s'", vpn_name);
+		return g_strdup_printf(_("Connect to VPN '%s'"), vpn_name);
 	else
-		return g_strdup("Connect to VPN");
+		return g_strdup(_("Connect to VPN"));
 }
 
 typedef struct cert_data {
