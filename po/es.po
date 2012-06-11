@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2008, 2010.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-03-31 11:34+0000\n"
-"PO-Revision-Date: 2011-04-15 10:52+0200\n"
+"POT-Creation-Date: 2012-06-10 17:06+0000\n"
+"PO-Revision-Date: 2012-06-11 12:08+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,16 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../auth-dialog/main.c:658
+#: ../auth-dialog/main.c:670
+#, c-format
+msgid "Connect to VPN '%s'"
+msgstr "Conectarse a la VPN «%s»"
+
+#: ../auth-dialog/main.c:672
+msgid "Connect to VPN"
+msgstr "Conectar a la VPN"
+
+#: ../auth-dialog/main.c:715
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -30,27 +39,27 @@ msgstr ""
 "Motivo: %s\n"
 "¿Quiere aceptarlo?"
 
-#: ../auth-dialog/main.c:1317
+#: ../auth-dialog/main.c:1315
 msgid "VPN host"
 msgstr "Servidor VPN"
 
-#: ../auth-dialog/main.c:1337
+#: ../auth-dialog/main.c:1335
 msgid "Automatically start connecting next time"
 msgstr "Iniciar la conexión automáticamente la próxima vez"
 
-#: ../auth-dialog/main.c:1354
+#: ../auth-dialog/main.c:1356
 msgid "Select a host to fetch the login form"
 msgstr "Seleccionar un servidor para obtener el formulario de inicio de sesión"
 
-#: ../auth-dialog/main.c:1359
+#: ../auth-dialog/main.c:1361
 msgid "Contacting host, please wait..."
 msgstr "Conectando al servidor, espere…"
 
-#: ../auth-dialog/main.c:1371
+#: ../auth-dialog/main.c:1381
 msgid "_Login"
 msgstr "_Entrar"
 
-#: ../auth-dialog/main.c:1385
+#: ../auth-dialog/main.c:1395
 msgid "Log"
 msgstr "Registro"
 
@@ -79,60 +88,60 @@ msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Compatible con VPN Cisco AnyConnect SSL."
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Certificado de autenticación</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>General</b>"
 
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Permitir el _troyano de escritorio Cisco Secure"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "CSD _Wrapper Script:"
-msgstr "Script CSD _envolvente:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "Private _Key:"
-msgstr "Clave pri_vada:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "Select A File"
 msgstr "Seleccione un archivo"
 
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Use _FSID for key passphrase"
-msgstr "Usar _FSID para la frase de paso de la clave"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "_CA Certificate:"
-msgstr "Certificado _CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "_Gateway:"
 msgstr "_Pasarela:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "_Proxy:"
 msgstr "_Proxy:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:11
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_CA Certificate:"
+msgstr "Certificado _CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Permitir el _troyano de escritorio Cisco Secure"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Script CSD _envolvente:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Certificado de autenticación</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_User Certificate:"
 msgstr "Certificado del _usuario:"
 
-#: ../src/nm-openconnect-service.c:144
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "Clave pri_vada:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Usar _FSID para la frase de paso de la clave"
+
+#: ../src/nm-openconnect-service.c:142
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr "propiedad entera «%s» no válida o fuera de rango [%d -> %d]"
 
-#: ../src/nm-openconnect-service.c:154
+#: ../src/nm-openconnect-service.c:152
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr "propiedad booleana «%s» no válida (no es «sí» o «no»)"
 
-#: ../src/nm-openconnect-service.c:161
+#: ../src/nm-openconnect-service.c:159
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "propiedad «%s» de tipo %s no controlada"
@@ -150,15 +159,15 @@ msgstr "No hay opciones de configuración de VPN."
 msgid "No VPN secrets!"
 msgstr "No hay secretos VPN."
 
-#: ../src/nm-openconnect-service.c:286
+#: ../src/nm-openconnect-service.c:374
 msgid "Could not find openconnect binary."
 msgstr "No se pudo encontrar el binario «openconnect»."
 
-#: ../src/nm-openconnect-service.c:298
+#: ../src/nm-openconnect-service.c:386
 msgid "No VPN gateway specified."
 msgstr "No se especificó ninguna puerta de enlace."
 
-#: ../src/nm-openconnect-service.c:308
+#: ../src/nm-openconnect-service.c:396
 msgid "No WebVPN cookie provided."
 msgstr "No se proporcionó una cookie WebVPN."
 
