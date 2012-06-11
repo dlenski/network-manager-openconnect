@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-05 21:17+0200\n"
-"PO-Revision-Date: 2011-04-05 21:18+0200\n"
+"POT-Creation-Date: 2012-06-12 00:59+0200\n"
+"PO-Revision-Date: 2011-06-12 01:01+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -23,7 +23,16 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../auth-dialog/main.c:658
+#: ../auth-dialog/main.c:670
+#, c-format
+msgid "Connect to VPN '%s'"
+msgstr "Połącz z siecią VPN \"%s\""
+
+#: ../auth-dialog/main.c:672
+msgid "Connect to VPN"
+msgstr "Połącz z siecią VPN"
+
+#: ../auth-dialog/main.c:715
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -34,27 +43,27 @@ msgstr ""
 "Przyczyna: %s\n"
 "Zaakceptować go?"
 
-#: ../auth-dialog/main.c:1317
+#: ../auth-dialog/main.c:1315
 msgid "VPN host"
 msgstr "Komputer VPN"
 
-#: ../auth-dialog/main.c:1337
+#: ../auth-dialog/main.c:1335
 msgid "Automatically start connecting next time"
 msgstr "Automatyczne rozpoczynanie połączenie następnym razem"
 
-#: ../auth-dialog/main.c:1354
+#: ../auth-dialog/main.c:1356
 msgid "Select a host to fetch the login form"
 msgstr "Wybór komputera, z którego pobrać login"
 
-#: ../auth-dialog/main.c:1359
+#: ../auth-dialog/main.c:1361
 msgid "Contacting host, please wait..."
 msgstr "Łączenie się z komputerem, proszę czekać..."
 
-#: ../auth-dialog/main.c:1371
+#: ../auth-dialog/main.c:1381
 msgid "_Login"
 msgstr "_Login"
 
-#: ../auth-dialog/main.c:1385
+#: ../auth-dialog/main.c:1395
 msgid "Log"
 msgstr "Dziennik"
 
@@ -83,64 +92,64 @@ msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Zgodny z VPN Cisco AnyConnect SSL."
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Uwierzytelnianie certyfikatu</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>Ogólne</b>"
 
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "CSD _Wrapper Script:"
-msgstr "Skrypt _wrappera CSD:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "Private _Key:"
-msgstr "_Klucz prywatny:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "Select A File"
 msgstr "Wybór pliku"
 
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Use _FSID for key passphrase"
-msgstr "Użycie _FSID dla hasła klucza"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "_CA Certificate:"
-msgstr "Certyfikat _CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "_Gateway:"
 msgstr "_Brama:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "_Proxy:"
 msgstr "_Pośrednik:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:11
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_CA Certificate:"
+msgstr "Certyfikat _CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Skrypt _wrappera CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Uwierzytelnianie certyfikatu</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_User Certificate:"
 msgstr "Certyfikat _użytkownika:"
 
-#: ../src/nm-openconnect-service.c:144
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "_Klucz prywatny:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Użycie _FSID dla hasła klucza"
+
+#: ../src/nm-openconnect-service.c:142
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr ""
 "nieprawidłowa własność liczby całkowitej \"%s\" lub jest poza zakresem [%d -"
 "> %d]"
 
-#: ../src/nm-openconnect-service.c:154
+#: ../src/nm-openconnect-service.c:152
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr ""
 "nieprawidłowa własność zmiennej logicznej \"%s\" (nie wynosi \"yes\" lub \"no"
 "\")"
 
-#: ../src/nm-openconnect-service.c:161
+#: ../src/nm-openconnect-service.c:159
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "nieobsługiwana własność \"%s\" typu \"%s\""
@@ -158,14 +167,14 @@ msgstr "Brak opcji konfiguracji VPN."
 msgid "No VPN secrets!"
 msgstr "Brak haseł VPN."
 
-#: ../src/nm-openconnect-service.c:286
+#: ../src/nm-openconnect-service.c:374
 msgid "Could not find openconnect binary."
 msgstr "Nie można odnaleźć pliku binarnego openconnect."
 
-#: ../src/nm-openconnect-service.c:298
+#: ../src/nm-openconnect-service.c:386
 msgid "No VPN gateway specified."
 msgstr "Nie podano bramy VPN."
 
-#: ../src/nm-openconnect-service.c:308
+#: ../src/nm-openconnect-service.c:396
 msgid "No WebVPN cookie provided."
 msgstr "Nie podano ciasteczka WebVPN."
