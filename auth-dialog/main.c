@@ -44,6 +44,8 @@
 
 #include <nm-vpn-plugin-utils.h>
 
+#include <gnome-keyring.h>
+
 #include "src/nm-openconnect-service.h"
 
 #include "openconnect.h"
@@ -67,6 +69,20 @@
 #include <openssl/bio.h>
 #include <openssl/ui.h>
 #endif
+
+static const GnomeKeyringPasswordSchema OPENCONNECT_SCHEMA_DEF = {
+  GNOME_KEYRING_ITEM_GENERIC_SECRET,
+  {
+    {"host", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
+    {"auth_id", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
+    {"label", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
+    {NULL, 0}
+  }
+};
+
+const GnomeKeyringPasswordSchema *OPENCONNECT_SCHEMA = &OPENCONNECT_SCHEMA_DEF;
+
+static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpointer data);
 
 static char *lasthost;
 
@@ -223,6 +239,7 @@ static void ssl_box_clear(auth_ui_data *ui_data)
 
 typedef struct ui_fragment_data {
 	GtkWidget *widget;
+	GtkWidget *entry;
 	auth_ui_data *ui_data;
 #ifdef OPENCONNECT_OPENSSL
 	UI_STRING *uis;
@@ -347,6 +364,7 @@ static gboolean ui_write_prompt (ui_fragment_data *data)
 
 	entry = gtk_entry_new();
 	gtk_box_pack_end(GTK_BOX(hbox), entry, FALSE, FALSE, 0);
+	data->entry = entry;
 	if (!visible)
 		gtk_entry_set_visibility(GTK_ENTRY(entry), FALSE);
 	if (data->entry_text)
@@ -552,6 +570,19 @@ static char *find_form_answer(GHashTable *secrets, struct oc_auth_form *form,
 	return result;
 }
 
+/* Callback which is called when we got a reply from gnome-keyring for any
+ * password field. Updates the contents of the password field unless the user
+ * entered anything in the meantime. */
+static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpointer userdata)
+{
+	ui_fragment_data *data = (ui_fragment_data*)userdata;
+	if (data->entry) {
+		if (g_ascii_strncasecmp("", gtk_entry_get_text(GTK_ENTRY(data->entry)), 0) == 0)
+			gtk_entry_set_text(GTK_ENTRY(data->entry), string);
+	} else
+		data->entry_text = g_strdup (string);
+}
+
 /* This part for processing forms from openconnect directly, rather than
    through the SSL UI abstraction (which doesn't allow 'select' options) */
 
@@ -593,6 +624,21 @@ static gboolean ui_form (struct oc_auth_form *form)
 			if (opt->type != OC_FORM_OPT_PASSWORD)
 				data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 									      form, opt));
+			else {
+				char *hostname;
+				hostname = openconnect_get_hostname(ui_data->vpninfo);
+				gnome_keyring_find_password(
+						OPENCONNECT_SCHEMA,
+						got_keyring_pw,
+						data,
+						NULL,
+						"host", hostname,
+						"auth_id", form->auth_id,
+						"label", data->opt->name,
+						NULL
+						);
+			}
+
 
 			ui_write_prompt(data);
 		} else if (opt->type == OC_FORM_OPT_SELECT) {
@@ -648,6 +694,28 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 					keyname = g_strdup_printf("form:%s:%s", form->auth_id, data->opt->name);
 					g_hash_table_insert (ui_data->success_secrets,
 							     keyname, g_strdup (data->entry_text));
+				}
+
+				if (data->opt->type == OC_FORM_OPT_PASSWORD) {
+					/* store the password in gnome-keyring */
+					char *description;
+					char *hostname;
+					//int result;
+					description = g_strdup_printf(_("OpenConnect: %s: %s:%s"), ui_data->vpn_name, form->auth_id, data->opt->name);
+					hostname = openconnect_get_hostname(ui_data->vpninfo);
+					gnome_keyring_store_password_sync (
+							OPENCONNECT_SCHEMA,
+							GNOME_KEYRING_DEFAULT,
+							description,
+							data->entry_text, /* password */
+							"host", hostname,
+							"auth_id", form->auth_id,
+							"label", data->opt->name,
+							NULL
+							);
+					// TODO: err
+					g_free(description);
+
 				}
 			}
 			g_slice_free (ui_fragment_data, data);
