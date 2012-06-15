@@ -73,7 +73,7 @@
 static const GnomeKeyringPasswordSchema OPENCONNECT_SCHEMA_DEF = {
   GNOME_KEYRING_ITEM_GENERIC_SECRET,
   {
-    {"host", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
+    {"vpn_uuid", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
     {"auth_id", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
     {"label", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
     {NULL, 0}
@@ -109,6 +109,7 @@ struct gconf_key {
 
 typedef struct auth_ui_data {
 	char *vpn_name;
+	char *vpn_uuid;
 	GHashTable *options;
 	GHashTable *secrets;
 	GHashTable *success_secrets;
@@ -633,14 +634,12 @@ static gboolean ui_form (struct oc_auth_form *form)
 				data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 									      form, opt));
 			else {
-				char *hostname;
-				hostname = openconnect_get_hostname(ui_data->vpninfo);
 				data->find_request = gnome_keyring_find_password(
 						OPENCONNECT_SCHEMA,
 						got_keyring_pw,
 						data,
 						NULL,
-						"host", hostname,
+						"vpn_uuid", ui_data->vpn_uuid,
 						"auth_id", form->auth_id,
 						"label", data->opt->name,
 						NULL
@@ -707,16 +706,14 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 				if (data->opt->type == OC_FORM_OPT_PASSWORD) {
 					/* store the password in gnome-keyring */
 					char *description;
-					char *hostname;
 					//int result;
 					description = g_strdup_printf(_("OpenConnect: %s: %s:%s"), ui_data->vpn_name, form->auth_id, data->opt->name);
-					hostname = openconnect_get_hostname(ui_data->vpninfo);
 					gnome_keyring_store_password_sync (
 							OPENCONNECT_SCHEMA,
 							GNOME_KEYRING_DEFAULT,
 							description,
 							data->entry_text, /* password */
-							"host", hostname,
+							"vpn_uuid", ui_data->vpn_uuid,
 							"auth_id", form->auth_id,
 							"label", data->opt->name,
 							NULL
@@ -1493,7 +1490,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	g_signal_connect(ui_data->log, "changed", G_CALLBACK(scroll_log), view);
 }
 
-static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTable *secrets)
+static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTable *secrets, char *vpn_uuid)
 {
 	auth_ui_data *ui_data;
 
@@ -1517,6 +1514,7 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	ui_data->cert_response_changed = g_cond_new();
 #endif
 	ui_data->vpn_name = vpn_name;
+	ui_data->vpn_uuid = vpn_uuid;
 	ui_data->options = options;
 	ui_data->secrets = secrets;
 	ui_data->success_secrets = g_hash_table_new_full (g_str_hash, g_str_equal,
@@ -1650,7 +1648,7 @@ int main (int argc, char **argv)
 #endif
 	gtk_init(0, NULL);
 
-	_ui_data = init_ui_data(vpn_name, options, secrets);
+	_ui_data = init_ui_data(vpn_name, options, secrets, vpn_uuid);
 	if (get_config(options, secrets, _ui_data->vpninfo)) {
 		fprintf(stderr, "Failed to find VPN UUID %s in gconf\n", vpn_uuid);
 		return 1;
