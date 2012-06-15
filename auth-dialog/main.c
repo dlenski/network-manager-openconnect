@@ -240,6 +240,7 @@ static void ssl_box_clear(auth_ui_data *ui_data)
 typedef struct ui_fragment_data {
 	GtkWidget *widget;
 	GtkWidget *entry;
+	gpointer find_request;
 	auth_ui_data *ui_data;
 #ifdef OPENCONNECT_OPENSSL
 	UI_STRING *uis;
@@ -528,6 +529,9 @@ static int ui_flush(UI* ui)
 		if (data->entry_text) {
 			UI_set_result(ui, data->uis, data->entry_text);
 		}
+		if (data->find_request) {
+			gnome_keyring_cancel_request(data->find_request);
+		}
 		g_slice_free (ui_fragment_data, data);
 	}
 	ui_data->form_grabbed = 0;
@@ -581,6 +585,10 @@ static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpoint
 			gtk_entry_set_text(GTK_ENTRY(data->entry), string);
 	} else
 		data->entry_text = g_strdup (string);
+
+	/* zero the find request so that we don’t attempt to cancel it when
+	 * closing the dialog */
+	data->find_request = NULL;
 }
 
 /* This part for processing forms from openconnect directly, rather than
@@ -627,7 +635,7 @@ static gboolean ui_form (struct oc_auth_form *form)
 			else {
 				char *hostname;
 				hostname = openconnect_get_hostname(ui_data->vpninfo);
-				gnome_keyring_find_password(
+				data->find_request = gnome_keyring_find_password(
 						OPENCONNECT_SCHEMA,
 						got_keyring_pw,
 						data,
