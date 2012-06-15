@@ -1140,6 +1140,23 @@ static void autocon_toggled(GtkWidget *widget)
 	g_hash_table_insert (ui_data->secrets, g_strdup ("autoconnect"), enabled);
 }
 
+/* gnome_keyring_delete_password() only deletes one matching password, so
+   keep doing it until it doesn't succeed. The ui_data is essentially
+   permanent anyway so no need to worry about its lifetime. */
+static void delete_next_password(GnomeKeyringResult result, gpointer data)
+{
+	auth_ui_data *ui_data = data;
+
+	if (result == GNOME_KEYRING_RESULT_OK) {
+		gnome_keyring_delete_password(OPENCONNECT_SCHEMA,
+					      delete_next_password,
+					      ui_data, NULL,
+					      "vpn_uuid", ui_data->vpn_uuid,
+					      NULL);
+	}		
+		
+}
+
 static void savepass_toggled(GtkWidget *widget)
 {
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
@@ -1147,9 +1164,14 @@ static void savepass_toggled(GtkWidget *widget)
 
 	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON(widget)))
 		enabled = g_strdup ("yes");
-	else
+	else {
 		enabled = g_strdup ("no");
-
+		gnome_keyring_delete_password(OPENCONNECT_SCHEMA,
+					      delete_next_password,
+					      ui_data, NULL,
+					      "vpn_uuid", ui_data->vpn_uuid,
+					      NULL);
+	}
 	g_hash_table_insert (ui_data->secrets, g_strdup ("save_passwords"), enabled);
 }
 
