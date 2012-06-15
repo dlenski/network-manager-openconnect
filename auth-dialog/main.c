@@ -622,11 +622,13 @@ static char *find_form_answer(GHashTable *secrets, struct oc_auth_form *form,
 static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpointer userdata)
 {
 	ui_fragment_data *data = (ui_fragment_data*)userdata;
-	if (data->entry) {
-		if (g_ascii_strncasecmp("", gtk_entry_get_text(GTK_ENTRY(data->entry)), 0) == 0)
-			gtk_entry_set_text(GTK_ENTRY(data->entry), string);
-	} else
-		data->entry_text = g_strdup (string);
+	if (string != NULL) {
+		if (data->entry) {
+			if (g_ascii_strncasecmp("", gtk_entry_get_text(GTK_ENTRY(data->entry)), 0) == 0)
+				gtk_entry_set_text(GTK_ENTRY(data->entry), string);
+		} else
+			data->entry_text = g_strdup (string);
+	}
 
 	/* zero the find request so that we don’t attempt to cancel it when
 	 * closing the dialog */
