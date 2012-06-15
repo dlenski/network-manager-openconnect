@@ -935,6 +935,16 @@ static gboolean get_autoconnect(GHashTable *secrets)
 	return FALSE;
 }
 
+static gboolean get_save_passwords(GHashTable *secrets)
+{
+	char *save = g_hash_table_lookup (secrets, "save_passwords");
+
+	if (save && !strcmp(save, "yes"))
+		return TRUE;
+
+	return FALSE;
+}
+
 static int parse_xmlconfig(gchar *xmlconfig)
 {
 	xmlDocPtr xml_doc;
@@ -1128,6 +1138,19 @@ static void autocon_toggled(GtkWidget *widget)
 	g_hash_table_insert (ui_data->secrets, g_strdup ("autoconnect"), enabled);
 }
 
+static void savepass_toggled(GtkWidget *widget)
+{
+	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+	gchar *enabled;
+
+	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON(widget)))
+		enabled = g_strdup ("yes");
+	else
+		enabled = g_strdup ("no");
+
+	g_hash_table_insert (ui_data->secrets, g_strdup ("save_passwords"), enabled);
+}
+
 static void scroll_log(GtkTextBuffer *log, GtkTextView *view)
 {
 	GtkTextMark *mark;
@@ -1252,11 +1275,11 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 			g_hash_table_insert (ui_data->secrets, key, value);
 		}
 
-		g_hash_table_foreach(
-			ui_data->success_passwords,
-			keyring_store_passwords,
-			NULL);
-
+		if (get_save_passwords(ui_data->secrets)) {
+			g_hash_table_foreach(ui_data->success_passwords,
+					     keyring_store_passwords,
+					     NULL);
+		}
 		ui_data->retval = 0;
 
 		gtk_main_quit();
@@ -1396,7 +1419,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 {
 	char *title;
 	GtkWidget *vbox, *hbox, *label, *frame, *image, *frame_box;
-	GtkWidget *exp, *scrolled, *view, *autocon;
+	GtkWidget *exp, *scrolled, *view, *autocon, *save_pass;
 
 	gtk_window_set_default_icon_name(GTK_STOCK_DIALOG_AUTHENTICATION);
 
@@ -1530,6 +1553,14 @@ static void build_main_dialog(auth_ui_data *ui_data)
 
 	ui_data->log = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
 	g_signal_connect(ui_data->log, "changed", G_CALLBACK(scroll_log), view);
+
+	save_pass = gtk_check_button_new_with_label(_("Save passwords"));
+	gtk_box_pack_start(GTK_BOX(vbox), save_pass, FALSE, FALSE, 0);
+	if (get_save_passwords (ui_data->secrets))
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(save_pass), 1);
+	g_signal_connect(save_pass, "toggled", G_CALLBACK(savepass_toggled), NULL);
+	gtk_widget_show(save_pass);
+
 }
 
 static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTable *secrets, char *vpn_uuid)
