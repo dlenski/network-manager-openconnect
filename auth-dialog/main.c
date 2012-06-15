@@ -107,12 +107,53 @@ struct gconf_key {
 	struct gconf_key *next;
 };
 
+/* This struct holds all information we need to add a password to
+ * gnome-keyring. It’s used in success_passwords. */
+struct keyring_password {
+	char *description;
+	char *password;
+	char *vpn_uuid;
+	char *auth_id;
+	char *label;
+};
+
+static void keyring_password_free(gpointer data);
+static void keyring_store_passwords(gpointer key, gpointer value, gpointer user_data);
+
+static void keyring_password_free(gpointer data)
+{
+	struct keyring_password *kp = (struct keyring_password*)data;
+	g_free(kp->description);
+	g_free(kp->password);
+	g_free(kp->vpn_uuid);
+	g_free(kp->auth_id);
+	g_free(kp->label);
+	g_free(kp);
+}
+
+static void keyring_store_passwords(gpointer key, gpointer value, gpointer user_data)
+{
+	struct keyring_password *kp = (struct keyring_password*)value;
+	gnome_keyring_store_password_sync (
+			OPENCONNECT_SCHEMA,
+			GNOME_KEYRING_DEFAULT,
+			kp->description,
+			kp->password,
+			"vpn_uuid", kp->vpn_uuid,
+			"auth_id", kp->auth_id,
+			"label", kp->label,
+			NULL
+			);
+}
+
+
 typedef struct auth_ui_data {
 	char *vpn_name;
 	char *vpn_uuid;
 	GHashTable *options;
 	GHashTable *secrets;
 	GHashTable *success_secrets;
+	GHashTable *success_passwords;
 	struct openconnect_info *vpninfo;
 	GtkWidget *dialog;
 	GtkWidget *combo;
@@ -705,22 +746,16 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 
 				if (data->opt->type == OC_FORM_OPT_PASSWORD) {
 					/* store the password in gnome-keyring */
-					char *description;
 					//int result;
-					description = g_strdup_printf(_("OpenConnect: %s: %s:%s"), ui_data->vpn_name, form->auth_id, data->opt->name);
-					gnome_keyring_store_password_sync (
-							OPENCONNECT_SCHEMA,
-							GNOME_KEYRING_DEFAULT,
-							description,
-							data->entry_text, /* password */
-							"vpn_uuid", ui_data->vpn_uuid,
-							"auth_id", form->auth_id,
-							"label", data->opt->name,
-							NULL
-							);
-					// TODO: err
-					g_free(description);
+					struct keyring_password *kp = g_new(struct keyring_password, 1);
+					kp->description = g_strdup_printf(_("OpenConnect: %s: %s:%s"), ui_data->vpn_name, form->auth_id, data->opt->name);
+					kp->password = g_strdup(data->entry_text);
+					kp->vpn_uuid = g_strdup(ui_data->vpn_uuid);
+					kp->auth_id = g_strdup(form->auth_id);
+					kp->label = g_strdup(data->opt->name);
 
+					g_hash_table_insert (ui_data->success_passwords,
+							g_strdup(kp->description), kp);
 				}
 			}
 			g_slice_free (ui_fragment_data, data);
@@ -1171,6 +1206,7 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 	if (ui_data->cancelled) {
 		/* user has chosen a new host, start from beginning */
 		g_hash_table_remove_all (ui_data->success_secrets);
+		g_hash_table_remove_all (ui_data->success_passwords);
 		connect_host(ui_data);
 		return FALSE;
 	}
@@ -1216,6 +1252,11 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 			g_hash_table_insert (ui_data->secrets, key, value);
 		}
 
+		g_hash_table_foreach(
+			ui_data->success_passwords,
+			keyring_store_passwords,
+			NULL);
+
 		ui_data->retval = 0;
 
 		gtk_main_quit();
@@ -1226,6 +1267,7 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 	}
 
 	g_hash_table_remove_all (ui_data->success_secrets);
+	g_hash_table_remove_all (ui_data->success_passwords);
 
 	return FALSE;
 }
@@ -1519,6 +1561,8 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	ui_data->secrets = secrets;
 	ui_data->success_secrets = g_hash_table_new_full (g_str_hash, g_str_equal,
 							  g_free, g_free);
+	ui_data->success_passwords = g_hash_table_new_full (g_str_hash, g_str_equal,
+							  g_free, keyring_password_free);
 	if (pipe(ui_data->cancel_pipes)) {
 		/* This should never happen, and the world is probably about
 		   to come crashing down around our ears. But attempt to cope
