@@ -412,10 +412,15 @@ static gboolean ui_write_prompt (ui_fragment_data *data)
 		gtk_entry_set_visibility(GTK_ENTRY(entry), FALSE);
 	if (data->entry_text)
 		gtk_entry_set_text(GTK_ENTRY(entry), data->entry_text);
+	/* If it's the first empty one, grab focus. Otherwise, if
+	   it's the first item of *any* kind, grab focus but don't
+	   admit it (so another empty entry can take focus_ */
 	if (!data->entry_text && !data->ui_data->form_grabbed) {
 		data->ui_data->form_grabbed = 1;
 		gtk_widget_grab_focus (entry);
-	}
+	} else if (g_queue_peek_tail(ui_data->form_entries) == data)
+		gtk_widget_grab_focus (entry);
+
 	g_signal_connect(G_OBJECT(entry), "changed", G_CALLBACK(entry_changed), data);
 	g_signal_connect(G_OBJECT(entry), "activate", G_CALLBACK(entry_activate_cb), ui_data);
 
