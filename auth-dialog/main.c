@@ -1558,6 +1558,14 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_widget_set_sensitive (ui_data->cancel_button, FALSE);
 	gtk_widget_show(ui_data->cancel_button);
 
+	save_pass = gtk_check_button_new_with_label(_("Save passwords"));
+	gtk_box_pack_start(GTK_BOX(hbox), save_pass, FALSE, FALSE, 0);
+	if (get_save_passwords (ui_data->secrets))
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(save_pass), 1);
+	g_signal_connect(save_pass, "toggled", G_CALLBACK(savepass_toggled), NULL);
+	gtk_widget_show(save_pass);
+
+
 	exp = gtk_expander_new(_("Log"));
 	gtk_box_pack_end(GTK_BOX(vbox), exp, FALSE, FALSE, 0);
 	gtk_widget_show(exp);
@@ -1581,14 +1589,6 @@ static void build_main_dialog(auth_ui_data *ui_data)
 
 	ui_data->log = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
 	g_signal_connect(ui_data->log, "changed", G_CALLBACK(scroll_log), view);
-
-	save_pass = gtk_check_button_new_with_label(_("Save passwords"));
-	gtk_box_pack_start(GTK_BOX(vbox), save_pass, FALSE, FALSE, 0);
-	if (get_save_passwords (ui_data->secrets))
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(save_pass), 1);
-	g_signal_connect(save_pass, "toggled", G_CALLBACK(savepass_toggled), NULL);
-	gtk_widget_show(save_pass);
-
 }
 
 static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTable *secrets, char *vpn_uuid)
