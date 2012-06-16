@@ -629,8 +629,12 @@ static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpoint
 	ui_fragment_data *data = (ui_fragment_data*)userdata;
 	if (string != NULL) {
 		if (data->entry) {
-			if (g_ascii_strncasecmp("", gtk_entry_get_text(GTK_ENTRY(data->entry)), 0) == 0)
+			if (!g_ascii_strcasecmp("",
+						gtk_entry_get_text(GTK_ENTRY(data->entry)))) {
 				gtk_entry_set_text(GTK_ENTRY(data->entry), string);
+				if (gtk_widget_has_focus(data->entry))
+					gtk_editable_select_region(GTK_EDITABLE(data->entry), 0, -1);
+			}
 		} else
 			data->entry_text = g_strdup (string);
 	}
