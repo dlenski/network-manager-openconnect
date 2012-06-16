@@ -735,6 +735,10 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 		while (!g_queue_is_empty (ui_data->form_entries)) {
 			ui_fragment_data *data;
 			data = g_queue_pop_tail (ui_data->form_entries);
+
+			if (data->find_request)
+				gnome_keyring_cancel_request(data->find_request);
+
 			if (data->entry_text) {
 				data->opt->value = g_strdup (data->entry_text);
 
@@ -764,7 +768,7 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 		}
 	}
 
-
+	ui_data->form_grabbed = 0;
 	g_mutex_unlock(ui_data->form_mutex);
 	
 	/* -1 = cancel,
