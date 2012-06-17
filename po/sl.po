@@ -21,7 +21,21 @@ msgstr ""
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../auth-dialog/main.c:658
+#: ../auth-dialog/main.c:753
+#, fuzzy, c-format
+msgid "OpenConnect: %s: %s:%s"
+msgstr "OdprtaPovezava: %s: %s:%s"
+
+#: ../auth-dialog/main.c:780
+#, c-format
+msgid "Connect to VPN '%s'"
+msgstr "Poveži v omrežje VPN '%s'"
+
+#: ../auth-dialog/main.c:782
+msgid "Connect to VPN"
+msgstr "Poveži v omrežje VPN"
+
+#: ../auth-dialog/main.c:825
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -32,29 +46,33 @@ msgstr ""
 "Vzrokn: %s\n"
 "Ali želite potrdilo vseeno sprejeti?"
 
-#: ../auth-dialog/main.c:1317
+#: ../auth-dialog/main.c:1455
 msgid "VPN host"
 msgstr "Gostitelj VPN"
 
-#: ../auth-dialog/main.c:1337
+#: ../auth-dialog/main.c:1475
 msgid "Automatically start connecting next time"
 msgstr "Naslednjič samodejno poveži"
 
-#: ../auth-dialog/main.c:1354
+#: ../auth-dialog/main.c:1496
 msgid "Select a host to fetch the login form"
 msgstr "Izbor gostitelja za pridobivanje obrazca prijave"
 
-#: ../auth-dialog/main.c:1359
+#: ../auth-dialog/main.c:1501
 msgid "Contacting host, please wait..."
 msgstr "Prijavljanje ..."
 
-#: ../auth-dialog/main.c:1371
+#: ../auth-dialog/main.c:1521
 msgid "_Login"
 msgstr "_Prijava"
 
-#: ../auth-dialog/main.c:1385
+#: ../auth-dialog/main.c:1535
 msgid "Log"
 msgstr "Dnevnik"
+
+#: ../auth-dialog/main.c:1559
+msgid "Save passwords"
+msgstr "Shrani gesla"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
@@ -81,60 +99,60 @@ msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Združljivo s Cisco AnyConnect SSL VPN."
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Overitev potrdila</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "<b>General</b>"
 msgstr "<b>Splošno</b>"
 
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Dovoli Cisco Secure Desktop _trojan"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "CSD _Wrapper Script:"
-msgstr "Skript _ovijalnika CSD:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "Private _Key:"
-msgstr "_Osebni ključ:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
+#: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "Select A File"
 msgstr "Izbor datoteke"
 
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Use _FSID for key passphrase"
-msgstr "Uporabite _FSID za šifrirno geslo"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "_CA Certificate:"
-msgstr "Potrdilo _CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
+#: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "_Gateway:"
 msgstr "_Prehod:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:10
+#: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "_Proxy:"
 msgstr "_Posredniški strežnik:"
 
-#: ../properties/nm-openconnect-dialog.ui.h:11
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_CA Certificate:"
+msgstr "Potrdilo _CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Dovoli Cisco Secure Desktop _trojan"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Skript _ovijalnika CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Overitev potrdila</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_User Certificate:"
 msgstr "_Uporabniško potrdilo:"
 
-#: ../src/nm-openconnect-service.c:144
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "_Osebni ključ:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Uporabite _FSID za šifrirno geslo"
+
+#: ../src/nm-openconnect-service.c:142
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr "neveljavna lastnost celega števila '%s', ki je izven območja [%d -> %d]"
 
-#: ../src/nm-openconnect-service.c:154
+#: ../src/nm-openconnect-service.c:152
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr "neveljavna logična lastnost '%s' (ni vrednost da oziroma ne)"
 
-#: ../src/nm-openconnect-service.c:161
+#: ../src/nm-openconnect-service.c:159
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "Neupravljana lastnost  '%s' vrste %s"
@@ -152,32 +170,14 @@ msgstr "Ni možnosti nastavitev VPN"
 msgid "No VPN secrets!"
 msgstr "Ni skrivnih podatkov VPN!"
 
-#: ../src/nm-openconnect-service.c:286
+#: ../src/nm-openconnect-service.c:374
 msgid "Could not find openconnect binary."
 msgstr "Programa openconnect ni mogoče najti"
 
-#: ../src/nm-openconnect-service.c:298
+#: ../src/nm-openconnect-service.c:386
 msgid "No VPN gateway specified."
 msgstr "Ni določenega prehoda VPN."
 
-#: ../src/nm-openconnect-service.c:308
+#: ../src/nm-openconnect-service.c:396
 msgid "No WebVPN cookie provided."
 msgstr "Piškotek WebVPN ni na voljo."
-
-#~ msgid "Password / SecurID"
-#~ msgstr "Geslo / Uporabniški ID"
-
-#~ msgid "Certificate (TLS)"
-#~ msgstr "Potrdilo (TLS)"
-
-#~ msgid "Certificate (TLS) with TPM"
-#~ msgstr "Potrdilo (TLS) s TPM"
-
-#~ msgid " "
-#~ msgstr " "
-
-#~ msgid "Type:"
-#~ msgstr "Vrsta:"
-
-#~ msgid "User name:"
-#~ msgstr "Uporabniško ime:"
