@@ -8,34 +8,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-04-05 19:18+0000\n"
-"PO-Revision-Date: 2011-04-06 10:39+0100\n"
+"POT-Creation-Date: 2012-06-17 19:11+0000\n"
+"PO-Revision-Date: 2012-06-17 21:18+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../auth-dialog/main.c:753
-#, fuzzy, c-format
+#: ../auth-dialog/main.c:766
+#, c-format
 msgid "OpenConnect: %s: %s:%s"
-msgstr "OdprtaPovezava: %s: %s:%s"
+msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:780
+#: ../auth-dialog/main.c:793
 #, c-format
 msgid "Connect to VPN '%s'"
 msgstr "Poveži v omrežje VPN '%s'"
 
-#: ../auth-dialog/main.c:782
+#: ../auth-dialog/main.c:795
 msgid "Connect to VPN"
 msgstr "Poveži v omrežje VPN"
 
-#: ../auth-dialog/main.c:825
+#: ../auth-dialog/main.c:838
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -46,33 +46,33 @@ msgstr ""
 "Vzrokn: %s\n"
 "Ali želite potrdilo vseeno sprejeti?"
 
-#: ../auth-dialog/main.c:1455
+#: ../auth-dialog/main.c:1490
 msgid "VPN host"
 msgstr "Gostitelj VPN"
 
-#: ../auth-dialog/main.c:1475
+#: ../auth-dialog/main.c:1510
 msgid "Automatically start connecting next time"
 msgstr "Naslednjič samodejno poveži"
 
-#: ../auth-dialog/main.c:1496
+#: ../auth-dialog/main.c:1531
 msgid "Select a host to fetch the login form"
 msgstr "Izbor gostitelja za pridobivanje obrazca prijave"
 
-#: ../auth-dialog/main.c:1501
+#: ../auth-dialog/main.c:1536
 msgid "Contacting host, please wait..."
 msgstr "Prijavljanje ..."
 
-#: ../auth-dialog/main.c:1521
+#: ../auth-dialog/main.c:1556
 msgid "_Login"
 msgstr "_Prijava"
 
-#: ../auth-dialog/main.c:1535
-msgid "Log"
-msgstr "Dnevnik"
-
-#: ../auth-dialog/main.c:1559
+#: ../auth-dialog/main.c:1570
 msgid "Save passwords"
 msgstr "Shrani gesla"
+
+#: ../auth-dialog/main.c:1578
+msgid "Log"
+msgstr "Dnevnik"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
@@ -181,3 +181,4 @@ msgstr "Ni določenega prehoda VPN."
 #: ../src/nm-openconnect-service.c:396
 msgid "No WebVPN cookie provided."
 msgstr "Piškotek WebVPN ni na voljo."
+
