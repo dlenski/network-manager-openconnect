@@ -3,6 +3,9 @@
 if [ "$OPENCONNECT_DIR" = "" ]; then
     OPENCONNECT_DIR=../openconnect
 fi
+if [ "$OPENCONNECT_BUILD_DIR"  = "" ]; then
+    OPENCONNECT_BUILD_DIR="$OPENCONNECT_DIR"
+fi
 
 # The openconnect.pot file is made available by a cron job on this server, along
 # with the project's web site which is also held in the git repository. There's
@@ -14,12 +17,13 @@ if ! echo $COMMIT | egrep -q "[a-f0-9]{40}"; then
     exit 1
 fi
 
+pushd $OPENCONNECT_BUILD_DIR
+make po/openconnect.pot || exit 1
+popd
+
 COMMIT=$(echo $COMMIT | cut -c1-10)
-COMMIT=b0f2edbae5
 GITWEB=http://git.infradead.org/users/dwmw2/openconnect.git/blob/${COMMIT}:/
 OUTFILE=openconnect-strings-$COMMIT.txt
-
-GITWEB=http://git.infradead.org/users/dwmw2/openconnect.git/blob/${COMMIT}:/
 
 cat >$OUTFILE <<EOF
 This file contains strings from the OpenConnect VPN client, found at
@@ -35,8 +39,7 @@ in order to translate them properly, the URLs by each one will give a
 link to the original source code.
 EOF
 
-#curl http://www.infradead.org/openconnect.git/po/openconnect.pot |
-cat /home/dwmw2/git/openconnect/gtls/po/openconnect.pot |
+cat $OPENCONNECT_BUILD_DIR/po/openconnect.pot |
 while read -r a b; do
     case "$a" in
 	"#:")
