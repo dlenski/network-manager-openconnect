@@ -82,11 +82,11 @@ fi
 
 mv openconnect-strings-$COMMIT.txt openconnect-strings.txt
 
-set -x
 make -C po NetworkManager-openconnect.pot || exit 1
 for a in po/*.po ; do
     if [ -r $OPENCONNECT_DIR/$a ]; then
-	msgmerge $a -C $OPENCONNECT_DIR/$a po/NetworkManager-openconnect.pot > $a.new && mv $a.new $a
+	msgmerge -N -F $a -C $OPENCONNECT_DIR/$a po/NetworkManager-openconnect.pot > $a.new && mv $a.new $a
+	msgmerge -N -F $OPENCONNECT_DIR/$a -C $a $OPENCONNECT_BUILD_DIR/po/openconnect.pot > $OPENCONNECT_DIR/$a.new && mv $OPENCONNECT_DIR/$a.new $OPENCONNECT_DIR/$a
     fi
 done
 
