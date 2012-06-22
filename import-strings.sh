@@ -44,6 +44,8 @@ while read -r a b; do
     case "$a" in
 	"#:")
 	    echo >>$OUTFILE
+	    # FIXME: If it was already in openconnect-strings.txt can we keep the
+	    #   previous URL instead of using the latest commit, to reduce churn?
 	    for src in $b; do
 		echo "// ${GITWEB}${src%%:*}#l${src##*:}" >>$OUTFILE
 	    done
@@ -79,14 +81,36 @@ if [ "$MESSAGES" -lt 100 ]; then
     rm openconnect-strings-$COMMIT.txt
     exit 1
 fi
-
-mv openconnect-strings-$COMMIT.txt openconnect-strings.txt
+NEWSHA=$(grep -v ^// openconnect-strings-$COMMIT.txt | sha1sum)
+OLDSHA=$(grep -v ^// openconnect-strings.txt | sha1sum)
+if [ "$NEWSHA" != "$OLDSHA" ]; then
+    echo New strings
+    mv openconnect-strings-$COMMIT.txt openconnect-strings.txt
+else
+    echo No new strings. Not changing openconnect-strings.txt
+    rm openconnect-strings-$COMMIT.txt
+fi
 
 make -C po NetworkManager-openconnect.pot || exit 1
 for a in po/*.po ; do
+    echo Comparing $a...
     if [ -r $OPENCONNECT_DIR/$a ]; then
-	msgmerge -N -F $a -C $OPENCONNECT_DIR/$a po/NetworkManager-openconnect.pot > $a.new && mv $a.new $a
-	msgmerge -N -F $OPENCONNECT_DIR/$a -C $a $OPENCONNECT_BUILD_DIR/po/openconnect.pot > $OPENCONNECT_DIR/$a.new && mv $OPENCONNECT_DIR/$a.new $OPENCONNECT_DIR/$a
+	msgattrib -F --no-fuzzy $OPENCONNECT_DIR/$a > $a.openconnect 2>/dev/null
+	msgmerge -N -F $a -C $a.openconnect po/NetworkManager-openconnect.pot > $a.new 2>/dev/null && mv $a.new $a.merged
+	msgmerge -N -F $a po/NetworkManager-openconnect.pot > $a.new 2>/dev/null && mv $a.new $a.unmerged
+	if ! cmp $a.merged $a.unmerged; then
+	    echo New changes for $a
+	    mv $a.merged $a
+	fi
+	rm -f $a.openconnect $a.merged $a.unmerged
+	msgattrib -F --no-fuzzy $a > $a.nmo 2>/dev/null
+	msgmerge -N -F $OPENCONNECT_DIR/$a -C $a.nmo $OPENCONNECT_BUILD_DIR/po/openconnect.pot > $OPENCONNECT_DIR/$a.new 2>/dev/null && mv $OPENCONNECT_DIR/$a.new $OPENCONNECT_DIR/$a.merged
+	msgmerge -N -F $OPENCONNECT_DIR/$a $OPENCONNECT_BUILD_DIR/po/openconnect.pot > $OPENCONNECT_DIR/$a.new 2>/dev/null && mv $OPENCONNECT_DIR/$a.new $OPENCONNECT_DIR/$a.unmerged
+	if ! cmp $OPENCONNECT_DIR/$a.merged $OPENCONNECT_DIR/$a.unmerged; then
+	    echo New changes for OpenConnect $a
+	    mv $OPENCONNECT_DIR/$a.merged $OPENCONNECT_DIR/$a
+	fi
+	rm -f $OPENCONNECT_DIR/$a.merged $OPENCONNECT_DIR/$a.unmerged $a.nmo
     fi
 done
 
