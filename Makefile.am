@@ -27,7 +27,8 @@ EXTRA_DIST = nm-openconnect-service.name.in \
              $(icon_DATA)         \
              intltool-extract.in  \
              intltool-merge.in    \
-             intltool-update.in
+             intltool-update.in   \
+             openconnect-strings.txt
 
 CLEANFILES = $(nmvpnservice_DATA) $(desktop_DATA) *~
 DISTCLEANFILES = intltool-extract intltool-merge intltool-update
