@@ -2,6 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2008, 2010.
+# Javier Mazorra Rodríguez <mazi.debian@gmail.com>, 2012.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
 #
 msgid ""
@@ -9,8 +10,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-06-20 14:50+0000\n"
-"PO-Revision-Date: 2012-06-22 13:43+0200\n"
+"POT-Creation-Date: 2012-06-27 19:36+0000\n"
+"PO-Revision-Date: 2012-07-03 16:37+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -191,52 +192,54 @@ msgstr "Abrir archivo XML de configuración"
 #: ../openconnect-strings.txt:18
 #, c-format
 msgid "Treating host \"%s\" as a raw hostname\n"
-msgstr ""
+msgstr "Se trata el servidor «%s» como un nombre de servidor crudo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l60
 #: ../openconnect-strings.txt:21
 msgid "fstat XML config file"
-msgstr ""
+msgstr "Archivo XML de configuración de fstat"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l66
 #: ../openconnect-strings.txt:24
 msgid "mmap XML config file"
-msgstr ""
+msgstr "Archivo XML de configuración de mmap"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l72
 #: ../openconnect-strings.txt:27
 msgid "Failed to SHA1 existing file\n"
-msgstr ""
+msgstr "Falló el SHA1 del archivo existente\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l80
 #: ../openconnect-strings.txt:30
 #, c-format
 msgid "XML config file SHA1: %s\n"
-msgstr ""
+msgstr "Archivo XML de configuración SHA1: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l87
 #: ../openconnect-strings.txt:33
 #, c-format
 msgid "Failed to parse XML config file %s\n"
-msgstr "Falló al analizar la el archivo XML de configuración %s\n"
+msgstr "Falló al analizar el archivo XML de configuración %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l124
 #: ../openconnect-strings.txt:36
 #, c-format
 msgid "Host \"%s\" has address \"%s\"\n"
-msgstr ""
+msgstr "El servidor «%s» tiene la dirección «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l133
 #: ../openconnect-strings.txt:39
 #, c-format
 msgid "Host \"%s\" has UserGroup \"%s\"\n"
-msgstr ""
+msgstr "El servidor «%s» tiene el grupo de usuario «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/xml.c#l147
 #: ../openconnect-strings.txt:42
 #, c-format
 msgid "Host \"%s\" not listed in config; treating as raw hostname\n"
 msgstr ""
+"Servidor «%s» no listado en la configuración; se trata como nombre de "
+"servidor crudo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l177
 #: ../openconnect-strings.txt:45
@@ -293,22 +296,22 @@ msgstr "Leer opciones del archivo de configuración"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l223
 #: ../openconnect-strings.txt:78
 msgid "Continue in background after startup"
-msgstr ""
+msgstr "Continuar en segundo plano tras el arranque"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l224
 #: ../openconnect-strings.txt:81
 msgid "Write the daemons pid to this file"
-msgstr ""
+msgstr "Escribir los PID de los demonios en este archivo"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l225
 #: ../openconnect-strings.txt:84
 msgid "Use SSL client certificate CERT"
-msgstr ""
+msgstr "Usar certificado CERT del cliente SSL"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l226
 #: ../openconnect-strings.txt:87
 msgid "Warn when certificate lifetime < DAYS"
-msgstr ""
+msgstr "Avisar cuando el tiempo de vida del certificado sea menor que DAYS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l227
 #: ../openconnect-strings.txt:90
@@ -328,12 +331,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l230
 #: ../openconnect-strings.txt:99
 msgid "Read cookie from standard input"
-msgstr ""
+msgstr "Leer cookie de la entrada estándar"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l231
 #: ../openconnect-strings.txt:102
 msgid "Enable compression (default)"
-msgstr ""
+msgstr "Activar compresión (predeterminado)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l232
 #: ../openconnect-strings.txt:105
@@ -528,12 +531,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l272
 #: ../openconnect-strings.txt:219
 msgid "Read password from standard input"
-msgstr ""
+msgstr "Leer contraseña de la entrada estándar"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l273
 #: ../openconnect-strings.txt:222
 msgid "Connection retry timeout in seconds"
-msgstr ""
+msgstr "Tiempo en segundos para reintento de conexión"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/3b6a105fca:/main.c#l274
 #: ../openconnect-strings.txt:225
