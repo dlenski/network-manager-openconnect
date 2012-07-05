@@ -78,7 +78,7 @@ _("Read options from config file");
 _("Continue in background after startup");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l226
-_("Write the daemons pid to this file");
+_("Write the daemon's PID to this file");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l227
 _("Use SSL client certificate CERT");
