@@ -588,15 +588,11 @@ main (int argc, char *argv[])
 	val = addr6_to_gvalue (getenv ("INTERNAL_IP6_ADDRESS"));
 	if (val)
 		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_ADDRESS, val);
-	else
-		helper_failed (connection, "IP6 Address");
 
 	/* IPv6 PTP address; for openconnect PTP address == internal IPv6 address */
 	val = addr6_to_gvalue (getenv ("INTERNAL_IP6_ADDRESS"));
 	if (val)
 		g_hash_table_insert (ip6config, NM_VPN_PLUGIN_IP6_CONFIG_PTP, val);
-	else
-		helper_failed (connection, "IP6 PTP Address");
 
 	/* IPv6 Netmask */
 	tmp = getenv ("INTERNAL_IP6_NETMASK");
