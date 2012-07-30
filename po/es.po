@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-08 19:46+0000\n"
-"PO-Revision-Date: 2012-07-11 16:11+0200\n"
+"POT-Creation-Date: 2012-07-24 09:44+0000\n"
+"PO-Revision-Date: 2012-07-30 10:36+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Gtranslator 2.91.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../auth-dialog/main.c:766
@@ -303,7 +303,6 @@ msgstr "Continuar en segundo plano tras el arranque"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l226
 #: ../openconnect-strings.txt:81
-#| msgid "Write the daemons pid to this file"
 msgid "Write the daemon's PID to this file"
 msgstr "Escribir el PID del demonio en este archivo"
 
@@ -420,12 +419,12 @@ msgstr "Desactivar proxy"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l249
 #: ../openconnect-strings.txt:150
 msgid "Use libproxy to automatically configure proxy"
-msgstr ""
+msgstr "Usar libproxy para configurar automáticamente el proxy"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l251
 #: ../openconnect-strings.txt:153
 msgid "(NOTE: libproxy disabled in this build)"
-msgstr ""
+msgstr "(NOTA: libproxy está desactivado en esta versión)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l253
 #: ../openconnect-strings.txt:156
@@ -435,7 +434,7 @@ msgstr "Menos salida"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l254
 #: ../openconnect-strings.txt:159
 msgid "Set packet queue limit to LEN pkts"
-msgstr ""
+msgstr "Establecer límite de cola de paquete a LEN pqts"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l255
 #: ../openconnect-strings.txt:162
@@ -445,22 +444,22 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l256
 #: ../openconnect-strings.txt:165
 msgid "default"
-msgstr ""
+msgstr "predeterminado"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l257
 #: ../openconnect-strings.txt:168
-msgid "Pass traffic to 'script' program, not tun"
-msgstr ""
+msgid "Pass traffic to 'script' program, not run"
+msgstr "Pasar el tráfico al «script», no ejecutar"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l258
 #: ../openconnect-strings.txt:171
 msgid "Set login username"
-msgstr ""
+msgstr "Establecer nombre de usuario de inicio de sesión"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l259
 #: ../openconnect-strings.txt:174
 msgid "Report version number"
-msgstr ""
+msgstr "Informe del número de versión"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l260
 #: ../openconnect-strings.txt:177
@@ -475,37 +474,37 @@ msgstr "Archivo XML de configuración"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l262
 #: ../openconnect-strings.txt:183
 msgid "Choose authentication login selection"
-msgstr ""
+msgstr "Elegir autenticación de selección de inicio de sesión"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l263
 #: ../openconnect-strings.txt:186
 msgid "Authenticate only and print login info"
-msgstr ""
+msgstr "Sólo autenticar y mostrar información del inicio de sesión"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l264
 #: ../openconnect-strings.txt:189
 msgid "Fetch webvpn cookie only; don't connect"
-msgstr ""
+msgstr "Sólo obtener la cookie webvpn; no conectar"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l265
 #: ../openconnect-strings.txt:192
 msgid "Print webvpn cookie before connecting"
-msgstr ""
+msgstr "Mostrar la cookie de la webvpn antes de conectar"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l266
 #: ../openconnect-strings.txt:195
 msgid "Cert file for server verification"
-msgstr ""
+msgstr "Archivo del certificado para la verificación del servidor"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l267
 #: ../openconnect-strings.txt:198
 msgid "Do not ask for IPv6 connectivity"
-msgstr ""
+msgstr "No pedir conectividad IPv6"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l268
 #: ../openconnect-strings.txt:201
 msgid "OpenSSL ciphers to support for DTLS"
-msgstr ""
+msgstr "Claves OpenSSL que soportar por DTLS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l269
 #: ../openconnect-strings.txt:204
@@ -515,7 +514,7 @@ msgstr "Desactivar DTLS"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l270
 #: ../openconnect-strings.txt:207
 msgid "Disable HTTP connection re-use"
-msgstr ""
+msgstr "Desactivar reutilización de conexión HTTP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l271
 #: ../openconnect-strings.txt:210
@@ -854,7 +853,6 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/dtls.c#l416
 #: ../openconnect-strings.txt:403
 #, c-format
-#| msgid "Failed to parse XML config file %s\n"
 msgid "Failed to set DTLS MTU: %s\n"
 msgstr "Falló al establecer la MTU de DTLS %s\n"
 
