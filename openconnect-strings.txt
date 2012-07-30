@@ -165,7 +165,7 @@ _("Shell command line for using a vpnc-compatible config script");
 _("default");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l257
-_("Pass traffic to 'script' program, not tun");
+_("Pass traffic to 'script' program, not run");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l258
 _("Set login username");
