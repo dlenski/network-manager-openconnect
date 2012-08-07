@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-24 09:44+0000\n"
-"PO-Revision-Date: 2012-07-30 10:36+0200\n"
+"POT-Creation-Date: 2012-07-30 08:40+0000\n"
+"PO-Revision-Date: 2012-08-07 16:35+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../auth-dialog/main.c:766
 #, c-format
@@ -247,6 +247,8 @@ msgid ""
 "For assistance with OpenConnect, please see the web page at\n"
 " http://www.infradead.org/openconnect/mail.html\n"
 msgstr ""
+"Para obtener ayuda con OpenConnect, consulte la página web en\n"
+" http://www.infradead.org/openconnect/mail.html\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l188
 #: ../openconnect-strings.txt:50
@@ -290,6 +292,8 @@ msgid ""
 "Open client for Cisco AnyConnect VPN, version %s\n"
 "\n"
 msgstr ""
+"Cliente abierto de Cisco VPN AnyConnect, versión %s\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l224
 #: ../openconnect-strings.txt:75
@@ -399,12 +403,12 @@ msgstr "Indicar ruta MTU al/desde el servidor"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l245
 #: ../openconnect-strings.txt:138
 msgid "Set key passphrase or TPM SRK PIN"
-msgstr ""
+msgstr "Establecer clave de frase de paso o pin TPM SRK"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l246
 #: ../openconnect-strings.txt:141
 msgid "Key passphrase is fsid of file system"
-msgstr ""
+msgstr "La clave de frase de paso es un fsid de un sistema de archivos"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l247
 #: ../openconnect-strings.txt:144
@@ -440,6 +444,8 @@ msgstr "Establecer límite de cola de paquete a LEN pqts"
 #: ../openconnect-strings.txt:162
 msgid "Shell command line for using a vpnc-compatible config script"
 msgstr ""
+"Terminal de línea de comandos para usar un script de configuración "
+"compatible con vpnc"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l256
 #: ../openconnect-strings.txt:165
@@ -519,17 +525,17 @@ msgstr "Desactivar reutilización de conexión HTTP"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l271
 #: ../openconnect-strings.txt:210
 msgid "Disable password/SecurID authentication"
-msgstr ""
+msgstr "Desactivar autenticación por contraseña/SecurID"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l272
 #: ../openconnect-strings.txt:213
 msgid "Do not require server SSL cert to be valid"
-msgstr ""
+msgstr "No se requiere certificado SSL del servidor para ser válido"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l273
 #: ../openconnect-strings.txt:216
 msgid "Do not expect user input; exit if it is required"
-msgstr ""
+msgstr "No se espera entrada del usuario; sale si lo requiere"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l274
 #: ../openconnect-strings.txt:219
@@ -544,51 +550,51 @@ msgstr "Tiempo en segundos para reintento de conexión"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l276
 #: ../openconnect-strings.txt:225
 msgid "Server's certificate SHA1 fingerprint"
-msgstr ""
+msgstr "SHA1 de la huella del servidor de certificados"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l277
 #: ../openconnect-strings.txt:228
 msgid "HTTP header User-Agent: field"
-msgstr ""
+msgstr "Cabecera HTTP User_Agent: campo"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l278
 #: ../openconnect-strings.txt:231
 msgid "Set local port for DTLS datagrams"
-msgstr ""
+msgstr "Establecer puerto local para datagramas DTLS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l289
 #: ../openconnect-strings.txt:234
 msgid "Allocation failure for string from stdin\n"
-msgstr ""
+msgstr "Falló la ubicación para la cadena desde stdin\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l293
 #: ../openconnect-strings.txt:237
 msgid "fgets (stdin)"
-msgstr ""
+msgstr "fgets (stdin)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l356
 #: ../openconnect-strings.txt:240
 #, c-format
 msgid "Failed to get line from config file: %s\n"
-msgstr ""
+msgstr "Falló al obtener la línea del archivo de configuración: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l396
 #: ../openconnect-strings.txt:243
 #, c-format
 msgid "Unrecognised option at line %d: '%s'\n"
-msgstr ""
+msgstr "Opción no reconocida en la línea %d: «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l406
 #: ../openconnect-strings.txt:246
 #, c-format
 msgid "Option '%s' does not take an argument at line %d\n"
-msgstr ""
+msgstr "La opción «%s» no coge un argumento en la línea %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l410
 #: ../openconnect-strings.txt:249
 #, c-format
 msgid "Option '%s' requires an argument at line %d\n"
-msgstr ""
+msgstr "La opción «%s» requiere un argumento en la linea %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l442
 #: ../openconnect-strings.txt:252
@@ -597,16 +603,19 @@ msgid ""
 "WARNING: This version of openconnect is %s but\n"
 " the libopenconnect library is %s\n"
 msgstr ""
+"ADVERTENCIA: esta versión de openconnect es %s pero\n"
+"la biblioteca libopenconnect es %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l451
 #: ../openconnect-strings.txt:257
 msgid "Failed to allocate vpninfo structure\n"
-msgstr ""
+msgstr "Falló al ubicar la estructura vpninfo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l487
 #: ../openconnect-strings.txt:260
 msgid "Cannot use 'config' option inside config file\n"
 msgstr ""
+"No se puede usar la opción «config» dentro del archivo de configuración\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l492
 #: ../openconnect-strings.txt:263
