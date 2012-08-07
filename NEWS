@@ -11,6 +11,8 @@ This is a new stable release of network-manager-openconnect.  Notable changes in
 * Allow building with gnutls instead of openssl
 * Use multiple domains if given
 * Store passwords in GNOME keyring
+* Do not fail if no IPv6 address is retrieved
+* Ensure invalid IPv6 address triggers an error
 
 
 =======================================================
