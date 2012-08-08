@@ -587,7 +587,9 @@ openconnect_plugin_ui_widget_interface_init (NMVpnPluginUiWidgetInterface *iface
 static guint32
 get_capabilities (NMVpnPluginUiInterface *iface)
 {
-	return (NM_VPN_PLUGIN_UI_CAPABILITY_IMPORT | NM_VPN_PLUGIN_UI_CAPABILITY_EXPORT);
+	return (NM_VPN_PLUGIN_UI_CAPABILITY_IMPORT |
+	        NM_VPN_PLUGIN_UI_CAPABILITY_EXPORT |
+	        NM_VPN_PLUGIN_UI_CAPABILITY_IPV6);
 }
 
 static NMVpnPluginUiWidgetInterface *
