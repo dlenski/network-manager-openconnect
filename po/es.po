@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-30 08:40+0000\n"
-"PO-Revision-Date: 2012-08-07 16:35+0200\n"
+"POT-Creation-Date: 2012-08-08 15:22+0000\n"
+"PO-Revision-Date: 2012-08-10 10:04+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -594,7 +594,7 @@ msgstr "La opción «%s» no coge un argumento en la línea %d\n"
 #: ../openconnect-strings.txt:249
 #, c-format
 msgid "Option '%s' requires an argument at line %d\n"
-msgstr "La opción «%s» requiere un argumento en la linea %d\n"
+msgstr "La opción «%s» requiere un argumento en la línea %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l442
 #: ../openconnect-strings.txt:252
@@ -636,6 +636,10 @@ msgid ""
 "Disabling all HTTP connection re-use due to --no-http-keepalive option.\n"
 "If this helps, please report to <openconnect-devel@lists.infradead.org>.\n"
 msgstr ""
+"Desactivando todas las reutilizaciones de conexiones HTTP debido a la opción "
+"--no-http-keepalive.\n"
+"Si esto ayuda, por favor informe en <openconnect-devel@lists.infradead."
+"org>.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l630
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l644
@@ -647,7 +651,7 @@ msgstr "Usuario «%s» no válido\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l662
 #: ../openconnect-strings.txt:279
 msgid "Queue length zero not permitted; using 1\n"
-msgstr ""
+msgstr "No se permite la longitud de cola cero; usando 1\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l673
 #: ../openconnect-strings.txt:282
@@ -668,7 +672,7 @@ msgstr "No se ha especificado ningún servidor\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l715
 #: ../openconnect-strings.txt:291
 msgid "This version of openconnect was built without libproxy support\n"
-msgstr ""
+msgstr "Esta versión de openconnect se compiló sin soporte para libproxy\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l765
 #: ../openconnect-strings.txt:294
@@ -683,19 +687,19 @@ msgstr "Falló al crear la conexión SSL\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l794
 #: ../openconnect-strings.txt:300
 msgid "Set up tun device failed\n"
-msgstr ""
+msgstr "Falló al configurar el dispositivo TUN\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l800
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/http.c#l459
 #: ../openconnect-strings.txt:304
 #, c-format
 msgid "Failed to set uid %ld\n"
-msgstr ""
+msgstr "Falló al establecer el UID %ld\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l807
 #: ../openconnect-strings.txt:307
 msgid "Set up DTLS failed; using SSL instead\n"
-msgstr ""
+msgstr "Falló al configurar DTLS; se usa SSL en su lugar\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l810
 #: ../openconnect-strings.txt:310
@@ -707,11 +711,13 @@ msgstr "Conectado %s como %s%s%s, usando %s\n"
 #: ../openconnect-strings.txt:313
 msgid "No --script argument provided; DNS and routing are not configured\n"
 msgstr ""
+"No se proporcionó el argumento --script; No están configurados los DNS ni "
+"las rutas\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l822
 #: ../openconnect-strings.txt:316
 msgid "See http://www.infradead.org/openconnect/vpnc-script.html\n"
-msgstr ""
+msgstr "Consulte http://www.infradead.org/openconnect/vpnc-script.html\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l834
 #: ../openconnect-strings.txt:319
@@ -723,19 +729,19 @@ msgstr "Falló al abrir «%s» para escritura: %s\n"
 #: ../openconnect-strings.txt:322
 #, c-format
 msgid "Continuing in background; pid %d\n"
-msgstr ""
+msgstr "Se continúa en segundo plano; PID %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l867
 #: ../openconnect-strings.txt:325
 #, c-format
 msgid "Failed to open %s for write: %s\n"
-msgstr ""
+msgstr "Falló al abrir %s para escritura: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l875
 #: ../openconnect-strings.txt:328
 #, c-format
 msgid "Failed to write config to %s: %s\n"
-msgstr ""
+msgstr "Falló al guardar configuración en %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l968
 #: ../openconnect-strings.txt:331
@@ -745,12 +751,16 @@ msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
 "Reason: %s\n"
 msgstr ""
+"\n"
+"Falló la verificación del certificado del servidor VPN «%s».\n"
+"Razón: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l974
 #: ../openconnect-strings.txt:337
 #, c-format
 msgid "Enter '%s' to accept, '%s' to abort; anything else to view: "
 msgstr ""
+"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para ver:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l975
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l982
@@ -768,41 +778,41 @@ msgstr "no"
 #: ../openconnect-strings.txt:348
 #, c-format
 msgid "SHA1 fingerprint: %s\n"
-msgstr ""
+msgstr "SHA1 de la huella: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l1049
 #: ../openconnect-strings.txt:351
 #, c-format
 msgid "Auth choice \"%s\" not available\n"
-msgstr ""
+msgstr "Elección de autenticación «%s» no disponible\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l1062
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l1110
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l1137
 #: ../openconnect-strings.txt:356
 msgid "User input required in non-interactive mode\n"
-msgstr ""
+msgstr "Entrada del usuario requerida en modo no-interactivo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/main.c#l1093
 #: ../openconnect-strings.txt:359
 #, c-format
 msgid "Auth choice \"%s\" not valid\n"
-msgstr ""
+msgstr "Elección de autenticación «%s» no válida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/dtls.c#l131
 #: ../openconnect-strings.txt:362
 msgid "Initialise DTLSv1 CTX failed\n"
-msgstr ""
+msgstr "Falló al inicializar DTLSv1 CTX\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/dtls.c#l143
 #: ../openconnect-strings.txt:365
 msgid "Set DTLS cipher list failed\n"
-msgstr ""
+msgstr "Falló al establecer la lista de cifrado DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/dtls.c#l156
 #: ../openconnect-strings.txt:368
 msgid "Initialise DTLSv1 session failed\n"
-msgstr ""
+msgstr "Falló al inicializar la sesión DTLSv1\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2ee619fa2:/dtls.c#l177
 #: ../openconnect-strings.txt:371
