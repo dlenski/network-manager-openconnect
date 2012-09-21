@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-20 08:06+0000\n"
-"PO-Revision-Date: 2012-09-21 12:55+0100\n"
+"PO-Revision-Date: 2012-09-21 12:57+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1463,7 +1463,7 @@ msgstr "Zapisovanje v vtič SSL je spodletelo"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d6a1dbfbdf:/gnutls.c#l105
 #: ../openconnect-strings.txt:722
 msgid "SSL write cancelled\n"
-msgstr "Zapisovanje SSL je bilo preklicano"
+msgstr "Zapisovanje SSL je bilo preklicano\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d6a1dbfbdf:/openssl.c#l147
 #: ../openconnect-strings.txt:725
@@ -1476,7 +1476,7 @@ msgstr "Branje iz vtiča SSL je spodletelo"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d6a1dbfbdf:/gnutls.c#l200
 #: ../openconnect-strings.txt:731
 msgid "SSL read cancelled\n"
-msgstr "Branje SSL je bilo preklicano"
+msgstr "Branje SSL je bilo preklicano\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d6a1dbfbdf:/openssl.c#l204
 #: ../openconnect-strings.txt:734
