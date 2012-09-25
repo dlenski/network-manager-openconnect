@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-23 19:25+0000\n"
-"PO-Revision-Date: 2012-09-25 09:04+0100\n"
+"PO-Revision-Date: 2012-09-25 20:01+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -762,9 +762,9 @@ msgstr "Prstni odtis SHA1: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l1060
 #: ../openconnect-strings.txt:348
-#, fuzzy, c-format
+#, c-format
 msgid "Auth choice \"%s\" not available\n"
-msgstr "Disk ni na voljo"
+msgstr "Izbira overitve \"%s\" ni na voljo.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l1073
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l1121
@@ -775,15 +775,14 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l1104
 #: ../openconnect-strings.txt:356
-#, fuzzy, c-format
+#, c-format
 msgid "Auth choice \"%s\" not valid\n"
-msgstr "Neveljavna OPML datoteka"
+msgstr "Izbira overitve \"%s\" ni veljavna.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l131
 #: ../openconnect-strings.txt:359
-#, fuzzy
 msgid "Initialise DTLSv1 CTX failed\n"
-msgstr "Začenjanje skrivnosti DTLS je spodletelo.\n"
+msgstr "Začenjanje DTLSv1 CTX je spodletelo.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l143
 #: ../openconnect-strings.txt:362
@@ -912,9 +911,9 @@ msgstr "Možnost DTLS %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l668
 #: ../openconnect-strings.txt:434
-#, fuzzy, c-format
+#, c-format
 msgid "DTLS connected. DPD %d, Keepalive %d\n"
-msgstr "Prejeta zahteva DPD DTLS\n"
+msgstr "Vzpostavljena je povezava DTLS. DPD %d, KEEPALIVE %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l699
 #: ../openconnect-strings.txt:437
@@ -930,7 +929,7 @@ msgstr "Prejeta zahteva DPD DTLS\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l719
 #: ../openconnect-strings.txt:443
 msgid "Failed to send DPD response. Expect disconnect\n"
-msgstr ""
+msgstr "Pošiljanje odziva DPD je spodletelo. Pričakovana je prekinitev povezave.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l723
 #: ../openconnect-strings.txt:446
@@ -950,9 +949,8 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l751
 #: ../openconnect-strings.txt:455
-#, fuzzy
 msgid "DTLS rekey due\n"
-msgstr "Rok plačila računa %s je potekel."
+msgstr "Ponovno uporaba ključa DTLS je potekla.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l756
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l865
@@ -962,15 +960,13 @@ msgstr "Ponovna povezava je spodletela\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l762
 #: ../openconnect-strings.txt:462
-#, fuzzy
 msgid "DTLS rekey failed\n"
-msgstr "Začenjanje skrivnosti DTLS je spodletelo.\n"
+msgstr "Ponovno uporaba ključa DTLS je spodletela.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l770
 #: ../openconnect-strings.txt:465
-#, fuzzy
 msgid "DTLS Dead Peer Detection detected dead peer!\n"
-msgstr "Določite najmanjši interval zaznave nedejavnih soležnikov"
+msgstr "Zaznava nedejavnih soležnikov je vrnila zadetke nedejavnih povezav!\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l776
 #: ../openconnect-strings.txt:468
@@ -1118,9 +1114,9 @@ msgstr "S ponovno povezavo je pridobljena drugačna maska omrežja IPv6 (%s != %
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l476
 #: ../openconnect-strings.txt:547
-#, fuzzy, c-format
+#, c-format
 msgid "CSTP connected. DPD %d, Keepalive %d\n"
-msgstr "Pridobljen je odziv CSTP DPD\n"
+msgstr "Vzpostavljena je povezava CSTP. DPD %d, KEEPALIVE %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l509
 #: ../openconnect-strings.txt:550
@@ -1196,9 +1192,9 @@ msgstr "Prejet je ukaz KEEPALIVE CSTP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l747
 #: ../openconnect-strings.txt:589
-#, fuzzy, c-format
+#, c-format
 msgid "Received uncompressed data packet of %d bytes\n"
-msgstr "Prejet je stisnjen paket podatkov velikosti %ld bajtov\n"
+msgstr "Prejet je ne-stisnjen paket podatkov velikosti %d bajtov\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l762
 #: ../openconnect-strings.txt:592
@@ -1230,15 +1226,13 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l855
 #: ../openconnect-strings.txt:607
-#, fuzzy
 msgid "CSTP rekey due\n"
-msgstr "Rok plačila računa %s je potekel."
+msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l862
 #: ../openconnect-strings.txt:610
-#, fuzzy
 msgid "CSTP Dead Peer Detection detected dead peer!\n"
-msgstr "Določite najmanjši interval zaznave nedejavnih soležnikov"
+msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l874
 #: ../openconnect-strings.txt:613
@@ -1252,21 +1246,21 @@ msgstr "Pošlji zahtevo CSTP Keepalive\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l912
 #: ../openconnect-strings.txt:619
-#, fuzzy, c-format
+#, c-format
 msgid "deflate failed %d\n"
-msgstr "Spodleteli vnosi"
+msgstr "razširjanje je spodletelo %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l932
 #: ../openconnect-strings.txt:622
-#, fuzzy, c-format
+#, c-format
 msgid "Sending compressed data packet of %d bytes\n"
-msgstr "Prejet je stisnjen paket podatkov velikosti %ld bajtov\n"
+msgstr "Pošiljanje stisnjenega paketa podatkov velikosti %d bajtov\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l944
 #: ../openconnect-strings.txt:625
-#, fuzzy, c-format
+#, c-format
 msgid "Sending uncompressed data packet of %d bytes\n"
-msgstr "Prejet je stisnjen paket podatkov velikosti %ld bajtov\n"
+msgstr "Pošiljanje ne-stisnjenega paketa podatkov velikosti %d bajtov\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l984
 #: ../openconnect-strings.txt:628
@@ -1657,9 +1651,9 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1006
 #: ../openconnect-strings.txt:849
-#, fuzzy, c-format
+#, c-format
 msgid "Matched %s address '%s'\n"
-msgstr "Naslov zaznave:"
+msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1013
 #: ../openconnect-strings.txt:852
@@ -2723,7 +2717,7 @@ msgstr "Nepričakovan odziv povezave posredniškega strežnika SOCKS: %02x %02x.
 #: ../openconnect-strings.txt:1432
 #, c-format
 msgid "Unexpected address type %02x in SOCKS connect response\n"
-msgstr ""
+msgstr "Nepričakovana vrsta naslova %02x v odzivu povezave SOCKS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l1108
 #: ../openconnect-strings.txt:1435
@@ -2763,7 +2757,7 @@ msgstr "Branje odgovora posredniškega strežnika je spodletelo.\n"
 #: ../openconnect-strings.txt:1453
 #, c-format
 msgid "Unexpected continuation line after CONNECT response: '%s'\n"
-msgstr ""
+msgstr "Nepričakovana nadaljevalna vrstica po odzivu na ukaz CONNECT: '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l1161
 #: ../openconnect-strings.txt:1456
