@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-23 19:25+0000\n"
-"PO-Revision-Date: 2012-09-24 22:19+0100\n"
+"PO-Revision-Date: 2012-09-25 09:04+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1328,7 +1328,7 @@ msgstr "Skript '%s' je vrnil napako %d\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l415
 #: ../openconnect-strings.txt:658
 msgid "Could not /dev/tun for plumbing"
-msgstr ""
+msgstr "Ni mogoče izvesti /dev/tun za razpeljavo"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l419
 #: ../openconnect-strings.txt:661
@@ -1383,7 +1383,7 @@ msgstr ""
 #: ../openconnect-strings.txt:688
 #, c-format
 msgid "Invalid interface name '%s'; must match 'tun%%d'\n"
-msgstr ""
+msgstr "Neveljavno ime vmesnika '%s'; skladno mora biti z imenom 'tun%%d'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l589
 #: ../openconnect-strings.txt:691
@@ -1425,7 +1425,7 @@ msgstr "(skript)"
 #: ../openconnect-strings.txt:712
 #, c-format
 msgid "Unknown packet (len %d) received: %02x %02x %02x %02x...\n"
-msgstr ""
+msgstr "Prejet je neznan paket (len %d): %02x %02x %02x %02x...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l777
 #: ../openconnect-strings.txt:715
@@ -1544,7 +1544,7 @@ msgstr "Dodajanje ključa iz TPM je spodletelo\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1202
 #: ../openconnect-strings.txt:785
 msgid "This version of OpenConnect was built without TPM support\n"
-msgstr ""
+msgstr "Ta različica programa OpenConnect je izgrajena brez podpore za TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l587
 #: ../openconnect-strings.txt:788
@@ -2473,7 +2473,7 @@ msgstr "Ponujen je neveljaven piškotek: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l176
 #: ../openconnect-strings.txt:1293
 msgid "<elided>"
-msgstr ""
+msgstr "<izpadlo>"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l186
 #: ../openconnect-strings.txt:1296
