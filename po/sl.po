@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-25 18:02+0000\n"
-"PO-Revision-Date: 2012-09-25 22:27+0100\n"
+"PO-Revision-Date: 2012-10-06 12:46+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -773,7 +773,7 @@ msgstr "Izbira overitve \"%s\" ni na voljo.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l1148
 #: ../openconnect-strings.txt:353
 msgid "User input required in non-interactive mode\n"
-msgstr ""
+msgstr "Zahtevano je uporabniško posredovanje v načinu brez posredovanja.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l1104
 #: ../openconnect-strings.txt:356
@@ -789,7 +789,7 @@ msgstr "Začenjanje DTLSv1 CTX je spodletelo.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l143
 #: ../openconnect-strings.txt:362
 msgid "Set DTLS cipher list failed\n"
-msgstr ""
+msgstr "Nastavljanje seznama števk DTLS je spodletelo.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l156
 #: ../openconnect-strings.txt:365
@@ -799,7 +799,7 @@ msgstr "Začenjanje seje DTLSv1 je spodletela\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l177
 #: ../openconnect-strings.txt:368
 msgid "Not precisely one DTLS cipher\n"
-msgstr ""
+msgstr "Ni natanko ena števka DTLS.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l195
 #: ../openconnect-strings.txt:371
@@ -810,6 +810,10 @@ msgid ""
 "See http://rt.openssl.org/Ticket/Display.html?id=1751\n"
 "Use the --no-dtls command line option to avoid this message\n"
 msgstr ""
+"Predmet SSL_set_session() je spodletel s staro različico protokola 0x%x\n"
+"Ali je v uporabi različica programa OpenSSL, ki je starejša od različice 0.9.8m?\n"
+"Za več podrobnosti si oglejte http://rt.openssl.org/Ticket/Display.html?id=1751\n"
+"Z uporabo zastavice --no-dtls v argumentu ukaza, se izognete temu sporočilu\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l221
 #: ../openconnect-strings.txt:378
@@ -994,24 +998,24 @@ msgstr ""
 #: ../openconnect-strings.txt:480
 #, c-format
 msgid "DTLS got write error %d. Falling back to SSL\n"
-msgstr ""
+msgstr "Prejeta napaka pisanja DTLS %d. Opravilo bo povrnjeno na SSL.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l842
 #: ../openconnect-strings.txt:483
 #, c-format
 msgid "DTLS got write error: %s. Falling back to SSL\n"
-msgstr ""
+msgstr "Prejeta napaka pisanja DTLS: %s. Opravilo bo povrnjeno na SSL.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l853
 #: ../openconnect-strings.txt:486
 #, c-format
 msgid "Sent DTLS packet of %d bytes; DTLS send returned %d\n"
-msgstr ""
+msgstr "Poslan je bil paket DTLS dolžine %d bajtov; vrnjen paket DTLS pa je %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l865
 #: ../openconnect-strings.txt:489
 msgid "Built against SSL library with no Cisco DTLS support\n"
-msgstr ""
+msgstr "Izgrajeno na osnovi knjižnice SSL brez podpore za Cisco DTLS.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l120
 #: ../openconnect-strings.txt:492
@@ -1072,7 +1076,7 @@ msgstr "Ni pomnilnika za možnosti\n"
 #: ../openconnect-strings.txt:523
 #, c-format
 msgid "X-DTLS-Session-ID not 64 characters; is: \"%s\"\n"
-msgstr ""
+msgstr "ID seje X-DTLS-Session-ID ni dolžine 64 znakov, ampak: \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l351
 #: ../openconnect-strings.txt:526
@@ -1279,7 +1283,7 @@ msgstr "Poskus nove povezave DTLS\n"
 #: ../openconnect-strings.txt:634
 #, c-format
 msgid "No work to do; sleeping for %d ms...\n"
-msgstr ""
+msgstr "V pričakovanju novih nalog; stanje nedejavnosti je %d ms ...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l89
 #: ../openconnect-strings.txt:637
@@ -2514,7 +2518,7 @@ msgstr "Napaka branja telesa odziva HTTP\n"
 #: ../openconnect-strings.txt:1318
 #, c-format
 msgid "Error in chunked decoding. Expected '', got: '%s'"
-msgstr ""
+msgstr "Napaka odkodiranja po kosih. Pričakovan je znak '', prejet pa: '%s'"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l310
 #: ../openconnect-strings.txt:1321
@@ -2524,12 +2528,12 @@ msgstr "Telesa HTTP različice 1.0 brez zapiranja povezave ni mogoče prejeti.\n
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l380
 #: ../openconnect-strings.txt:1324
 msgid "Failed to send GET request for new config\n"
-msgstr ""
+msgstr "Pošiljanje zahteve GET za novo nastavitev je spodletela.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l402
 #: ../openconnect-strings.txt:1327
 msgid "Downloaded config file did not match intended SHA1\n"
-msgstr ""
+msgstr "Prejeta datoteka nastavitev ni skladna z razpršilom SHA1\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l419
 #: ../openconnect-strings.txt:1330
@@ -2537,6 +2541,8 @@ msgid ""
 "Error: Server asked us to download and run a 'Cisco Secure Desktop' trojan.\n"
 "This facility is disabled by default for security reasons, so you may wish to enable it."
 msgstr ""
+"Napaka: strežnik zahteva prejem in zagon trojanskega datoteke 'Cisco Secure Desktop'.\n"
+"Ta možnost je iz varnostnih razlogov privzeto onemogočena. Če želite možnost uporabljati, jo omogočite."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l426
 #: ../openconnect-strings.txt:1336
@@ -2598,7 +2604,7 @@ msgstr "Preusmeritvi na naslov URL '%s', ki ni vrste HTTPS, ni mogoče slediti\n
 #: ../openconnect-strings.txt:1365
 #, c-format
 msgid "Allocating new path for relative redirect failed: %s\n"
-msgstr ""
+msgstr "Dodeljevanje nove poti  za relativno preusmeritev je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l784
 #: ../openconnect-strings.txt:1368
