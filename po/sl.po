@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-09-25 18:02+0000\n"
-"PO-Revision-Date: 2012-10-06 12:46+0100\n"
+"POT-Creation-Date: 2012-10-06 10:47+0000\n"
+"PO-Revision-Date: 2012-10-06 19:42+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -400,7 +400,7 @@ msgstr "Nastavi šifrirno frazo ali kodo PIN za TPM SRK"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l245
 #: ../openconnect-strings.txt:138
 msgid "Key passphrase is fsid of file system"
-msgstr ""
+msgstr "Šifrirno geslo ključa je fsid datotečnega sistema"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l246
 #: ../openconnect-strings.txt:141
@@ -430,12 +430,12 @@ msgstr "Manj podroben odvod"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l253
 #: ../openconnect-strings.txt:156
 msgid "Set packet queue limit to LEN pkts"
-msgstr ""
+msgstr "Nastavi omejitev vrste paketov na LEN paketov"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l254
 #: ../openconnect-strings.txt:159
 msgid "Shell command line for using a vpnc-compatible config script"
-msgstr ""
+msgstr "Ukazna vrstica v lupini za uporabo prilagoditvenega skripta, združljivega z vpnc"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l255
 #: ../openconnect-strings.txt:162
@@ -444,8 +444,9 @@ msgstr "privzeto"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l256
 #: ../openconnect-strings.txt:165
+#, fuzzy
 msgid "Pass traffic to 'script' program, not tun"
-msgstr ""
+msgstr "Prepusti promet programu 'script', ne pa tun"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l257
 #: ../openconnect-strings.txt:168
@@ -499,8 +500,9 @@ msgstr "Ne zahtevaj povezave IPv6"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l267
 #: ../openconnect-strings.txt:198
+#, fuzzy
 msgid "OpenSSL ciphers to support for DTLS"
-msgstr ""
+msgstr "Šifre OpenSSL za podporo DTLS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l268
 #: ../openconnect-strings.txt:201
@@ -839,9 +841,9 @@ msgstr "Izmenjava signalov DTLS je spodletela: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l362
 #: ../openconnect-strings.txt:391
-#, c-format
+#, fuzzy, c-format
 msgid "Unknown DTLS parameters for requested CipherSuite '%s'\n"
-msgstr ""
+msgstr "Neznani parametri DTLS za zahtevani CipherSuite '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l375
 #: ../openconnect-strings.txt:394
@@ -879,8 +881,9 @@ msgstr "Ni naslova DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l504
 #: ../openconnect-strings.txt:412
+#, fuzzy
 msgid "Server offered no DTLS cipher option\n"
-msgstr ""
+msgstr "Strežnik ni ponudil možnosti šifer DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l511
 #: ../openconnect-strings.txt:415
@@ -982,7 +985,7 @@ msgstr "Pošlji DPD DTLS\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l781
 #: ../openconnect-strings.txt:471
 msgid "Failed to send DPD request. Expect disconnect\n"
-msgstr ""
+msgstr "Pošiljanje zahteve DPD je spodletelo. Pričakujte prekinitev povezave.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l794
 #: ../openconnect-strings.txt:474
@@ -1228,7 +1231,7 @@ msgstr "Neznan paket %02x %02x %02x %02x %02x %02x %02x %02x\n"
 #: ../openconnect-strings.txt:604
 #, c-format
 msgid "SSL wrote too few bytes! Asked for %d, sent %d\n"
-msgstr ""
+msgstr "SSL je zapisal premalo bajtov! Zahtevanih je %d, poslanih pa %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l855
 #: ../openconnect-strings.txt:607
@@ -1484,12 +1487,12 @@ msgstr "Vnos šifrirnega gesla PKCS#12:"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l442
 #: ../openconnect-strings.txt:749
 msgid "Parse PKCS#12 failed (wrong passphrase?)\n"
-msgstr "Razčlenjevanje Parse PKCS#12 je spodletelo (Ali je navedeno pravo šifrirno geslo?)\n"
+msgstr "Razčlenjevanje PKCS#12 je spodletelo (je navedeno pravo šifrirno geslo?)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l449
 #: ../openconnect-strings.txt:752
 msgid "Parse PKCS#12 failed (see above errors)\n"
-msgstr "Razčlenjevanje Parse PKCS#12 je spodletelo (napaka je navedena zgoraj)\n"
+msgstr "Razčlenjevanje PKCS#12 je spodletelo (napaka je navedena zgoraj)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l461
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l598
@@ -1513,7 +1516,7 @@ msgstr "PKCS#12 ne vsebuje osebnega ključa!"
 #: ../openconnect-strings.txt:766
 #, c-format
 msgid "Extra cert from PKCS#12: '%s'\n"
-msgstr ""
+msgstr "Dodatno potrdilo PKCS#12: '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l520
 #: ../openconnect-strings.txt:769
@@ -1567,18 +1570,18 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l652
 #: ../openconnect-strings.txt:798
 msgid "Loading private key failed (wrong passphrase?)\n"
-msgstr ""
+msgstr "Nalaganje zasebnega ključa je spodletelo (napačno šifrirno geslo?)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l658
 #: ../openconnect-strings.txt:801
 msgid "Loading private key failed (see above errors)\n"
-msgstr ""
+msgstr "Nalaganje zasebnega ključa je spodletelo (glejte napake zgoraj)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l667
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l903
 #: ../openconnect-strings.txt:805
 msgid "This binary built without PKCS#11 support\n"
-msgstr ""
+msgstr "Ta program je izgrajen brez podpore za PKCS#11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l672
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l977
@@ -1628,7 +1631,7 @@ msgstr "Odpiranje datoteke zasebnega ključa %s je spodletelo: %s\n"
 #: ../openconnect-strings.txt:833
 #, c-format
 msgid "Failed to identify private key type in '%s'\n"
-msgstr ""
+msgstr "Določevanje vrste zasebnega ključa v '%s' je spodletelo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l854
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1673
@@ -1671,7 +1674,7 @@ msgstr "Ni zadetkov za %s z naslovom '%s'\n"
 #: ../openconnect-strings.txt:855
 #, c-format
 msgid "URI '%s' has non-empty path; ignoring\n"
-msgstr ""
+msgstr "Naslov URI '%s' nima prazne poti; naslov bo prezrt.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1060
 #: ../openconnect-strings.txt:858
@@ -1727,14 +1730,14 @@ msgstr "Preverjanje potrdila strežnika je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1206
 #: ../openconnect-strings.txt:886
-#, c-format
+#, fuzzy, c-format
 msgid "Extra cert from cafile: '%s'\n"
-msgstr ""
+msgstr "Dodatno potrdilo iz datoteke potrdila: '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1237
 #: ../openconnect-strings.txt:889
 msgid "Error in client cert notAfter field\n"
-msgstr ""
+msgstr "Napaka v polju potrdila odjemalca notAfter\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1240
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l223
@@ -1763,7 +1766,7 @@ msgstr "Nalaganje potrdila je spodletelo. Opravilo je prekinjeno.\n"
 #: ../openconnect-strings.txt:907
 #, c-format
 msgid "Failed to read certs from CA file '%s'\n"
-msgstr ""
+msgstr "Branje potrdil iz datoteke CA '%s' je spodletelo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1359
 #: ../openconnect-strings.txt:910
@@ -1817,7 +1820,7 @@ msgstr "Branje z vtiča SSL je spodletelo: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l218
 #: ../openconnect-strings.txt:937
 msgid "Could not extract expiration time of certificate\n"
-msgstr ""
+msgstr "Datuma poteka potrdila ni mogoče izluščiti.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l277
 #: ../openconnect-strings.txt:940
@@ -1898,7 +1901,7 @@ msgstr "Napaka razpršila MD5: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l664
 #: ../openconnect-strings.txt:979
 msgid "Missing DEK-Info: header from OpenSSL encrypted key\n"
-msgstr ""
+msgstr "Manjkajoči podatki DEK: glava iz šifriranega ključa OpenSSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l671
 #: ../openconnect-strings.txt:982
@@ -1932,7 +1935,7 @@ msgstr "Šifrirana datoteka PEM je prekratka\n"
 #: ../openconnect-strings.txt:998
 #, c-format
 msgid "Failed to initialise cipher for decrypting PEM file: %s\n"
-msgstr ""
+msgstr "Začenjanje šifre za dešifriranje datoteke PEM je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l793
 #: ../openconnect-strings.txt:1001
@@ -2030,7 +2033,7 @@ msgstr "Nalaganje osebnega ključa kot PKCS#8 je spodletelo: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1277
 #: ../openconnect-strings.txt:1050
 msgid "Failed to decrypt PKCS#8 certificate file\n"
-msgstr ""
+msgstr "Odšifriranje datoteke potrdila PKCS#8 je spodletelo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1291
 #: ../openconnect-strings.txt:1053
@@ -2054,12 +2057,12 @@ msgstr "Napaka pri podpisovanju preizkusnih podatkov z osebnim ključem: %s\n"
 #: ../openconnect-strings.txt:1062
 #, c-format
 msgid "Error validating signature against certificate: %s\n"
-msgstr ""
+msgstr "Napaka pri overjanju podpisa s potrdilom: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1387
 #: ../openconnect-strings.txt:1065
 msgid "No SSL certificate found to match private key\n"
-msgstr ""
+msgstr "Z zasebnim ključem se ne ujema nobeno potrdilo SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1405
 #: ../openconnect-strings.txt:1068
@@ -2220,7 +2223,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1156
 #, c-format
 msgid "TPM sign function called for %d bytes.\n"
-msgstr ""
+msgstr "Funkcija podpisovanja TPM je pričakovala %d bajtov.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l118
 #: ../openconnect-strings.txt:1159
