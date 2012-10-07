@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-06 10:47+0000\n"
-"PO-Revision-Date: 2012-10-06 19:42+0100\n"
+"PO-Revision-Date: 2012-10-07 11:20+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -360,7 +360,7 @@ msgstr "Pokaži besedilo pomoči"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l237
 #: ../openconnect-strings.txt:114
 msgid "Use IFNAME for tunnel interface"
-msgstr "Za vmesnik tunela uporabi IFNAME"
+msgstr "Za tunelski vmesnik uporabi IFNAME"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l238
 #: ../openconnect-strings.txt:117
@@ -444,9 +444,8 @@ msgstr "privzeto"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l256
 #: ../openconnect-strings.txt:165
-#, fuzzy
 msgid "Pass traffic to 'script' program, not tun"
-msgstr "Prepusti promet programu 'script', ne pa tun"
+msgstr "Prepusti promet programu 'script', ne pa TUN"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l257
 #: ../openconnect-strings.txt:168
@@ -500,7 +499,6 @@ msgstr "Ne zahtevaj povezave IPv6"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l267
 #: ../openconnect-strings.txt:198
-#, fuzzy
 msgid "OpenSSL ciphers to support for DTLS"
 msgstr "Šifre OpenSSL za podporo DTLS"
 
@@ -557,7 +555,7 @@ msgstr "Določite krajevna vrata za datagrame DTLS"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l288
 #: ../openconnect-strings.txt:231
 msgid "Allocation failure for string from stdin\n"
-msgstr ""
+msgstr "Napaka dodeljevanja za niz s standardnega vhoda\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l292
 #: ../openconnect-strings.txt:234
@@ -606,7 +604,7 @@ msgstr "Strukture vpninfo ni mogoče dodeliti.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l493
 #: ../openconnect-strings.txt:257
 msgid "Cannot use 'config' option inside config file\n"
-msgstr ""
+msgstr "Možnosti 'config' ni mogoče uporabiti znotraj nastavitvene datoteke\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l498
 #: ../openconnect-strings.txt:260
@@ -627,6 +625,8 @@ msgid ""
 "Disabling all HTTP connection re-use due to --no-http-keepalive option.\n"
 "If this helps, please report to <openconnect-devel@lists.infradead.org>.\n"
 msgstr ""
+"Zaradi uporabe možnosti --no-http-keepalive je onemogočena ponovna uporaba povezav HTTP.\n"
+"V kolikor možnost deluje, pošljite poročilo na <openconnect-devel@lists.infradead.org>.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l637
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l651
@@ -674,7 +674,7 @@ msgstr "Ustvarjanje povezave SSL je spodletelo.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l805
 #: ../openconnect-strings.txt:297
 msgid "Set up tun device failed\n"
-msgstr "Namestitev naprave tun je spodletela\n"
+msgstr "Namestitev naprave TUN je spodletela\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l811
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/http.c#l459
@@ -697,7 +697,7 @@ msgstr "Vzpostavljena je povezava s %s kot %s%s%s, z uporabo %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l831
 #: ../openconnect-strings.txt:310
 msgid "No --script argument provided; DNS and routing are not configured\n"
-msgstr ""
+msgstr "Ni navedenega argumenta --script; Vrednosti DNS in nastavitve preusmerjanja niso nastavljene.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/main.c#l833
 #: ../openconnect-strings.txt:313
@@ -791,7 +791,7 @@ msgstr "Začenjanje DTLSv1 CTX je spodletelo.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l143
 #: ../openconnect-strings.txt:362
 msgid "Set DTLS cipher list failed\n"
-msgstr "Nastavljanje seznama števk DTLS je spodletelo.\n"
+msgstr "Nastavljanje seznama šifer DTLS je spodletelo.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l156
 #: ../openconnect-strings.txt:365
@@ -801,7 +801,7 @@ msgstr "Začenjanje seje DTLSv1 je spodletela\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l177
 #: ../openconnect-strings.txt:368
 msgid "Not precisely one DTLS cipher\n"
-msgstr "Ni natanko ena števka DTLS.\n"
+msgstr "Ni natanko ena šifra DTLS.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l195
 #: ../openconnect-strings.txt:371
@@ -841,7 +841,7 @@ msgstr "Izmenjava signalov DTLS je spodletela: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l362
 #: ../openconnect-strings.txt:391
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown DTLS parameters for requested CipherSuite '%s'\n"
 msgstr "Neznani parametri DTLS za zahtevani CipherSuite '%s'\n"
 
@@ -881,7 +881,6 @@ msgstr "Ni naslova DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l504
 #: ../openconnect-strings.txt:412
-#, fuzzy
 msgid "Server offered no DTLS cipher option\n"
 msgstr "Strežnik ni ponudil možnosti šifer DTLS\n"
 
@@ -938,7 +937,7 @@ msgstr "Prejeta zahteva DPD DTLS\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l719
 #: ../openconnect-strings.txt:443
 msgid "Failed to send DPD response. Expect disconnect\n"
-msgstr "Pošiljanje odziva DPD je spodletelo. Pričakovana je prekinitev povezave.\n"
+msgstr "Pošiljanje odziva DPD je spodletelo. Pričakujte prekinitev povezave.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l723
 #: ../openconnect-strings.txt:446
@@ -995,7 +994,7 @@ msgstr "Pošlji KEEPALIVE DTLS\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l799
 #: ../openconnect-strings.txt:477
 msgid "Failed to send keepalive request. Expect disconnect\n"
-msgstr ""
+msgstr "Pošiljanje zahteve KEEPALIVE je spodletelo. Pričakujte prekinitev povezave.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/dtls.c#l828
 #: ../openconnect-strings.txt:480
@@ -1359,7 +1358,7 @@ msgstr "Ni mogoče razpeljati %s za IPv%d: %s\n"
 #: ../openconnect-strings.txt:673
 #, c-format
 msgid "Failed to open tun device: %s\n"
-msgstr "Odpiranje naprave tun je spodletelo: %s\n"
+msgstr "Odpiranje naprave TUN je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l520
 #: ../openconnect-strings.txt:676
@@ -1375,12 +1374,12 @@ msgstr "open /dev/tun"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l538
 #: ../openconnect-strings.txt:682
 msgid "Failed to create new tun"
-msgstr "Ni mogoče ustvariti novega naprave tun"
+msgstr "Ni mogoče ustvariti nove naprave tun"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l544
 #: ../openconnect-strings.txt:685
 msgid "Failed to put tun file descriptor into message-discard mode"
-msgstr ""
+msgstr "Podajanje opisnika datoteke TUN v načunu izločanja sporočil je spodletela."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l579
 #: ../openconnect-strings.txt:688
@@ -1552,7 +1551,7 @@ msgstr "Ta različica programa OpenConnect je izgrajena brez podpore za TPM\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l587
 #: ../openconnect-strings.txt:788
 msgid "Failed to reload X509 cert for expiry check\n"
-msgstr ""
+msgstr "Ponovno nalaganje potrdila X509 za preverjane preteklosti je spodletelo.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l621
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l264
@@ -1656,7 +1655,7 @@ msgstr "Ni zadetkov za altname '%s'\n"
 #: ../openconnect-strings.txt:846
 #, c-format
 msgid "Certificate has GEN_IPADD altname with bogus length %d\n"
-msgstr ""
+msgstr "Potrdilo ima določena drugotna imena GEN_IPADD z nedovoljeno dolžino %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1006
 #: ../openconnect-strings.txt:849
@@ -1692,7 +1691,7 @@ msgstr "Ni zadetkov za naslov URI '%s'\n"
 #: ../openconnect-strings.txt:864
 #, c-format
 msgid "No altname in peer cert matched '%s'\n"
-msgstr ""
+msgstr "Nobeno izmed navedenih drugotnih imen v potrdilu ni skladno z '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1094
 #: ../openconnect-strings.txt:867
@@ -1730,9 +1729,9 @@ msgstr "Preverjanje potrdila strežnika je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1206
 #: ../openconnect-strings.txt:886
-#, fuzzy, c-format
+#, c-format
 msgid "Extra cert from cafile: '%s'\n"
-msgstr "Dodatno potrdilo iz datoteke potrdila: '%s'\n"
+msgstr "Dodatno potrdilo iz datoteke potrdil: '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1237
 #: ../openconnect-strings.txt:889
@@ -1890,7 +1889,7 @@ msgstr "Nastavljanje potrdila PKCS#11 je spodletelo: %s\n"
 #: ../openconnect-strings.txt:973
 #, c-format
 msgid "Could not initialise MD5 hash: %s\n"
-msgstr ""
+msgstr "Razprtšila MD5 ni mogoče začeti: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l606
 #: ../openconnect-strings.txt:976
@@ -2155,13 +2154,13 @@ msgstr "Napaka med uvažanjem potrdila strežnika\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1778
 #: ../openconnect-strings.txt:1120
 msgid "Failed to allocate memory for cafile certs\n"
-msgstr "Dodeljevanje pomnilnika podpornim potrdilom je spodletelo\n"
+msgstr "Dodeljevanje pomnilnika potrdilom iz datoteke potrdil je spodletelo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1797
 #: ../openconnect-strings.txt:1123
 #, c-format
 msgid "Failed to read certs from cafile: %s\n"
-msgstr "Ni mogoče prebrati potrdil iz datoteke cafile: %s\n"
+msgstr "Ni mogoče prebrati potrdil iz datoteke potrdil: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1811
 #: ../openconnect-strings.txt:1126
