@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-06 10:47+0000\n"
-"PO-Revision-Date: 2012-10-07 13:45+0100\n"
+"PO-Revision-Date: 2012-10-07 13:47+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1140,7 +1140,7 @@ msgstr "Dodelitev medpomnilnika za stiskanje je spodletela\n"
 #: ../openconnect-strings.txt:556
 #, c-format
 msgid "sleep %ds, remaining timeout %ds\n"
-msgstr "v mirovanju %ds, preostaja še %ds."
+msgstr "v mirovanju %ds, preostaja še %ds.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l590
 #: ../openconnect-strings.txt:559
