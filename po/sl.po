@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-06 10:47+0000\n"
-"PO-Revision-Date: 2012-10-07 11:20+0100\n"
+"PO-Revision-Date: 2012-10-07 13:45+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1140,7 +1140,7 @@ msgstr "Dodelitev medpomnilnika za stiskanje je spodletela\n"
 #: ../openconnect-strings.txt:556
 #, c-format
 msgid "sleep %ds, remaining timeout %ds\n"
-msgstr ""
+msgstr "v mirovanju %ds, preostaja še %ds."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l590
 #: ../openconnect-strings.txt:559
@@ -1564,7 +1564,7 @@ msgstr "Nalaganje '%s' iz shrambe ključev je spodletelo: %s\n"
 #: ../openconnect-strings.txt:795
 #, c-format
 msgid "Failed to create BIO for keystore item '%s'\n"
-msgstr ""
+msgstr "Ustvarjanje pravil BIO za predmet shrambe ključa '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l652
 #: ../openconnect-strings.txt:798
@@ -1661,7 +1661,7 @@ msgstr "Potrdilo ima določena drugotna imena GEN_IPADD z nedovoljeno dolžino %
 #: ../openconnect-strings.txt:849
 #, c-format
 msgid "Matched %s address '%s'\n"
-msgstr ""
+msgstr "Skladnih je %s naslovov '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1013
 #: ../openconnect-strings.txt:852
@@ -1696,7 +1696,7 @@ msgstr "Nobeno izmed navedenih drugotnih imen v potrdilu ni skladno z '%s'\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1094
 #: ../openconnect-strings.txt:867
 msgid "No subject name in peer cert!\n"
-msgstr ""
+msgstr "Ni imena zadeve v potrdilu soležnika!\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1114
 #: ../openconnect-strings.txt:870
@@ -1713,7 +1713,7 @@ msgstr "Neskladno potrdilo zadeve soležnika ('%s' != '%s')\n"
 #: ../openconnect-strings.txt:876
 #, c-format
 msgid "Matched peer certificate subject name '%s'\n"
-msgstr ""
+msgstr "Skladno je ime zadeve v potrdilu soležnika '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/openssl.c#l1152
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1717
@@ -2234,13 +2234,13 @@ msgstr "Ustvarjanje predmeta razpršila TPM je spodletelo: %s\n"
 #: ../openconnect-strings.txt:1162
 #, c-format
 msgid "Failed to set value in TPM hash object: %s\n"
-msgstr ""
+msgstr "Nastavljanje vrednosti predmeta razpršila TPM je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l135
 #: ../openconnect-strings.txt:1165
 #, c-format
 msgid "TPM hash signature failed: %s\n"
-msgstr "Ustvarjanje predmeta razpršila TPM je spodletelo: %s\n"
+msgstr "Podpis razpršila TPM je spodletel: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l157
 #: ../openconnect-strings.txt:1168
