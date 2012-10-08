@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-06 10:47+0000\n"
-"PO-Revision-Date: 2012-10-07 13:47+0100\n"
+"PO-Revision-Date: 2012-10-07 21:57+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1235,12 +1235,12 @@ msgstr "SSL je zapisal premalo bajtov! Zahtevanih je %d, poslanih pa %d\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l855
 #: ../openconnect-strings.txt:607
 msgid "CSTP rekey due\n"
-msgstr ""
+msgstr "Protokol CSTP zahteva ponovno preverjanje ključa\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l862
 #: ../openconnect-strings.txt:610
 msgid "CSTP Dead Peer Detection detected dead peer!\n"
-msgstr ""
+msgstr "Zaznava mrtvih omrežnih soležnikov CSTP je zaznala mrtvega omrežnega soležnika!\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/cstp.c#l874
 #: ../openconnect-strings.txt:613
@@ -1301,13 +1301,13 @@ msgstr "SIOCSIFMTU"
 #: ../openconnect-strings.txt:643
 #, c-format
 msgid "Discard bad split include: \"%s\"\n"
-msgstr ""
+msgstr "Opusti slabo deljenja z vključevanjem: \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l142
 #: ../openconnect-strings.txt:646
 #, c-format
 msgid "Discard bad split exclude: \"%s\"\n"
-msgstr ""
+msgstr "Opusti slabo deljenje z izključevanjem: \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/tun.c#l387
 #: ../openconnect-strings.txt:649
@@ -1917,7 +1917,7 @@ msgstr "Nepodprta vrsta šifriranja PEM: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l722
 #: ../openconnect-strings.txt:989
 msgid "Invalid salt in encrypted PEM file\n"
-msgstr ""
+msgstr "Neveljaven salt v šifrirani datoteki PEM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l746
 #: ../openconnect-strings.txt:992
@@ -2067,7 +2067,7 @@ msgstr "Z zasebnim ključem se ne ujema nobeno potrdilo SSL\n"
 #: ../openconnect-strings.txt:1068
 #, c-format
 msgid "Setting certificate recovation list failed: %s\n"
-msgstr ""
+msgstr "Določanje seznama preklicev potrdil je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls.c#l1458
 #: ../openconnect-strings.txt:1071
@@ -2216,7 +2216,7 @@ msgstr "Koda PIN:"
 #: ../openconnect-strings.txt:1153
 #, c-format
 msgid "Failed to SHA1 input data for signing: %s\n"
-msgstr ""
+msgstr "Preverjanje razpršila SHA1 vhodnih podatkov za podpisovanje je spodletelo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l111
 #: ../openconnect-strings.txt:1156
@@ -2246,14 +2246,14 @@ msgstr "Podpis razpršila TPM je spodletel: %s\n"
 #: ../openconnect-strings.txt:1168
 #, c-format
 msgid "Error decoding TSS key blob: %s\n"
-msgstr ""
+msgstr "Napaka odkodiranja binarnem paketu ključa TSS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l164
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l175
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l188
 #: ../openconnect-strings.txt:1173
 msgid "Error in TSS key blob\n"
-msgstr ""
+msgstr "Napaka v binarnem paketu ključa TSS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5bf5a256e5:/gnutls_tpm.c#l195
 #: ../openconnect-strings.txt:1176
