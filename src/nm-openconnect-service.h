@@ -51,6 +51,8 @@
 #define NM_OPENCONNECT_KEY_PROXY "proxy"
 #define NM_OPENCONNECT_KEY_CSD_ENABLE "enable_csd_trojan"
 #define NM_OPENCONNECT_KEY_CSD_WRAPPER "csd_wrapper"
+#define NM_OPENCONNECT_KEY_STOKEN_SOURCE "stoken_source"
+#define NM_OPENCONNECT_KEY_STOKEN_STRING "stoken_string"
 
 typedef struct {
 	NMVPNPlugin parent;

@@ -165,6 +165,16 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 	if (bval)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, "yes");
 
+	/* Soft token source */
+	buf = g_key_file_get_string (keyfile, "openconnect", "StokenSource", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE, buf);
+
+	/* Soft token string */
+	buf = g_key_file_get_string (keyfile, "openconnect", "StokenString", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING, buf);
+
 	return connection;
 }
 
@@ -185,6 +195,8 @@ export (NMVpnPluginUiInterface *iface,
 	const char *usercert = NULL;
 	const char *privkey = NULL;
 	gboolean pem_passphrase_fsid = FALSE;
+	const char *stoken_source = NULL;
+	const char *stoken_string = NULL;
 	gboolean success = FALSE;
 	FILE *f;
 
@@ -234,6 +246,14 @@ export (NMVpnPluginUiInterface *iface,
 	if (value && !strcmp (value, "yes"))
 		pem_passphrase_fsid = TRUE;
 
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE);
+	if (value && strlen (value))
+		stoken_source = value;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING);
+	if (value && strlen (value))
+		stoken_string = value;
+
 	fprintf (f,
 		 "[openconnect]\n"
 		 "Description=%s\n"
@@ -244,7 +264,9 @@ export (NMVpnPluginUiInterface *iface,
 		 "CSDWrapper=%s\n"
 		 "UserCertificate=%s\n"
 		 "PrivateKey=%s\n"
-		 "FSID=%s\n",
+		 "FSID=%s\n"
+		 "StokenSource=%s\n"
+		 "StokenString=%s\n",
 		 /* Description */           nm_setting_connection_get_id (s_con),
 		 /* Host */                  gateway,
 		 /* CA Certificate */        cacert,
@@ -253,7 +275,9 @@ export (NMVpnPluginUiInterface *iface,
 		 /* CSD Wrapper Script */    csd_wrapper ? csd_wrapper : "",
 		 /* User Certificate */      usercert,
 		 /* Private Key */           privkey,
-		 /* FSID */                  pem_passphrase_fsid ? "1" : "0");
+		 /* FSID */                  pem_passphrase_fsid ? "1" : "0",
+		 /* Soft token source */     stoken_source ? stoken_source : "",
+		 /* Soft token string */     stoken_string ? stoken_string : "");
 
 	success = TRUE;
 
@@ -338,6 +362,52 @@ stuff_changed_cb (GtkWidget *widget, gpointer user_data)
 }
 
 static gboolean
+init_stoken_ui (OpenconnectPluginUiWidget *self,
+				OpenconnectPluginUiWidgetPrivate *priv,
+				NMSettingVPN *s_vpn)
+{
+	GtkWidget *widget;
+	GtkTextBuffer *buffer;
+	const char *value;
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_vbox"));
+	if (!widget)
+		return FALSE;
+	gtk_box_pack_start (GTK_BOX (priv->widget), widget, FALSE, FALSE, 0);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_source"));
+	if (!widget)
+		return FALSE;
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE);
+		if (value) {
+			if (!strcmp (value, "stokenrc"))
+				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 1);
+			else if (!strcmp (value, "manual"))
+				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 2);
+			else
+				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
+		}
+	}
+	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_string"));
+	if (!widget)
+		return FALSE;
+	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (widget));
+	if (!buffer)
+		return FALSE;
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING);
+		if (value)
+			gtk_text_buffer_set_text (buffer, value, -1);
+	}
+	g_signal_connect (G_OBJECT (buffer), "changed", G_CALLBACK (stuff_changed_cb), self);
+
+	return TRUE;
+}
+
+static gboolean
 init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GError **error)
 {
 	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
@@ -401,6 +471,9 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
+	if (init_stoken_ui (self, priv, s_vpn) == FALSE)
+		return FALSE;
+
 	tls_pw_init_auth_widget (priv->builder, priv->group, s_vpn, stuff_changed_cb, self);
 
 	return TRUE;
@@ -425,6 +498,10 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	NMSettingVPN *s_vpn;
 	GtkWidget *widget;
 	char *str;
+	gint idx;
+	gboolean stoken_string_editable = FALSE;
+	GtkTextIter iter_start, iter_end;
+	GtkTextBuffer *buffer;
 	const char *auth_type = NULL;
 
 	if (!check_validity (self, error))
@@ -455,6 +532,47 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, str);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_source"));
+	idx = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
+	str = NULL;
+	switch (idx) {
+	case 0:
+		str = "disabled";
+		break;
+	case 1:
+		str = "stokenrc";
+		break;
+	case 2:
+		str = "manual";
+		stoken_string_editable = TRUE;
+		break;
+	}
+	if (str)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE, str);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_string_label"));
+	gtk_widget_set_sensitive (widget, stoken_string_editable);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_string"));
+	gtk_widget_set_sensitive (widget, stoken_string_editable);
+
+	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (widget));
+	gtk_text_buffer_get_start_iter (buffer, &iter_start);
+	gtk_text_buffer_get_end_iter (buffer, &iter_end);
+	str = (char *) gtk_text_buffer_get_text (buffer, &iter_start, &iter_end, TRUE);
+	if (str) {
+		char *src = str, *dst = str;
+
+		/* zap invalid characters */
+		for (; *src; src++)
+			if ((*src >= '0' && *src <= '9') || *src == '-')
+				*(dst++) = *src;
+		*dst = 0;
+
+		if (strlen (str))
+			nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING, str);
+	}
 
 	/* These are different for every login session, and should not be stored */
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gwcert",
