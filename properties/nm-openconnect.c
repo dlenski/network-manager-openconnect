@@ -518,9 +518,6 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	GtkTextBuffer *buffer;
 	const char *auth_type = NULL;
 
-	if (!check_validity (self, error))
-		return FALSE;
-
 	s_vpn = NM_SETTING_VPN (nm_setting_vpn_new ());
 	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_DBUS_SERVICE_OPENCONNECT, NULL);
 
@@ -587,6 +584,9 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 		if (strlen (str))
 			nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING, str);
 	}
+
+	if (!check_validity (self, error))
+		return FALSE;
 
 	/* These are different for every login session, and should not be stored */
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gwcert",
