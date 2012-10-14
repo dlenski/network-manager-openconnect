@@ -64,6 +64,10 @@
 #define OPENCONNECT_OPENSSL
 #endif
 
+#if !OPENCONNECT_CHECK_VER(2,1)
+#define openconnect_set_stoken_mode(...) -EOPNOTSUPP
+#endif
+
 #ifdef OPENCONNECT_OPENSSL
 #include <openssl/ssl.h>
 #include <openssl/bio.h>
@@ -1043,6 +1047,8 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	char *csd_wrapper;
 	char *pem_passphrase_fsid;
 	char *cafile;
+	char *stoken_source;
+	char *stoken_string;
 
 	hostname = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_GATEWAY);
 	if (!hostname) {
@@ -1112,6 +1118,20 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 						   NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID);
 	if (pem_passphrase_fsid && cert && !strcmp(pem_passphrase_fsid, "yes"))
 		openconnect_passphrase_from_fsid(vpninfo);
+
+	stoken_source = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_STOKEN_SOURCE);
+	stoken_string = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_STOKEN_STRING);
+	if (stoken_source) {
+		int ret = 0;
+
+		if (!strcmp(stoken_source, "manual") && stoken_string)
+			ret = openconnect_set_stoken_mode(vpninfo, 1, stoken_string);
+		else if (!strcmp(stoken_source, "stokenrc"))
+			ret = openconnect_set_stoken_mode(vpninfo, 1, NULL);
+
+		if (ret)
+			fprintf(stderr, "Failed to initialize stoken: %d\n", ret);
+	}
 
 	return 0;
 }
