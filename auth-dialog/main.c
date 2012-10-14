@@ -1089,17 +1089,18 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	if (cafile)
 		openconnect_set_cafile(vpninfo, g_strdup (cafile));
 
-	csd = g_hash_table_lookup (options, "enable_csd_trojan");
+	csd = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_CSD_ENABLE);
 	if (csd && !strcmp(csd, "yes")) {
 		/* We're not running as root; we can't setuid(). */
-		csd_wrapper = g_hash_table_lookup (options, "csd_wrapper");
+		csd_wrapper = g_hash_table_lookup (options,
+						   NM_OPENCONNECT_KEY_CSD_WRAPPER);
 		if (csd_wrapper && !csd_wrapper[0])
 			csd_wrapper = NULL;
 
 		openconnect_setup_csd(vpninfo, getuid(), 1, g_strdup (csd_wrapper));
 	}
 
-	proxy = g_hash_table_lookup (options, "proxy");
+	proxy = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_PROXY);
 	if (proxy && proxy[0] && openconnect_set_http_proxy(vpninfo, g_strdup (proxy)))
 		return -EINVAL;
 
@@ -1107,7 +1108,8 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	sslkey = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_PRIVKEY);
 	openconnect_set_client_cert (vpninfo, g_strdup (cert), g_strdup (sslkey));
 
-	pem_passphrase_fsid = g_hash_table_lookup (options, "pem_passphrase_fsid");
+	pem_passphrase_fsid = g_hash_table_lookup (options,
+						   NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID);
 	if (pem_passphrase_fsid && cert && !strcmp(pem_passphrase_fsid, "yes"))
 		openconnect_passphrase_from_fsid(vpninfo);
 
