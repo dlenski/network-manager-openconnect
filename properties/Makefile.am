@@ -11,28 +11,28 @@ uidir = $(datadir)/gnome-vpn-properties/openconnect
 ui_DATA = nm-openconnect-dialog.ui
 
 libnm_openconnect_properties_la_CFLAGS =                \
-        $(GTK_CFLAGS)                                   \
-        $(GCONF_CFLAGS)                                 \
-        $(NM_CFLAGS)                        \
-        $(OPENCONNECT_CFLAGS)                           \
-        -DICONDIR=\""$(datadir)/pixmaps"\"              \
-        -DUIDIR=\""$(uidir)"\"                          \
-        -DG_DISABLE_DEPRECATED                          \
-        -DGDK_DISABLE_DEPRECATED                        \
-        -DGNOME_DISABLE_DEPRECATED                      \
-        -DGNOMELOCALEDIR=\"$(datadir)/locale\"		\
-        -DVERSION=\"$(VERSION)\"
+	$(GTK_CFLAGS)                                   \
+	$(GCONF_CFLAGS)                                 \
+	$(NM_CFLAGS)                                    \
+	$(OPENCONNECT_CFLAGS)                           \
+	-DICONDIR=\""$(datadir)/pixmaps"\"              \
+	-DUIDIR=\""$(uidir)"\"                          \
+	-DG_DISABLE_DEPRECATED                          \
+	-DGDK_DISABLE_DEPRECATED                        \
+	-DGNOME_DISABLE_DEPRECATED                      \
+	-DGNOMELOCALEDIR=\"$(datadir)/locale\"          \
+	-DVERSION=\"$(VERSION)\"
 
 libnm_openconnect_properties_la_LIBADD = \
-        $(GTK_LIBS) \
-        $(GCONF_LIBS) \
-        $(NM_LIBS) \
-        $(OPENCONNECT_LIBS)
+	$(GTK_LIBS) \
+	$(GCONF_LIBS) \
+	$(NM_LIBS) \
+	$(OPENCONNECT_LIBS)
 
-libnm_openconnect_properties_la_LDFLAGS =      \
-        -avoid-version
+libnm_openconnect_properties_la_LDFLAGS = \
+	-avoid-version
 
 CLEANFILES = *.bak *~
 
 EXTRA_DIST =                            \
-        $(ui_DATA)
+	$(ui_DATA)
