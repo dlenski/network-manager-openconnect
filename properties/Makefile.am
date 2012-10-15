@@ -14,6 +14,7 @@ libnm_openconnect_properties_la_CFLAGS =                \
         $(GTK_CFLAGS)                                   \
         $(GCONF_CFLAGS)                                 \
         $(NM_CFLAGS)                        \
+        $(OPENCONNECT_CFLAGS)                           \
         -DICONDIR=\""$(datadir)/pixmaps"\"              \
         -DUIDIR=\""$(uidir)"\"                          \
         -DG_DISABLE_DEPRECATED                          \
@@ -25,7 +26,8 @@ libnm_openconnect_properties_la_CFLAGS =                \
 libnm_openconnect_properties_la_LIBADD = \
         $(GTK_LIBS) \
         $(GCONF_LIBS) \
-        $(NM_LIBS)
+        $(NM_LIBS) \
+        $(OPENCONNECT_LIBS)
 
 libnm_openconnect_properties_la_LDFLAGS =      \
         -avoid-version
