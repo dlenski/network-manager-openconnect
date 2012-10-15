@@ -36,6 +36,16 @@
 #include <string.h>
 #include <gtk/gtk.h>
 
+#include <openconnect.h>
+
+#ifndef OPENCONNECT_CHECK_VER
+#define OPENCONNECT_CHECK_VER(x,y) 0
+#endif
+
+#if !OPENCONNECT_CHECK_VER(2,1)
+#define openconnect_has_stoken_support() 0
+#endif
+
 #define NM_VPN_API_SUBJECT_TO_CHANGE
 
 #include <nm-vpn-plugin-ui-interface.h>
@@ -369,6 +379,10 @@ init_stoken_ui (OpenconnectPluginUiWidget *self,
 	GtkWidget *widget;
 	GtkTextBuffer *buffer;
 	const char *value;
+
+	/* don't advertise stoken properties if we can't use them anyway */
+	if (!openconnect_has_stoken_support ())
+		return TRUE;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_vbox"));
 	if (!widget)
