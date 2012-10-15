@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-10-06 10:47+0000\n"
-"PO-Revision-Date: 2012-10-07 21:57+0100\n"
+"POT-Creation-Date: 2012-10-15 05:31+0000\n"
+"PO-Revision-Date: 2012-10-15 08:09+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -21,21 +21,21 @@ msgstr ""
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../auth-dialog/main.c:766
+#: ../auth-dialog/main.c:770
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
 msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:793
+#: ../auth-dialog/main.c:797
 #, c-format
 msgid "Connect to VPN '%s'"
 msgstr "Poveži v omrežje VPN '%s'"
 
-#: ../auth-dialog/main.c:795
+#: ../auth-dialog/main.c:799
 msgid "Connect to VPN"
 msgstr "Poveži v omrežje VPN"
 
-#: ../auth-dialog/main.c:838
+#: ../auth-dialog/main.c:842
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -46,31 +46,31 @@ msgstr ""
 "Vzrokn: %s\n"
 "Ali želite potrdilo vseeno sprejeti?"
 
-#: ../auth-dialog/main.c:1490
+#: ../auth-dialog/main.c:1512
 msgid "VPN host"
 msgstr "Gostitelj VPN"
 
-#: ../auth-dialog/main.c:1510
+#: ../auth-dialog/main.c:1532
 msgid "Automatically start connecting next time"
 msgstr "Naslednjič samodejno poveži"
 
-#: ../auth-dialog/main.c:1531
+#: ../auth-dialog/main.c:1553
 msgid "Select a host to fetch the login form"
 msgstr "Izbor gostitelja za pridobivanje obrazca prijave"
 
-#: ../auth-dialog/main.c:1536
+#: ../auth-dialog/main.c:1558
 msgid "Contacting host, please wait..."
 msgstr "Prijavljanje ..."
 
-#: ../auth-dialog/main.c:1556
+#: ../auth-dialog/main.c:1578
 msgid "_Login"
 msgstr "_Prijava"
 
-#: ../auth-dialog/main.c:1570
+#: ../auth-dialog/main.c:1592
 msgid "Save passwords"
 msgstr "Shrani gesla"
 
-#: ../auth-dialog/main.c:1578
+#: ../auth-dialog/main.c:1600
 msgid "Log"
 msgstr "Dnevnik"
 
@@ -90,11 +90,11 @@ msgstr "Izbor zasebnega ključa ..."
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Potrdila PEM (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect.c:50
+#: ../properties/nm-openconnect.c:60
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "Združljivo s Cisco AnyConnect VPN (openconnect)"
 
-#: ../properties/nm-openconnect.c:51
+#: ../properties/nm-openconnect.c:61
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Združljivo s Cisco AnyConnect SSL VPN."
 
@@ -115,7 +115,7 @@ msgid "_Proxy:"
 msgstr "_Posredniški strežnik:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "_CA Certificate:"
+msgid "CA C_ertificate:"
 msgstr "Potrdilo _CA:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:6
@@ -142,43 +142,67 @@ msgstr "_Zasebni ključ:"
 msgid "Use _FSID for key passphrase"
 msgstr "Uporabite _FSID za šifrirno geslo"
 
-#: ../src/nm-openconnect-service.c:142
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Overitev programskega žetona</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "Token _Source:"
+msgstr "_Vir žetona:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token St_ring:"
+msgstr "_Niz žetona:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Disabled"
+msgstr "Onemogočeno"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "Read from ~/.stokenrc"
+msgstr "Preberi iz ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "Manually entered"
+msgstr "Ročno vpisano"
+
+#: ../src/nm-openconnect-service.c:144
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr "neveljavna lastnost celega števila '%s', ki je izven območja [%d -> %d]"
 
-#: ../src/nm-openconnect-service.c:152
+#: ../src/nm-openconnect-service.c:154
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr "neveljavna logična lastnost '%s' (ni vrednost da oziroma ne)"
 
-#: ../src/nm-openconnect-service.c:159
+#: ../src/nm-openconnect-service.c:161
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "Neupravljana lastnost  '%s' vrste %s"
 
-#: ../src/nm-openconnect-service.c:172
+#: ../src/nm-openconnect-service.c:174
 #, c-format
 msgid "property '%s' invalid or not supported"
 msgstr "lastnost  '%s' ni veljavna ali pa ni podprta"
 
-#: ../src/nm-openconnect-service.c:188
+#: ../src/nm-openconnect-service.c:190
 msgid "No VPN configuration options."
 msgstr "Ni možnosti nastavitev VPN"
 
-#: ../src/nm-openconnect-service.c:206
+#: ../src/nm-openconnect-service.c:208
 msgid "No VPN secrets!"
 msgstr "Ni skrivnih podatkov VPN!"
 
-#: ../src/nm-openconnect-service.c:374
+#: ../src/nm-openconnect-service.c:376
 msgid "Could not find openconnect binary."
 msgstr "Programa openconnect ni mogoče najti"
 
-#: ../src/nm-openconnect-service.c:386
+#: ../src/nm-openconnect-service.c:388
 msgid "No VPN gateway specified."
 msgstr "Ni določenega prehoda VPN."
 
-#: ../src/nm-openconnect-service.c:396
+#: ../src/nm-openconnect-service.c:398
 msgid "No WebVPN cookie provided."
 msgstr "Piškotek WebVPN ni na voljo."
 
