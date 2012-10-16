@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-15 22:54+0000\n"
-"PO-Revision-Date: 2012-10-16 08:45+0100\n"
+"PO-Revision-Date: 2012-10-16 20:18+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -559,7 +559,7 @@ msgstr "Preberi geslo s standardnega dovoda"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l282
 #: ../openconnect-strings.txt:219
 msgid "Use software token to generate password"
-msgstr ""
+msgstr "Uporabi uporabniški prstni odtis za ustvarjanje gesla"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l284
 #: ../openconnect-strings.txt:222
@@ -820,7 +820,7 @@ msgstr "Izbira overitve \"%s\" ni veljavna.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1231
 #: ../openconnect-strings.txt:365
 msgid "Soft token string is invalid\n"
-msgstr ""
+msgstr "Uporabniški prstni odtis je neveljaven\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1234
 #: ../openconnect-strings.txt:368
@@ -830,7 +830,7 @@ msgstr "Ni mogoče odpreti datoteke ~/.stokenrc.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1237
 #: ../openconnect-strings.txt:371
 msgid "OpenConnect was not built with soft token support\n"
-msgstr ""
+msgstr "Program OpenConnect ni izgrajen s podporo za uporabniški prstni odtis\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1240
 #: ../openconnect-strings.txt:374
@@ -2905,7 +2905,7 @@ msgstr "Ni ročnika obrazca; vnosov ni mogoče overiti.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l532
 #: ../openconnect-strings.txt:1517
 msgid "Enter credentials to unlock software token."
-msgstr ""
+msgstr "Vnos poveril za odklep uporabniškega prstnega odtisa."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l540
 #: ../openconnect-strings.txt:1520
@@ -2925,7 +2925,7 @@ msgstr "PIN: "
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l584
 #: ../openconnect-strings.txt:1529
 msgid "User bypassed soft token.\n"
-msgstr ""
+msgstr "Uporabnik je obšel uporabniški prstni odtis.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l591
 #: ../openconnect-strings.txt:1532
@@ -2951,7 +2951,7 @@ msgstr "Napačno geslo PIN, poskusite znova.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l627
 #: ../openconnect-strings.txt:1545
 msgid "Soft token init was successful.\n"
-msgstr ""
+msgstr "Začenjanje uporabniškega prstnega odtisa je bilo uspešno.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l650
 #: ../openconnect-strings.txt:1548
@@ -2966,7 +2966,7 @@ msgstr "Zahtevana je potrditev za ustvarjanje NASLEDNJE kode žetona.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l659
 #: ../openconnect-strings.txt:1554
 msgid "Server is rejecting the soft token; switching to manual entry\n"
-msgstr ""
+msgstr "Strežnik zavrača uporabniški prstni odtis; preklopljen bo način za ročni vnos.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l690
 #: ../openconnect-strings.txt:1557
