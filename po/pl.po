@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-16 16:38+0200\n"
-"PO-Revision-Date: 2012-10-16 16:39+0200\n"
+"POT-Creation-Date: 2012-10-17 21:20+0200\n"
+"PO-Revision-Date: 2012-10-17 21:22+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -666,7 +666,7 @@ msgstr ""
 #: ../openconnect-strings.txt:279
 #, c-format
 msgid "Invalid user \"%s\"\n"
-msgstr ""
+msgstr "Nieprawidłowy użytkownik \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l685
 #: ../openconnect-strings.txt:282
@@ -677,7 +677,7 @@ msgstr ""
 #: ../openconnect-strings.txt:285
 #, c-format
 msgid "OpenConnect version %s\n"
-msgstr ""
+msgstr "OpenConnect wersja %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l726
 #: ../openconnect-strings.txt:288
@@ -725,7 +725,7 @@ msgstr ""
 #: ../openconnect-strings.txt:313
 #, c-format
 msgid "Connected %s as %s%s%s, using %s\n"
-msgstr ""
+msgstr "Połączono %s jako %s%s%s, używając %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l854
 #: ../openconnect-strings.txt:316
@@ -736,6 +736,7 @@ msgstr ""
 #: ../openconnect-strings.txt:319
 msgid "See http://www.infradead.org/openconnect/vpnc-script.html\n"
 msgstr ""
+"Proszę zobaczyć http://www.infradead.org/openconnect/vpnc-script.html\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l868
 #: ../openconnect-strings.txt:322
@@ -775,18 +776,20 @@ msgstr ""
 #, c-format
 msgid "Enter '%s' to accept, '%s' to abort; anything else to view: "
 msgstr ""
+"Wpisanie \"%s\" zaakceptuje, \"%s\" przerwie, inne wartości spowodują "
+"wyświetlenie: "
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1010
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1017
 #: ../openconnect-strings.txt:344
 msgid "yes"
-msgstr ""
+msgstr "tak"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1010
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1028
 #: ../openconnect-strings.txt:348
 msgid "no"
-msgstr ""
+msgstr "nie"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/main.c#l1034
 #: ../openconnect-strings.txt:351
@@ -1799,7 +1802,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/openssl.c#l1251
 #: ../openconnect-strings.txt:918
 msgid "<error>"
-msgstr ""
+msgstr "<błąd>"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/openssl.c#l1300
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/gnutls.c#l1822
@@ -2237,27 +2240,27 @@ msgstr ""
 #: ../openconnect-strings.txt:1156
 #, c-format
 msgid "PIN required for %s"
-msgstr ""
+msgstr "Wymagany jest kod PIN dla %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/gnutls.c#l2090
 #: ../openconnect-strings.txt:1159
 msgid "Wrong PIN"
-msgstr ""
+msgstr "Błędny kod PIN"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/gnutls.c#l2093
 #: ../openconnect-strings.txt:1162
 msgid "This is the final try before locking!"
-msgstr ""
+msgstr "To ostatnia próba przed zablokowaniem."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/gnutls.c#l2095
 #: ../openconnect-strings.txt:1165
 msgid "Only a few tries left before locking!"
-msgstr ""
+msgstr "Pozostało tylko kilka prób przed zablokowaniem."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/gnutls.c#l2100
 #: ../openconnect-strings.txt:1168
 msgid "Enter PIN:"
-msgstr ""
+msgstr "Proszę wprowadzić kod PIN:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/gnutls_tpm.c#l89
 #: ../openconnect-strings.txt:1171
@@ -2422,22 +2425,22 @@ msgstr ""
 #: ../openconnect-strings.txt:1254
 #, c-format
 msgid "statvfs: %s\n"
-msgstr ""
+msgstr "statvfs: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l350
 #: ../openconnect-strings.txt:1257
 #, c-format
 msgid "statfs: %s\n"
-msgstr ""
+msgstr "statfs: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l421
 #: ../openconnect-strings.txt:1260
 msgid "No error"
 msgstr ""
 
-#. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l422
+#. http://git.infradead.org/users/dwmw2/openconnect.git/blob/473903c0fd:/ssl.c#l422
 #: ../openconnect-strings.txt:1263
-msgid "Keystore ocked"
+msgid "Keystore locked"
 msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l423
@@ -2900,18 +2903,17 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l540
 #: ../openconnect-strings.txt:1520
 msgid "Device ID:"
-msgstr ""
+msgstr "Identyfikator urządzenia:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l547
 #: ../openconnect-strings.txt:1523
-#, fuzzy
 msgid "Password:"
-msgstr "Zapisywanie haseł"
+msgstr "Hasło:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l554
 #: ../openconnect-strings.txt:1526
 msgid "PIN:"
-msgstr ""
+msgstr "PIN:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/auth.c#l584
 #: ../openconnect-strings.txt:1529
