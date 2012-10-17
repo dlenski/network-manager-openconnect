@@ -1259,8 +1259,8 @@ _("statfs: %s\n");
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l421
 _("No error");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l422
-_("Keystore ocked");
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/473903c0fd:/ssl.c#l422
+_("Keystore locked");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l423
 _("Keystore uninitialized");

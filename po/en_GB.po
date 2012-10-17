@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-15 15:20-0700\n"
+"POT-Creation-Date: 2012-10-17 07:30-0700\n"
 "PO-Revision-Date: 2012-09-23 20:24+0100\n"
 "Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
 "Language-Team: British English <en@li.org>\n"
@@ -2313,7 +2313,7 @@ msgstr "No error"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l422
 #: ../openconnect-strings.txt:1263
-msgid "Keystore ocked"
+msgid "Keystore locked"
 msgstr "Keystore locked"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/5b422d5e4c:/ssl.c#l423
@@ -2986,9 +2986,6 @@ msgstr "No VPN gateway specified."
 #: ../src/nm-openconnect-service.c:398
 msgid "No WebVPN cookie provided."
 msgstr "No WebVPN cookie provided."
-
-#~ msgid "No form handler; cannot authenticate."
-#~ msgstr "No form handler; cannot authenticate."
 
 #~ msgid "_CA Certificate:"
 #~ msgstr "_CA Certificate:"
