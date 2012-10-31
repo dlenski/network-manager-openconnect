@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-10-22 16:44+0000\n"
-"PO-Revision-Date: 2012-10-25 17:01+0200\n"
+"POT-Creation-Date: 2012-10-25 15:06+0000\n"
+"PO-Revision-Date: 2012-10-31 10:34+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -143,10 +143,8 @@ msgid "Use _FSID for key passphrase"
 msgstr "Usar _FSID para la frase de paso de la clave"
 
 #: ../properties/nm-openconnect-dialog.ui.h:12
-#, fuzzy
-#| msgid "<b>Certificate Authentication</b>"
 msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Certificado de autenticación</b>"
+msgstr "<b>Testigo software de autenticación</b>"
 
 #: ../properties/nm-openconnect-dialog.ui.h:13
 msgid "Token _Source:"
@@ -309,7 +307,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/main.c#l229
 #: ../openconnect-strings.txt:67
 msgid "Usage:  openconnect [options] <server>\n"
-msgstr "Uso:  openconnect [opciones] <servidor>\n"
+msgstr "Uso: openconnect [opciones] <servidor>\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/main.c#l230
 #: ../openconnect-strings.txt:70
@@ -1051,7 +1049,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/dtls.c#l778
 #: ../openconnect-strings.txt:486
 msgid "Send DTLS DPD\n"
-msgstr ""
+msgstr "Enviar DTLS DPD\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/dtls.c#l783
 #: ../openconnect-strings.txt:489
@@ -1061,7 +1059,7 @@ msgstr "Falló al enviar petición DPD. Espere para desconectar\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/dtls.c#l796
 #: ../openconnect-strings.txt:492
 msgid "Send DTLS Keepalive\n"
-msgstr ""
+msgstr "Enviar Keepalive DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/dtls.c#l801
 #: ../openconnect-strings.txt:495
@@ -1072,47 +1070,47 @@ msgstr "Falló al enviar petición de keepalive. Espere para desconectar\n"
 #: ../openconnect-strings.txt:498
 #, c-format
 msgid "DTLS got write error %d. Falling back to SSL\n"
-msgstr ""
+msgstr "DTLS obtuvo el error de escritura %d. Volviendo a SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/dtls.c#l844
 #: ../openconnect-strings.txt:501
 #, c-format
 msgid "DTLS got write error: %s. Falling back to SSL\n"
-msgstr ""
+msgstr "DTLS obtuvo el error de escritura: %s. Volviendo a SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/dtls.c#l855
 #: ../openconnect-strings.txt:504
 #, c-format
 msgid "Sent DTLS packet of %d bytes; DTLS send returned %d\n"
-msgstr ""
+msgstr "Envió paquete DTLS de %d bytes; el envío DTLS devolvió %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/dtls.c#l867
 #: ../openconnect-strings.txt:507
 msgid "Built against SSL library with no Cisco DTLS support\n"
-msgstr ""
+msgstr "Compilado con la biblioteca SSL sin soporte para Cisco DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l120
 #: ../openconnect-strings.txt:510
 #, c-format
 msgid "TCP_INFO rcv mss %d, snd mss %d, adv mss %d, pmtu %d\n"
-msgstr ""
+msgstr "TCP_INFO rcv mss %d, snd mss %d, adv mss %d, pmtu %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l138
 #: ../openconnect-strings.txt:513
 #, c-format
 msgid "TCP_MAXSEG %d\n"
-msgstr ""
+msgstr "TCP_MAXSEG %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l196
 #: ../openconnect-strings.txt:516
 msgid "Failed to initialise DTLS secret\n"
-msgstr ""
+msgstr "Falló al inicializar el secreto DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l229
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/http.c#l119
 #: ../openconnect-strings.txt:520
 msgid "Error fetching HTTPS response\n"
-msgstr ""
+msgstr "Error al obtener respuesta HTTPS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l236
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/http.c#l359
@@ -1120,31 +1118,31 @@ msgstr ""
 #: ../openconnect-strings.txt:525
 #, c-format
 msgid "Failed to open HTTPS connection to %s\n"
-msgstr ""
+msgstr "Falló al abrir una conexión HTTPS con %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l256
 #: ../openconnect-strings.txt:528
 #, c-format
 msgid "VPN service unavailable; reason: %s\n"
-msgstr ""
+msgstr "Servicio VPN no disponible; razón: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l261
 #: ../openconnect-strings.txt:531
 #, c-format
 msgid "Got inappropriate HTTP CONNECT response: %s\n"
-msgstr ""
+msgstr "Se obtuvo una respuesta HTTP CONNECT inadecuada: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l268
 #: ../openconnect-strings.txt:534
 #, c-format
 msgid "Got CONNECT response: %s\n"
-msgstr ""
+msgstr "Se obtuvo la respuesta CONNECT: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l296
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l304
 #: ../openconnect-strings.txt:538
 msgid "No memory for options\n"
-msgstr ""
+msgstr "No hay memoria para opciones\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l324
 #: ../openconnect-strings.txt:541
@@ -1161,42 +1159,43 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l422
 #: ../openconnect-strings.txt:547
 msgid "No MTU received. Aborting\n"
-msgstr ""
+msgstr "No se recibió MTU. Abortando\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l429
 #: ../openconnect-strings.txt:550
 msgid "No IP address received. Aborting\n"
-msgstr ""
+msgstr "No se recibió dirección IP. Abortando\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l435
 #: ../openconnect-strings.txt:553
 #, c-format
 msgid "Reconnect gave different Legacy IP address (%s != %s)\n"
-msgstr ""
+msgstr "La reconexión dio una dirección IP heredada distinta (%s != %s)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l443
 #: ../openconnect-strings.txt:556
 #, c-format
 msgid "Reconnect gave different Legacy IP netmask (%s != %s)\n"
-msgstr ""
+msgstr "La reconexión dio una máscara de red heredada distinta (%s != %s)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l451
 #: ../openconnect-strings.txt:559
 #, c-format
 msgid "Reconnect gave different IPv6 address (%s != %s)\n"
-msgstr ""
+msgstr "La reconexión dio una dirección IPv6 heredada distinta (%s != %s)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l459
 #: ../openconnect-strings.txt:562
 #, c-format
 msgid "Reconnect gave different IPv6 netmask (%s != %s)\n"
 msgstr ""
+"La reconexión dio una máscara de red IPv6 heredada distinta (%s != %s)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l479
 #: ../openconnect-strings.txt:565
 #, c-format
 msgid "CSTP connected. DPD %d, Keepalive %d\n"
-msgstr ""
+msgstr "CSTP conectado. DPD %d, Keepalive %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/cstp.c#l512
 #: ../openconnect-strings.txt:568
