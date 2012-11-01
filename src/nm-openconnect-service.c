@@ -46,6 +46,10 @@
 #include "nm-openconnect-service.h"
 #include "nm-utils.h"
 
+#if !defined(DIST_VERSION)
+# define DIST_VERSION VERSION
+#endif
+
 G_DEFINE_TYPE (NMOPENCONNECTPlugin, nm_openconnect_plugin, NM_TYPE_VPN_PLUGIN)
 
 typedef struct {
@@ -100,6 +104,8 @@ static ValidProperty valid_secrets[] = {
 
 static uid_t tun_owner;
 static gid_t tun_group;
+static gboolean debug = FALSE;
+static GMainLoop *loop = NULL;
 
 typedef struct ValidateInfo {
 	ValidProperty *table;
@@ -440,6 +446,9 @@ nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
 
 	g_ptr_array_add (openconnect_argv, (gpointer) props_vpn_gw);
 
+	if (debug)
+		g_ptr_array_add (openconnect_argv, (gpointer) "--verbose");
+
 	g_ptr_array_add (openconnect_argv, NULL);
 
 	if (!g_spawn_async_with_pipes (NULL, (char **) openconnect_argv->pdata, NULL,
@@ -484,6 +493,9 @@ real_connect (NMVPNPlugin   *plugin,
 		goto out;
 	if (!nm_openconnect_secrets_validate (s_vpn, error))
 		goto out;
+
+	if (debug)
+		nm_connection_dump (connection);
 
 	openconnect_fd = nm_openconnect_start_openconnect_binary (NM_OPENCONNECT_PLUGIN (plugin), s_vpn, error);
 	if (!openconnect_fd)
@@ -590,6 +602,27 @@ nm_openconnect_plugin_new (void)
 }
 
 static void
+signal_handler (int signo)
+{
+	if (signo == SIGINT || signo == SIGTERM)
+		g_main_loop_quit (loop);
+}
+
+static void
+setup_signals (void)
+{
+	struct sigaction action;
+	sigset_t mask;
+
+	sigemptyset (&mask);
+	action.sa_handler = signal_handler;
+	action.sa_mask = mask;
+	action.sa_flags = 0;
+	sigaction (SIGTERM,  &action, NULL);
+	sigaction (SIGINT,  &action, NULL);
+}
+
+static void
 quit_mainloop (NMOPENCONNECTPlugin *plugin, gpointer user_data)
 {
 	g_main_loop_quit ((GMainLoop *) user_data);
@@ -598,9 +631,36 @@ quit_mainloop (NMOPENCONNECTPlugin *plugin, gpointer user_data)
 int main (int argc, char *argv[])
 {
 	NMOPENCONNECTPlugin *plugin;
-	GMainLoop *main_loop;
+
+	gboolean persist = FALSE;
+	GOptionContext *opt_ctx = NULL;
+
+	GOptionEntry options[] = {
+		{ "persist", 0, 0, G_OPTION_ARG_NONE, &persist, N_("Don't quit when VPN connection terminates"), NULL },
+		{ "debug", 0, 0, G_OPTION_ARG_NONE, &debug, N_("Enable verbose debug logging (may expose passwords)"), NULL },
+		{NULL}
+	};
 
 	g_type_init ();
+
+	/* Parse options */
+	opt_ctx = g_option_context_new ("");
+	g_option_context_set_translation_domain (opt_ctx, "UTF-8");
+	g_option_context_set_ignore_unknown_options (opt_ctx, FALSE);
+	g_option_context_set_help_enabled (opt_ctx, TRUE);
+	g_option_context_add_main_entries (opt_ctx, options, NULL);
+
+	g_option_context_set_summary (opt_ctx,
+		_("nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN capability to NetworkManager."));
+
+	g_option_context_parse (opt_ctx, &argc, &argv, NULL);
+	g_option_context_free (opt_ctx);
+
+	if (getenv ("OPENCONNECT_DEBUG"))
+		debug = TRUE;
+
+	if (debug)
+		g_message ("nm-vpnc-service (version " DIST_VERSION ") starting...");
 
 	if (system ("/sbin/modprobe tun") == -1)
 		exit (EXIT_FAILURE);
@@ -609,15 +669,15 @@ int main (int argc, char *argv[])
 	if (!plugin)
 		exit (EXIT_FAILURE);
 
-	main_loop = g_main_loop_new (NULL, FALSE);
+	loop = g_main_loop_new (NULL, FALSE);
 
-	g_signal_connect (plugin, "quit",
-	                  G_CALLBACK (quit_mainloop),
-	                  main_loop);
+	if (!persist)
+		g_signal_connect (plugin, "quit", G_CALLBACK (quit_mainloop), loop);
 
-	g_main_loop_run (main_loop);
+	setup_signals ();
+	g_main_loop_run (loop);
 
-	g_main_loop_unref (main_loop);
+	g_main_loop_unref (loop);
 	g_object_unref (plugin);
 
 	exit (EXIT_SUCCESS);
