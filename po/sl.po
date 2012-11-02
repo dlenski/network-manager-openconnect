@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-10-22 16:04+0000\n"
-"PO-Revision-Date: 2012-10-22 18:44+0100\n"
+"POT-Creation-Date: 2012-11-01 23:26+0000\n"
+"PO-Revision-Date: 2012-11-02 21:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -166,45 +166,57 @@ msgstr "Preberi iz ~/.stokenrc"
 msgid "Manually entered"
 msgstr "Ročno vpisano"
 
-#: ../src/nm-openconnect-service.c:144
+#: ../src/nm-openconnect-service.c:150
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr "neveljavna lastnost celega števila '%s', ki je izven območja [%d -> %d]"
 
-#: ../src/nm-openconnect-service.c:154
+#: ../src/nm-openconnect-service.c:160
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr "neveljavna logična lastnost '%s' (ni vrednost da oziroma ne)"
 
-#: ../src/nm-openconnect-service.c:161
+#: ../src/nm-openconnect-service.c:167
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "Neupravljana lastnost  '%s' vrste %s"
 
-#: ../src/nm-openconnect-service.c:174
+#: ../src/nm-openconnect-service.c:180
 #, c-format
 msgid "property '%s' invalid or not supported"
 msgstr "lastnost  '%s' ni veljavna ali pa ni podprta"
 
-#: ../src/nm-openconnect-service.c:190
+#: ../src/nm-openconnect-service.c:196
 msgid "No VPN configuration options."
 msgstr "Ni možnosti nastavitev VPN"
 
-#: ../src/nm-openconnect-service.c:208
+#: ../src/nm-openconnect-service.c:214
 msgid "No VPN secrets!"
 msgstr "Ni skrivnih podatkov VPN!"
 
-#: ../src/nm-openconnect-service.c:376
+#: ../src/nm-openconnect-service.c:382
 msgid "Could not find openconnect binary."
 msgstr "Programa openconnect ni mogoče najti"
 
-#: ../src/nm-openconnect-service.c:388
+#: ../src/nm-openconnect-service.c:394
 msgid "No VPN gateway specified."
 msgstr "Ni določenega prehoda VPN."
 
-#: ../src/nm-openconnect-service.c:398
+#: ../src/nm-openconnect-service.c:404
 msgid "No WebVPN cookie provided."
 msgstr "Piškotek WebVPN ni na voljo."
+
+#: ../src/nm-openconnect-service.c:639
+msgid "Don't quit when VPN connection terminates"
+msgstr "Ne končaj, ko se povezava VPN prekine"
+
+#: ../src/nm-openconnect-service.c:640
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr "Omogoči podrobno beleženje razhroščevanja (lahko razkrije gesla)"
+
+#: ../src/nm-openconnect-service.c:654
+msgid "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN capability to NetworkManager."
+msgstr "Storitev nm-openconnect-service omogoča vgrajeno podporo za Cisco AnyConnect SSL VPN v program NetworkManager."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b65bf54c33:/xml.c#l53
 #: ../openconnect-strings.txt:14
