@@ -17,7 +17,7 @@
  *
  *   Copyright © 2008 - 2010 Intel Corporation.
  *
- * Based on nm-openconnect-vpnc.c:
+ * Based on nm-vpnc-service-vpnc-helper.c:
  *   Copyright © 2005 - 2010 Red Hat, Inc.
  *   Copyright © 2007 - 2008 Novell, Inc.
  */

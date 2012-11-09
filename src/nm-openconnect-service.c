@@ -17,7 +17,7 @@
  *
  *   Copyright © 2008 - 2009 Intel Corporation.
  *
- * Based on nm-openconnect-vpnc.c:
+ * Based on nm-vpnc-service.c:
  *   Copyright © 2005 - 2008 Red Hat, Inc.
  *   Copyright © 2007 - 2008 Novell, Inc.
  */
@@ -667,7 +667,7 @@ int main (int argc, char *argv[])
 		debug = TRUE;
 
 	if (debug)
-		g_message ("nm-vpnc-service (version " DIST_VERSION ") starting...");
+		g_message ("nm-openconnect-service (version " DIST_VERSION ") starting...");
 
 	if (system ("/sbin/modprobe tun") == -1)
 		exit (EXIT_FAILURE);
