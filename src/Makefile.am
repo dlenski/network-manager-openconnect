@@ -12,7 +12,8 @@ AM_CPPFLAGS = \
 	-DLIBDIR=\""$(libdir)"\" \
 	-DLIBEXECDIR=\""$(libexecdir)"\" \
 	-DLOCALSTATEDIR=\""$(localstatedir)"\" \
-	-DDATADIR=\"$(datadir)\"
+	-DDATADIR=\"$(datadir)\" \
+	-DNM_OPENCONNECT_LOCALEDIR=\"$(datadir)/locale\"
 
 libexec_PROGRAMS = \
 	nm-openconnect-service \
