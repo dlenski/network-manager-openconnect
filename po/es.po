@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-11-09 22:15+0000\n"
-"PO-Revision-Date: 2012-11-27 17:38+0100\n"
+"POT-Creation-Date: 2012-11-27 16:41+0000\n"
+"PO-Revision-Date: 2012-12-02 19:36+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../auth-dialog/main.c:770
 #, c-format
@@ -817,7 +817,8 @@ msgstr ""
 #, c-format
 msgid "Enter '%s' to accept, '%s' to abort; anything else to view: "
 msgstr ""
-"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para ver:"
+"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para "
+"ver:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/main.c#l1016
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/main.c#l1023
@@ -1262,7 +1263,7 @@ msgstr ""
 #: ../openconnect-strings.txt:592
 #, c-format
 msgid "SSL_write failed: %d\n"
-msgstr ""
+msgstr "Falló el SSL_write: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l671
 #: ../openconnect-strings.txt:595
@@ -1281,6 +1282,7 @@ msgstr "Falló el envío SSL: %s\n"
 #, c-format
 msgid "Unexpected packet length. SSL_read returned %d but packet is\n"
 msgstr ""
+"Longitud de paquete inesperada. SSL_read devolvió %d pero el paquete es\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l734
 #: ../openconnect-strings.txt:604
@@ -1307,7 +1309,7 @@ msgstr "Se recibió el paquete de datos sin comprimir de %d bytes\n"
 #: ../openconnect-strings.txt:616
 #, c-format
 msgid "Received server disconnect: %02x '%s'\n"
-msgstr ""
+msgstr "Se recibió el una desconexión del servidor: %02x '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l773
 #: ../openconnect-strings.txt:619
@@ -1329,107 +1331,107 @@ msgstr "Paquete desconocido %02x %02x %02x %02x %02x %02x %02x %02x\n"
 #: ../openconnect-strings.txt:628
 #, c-format
 msgid "SSL wrote too few bytes! Asked for %d, sent %d\n"
-msgstr ""
+msgstr "SSL escribió demasiados pocos bytes. Se pidieron %d, se enviaron %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l858
 #: ../openconnect-strings.txt:631
 msgid "CSTP rekey due\n"
-msgstr ""
+msgstr "Renegociación de clave CSTP pendiente\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l865
 #: ../openconnect-strings.txt:634
 msgid "CSTP Dead Peer Detection detected dead peer!\n"
-msgstr ""
+msgstr "La detección de muerte del par CSTP detectó la muerte del par\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l877
 #: ../openconnect-strings.txt:637
 msgid "Send CSTP DPD\n"
-msgstr ""
+msgstr "Enviar CSTP DPD\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l888
 #: ../openconnect-strings.txt:640
 msgid "Send CSTP Keepalive\n"
-msgstr ""
+msgstr "Enviar CSTP Keepalive\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l915
 #: ../openconnect-strings.txt:643
 #, c-format
 msgid "deflate failed %d\n"
-msgstr ""
+msgstr "falló el vaciado %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l935
 #: ../openconnect-strings.txt:646
 #, c-format
 msgid "Sending compressed data packet of %d bytes\n"
-msgstr ""
+msgstr "Enviando paquete de datos comprimidos de %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l947
 #: ../openconnect-strings.txt:649
 #, c-format
 msgid "Sending uncompressed data packet of %d bytes\n"
-msgstr ""
+msgstr "Enviando paquete de datos sin comprimir de %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/cstp.c#l987
 #: ../openconnect-strings.txt:652
 #, c-format
 msgid "Send BYE packet: %s\n"
-msgstr ""
+msgstr "Enviar paquete BYE: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/mainloop.c#l87
 #: ../openconnect-strings.txt:655
 msgid "Attempt new DTLS connection\n"
-msgstr ""
+msgstr "Intentar nueva conexión DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/mainloop.c#l120
 #: ../openconnect-strings.txt:658
 #, c-format
 msgid "No work to do; sleeping for %d ms...\n"
-msgstr ""
+msgstr "Sin trabajo que hacer; durmiendo durante %d ms…\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l89
 #: ../openconnect-strings.txt:661
 msgid "open net"
-msgstr ""
+msgstr "abrir red"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l98
 #: ../openconnect-strings.txt:664
 msgid "SIOCSIFMTU"
-msgstr ""
+msgstr "SIOCSIFMTU"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l138
 #: ../openconnect-strings.txt:667
 #, c-format
 msgid "Discard bad split include: \"%s\"\n"
-msgstr ""
+msgstr "Descartar mala división que incluir: «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l142
 #: ../openconnect-strings.txt:670
 #, c-format
 msgid "Discard bad split exclude: \"%s\"\n"
-msgstr ""
+msgstr "Descartar mala división que excluir: «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l387
 #: ../openconnect-strings.txt:673
 #, c-format
 msgid "Failed to spawn script '%s' for %s: %s\n"
-msgstr ""
+msgstr "Falló al generar el script '%s' para %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l393
 #: ../openconnect-strings.txt:676
 #, c-format
 msgid "Script '%s' exited abnormally (%x)\n"
-msgstr ""
+msgstr "El script '%s' terminó anormalmente (%x)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l400
 #: ../openconnect-strings.txt:679
 #, c-format
 msgid "Script '%s' returned error %d\n"
-msgstr ""
+msgstr "El script '%s' devolvió el error %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l415
 #: ../openconnect-strings.txt:682
 msgid "Could not open /dev/tun for plumbing"
-msgstr ""
+msgstr "No se pudo abrir /dev/tun para sondear"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l419
 #: ../openconnect-strings.txt:685
@@ -1445,25 +1447,25 @@ msgstr ""
 #: ../openconnect-strings.txt:691
 #, c-format
 msgid "Can't open %s: %s"
-msgstr ""
+msgstr "No se puede abrir %s: %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l444
 #: ../openconnect-strings.txt:694
 #, c-format
 msgid "Can't plumb %s for IPv%d: %s\n"
-msgstr ""
+msgstr "No se puede sondear %s por IPv%d: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l509
 #: ../openconnect-strings.txt:697
 #, c-format
 msgid "Failed to open tun device: %s\n"
-msgstr ""
+msgstr "Falló al abrir el dispositivo TUN: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l520
 #: ../openconnect-strings.txt:700
 #, c-format
 msgid "TUNSETIFF failed: %s\n"
-msgstr ""
+msgstr "Falló TUNSETIFF: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l532
 #: ../openconnect-strings.txt:703
@@ -1473,7 +1475,7 @@ msgstr "abrir /dev/tun"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l538
 #: ../openconnect-strings.txt:706
 msgid "Failed to create new tun"
-msgstr ""
+msgstr "Falló al crear un nuevo dispositivo TUN"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l544
 #: ../openconnect-strings.txt:709
