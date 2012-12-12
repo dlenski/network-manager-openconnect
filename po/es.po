@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-11-27 16:41+0000\n"
-"PO-Revision-Date: 2012-12-02 19:36+0100\n"
+"POT-Creation-Date: 2012-12-02 18:38+0000\n"
+"PO-Revision-Date: 2012-12-12 13:21+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
+"Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../auth-dialog/main.c:770
 #, c-format
@@ -817,8 +817,7 @@ msgstr ""
 #, c-format
 msgid "Enter '%s' to accept, '%s' to abort; anything else to view: "
 msgstr ""
-"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para "
-"ver:"
+"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para ver:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/main.c#l1016
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/main.c#l1023
@@ -1441,7 +1440,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l429
 #: ../openconnect-strings.txt:688
 msgid "Can't set ifname"
-msgstr ""
+msgstr "No se puede establecer el ifname"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l436
 #: ../openconnect-strings.txt:691
@@ -1481,12 +1480,14 @@ msgstr "Falló al crear un nuevo dispositivo TUN"
 #: ../openconnect-strings.txt:709
 msgid "Failed to put tun file descriptor into message-discard mode"
 msgstr ""
+"Falló al poner el archivo descriptor del dispositivo TUN en modo «descartar "
+"mensaje»"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l579
 #: ../openconnect-strings.txt:712
 #, c-format
 msgid "Invalid interface name '%s'; must match 'tun%%d'\n"
-msgstr ""
+msgstr "Nombre de interfaz '%s' no válido; debe coincidir con «tun%%d»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l589
 #: ../openconnect-strings.txt:715
@@ -1497,7 +1498,7 @@ msgstr "No se pudo abrir «%s»: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l618
 #: ../openconnect-strings.txt:718
 msgid "open tun"
-msgstr ""
+msgstr "abrir dispositivo TUN"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l626
 #: ../openconnect-strings.txt:721
@@ -1507,53 +1508,51 @@ msgstr "TUNSIFHEAD"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l646
 #: ../openconnect-strings.txt:724
 msgid "socketpair"
-msgstr ""
+msgstr "socketpair"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l652
 #: ../openconnect-strings.txt:727
 msgid "fork"
-msgstr ""
+msgstr "fork"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l658
 #: ../openconnect-strings.txt:730
 msgid "execl"
-msgstr ""
+msgstr "execl"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l663
 #: ../openconnect-strings.txt:733
 msgid "(script)"
-msgstr ""
+msgstr "(script)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l757
 #: ../openconnect-strings.txt:736
 #, c-format
 msgid "Unknown packet (len %d) received: %02x %02x %02x %02x...\n"
-msgstr ""
+msgstr "Se recibió un paquete desconocido (len %d): %02x %02x %02x %02x…\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/tun.c#l777
 #: ../openconnect-strings.txt:739
 #, c-format
 msgid "Failed to write incoming packet: %s\n"
-msgstr ""
+msgstr "Falló al escribir el paquete entrante: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l110
 #: ../openconnect-strings.txt:742
-#, fuzzy
-#| msgid "Failed to write config to %s: %s\n"
 msgid "Failed to write to SSL socket\n"
-msgstr "Falló al guardar configuración en %s: %s\n"
+msgstr "Falló al escribir en el socket SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l122
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/gnutls.c#l105
 #: ../openconnect-strings.txt:746
 msgid "SSL write cancelled\n"
-msgstr ""
+msgstr "Escritura SSL cancelada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l147
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l204
 #: ../openconnect-strings.txt:750
 msgid "Failed to read from SSL socket\n"
-msgstr ""
+msgstr "Falló al leer del socket SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l159
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l217
@@ -1561,36 +1560,36 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/gnutls.c#l200
 #: ../openconnect-strings.txt:756
 msgid "SSL read cancelled\n"
-msgstr ""
+msgstr "Lectura SSL cancelada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l394
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/gnutls.c#l849
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/gnutls.c#l1281
 #: ../openconnect-strings.txt:761
 msgid "Enter PEM pass phrase:"
-msgstr ""
+msgstr "Introduzca contraseña PEM:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l401
 #: ../openconnect-strings.txt:764
 #, c-format
 msgid "PEM password too long (%d >= %d)\n"
-msgstr ""
+msgstr "Contraseña PEM demasiado larga (%d >= %d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l429
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/gnutls.c#l356
 #: ../openconnect-strings.txt:768
 msgid "Enter PKCS#12 pass phrase:"
-msgstr ""
+msgstr "Introduzca contraseña PKCS#12:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l442
 #: ../openconnect-strings.txt:771
 msgid "Parse PKCS#12 failed (wrong passphrase?)\n"
-msgstr ""
+msgstr "Falló el análisis PKCS#12 (¿contraseña incorrecta?)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l449
 #: ../openconnect-strings.txt:774
 msgid "Parse PKCS#12 failed (see above errors)\n"
-msgstr ""
+msgstr "Falló el análisis PKCS#12 (vea los errores anteriores)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l461
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l598
@@ -1598,17 +1597,17 @@ msgstr ""
 #: ../openconnect-strings.txt:779
 #, c-format
 msgid "Using client certificate '%s'\n"
-msgstr ""
+msgstr "Usando el certificado del cliente '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l464
 #: ../openconnect-strings.txt:782
 msgid "PKCS#12 contained no certificate!"
-msgstr ""
+msgstr "PKCS#12 no contiene certificado"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l473
 #: ../openconnect-strings.txt:785
 msgid "PKCS#12 contained no private key!"
-msgstr ""
+msgstr "PKCS#12 no contiene clave privada"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l494
 #: ../openconnect-strings.txt:788
@@ -1619,27 +1618,27 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l520
 #: ../openconnect-strings.txt:791
 msgid "Can't load TPM engine.\n"
-msgstr ""
+msgstr "No se puede cargar el motor TPM.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l526
 #: ../openconnect-strings.txt:794
 msgid "Failed to init TPM engine\n"
-msgstr ""
+msgstr "Falló al iniciar el motor TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l536
 #: ../openconnect-strings.txt:797
 msgid "Failed to set TPM SRK password\n"
-msgstr ""
+msgstr "Falló al establecer la contraseña TPM SRK\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l550
 #: ../openconnect-strings.txt:800
 msgid "Failed to load TPM private key\n"
-msgstr ""
+msgstr "Falló al cargar la clave privada TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l556
 #: ../openconnect-strings.txt:803
 msgid "Add key from TPM failed\n"
-msgstr ""
+msgstr "Falló al añadir clave desde TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/openssl.c#l570
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/88de96d51b:/gnutls.c#l1202
