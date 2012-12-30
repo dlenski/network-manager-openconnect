@@ -867,7 +867,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/dtls.c#l753
 #: ../openconnect-strings.txt:479
 msgid "DTLS rekey due\n"
-msgstr ""
+msgstr "Reescrita DTLS devida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/dtls.c#l758
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/cstp.c#l868
@@ -878,7 +878,7 @@ msgstr "Religação falhou\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/dtls.c#l764
 #: ../openconnect-strings.txt:486
 msgid "DTLS rekey failed\n"
-msgstr ""
+msgstr "Reescrita DTLS falhou\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/dtls.c#l772
 #: ../openconnect-strings.txt:489
@@ -1148,7 +1148,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/cstp.c#l858
 #: ../openconnect-strings.txt:631
 msgid "CSTP rekey due\n"
-msgstr ""
+msgstr "Reescrita de CSTP devida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/cstp.c#l865
 #: ../openconnect-strings.txt:634
@@ -2419,7 +2419,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l363
 #: ../openconnect-strings.txt:1334
 msgid "Error reading HTTP response body\n"
-msgstr ""
+msgstr "Erro ao ler corpo de reposta HTTP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l348
 #: ../openconnect-strings.txt:1337
@@ -2495,12 +2495,14 @@ msgid ""
 "Warning: you are running insecure CSD code with root privileges\n"
 "\t Use command line option \"--csd-user\"\n"
 msgstr ""
+"Aviso: está a executar código CSD inseguro privilégios de raiz\n"
+"\t Use a opção de linha de comando \"--csd-user\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l615
 #: ../openconnect-strings.txt:1381
 #, c-format
 msgid "Failed to exec CSD script %s\n"
-msgstr ""
+msgstr "Falhou ao executar script CSD %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l732
 #: ../openconnect-strings.txt:1384
@@ -2989,26 +2991,26 @@ msgid ""
 "capability to NetworkManager."
 msgstr ""
 
-#~ msgid "Password / SecurID"
-#~ msgstr "Senha / SecurID"
-
-#~ msgid "Certificate (TLS)"
-#~ msgstr "Certificado (TLS)"
-
-#~ msgid "Certificate (TLS) with TPM"
-#~ msgstr "Certificado (TLS) com TPM"
-
-#~ msgid " "
-#~ msgstr " "
-
-#~ msgid "Type:"
-#~ msgstr "Tipo:"
-
-#~ msgid "User name:"
-#~ msgstr "Utilizador:"
+#~ msgid "Fixed options give %s\n"
+#~ msgstr "As opções fixas dão %s\n"
 
 #~ msgid "_CA Certificate:"
 #~ msgstr "Certificado _CA:"
 
-#~ msgid "Fixed options give %s\n"
-#~ msgstr "As opções fixas dão %s\n"
+#~ msgid "User name:"
+#~ msgstr "Utilizador:"
+
+#~ msgid "Type:"
+#~ msgstr "Tipo:"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Certificado (TLS) com TPM"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Certificado (TLS)"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Senha / SecurID"
