@@ -2,25 +2,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2008, 2010.
-# Javier Mazorra Rodríguez <mazi.debian@gmail.com>, 2012, 2013.
 # Nicolás Satragno <nsatragno@gnome.org>, 2013.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013.
+# Javier Mazorra Rodríguez <mazi.debian@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-10 20:10+0000\n"
-"PO-Revision-Date: 2013-01-14 14:09+0100\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2013-01-15 15:51+0000\n"
+"PO-Revision-Date: 2013-01-16 18:13+0100\n"
+"Last-Translator: Nicolás Satragno <nsatragno@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../auth-dialog/main.c:770
 #, c-format
@@ -818,7 +818,8 @@ msgstr ""
 #, c-format
 msgid "Enter '%s' to accept, '%s' to abort; anything else to view: "
 msgstr ""
-"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para ver:"
+"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para "
+"ver:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l1016
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l1023
@@ -1806,89 +1807,89 @@ msgstr "¡Sin nombre del sujeto en el certificado del par!\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1114
 #: ../openconnect-strings.txt:895
 msgid "Failed to parse subject name in peer cert\n"
-msgstr ""
+msgstr "Falló al analizar el nombre del sujeto en el certificado del par\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1121
 #: ../openconnect-strings.txt:898
 #, c-format
 msgid "Peer cert subject mismatch ('%s' != '%s')\n"
-msgstr ""
+msgstr "El sujeto del certificado del par no coincide («%s» != «%s»)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1126
 #: ../openconnect-strings.txt:901
 #, c-format
 msgid "Matched peer certificate subject name '%s'\n"
-msgstr ""
+msgstr "Coincidió el nombre del sujeto del certificado del par «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1152
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1717
 #: ../openconnect-strings.txt:905
 msgid "certificate does not match hostname"
-msgstr ""
+msgstr "el certificado no coincide con el nombre del servidor"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1156
 #: ../openconnect-strings.txt:908
 #, c-format
 msgid "Server certificate verify failed: %s\n"
-msgstr ""
+msgstr "La verificación del certificado del servidor falló: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1206
 #: ../openconnect-strings.txt:911
 #, c-format
 msgid "Extra cert from cafile: '%s'\n"
-msgstr ""
+msgstr "Certificado extra desde cafile: «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1237
 #: ../openconnect-strings.txt:914
 msgid "Error in client cert notAfter field\n"
-msgstr ""
+msgstr "Error en el campo notAfter del certificado del cliente\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1240
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l223
 #: ../openconnect-strings.txt:918
 msgid "Client certificate has expired at"
-msgstr ""
+msgstr "El certificado del cliente ha caducado el"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1245
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l225
 #: ../openconnect-strings.txt:922
 msgid "Client certificate expires soon at"
-msgstr ""
+msgstr "El certificado del cliente caduca pronto el"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1251
 #: ../openconnect-strings.txt:925
 msgid "<error>"
-msgstr ""
+msgstr "<error>"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1300
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1822
 #: ../openconnect-strings.txt:929
 msgid "Loading certificate failed. Aborting.\n"
-msgstr ""
+msgstr "Carga de certificado fallida. Abortando.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1342
 #: ../openconnect-strings.txt:932
 #, c-format
 msgid "Failed to read certs from CA file '%s'\n"
-msgstr ""
+msgstr "Falló al leer certificados desde el archivo CA «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1366
 #: ../openconnect-strings.txt:935
 #, c-format
 msgid "Failed to open CA file '%s'\n"
-msgstr ""
+msgstr "Falló al abrir el archivo CA «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1384
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1856
 #: ../openconnect-strings.txt:939
 #, c-format
 msgid "SSL negotiation with %s\n"
-msgstr ""
+msgstr "Negociación SSL con «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1400
 #: ../openconnect-strings.txt:942
 msgid "SSL connection failure\n"
-msgstr ""
+msgstr "Fallo en conexión SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/openssl.c#l1415
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1880
@@ -1901,89 +1902,88 @@ msgstr "Conexión SSL cancelada\n"
 #: ../openconnect-strings.txt:950
 #, c-format
 msgid "Connected to HTTPS on %s\n"
-msgstr ""
+msgstr "Conectó a HTTPS en %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l82
 #: ../openconnect-strings.txt:953
-#, fuzzy, c-format
-#| msgid "Failed to write config to %s: %s\n"
+#, c-format
 msgid "Failed to write to SSL socket: %s\n"
-msgstr "Falló al guardar configuración en %s: %s\n"
+msgstr "Falló al escribir en el socket SSL: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l122
 #: ../openconnect-strings.txt:956
 #, c-format
 msgid "Failed to read from SSL socket: %s"
-msgstr ""
+msgstr "Falló al leer del socket SSL: %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l176
 #: ../openconnect-strings.txt:959
 #, c-format
 msgid "Failed to read from SSL socket: %s\n"
-msgstr ""
+msgstr "Falló al leer del socket SSL: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l218
 #: ../openconnect-strings.txt:962
 msgid "Could not extract expiration time of certificate\n"
-msgstr ""
+msgstr "No se pudo extraer la fecha de caducidad del certificado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l277
 #: ../openconnect-strings.txt:965
 #, c-format
 msgid "Failed to open key/certificate file %s: %s\n"
-msgstr ""
+msgstr "Falló al abrir el archivo de clave/certificado %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l284
 #: ../openconnect-strings.txt:968
 #, c-format
 msgid "Failed to stat key/certificate file %s: %s\n"
-msgstr ""
+msgstr "Falló al obtener el estado del archivo de clave/certificado %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l293
 #: ../openconnect-strings.txt:971
 msgid "Failed to allocate certificate buffer\n"
-msgstr ""
+msgstr "Falló al asignar el búfer del certificado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l301
 #: ../openconnect-strings.txt:974
 #, c-format
 msgid "Failed to read certificate into memory: %s\n"
-msgstr ""
+msgstr "Falló al leer el certificado en memoria: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l332
 #: ../openconnect-strings.txt:977
 #, c-format
 msgid "Failed to setup PKCS#12 data structure: %s\n"
-msgstr ""
+msgstr "Falló al configurar la estructura de datos PKCS#12: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l343
 #: ../openconnect-strings.txt:980
 #, c-format
 msgid "Failed to import PKCS#12 file: %s\n"
-msgstr ""
+msgstr "Falló al importar el archivo PKCS#12: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l352
 #: ../openconnect-strings.txt:983
 msgid "Failed to decrypt PKCS#12 certificate file\n"
-msgstr ""
+msgstr "Falló al descifrar el archivo del certificado PKCS#12\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l380
 #: ../openconnect-strings.txt:986
 #, c-format
 msgid "Failed to process PKCS#12 file: %s\n"
-msgstr ""
+msgstr "Falló al procesar el archivo PKCS#12: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l392
 #: ../openconnect-strings.txt:989
 #, c-format
 msgid "Failed to load PKCS#12 certificate: %s\n"
-msgstr ""
+msgstr "Falló al cargar el certificado PKCS#12: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l562
 #: ../openconnect-strings.txt:992
 #, c-format
 msgid "Importing X509 certificate failed: %s\n"
-msgstr ""
+msgstr "Falló la importación del certificado X509: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l572
 #: ../openconnect-strings.txt:995
