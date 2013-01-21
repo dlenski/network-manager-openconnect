@@ -3,24 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2008, 2010.
 # Nicolás Satragno <nsatragno@gnome.org>, 2013.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013.
 # Javier Mazorra Rodríguez <mazi.debian@gmail.com>, 2012, 2013.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-15 15:51+0000\n"
-"PO-Revision-Date: 2013-01-16 18:13+0100\n"
-"Last-Translator: Nicolás Satragno <nsatragno@gnome.org>\n"
-"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2013-01-18 09:25+0000\n"
+"PO-Revision-Date: 2013-01-21 17:21+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../auth-dialog/main.c:770
 #, c-format
@@ -818,8 +818,7 @@ msgstr ""
 #, c-format
 msgid "Enter '%s' to accept, '%s' to abort; anything else to view: "
 msgstr ""
-"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para "
-"ver:"
+"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para ver:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l1016
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l1023
@@ -1989,35 +1988,35 @@ msgstr "Falló la importación del certificado X509: %s\n"
 #: ../openconnect-strings.txt:995
 #, c-format
 msgid "Setting PKCS#11 certificate failed: %s\n"
-msgstr ""
+msgstr "Falló la configuración del certificado PKCS#11: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l596
 #: ../openconnect-strings.txt:998
 #, c-format
 msgid "Could not initialise MD5 hash: %s\n"
-msgstr ""
+msgstr "No se pudo inicializar el hash MD5: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l606
 #: ../openconnect-strings.txt:1001
 #, c-format
 msgid "MD5 hash error: %s\n"
-msgstr ""
+msgstr "Error del hash MD5: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l664
 #: ../openconnect-strings.txt:1004
 msgid "Missing DEK-Info: header from OpenSSL encrypted key\n"
-msgstr ""
+msgstr "DEK-Info perdido: cabecera desde clave OpenSSL cifrada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l671
 #: ../openconnect-strings.txt:1007
 msgid "Cannot determine PEM encryption type\n"
-msgstr ""
+msgstr "No se puede determinar el tipo de cifrado PEM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l684
 #: ../openconnect-strings.txt:1010
 #, c-format
 msgid "Unsupported PEM encryption type: %s\n"
-msgstr ""
+msgstr "Tipo de cifrado PEM no soportado: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l709
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l722
@@ -2034,140 +2033,143 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l754
 #: ../openconnect-strings.txt:1020
 msgid "Encrypted PEM file too short\n"
-msgstr ""
+msgstr "Archivo cifrado PEM demasiado corto\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l782
 #: ../openconnect-strings.txt:1023
 #, c-format
 msgid "Failed to initialise cipher for decrypting PEM file: %s\n"
 msgstr ""
+"Falló al inicializar el cifrado para el archivo PEM de descifrado: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l793
 #: ../openconnect-strings.txt:1026
 #, c-format
 msgid "Failed to decrypt PEM key: %s\n"
-msgstr ""
+msgstr "Falló al descrifrar la clave PEM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l845
 #: ../openconnect-strings.txt:1029
 msgid "Decrypting PEM key failed\n"
-msgstr ""
+msgstr "Falló al descifrar la clave PEM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l953
 #: ../openconnect-strings.txt:1032
 #, c-format
 msgid "Using PKCS#11 certificate %s\n"
-msgstr ""
+msgstr "Usando certificado PKCS#11 %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l966
 #: ../openconnect-strings.txt:1035
 #, c-format
 msgid "Error loading certificate from PKCS#11: %s\n"
-msgstr ""
+msgstr "Error al cargar el certificado desde PKCS#11: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1000
 #: ../openconnect-strings.txt:1038
 msgid "PKCS#11 file contained no certificate\n"
-msgstr ""
+msgstr "El archivo PKCS#11 no contiene ningún certificado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1026
 #: ../openconnect-strings.txt:1041
 msgid "No certificate found in file"
-msgstr ""
+msgstr "Certificado no encontrado en el archivo"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1031
 #: ../openconnect-strings.txt:1044
 #, c-format
 msgid "Loading certificate failed: %s\n"
-msgstr ""
+msgstr "Falló al cargar certificado: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1046
 #: ../openconnect-strings.txt:1047
 #, c-format
 msgid "Using PKCS#11 key %s\n"
-msgstr ""
+msgstr "Usando clave PKCS#11 %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1051
 #: ../openconnect-strings.txt:1050
 #, c-format
 msgid "Error initialising PKCS#11 key structure: %s\n"
-msgstr ""
+msgstr "Error al inicializar la estructura de clave PKCS#11: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1141
 #: ../openconnect-strings.txt:1053
 #, c-format
 msgid "Error importing PKCS#11 URL %s: %s\n"
-msgstr ""
+msgstr "Error al importar el URL PKCS#11 %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1151
 #: ../openconnect-strings.txt:1056
 #, c-format
 msgid "Error initialising private key structure: %s\n"
-msgstr ""
+msgstr "Error al inicializar la estructura de clave privada: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1161
 #: ../openconnect-strings.txt:1059
 #, c-format
 msgid "Error importing PKCS#11 key into private key structure: %s\n"
 msgstr ""
+"Error al importar la clave PKCS#11 a la estructura de clave privada: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1189
 #: ../openconnect-strings.txt:1062
 #, c-format
 msgid "Using private key file %s\n"
-msgstr ""
+msgstr "Usando archivo de clave privada: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1223
 #: ../openconnect-strings.txt:1065
 msgid "Failed to interpret PEM file\n"
-msgstr ""
+msgstr "Falló al traducir el archivo PEM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1242
 #: ../openconnect-strings.txt:1068
 #, c-format
 msgid "Failed to load PKCS#1 private key: %s\n"
-msgstr ""
+msgstr "Falló al cargar la clave privada PKCS#1: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1255
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1269
 #: ../openconnect-strings.txt:1072
 #, c-format
 msgid "Failed to load private key as PKCS#8: %s\n"
-msgstr ""
+msgstr "Falló al cargar la clave privada como PKCS#8: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1277
 #: ../openconnect-strings.txt:1075
 msgid "Failed to decrypt PKCS#8 certificate file\n"
-msgstr ""
+msgstr "Falló al descifrar el archivo del certificado PKCS#8\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1291
 #: ../openconnect-strings.txt:1078
 #, c-format
 msgid "Failed to determine type of private key %s\n"
-msgstr ""
+msgstr "Falló al determinar el tipo de clave privada %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1303
 #: ../openconnect-strings.txt:1081
 #, c-format
 msgid "Failed to get key ID: %s\n"
-msgstr ""
+msgstr "Falló al obtener el ID de la clave: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1348
 #: ../openconnect-strings.txt:1084
 #, c-format
 msgid "Error signing test data with private key: %s\n"
-msgstr ""
+msgstr "Error al firmar el test de datos con la clave privada: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1363
 #: ../openconnect-strings.txt:1087
 #, c-format
 msgid "Error validating signature against certificate: %s\n"
-msgstr ""
+msgstr "Error al validar la firma con el certificado: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1387
 #: ../openconnect-strings.txt:1090
 msgid "No SSL certificate found to match private key\n"
 msgstr ""
+"No se encontró ningún certificado SSL que coincida con la clave privada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/gnutls.c#l1405
 #: ../openconnect-strings.txt:1093
