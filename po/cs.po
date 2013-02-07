@@ -337,7 +337,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l267
 #: ../openconnect-strings.txt:168
 msgid "Set login username"
-msgstr ""
+msgstr "Nastavit přihlašovací uživatelské jméno"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l268
 #: ../openconnect-strings.txt:171
@@ -347,12 +347,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l269
 #: ../openconnect-strings.txt:174
 msgid "More output"
-msgstr ""
+msgstr "Podrobnější výstup"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l270
 #: ../openconnect-strings.txt:177
 msgid "XML config file"
-msgstr ""
+msgstr "Soubor nastavení XML"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/main.c#l271
 #: ../openconnect-strings.txt:180
@@ -3011,17 +3011,17 @@ msgid ""
 "capability to NetworkManager."
 msgstr ""
 
-#~ msgid "_CA Certificate:"
-#~ msgstr "Certifikát _CA:"
-
-#~ msgid "XML response has no \"auth\" root node\n"
-#~ msgstr "Odpověď XML nemá žádný uzel kořene \"auth\" node\n"
-
-#~ msgid "Fixed options give %s\n"
-#~ msgstr "Pevné volby dávají %s\n"
+#~ msgid "Private key type (PKCS#12 / TPM / PEM)"
+#~ msgstr "Typ soukromého klíče (PKCS#12 / TPM / PEM)"
 
 #~ msgid "Attempting to connect to %s%s%s:%s\n"
 #~ msgstr "Pokus o spojení k s %s%s%s:%s\n"
 
-#~ msgid "Private key type (PKCS#12 / TPM / PEM)"
-#~ msgstr "Typ soukromého klíče (PKCS#12 / TPM / PEM)"
+#~ msgid "Fixed options give %s\n"
+#~ msgstr "Pevné volby dávají %s\n"
+
+#~ msgid "XML response has no \"auth\" root node\n"
+#~ msgstr "Odpověď XML nemá žádný uzel kořene \"auth\" node\n"
+
+#~ msgid "_CA Certificate:"
+#~ msgstr "Certifikát _CA:"

@@ -796,7 +796,7 @@ msgstr "O servidor não ofereceu opção de cifra DTLS\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/dtls.c#l511
 #: ../openconnect-strings.txt:439
 msgid "No DTLS when connected via proxy\n"
-msgstr ""
+msgstr "Sem DTLS ao ligar via proxy\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/dtls.c#l518
 #: ../openconnect-strings.txt:442
@@ -1129,7 +1129,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/cstp.c#l781
 #: ../openconnect-strings.txt:622
 msgid "received server terminate packet\n"
-msgstr ""
+msgstr "pacote de terminação do servidor recebido\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/cstp.c#l788
 #: ../openconnect-strings.txt:625
@@ -2356,7 +2356,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l144
 #: ../openconnect-strings.txt:1300
 msgid "No memory for allocating cookies\n"
-msgstr ""
+msgstr "Sem memória para alocar cookies\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l208
 #: ../openconnect-strings.txt:1303
@@ -2379,13 +2379,13 @@ msgstr "Erro ao processar resposta HTTP\n"
 #: ../openconnect-strings.txt:1312
 #, c-format
 msgid "Ignoring unknown HTTP response line '%s'\n"
-msgstr ""
+msgstr "A ignorar linha com resposta HTTP desconhecida '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l247
 #: ../openconnect-strings.txt:1315
 #, c-format
 msgid "Invalid cookie offered: %s\n"
-msgstr ""
+msgstr "Cookie inválido oferecido: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l256
 #: ../openconnect-strings.txt:1318
@@ -2401,7 +2401,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1324
 #, c-format
 msgid "Response body has negative size (%d)\n"
-msgstr ""
+msgstr "Corpo de respostas tem tamanho negativo (%d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l307
 #: ../openconnect-strings.txt:1327
@@ -2413,7 +2413,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1330
 #, c-format
 msgid "HTTP body %s (%d)\n"
-msgstr ""
+msgstr "Corpo HTTP %s (%d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l335
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l363
@@ -2429,7 +2429,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l374
 #: ../openconnect-strings.txt:1340
 msgid "Error fetching HTTP response body\n"
-msgstr ""
+msgstr "Erro ao obter resposta do corpo HTTP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l377
 #: ../openconnect-strings.txt:1343
@@ -2526,12 +2526,12 @@ msgstr ""
 #: ../openconnect-strings.txt:1393
 #, c-format
 msgid "Unexpected %d result from server\n"
-msgstr ""
+msgstr "Resultado inesperado %d do servidor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l915
 #: ../openconnect-strings.txt:1396
 msgid "Unknown response from server\n"
-msgstr ""
+msgstr "Resposta desconhecida do servidor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l977
 #: ../openconnect-strings.txt:1399
@@ -2542,27 +2542,27 @@ msgstr ""
 #: ../openconnect-strings.txt:1402
 #, c-format
 msgid "Refreshing %s after 1 second...\n"
-msgstr ""
+msgstr "A refrescar %s após 1 segundo...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l1231
 #: ../openconnect-strings.txt:1405
 msgid "request granted"
-msgstr ""
+msgstr "pedido concedido"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l1232
 #: ../openconnect-strings.txt:1408
 msgid "general failure"
-msgstr ""
+msgstr "falha geral"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l1233
 #: ../openconnect-strings.txt:1411
 msgid "connection not allowed by ruleset"
-msgstr ""
+msgstr "ligação não permitida pelas regras"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l1234
 #: ../openconnect-strings.txt:1414
 msgid "network unreachable"
-msgstr ""
+msgstr "rede inatingível"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/d8580b840a:/http.c#l1235
 #: ../openconnect-strings.txt:1417
@@ -2991,26 +2991,26 @@ msgid ""
 "capability to NetworkManager."
 msgstr ""
 
-#~ msgid "Fixed options give %s\n"
-#~ msgstr "As opções fixas dão %s\n"
-
-#~ msgid "_CA Certificate:"
-#~ msgstr "Certificado _CA:"
-
-#~ msgid "User name:"
-#~ msgstr "Utilizador:"
-
-#~ msgid "Type:"
-#~ msgstr "Tipo:"
-
-#~ msgid " "
-#~ msgstr " "
-
-#~ msgid "Certificate (TLS) with TPM"
-#~ msgstr "Certificado (TLS) com TPM"
+#~ msgid "Password / SecurID"
+#~ msgstr "Senha / SecurID"
 
 #~ msgid "Certificate (TLS)"
 #~ msgstr "Certificado (TLS)"
 
-#~ msgid "Password / SecurID"
-#~ msgstr "Senha / SecurID"
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Certificado (TLS) com TPM"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Type:"
+#~ msgstr "Tipo:"
+
+#~ msgid "User name:"
+#~ msgstr "Utilizador:"
+
+#~ msgid "_CA Certificate:"
+#~ msgstr "Certificado _CA:"
+
+#~ msgid "Fixed options give %s\n"
+#~ msgstr "As opções fixas dão %s\n"
