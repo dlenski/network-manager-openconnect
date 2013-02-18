@@ -40,6 +40,7 @@
 #include <net/if.h>
 #include <pwd.h>
 #include <grp.h>
+#include <locale.h>
 #include <glib/gi18n.h>
 
 #include <nm-setting-vpn.h>
@@ -641,7 +642,9 @@ int main (int argc, char *argv[])
 		{NULL}
 	};
 
+#if !GLIB_CHECK_VERSION (2, 35, 0)
 	g_type_init ();
+#endif
 
 	/* locale will be set according to environment LC_* variables */
 	setlocale (LC_ALL, "");

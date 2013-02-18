@@ -479,7 +479,9 @@ main (int argc, char *argv[])
 	GError *err = NULL;
 	struct in_addr temp_addr;
 
+#if !GLIB_CHECK_VERSION (2, 35, 0)
 	g_type_init ();
+#endif
 
 	/* openconnect gives us a "reason" code.  If we are given one,
 	 * don't proceed unless its "connect".
