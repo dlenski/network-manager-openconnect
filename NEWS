@@ -1,4 +1,17 @@
 =======================================================
+network-manager-openconnect-0.9.8
+Overview of changes since network-manager-openconnect-0.9.6.2
+=======================================================
+
+This is a new stable release of network-manager-openconnect.  Notable changes include:
+
+* Updated translations
+* Builds against the GNOME 3.8 versions of GLib and Gtk+
+* Software Tokens are now supported (if libopenconnect has support for them)
+* Fixed typos in several messages
+* nm-openconnect-service now returns translated error messages
+
+=======================================================
 network-manager-openconnect-0.9.6
 Overview of changes since network-manager-openconnect-0.9.4
 =======================================================
