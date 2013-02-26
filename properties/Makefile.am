@@ -11,6 +11,7 @@ uidir = $(datadir)/gnome-vpn-properties/openconnect
 ui_DATA = nm-openconnect-dialog.ui
 
 libnm_openconnect_properties_la_CFLAGS =                \
+	$(GLIB_CFLAGS)                                  \
 	$(GTK_CFLAGS)                                   \
 	$(GCONF_CFLAGS)                                 \
 	$(NM_CFLAGS)                                    \

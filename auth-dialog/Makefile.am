@@ -4,7 +4,7 @@ libexec_PROGRAMS = nm-openconnect-auth-dialog
 
 nm_openconnect_auth_dialog_CPPFLAGS = \
 	$(NM_CFLAGS) \
-	$(GTHREAD_CFLAGS) \
+	$(GLIB_CFLAGS) \
 	$(GTK_CFLAGS) \
 	$(GCONF_CFLAGS) \
 	$(OPENCONNECT_CFLAGS) \

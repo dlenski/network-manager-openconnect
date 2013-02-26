@@ -179,22 +179,16 @@ typedef struct auth_ui_data {
 
 	int form_grabbed;
 	GQueue *form_entries; /* modified from worker thread */
-	GMutex *form_mutex;
+	GMutex form_mutex;
 
-	GCond *form_retval_changed;
+	GCond form_retval_changed;
 	gpointer form_retval;
 
-	GCond *form_shown_changed;
+	GCond form_shown_changed;
 	gboolean form_shown;
 
-	GCond *cert_response_changed;
+	GCond cert_response_changed;
 	enum certificate_response cert_response;
-
-#if GLIB_CHECK_VERSION (2,31,0)
-	/* Ick. FFS, why does glib deprecate stuff so quickly? */
-	GCond _gconds[3];
-	GMutex _gmutex;
-#endif
 } auth_ui_data;
 
 enum {
@@ -483,11 +477,11 @@ static gboolean ui_show (auth_ui_data *ui_data)
 	gtk_widget_hide (ui_data->getting_form_label);
 	gtk_widget_show_all (ui_data->ssl_box);
 	gtk_widget_set_sensitive (ui_data->cancel_button, TRUE);
-	g_mutex_lock (ui_data->form_mutex);
+	g_mutex_lock (&ui_data->form_mutex);
 	evaluate_login_visibility(ui_data);
 	ui_data->form_shown = TRUE;
-	g_cond_signal (ui_data->form_shown_changed);
-	g_mutex_unlock (ui_data->form_mutex);
+	g_cond_signal (&ui_data->form_shown_changed);
+	g_mutex_unlock (&ui_data->form_mutex);
 
 	return FALSE;
 }
@@ -531,9 +525,9 @@ static int ui_write(UI *ui, UI_STRING *uis)
 
 	case UIT_PROMPT:
 	case UIT_VERIFY:
-		g_mutex_lock (ui_data->form_mutex);
+		g_mutex_lock (&ui_data->form_mutex);
 		g_queue_push_head(ui_data->form_entries, data);
-		g_mutex_unlock (ui_data->form_mutex);
+		g_mutex_unlock (&ui_data->form_mutex);
 
 		g_idle_add ((GSourceFunc)ui_write_prompt, data);
 		break;
@@ -556,17 +550,17 @@ static int ui_flush(UI* ui)
 	ui_data = UI_get0_user_data(ui);
 
 	g_idle_add((GSourceFunc)ui_show, ui_data);
-	g_mutex_lock(ui_data->form_mutex);
+	g_mutex_lock(&ui_data->form_mutex);
 	/* wait for ui to show */
 	while (!ui_data->form_shown) {
-		g_cond_wait(ui_data->form_shown_changed, ui_data->form_mutex);
+		g_cond_wait(&ui_data->form_shown_changed, &ui_data->form_mutex);
 	}
 	ui_data->form_shown = FALSE;
 
 	if (!ui_data->cancelled) {
 		/* wait for form submission or cancel */
 		while (!ui_data->form_retval) {
-			g_cond_wait(ui_data->form_retval_changed, ui_data->form_mutex);
+			g_cond_wait(&ui_data->form_retval_changed, &ui_data->form_mutex);
 		}
 		response = GPOINTER_TO_INT (ui_data->form_retval);
 		ui_data->form_retval = NULL;
@@ -586,7 +580,7 @@ static int ui_flush(UI* ui)
 		g_slice_free (ui_fragment_data, data);
 	}
 	ui_data->form_grabbed = 0;
-	g_mutex_unlock(ui_data->form_mutex);
+	g_mutex_unlock(&ui_data->form_mutex);
 
 	/* -1 = cancel,
 	 *  0 = failure,
@@ -656,13 +650,13 @@ static gboolean ui_form (struct oc_auth_form *form)
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
 	struct oc_form_opt *opt;
 
-	g_mutex_lock(ui_data->form_mutex);
+	g_mutex_lock(&ui_data->form_mutex);
 	while (!g_queue_is_empty (ui_data->form_entries)) {
 		ui_fragment_data *data;
 		data = g_queue_pop_tail (ui_data->form_entries);
 		g_slice_free (ui_fragment_data, data);
 	}
-	g_mutex_unlock(ui_data->form_mutex);
+	g_mutex_unlock(&ui_data->form_mutex);
 
 	if (form->banner)
 		ssl_box_add_info(ui_data, form->banner);
@@ -683,9 +677,9 @@ static gboolean ui_form (struct oc_auth_form *form)
 		
 		if (opt->type == OC_FORM_OPT_PASSWORD ||
 		    opt->type == OC_FORM_OPT_TEXT) {
-			g_mutex_lock (ui_data->form_mutex);
+			g_mutex_lock (&ui_data->form_mutex);
 			g_queue_push_head(ui_data->form_entries, data);
-			g_mutex_unlock (ui_data->form_mutex);
+			g_mutex_unlock (&ui_data->form_mutex);
 			if (opt->type != OC_FORM_OPT_PASSWORD)
 				data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 									      form, opt));
@@ -705,9 +699,9 @@ static gboolean ui_form (struct oc_auth_form *form)
 
 			ui_write_prompt(data);
 		} else if (opt->type == OC_FORM_OPT_SELECT) {
-			g_mutex_lock (ui_data->form_mutex);
+			g_mutex_lock (&ui_data->form_mutex);
 			g_queue_push_head(ui_data->form_entries, data);
-			g_mutex_unlock (ui_data->form_mutex);
+			g_mutex_unlock (&ui_data->form_mutex);
 			data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 								      form, opt));
 
@@ -726,17 +720,17 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 
 	g_idle_add((GSourceFunc)ui_form, form);
 
-	g_mutex_lock(ui_data->form_mutex);
+	g_mutex_lock(&ui_data->form_mutex);
 	/* wait for ui to show */
 	while (!ui_data->form_shown) {
-		g_cond_wait(ui_data->form_shown_changed, ui_data->form_mutex);
+		g_cond_wait(&ui_data->form_shown_changed, &ui_data->form_mutex);
 	}
 	ui_data->form_shown = FALSE;
 
 	if (!ui_data->cancelled) {
 		/* wait for form submission or cancel */
 		while (!ui_data->form_retval) {
-			g_cond_wait(ui_data->form_retval_changed, ui_data->form_mutex);
+			g_cond_wait(&ui_data->form_retval_changed, &ui_data->form_mutex);
 		}
 		response = GPOINTER_TO_INT (ui_data->form_retval);
 		ui_data->form_retval = NULL;
@@ -782,7 +776,7 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 	}
 
 	ui_data->form_grabbed = 0;
-	g_mutex_unlock(ui_data->form_mutex);
+	g_mutex_unlock(&ui_data->form_mutex);
 	
 	/* -1 = cancel,
 	 *  0 = failure,
@@ -869,13 +863,13 @@ static gboolean user_validate_cert(cert_data *data)
 
 	gtk_widget_destroy(dlg);
 
-	g_mutex_lock (ui_data->form_mutex);
+	g_mutex_lock (&ui_data->form_mutex);
 	if (result == GTK_RESPONSE_OK)
 		data->ui_data->cert_response = CERT_ACCEPTED;
 	else
 		data->ui_data->cert_response = CERT_DENIED;
-	g_cond_signal (ui_data->cert_response_changed);
-	g_mutex_unlock (ui_data->form_mutex);
+	g_cond_signal (&ui_data->cert_response_changed);
+	g_mutex_unlock (&ui_data->form_mutex);
 
 	return FALSE;
 }
@@ -914,14 +908,14 @@ static int validate_peer_cert(void *cbdata,
 	data->peer_cert = peer_cert;
 	data->reason = reason;
 
-	g_mutex_lock(ui_data->form_mutex);
+	g_mutex_lock(&ui_data->form_mutex);
 
 	ui_data->cert_response = CERT_USER_NOT_READY;
 	g_idle_add((GSourceFunc)user_validate_cert, data);
 
 	/* wait for user to accept or cancel */
 	while (ui_data->cert_response == CERT_USER_NOT_READY) {
-		g_cond_wait(ui_data->cert_response_changed, ui_data->form_mutex);
+		g_cond_wait(&ui_data->cert_response_changed, &ui_data->form_mutex);
 	}
 	if (ui_data->cert_response == CERT_ACCEPTED) {
 		if (certs_data) {
@@ -936,7 +930,7 @@ static int validate_peer_cert(void *cbdata,
 	} else {
 		ret = -EINVAL;
 	}
-	g_mutex_unlock (ui_data->form_mutex);
+	g_mutex_unlock (&ui_data->form_mutex);
 
 	g_slice_free(cert_data, data);
 
@@ -1381,9 +1375,9 @@ static void connect_host(auth_ui_data *ui_data)
 	ui_data->cancelled = FALSE;
 	ui_data->getting_cookie = TRUE;
 
-	g_mutex_lock (ui_data->form_mutex);
+	g_mutex_lock (&ui_data->form_mutex);
 	ui_data->form_retval = NULL;
-	g_mutex_unlock (ui_data->form_mutex);
+	g_mutex_unlock (&ui_data->form_mutex);
 
 	ssl_box_clear(ui_data);
 	gtk_widget_show(ui_data->getting_form_label);
@@ -1412,13 +1406,8 @@ static void connect_host(auth_ui_data *ui_data)
 	g_hash_table_insert (ui_data->success_secrets, g_strdup("lasthost"),
 			     g_strdup(host->hostname));
 
-#if GLIB_CHECK_VERSION(2,31,0)
 	thread = g_thread_new("obtain_cookie", (GThreadFunc)obtain_cookie, ui_data);
-#else
-	thread = g_thread_create((GThreadFunc)obtain_cookie, ui_data,
-				 FALSE, NULL);
-#endif
-	(void)thread;
+	g_thread_unref(thread);
 }
 
 
@@ -1451,10 +1440,10 @@ static void dialog_response (GtkDialog *dialog, int response, auth_ui_data *ui_d
 		ssl_box_clear(ui_data);
 		if (ui_data->getting_cookie)
 			gtk_widget_show (ui_data->getting_form_label);
-		g_mutex_lock (ui_data->form_mutex);
+		g_mutex_lock (&ui_data->form_mutex);
 		ui_data->form_retval = GINT_TO_POINTER(response);
-		g_cond_signal (ui_data->form_retval_changed);
-		g_mutex_unlock (ui_data->form_mutex);
+		g_cond_signal (&ui_data->form_retval_changed);
+		g_mutex_unlock (&ui_data->form_mutex);
 		break;
 	case GTK_RESPONSE_CLOSE:
 		gtk_main_quit();
@@ -1630,21 +1619,10 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	ui_data->retval = 1;
 
 	ui_data->form_entries = g_queue_new();
-#if GLIB_CHECK_VERSION(2,31,0)
-	ui_data->form_mutex = &ui_data->_gmutex;
-	ui_data->form_retval_changed = &ui_data->_gconds[0];
-	ui_data->form_shown_changed = &ui_data->_gconds[1];
-	ui_data->cert_response_changed = &ui_data->_gconds[2];
-	g_mutex_init(ui_data->form_mutex);
-	g_cond_init(ui_data->form_retval_changed);
-	g_cond_init(ui_data->form_shown_changed);
-	g_cond_init(ui_data->cert_response_changed);
-#else
-	ui_data->form_mutex = g_mutex_new();
-	ui_data->form_retval_changed = g_cond_new();
-	ui_data->form_shown_changed = g_cond_new();
-	ui_data->cert_response_changed = g_cond_new();
-#endif
+	g_mutex_init(&ui_data->form_mutex);
+	g_cond_init(&ui_data->form_retval_changed);
+	g_cond_init(&ui_data->form_shown_changed);
+	g_cond_init(&ui_data->cert_response_changed);
 	ui_data->vpn_name = vpn_name;
 	ui_data->vpn_uuid = vpn_uuid;
 	ui_data->options = options;
@@ -1777,9 +1755,6 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-#if !GLIB_CHECK_VERSION(2,31,0)
-	g_thread_init (NULL);
-#endif
 	gtk_init(0, NULL);
 
 	_ui_data = init_ui_data(vpn_name, options, secrets, vpn_uuid);

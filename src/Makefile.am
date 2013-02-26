@@ -2,7 +2,7 @@ INCLUDES = -I${top_srcdir}
 
 AM_CPPFLAGS = \
 	$(DBUS_CFLAGS) \
-	$(GTHREAD_CFLAGS) \
+	$(GLIB_CFLAGS) \
 	$(NM_CFLAGS) \
 	-DG_DISABLE_DEPRECATED \
 	-DBINDIR=\"$(bindir)\" \
@@ -26,7 +26,7 @@ nm_openconnect_service_SOURCES = \
 
 nm_openconnect_service_LDADD = \
 	$(DBUS_LIBS) \
-	$(GTHREAD_LIBS) \
+	$(GLIB_LIBS) \
 	$(NM_LIBS)
 
 
