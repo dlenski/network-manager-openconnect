@@ -44,7 +44,8 @@
 
 #include <nm-vpn-plugin-utils.h>
 
-#include <gnome-keyring.h>
+#define SECRET_API_SUBJECT_TO_CHANGE
+#include <libsecret/secret.h>
 
 #include "src/nm-openconnect-service.h"
 
@@ -74,19 +75,16 @@
 #include <openssl/ui.h>
 #endif
 
-static const GnomeKeyringPasswordSchema OPENCONNECT_SCHEMA_DEF = {
-  GNOME_KEYRING_ITEM_GENERIC_SECRET,
-  {
-    {"vpn_uuid", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
-    {"auth_id", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
-    {"label", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING},
-    {NULL, 0}
-  }
+static const SecretSchema openconnect_secret_schema = {
+	"org.freedesktop.NetworkManager.Connection.Openconnect",
+	SECRET_SCHEMA_DONT_MATCH_NAME,
+	{
+		{ "vpn_uuid", SECRET_SCHEMA_ATTRIBUTE_STRING },
+		{ "auth_id", SECRET_SCHEMA_ATTRIBUTE_STRING },
+		{ "label", SECRET_SCHEMA_ATTRIBUTE_STRING },
+		{ NULL, 0 },
+	}
 };
-
-const GnomeKeyringPasswordSchema *OPENCONNECT_SCHEMA = &OPENCONNECT_SCHEMA_DEF;
-
-static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpointer data);
 
 static char *lasthost;
 
@@ -112,7 +110,7 @@ struct gconf_key {
 };
 
 /* This struct holds all information we need to add a password to
- * gnome-keyring. It’s used in success_passwords. */
+ * the secret store. It’s used in success_passwords. */
 struct keyring_password {
 	char *description;
 	char *password;
@@ -138,16 +136,14 @@ static void keyring_password_free(gpointer data)
 static void keyring_store_passwords(gpointer key, gpointer value, gpointer user_data)
 {
 	struct keyring_password *kp = (struct keyring_password*)value;
-	gnome_keyring_store_password_sync (
-			OPENCONNECT_SCHEMA,
-			GNOME_KEYRING_DEFAULT,
-			kp->description,
-			kp->password,
-			"vpn_uuid", kp->vpn_uuid,
-			"auth_id", kp->auth_id,
-			"label", kp->label,
-			NULL
-			);
+
+	secret_password_store_sync (&openconnect_secret_schema, NULL,
+	                            kp->description, kp->password,
+	                            NULL, NULL,
+	                            "vpn_uuid", kp->vpn_uuid,
+	                            "auth_id", kp->auth_id,
+	                            "label", kp->label,
+	                            NULL);
 }
 
 
@@ -272,7 +268,7 @@ static void ssl_box_clear(auth_ui_data *ui_data)
 typedef struct ui_fragment_data {
 	GtkWidget *widget;
 	GtkWidget *entry;
-	gpointer find_request;
+	GCancellable *cancel;
 	auth_ui_data *ui_data;
 #ifdef OPENCONNECT_OPENSSL
 	UI_STRING *uis;
@@ -558,8 +554,8 @@ static int ui_flush(UI* ui)
 		if (data->entry_text) {
 			UI_set_result(ui, data->uis, data->entry_text);
 		}
-		if (data->find_request) {
-			gnome_keyring_cancel_request(data->find_request);
+		if (data->cancel) {
+			g_cancellable_cancel(data->cancel);
 		}
 		g_slice_free (ui_fragment_data, data);
 	}
@@ -603,12 +599,24 @@ static char *find_form_answer(GHashTable *secrets, struct oc_auth_form *form,
 	return result;
 }
 
-/* Callback which is called when we got a reply from gnome-keyring for any
+/* Callback which is called when we got a reply from the secret store for any
  * password field. Updates the contents of the password field unless the user
  * entered anything in the meantime. */
-static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpointer userdata)
+static void got_keyring_pw(GObject *object, GAsyncResult *result, gpointer userdata)
 {
 	ui_fragment_data *data = (ui_fragment_data*)userdata;
+	GList *list;
+	SecretItem *item;
+	SecretValue *value = NULL;
+	const char *string = NULL;
+
+	list = secret_service_search_finish (SECRET_SERVICE (object), result, NULL);
+	if (list != NULL) {
+		item = list->data;
+		value = secret_item_get_secret (item);
+		string = secret_value_get (value, NULL);
+	}
+
 	if (string != NULL) {
 		if (data->entry) {
 			if (!g_ascii_strcasecmp("",
@@ -621,9 +629,13 @@ static void got_keyring_pw(GnomeKeyringResult result, const char *string, gpoint
 			data->entry_text = g_strdup (string);
 	}
 
-	/* zero the find request so that we don’t attempt to cancel it when
+	if (value)
+		secret_value_unref (value);
+	g_list_free_full (list, g_object_unref);
+
+	/* zero the cancellable so that we don’t attempt to cancel it when
 	 * closing the dialog */
-	data->find_request = NULL;
+	g_clear_object (&data->cancel);
 }
 
 /* This part for processing forms from openconnect directly, rather than
@@ -668,18 +680,19 @@ static gboolean ui_form (struct oc_auth_form *form)
 				data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 									      form, opt));
 			else {
-				data->find_request = gnome_keyring_find_password(
-						OPENCONNECT_SCHEMA,
-						got_keyring_pw,
-						data,
-						NULL,
-						"vpn_uuid", ui_data->vpn_uuid,
-						"auth_id", form->auth_id,
-						"label", data->opt->name,
-						NULL
-						);
-			}
+				GHashTable *attrs;
 
+				data->cancel = g_cancellable_new ();
+				attrs = secret_attributes_build (&openconnect_secret_schema,
+				                                 "vpn_uuid", ui_data->vpn_uuid,
+				                                 "auth_id", form->auth_id,
+				                                 "label", data->opt->name,
+				                                 NULL);
+				secret_service_search (NULL, &openconnect_secret_schema, attrs,
+				                       SECRET_SEARCH_ALL | SECRET_SEARCH_UNLOCK | SECRET_SEARCH_LOAD_SECRETS,
+				                       data->cancel, got_keyring_pw, data);
+				g_hash_table_unref (attrs);
+			}
 
 			ui_write_prompt(data);
 		} else if (opt->type == OC_FORM_OPT_SELECT) {
@@ -727,8 +740,8 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 			ui_fragment_data *data;
 			data = g_queue_pop_tail (ui_data->form_entries);
 
-			if (data->find_request)
-				gnome_keyring_cancel_request(data->find_request);
+			if (data->cancel)
+				g_cancellable_cancel(data->cancel);
 
 			if (data->entry_text) {
 				data->opt->value = g_strdup (data->entry_text);
@@ -742,7 +755,7 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 				}
 
 				if (data->opt->type == OC_FORM_OPT_PASSWORD) {
-					/* store the password in gnome-keyring */
+					/* store the password in the secret store */
 					//int result;
 					struct keyring_password *kp = g_new(struct keyring_password, 1);
 					kp->description = g_strdup_printf(_("OpenConnect: %s: %s:%s"), ui_data->vpn_name, form->auth_id, data->opt->name);
@@ -1153,23 +1166,6 @@ static void autocon_toggled(GtkWidget *widget)
 	g_hash_table_insert (ui_data->secrets, g_strdup ("autoconnect"), enabled);
 }
 
-/* gnome_keyring_delete_password() only deletes one matching password, so
-   keep doing it until it doesn't succeed. The ui_data is essentially
-   permanent anyway so no need to worry about its lifetime. */
-static void delete_next_password(GnomeKeyringResult result, gpointer data)
-{
-	auth_ui_data *ui_data = data;
-
-	if (result == GNOME_KEYRING_RESULT_OK) {
-		gnome_keyring_delete_password(OPENCONNECT_SCHEMA,
-					      delete_next_password,
-					      ui_data, NULL,
-					      "vpn_uuid", ui_data->vpn_uuid,
-					      NULL);
-	}		
-		
-}
-
 static void savepass_toggled(GtkWidget *widget)
 {
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
@@ -1179,11 +1175,9 @@ static void savepass_toggled(GtkWidget *widget)
 		enabled = g_strdup ("yes");
 	else {
 		enabled = g_strdup ("no");
-		gnome_keyring_delete_password(OPENCONNECT_SCHEMA,
-					      delete_next_password,
-					      ui_data, NULL,
-					      "vpn_uuid", ui_data->vpn_uuid,
-					      NULL);
+		secret_password_clear (&openconnect_secret_schema, NULL, NULL, NULL,
+		                       "vpn_uuid", ui_data->vpn_uuid,
+		                       NULL);
 	}
 	g_hash_table_insert (ui_data->secrets, g_strdup ("save_passwords"), enabled);
 }
