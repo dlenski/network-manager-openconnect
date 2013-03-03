@@ -11,32 +11,32 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-20 22:31+0000\n"
-"PO-Revision-Date: 2013-02-25 11:26+0100\n"
+"POT-Creation-Date: 2013-02-27 09:29+0000\n"
+"PO-Revision-Date: 2013-03-03 11:22+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../auth-dialog/main.c:770
+#: ../auth-dialog/main.c:748
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
 msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:797
+#: ../auth-dialog/main.c:775
 #, c-format
 msgid "Connect to VPN '%s'"
 msgstr "Conectarse a la VPN «%s»"
 
-#: ../auth-dialog/main.c:799
+#: ../auth-dialog/main.c:777
 msgid "Connect to VPN"
 msgstr "Conectar a la VPN"
 
-#: ../auth-dialog/main.c:842
+#: ../auth-dialog/main.c:820
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -47,31 +47,31 @@ msgstr ""
 "Motivo: %s\n"
 "¿Quiere aceptarlo?"
 
-#: ../auth-dialog/main.c:1512
+#: ../auth-dialog/main.c:1477
 msgid "VPN host"
 msgstr "Servidor VPN"
 
-#: ../auth-dialog/main.c:1532
+#: ../auth-dialog/main.c:1497
 msgid "Automatically start connecting next time"
 msgstr "Iniciar la conexión automáticamente la próxima vez"
 
-#: ../auth-dialog/main.c:1553
+#: ../auth-dialog/main.c:1514
 msgid "Select a host to fetch the login form"
 msgstr "Seleccionar un servidor para obtener el formulario de inicio de sesión"
 
-#: ../auth-dialog/main.c:1558
+#: ../auth-dialog/main.c:1519
 msgid "Contacting host, please wait..."
 msgstr "Conectando al servidor, espere…"
 
-#: ../auth-dialog/main.c:1578
+#: ../auth-dialog/main.c:1531
 msgid "_Login"
 msgstr "_Entrar"
 
-#: ../auth-dialog/main.c:1592
+#: ../auth-dialog/main.c:1545
 msgid "Save passwords"
 msgstr "Guardar contraseñas"
 
-#: ../auth-dialog/main.c:1600
+#: ../auth-dialog/main.c:1553
 msgid "Log"
 msgstr "Registro"
 
@@ -818,7 +818,8 @@ msgstr ""
 #, c-format
 msgid "Enter '%s' to accept, '%s' to abort; anything else to view: "
 msgstr ""
-"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para ver:"
+"Introduzca «%s» para aceptar, «%s» para cancelar; cualquier otra cosa para "
+"ver:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/main.c#l1016
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/main.c#l1023
@@ -2305,13 +2306,13 @@ msgstr "Fallo de la conexión TLS: %s\n"
 #: ../openconnect-strings.txt:1166
 #, c-format
 msgid "GnuTLS non-fatal return during handshake: %s\n"
-msgstr ""
+msgstr "Retorno no fatal de GnuTLS durante la negociación: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls.c#l2082
 #: ../openconnect-strings.txt:1169
 #, c-format
 msgid "PIN required for %s"
-msgstr ""
+msgstr "PIN requerido por %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls.c#l2092
 #: ../openconnect-strings.txt:1172
@@ -2321,12 +2322,12 @@ msgstr "PIN incorrecto"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls.c#l2095
 #: ../openconnect-strings.txt:1175
 msgid "This is the final try before locking!"
-msgstr ""
+msgstr "¡Éste es el último intento antes de bloquear!"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls.c#l2097
 #: ../openconnect-strings.txt:1178
 msgid "Only a few tries left before locking!"
-msgstr ""
+msgstr "¡Sólo quedan unos pocos intentos antes de bloquear!"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls.c#l2102
 #: ../openconnect-strings.txt:1181
@@ -2337,125 +2338,125 @@ msgstr "Introducir PIN:"
 #: ../openconnect-strings.txt:1184
 #, c-format
 msgid "Failed to SHA1 input data for signing: %s\n"
-msgstr ""
+msgstr "Falló al hacer el SHA1 de los datos de entrada que firmar: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l111
 #: ../openconnect-strings.txt:1187
 #, c-format
 msgid "TPM sign function called for %d bytes.\n"
-msgstr ""
+msgstr "Función de firma TPM llamada para %d bytes.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l118
 #: ../openconnect-strings.txt:1190
 #, c-format
 msgid "Failed to create TPM hash object: %s\n"
-msgstr ""
+msgstr "Falló al crear el objeto hash TPM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l125
 #: ../openconnect-strings.txt:1193
 #, c-format
 msgid "Failed to set value in TPM hash object: %s\n"
-msgstr ""
+msgstr "Falló al establecer el valor en el objeto hash TPM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l135
 #: ../openconnect-strings.txt:1196
 #, c-format
 msgid "TPM hash signature failed: %s\n"
-msgstr ""
+msgstr "Falló la firma hash TPM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l157
 #: ../openconnect-strings.txt:1199
 #, c-format
 msgid "Error decoding TSS key blob: %s\n"
-msgstr ""
+msgstr "Error al decodificar la clave TSS blob: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l164
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l175
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l188
 #: ../openconnect-strings.txt:1204
 msgid "Error in TSS key blob\n"
-msgstr ""
+msgstr "Error en clave TSS blob\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l195
 #: ../openconnect-strings.txt:1207
 #, c-format
 msgid "Failed to create TPM context: %s\n"
-msgstr ""
+msgstr "Falló al crear el contexto TPM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l202
 #: ../openconnect-strings.txt:1210
 #, c-format
 msgid "Failed to connect TPM context: %s\n"
-msgstr ""
+msgstr "Falló al conectar al contexto TPM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l210
 #: ../openconnect-strings.txt:1213
 #, c-format
 msgid "Failed to load TPM SRK key: %s\n"
-msgstr ""
+msgstr "Falló al cargar la clave TPM SRK: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l217
 #: ../openconnect-strings.txt:1216
 #, c-format
 msgid "Failed to load TPM SRK policy object: %s\n"
-msgstr ""
+msgstr "Falló al cargar el objeto de política TPM SRK: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l238
 #: ../openconnect-strings.txt:1219
 #, c-format
 msgid "Failed to set TPM PIN: %s\n"
-msgstr ""
+msgstr "Falló al establecer el PIN TPM %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l254
 #: ../openconnect-strings.txt:1222
 #, c-format
 msgid "Failed to load TPM key blob: %s\n"
-msgstr ""
+msgstr "Falló al cargar la clave blob TPM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l261
 #: ../openconnect-strings.txt:1225
 msgid "Enter TPM SRK PIN:"
-msgstr ""
+msgstr "Introduzca PIN TPM SRK:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l286
 #: ../openconnect-strings.txt:1228
 #, c-format
 msgid "Failed to create key policy object: %s\n"
-msgstr ""
+msgstr "Falló al crear el objeto de política de clave: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l294
 #: ../openconnect-strings.txt:1231
 #, c-format
 msgid "Failed to assign policy to key: %s\n"
-msgstr ""
+msgstr "Falló al asignar la política a la clave: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l300
 #: ../openconnect-strings.txt:1234
 msgid "Enter TPM key PIN:"
-msgstr ""
+msgstr "Introduzca el PIN de la clave TPM:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/gnutls_tpm.c#l311
 #: ../openconnect-strings.txt:1237
 #, c-format
 msgid "Failed to set key PIN: %s\n"
-msgstr ""
+msgstr "Falló al establecer el PIN de la clave: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/ssl.c#l82
 #: ../openconnect-strings.txt:1240
 msgid "Socket connect cancelled\n"
-msgstr ""
+msgstr "Socket de conexión cancelado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/ssl.c#l115
 #: ../openconnect-strings.txt:1243
 #, c-format
 msgid "Failed to reconnect to proxy %s\n"
-msgstr ""
+msgstr "Falló al reconectar al proxy %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/ssl.c#l119
 #: ../openconnect-strings.txt:1246
 #, c-format
 msgid "Failed to reconnect to host %s\n"
-msgstr ""
+msgstr "Falló al reconectar al servidor %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ffa6125c74:/ssl.c#l182
 #: ../openconnect-strings.txt:1249
