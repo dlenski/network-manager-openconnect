@@ -4,5 +4,5 @@ service=org.freedesktop.NetworkManager.openconnect
 program=@LIBEXECDIR@/nm-openconnect-service
 
 [GNOME]
-auth-dialog=nm-openconnect-auth-dialog
-properties=libnm-openconnect-properties
+auth-dialog=@LIBEXECDIR@/nm-openconnect-auth-dialog
+properties=@LIBDIR@/libnm-openconnect-properties

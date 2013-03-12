@@ -17,7 +17,9 @@ nmvpnservicedir = $(sysconfdir)/NetworkManager/VPN
 nmvpnservice_DATA = nm-openconnect-service.name
 
 nm-openconnect-service.name: $(srcdir)/nm-openconnect-service.name.in
-	sed -e 's|[@]LIBEXECDIR[@]|$(libexecdir)|g' $< >$@
+	sed -e 's|[@]LIBEXECDIR[@]|$(libexecdir)|g' \
+	    -e 's|[@]LIBDIR[@]|$(libdir)|g' \
+	    $< >$@
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-more-warnings=yes
 
