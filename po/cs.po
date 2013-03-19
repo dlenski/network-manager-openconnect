@@ -406,7 +406,7 @@ msgstr "Použít syslog pro záznam zpráv o průběhu"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l249
 #: ../openconnect-strings.txt:120
 msgid "Drop privileges after connecting"
-msgstr "%s: selhalo zahození privilegií (%s)\n"
+msgstr "Po připojení zahodit oprávnění"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l250
 #: ../openconnect-strings.txt:123
