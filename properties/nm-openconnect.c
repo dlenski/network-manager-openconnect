@@ -577,7 +577,7 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 
 		/* zap invalid characters */
 		for (; *src; src++)
-			if ((*src >= '0' && *src <= '9') || *src == '-')
+			if (*src >= ' ' && *src <= '~')
 				*(dst++) = *src;
 		*dst = 0;
 
