@@ -175,15 +175,15 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 	if (bval)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, "yes");
 
-	/* Soft token source */
+	/* Soft token mode */
 	buf = g_key_file_get_string (keyfile, "openconnect", "StokenSource", NULL);
 	if (buf)
-		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE, buf);
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE, buf);
 
-	/* Soft token string */
+	/* Soft token secret */
 	buf = g_key_file_get_string (keyfile, "openconnect", "StokenString", NULL);
 	if (buf)
-		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING, buf);
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET, buf);
 
 	return connection;
 }
@@ -205,8 +205,8 @@ export (NMVpnPluginUiInterface *iface,
 	const char *usercert = NULL;
 	const char *privkey = NULL;
 	gboolean pem_passphrase_fsid = FALSE;
-	const char *stoken_source = NULL;
-	const char *stoken_string = NULL;
+	const char *token_mode = NULL;
+	const char *token_secret = NULL;
 	gboolean success = FALSE;
 	FILE *f;
 
@@ -256,13 +256,13 @@ export (NMVpnPluginUiInterface *iface,
 	if (value && !strcmp (value, "yes"))
 		pem_passphrase_fsid = TRUE;
 
-	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE);
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE);
 	if (value && strlen (value))
-		stoken_source = value;
+		token_mode = value;
 
-	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING);
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
 	if (value && strlen (value))
-		stoken_string = value;
+		token_secret = value;
 
 	fprintf (f,
 		 "[openconnect]\n"
@@ -286,8 +286,8 @@ export (NMVpnPluginUiInterface *iface,
 		 /* User Certificate */      usercert,
 		 /* Private Key */           privkey,
 		 /* FSID */                  pem_passphrase_fsid ? "1" : "0",
-		 /* Soft token source */     stoken_source ? stoken_source : "",
-		 /* Soft token string */     stoken_string ? stoken_string : "");
+		 /* Soft token mode */       token_mode ? token_mode : "",
+		 /* Soft token secret */     token_secret ? token_secret : "");
 
 	success = TRUE;
 
@@ -372,7 +372,7 @@ stuff_changed_cb (GtkWidget *widget, gpointer user_data)
 }
 
 static gboolean
-init_stoken_ui (OpenconnectPluginUiWidget *self,
+init_token_ui (OpenconnectPluginUiWidget *self,
 				OpenconnectPluginUiWidgetPrivate *priv,
 				NMSettingVPN *s_vpn)
 {
@@ -384,16 +384,16 @@ init_stoken_ui (OpenconnectPluginUiWidget *self,
 	if (!openconnect_has_stoken_support ())
 		return TRUE;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_vbox"));
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_vbox"));
 	if (!widget)
 		return FALSE;
 	gtk_box_pack_start (GTK_BOX (priv->widget), widget, FALSE, FALSE, 0);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_source"));
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_mode"));
 	if (!widget)
 		return FALSE;
 	if (s_vpn) {
-		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE);
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE);
 		if (value) {
 			if (!strcmp (value, "stokenrc"))
 				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 1);
@@ -405,14 +405,14 @@ init_stoken_ui (OpenconnectPluginUiWidget *self,
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_string"));
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_secret"));
 	if (!widget)
 		return FALSE;
 	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (widget));
 	if (!buffer)
 		return FALSE;
 	if (s_vpn) {
-		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING);
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
 		if (value)
 			gtk_text_buffer_set_text (buffer, value, -1);
 	}
@@ -485,7 +485,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-	if (init_stoken_ui (self, priv, s_vpn) == FALSE)
+	if (init_token_ui (self, priv, s_vpn) == FALSE)
 		return FALSE;
 
 	tls_pw_init_auth_widget (priv->builder, priv->group, s_vpn, stuff_changed_cb, self);
@@ -513,7 +513,7 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	GtkWidget *widget;
 	char *str;
 	gint idx;
-	gboolean stoken_string_editable = FALSE;
+	gboolean token_secret_editable = FALSE;
 	GtkTextIter iter_start, iter_end;
 	GtkTextBuffer *buffer;
 	const char *auth_type = NULL;
@@ -544,7 +544,7 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	if (str && strlen (str))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, str);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_source"));
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_mode"));
 	idx = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 	str = NULL;
 	switch (idx) {
@@ -556,17 +556,17 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 		break;
 	case 2:
 		str = "manual";
-		stoken_string_editable = TRUE;
+		token_secret_editable = TRUE;
 		break;
 	}
 	if (str)
-		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_SOURCE, str);
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE, str);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_string_label"));
-	gtk_widget_set_sensitive (widget, stoken_string_editable);
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_secret_label"));
+	gtk_widget_set_sensitive (widget, token_secret_editable);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "stoken_string"));
-	gtk_widget_set_sensitive (widget, stoken_string_editable);
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_secret"));
+	gtk_widget_set_sensitive (widget, token_secret_editable);
 
 	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (widget));
 	gtk_text_buffer_get_start_iter (buffer, &iter_start);
@@ -582,7 +582,7 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 		*dst = 0;
 
 		if (strlen (str))
-			nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_STOKEN_STRING, str);
+			nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET, str);
 	}
 
 	if (!check_validity (self, error))

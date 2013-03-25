@@ -1038,8 +1038,8 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	char *csd_wrapper;
 	char *pem_passphrase_fsid;
 	char *cafile;
-	char *stoken_source;
-	char *stoken_string;
+	char *token_mode;
+	char *token_secret;
 
 	hostname = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_GATEWAY);
 	if (!hostname) {
@@ -1110,14 +1110,14 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	if (pem_passphrase_fsid && cert && !strcmp(pem_passphrase_fsid, "yes"))
 		openconnect_passphrase_from_fsid(vpninfo);
 
-	stoken_source = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_STOKEN_SOURCE);
-	stoken_string = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_STOKEN_STRING);
-	if (stoken_source) {
+	token_mode = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_TOKEN_MODE);
+	token_secret = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_TOKEN_SECRET);
+	if (token_mode) {
 		int ret = 0;
 
-		if (!strcmp(stoken_source, "manual") && stoken_string)
-			ret = openconnect_set_stoken_mode(vpninfo, 1, stoken_string);
-		else if (!strcmp(stoken_source, "stokenrc"))
+		if (!strcmp(token_mode, "manual") && token_secret)
+			ret = openconnect_set_stoken_mode(vpninfo, 1, token_secret);
+		else if (!strcmp(token_mode, "stokenrc"))
 			ret = openconnect_set_stoken_mode(vpninfo, 1, NULL);
 
 		if (ret)
