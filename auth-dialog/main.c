@@ -66,7 +66,11 @@
 #endif
 
 #if !OPENCONNECT_CHECK_VER(2,1)
-#define openconnect_set_stoken_mode(...) -EOPNOTSUPP
+#define __openconnect_set_token_mode(...) -EOPNOTSUPP
+#elif !OPENCONNECT_CHECK_VER(2,2)
+#define __openconnect_set_token_mode(vpninfo, mode, secret) openconnect_set_stoken_mode(vpninfo, 1, secret)
+#else
+#define __openconnect_set_token_mode openconnect_set_token_mode
 #endif
 
 #ifdef OPENCONNECT_OPENSSL
@@ -1116,12 +1120,14 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 		int ret = 0;
 
 		if (!strcmp(token_mode, "manual") && token_secret)
-			ret = openconnect_set_stoken_mode(vpninfo, 1, token_secret);
+			ret = __openconnect_set_token_mode(vpninfo, OC_TOKEN_MODE_STOKEN, token_secret);
 		else if (!strcmp(token_mode, "stokenrc"))
-			ret = openconnect_set_stoken_mode(vpninfo, 1, NULL);
+			ret = __openconnect_set_token_mode(vpninfo, OC_TOKEN_MODE_STOKEN, NULL);
+		else if (!strcmp(token_mode, "totp") && token_secret)
+			ret = __openconnect_set_token_mode(vpninfo, OC_TOKEN_MODE_TOTP, token_secret);
 
 		if (ret)
-			fprintf(stderr, "Failed to initialize stoken: %d\n", ret);
+			fprintf(stderr, "Failed to initialize software token: %d\n", ret);
 	}
 
 	return 0;

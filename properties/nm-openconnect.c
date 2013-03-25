@@ -45,6 +45,9 @@
 #if !OPENCONNECT_CHECK_VER(2,1)
 #define openconnect_has_stoken_support() 0
 #endif
+#if !OPENCONNECT_CHECK_VER(2,2)
+#define openconnect_has_oath_support() 0
+#endif
 
 #define NM_VPN_API_SUBJECT_TO_CHANGE
 
@@ -380,8 +383,11 @@ init_token_ui (OpenconnectPluginUiWidget *self,
 	GtkTextBuffer *buffer;
 	const char *value;
 
-	/* don't advertise stoken properties if we can't use them anyway */
-	if (!openconnect_has_stoken_support ())
+	/*
+	 * don't advertise software token properties if we can't use them anyway
+	 * TODO: Fix up the dialog accordingly if e.g. stoken is present but oath is missing
+	 */
+	if (!openconnect_has_stoken_support () && !openconnect_has_oath_support ())
 		return TRUE;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_vbox"));
@@ -399,6 +405,8 @@ init_token_ui (OpenconnectPluginUiWidget *self,
 				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 1);
 			else if (!strcmp (value, "manual"))
 				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 2);
+			else if (!strcmp (value, "totp"))
+				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 3);
 			else
 				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
 		}
@@ -556,6 +564,10 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 		break;
 	case 2:
 		str = "manual";
+		token_secret_editable = TRUE;
+		break;
+	case 3:
+		str = "totp";
 		token_secret_editable = TRUE;
 		break;
 	}
