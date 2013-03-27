@@ -430,12 +430,12 @@ msgstr "Zjistit MTU cesty na/z serveru"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l254
 #: ../openconnect-strings.txt:135
 msgid "Set key passphrase or TPM SRK PIN"
-msgstr ""
+msgstr "Nastavit heslovou frázi pro klíč nebo PIN pro TPM SRK"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l255
 #: ../openconnect-strings.txt:138
 msgid "Key passphrase is fsid of file system"
-msgstr ""
+msgstr "Heslovou frází klíče je FSID souborového systému"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l256
 #: ../openconnect-strings.txt:141
@@ -629,13 +629,13 @@ msgstr "Nerozpoznaná volba na řádku %d: „%s“\n"
 #: ../openconnect-strings.txt:252
 #, c-format
 msgid "Option '%s' does not take an argument at line %d\n"
-msgstr ""
+msgstr "Volba „%s“ nemůže mít argument na řádku %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l424
 #: ../openconnect-strings.txt:255
 #, c-format
 msgid "Option '%s' requires an argument at line %d\n"
-msgstr "Volba „%s“ vyžaduje argument na řádce %d\n"
+msgstr "Volba „%s“ vyžaduje argument na řádku %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l460
 #: ../openconnect-strings.txt:258
@@ -917,18 +917,20 @@ msgid ""
 "This is probably because your OpenSSL is broken\n"
 "See http://rt.openssl.org/Ticket/Display.html?id=2984\n"
 msgstr ""
+"Důvodem je pravděpodobně počkození vašeho OpenSSL\n"
+"Viz http://rt.openssl.org/Ticket/Display.html?id=2984\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/dtls.c#l330
 #: ../openconnect-strings.txt:418
 #, c-format
 msgid "DTLS handshake failed: %d\n"
-msgstr "Podání ruky DTLS se nezdařilo: %d\n"
+msgstr "Navázání DTLS se nezdařilo: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/dtls.c#l386
 #: ../openconnect-strings.txt:421
 #, c-format
 msgid "Unknown DTLS parameters for requested CipherSuite '%s'\n"
-msgstr ""
+msgstr "Neznámé parametry DTLS pro požadované CipherSuite „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/dtls.c#l399
 #: ../openconnect-strings.txt:424
@@ -1472,7 +1474,7 @@ msgstr "Nepodařilo se vytvořit nové tun"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l545
 #: ../openconnect-strings.txt:719
 msgid "Failed to put tun file descriptor into message-discard mode"
-msgstr ""
+msgstr "Selhalo přepnutí popisovače souboru pro tun do režimu message-discard"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l580
 #: ../openconnect-strings.txt:722
@@ -1658,7 +1660,7 @@ msgstr "Selhalo načtení položky „%s“ z úložiště klíčů: %s\n"
 #: ../openconnect-strings.txt:830
 #, c-format
 msgid "Failed to create BIO for keystore item '%s'\n"
-msgstr ""
+msgstr "Selhlalo vytvoření BIO pro položku „%s“ v úložišti klíčů\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/openssl.c#l652
 #: ../openconnect-strings.txt:833
@@ -2280,7 +2282,7 @@ msgstr "Selhalo spojení SSL: %s\n"
 #: ../openconnect-strings.txt:1170
 #, c-format
 msgid "GnuTLS non-fatal return during handshake: %s\n"
-msgstr ""
+msgstr "GnuTLS skončilo nekritickou chybou při navazování spojení: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls.c#l2110
 #: ../openconnect-strings.txt:1173
@@ -2318,7 +2320,7 @@ msgstr "Selhal výpočet SHA1 pro podpis vstupních dat: %s\n"
 #: ../openconnect-strings.txt:1191
 #, c-format
 msgid "TPM sign function called for %d bytes.\n"
-msgstr ""
+msgstr "Podpisová funkce TPM požadovala %d bajtů.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l118
 #: ../openconnect-strings.txt:1194
@@ -2334,9 +2336,9 @@ msgstr "Selhalo nastavení hodnoty v objektu haše TMP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l135
 #: ../openconnect-strings.txt:1200
-#, fuzzy, c-format
+#, c-format
 msgid "TPM hash signature failed: %s\n"
-msgstr "kontrola vytvořeného podpisu se nepodařila: %s\n"
+msgstr "Podpisový haš TPM selhal: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l157
 #: ../openconnect-strings.txt:1203
@@ -2950,7 +2952,7 @@ msgstr "Žádáno heslo ale nastaveno „--no-passwd“\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/auth.c#l943
 #: ../openconnect-strings.txt:1536
 msgid "No form handler; cannot authenticate.\n"
-msgstr ""
+msgstr "Není čím zpracovat formulář; nelze autentizovat.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/auth.c#l879
 #: ../openconnect-strings.txt:1539
