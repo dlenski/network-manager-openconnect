@@ -504,9 +504,8 @@ msgstr "Konfigurační XML soubor"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l271
 #: ../openconnect-strings.txt:180
-#, fuzzy
 msgid "Choose authentication login selection"
-msgstr "Neznámá chyba při přihlášení nebo autentizaci na %s@%s\n"
+msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l272
 #: ../openconnect-strings.txt:183
@@ -1443,9 +1442,9 @@ msgstr "Nelze otevřít %s: %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l445
 #: ../openconnect-strings.txt:704
-#, fuzzy, c-format
+#, c-format
 msgid "Can't plumb %s for IPv%d: %s\n"
-msgstr "Nelze otevřít %s k zápisu"
+msgstr "Nelze tunelovat %s pro IPv%d: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l510
 #: ../openconnect-strings.txt:707
@@ -1923,13 +1922,13 @@ msgstr "Nelze získat dobu vypršení certifikátu\n"
 #: ../openconnect-strings.txt:975
 #, c-format
 msgid "Failed to open key/certificate file %s: %s\n"
-msgstr "Nepodařilo se otevřít soubor klíče/certifikátu %s: %s\n"
+msgstr "Nepodařilo se otevřít soubor s klíčem/certifikátem %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls.c#l284
 #: ../openconnect-strings.txt:978
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to stat key/certificate file %s: %s\n"
-msgstr "Selhalo dešifrování PKCS#8 souboru certifikátu\n"
+msgstr "Nepodařilo se zjistit informace o souboru s klíčem/certifikátem %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls.c#l293
 #: ../openconnect-strings.txt:981
