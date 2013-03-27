@@ -241,9 +241,8 @@ msgstr "mmap konfigurační XML soubor"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/xml.c#l73
 #: ../openconnect-strings.txt:27
-#, fuzzy
 msgid "Failed to SHA1 existing file\n"
-msgstr "Nelze zavřít soubor \"%s\": fclose() selhalo: %s"
+msgstr "Selhal výpočet SHA1 stávajícího souboru\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/xml.c#l81
 #: ../openconnect-strings.txt:30
@@ -581,16 +580,13 @@ msgstr "(POZNÁMKA: libstoken je v tomto sestavení vypnuta)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l288
 #: ../openconnect-strings.txt:225
-#, fuzzy
 msgid "Connection retry timeout in seconds"
-msgstr ""
-"Zkouší se připojení...\n"
-"Zkuste to prosím opět za pár sekund"
+msgstr "Časový limit v sekundách pro opakování připojení"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l289
 #: ../openconnect-strings.txt:228
 msgid "Server's certificate SHA1 fingerprint"
-msgstr "SHA1 miniatura certifikátu serveru"
+msgstr "Otisk SHA1 pro certifikát serveru"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l290
 #: ../openconnect-strings.txt:231
@@ -1262,15 +1258,15 @@ msgstr "SSL_zápis se nezdařil: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/cstp.c#l677
 #: ../openconnect-strings.txt:605
-#, fuzzy, c-format
+#, c-format
 msgid "SSL read error: %s; reconnecting.\n"
-msgstr "%s (%s) – Chyba při čtení dat na bajtu %s (%s)."
+msgstr "Chyba čtení přes SSL: %s; znovu se připojuje.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/cstp.c#l700
 #: ../openconnect-strings.txt:608
-#, fuzzy, c-format
+#, c-format
 msgid "SSL send failed: %s\n"
-msgstr "odeslání na keyserver se nezdařilo: %s\n"
+msgstr "Chyba odesílání přes SSL: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/cstp.c#l728
 #: ../openconnect-strings.txt:611
@@ -2034,7 +2030,7 @@ msgstr "Šifrovaný soubor PEM je příliš krátký\n"
 #: ../openconnect-strings.txt:1033
 #, c-format
 msgid "Failed to initialise cipher for decrypting PEM file: %s\n"
-msgstr ""
+msgstr "Selhala inicializace šifry pro dešifrování souboru PEM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls.c#l809
 #: ../openconnect-strings.txt:1036
@@ -2316,7 +2312,7 @@ msgstr "Zadejte PIN:"
 #: ../openconnect-strings.txt:1188
 #, c-format
 msgid "Failed to SHA1 input data for signing: %s\n"
-msgstr ""
+msgstr "Selhal výpočet SHA1 pro podpis vstupních dat: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l111
 #: ../openconnect-strings.txt:1191
@@ -2346,14 +2342,14 @@ msgstr "kontrola vytvořeného podpisu se nepodařila: %s\n"
 #: ../openconnect-strings.txt:1203
 #, c-format
 msgid "Error decoding TSS key blob: %s\n"
-msgstr ""
+msgstr "Chyba při dekódování binárních data klíče TSS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l164
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l175
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l188
 #: ../openconnect-strings.txt:1208
 msgid "Error in TSS key blob\n"
-msgstr ""
+msgstr "Chyba v binárních datech klíče TSS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l195
 #: ../openconnect-strings.txt:1211
@@ -2387,9 +2383,9 @@ msgstr "Nastavení TPM PIN kódu selhalo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l254
 #: ../openconnect-strings.txt:1226
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to load TPM key blob: %s\n"
-msgstr "Nepodařilo se nahrát soukromý klíč TPM\n"
+msgstr "Selhalo načtení binárních dat klíče TPM: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l261
 #: ../openconnect-strings.txt:1229
@@ -2398,9 +2394,9 @@ msgstr "Zadejte TPM SRK PIN:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l286
 #: ../openconnect-strings.txt:1232
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to create key policy object: %s\n"
-msgstr "Selhala inicializace modulu s vlákny: nelze vytvořit klíč"
+msgstr "Selhalo vytvoření objektu se zásadami pro klíč: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l294
 #: ../openconnect-strings.txt:1235
@@ -2926,7 +2922,6 @@ msgstr "Nepodařilo se obsloužit formulář s volbami method=\"%s\", action=\"%
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/auth.c#l498
 #: ../openconnect-strings.txt:1520
-#| msgid "Unknown response from server\n"
 msgid "Empty response from server\n"
 msgstr "Prázdná odpověď od serveru\n"
 
@@ -3011,12 +3006,12 @@ msgstr "Inicializace softwarového tokenu byla úspěšná.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/auth.c#l999
 #: ../openconnect-strings.txt:1570
 msgid "OK to generate INITIAL tokencode\n"
-msgstr ""
+msgstr "Kód tokenu INITAL v pořádku vygenerován\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/auth.c#l1004
 #: ../openconnect-strings.txt:1573
 msgid "OK to generate NEXT tokencode\n"
-msgstr ""
+msgstr "Kód tokenu NEXT v pořádku vygenerován\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/auth.c#l1009
 #: ../openconnect-strings.txt:1576
