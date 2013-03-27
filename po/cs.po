@@ -505,7 +505,7 @@ msgstr "Konfigurační XML soubor"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l271
 #: ../openconnect-strings.txt:180
 msgid "Choose authentication login selection"
-msgstr ""
+msgstr "Vybrat autentizační skupinu"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/main.c#l272
 #: ../openconnect-strings.txt:183
@@ -1422,7 +1422,7 @@ msgstr "Skript „%s“ vrátil chybu %d\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l416
 #: ../openconnect-strings.txt:692
 msgid "Could not open /dev/tun for plumbing"
-msgstr "Nelze otevřít /dev/tun pro tunelování"
+msgstr "Nelze otevřít /dev/tun pro propojení"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l420
 #: ../openconnect-strings.txt:695
@@ -1444,7 +1444,7 @@ msgstr "Nelze otevřít %s: %s"
 #: ../openconnect-strings.txt:704
 #, c-format
 msgid "Can't plumb %s for IPv%d: %s\n"
-msgstr "Nelze tunelovat %s pro IPv%d: %s\n"
+msgstr "Nelze propojit %s pro IPv%d: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l510
 #: ../openconnect-strings.txt:707
