@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-25 20:44+0000\n"
-"PO-Revision-Date: 2013-03-28 08:44+0100\n"
+"POT-Creation-Date: 2013-03-27 19:32+0000\n"
+"PO-Revision-Date: 2013-04-01 02:04+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
-"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sl_SI\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
@@ -581,13 +581,11 @@ msgstr "Skrivnost programskega žetona"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/main.c#l294
 #: ../openconnect-strings.txt:225
-#| msgid "(NOTE: libstoken disabled in this build)"
 msgid "(NOTE: libstoken (RSA SecurID) disabled in this build)"
 msgstr "(Opomba: knjižnica libstoken (RSA SecurID) je v tej izgradnji onemogočena)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/main.c#l297
 #: ../openconnect-strings.txt:228
-#| msgid "(NOTE: libproxy disabled in this build)"
 msgid "(NOTE: liboath (TOTP) disabled in this build)"
 msgstr "(Opomba: knjižnica liboath (TOTP) je v tej izgradnji onemogočena)"
 
@@ -713,7 +711,6 @@ msgstr "Različica OpenConnect %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/main.c#l731
 #: ../openconnect-strings.txt:297
 #, c-format
-#| msgid "Invalid cookie offered: %s\n"
 msgid "Invalid software token mode \"%s\"\n"
 msgstr "Neveljaven način programskega žetona \"%s\"\n"
 
@@ -873,7 +870,6 @@ msgstr "Ni mogoče odpreti datoteke ~/.stokenrc.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/main.c#l1267
 #: ../openconnect-strings.txt:387
-#| msgid "OpenConnect was not built with soft token support\n"
 msgid "OpenConnect was not built with libstoken support\n"
 msgstr "Program OpenConnect ni izgrajen s podporo za libstoken\n"
 
@@ -884,13 +880,11 @@ msgstr "Splošna napaka v knjižnici libstoken.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/main.c#l1284
 #: ../openconnect-strings.txt:393
-#| msgid "OpenConnect was not built with soft token support\n"
 msgid "OpenConnect was not built with liboath support\n"
 msgstr "Program OpenConnect ni izgrajen s podporo za liboath\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/main.c#l1287
 #: ../openconnect-strings.txt:396
-#| msgid "General failure in libstoken\n"
 msgid "General failure in liboath\n"
 msgstr "Splošna napaka v knjižnici liboath.\n"
 
@@ -3055,20 +3049,17 @@ msgstr "Strežnik zavrača uporabniški prstni odtis; preklopljen bo način za r
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/auth.c#l1087
 #: ../openconnect-strings.txt:1598
-#| msgid "Generating tokencode\n"
 msgid "Generating RSA token code\n"
 msgstr "Poteka ustvarjanje kode žetona RSA.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/auth.c#l1115
 #: ../openconnect-strings.txt:1601
-#| msgid "Generating tokencode\n"
 msgid "Generating OATH TOTP token code\n"
 msgstr "Poteka ustvarjanje kode žetona OATH TOTP.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/1448a3feaa:/auth.c#l1125
 #: ../openconnect-strings.txt:1604
 #, c-format
-#| msgid "OK to generate NEXT tokencode\n"
 msgid "Unable to generate OATH TOTP token code: %s\n"
 msgstr "Ustvarjanje kode žetona OATH TOTP je spodletelo: %s\n"
 
