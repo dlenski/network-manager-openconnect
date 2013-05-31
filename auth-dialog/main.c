@@ -1487,14 +1487,14 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	g_signal_connect_swapped(ui_data->connect_button, "clicked",
 				 G_CALLBACK(queue_connect_host), ui_data);
 	gtk_widget_show(ui_data->connect_button);
-
-	autocon = gtk_check_button_new_with_label(_("Automatically start connecting next time"));
-	gtk_box_pack_start(GTK_BOX(vbox), autocon, FALSE, FALSE, 0);
-	if (get_autoconnect (ui_data->secrets))
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(autocon), 1);
-	g_signal_connect(autocon, "toggled", G_CALLBACK(autocon_toggled), NULL);
-	gtk_widget_show(autocon);
-
+	if (vpnhosts->next) {
+		autocon = gtk_check_button_new_with_label(_("Automatically start connecting next time"));
+		gtk_box_pack_start(GTK_BOX(vbox), autocon, FALSE, FALSE, 0);
+		if (get_autoconnect (ui_data->secrets))
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(autocon), 1);
+		g_signal_connect(autocon, "toggled", G_CALLBACK(autocon_toggled), NULL);
+		gtk_widget_show(autocon);
+	}
 	frame = gtk_frame_new(NULL);
 	gtk_box_pack_start(GTK_BOX(vbox), frame, TRUE, TRUE, 0);
 	gtk_widget_set_size_request(frame, -1, -1);
@@ -1727,7 +1727,8 @@ int main (int argc, char **argv)
 #endif
 	openconnect_init_ssl();
 
-	if (get_autoconnect (secrets))
+	/* Start connecting now if there's only one host. Or if configured to */
+	if (!vpnhosts->next || get_autoconnect (secrets))
 		queue_connect_host(_ui_data);
 
 	gtk_window_present(GTK_WINDOW(_ui_data->dialog));
