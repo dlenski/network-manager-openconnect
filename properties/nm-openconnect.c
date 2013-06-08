@@ -375,19 +375,49 @@ stuff_changed_cb (GtkWidget *widget, gpointer user_data)
 }
 
 static gboolean
+init_token_mode_options (GtkComboBox *token_mode)
+{
+	GtkListStore *token_mode_list = GTK_LIST_STORE (gtk_combo_box_get_model (token_mode));
+	GtkTreeModel *model = GTK_TREE_MODEL (token_mode_list);
+	GtkTreeIter iter;
+	gboolean iter_valid;
+	int valid_rows = 0;
+
+	if (!gtk_tree_model_get_iter_first (model, &iter))
+		return FALSE;
+	do {
+		char *token_type;
+
+		gtk_tree_model_get (model, &iter, 2, &token_type, -1);
+		if (!strcmp (token_type, "stoken") && !openconnect_has_stoken_support ())
+			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
+		else if (!strcmp (token_type, "totp") && !openconnect_has_oath_support ())
+			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
+		else {
+			iter_valid = gtk_tree_model_iter_next (model, &iter);
+			valid_rows++;
+		}
+		g_free (token_type);
+	} while (iter_valid);
+
+	/* if the only option is "Disabled", don't show the token section at all */
+	return valid_rows > 1;
+}
+
+static gboolean
 init_token_ui (OpenconnectPluginUiWidget *self,
 				OpenconnectPluginUiWidgetPrivate *priv,
 				NMSettingVPN *s_vpn)
 {
 	GtkWidget *widget;
+	GtkComboBox *token_mode;
 	GtkTextBuffer *buffer;
 	const char *value;
 
-	/*
-	 * don't advertise software token properties if we can't use them anyway
-	 * TODO: Fix up the dialog accordingly if e.g. stoken is present but oath is missing
-	 */
-	if (!openconnect_has_stoken_support () && !openconnect_has_oath_support ())
+	token_mode = GTK_COMBO_BOX (gtk_builder_get_object (priv->builder, "token_mode"));
+	if (!token_mode)
+		return FALSE;
+	if (!init_token_mode_options (token_mode))
 		return TRUE;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_vbox"));
@@ -395,23 +425,31 @@ init_token_ui (OpenconnectPluginUiWidget *self,
 		return FALSE;
 	gtk_box_pack_start (GTK_BOX (priv->widget), widget, FALSE, FALSE, 0);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_mode"));
-	if (!widget)
-		return FALSE;
 	if (s_vpn) {
+		GtkTreeModel *model = gtk_combo_box_get_model (token_mode);
+		int active_option = 0;
+
 		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE);
 		if (value) {
-			if (!strcmp (value, "stokenrc"))
-				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 1);
-			else if (!strcmp (value, "manual"))
-				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 2);
-			else if (!strcmp (value, "totp"))
-				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 3);
-			else
-				gtk_combo_box_set_active (GTK_COMBO_BOX (widget), 0);
+			int i;
+			GtkTreeIter iter;
+
+			if (!gtk_tree_model_get_iter_first (model, &iter))
+				return FALSE;
+			for (i = 0; ; i++) {
+				char *pref_value;
+
+				gtk_tree_model_get (model, &iter, 1, &pref_value, -1);
+				if (!strcmp (value, pref_value))
+					active_option = i;
+				g_free (pref_value);
+				if (!gtk_tree_model_iter_next (model, &iter))
+					break;
+			}
 		}
+		gtk_combo_box_set_active (token_mode, active_option);
 	}
-	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
+	g_signal_connect (G_OBJECT (token_mode), "changed", G_CALLBACK (stuff_changed_cb), self);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_secret"));
 	if (!widget)
@@ -520,7 +558,8 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 	NMSettingVPN *s_vpn;
 	GtkWidget *widget;
 	char *str;
-	gint idx;
+	GtkTreeModel *model;
+	GtkTreeIter iter;
 	gboolean token_secret_editable = FALSE;
 	GtkTextIter iter_start, iter_end;
 	GtkTextBuffer *buffer;
@@ -553,26 +592,12 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER, str);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_mode"));
-	idx = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
-	str = NULL;
-	switch (idx) {
-	case 0:
-		str = "disabled";
-		break;
-	case 1:
-		str = "stokenrc";
-		break;
-	case 2:
-		str = "manual";
-		token_secret_editable = TRUE;
-		break;
-	case 3:
-		str = "totp";
-		token_secret_editable = TRUE;
-		break;
-	}
-	if (str)
+	model = gtk_combo_box_get_model (GTK_COMBO_BOX (widget));
+	if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (widget), &iter)) {
+		gtk_tree_model_get (model, &iter, 1, &str, 3, &token_secret_editable, -1);
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE, str);
+		g_free(str);
+	}
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_secret_label"));
 	gtk_widget_set_sensitive (widget, token_secret_editable);

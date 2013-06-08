@@ -734,19 +734,37 @@
         <columns>
           <!-- column-name legible -->
           <column type="gchararray"/>
+          <!-- column-name pref_value -->
+          <column type="gchararray"/>
+          <!-- column-name token_type -->
+          <column type="gchararray"/>
+          <!-- column-name token_secret_editable -->
+          <column type="gboolean"/>
         </columns>
         <data>
           <row>
             <col id="0" translatable="yes">Disabled</col>
+            <col id="1" translatable="no">disabled</col>
+            <col id="2" translatable="no">any</col>
+            <col id="3" translatable="no">False</col>
           </row>
           <row>
             <col id="0" translatable="yes">RSA SecurID - read from ~/.stokenrc</col>
+            <col id="1" translatable="no">stokenrc</col>
+            <col id="2" translatable="no">stoken</col>
+            <col id="3" translatable="no">False</col>
           </row>
           <row>
             <col id="0" translatable="yes">RSA SecurID - manually entered</col>
+            <col id="1" translatable="no">manual</col>
+            <col id="2" translatable="no">stoken</col>
+            <col id="3" translatable="no">True</col>
           </row>
           <row>
             <col id="0" translatable="yes">TOTP - manually entered</col>
+            <col id="1" translatable="no">totp</col>
+            <col id="2" translatable="no">totp</col>
+            <col id="3" translatable="no">True</col>
           </row>
         </data>
       </object>
