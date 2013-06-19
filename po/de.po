@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: NetworkManager-openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-21 00:14+0000\n"
-"PO-Revision-Date: 2013-03-24 14:54+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2013-04-25 10:13+0000\n"
+"PO-Revision-Date: 2013-06-19 10:46+0200\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -1456,8 +1456,9 @@ msgstr "Skript »%s« gab Fehler %d zurück\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l416
 #: ../openconnect-strings.txt:692
+#, fuzzy
 msgid "Could not open /dev/tun for plumbing"
-msgstr ""
+msgstr "/dev/tun konnte nicht für ?"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/tun.c#l420
 #: ../openconnect-strings.txt:695
@@ -2271,7 +2272,7 @@ msgstr "Signierer nicht gefunden"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls.c#l1709
 #: ../openconnect-strings.txt:1134
 msgid "signer not a CA certificate"
-msgstr ""
+msgstr "Signierer ist kein CA-Zertifikat"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls.c#l1711
 #: ../openconnect-strings.txt:1137
@@ -2441,9 +2442,9 @@ msgstr "Festlegen der TPM-PIN fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l254
 #: ../openconnect-strings.txt:1226
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to load TPM key blob: %s\n"
-msgstr "Laden des privaten TPM-Schlüssels scheiterte\n"
+msgstr "Laden des privaten TPM-Schlüssels scheiterte: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/gnutls_tpm.c#l261
 #: ../openconnect-strings.txt:1229
@@ -2695,6 +2696,8 @@ msgid ""
 "Error: Server asked us to run CSD hostscan.\n"
 "You need to provide a suitable --csd-wrapper argument.\n"
 msgstr ""
+"Fehler: Der Server bat einen CSD-Rechnerscan auszuführen.\n"
+"Die müssen ein passendes Argument für »--csd-wrapper« angeben.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0e323daff0:/http.c#l522
 #: ../openconnect-strings.txt:1367
