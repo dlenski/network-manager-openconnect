@@ -36,8 +36,6 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
-#include <gconf/gconf-client.h>
-
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <glib-unix.h>
@@ -105,12 +103,6 @@ enum certificate_response{
 	CERT_DENIED = -1,
 	CERT_USER_NOT_READY,
 	CERT_ACCEPTED,
-};
-
-struct gconf_key {
-	char *key;
-	char *value;
-	struct gconf_key *next;
 };
 
 /* This struct holds all information we need to add a password to
@@ -1723,7 +1715,7 @@ int main (int argc, char **argv)
 
 	_ui_data = init_ui_data(vpn_name, options, secrets, vpn_uuid);
 	if (get_config(options, secrets, _ui_data->vpninfo)) {
-		fprintf(stderr, "Failed to find VPN UUID %s in gconf\n", vpn_uuid);
+		fprintf(stderr, "Failed to find VPN UUID %s\n", vpn_uuid);
 		return 1;
 	}
 	build_main_dialog(_ui_data);
