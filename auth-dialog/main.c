@@ -71,6 +71,8 @@
 #define __openconnect_set_token_mode openconnect_set_token_mode
 #endif
 
+#define FORMCHOICE(sopt, i)		(&(sopt)->choices[i])
+
 #ifdef OPENCONNECT_OPENSSL
 #include <openssl/ssl.h>
 #include <openssl/bio.h>
@@ -332,10 +334,10 @@ static void combo_changed(GtkComboBox *combo, ui_fragment_data *data)
 	if (entry < 0)
 		return;
 
-	data->entry_text = sopt->choices[entry].name;
+	data->entry_text = FORMCHOICE(sopt, entry)->name;
 
 	g_queue_foreach(data->ui_data->form_entries, (GFunc)do_override_label,
-			&sopt->choices[entry]);
+			FORMCHOICE(sopt, entry));
 }
 
 #ifdef OPENCONNECT_OPENSSL
@@ -423,17 +425,17 @@ static gboolean ui_add_select (ui_fragment_data *data)
 	combo = gtk_combo_box_text_new();
 	gtk_box_pack_end(GTK_BOX(hbox), combo, FALSE, FALSE, 0);
 	for (i = 0; i < sopt->nr_choices; i++) {
-		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), sopt->choices[i].label);
+		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), FORMCHOICE(sopt, i)->label);
 		if (data->entry_text &&
-		    !strcmp(data->entry_text, sopt->choices[i].name)) {
+		    !strcmp(data->entry_text, FORMCHOICE(sopt, i)->name)) {
 			gtk_combo_box_set_active(GTK_COMBO_BOX(combo), i);
 			g_free(data->entry_text);
-			data->entry_text = sopt->choices[i].name;
+			data->entry_text = FORMCHOICE(sopt, i)->name;
 		}
 	}
 	if (gtk_combo_box_get_active(GTK_COMBO_BOX(combo)) < 0) {
 		gtk_combo_box_set_active(GTK_COMBO_BOX(combo), 0); 
-		data->entry_text = sopt->choices[0].name;
+		data->entry_text = FORMCHOICE(sopt, 0)->name;
 	}
 
 	if (g_queue_peek_tail(ui_data->form_entries) == data)
