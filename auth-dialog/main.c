@@ -71,7 +71,21 @@
 #define __openconnect_set_token_mode openconnect_set_token_mode
 #endif
 
+#if OPENCONNECT_CHECK_VER(3,0)
+#define NEWGROUP_SUPPORTED		1
+#define AUTHGROUP_OPT(form)		(void *)(form)->authgroup_opt
+#define AUTHGROUP_SELECTION(form)	(form)->authgroup_selection
+#define FORMCHOICE(sopt, i)		((sopt)->choices[i])
+#else
+#define NEWGROUP_SUPPORTED		0
+#define AUTHGROUP_OPT(form)		NULL
+#define AUTHGROUP_SELECTION(form)	0
 #define FORMCHOICE(sopt, i)		(&(sopt)->choices[i])
+#define OC_FORM_RESULT_ERR		-1
+#define OC_FORM_RESULT_OK		0
+#define OC_FORM_RESULT_CANCELLED	1
+#define OC_FORM_RESULT_NEWGROUP		2
+#endif
 
 #ifdef OPENCONNECT_OPENSSL
 #include <openssl/ssl.h>
@@ -181,6 +195,9 @@ typedef struct auth_ui_data {
 	GCond form_shown_changed;
 	gboolean form_shown;
 
+	gboolean newgroup;
+	gboolean group_set;
+
 	GCond cert_response_changed;
 	enum certificate_response cert_response;
 } auth_ui_data;
@@ -273,6 +290,7 @@ typedef struct ui_fragment_data {
 #endif
 	struct oc_form_opt *opt;
 	char *entry_text;
+	int initial_selection;
 	int grab_focus;
 } ui_fragment_data;
 
@@ -327,6 +345,13 @@ static void do_override_label(ui_fragment_data *data, struct oc_choice *choice)
 	gtk_label_set_text(GTK_LABEL(data->widget), new_label);
 
 }
+
+static gboolean do_newgroup(GtkDialog *dialog)
+{
+	gtk_dialog_response(dialog, AUTH_DIALOG_RESPONSE_LOGIN);
+	return FALSE;
+}
+
 static void combo_changed(GtkComboBox *combo, ui_fragment_data *data)
 {
 	struct oc_form_opt_select *sopt = (void *)data->opt;
@@ -335,6 +360,12 @@ static void combo_changed(GtkComboBox *combo, ui_fragment_data *data)
 		return;
 
 	data->entry_text = FORMCHOICE(sopt, entry)->name;
+
+	if (NEWGROUP_SUPPORTED && entry != data->initial_selection) {
+		data->ui_data->newgroup = TRUE;
+		g_idle_add ((GSourceFunc)do_newgroup, data->ui_data->dialog);
+		return;
+	}
 
 	g_queue_foreach(data->ui_data->form_entries, (GFunc)do_override_label,
 			FORMCHOICE(sopt, entry));
@@ -414,7 +445,7 @@ static gboolean ui_add_select (ui_fragment_data *data)
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
 	GtkWidget *hbox, *text, *combo;
 	struct oc_form_opt_select *sopt = (void *)data->opt;
-	int i;
+	int i, user_selection = -1;
 
 	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_pack_start(GTK_BOX(data->ui_data->ssl_box), hbox, FALSE, FALSE, 0);
@@ -424,19 +455,20 @@ static gboolean ui_add_select (ui_fragment_data *data)
 
 	combo = gtk_combo_box_text_new();
 	gtk_box_pack_end(GTK_BOX(hbox), combo, FALSE, FALSE, 0);
+
 	for (i = 0; i < sopt->nr_choices; i++) {
 		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo), FORMCHOICE(sopt, i)->label);
 		if (data->entry_text &&
-		    !strcmp(data->entry_text, FORMCHOICE(sopt, i)->name)) {
-			gtk_combo_box_set_active(GTK_COMBO_BOX(combo), i);
-			g_free(data->entry_text);
-			data->entry_text = FORMCHOICE(sopt, i)->name;
-		}
+		    !strcmp(data->entry_text, FORMCHOICE(sopt, i)->name))
+			user_selection = i;
 	}
-	if (gtk_combo_box_get_active(GTK_COMBO_BOX(combo)) < 0) {
-		gtk_combo_box_set_active(GTK_COMBO_BOX(combo), 0); 
-		data->entry_text = FORMCHOICE(sopt, 0)->name;
-	}
+
+	i = data->initial_selection != -1 ? data->initial_selection :
+	    user_selection != -1 ? user_selection : 0;
+	gtk_combo_box_set_active(GTK_COMBO_BOX(combo), i);
+	g_free(data->entry_text);
+	data->entry_text = FORMCHOICE(sopt, i)->name;
+	data->initial_selection = i;
 
 	if (g_queue_peek_tail(ui_data->form_entries) == data)
 		gtk_widget_grab_focus (combo);
@@ -674,10 +706,12 @@ static gboolean ui_form (struct oc_auth_form *form)
 			g_mutex_lock (&ui_data->form_mutex);
 			g_queue_push_head(ui_data->form_entries, data);
 			g_mutex_unlock (&ui_data->form_mutex);
-			if (opt->type != OC_FORM_OPT_PASSWORD)
+			if (opt->type != OC_FORM_OPT_PASSWORD) {
 				data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 									      form, opt));
-			else {
+				if (!data->entry_text)
+					data->entry_text = g_strdup (opt->value);
+			} else {
 				GHashTable *attrs;
 
 				data->cancel = g_cancellable_new ();
@@ -700,6 +734,11 @@ static gboolean ui_form (struct oc_auth_form *form)
 			data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 								      form, opt));
 
+			if (opt == AUTHGROUP_OPT(form))
+				data->initial_selection = AUTHGROUP_SELECTION(form);
+			else
+				data->initial_selection = -1;
+
 			ui_add_select(data);
 		} else
 			g_slice_free (ui_fragment_data, data);
@@ -708,11 +747,51 @@ static gboolean ui_form (struct oc_auth_form *form)
 	return ui_show(ui_data);
 }
 
+/* If our stored group_list selection differs from the server default, send a
+   NEWGROUP request to try to change it before rendering the form */
+
+static gboolean set_initial_authgroup (auth_ui_data *ui_data, struct oc_auth_form *form)
+{
+	struct oc_form_opt *opt;
+
+	if (!NEWGROUP_SUPPORTED || ui_data->group_set || !AUTHGROUP_OPT(form))
+		return FALSE;
+	ui_data->group_set = TRUE;
+
+	for (opt = form->opts; opt; opt = opt->next) {
+		int i;
+		char *saved_group;
+		struct oc_form_opt_select *sopt;
+
+		if (opt != AUTHGROUP_OPT(form))
+			continue;
+
+		saved_group = find_form_answer(ui_data->secrets, form, opt);
+		if (!saved_group)
+			return FALSE;
+
+		sopt = (struct oc_form_opt_select *)opt;
+		for (i = 0; i < sopt->nr_choices; i++) {
+			struct oc_choice *ch = FORMCHOICE(sopt, i);
+			if (!strcmp(saved_group, ch->name) && i != AUTHGROUP_SELECTION(form)) {
+				free(opt->value);
+				opt->value = g_strdup(saved_group);
+				return TRUE;
+			}
+		}
+	}
+	return FALSE;
+}
+
 static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 {
 	auth_ui_data *ui_data = cbdata;
 	int response;
 
+	if (set_initial_authgroup(ui_data, form))
+		return OC_FORM_RESULT_NEWGROUP;
+
+	ui_data->newgroup = FALSE;
 	g_idle_add((GSourceFunc)ui_form, form);
 
 	g_mutex_lock(&ui_data->form_mutex);
@@ -772,11 +851,14 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 
 	ui_data->form_grabbed = 0;
 	g_mutex_unlock(&ui_data->form_mutex);
-	
-	/* -1 = cancel,
-	 *  0 = failure,
-	 *  1 = success */
-	return (response == AUTH_DIALOG_RESPONSE_LOGIN ? 0 : 1);
+
+	if (response == AUTH_DIALOG_RESPONSE_LOGIN) {
+		if (ui_data->newgroup)
+			return OC_FORM_RESULT_NEWGROUP;
+		else
+			return OC_FORM_RESULT_OK;
+	} else
+		return OC_FORM_RESULT_CANCELLED;
 
 }
 
