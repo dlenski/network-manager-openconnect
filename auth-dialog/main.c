@@ -76,11 +76,13 @@
 #define AUTHGROUP_OPT(form)		(void *)(form)->authgroup_opt
 #define AUTHGROUP_SELECTION(form)	(form)->authgroup_selection
 #define FORMCHOICE(sopt, i)		((sopt)->choices[i])
+#define IGNORE_OPT(opt)			((opt)->flags & OC_FORM_OPT_IGNORE)
 #else
 #define NEWGROUP_SUPPORTED		0
 #define AUTHGROUP_OPT(form)		NULL
 #define AUTHGROUP_SELECTION(form)	0
 #define FORMCHOICE(sopt, i)		(&(sopt)->choices[i])
+#define IGNORE_OPT(opt)			0
 #define OC_FORM_RESULT_ERR		-1
 #define OC_FORM_RESULT_OK		0
 #define OC_FORM_RESULT_CANCELLED	1
@@ -694,7 +696,8 @@ static gboolean ui_form (struct oc_auth_form *form)
 	for (opt = form->opts; opt; opt = opt->next) {
 		ui_fragment_data *data;
 
-		if (opt->type == OC_FORM_OPT_HIDDEN)
+		if (opt->type == OC_FORM_OPT_HIDDEN ||
+		    IGNORE_OPT(opt))
 			continue;
 
 		data = g_slice_new0 (ui_fragment_data);
