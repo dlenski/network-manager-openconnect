@@ -251,13 +251,13 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l101
 #: ../openconnect-strings.txt:30
 msgid "Failed to SHA1 existing file\n"
-msgstr ""
+msgstr "Falhou no SHA1 do ficheiro existente\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l108
 #: ../openconnect-strings.txt:33
 #, c-format
 msgid "XML config file SHA1: %s\n"
-msgstr ""
+msgstr "Ficheiro de configuração em XML de SHA1: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l116
 #: ../openconnect-strings.txt:36
@@ -308,7 +308,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l287
 #: ../openconnect-strings.txt:62
 msgid "using OpenSSL"
-msgstr ""
+msgstr "utilizar OpenSSL"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l291
 #: ../openconnect-strings.txt:65
@@ -331,7 +331,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l322
 #: ../openconnect-strings.txt:76
 msgid "Usage:  openconnect [options] <server>\n"
-msgstr ""
+msgstr "Utilização:  openconnect [opções] <servidor>\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l323
 #: ../openconnect-strings.txt:79
@@ -349,7 +349,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l327
 #: ../openconnect-strings.txt:87
 msgid "Continue in background after startup"
-msgstr ""
+msgstr "Continuar nos bastidores após arranque"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l328
 #: ../openconnect-strings.txt:90
@@ -359,7 +359,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l330
 #: ../openconnect-strings.txt:93
 msgid "Use SSL client certificate CERT"
-msgstr ""
+msgstr "Usar o certificado CERT do cliente SSL"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l331
 #: ../openconnect-strings.txt:96
@@ -384,12 +384,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l335
 #: ../openconnect-strings.txt:108
 msgid "Enable compression (default)"
-msgstr ""
+msgstr "Ativar compressão (padrão)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l336
 #: ../openconnect-strings.txt:111
 msgid "Disable compression"
-msgstr ""
+msgstr "Desativar compressão"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l337
 #: ../openconnect-strings.txt:114
@@ -404,12 +404,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l339
 #: ../openconnect-strings.txt:120
 msgid "Display help text"
-msgstr ""
+msgstr "Mostrar texto de ajuda"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l340
 #: ../openconnect-strings.txt:123
 msgid "Use IFNAME for tunnel interface"
-msgstr ""
+msgstr "Usar IFNAME na interface de túnel"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l342
 #: ../openconnect-strings.txt:126
@@ -459,12 +459,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l354
 #: ../openconnect-strings.txt:153
 msgid "Set proxy server"
-msgstr ""
+msgstr "Definir servidor de proxy"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l355
 #: ../openconnect-strings.txt:156
 msgid "Disable proxy"
-msgstr ""
+msgstr "Desativar proxy"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l356
 #: ../openconnect-strings.txt:159
@@ -484,7 +484,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l361
 #: ../openconnect-strings.txt:168
 msgid "Less output"
-msgstr ""
+msgstr "Menos saída"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l362
 #: ../openconnect-strings.txt:171
@@ -499,7 +499,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l364
 #: ../openconnect-strings.txt:177
 msgid "default"
-msgstr ""
+msgstr "padrão"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l366
 #: ../openconnect-strings.txt:180
@@ -514,12 +514,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l369
 #: ../openconnect-strings.txt:186
 msgid "Report version number"
-msgstr ""
+msgstr "Relatar número da versão"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l370
 #: ../openconnect-strings.txt:189
 msgid "More output"
-msgstr ""
+msgstr "Mais saída"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l371
 #: ../openconnect-strings.txt:192
@@ -529,7 +529,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l372
 #: ../openconnect-strings.txt:195
 msgid "XML config file"
-msgstr ""
+msgstr "Ficheiro de configuração XML"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l373
 #: ../openconnect-strings.txt:198
@@ -569,7 +569,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l380
 #: ../openconnect-strings.txt:219
 msgid "Disable DTLS"
-msgstr ""
+msgstr "Desativar DTLS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l381
 #: ../openconnect-strings.txt:222
@@ -654,7 +654,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l434
 #: ../openconnect-strings.txt:270
 msgid "fgets (stdin)"
-msgstr ""
+msgstr "fgets (stdin)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l490
 #: ../openconnect-strings.txt:273
@@ -714,7 +714,7 @@ msgstr ""
 #: ../openconnect-strings.txt:303
 #, c-format
 msgid "MTU %d too small\n"
-msgstr ""
+msgstr "MTU %d demasiado pequeno\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l792
 #: ../openconnect-strings.txt:306
@@ -728,7 +728,7 @@ msgstr ""
 #: ../openconnect-strings.txt:312
 #, c-format
 msgid "Invalid user \"%s\"\n"
-msgstr ""
+msgstr "Utilizador inválido \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l851
 #: ../openconnect-strings.txt:315
@@ -739,7 +739,7 @@ msgstr ""
 #: ../openconnect-strings.txt:318
 #, c-format
 msgid "OpenConnect version %s\n"
-msgstr ""
+msgstr "Versão OpenConnect %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l892
 #: ../openconnect-strings.txt:321
@@ -761,7 +761,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l926
 #: ../openconnect-strings.txt:330
 msgid "No server specified\n"
-msgstr ""
+msgstr "Nenhum servidor especificado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l939
 #: ../openconnect-strings.txt:333
@@ -781,7 +781,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1035
 #: ../openconnect-strings.txt:342
 msgid "Creating SSL connection failed\n"
-msgstr ""
+msgstr "Falhou ao criar a ligação SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1045
 #: ../openconnect-strings.txt:345
@@ -809,7 +809,7 @@ msgstr ""
 #: ../openconnect-strings.txt:358
 #, c-format
 msgid "Connected %s as %s%s%s, using %s\n"
-msgstr ""
+msgstr "Ligado %s como %s%s%s, a usar %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1083
 #: ../openconnect-strings.txt:361
@@ -825,13 +825,13 @@ msgstr ""
 #: ../openconnect-strings.txt:367
 #, c-format
 msgid "Failed to open '%s' for write: %s\n"
-msgstr ""
+msgstr "Falhou ao abrir '%s' para escrita: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1110
 #: ../openconnect-strings.txt:370
 #, c-format
 msgid "Continuing in background; pid %d\n"
-msgstr ""
+msgstr "A continuar nos bastidores; pid %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1125
 #: ../openconnect-strings.txt:373
@@ -843,13 +843,13 @@ msgstr ""
 #: ../openconnect-strings.txt:376
 #, c-format
 msgid "Failed to open %s for write: %s\n"
-msgstr ""
+msgstr "Falhou ao abrir %s para escrita: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1155
 #: ../openconnect-strings.txt:379
 #, c-format
 msgid "Failed to write config to %s: %s\n"
-msgstr ""
+msgstr "Falhou ao escrever configuração em %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1221
 #: ../openconnect-strings.txt:382
@@ -859,6 +859,9 @@ msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
 "Reason: %s\n"
 msgstr ""
+"\n"
+"Certificado do servidor VPN \"%s\" falhou a verificação.\n"
+"Razão_: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1227
 #: ../openconnect-strings.txt:388
@@ -870,19 +873,19 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1235
 #: ../openconnect-strings.txt:392
 msgid "yes"
-msgstr ""
+msgstr "sim"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1228
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1246
 #: ../openconnect-strings.txt:396
 msgid "no"
-msgstr ""
+msgstr "não"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1252
 #: ../openconnect-strings.txt:399
 #, c-format
 msgid "SHA1 fingerprint: %s\n"
-msgstr ""
+msgstr "impressão digital SHA1: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1286
 #: ../openconnect-strings.txt:402
@@ -910,7 +913,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1463
 #: ../openconnect-strings.txt:415
 msgid "Can't open ~/.stokenrc file\n"
-msgstr ""
+msgstr "Não consegue abrir o ficheiro ~/.stokenrc\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1466
 #: ../openconnect-strings.txt:418
@@ -920,7 +923,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1469
 #: ../openconnect-strings.txt:421
 msgid "General failure in libstoken\n"
-msgstr ""
+msgstr "Falha geral em libstoken\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1484
 #: ../openconnect-strings.txt:424
@@ -942,7 +945,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l83
 #: ../openconnect-strings.txt:434
 msgid "SSL write cancelled\n"
-msgstr ""
+msgstr "Escrita SSL cancelada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l135
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l187
@@ -956,20 +959,20 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l176
 #: ../openconnect-strings.txt:444
 msgid "SSL read cancelled\n"
-msgstr ""
+msgstr "Leitura SSL cancelada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l372
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l851
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1289
 #: ../openconnect-strings.txt:449
 msgid "Enter PEM pass phrase:"
-msgstr ""
+msgstr "Introduza a palavra-passe PEM:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l379
 #: ../openconnect-strings.txt:452
 #, c-format
 msgid "PEM password too long (%d >= %d)\n"
-msgstr ""
+msgstr "Senha PEM demasiado comprida (%d >= %d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l407
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l352
@@ -980,12 +983,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l420
 #: ../openconnect-strings.txt:459
 msgid "Parse PKCS#12 failed (wrong passphrase?)\n"
-msgstr ""
+msgstr "Falhou processamento PKCS#12 (senha errada?)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l427
 #: ../openconnect-strings.txt:462
 msgid "Parse PKCS#12 failed (see above errors)\n"
-msgstr ""
+msgstr "Falhou processamento PKCS#12 (consultar erros acima)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l439
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l576
@@ -998,54 +1001,55 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l442
 #: ../openconnect-strings.txt:470
 msgid "PKCS#12 contained no certificate!"
-msgstr ""
+msgstr "PKCS#12 não continha um certificado!"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l451
 #: ../openconnect-strings.txt:473
 msgid "PKCS#12 contained no private key!"
-msgstr ""
+msgstr "PKCS#12 não continha uma chave privada!"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l472
 #: ../openconnect-strings.txt:476
 #, c-format
 msgid "Extra cert from PKCS#12: '%s'\n"
-msgstr ""
+msgstr "Certificado extra de PKCS#12: '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l498
 #: ../openconnect-strings.txt:479
 msgid "Can't load TPM engine.\n"
-msgstr ""
+msgstr "Não consegue carregar o motor TPM.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l504
 #: ../openconnect-strings.txt:482
 msgid "Failed to init TPM engine\n"
-msgstr ""
+msgstr "Falhou iniciar o motor TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l514
 #: ../openconnect-strings.txt:485
 msgid "Failed to set TPM SRK password\n"
-msgstr ""
+msgstr "Falhou ao definir a senha TPM SRK\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l528
 #: ../openconnect-strings.txt:488
 msgid "Failed to load TPM private key\n"
-msgstr ""
+msgstr "Falhou carregar a chave privada TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l534
 #: ../openconnect-strings.txt:491
 msgid "Add key from TPM failed\n"
-msgstr ""
+msgstr "Falhou adicionar a chave de TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l548
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1210
 #: ../openconnect-strings.txt:495
 msgid "This version of OpenConnect was built without TPM support\n"
-msgstr ""
+msgstr "Esta versão de OpenConnect foi compilada sem suporte de TPM\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l565
 #: ../openconnect-strings.txt:498
 msgid "Failed to reload X509 cert for expiry check\n"
 msgstr ""
+"Falhou ao recarregar certificado X509 durante a verificação da validade\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l599
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l260
@@ -1063,12 +1067,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l630
 #: ../openconnect-strings.txt:508
 msgid "Loading private key failed (wrong passphrase?)\n"
-msgstr ""
+msgstr "Falhou carregar chave privada (senha errada?)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l636
 #: ../openconnect-strings.txt:511
 msgid "Loading private key failed (see above errors)\n"
-msgstr ""
+msgstr "Falhou carregar a chave privada (consultar erros acima)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l645
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l905
@@ -1081,18 +1085,18 @@ msgstr ""
 #: ../openconnect-strings.txt:519
 #, c-format
 msgid "Using certificate file %s\n"
-msgstr ""
+msgstr "A usar o ficheiro de certificado %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l661
 #: ../openconnect-strings.txt:522
 #, c-format
 msgid "Failed to open certificate file %s: %s\n"
-msgstr ""
+msgstr "Falhou ao abrir o ficheiro de certificado %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l672
 #: ../openconnect-strings.txt:525
 msgid "Read PKCS#12 failed\n"
-msgstr ""
+msgstr "Falhou ao ler PKCS#12\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l690
 #: ../openconnect-strings.txt:528
@@ -1107,7 +1111,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l708
 #: ../openconnect-strings.txt:534
 msgid "Loading certificate failed\n"
-msgstr ""
+msgstr "Falhou ao carregar o certificado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l735
 #: ../openconnect-strings.txt:537
@@ -1118,20 +1122,22 @@ msgstr ""
 #: ../openconnect-strings.txt:540
 #, c-format
 msgid "Failed to open private key file %s: %s\n"
-msgstr ""
+msgstr "Falhou ao abrir o ficheiro de chave privada %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l771
 #: ../openconnect-strings.txt:543
 #, c-format
 msgid "Failed to identify private key type in '%s'\n"
 msgstr ""
+"Falhou a identificação do tipo de chave privada em '%s'\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l832
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1736
 #: ../openconnect-strings.txt:547
 #, c-format
 msgid "Server SSL certificate didn't match: %s\n"
-msgstr ""
+msgstr "O certificado do servidor SSL não correspondeu: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l952
 #: ../openconnect-strings.txt:550
@@ -1155,31 +1161,31 @@ msgstr ""
 #: ../openconnect-strings.txt:559
 #, c-format
 msgid "Matched %s address '%s'\n"
-msgstr ""
+msgstr "Correspondeu %s do endereço '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l991
 #: ../openconnect-strings.txt:562
 #, c-format
 msgid "No match for %s address '%s'\n"
-msgstr ""
+msgstr "Sem correspondências do endereço %s '%s':\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1033
 #: ../openconnect-strings.txt:565
 #, c-format
 msgid "URI '%s' has non-empty path; ignoring\n"
-msgstr ""
+msgstr "URI '%s' tem um caminho não vazio; será ignorado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1038
 #: ../openconnect-strings.txt:568
 #, c-format
 msgid "Matched URI '%s'\n"
-msgstr ""
+msgstr "URI correspondido '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1049
 #: ../openconnect-strings.txt:571
 #, c-format
 msgid "No match for URI '%s'\n"
-msgstr ""
+msgstr "Sem correspondências do URI '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1064
 #: ../openconnect-strings.txt:574
@@ -1219,13 +1225,13 @@ msgstr ""
 #: ../openconnect-strings.txt:593
 #, c-format
 msgid "Server certificate verify failed: %s\n"
-msgstr ""
+msgstr "Falhou a verificação do certificado do servidor: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1184
 #: ../openconnect-strings.txt:596
 #, c-format
 msgid "Extra cert from cafile: '%s'\n"
-msgstr ""
+msgstr "Certificado extra do catfile: '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1215
 #: ../openconnect-strings.txt:599
@@ -1236,24 +1242,26 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l204
 #: ../openconnect-strings.txt:603
 msgid "Client certificate has expired at"
-msgstr ""
+msgstr "Certificado do cliente expirou em"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1223
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l206
 #: ../openconnect-strings.txt:607
 msgid "Client certificate expires soon at"
-msgstr ""
+msgstr "Certificado do cliente expira brevemente em"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1228
 #: ../openconnect-strings.txt:610
 msgid "<error>"
-msgstr ""
+msgstr "<error>"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1277
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1912
 #: ../openconnect-strings.txt:614
 msgid "Loading certificate failed. Aborting.\n"
 msgstr ""
+"Falhou ao carregar o certificado. A abortar.\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1322
 #: ../openconnect-strings.txt:617
@@ -1265,19 +1273,19 @@ msgstr ""
 #: ../openconnect-strings.txt:620
 #, c-format
 msgid "Failed to open CA file '%s'\n"
-msgstr ""
+msgstr "Falhou ao abrir ficheiro CA '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1364
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1949
 #: ../openconnect-strings.txt:624
 #, c-format
 msgid "SSL negotiation with %s\n"
-msgstr ""
+msgstr "Negociação SSL com %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1380
 #: ../openconnect-strings.txt:627
 msgid "SSL connection failure\n"
-msgstr ""
+msgstr "falha na ligação SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/openssl.c#l1390
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1986
@@ -1290,7 +1298,7 @@ msgstr ""
 #: ../openconnect-strings.txt:635
 #, c-format
 msgid "Connected to HTTPS on %s\n"
-msgstr ""
+msgstr "Ligado a HTTPS em %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l87
 #: ../openconnect-strings.txt:638
@@ -1445,7 +1453,7 @@ msgstr ""
 #: ../openconnect-strings.txt:718
 #, c-format
 msgid "Using PKCS#11 certificate %s\n"
-msgstr ""
+msgstr "A usar certificado PKCS#11 %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l968
 #: ../openconnect-strings.txt:721
@@ -1461,7 +1469,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1034
 #: ../openconnect-strings.txt:727
 msgid "No certificate found in file"
-msgstr ""
+msgstr "Não se encontrou um certificado no ficheiro"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1039
 #: ../openconnect-strings.txt:730
@@ -1621,7 +1629,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1751
 #: ../openconnect-strings.txt:814
 msgid "signer not found"
-msgstr ""
+msgstr "assinante não encontrado"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1753
 #: ../openconnect-strings.txt:817
@@ -1631,22 +1639,22 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1755
 #: ../openconnect-strings.txt:820
 msgid "insecure algorithm"
-msgstr ""
+msgstr "algoritmo inseguro"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1757
 #: ../openconnect-strings.txt:823
 msgid "certificate not yet activated"
-msgstr ""
+msgstr "certificado ainda não ativado"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1759
 #: ../openconnect-strings.txt:826
 msgid "certificate expired"
-msgstr ""
+msgstr "certificado expirou"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1764
 #: ../openconnect-strings.txt:829
 msgid "signature verification failed"
-msgstr ""
+msgstr "falhou a verificação de assinatura"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1768
 #: ../openconnect-strings.txt:832
@@ -1685,7 +1693,7 @@ msgstr ""
 #: ../openconnect-strings.txt:850
 #, c-format
 msgid "SSL connection failure: %s\n"
-msgstr ""
+msgstr "Falha na ligação SSL: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l2002
 #: ../openconnect-strings.txt:853
@@ -1703,12 +1711,12 @@ msgstr ""
 #: ../openconnect-strings.txt:859
 #, c-format
 msgid "PIN required for %s"
-msgstr ""
+msgstr "PIN necessário para %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l2205
 #: ../openconnect-strings.txt:862
 msgid "Wrong PIN"
-msgstr ""
+msgstr "PIN errado"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l2208
 #: ../openconnect-strings.txt:865
@@ -1723,7 +1731,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l2215
 #: ../openconnect-strings.txt:871
 msgid "Enter PIN:"
-msgstr ""
+msgstr "Introduza o PIN:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls_tpm.c#l82
 #: ../openconnect-strings.txt:874
@@ -1807,7 +1815,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls_tpm.c#l254
 #: ../openconnect-strings.txt:915
 msgid "Enter TPM SRK PIN:"
-msgstr ""
+msgstr "Introduza o PIN de TPM SRK:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls_tpm.c#l279
 #: ../openconnect-strings.txt:918
@@ -1824,7 +1832,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls_tpm.c#l293
 #: ../openconnect-strings.txt:924
 msgid "Enter TPM key PIN:"
-msgstr ""
+msgstr "Introduza o PIN da chave TPM:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls_tpm.c#l304
 #: ../openconnect-strings.txt:927
@@ -1841,7 +1849,7 @@ msgstr ""
 #: ../openconnect-strings.txt:933
 #, c-format
 msgid "Failed to reconnect to proxy %s\n"
-msgstr ""
+msgstr "Falhou ao religar ao proxy %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l119
 #: ../openconnect-strings.txt:936
@@ -1888,18 +1896,18 @@ msgstr ""
 #: ../openconnect-strings.txt:957
 #, c-format
 msgid "statvfs: %s\n"
-msgstr ""
+msgstr "statvfs: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l391
 #: ../openconnect-strings.txt:960
 #, c-format
 msgid "statfs: %s\n"
-msgstr ""
+msgstr "statfs: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l472
 #: ../openconnect-strings.txt:963
 msgid "No error"
-msgstr ""
+msgstr "Sem erros"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l473
 #: ../openconnect-strings.txt:966
@@ -1914,17 +1922,17 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l475
 #: ../openconnect-strings.txt:972
 msgid "System error"
-msgstr ""
+msgstr "Erro do sistema"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l476
 #: ../openconnect-strings.txt:975
 msgid "Protocol error"
-msgstr ""
+msgstr "Erro de protocolo"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l477
 #: ../openconnect-strings.txt:978
 msgid "Permission denied"
-msgstr ""
+msgstr "Permissão negada"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l478
 #: ../openconnect-strings.txt:981
@@ -1934,22 +1942,22 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l479
 #: ../openconnect-strings.txt:984
 msgid "Value corrupted"
-msgstr ""
+msgstr "Valor corrompido"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l480
 #: ../openconnect-strings.txt:987
 msgid "Undefined action"
-msgstr ""
+msgstr "Ação indefinida"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l484
 #: ../openconnect-strings.txt:990
 msgid "Wrong password"
-msgstr ""
+msgstr "Senha errada"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/ssl.c#l485
 #: ../openconnect-strings.txt:993
 msgid "Unknown error"
-msgstr ""
+msgstr "Erro desconhecido"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l138
 #: ../openconnect-strings.txt:996
@@ -1995,7 +2003,7 @@ msgstr "Cookie inválido oferecido: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l321
 #: ../openconnect-strings.txt:1019
 msgid "<elided>"
-msgstr ""
+msgstr "<elided>"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l263
 #: ../openconnect-strings.txt:1022
@@ -2012,7 +2020,7 @@ msgstr "Corpo de respostas tem tamanho negativo (%d)\n"
 #: ../openconnect-strings.txt:1028
 #, c-format
 msgid "Unknown Transfer-Encoding: %s\n"
-msgstr ""
+msgstr "Codificação de Conteúdo Desconhecido: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l320
 #: ../openconnect-strings.txt:1031
@@ -2029,7 +2037,7 @@ msgstr "Erro ao ler corpo de reposta HTTP\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l348
 #: ../openconnect-strings.txt:1038
 msgid "Error fetching chunk header\n"
-msgstr ""
+msgstr "Erro ao obter cabeçalho do pedaço\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l374
 #: ../openconnect-strings.txt:1041
@@ -2040,12 +2048,14 @@ msgstr "Erro ao obter resposta do corpo HTTP\n"
 #: ../openconnect-strings.txt:1044
 #, c-format
 msgid "Error in chunked decoding. Expected '', got: '%s'"
-msgstr ""
+msgstr "Erro na descodificação do bloco. Esperado '', obtido: '%s'"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l390
 #: ../openconnect-strings.txt:1047
 msgid "Cannot receive HTTP 1.0 body without closing connection\n"
 msgstr ""
+"Não pode receber corpo em HTTP 1.0 sem ligação de fecho\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l475
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l935
@@ -2064,6 +2074,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1058
 msgid "Downloaded config file did not match intended SHA1\n"
 msgstr ""
+"O ficheiro de configuração transferido não correspondeu ao SHA1 desejado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l528
 #: ../openconnect-strings.txt:1061
@@ -2096,13 +2107,13 @@ msgstr ""
 #: ../openconnect-strings.txt:1080
 #, c-format
 msgid "Failed to open temporary CSD script file: %s\n"
-msgstr ""
+msgstr "Falhou ao abrir o ficheiro de script CSD temporário: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l570
 #: ../openconnect-strings.txt:1083
 #, c-format
 msgid "Failed to write temporary CSD script file: %s\n"
-msgstr ""
+msgstr "Falhou ao escrever o ficheiro de script CSD temporário: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l593
 #: ../openconnect-strings.txt:1086
@@ -2114,7 +2125,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1089
 #, c-format
 msgid "Failed to change to CSD home directory '%s': %s\n"
-msgstr ""
+msgstr "Falhou ao alterar a pasta pessoal CSD: '%s': %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l605
 #: ../openconnect-strings.txt:1092
@@ -2135,7 +2146,7 @@ msgstr "Falhou ao executar script CSD %s\n"
 #: ../openconnect-strings.txt:1100
 #, c-format
 msgid "Failed to parse redirected URL '%s': %s\n"
-msgstr ""
+msgstr "Falhou ao processar URL redirecionado '%s': %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l788
 #: ../openconnect-strings.txt:1103
@@ -2147,7 +2158,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1106
 #, c-format
 msgid "Allocating new path for relative redirect failed: %s\n"
-msgstr ""
+msgstr "Falhou a alocação de novo caminho do redirecionamento relativo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l973
 #: ../openconnect-strings.txt:1109
@@ -2175,7 +2186,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1110
 #: ../openconnect-strings.txt:1123
 msgid "Server requested SSL client certificate; none was configured\n"
-msgstr ""
+msgstr "Servidor pediu o certificado do cliente SSL; nenhum foi configurado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1125
 #: ../openconnect-strings.txt:1126
@@ -2211,57 +2222,57 @@ msgstr "rede inatingível"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1379
 #: ../openconnect-strings.txt:1144
 msgid "host unreachable"
-msgstr ""
+msgstr "hospedeiro inatingível "
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1380
 #: ../openconnect-strings.txt:1147
 msgid "connection refused by destination host"
-msgstr ""
+msgstr "ligação recusada pelo hospedeiro no destino"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1381
 #: ../openconnect-strings.txt:1150
 msgid "TTL expired"
-msgstr ""
+msgstr "TTL expirou"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1382
 #: ../openconnect-strings.txt:1153
 msgid "command not supported / protocol error"
-msgstr ""
+msgstr "comando não suportado / erro de protocolo"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1383
 #: ../openconnect-strings.txt:1156
 msgid "address type not supported"
-msgstr ""
+msgstr "tipo de endereço não suportado"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1397
 #: ../openconnect-strings.txt:1159
 #, c-format
 msgid "Error writing auth request to SOCKS proxy: %s\n"
-msgstr ""
+msgstr "Erro ao escrever pedido de autorização ao proxy SOCKS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1404
 #: ../openconnect-strings.txt:1162
 #, c-format
 msgid "Error reading auth response from SOCKS proxy: %s\n"
-msgstr ""
+msgstr "Erro ao ler resposta de autorização do proxy SOCKS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1410
 #: ../openconnect-strings.txt:1165
 #, c-format
 msgid "Unexpected auth response from SOCKS proxy: %02x %02x\n"
-msgstr ""
+msgstr "Resposta de autorização inesperada do proxy SOCKS: %02x %02x\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1418
 #: ../openconnect-strings.txt:1168
 #, c-format
 msgid "SOCKS proxy error %02x: %s\n"
-msgstr ""
+msgstr "Erro de proxy SOCKS %02x: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1422
 #: ../openconnect-strings.txt:1171
 #, c-format
 msgid "SOCKS proxy error %02x\n"
-msgstr ""
+msgstr "Erro de proxy SOCKS  %02x\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1428
 #: ../openconnect-strings.txt:1174
@@ -2273,60 +2284,62 @@ msgstr ""
 #: ../openconnect-strings.txt:1177
 #, c-format
 msgid "Error writing connect request to SOCKS proxy: %s\n"
-msgstr ""
+msgstr "Erro ao escrever pedido de ligação ao proxy SOCKS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1451
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1484
 #: ../openconnect-strings.txt:1181
 #, c-format
 msgid "Error reading connect response from SOCKS proxy: %s\n"
-msgstr ""
+msgstr "Erro ao ler resposta de ligação do proxy SOCKS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1457
 #: ../openconnect-strings.txt:1184
 #, c-format
 msgid "Unexpected connect response from SOCKS proxy: %02x %02x...\n"
-msgstr ""
+msgstr "Resposta de ligação inesperada do proxy SOCKS: %02x %02x...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1477
 #: ../openconnect-strings.txt:1187
 #, c-format
 msgid "Unexpected address type %02x in SOCKS connect response\n"
-msgstr ""
+msgstr "Tipo de endereço inesperado %02x na resposta de ligação SOCKS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1510
 #: ../openconnect-strings.txt:1190
 #, c-format
 msgid "Requesting HTTP proxy connection to %s:%d\n"
-msgstr ""
+msgstr "A pedir ligação do proxy HTTP a %s:%d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1518
 #: ../openconnect-strings.txt:1193
 #, c-format
 msgid "Sending proxy request failed: %s\n"
-msgstr ""
+msgstr "Falhou o envio do pedido de proxy: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1525
 #: ../openconnect-strings.txt:1196
 msgid "Error fetching proxy response\n"
 msgstr ""
+"Erro ao obter resposta do proxy\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1532
 #: ../openconnect-strings.txt:1199
 #, c-format
 msgid "Failed to parse proxy response '%s'\n"
-msgstr ""
+msgstr "Falhou ao processar resposta do proxy '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1538
 #: ../openconnect-strings.txt:1202
 #, c-format
 msgid "Proxy CONNECT request failed: %s\n"
-msgstr ""
+msgstr "Falhou o pedido da ligação de proxy: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1545
 #: ../openconnect-strings.txt:1205
 msgid "Failed to read proxy response\n"
-msgstr ""
+msgstr "Falhou a leitura da resposta do proxy\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1549
 #: ../openconnect-strings.txt:1208
@@ -2338,12 +2351,12 @@ msgstr ""
 #: ../openconnect-strings.txt:1211
 #, c-format
 msgid "Unknown proxy type '%s'\n"
-msgstr ""
+msgstr "Tipo de proxy '%s' desconhecido \n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l1593
 #: ../openconnect-strings.txt:1214
 msgid "Only http or socks(5) proxies supported\n"
-msgstr ""
+msgstr "Apenas proxies http ou socks(5) são suportados\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l159
 #: ../openconnect-strings.txt:1217
@@ -2425,17 +2438,17 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1019
 #: ../openconnect-strings.txt:1259
 msgid "Device ID:"
-msgstr ""
+msgstr "ID do Dispositivo:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1026
 #: ../openconnect-strings.txt:1262
 msgid "Password:"
-msgstr ""
+msgstr "Senha:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1033
 #: ../openconnect-strings.txt:1265
 msgid "PIN:"
-msgstr ""
+msgstr "PIN:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1064
 #: ../openconnect-strings.txt:1268
@@ -2520,7 +2533,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1317
 #, c-format
 msgid "Failed to parse server URL '%s'\n"
-msgstr ""
+msgstr "Falhou ao processar URL do servidor '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/library.c#l356
 #: ../openconnect-strings.txt:1320
@@ -2540,7 +2553,7 @@ msgstr "Falhou a inicialização de DTLSv1 CTX\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l135
 #: ../openconnect-strings.txt:1329
 msgid "Set DTLS cipher list failed\n"
-msgstr ""
+msgstr "Falhou a definição da lista de cifras DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l148
 #: ../openconnect-strings.txt:1332
@@ -2550,7 +2563,7 @@ msgstr "Falhou ao iniciar a sessão DTLSv1\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l169
 #: ../openconnect-strings.txt:1335
 msgid "Not precisely one DTLS cipher\n"
-msgstr ""
+msgstr "Não é precisamente uma cifra DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l187
 #: ../openconnect-strings.txt:1338
@@ -2561,6 +2574,10 @@ msgid ""
 "See http://rt.openssl.org/Ticket/Display.html?id=1751\n"
 "Use the --no-dtls command line option to avoid this message\n"
 msgstr ""
+"SSL_set_session() falhou com o antigo protocolo versão 0x%x\n"
+"Você está ausar uma versão do OpenSSL anterior do que a 0.9.8m?\n"
+"Consulte http://rt.openssl.org/Ticket/Display.html?id=1751\n"
+"Utilize a opção de linha de comando --no-dtls para evitar esta mensagem\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l215
 #: ../openconnect-strings.txt:1345
@@ -2572,13 +2589,15 @@ msgstr ""
 #: ../openconnect-strings.txt:1348
 msgid "Your OpenSSL is older than the one you built against, so DTLS may fail!"
 msgstr ""
+"O seu OpenSSL é anterior ao que acabou de compilar, por isso pode falhar o "
+"DTLS!"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l289
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l293
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l432
 #: ../openconnect-strings.txt:1353
 msgid "DTLS handshake timed out\n"
-msgstr ""
+msgstr "Cumprimento DTLS expirado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l290
 #: ../openconnect-strings.txt:1356
@@ -2591,7 +2610,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1361
 #, c-format
 msgid "DTLS handshake failed: %d\n"
-msgstr ""
+msgstr "Cumprimento DTLS falhou:%d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l345
 #: ../openconnect-strings.txt:1364
@@ -2652,7 +2671,7 @@ msgstr "Sem DTLS ao ligar via proxy\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l480
 #: ../openconnect-strings.txt:1394
 msgid "Open UDP socket for DTLS:"
-msgstr ""
+msgstr "Abrir tomada UDP para DTLS:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l511
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l640
@@ -2686,18 +2705,18 @@ msgstr "CSTP ligado. DPD %d, Keepalive %d\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l673
 #: ../openconnect-strings.txt:1413
 msgid "Attempt new DTLS connection\n"
-msgstr ""
+msgstr "Tentar nova ligação DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l700
 #: ../openconnect-strings.txt:1416
 #, c-format
 msgid "Received DTLS packet 0x%02x of %d bytes\n"
-msgstr ""
+msgstr "Recebido pacote DTLS 0x%02x de %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l714
 #: ../openconnect-strings.txt:1419
 msgid "Got DTLS DPD request\n"
-msgstr ""
+msgstr "Pedido DTLS DPD obtido\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l720
 #: ../openconnect-strings.txt:1422
@@ -2707,18 +2726,18 @@ msgstr "Falha ao enviar resposta DPD. Desligar esperado\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l724
 #: ../openconnect-strings.txt:1425
 msgid "Got DTLS DPD response\n"
-msgstr ""
+msgstr "Resposta DTLS DPD obtida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l728
 #: ../openconnect-strings.txt:1428
 msgid "Got DTLS Keepalive\n"
-msgstr ""
+msgstr "Obteve DTLS Keepalive\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l733
 #: ../openconnect-strings.txt:1431
 #, c-format
 msgid "Unknown DTLS packet type %02x, len %d\n"
-msgstr ""
+msgstr "Tipo de pacote DTLS desconhecido %02x, len %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l754
 #: ../openconnect-strings.txt:1434
@@ -2743,7 +2762,7 @@ msgstr "Enviar DTLS DPD\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l781
 #: ../openconnect-strings.txt:1446
 msgid "Failed to send DPD request. Expect disconnect\n"
-msgstr ""
+msgstr "Falha ao enviar pedido DPD. Desligar esperado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l794
 #: ../openconnect-strings.txt:1449
@@ -2759,7 +2778,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1455
 #, c-format
 msgid "DTLS got write error %d. Falling back to SSL\n"
-msgstr ""
+msgstr "DTLS obteve erro de escrita %d. A reverter para SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l849
 #: ../openconnect-strings.txt:1458
@@ -2788,12 +2807,12 @@ msgstr ""
 #: ../openconnect-strings.txt:1470
 #, c-format
 msgid "TCP_MAXSEG %d\n"
-msgstr ""
+msgstr "TCP_MAXSEG %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l202
 #: ../openconnect-strings.txt:1473
 msgid "Failed to initialise DTLS secret\n"
-msgstr ""
+msgstr "Falhou ao inicializar segredo DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l264
 #: ../openconnect-strings.txt:1476
@@ -2895,13 +2914,13 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l627
 #: ../openconnect-strings.txt:1528
 msgid "inflate failed\n"
-msgstr ""
+msgstr "enchimento falhou\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l644
 #: ../openconnect-strings.txt:1531
 #, c-format
 msgid "Received compressed data packet of %ld bytes\n"
-msgstr ""
+msgstr "Recebido pacote de dados comprimidos de %ld bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l663
 #: ../openconnect-strings.txt:1534
@@ -2927,13 +2946,14 @@ msgstr ""
 #: ../openconnect-strings.txt:1543
 #, c-format
 msgid "SSL send failed: %s\n"
-msgstr ""
+msgstr "Envio SSL falhou: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l758
 #: ../openconnect-strings.txt:1546
 #, c-format
 msgid "Unexpected packet length. SSL_read returned %d but packet is\n"
 msgstr ""
+"Comprimento inesperado do pacote. SSL_read devolveu %d mas o pacote é\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l770
 #: ../openconnect-strings.txt:1549
@@ -2954,7 +2974,7 @@ msgstr "Obteve CSTP Keepalive\n"
 #: ../openconnect-strings.txt:1558
 #, c-format
 msgid "Received uncompressed data packet of %d bytes\n"
-msgstr ""
+msgstr "Recebido pacote de dados não comprimidos de %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l801
 #: ../openconnect-strings.txt:1561
@@ -2965,7 +2985,7 @@ msgstr "Recebido o desligamento do servidor: %02x '%s'\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l809
 #: ../openconnect-strings.txt:1564
 msgid "Compressed packet received in !deflate mode\n"
-msgstr ""
+msgstr "Recebido pacote comprimido em modo !deflate\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l817
 #: ../openconnect-strings.txt:1567
@@ -3020,13 +3040,13 @@ msgstr "Enviar CSTP Keepalive\n"
 #: ../openconnect-strings.txt:1594
 #, c-format
 msgid "deflate failed %d\n"
-msgstr ""
+msgstr "deflate falhou %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l989
 #: ../openconnect-strings.txt:1597
 #, c-format
 msgid "Sending compressed data packet of %d bytes\n"
-msgstr ""
+msgstr "A enviar pacote de dados comprimidos de %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l1001
 #: ../openconnect-strings.txt:1600
@@ -3049,7 +3069,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1609
 #, c-format
 msgid "No work to do; sleeping for %d ms...\n"
-msgstr ""
+msgstr "Nada para fazer; a descansar durante %d ms...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/mainloop.c#l205
 #: ../openconnect-strings.txt:1612
@@ -3091,12 +3111,12 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l81
 #: ../openconnect-strings.txt:1631
 msgid "open net"
-msgstr ""
+msgstr "rede aberta"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l90
 #: ../openconnect-strings.txt:1634
 msgid "SIOCSIFMTU"
-msgstr ""
+msgstr "SIOCSIFMTU"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l105
 #: ../openconnect-strings.txt:1637
@@ -3106,18 +3126,18 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l109
 #: ../openconnect-strings.txt:1640
 msgid "Can't push IP"
-msgstr ""
+msgstr "Não pode forçar o IP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l119
 #: ../openconnect-strings.txt:1643
 msgid "Can't set ifname"
-msgstr ""
+msgstr "Não consegue definir ifname"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l126
 #: ../openconnect-strings.txt:1646
 #, c-format
 msgid "Can't open %s: %s"
-msgstr ""
+msgstr "Não consegue abrir %s: %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l134
 #: ../openconnect-strings.txt:1649
@@ -3136,12 +3156,12 @@ msgstr ""
 #: ../openconnect-strings.txt:1656
 #, c-format
 msgid "TUNSETIFF failed: %s\n"
-msgstr ""
+msgstr "TUNSETIFF falhou: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l221
 #: ../openconnect-strings.txt:1659
 msgid "open /dev/tun"
-msgstr ""
+msgstr "open /dev/tun"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l227
 #: ../openconnect-strings.txt:1662
@@ -3168,7 +3188,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l317
 #: ../openconnect-strings.txt:1674
 msgid "TUNSIFHEAD"
-msgstr ""
+msgstr "TUNSIFHEAD"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l356
 #: ../openconnect-strings.txt:1677
@@ -3185,17 +3205,17 @@ msgstr "SSL_write falhou: %d\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l365
 #: ../openconnect-strings.txt:1683
 msgid "setpgid"
-msgstr ""
+msgstr "setpgid"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l369
 #: ../openconnect-strings.txt:1686
 msgid "execl"
-msgstr ""
+msgstr "execl"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l374
 #: ../openconnect-strings.txt:1689
 msgid "(script)"
-msgstr ""
+msgstr "(script)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l417
 #: ../openconnect-strings.txt:1692
@@ -3301,26 +3321,26 @@ msgstr "Falhou ao processar resposta HTTP '%s'\n"
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
 msgstr ""
 
-#~ msgid "DTLS rekey failed\n"
-#~ msgstr "Reescrita DTLS falhou\n"
-
-#~ msgid "Password / SecurID"
-#~ msgstr "Senha / SecurID"
-
-#~ msgid "Certificate (TLS)"
-#~ msgstr "Certificado (TLS)"
-
-#~ msgid "Certificate (TLS) with TPM"
-#~ msgstr "Certificado (TLS) com TPM"
-
-#~ msgid " "
-#~ msgstr " "
-
-#~ msgid "Type:"
-#~ msgstr "Tipo:"
+#~ msgid "_CA Certificate:"
+#~ msgstr "Certificado _CA:"
 
 #~ msgid "User name:"
 #~ msgstr "Utilizador:"
 
-#~ msgid "_CA Certificate:"
-#~ msgstr "Certificado _CA:"
+#~ msgid "Type:"
+#~ msgstr "Tipo:"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "Certificate (TLS) with TPM"
+#~ msgstr "Certificado (TLS) com TPM"
+
+#~ msgid "Certificate (TLS)"
+#~ msgstr "Certificado (TLS)"
+
+#~ msgid "Password / SecurID"
+#~ msgstr "Senha / SecurID"
+
+#~ msgid "DTLS rekey failed\n"
+#~ msgstr "Reescrita DTLS falhou\n"
