@@ -2,17 +2,18 @@
 # Copyright (C) 2009-2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the network-manager-openconnect package.
 # Žygimantas Beručka <zygis@gnome.org>, 2009.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-20 22:58+0000\n"
-"PO-Revision-Date: 2013-08-17 00:29+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-03-02 11:05+0000\n"
+"PO-Revision-Date: 2014-03-02 23:04+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
-"Language: \n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -227,27 +228,27 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l42
 #: ../openconnect-strings.txt:14
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open XML config file: %s\n"
-msgstr "Nepavyko perskaityti XML konfigūracijos failo %s\n"
+msgstr "Nepavyko atverti XML konfigūracijos failo %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l49
 #: ../openconnect-strings.txt:17
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to fstat() XML config file: %s\n"
-msgstr "Nepavyko perskaityti XML konfigūracijos failo %s\n"
+msgstr "Nepavyko įvykdyti fstat() XML konfigūracijos failui: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l58
 #: ../openconnect-strings.txt:20
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to allocate %lu bytes for XML config file\n"
-msgstr "Nepavyko perskaityti XML konfigūracijos failo %s\n"
+msgstr "Nepavyko išskirti %lu baitų XML konfigūracijos failui\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l65
 #: ../openconnect-strings.txt:23
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to read XML config file: %s\n"
-msgstr "Nepavyko perskaityti XML konfigūracijos failo %s\n"
+msgstr "Nepavyko perskaityti XML konfigūracijos failo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l95
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l118
@@ -335,13 +336,12 @@ msgstr ""
 #: ../openconnect-strings.txt:70
 #, c-format
 msgid "Cannot process this executable path \"%s\""
-msgstr ""
+msgstr "Negalima apdoroti šio vykdomojo failo kelio „%s“"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l311
 #: ../openconnect-strings.txt:73
-#, fuzzy
 msgid "Allocation for vpnc-script path failed\n"
-msgstr "Nepavyko išskirti buferio\n"
+msgstr "Nepavyko išskirti vpnc-script keliui\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l322
 #: ../openconnect-strings.txt:76
@@ -433,9 +433,8 @@ msgstr "Naudoti syslog eigos pranešimams"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l344
 #: ../openconnect-strings.txt:129
-#, fuzzy
 msgid "Prepend timestamp to progress messages"
-msgstr "Naudoti syslog eigos pranešimams"
+msgstr "Prie eigos pranešimų pridėti laiko žymą"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l346
 #: ../openconnect-strings.txt:132
@@ -495,7 +494,7 @@ msgstr "(PASTABA: libproxy išjungtas šioje programoje)"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l360
 #: ../openconnect-strings.txt:165
 msgid "Require perfect forward secrecy"
-msgstr ""
+msgstr "Reikalauti tobulo pirminio slaptumo"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l361
 #: ../openconnect-strings.txt:168
@@ -620,9 +619,8 @@ msgstr "Skaityti slaptažodį iš standartinės įvesties"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l387
 #: ../openconnect-strings.txt:240
-#, fuzzy
 msgid "Software token type: rsa, totp or hotp"
-msgstr "Programinės leksemos tipas: rsa ar totp"
+msgstr "Programinės leksemos tipas: rsa, totp arba hotp"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l388
 #: ../openconnect-strings.txt:243
@@ -636,9 +634,8 @@ msgstr "(PASTABA: libstoken (RSA SecurID) išjungta šioje programoje)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l393
 #: ../openconnect-strings.txt:249
-#, fuzzy
 msgid "(NOTE: liboath (TOTP,HOTP) disabled in this build)"
-msgstr "(PASTABA: liboath (TOTP) išjungta šioje programoje)"
+msgstr "(PASTABA: liboath (TOTP,HOTP) išjungta šioje programoje)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l395
 #: ../openconnect-strings.txt:252
@@ -657,9 +654,8 @@ msgstr "HTTP antraštės User-Agent: laukas"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l398
 #: ../openconnect-strings.txt:261
-#, fuzzy
 msgid "OS type (linux,linux-64,win,...) to report"
-msgstr "Pranešamas OS tipas (linux,linux-64,mac,win)"
+msgstr "Pranešamas OS tipas (linux,linux-64,win,...)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l399
 #: ../openconnect-strings.txt:264
@@ -678,9 +674,8 @@ msgstr "fgets (stdin)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l490
 #: ../openconnect-strings.txt:273
-#, fuzzy
 msgid "Failed to allocate string\n"
-msgstr "Nepavyko išskirti sockaddr vietos\n"
+msgstr "Nepavyko išskirti simbolių eilutės\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l529
 #: ../openconnect-strings.txt:276
@@ -797,7 +792,7 @@ msgstr "Ši openconnect versija sukurta be libproxy palaikymo\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l961
 #: ../openconnect-strings.txt:336
 msgid "Error opening cmd pipe\n"
-msgstr ""
+msgstr "Klaida atveriant cmd kanalą\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1011
 #: ../openconnect-strings.txt:339
@@ -811,9 +806,8 @@ msgstr "Nepavyko sukurti SSL ryšio\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1045
 #: ../openconnect-strings.txt:345
-#, fuzzy
 msgid "Set up tun script failed\n"
-msgstr "Nepavyko nustatyti tun įrenginio\n"
+msgstr "Nepavyko nustatyti tun scenarijaus\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1052
 #: ../openconnect-strings.txt:348
@@ -865,7 +859,7 @@ msgstr "Tęsiama fone; pid %d\n"
 #: ../openconnect-strings.txt:373
 #, c-format
 msgid "Caught signal: %s\n"
-msgstr ""
+msgstr "Gautas signalas: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1147
 #: ../openconnect-strings.txt:376
@@ -917,9 +911,9 @@ msgstr "SHA1 prišto atspaudas: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1286
 #: ../openconnect-strings.txt:402
-#, fuzzy, c-format
+#, c-format
 msgid "Auth choice \"%s\" matches multiple options\n"
-msgstr "Auth pasirinkimas „%s“ netinkamas\n"
+msgstr "Auth pasirinkimas „%s“ atitinka kelis parametrus\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1289
 #: ../openconnect-strings.txt:405
@@ -1330,9 +1324,8 @@ msgstr "Nepavyko rašyti į SSL lizdą: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l123
 #: ../openconnect-strings.txt:641
-#, fuzzy
 msgid "SSL socket closed uncleanly\n"
-msgstr "Lizdo jungimasis atšauktas\n"
+msgstr "SSL lizdas netvarkingai užvertas\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l126
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l181
@@ -1597,9 +1590,8 @@ msgstr "Nepavyko nustatyti liudijimų atšaukimų sąrašo: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1434
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1444
 #: ../openconnect-strings.txt:783
-#, fuzzy
 msgid "Failed to allocate memory for certificate\n"
-msgstr "Nepavyko išskirti atminties liudijimų palaikymui\n"
+msgstr "Nepavyko išskirti atminties liudijimui\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1480
 #: ../openconnect-strings.txt:786
@@ -1613,7 +1605,7 @@ msgstr ""
 #: ../openconnect-strings.txt:790
 #, c-format
 msgid "Got next CA '%s' from PKCS11\n"
-msgstr ""
+msgstr "Gauta kita LĮ „%s“ iš PKCS11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l1533
 #: ../openconnect-strings.txt:793
@@ -1731,7 +1723,7 @@ msgstr "GnuTLS nelemtinga grįžimas rankos paspaudimo metu: %s\n"
 #: ../openconnect-strings.txt:856
 #, c-format
 msgid "Renegotiated SSL on %s\n"
-msgstr ""
+msgstr "Iš naujo užmezgamas SSL su %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l2195
 #: ../openconnect-strings.txt:859
@@ -2105,6 +2097,8 @@ msgid ""
 "Error: Running the 'Cisco Secure Desktop' trojan on Windows is not yet "
 "implemented.\n"
 msgstr ""
+"Klaida: „Cisco Secure Desktop“ trojos arklio vykdymas Windows sistemoje dar "
+"nerealizuotas.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l536
 #: ../openconnect-strings.txt:1066
@@ -2548,15 +2542,14 @@ msgstr "Nepavyksta sugeneruoti OATH TOTP leksemos kodo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1301
 #: ../openconnect-strings.txt:1311
-#, fuzzy
 msgid "Generating OATH HOTP token code\n"
-msgstr "Generuojamas OATH TOTP leksemos kodas\n"
+msgstr "Generuojamas OATH HOTP leksemos kodas\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1310
 #: ../openconnect-strings.txt:1314
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to generate OATH HOTP token code: %s\n"
-msgstr "Nepavyksta sugeneruoti OATH TOTP leksemos kodo: %s\n"
+msgstr "Nepavyksta sugeneruoti OATH HOTP leksemos kodo: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/library.c#l350
 #: ../openconnect-strings.txt:1317
@@ -2572,7 +2565,7 @@ msgstr "Leidžiami tik https:// serverio URL\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/compat.c#l207
 #: ../openconnect-strings.txt:1323
 msgid "ERROR: Cannot initialize sockets\n"
-msgstr ""
+msgstr "KLAIDA: nepavyksta inicializuoti lizdų\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l123
 #: ../openconnect-strings.txt:1326
@@ -2610,9 +2603,9 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l215
 #: ../openconnect-strings.txt:1345
-#, fuzzy, c-format
+#, c-format
 msgid "Established DTLS connection (using OpenSSL). Ciphersuite %s.\n"
-msgstr "Užmezgamas DTLS ryšys (naudojant OpenSSL)\n"
+msgstr "Užmezgamas DTLS ryšys (naudojant OpenSSL). Šifrų rinkinys %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l240
 #: ../openconnect-strings.txt:1348
@@ -2668,9 +2661,9 @@ msgstr "Nepavyko nustatyti DTLS MTU: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l420
 #: ../openconnect-strings.txt:1376
-#, fuzzy, c-format
+#, c-format
 msgid "Established DTLS connection (using GnuTLS). Ciphersuite %s.\n"
-msgstr "Užmegztas DTLS ryšys (naudojant GnuTLS)\n"
+msgstr "Užmegztas DTLS ryšys (naudojant GnuTLS). Šifrų rinkinys %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l435
 #: ../openconnect-strings.txt:1379
@@ -2681,7 +2674,7 @@ msgstr "Nepavyko DTLS rankos paspaudimas: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l453
 #: ../openconnect-strings.txt:1382
 msgid "DTLS connection attempted with an existing fd\n"
-msgstr ""
+msgstr "DTLS ryšys bandytas su esamu fd\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l459
 #: ../openconnect-strings.txt:1385
@@ -2776,9 +2769,8 @@ msgstr "Atliekamas DTLS raktų pasikeitimas\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l761
 #: ../openconnect-strings.txt:1437
-#, fuzzy
 msgid "DTLS Rehandshake failed; reconnecting.\n"
-msgstr "Nepavyko DTLS rankos paspaudimas: %d\n"
+msgstr "Nepavyko DTLS rankos paspaudimas; jungiamasi iš naujo.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l770
 #: ../openconnect-strings.txt:1440
@@ -2934,7 +2926,7 @@ msgstr "Nepavyko išskirti buferio\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l588
 #: ../openconnect-strings.txt:1522
 msgid "Cookie is no longer valid, ending session\n"
-msgstr ""
+msgstr "Slapukas nebegalioja, baigiamas seansas\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l592
 #: ../openconnect-strings.txt:1525
@@ -3041,7 +3033,7 @@ msgstr "Atliekamas CSTP raktų pakeitimas\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l901
 #: ../openconnect-strings.txt:1579
 msgid "Rehandshake failed; attempting new-tunnel\n"
-msgstr ""
+msgstr "Pakartotinis rankos paspaudimas nepavyko; bandomas naujas tunelis\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l912
 #: ../openconnect-strings.txt:1582
@@ -3090,7 +3082,7 @@ msgstr "Siųsti BYE paketą: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/mainloop.c#l177
 #: ../openconnect-strings.txt:1606
 msgid "Caller paused the connection\n"
-msgstr ""
+msgstr "Kvietėjas pristabdė ryšį\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/mainloop.c#l185
 #: ../openconnect-strings.txt:1609
@@ -3102,7 +3094,7 @@ msgstr "Nėra darbo; miegama %d ms...\n"
 #: ../openconnect-strings.txt:1612
 #, c-format
 msgid "WaitForMultipleObjects failed: %lx\n"
-msgstr ""
+msgstr "WaitForMultipleObjects nepavyko: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/script.c#l65
 #: ../openconnect-strings.txt:1615
@@ -3220,15 +3212,15 @@ msgstr "TUNSIFHEAD"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l356
 #: ../openconnect-strings.txt:1677
-#, fuzzy, c-format
+#, c-format
 msgid "socketpair failed: %s\n"
-msgstr "Nepavyko SSL siuntimas: %s\n"
+msgstr "socketpair nepavyko: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l361
 #: ../openconnect-strings.txt:1680
-#, fuzzy, c-format
+#, c-format
 msgid "fork failed: %s\n"
-msgstr "Nepavyko SSL siuntimas: %s\n"
+msgstr "fork nepavyko: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l365
 #: ../openconnect-strings.txt:1683
@@ -3260,130 +3252,92 @@ msgstr "Nepavyko įrašyti įeinančio paketo: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l71
 #: ../openconnect-strings.txt:1698
 msgid "Error accessing registry key for network adapters\n"
-msgstr ""
+msgstr "Klaida prieinant prie registro rakto tinklo adapteriams\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l114
 #: ../openconnect-strings.txt:1701
 #, c-format
 msgid "Ignoring non-matching TAP interface \"%s\""
-msgstr ""
+msgstr "Nepaisoma neatitinkančios TAP sąsajos „%s“"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l128
 #: ../openconnect-strings.txt:1704
 msgid "No Windows-TAP adapters found. Is the driver installed?\n"
-msgstr ""
+msgstr "Rasti ne Windows-TAP adapteriai. Ar tvarkyklė įdiegta?\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l146
 #: ../openconnect-strings.txt:1707
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open %s\n"
-msgstr "Nepavyko atverti LĮ failo „%s“\n"
+msgstr "Nepavyko atverti %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l151
 #: ../openconnect-strings.txt:1710
-#, fuzzy, c-format
+#, c-format
 msgid "Opened tun device %s\n"
-msgstr "Nepavyko atverti tun įrenginio: %s\n"
+msgstr "Atvertas tun įrenginys %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l158
 #: ../openconnect-strings.txt:1713
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to obtain TAP driver version: %lx\n"
-msgstr "Nepavyko įkelti TPM privataus rakto\n"
+msgstr "Nepavyko gauti TAP tvarkyklės versijos: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l163
 #: ../openconnect-strings.txt:1716
 #, c-format
 msgid "Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n"
 msgstr ""
+"Klaida: reikalinga TAP-Windows tvarkylė v9.9  arba naujesnė (rasta %ld.%ld)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l179
 #: ../openconnect-strings.txt:1719
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to set TAP IP addresses: %lx\n"
-msgstr "Nepavyko nustatyti TPM PIN: %s\n"
+msgstr "Nepavyko nustatyti TAP IP adresų: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l189
 #: ../openconnect-strings.txt:1722
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to set TAP media status: %lx\n"
-msgstr "Nepavyko nustatyti PKCS#12 duomenų struktūros: %s\n"
+msgstr "Nepavyko nustatyti TAP laikmenos būsenos: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l213
 #: ../openconnect-strings.txt:1725
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to read from TAP device: %lx\n"
-msgstr "Nepavyko skaityti iš SSL lizdo: %s\n"
+msgstr "Nepavyko skaityti iš TAP įrenginio: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l224
 #: ../openconnect-strings.txt:1728
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to complete read from TAP device: %lx\n"
-msgstr "Nepavyko skaityti iš SSL lizdo: %s\n"
+msgstr "Nepavyko skaityti iš TAP įrenginio: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l241
 #: ../openconnect-strings.txt:1731
 #, c-format
 msgid "Wrote %ld bytes to tun\n"
-msgstr ""
+msgstr "Į tun įrašyta %ld baitų\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l251
 #: ../openconnect-strings.txt:1734
 msgid "Waiting for tun write...\n"
-msgstr ""
+msgstr "Laukiama tun rašymui...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l254
 #: ../openconnect-strings.txt:1737
 #, c-format
 msgid "Wrote %ld bytes to tun after waiting\n"
-msgstr ""
+msgstr "Po laukimo į tun įrašyta %ld baitų\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l260
 #: ../openconnect-strings.txt:1740
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to write to TAP device: %lx\n"
-msgstr "Nepavyko rašyti į SSL lizdą: %s\n"
+msgstr "Nepavyko rašyti į TAP įrenginį: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l285
 #: ../openconnect-strings.txt:1743
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
-msgstr ""
-
-#~ msgid "Open XML config file"
-#~ msgstr "Atverti XML konfigūracijos failą"
-
-#~ msgid "fstat XML config file"
-#~ msgstr "fstat XML konfigūracijos failą"
-
-#~ msgid "mmap XML config file"
-#~ msgstr "mmap XML konfigūracijos failą"
-
-#~ msgid "DTLS rekey failed\n"
-#~ msgstr "Nepavyko DTLS raktų pasikeitimas\n"
-
-#~ msgid "open tun"
-#~ msgstr "atverti tun"
-
-#~ msgid "socketpair"
-#~ msgstr "socketpair"
-
-#~ msgid "fork"
-#~ msgstr "fork"
-
-#~ msgid "Password / SecurID"
-#~ msgstr "Slaptažodis / SecurID"
-
-#~ msgid "Certificate (TLS)"
-#~ msgstr "Liudijimas (TLS)"
-
-#~ msgid "Certificate (TLS) with TPM"
-#~ msgstr "Liudijimas (TLS) su TPM"
-
-#~ msgid " "
-#~ msgstr " "
-
-#~ msgid "Type:"
-#~ msgstr "Tipas:"
-
-#~ msgid "User name:"
-#~ msgstr "Naudotojo vardas:"
+msgstr "Tunelio scenarijų paleidimas Windows aplinkoje dar nepalaikomas\n"
