@@ -4,13 +4,15 @@
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2010-2013.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2010.
 # Christian Kirbach <christian.kirbach@gmail.com>, 2012, 2013.
+# Benjamin Steinwender <b@stbe.at>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager-openconnect\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-20 22:58+0000\n"
-"PO-Revision-Date: 2014-02-01 19:30+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-02-21 23:05+0000\n"
+"PO-Revision-Date: 2014-03-08 14:57+0100\n"
 "Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -18,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #: ../auth-dialog/main.c:841
 #, c-format
@@ -151,9 +153,8 @@ msgid "Token _Mode:"
 msgstr "Token-Modus:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:14
-#, fuzzy
 msgid "Token Sec_ret:"
-msgstr "Token-_Zeichenkette:"
+msgstr "Token-_Geheimnis:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:15
 msgid "Disabled"
@@ -232,27 +233,27 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l42
 #: ../openconnect-strings.txt:14
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open XML config file: %s\n"
-msgstr "Fehler beim Verarbeiten der XML-Konfigurationsdatei %s\n"
+msgstr "Öffnen der XML-Konfigurationsdatei ist fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l49
 #: ../openconnect-strings.txt:17
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to fstat() XML config file: %s\n"
-msgstr "Fehler beim Verarbeiten der XML-Konfigurationsdatei %s\n"
+msgstr "fstat() auf die XML-Konfigurationsdatei schlug fehl: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l58
 #: ../openconnect-strings.txt:20
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to allocate %lu bytes for XML config file\n"
-msgstr "Fehler beim Verarbeiten der XML-Konfigurationsdatei %s\n"
+msgstr "Anfordern von %lu Byte für die XML-Konfigurationsdatei schlug fehl\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l65
 #: ../openconnect-strings.txt:23
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to read XML config file: %s\n"
-msgstr "Fehler beim Verarbeiten der XML-Konfigurationsdatei %s\n"
+msgstr "Lesen der XML-Konfigurationsdatei schlug fehl: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l95
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l118
@@ -341,13 +342,12 @@ msgstr ""
 #: ../openconnect-strings.txt:70
 #, c-format
 msgid "Cannot process this executable path \"%s\""
-msgstr ""
+msgstr "Kann ausführbaren Pfad »%s« nicht verarbeiten"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l311
 #: ../openconnect-strings.txt:73
-#, fuzzy
 msgid "Allocation for vpnc-script path failed\n"
-msgstr "Anfordern des deflate-Pufferspeichers schlug fehl\n"
+msgstr "Anfordern des vpnc-script-Pfad schlug fehl\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l322
 #: ../openconnect-strings.txt:76
@@ -441,9 +441,8 @@ msgstr "syslog für Fortschrittsmeldungen verwenden"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l344
 #: ../openconnect-strings.txt:129
-#, fuzzy
 msgid "Prepend timestamp to progress messages"
-msgstr "syslog für Fortschrittsmeldungen verwenden"
+msgstr "Zeitstempel der Fortschrittsnachricht voranstellen"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l346
 #: ../openconnect-strings.txt:132
@@ -503,7 +502,7 @@ msgstr "(HINWEIS: libproxy wurde bei der Erstellung deaktiviert)"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l360
 #: ../openconnect-strings.txt:165
 msgid "Require perfect forward secrecy"
-msgstr ""
+msgstr "»perfect forward secrecy« verlangen"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l361
 #: ../openconnect-strings.txt:168
@@ -629,14 +628,14 @@ msgstr "Passwort von Standardeingabe lesen"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l387
 #: ../openconnect-strings.txt:240
-#, fuzzy
+#| msgid "Software token type: rsa or totp"
 msgid "Software token type: rsa, totp or hotp"
-msgstr "Software Token-Typ: rsa oder totp"
+msgstr "Software Token-Typ: rsa, totp oder hotp"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l388
 #: ../openconnect-strings.txt:243
 msgid "Software token secret"
-msgstr ""
+msgstr "Software-Token-Geheimnis"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l390
 #: ../openconnect-strings.txt:246
@@ -646,9 +645,9 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l393
 #: ../openconnect-strings.txt:249
-#, fuzzy
+#| msgid "(NOTE: liboath (TOTP) disabled in this build)"
 msgid "(NOTE: liboath (TOTP,HOTP) disabled in this build)"
-msgstr "(HINWEIS: liboath (TOTP) wurde bei der Erstellung deaktiviert)"
+msgstr "(HINWEIS: liboath (TOTP,HOTP) wurde bei der Erstellung deaktiviert)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l395
 #: ../openconnect-strings.txt:252
@@ -667,9 +666,8 @@ msgstr "HTTP-Kopf User-Agent: Feld"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l398
 #: ../openconnect-strings.txt:261
-#, fuzzy
 msgid "OS type (linux,linux-64,win,...) to report"
-msgstr "zu berichtender Typ des Betriebssystems (linux,linux-64,mac,win)"
+msgstr "zu berichtender Typ des Betriebssystems (linux,linux-64,win,...)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l399
 #: ../openconnect-strings.txt:264
@@ -688,9 +686,8 @@ msgstr "fgets (stdin)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l490
 #: ../openconnect-strings.txt:273
-#, fuzzy
 msgid "Failed to allocate string\n"
-msgstr "Zuweisen des sockaddr-Speichers ist fehlgeschlagen.\n"
+msgstr "Anfordern der Zeichnkette ist fehlgeschlagen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l529
 #: ../openconnect-strings.txt:276
@@ -781,9 +778,9 @@ msgstr "OpenConnect Version %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l892
 #: ../openconnect-strings.txt:321
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid software token mode \"%s\"\n"
-msgstr "Ungültiger Software Token-Modus %s\n"
+msgstr "Ungültiger Software-Token-Modus »%s«\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l902
 #: ../openconnect-strings.txt:324
@@ -811,7 +808,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l961
 #: ../openconnect-strings.txt:336
 msgid "Error opening cmd pipe\n"
-msgstr ""
+msgstr "Fehler beim Öffnen der cmd-Weiterleitung\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1011
 #: ../openconnect-strings.txt:339
@@ -825,9 +822,8 @@ msgstr "Erstellen einer SSL-Verbindung schlug fehl\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1045
 #: ../openconnect-strings.txt:345
-#, fuzzy
 msgid "Set up tun script failed\n"
-msgstr "Einrichten des tun-Geräts schlug fehl\n"
+msgstr "Einrichten des tun-Skripts schlug fehl\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1052
 #: ../openconnect-strings.txt:348
@@ -879,7 +875,7 @@ msgstr "Fortsetzung im Hintergrund;  pid %d\n"
 #: ../openconnect-strings.txt:373
 #, c-format
 msgid "Caught signal: %s\n"
-msgstr ""
+msgstr "Signal wurde empfangen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1147
 #: ../openconnect-strings.txt:376
@@ -934,9 +930,9 @@ msgstr "SHA1-Fingerabdruck: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1286
 #: ../openconnect-strings.txt:402
-#, fuzzy, c-format
+#, c-format
 msgid "Auth choice \"%s\" matches multiple options\n"
-msgstr "Legitimierungsmöglichkeit »%s« ist nicht gültig\n"
+msgstr "Legitimierungsmöglichkeit »%s« passt zu mehreren Optionen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/main.c#l1289
 #: ../openconnect-strings.txt:405
@@ -1358,9 +1354,9 @@ msgstr "Schreiben in SSL-Socket schlug fehl: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l123
 #: ../openconnect-strings.txt:641
-#, fuzzy
+#| msgid "Socket connect cancelled\n"
 msgid "SSL socket closed uncleanly\n"
-msgstr "Socket-Verbindung abgebrochen\n"
+msgstr "SSL-Socket-Verbindung abgebrochen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l126
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/gnutls.c#l181
@@ -2143,6 +2139,8 @@ msgid ""
 "Error: Running the 'Cisco Secure Desktop' trojan on Windows is not yet "
 "implemented.\n"
 msgstr ""
+"Fehler: Ausführen des »Cisco Secure Desktop«-Trojaners auf Windows ist noch "
+"nicht implementiert.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/http.c#l536
 #: ../openconnect-strings.txt:1066
@@ -2591,15 +2589,16 @@ msgstr "OATH TOTP Token-Code kann nicht erzeugt werden: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1301
 #: ../openconnect-strings.txt:1311
-#, fuzzy
+#| msgid "Generating OATH TOTP token code\n"
 msgid "Generating OATH HOTP token code\n"
-msgstr "OATH TOTP Token-Code wird erzeugt\n"
+msgstr "OATH HOTP Token-Code wird erzeugt\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/auth.c#l1310
 #: ../openconnect-strings.txt:1314
-#, fuzzy, c-format
+#, c-format
+#| msgid "Unable to generate OATH TOTP token code: %s\n"
 msgid "Unable to generate OATH HOTP token code: %s\n"
-msgstr "OATH TOTP Token-Code kann nicht erzeugt werden: %s\n"
+msgstr "OATH HOTP Token-Code kann nicht erzeugt werden: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/library.c#l350
 #: ../openconnect-strings.txt:1317
@@ -2615,7 +2614,7 @@ msgstr "Nur https:// erlaubt für Server-Adresse\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/compat.c#l207
 #: ../openconnect-strings.txt:1323
 msgid "ERROR: Cannot initialize sockets\n"
-msgstr ""
+msgstr "FEHLER: Sockets konnten nicht initialisiert werden\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l123
 #: ../openconnect-strings.txt:1326
@@ -2654,9 +2653,9 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l215
 #: ../openconnect-strings.txt:1345
-#, fuzzy, c-format
+#, c-format
 msgid "Established DTLS connection (using OpenSSL). Ciphersuite %s.\n"
-msgstr "DTLS-Verbindung aufgebaut (mit OpenSSL)\n"
+msgstr "DTLS-Verbindung aufgebaut (mit OpenSSL). Schiffrierwerk %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l240
 #: ../openconnect-strings.txt:1348
@@ -2713,9 +2712,9 @@ msgstr "Festlegen der DTLS-MTU schlug fehl: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l420
 #: ../openconnect-strings.txt:1376
-#, fuzzy, c-format
+#, c-format
 msgid "Established DTLS connection (using GnuTLS). Ciphersuite %s.\n"
-msgstr "DTLS-Verbindung aufgebaut (mit GnuTLS)\n"
+msgstr "DTLS-Verbindung aufgebaut (mit GnuTLS).Schiffrierwerk %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l435
 #: ../openconnect-strings.txt:1379
@@ -2726,7 +2725,7 @@ msgstr "DTLS-Handshake schlug fehl: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l453
 #: ../openconnect-strings.txt:1382
 msgid "DTLS connection attempted with an existing fd\n"
-msgstr ""
+msgstr "Versuch einer DTLS-Verbindung mit bestehendem Dateideskriptor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l459
 #: ../openconnect-strings.txt:1385
@@ -2822,9 +2821,11 @@ msgstr "Erneuter DTLS-Schlüsselaustausch fällig\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l761
 #: ../openconnect-strings.txt:1437
-#, fuzzy
+#| msgid "DTLS handshake failed: %d\n"
 msgid "DTLS Rehandshake failed; reconnecting.\n"
-msgstr "DTLS-Handshake schlug fehl: %d\n"
+msgstr ""
+"Erneuerung des DTLS-Handshakes schlug fehl; Verbindung wird erneut "
+"aufgebaut.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l770
 #: ../openconnect-strings.txt:1440
@@ -2984,7 +2985,7 @@ msgstr "Anfordern des deflate-Pufferspeichers schlug fehl\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l588
 #: ../openconnect-strings.txt:1522
 msgid "Cookie is no longer valid, ending session\n"
-msgstr ""
+msgstr "Cookie ist nicht mehr gültig. Sitzung wird beendet\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/cstp.c#l592
 #: ../openconnect-strings.txt:1525
@@ -3141,7 +3142,7 @@ msgstr "BYE-Paket senden: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/mainloop.c#l177
 #: ../openconnect-strings.txt:1606
 msgid "Caller paused the connection\n"
-msgstr ""
+msgstr "Aufrufer hat die Sitzung angehalten\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/mainloop.c#l185
 #: ../openconnect-strings.txt:1609
@@ -3153,7 +3154,7 @@ msgstr "Es gibt nichts zu tun. Schlafen für %d ms …\n"
 #: ../openconnect-strings.txt:1612
 #, c-format
 msgid "WaitForMultipleObjects failed: %lx\n"
-msgstr ""
+msgstr "WaitForMultipleObjects schlug fehl: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/script.c#l65
 #: ../openconnect-strings.txt:1615
@@ -3198,15 +3199,13 @@ msgstr "SIOCSIFMTU"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l105
 #: ../openconnect-strings.txt:1637
-#, fuzzy
 msgid "Could not open /dev/tun for plumbing"
-msgstr "/dev/tun konnte nicht für ?"
+msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l109
 #: ../openconnect-strings.txt:1640
-#, fuzzy
 msgid "Can't push IP"
-msgstr "IP  kann nicht ?"
+msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l119
 #: ../openconnect-strings.txt:1643
@@ -3274,15 +3273,15 @@ msgstr "TUNSIFHEAD"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l356
 #: ../openconnect-strings.txt:1677
-#, fuzzy, c-format
+#, c-format
 msgid "socketpair failed: %s\n"
-msgstr "»SSL_send« fehlgeschlagen: %s\n"
+msgstr "Socket-Paar fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l361
 #: ../openconnect-strings.txt:1680
-#, fuzzy, c-format
+#, c-format
 msgid "fork failed: %s\n"
-msgstr "»SSL_send« fehlgeschlagen: %s\n"
+msgstr "fork fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun.c#l365
 #: ../openconnect-strings.txt:1683
@@ -3314,66 +3313,69 @@ msgstr "Schreiben des eingehenden Pakets schlug fehl: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l71
 #: ../openconnect-strings.txt:1698
 msgid "Error accessing registry key for network adapters\n"
-msgstr ""
+msgstr "Fehler beim Zugriff auf Registrierungsschlüssel für Netzwerk-Adapter\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l114
 #: ../openconnect-strings.txt:1701
 #, c-format
 msgid "Ignoring non-matching TAP interface \"%s\""
-msgstr ""
+msgstr "Nicht zutreffende TAP-Schnittstelle »%s« wird ignoriert"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l128
 #: ../openconnect-strings.txt:1704
 msgid "No Windows-TAP adapters found. Is the driver installed?\n"
-msgstr ""
+msgstr "Keine Windows-TAP-Adapter gefunden. Ist der Treiber installiert?\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l146
 #: ../openconnect-strings.txt:1707
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open %s\n"
-msgstr "Öffnen der CA-Datei »%s« fehlgeschlagen\n"
+msgstr "Öffnen von »%s« fehlgeschlagen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l151
 #: ../openconnect-strings.txt:1710
-#, fuzzy, c-format
+#, c-format
+#| msgid "Failed to open tun device: %s\n"
 msgid "Opened tun device %s\n"
-msgstr "Öffnen des tun-Geräts ist gescheitert: %s\n"
+msgstr "tun-Gerät %s geöffnet\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l158
 #: ../openconnect-strings.txt:1713
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to obtain TAP driver version: %lx\n"
-msgstr "Laden des privaten TPM-Schlüssels scheiterte\n"
+msgstr "Ermitteln der TAP-Treiberversion schlug fehl: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l163
 #: ../openconnect-strings.txt:1716
 #, c-format
 msgid "Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n"
 msgstr ""
+"Fehler: Windows-TAP-Treiber v9.9 oder neuer ist notwendig (%ld.%ld "
+"gefunden)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l179
 #: ../openconnect-strings.txt:1719
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to set TAP IP addresses: %lx\n"
-msgstr "Festlegen der TPM-PIN fehlgeschlagen: %s\n"
+msgstr "Festlegen der TAP IP-Adressen fehlgeschlagen: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l189
 #: ../openconnect-strings.txt:1722
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to set TAP media status: %lx\n"
-msgstr "PKCS#12-Datenstruktur konnte nicht angelegt werden: %s\n"
+msgstr "Festlegen des TAP Medienstatus fehlgeschlagen: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l213
 #: ../openconnect-strings.txt:1725
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to read from TAP device: %lx\n"
-msgstr "Lesen vom SSL-Socket schlug fehl: %s\n"
+msgstr "Lesen vom TAP-Gerät fehlgeschlagen: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l224
 #: ../openconnect-strings.txt:1728
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to complete read from TAP device: %lx\n"
-msgstr "Lesen vom SSL-Socket schlug fehl: %s\n"
+msgstr "Abschließen des Lesens von TAP-Gerät fehlgeschlagen: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l241
 #: ../openconnect-strings.txt:1731
@@ -3394,14 +3396,17 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l260
 #: ../openconnect-strings.txt:1740
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to write to TAP device: %lx\n"
-msgstr "Schreiben in SSL-Socket schlug fehl: %s\n"
+msgstr "Schreiben auf das TAP-Gerät fehlgeschlagen: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l285
 #: ../openconnect-strings.txt:1743
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
 msgstr ""
+
+#~ msgid "DTLS rekey failed\n"
+#~ msgstr "Erneuter DTLS-Schlüsselaustausch schlug fehl\n"
 
 #~ msgid "Open XML config file"
 #~ msgstr "XML-Konfigurationsdatei öffnen"
@@ -3411,40 +3416,3 @@ msgstr ""
 
 #~ msgid "mmap XML config file"
 #~ msgstr "mmap XML-Konfigurationsdatei"
-
-#~ msgid "DTLS rekey failed\n"
-#~ msgstr "Erneuter DTLS-Schlüsselaustausch schlug fehl\n"
-
-# oder: geöffnetes tun?
-#~ msgid "open tun"
-#~ msgstr "tun öffnen"
-
-#~ msgid "socketpair"
-#~ msgstr "socketpair"
-
-#~ msgid "fork"
-#~ msgstr "fork"
-
-#~ msgid "Use software token to generate password"
-#~ msgstr "Software-Token zur Passworterzeugung verwenden"
-
-#~ msgid "Failed to read from SSL socket: %s"
-#~ msgstr "Lesen vom SSL-Socket schlug fehl: %s"
-
-#~ msgid "Private key type (PKCS#12 / TPM / PEM)"
-#~ msgstr "Typ des privaten Schlüssels (PKCS#12 / TPM / PEM)"
-
-#~ msgid "Attempting to connect to %s%s%s:%s\n"
-#~ msgstr "Verbindungsversuch zu %s%s%s:%s\n"
-
-#~ msgid "Failed to write to SSL socket: %s"
-#~ msgstr "Schreiben in SSL-Socket schlug fehl: %s"
-
-#~ msgid "Failed to read from SSL socket"
-#~ msgstr "Lesen vom SSL-Socket schlug fehl"
-
-#~ msgid "Failed to write to SSL socket"
-#~ msgstr "Schreiben in SSL-Socket schlug fehl"
-
-#~ msgid "_CA Certificate:"
-#~ msgstr "_CA-Zertifikat:"
