@@ -247,7 +247,7 @@ msgstr "Falló al hacer fstat() en el archivo XML de configuración %s\n"
 #: ../openconnect-strings.txt:20
 #, c-format
 msgid "Failed to allocate %lu bytes for XML config file\n"
-msgstr "Falló al reservar %1u bytes el archivo XML de configuración %s\n"
+msgstr "Falló al reservar %lu bytes el archivo XML de configuración\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l65
 #: ../openconnect-strings.txt:23
@@ -260,7 +260,7 @@ msgstr "Falló al leer el archivo XML de configuración %s\n"
 #: ../openconnect-strings.txt:27
 #, c-format
 msgid "Treating host \"%s\" as a raw hostname\n"
-msgstr "Se trata el servidor «%s» como un nombre de servidor crudo\n"
+msgstr "Se trata el servidor «%s» como un nombre de servidor en bruto\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/xml.c#l101
 #: ../openconnect-strings.txt:30
@@ -2591,7 +2591,7 @@ msgstr "Sólo se permite https:// para el URL del servidor\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/compat.c#l207
 #: ../openconnect-strings.txt:1323
 msgid "ERROR: Cannot initialize sockets\n"
-msgstr "Error: no se pueden inicializar los sockets"
+msgstr "Error: no se pueden inicializar los sockets\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l123
 #: ../openconnect-strings.txt:1326
@@ -2702,7 +2702,7 @@ msgstr "Falló la negociación DTLS: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l453
 #: ../openconnect-strings.txt:1382
 msgid "DTLS connection attempted with an existing fd\n"
-msgstr "Intento de conexión DTLS con un «fd» existente"
+msgstr "Intento de conexión DTLS con un «fd» existente\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/dtls.c#l459
 #: ../openconnect-strings.txt:1385
@@ -3312,7 +3312,7 @@ msgstr "Falló al abrir el dispositivo TUN: %s\n"
 #: ../openconnect-strings.txt:1713
 #, c-format
 msgid "Failed to obtain TAP driver version: %lx\n"
-msgstr "Falló al obtener la versión del driver TAP: %1x\n"
+msgstr "Falló al obtener la versión del driver TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l163
 #: ../openconnect-strings.txt:1716
@@ -3336,7 +3336,7 @@ msgstr "Falló al configurar la estructura de datos PKCS#12: %s\n"
 #: ../openconnect-strings.txt:1725
 #, c-format
 msgid "Failed to read from TAP device: %lx\n"
-msgstr "Falló al leer del dispositivo TAP: %1x\n"
+msgstr "Falló al leer del dispositivo TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l224
 #: ../openconnect-strings.txt:1728
@@ -3348,7 +3348,7 @@ msgstr "Falló al leer del socket SSL: %s\n"
 #: ../openconnect-strings.txt:1731
 #, c-format
 msgid "Wrote %ld bytes to tun\n"
-msgstr "Escritos %id bytes en tun\n"
+msgstr "Escritos %ld bytes en tun\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l251
 #: ../openconnect-strings.txt:1734
@@ -3365,7 +3365,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1740
 #, c-format
 msgid "Failed to write to TAP device: %lx\n"
-msgstr "Falló al escribir en el dispositivo TAP: %1x\n"
+msgstr "Falló al escribir en el dispositivo TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/78fc3227b0:/tun-win32.c#l285
 #: ../openconnect-strings.txt:1743
