@@ -5,14 +5,14 @@
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2013.
-# Aviary.pl <gnomepl@aviary.pl>, 2009-2013.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2014.
+# Aviary.pl <gnomepl@aviary.pl>, 2009-2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-11 20:39-0700\n"
-"PO-Revision-Date: 2013-06-05 17:42+0200\n"
+"POT-Creation-Date: 2014-03-14 17:14+0100\n"
+"PO-Revision-Date: 2014-03-14 17:15+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -51,31 +51,43 @@ msgstr ""
 "Przyczyna: %s\n"
 "Zaakceptować go?"
 
+#: ../auth-dialog/main.c:1539
+msgid "_Close"
+msgstr "Za_mknij"
+
 #: ../auth-dialog/main.c:1556
 msgid "VPN host"
 msgstr "Komputer VPN"
 
-#: ../auth-dialog/main.c:1576
+#: ../auth-dialog/main.c:1567
+msgid "C_onnect"
+msgstr "P_ołącz"
+
+#: ../auth-dialog/main.c:1574
 msgid "Automatically start connecting next time"
 msgstr "Automatyczne rozpoczynanie połączenie następnym razem"
 
-#: ../auth-dialog/main.c:1593
+#: ../auth-dialog/main.c:1591
 msgid "Select a host to fetch the login form"
 msgstr "Wybór komputera, z którego pobrać login"
 
-#: ../auth-dialog/main.c:1598
+#: ../auth-dialog/main.c:1596
 msgid "Contacting host, please wait..."
 msgstr "Łączenie się z komputerem, proszę czekać..."
 
-#: ../auth-dialog/main.c:1610
+#: ../auth-dialog/main.c:1608
 msgid "_Login"
 msgstr "_Login"
 
-#: ../auth-dialog/main.c:1624
+#: ../auth-dialog/main.c:1614
+msgid "_Cancel"
+msgstr "_Anuluj"
+
+#: ../auth-dialog/main.c:1620
 msgid "Save passwords"
 msgstr "Zapisywanie haseł"
 
-#: ../auth-dialog/main.c:1632
+#: ../auth-dialog/main.c:1628
 msgid "Log"
 msgstr "Dziennik"
 
