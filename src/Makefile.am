@@ -1,9 +1,8 @@
-INCLUDES = -I${top_srcdir} 
-
 AM_CPPFLAGS = \
 	$(DBUS_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(NM_CFLAGS) \
+	-I${top_srcdir} \
 	-DG_DISABLE_DEPRECATED \
 	-DBINDIR=\"$(bindir)\" \
 	-DPREFIX=\""$(prefix)"\" \
