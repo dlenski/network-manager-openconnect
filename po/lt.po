@@ -7,9 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-11 20:39-0700\n"
-"PO-Revision-Date: 2014-03-02 23:04+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-03-14 16:15+0000\n"
+"PO-Revision-Date: 2014-03-14 22:28+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -45,31 +46,44 @@ msgstr ""
 "Priežastis: %s\n"
 "Ar norite jį priimti?"
 
+#: ../auth-dialog/main.c:1539
+msgid "_Close"
+msgstr "_Užverti"
+
 #: ../auth-dialog/main.c:1556
 msgid "VPN host"
 msgstr "VPN šaltinis"
 
-#: ../auth-dialog/main.c:1576
+#: ../auth-dialog/main.c:1567
+#| msgid "Connect to VPN"
+msgid "C_onnect"
+msgstr "Prisi_jungti"
+
+#: ../auth-dialog/main.c:1574
 msgid "Automatically start connecting next time"
 msgstr "Automatiškai prisijungti kitą kartą"
 
-#: ../auth-dialog/main.c:1593
+#: ../auth-dialog/main.c:1591
 msgid "Select a host to fetch the login form"
 msgstr "Pasirinkite šaltinį, iš kurio gauti prisijungimo formą"
 
-#: ../auth-dialog/main.c:1598
+#: ../auth-dialog/main.c:1596
 msgid "Contacting host, please wait..."
 msgstr "Jungiamasi prie šaltinio, palaukite..."
 
-#: ../auth-dialog/main.c:1610
+#: ../auth-dialog/main.c:1608
 msgid "_Login"
 msgstr "_Prisijungti"
 
-#: ../auth-dialog/main.c:1624
+#: ../auth-dialog/main.c:1614
+msgid "_Cancel"
+msgstr "_Atsisakyti"
+
+#: ../auth-dialog/main.c:1620
 msgid "Save passwords"
 msgstr "Įrašyti slaptažodžius"
 
-#: ../auth-dialog/main.c:1632
+#: ../auth-dialog/main.c:1628
 msgid "Log"
 msgstr "Žurnalas"
 
@@ -3336,5 +3350,3 @@ msgstr "Nepavyko rašyti į TAP įrenginį: %lx\n"
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
 msgstr "Tunelio scenarijų paleidimas Windows aplinkoje dar nepalaikomas\n"
 
-#~ msgid "Failed to initialise DTLS secret\n"
-#~ msgstr "Nepavyko inicializuoti DTLS paslapties\n"
