@@ -230,8 +230,8 @@ static void ssl_box_add_error(auth_ui_data *ui_data, const char *msg)
 	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
 	gtk_box_pack_start(GTK_BOX(ui_data->ssl_box), hbox, FALSE, FALSE, 0);
 
-	image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_ERROR,
-					 GTK_ICON_SIZE_DIALOG);
+	image = gtk_image_new_from_icon_name("dialog-error",
+					     GTK_ICON_SIZE_DIALOG);
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 0);
 
 	text = gtk_label_new(msg);
@@ -247,8 +247,8 @@ static void ssl_box_add_notice(auth_ui_data *ui_data, const char *msg)
 	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
 	gtk_box_pack_start(GTK_BOX(ui_data->ssl_box), hbox, FALSE, FALSE, 0);
 
-	image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_WARNING,
-					 GTK_ICON_SIZE_DIALOG);
+	image = gtk_image_new_from_icon_name("dialog-warning",
+					     GTK_ICON_SIZE_DIALOG);
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 0);
 
 	text = gtk_label_new(msg);
@@ -1353,9 +1353,9 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 	if (ui_data->cookie_retval < 0) {
 		/* error while getting cookie */
 		if (ui_data->last_notice_icon) {
-			gtk_image_set_from_stock(GTK_IMAGE (ui_data->last_notice_icon),
-						 GTK_STOCK_DIALOG_ERROR,
-						 GTK_ICON_SIZE_DIALOG);
+			gtk_image_set_from_icon_name(GTK_IMAGE (ui_data->last_notice_icon),
+						     "dialog-error",
+						     GTK_ICON_SIZE_DIALOG);
 			gtk_widget_show_all(ui_data->ssl_box);
 			gtk_widget_set_sensitive(ui_data->cancel_button, FALSE);
 		}
@@ -1529,14 +1529,14 @@ static void login_clicked (GtkButton *btn, auth_ui_data *ui_data)
 static void build_main_dialog(auth_ui_data *ui_data)
 {
 	char *title;
-	GtkWidget *vbox, *hbox, *label, *frame, *image, *frame_box;
+	GtkWidget *vbox, *hbox, *label, *frame, *frame_box;
 	GtkWidget *exp, *scrolled, *view, *autocon, *save_pass;
 
-	gtk_window_set_default_icon_name(GTK_STOCK_DIALOG_AUTHENTICATION);
+	gtk_window_set_default_icon_name("dialog-password");
 
 	title = get_title(ui_data->vpn_name);
 	ui_data->dialog = gtk_dialog_new_with_buttons(title, NULL, GTK_DIALOG_MODAL,
-						      GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE,
+						      _("_Close"), GTK_RESPONSE_CLOSE,
 						      NULL);
 	g_signal_connect (ui_data->dialog, "response", G_CALLBACK(dialog_response), ui_data);
 	gtk_window_set_default_size(GTK_WINDOW(ui_data->dialog), 350, 300);
@@ -1564,10 +1564,8 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	                         G_CALLBACK(queue_connect_host), ui_data);
 	gtk_widget_show(ui_data->combo);
 
-	ui_data->connect_button = gtk_button_new();
+	ui_data->connect_button = gtk_button_new_with_mnemonic(_("C_onnect"));
 	gtk_box_pack_end(GTK_BOX(hbox), ui_data->connect_button, FALSE, FALSE, 0);
-	image = gtk_image_new_from_stock(GTK_STOCK_CONNECT, GTK_ICON_SIZE_BUTTON);
-	gtk_button_set_image (GTK_BUTTON(ui_data->connect_button), image);
 	gtk_widget_grab_focus(ui_data->connect_button);
 	g_signal_connect_swapped(ui_data->connect_button, "clicked",
 				 G_CALLBACK(queue_connect_host), ui_data);
@@ -1608,14 +1606,12 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_widget_show(hbox);
 
 	ui_data->login_button = gtk_button_new_with_mnemonic(_("_Login"));
-	image = gtk_image_new_from_stock(GTK_STOCK_APPLY, GTK_ICON_SIZE_BUTTON);
-	gtk_button_set_image (GTK_BUTTON(ui_data->login_button), image);
 	gtk_box_pack_end(GTK_BOX(hbox), ui_data->login_button, FALSE, FALSE, 0);
 	g_signal_connect (ui_data->login_button, "clicked", G_CALLBACK(login_clicked), ui_data);
 	gtk_widget_set_sensitive (ui_data->login_button, FALSE);
 	gtk_widget_show(ui_data->login_button);
 
-	ui_data->cancel_button = gtk_button_new_from_stock (GTK_STOCK_CANCEL);
+	ui_data->cancel_button = gtk_button_new_with_mnemonic(_("_Cancel"));
 	gtk_box_pack_end(GTK_BOX(hbox), ui_data->cancel_button, FALSE, FALSE, 0);
 	g_signal_connect (ui_data->cancel_button, "clicked", G_CALLBACK(cancel_clicked), ui_data);
 	gtk_widget_set_sensitive (ui_data->cancel_button, FALSE);
