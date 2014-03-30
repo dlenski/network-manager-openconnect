@@ -2,14 +2,15 @@
 # Copyright (C) 2009 THE network-manager-openconnect'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the network-manager-openconnect package.
 #
-# Andika Triwidada <andika@gmail.com>, 2009, 2010, 2011, 2012, 2013.
+# Andika Triwidada <andika@gmail.com>, 2009-2014.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-11 20:39-0700\n"
-"PO-Revision-Date: 2013-12-28 11:51+0700\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-03-29 23:40+0000\n"
+"PO-Revision-Date: 2014-03-30 16:24+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -44,31 +45,43 @@ msgstr ""
 "Alasan: %s\n"
 "Anda ingin menerimanya?"
 
+#: ../auth-dialog/main.c:1539
+msgid "_Close"
+msgstr "_Tutup"
+
 #: ../auth-dialog/main.c:1556
 msgid "VPN host"
 msgstr "Host VPN"
 
-#: ../auth-dialog/main.c:1576
+#: ../auth-dialog/main.c:1567
+msgid "C_onnect"
+msgstr "Menyam_bung"
+
+#: ../auth-dialog/main.c:1574
 msgid "Automatically start connecting next time"
 msgstr "Selanjutnya mulai menyambung secara otomatis"
 
-#: ../auth-dialog/main.c:1593
+#: ../auth-dialog/main.c:1591
 msgid "Select a host to fetch the login form"
 msgstr "Pilih host untuk mengambil formulir log masuk"
 
-#: ../auth-dialog/main.c:1598
+#: ../auth-dialog/main.c:1596
 msgid "Contacting host, please wait..."
 msgstr "Menghubungi host, silakan tunggu..."
 
-#: ../auth-dialog/main.c:1610
+#: ../auth-dialog/main.c:1608
 msgid "_Login"
 msgstr "_Log Masuk"
 
-#: ../auth-dialog/main.c:1624
+#: ../auth-dialog/main.c:1614
+msgid "_Cancel"
+msgstr "_Batal"
+
+#: ../auth-dialog/main.c:1620
 msgid "Save passwords"
 msgstr "Simpan sandi"
 
-#: ../auth-dialog/main.c:1632
+#: ../auth-dialog/main.c:1628
 msgid "Log"
 msgstr "Log"
 
@@ -226,27 +239,27 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/xml.c#l42
 #: ../openconnect-strings.txt:14
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open XML config file: %s\n"
-msgstr "Gagal mengurai berkas konfig XML %s\n"
+msgstr "Gagal membuka berkas konfig XML: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/xml.c#l49
 #: ../openconnect-strings.txt:17
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to fstat() XML config file: %s\n"
-msgstr "Gagal mengurai berkas konfig XML %s\n"
+msgstr "Gagal fstat() berkas konfig XML: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/xml.c#l58
 #: ../openconnect-strings.txt:20
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to allocate %lu bytes for XML config file\n"
-msgstr "Gagal mengurai berkas konfig XML %s\n"
+msgstr "Gagal mengalokasikan %lu byte bagi berkas konfig XML\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/xml.c#l65
 #: ../openconnect-strings.txt:23
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to read XML config file: %s\n"
-msgstr "Gagal mengurai berkas konfig XML %s\n"
+msgstr "Gagal membaca berkas konfig XML: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/xml.c#l95
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/xml.c#l118
@@ -334,13 +347,12 @@ msgstr ""
 #: ../openconnect-strings.txt:70
 #, c-format
 msgid "Cannot process this executable path \"%s\""
-msgstr ""
+msgstr "Tak bisa memroses path executable \"%s\" ini"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l311
 #: ../openconnect-strings.txt:73
-#, fuzzy
 msgid "Allocation for vpnc-script path failed\n"
-msgstr "Alokasi penyangga deflate gagal\n"
+msgstr "Alokasi bagi path vpnc-script gagal\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l322
 #: ../openconnect-strings.txt:76
@@ -434,9 +446,8 @@ msgstr "Pakai syslog untuk pesan-pesan kemajuan"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l344
 #: ../openconnect-strings.txt:129
-#, fuzzy
 msgid "Prepend timestamp to progress messages"
-msgstr "Pakai syslog untuk pesan-pesan kemajuan"
+msgstr "Sisipkan tanda waktu ke pesan-pesan kemajuan"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l346
 #: ../openconnect-strings.txt:132
@@ -496,7 +507,7 @@ msgstr "(CATATAN: libproxy dimatikan dalam build ini)"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l360
 #: ../openconnect-strings.txt:165
 msgid "Require perfect forward secrecy"
-msgstr ""
+msgstr "Persyaratkan perfect forward secrecy"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l361
 #: ../openconnect-strings.txt:168
@@ -620,9 +631,8 @@ msgstr "Baca kata sandi dari masukan standar"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l387
 #: ../openconnect-strings.txt:240
-#, fuzzy
 msgid "Software token type: rsa, totp or hotp"
-msgstr "Tipe token perangkat lunak: rsa atau totp"
+msgstr "Tipe token perangkat lunak: rsa, totp, atau hotp"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l388
 #: ../openconnect-strings.txt:243
@@ -636,9 +646,8 @@ msgstr "(CATATAN: libstoken (RSA SecurID) dimatikan dalam build ini)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l393
 #: ../openconnect-strings.txt:249
-#, fuzzy
 msgid "(NOTE: liboath (TOTP,HOTP) disabled in this build)"
-msgstr "(CATATAN: liboath (TOTP) dimatikan dalam build ini)"
+msgstr "(CATATAN: liboath (TOTP,HOTP) dimatikan dalam build ini)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l395
 #: ../openconnect-strings.txt:252
@@ -657,9 +666,8 @@ msgstr "HTTP header ruas User-Agent:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l398
 #: ../openconnect-strings.txt:261
-#, fuzzy
 msgid "OS type (linux,linux-64,win,...) to report"
-msgstr "Tipe OS (linux,linux-64,mac,win) untuk dilaporkan"
+msgstr "Tipe OS (linux,linux-64,win,…) untuk dilaporkan"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l399
 #: ../openconnect-strings.txt:264
@@ -678,9 +686,8 @@ msgstr "fgets (stdin)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l490
 #: ../openconnect-strings.txt:273
-#, fuzzy
 msgid "Failed to allocate string\n"
-msgstr "Gagal mengalokasikan penyimpanan sockaddr\n"
+msgstr "Gagal mengalokasikan string\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l529
 #: ../openconnect-strings.txt:276
@@ -798,7 +805,7 @@ msgstr "Versi openconnect ini dibangun tanpa dukungan libproxy\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l961
 #: ../openconnect-strings.txt:336
 msgid "Error opening cmd pipe\n"
-msgstr ""
+msgstr "Gagal membuka pipa cmd\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l1011
 #: ../openconnect-strings.txt:339
@@ -812,9 +819,8 @@ msgstr "Pembuatan koneksi SSL gagal\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l1045
 #: ../openconnect-strings.txt:345
-#, fuzzy
 msgid "Set up tun script failed\n"
-msgstr "Penyiapan perangkat tun gagal\n"
+msgstr "Penyiapan skrip tun gagal\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l1052
 #: ../openconnect-strings.txt:348
@@ -865,7 +871,7 @@ msgstr "Menlanjutkan di latar belakang; pid %d\n"
 #: ../openconnect-strings.txt:373
 #, c-format
 msgid "Caught signal: %s\n"
-msgstr ""
+msgstr "Menangkap sinyal: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l1147
 #: ../openconnect-strings.txt:376
@@ -919,9 +925,9 @@ msgstr "Sidikjari SHA1: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l1286
 #: ../openconnect-strings.txt:402
-#, fuzzy, c-format
+#, c-format
 msgid "Auth choice \"%s\" matches multiple options\n"
-msgstr "Pilihan auth \"%s\" tak valid\n"
+msgstr "Pilihan auth \"%s\" cocok dengan opsi berganda\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/main.c#l1289
 #: ../openconnect-strings.txt:405
@@ -1332,9 +1338,8 @@ msgstr "Gagal menulis ke soket SSL: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l124
 #: ../openconnect-strings.txt:641
-#, fuzzy
 msgid "SSL socket closed uncleanly\n"
-msgstr "Koneksi soket dibatalkan\n"
+msgstr "Soket SSL ditutup tak secara bersih\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l128
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l183
@@ -1599,9 +1604,8 @@ msgstr "Pengaturan daftar pencabutan sertifikat gagal: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l1436
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l1446
 #: ../openconnect-strings.txt:783
-#, fuzzy
 msgid "Failed to allocate memory for certificate\n"
-msgstr "Gagal mengalokasikan memori untuk sertifikat pendukung\n"
+msgstr "Gagal mengalokasikan memori untuk sertifikat\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l1482
 #: ../openconnect-strings.txt:786
@@ -1615,7 +1619,7 @@ msgstr ""
 #: ../openconnect-strings.txt:790
 #, c-format
 msgid "Got next CA '%s' from PKCS11\n"
-msgstr ""
+msgstr "Mendapat CA berikutnya '%s' dari PKCS11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l1535
 #: ../openconnect-strings.txt:793
@@ -1733,7 +1737,7 @@ msgstr "GnuTLS kembalian tak fatal selama jabat tangan: %s\n"
 #: ../openconnect-strings.txt:856
 #, c-format
 msgid "Renegotiated SSL on %s\n"
-msgstr ""
+msgstr "Renegosiasi SSL pada %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/gnutls.c#l2205
 #: ../openconnect-strings.txt:859
@@ -2107,6 +2111,8 @@ msgid ""
 "Error: Running the 'Cisco Secure Desktop' trojan on Windows is not yet "
 "implemented.\n"
 msgstr ""
+"Galat: Menjalankan trojan 'Cisco Secure Desktop' pada Windows belum "
+"diimplementasi.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/http.c#l536
 #: ../openconnect-strings.txt:1066
@@ -2548,15 +2554,14 @@ msgstr "Tak bisa menjangkitkan kode token OATH TOTP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/auth.c#l1301
 #: ../openconnect-strings.txt:1311
-#, fuzzy
 msgid "Generating OATH HOTP token code\n"
-msgstr "Menjangkitkan kode token OATH TOTP\n"
+msgstr "Menjangkitkan kode token OATH HOTP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/auth.c#l1310
 #: ../openconnect-strings.txt:1314
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to generate OATH HOTP token code: %s\n"
-msgstr "Tak bisa menjangkitkan kode token OATH TOTP: %s\n"
+msgstr "Tak bisa menjangkitkan kode token OATH HOTP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/library.c#l355
 #: ../openconnect-strings.txt:1317
@@ -2572,7 +2577,7 @@ msgstr "Hanya https:// yang diijinkan bagi URL server\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/compat.c#l207
 #: ../openconnect-strings.txt:1323
 msgid "ERROR: Cannot initialize sockets\n"
-msgstr ""
+msgstr "GALAT: Tak bisa menginisialisasi soket\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l123
 #: ../openconnect-strings.txt:1326
@@ -2610,9 +2615,9 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l215
 #: ../openconnect-strings.txt:1345
-#, fuzzy, c-format
+#, c-format
 msgid "Established DTLS connection (using OpenSSL). Ciphersuite %s.\n"
-msgstr "Terjalin koneksi DTLS (memakai OpenSSL)\n"
+msgstr "Terjalin koneksi DTLS (memakai OpenSSL). Ciphersuite %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l241
 #: ../openconnect-strings.txt:1348
@@ -2669,9 +2674,9 @@ msgstr "Gagal menata MTU DTLS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l421
 #: ../openconnect-strings.txt:1376
-#, fuzzy, c-format
+#, c-format
 msgid "Established DTLS connection (using GnuTLS). Ciphersuite %s.\n"
-msgstr "Terjalink koneksi DTLS (memakai GnuTLS)\n"
+msgstr "Terjalink koneksi DTLS (memakai GnuTLS). Ciphersuite %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l437
 #: ../openconnect-strings.txt:1379
@@ -2682,7 +2687,7 @@ msgstr "Jabat tangan DTLS gagal: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l455
 #: ../openconnect-strings.txt:1382
 msgid "DTLS connection attempted with an existing fd\n"
-msgstr ""
+msgstr "Koneksi DTLS dicoba dengan fd yang ada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l461
 #: ../openconnect-strings.txt:1385
@@ -2777,9 +2782,8 @@ msgstr "Kunci ulang DTLS jatuh tempo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l763
 #: ../openconnect-strings.txt:1437
-#, fuzzy
 msgid "DTLS Rehandshake failed; reconnecting.\n"
-msgstr "Jabat tangan DTLS gagal: %d\n"
+msgstr "Jabat tangan ulang DTLS gagal; menyambung ulang.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/dtls.c#l772
 #: ../openconnect-strings.txt:1440
@@ -2930,7 +2934,7 @@ msgstr "Alokasi penyangga deflate gagal\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/cstp.c#l578
 #: ../openconnect-strings.txt:1519
 msgid "Cookie is no longer valid, ending session\n"
-msgstr ""
+msgstr "Cookie tak valid lagi, mengakhiri sesi\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/cstp.c#l582
 #: ../openconnect-strings.txt:1522
@@ -3037,7 +3041,7 @@ msgstr "Kunci ulang CSTP jatuh tempo\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/cstp.c#l891
 #: ../openconnect-strings.txt:1576
 msgid "Rehandshake failed; attempting new-tunnel\n"
-msgstr ""
+msgstr "Jabat tangan ulang gagal; mencoba tunnel baru\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/cstp.c#l902
 #: ../openconnect-strings.txt:1579
@@ -3086,7 +3090,7 @@ msgstr "Kirim paket BYE: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/mainloop.c#l175
 #: ../openconnect-strings.txt:1603
 msgid "Caller paused the connection\n"
-msgstr ""
+msgstr "Pemanggil mengistirahatkan koneksi\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/mainloop.c#l183
 #: ../openconnect-strings.txt:1606
@@ -3098,7 +3102,7 @@ msgstr "Tak ada pekerjaan; tidur selama %d ms...\n"
 #: ../openconnect-strings.txt:1609
 #, c-format
 msgid "WaitForMultipleObjects failed: %lx\n"
-msgstr ""
+msgstr "WaitForMultipleObjects gagal: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/script.c#l65
 #: ../openconnect-strings.txt:1612
@@ -3215,15 +3219,15 @@ msgstr "TUNSIFHEAD"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun.c#l356
 #: ../openconnect-strings.txt:1674
-#, fuzzy, c-format
+#, c-format
 msgid "socketpair failed: %s\n"
-msgstr "SSL send gagal: %s\n"
+msgstr "socketpair gagal: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun.c#l361
 #: ../openconnect-strings.txt:1677
-#, fuzzy, c-format
+#, c-format
 msgid "fork failed: %s\n"
-msgstr "SSL send gagal: %s\n"
+msgstr "fork gagal: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun.c#l365
 #: ../openconnect-strings.txt:1680
@@ -3255,115 +3259,92 @@ msgstr "Gagal menulis paket datang: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l71
 #: ../openconnect-strings.txt:1695
 msgid "Error accessing registry key for network adapters\n"
-msgstr ""
+msgstr "Galat saat mengakses kunci registri bagi adaptor jaringan\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l114
 #: ../openconnect-strings.txt:1698
 #, c-format
 msgid "Ignoring non-matching TAP interface \"%s\""
-msgstr ""
+msgstr "Mengabaikan antar muka TAP \"%s\" yang tak cocok"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l128
 #: ../openconnect-strings.txt:1701
 msgid "No Windows-TAP adapters found. Is the driver installed?\n"
-msgstr ""
+msgstr "Tak ditemukan adaptor Windows-TAP. Apakah driver terpasang?\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l146
 #: ../openconnect-strings.txt:1704
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open %s\n"
-msgstr "Gagal membuka berkas CA '%s'\n"
+msgstr "Gagal membuka %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l151
 #: ../openconnect-strings.txt:1707
-#, fuzzy, c-format
+#, c-format
 msgid "Opened tun device %s\n"
-msgstr "Gagal membuka perangkat tun: %s\n"
+msgstr "Membuka perangkat tun: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l158
 #: ../openconnect-strings.txt:1710
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to obtain TAP driver version: %lx\n"
-msgstr "Gagal memuat kunci privat TPM\n"
+msgstr "Gagal memperoleh versi driver TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l163
 #: ../openconnect-strings.txt:1713
 #, c-format
 msgid "Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n"
 msgstr ""
+"Galat: Diperlukan driver TAP-Windows v9.9 atau lebih (ditemukan %ld.%ld)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l179
 #: ../openconnect-strings.txt:1716
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to set TAP IP addresses: %lx\n"
-msgstr "Gagal menata PIN TPM: %s\n"
+msgstr "Gagal menata alamat IP TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l189
 #: ../openconnect-strings.txt:1719
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to set TAP media status: %lx\n"
-msgstr "Gagal menyiapkan struktur data PKCS#12: %s\n"
+msgstr "Gagal menata status media TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l217
 #: ../openconnect-strings.txt:1722
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to read from TAP device: %lx\n"
-msgstr "Gagal baca dari soket SSL: %s\n"
+msgstr "Gagal membaca dari perangkat TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l228
 #: ../openconnect-strings.txt:1725
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to complete read from TAP device: %lx\n"
-msgstr "Gagal baca dari soket SSL: %s\n"
+msgstr "Gagal melengkapi baca dari perangkat TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l249
 #: ../openconnect-strings.txt:1728
 #, c-format
 msgid "Wrote %ld bytes to tun\n"
-msgstr ""
+msgstr "Menulis %ld byte ke tun\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l259
 #: ../openconnect-strings.txt:1731
 msgid "Waiting for tun write...\n"
-msgstr ""
+msgstr "Menunggun menulis tun…\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l262
 #: ../openconnect-strings.txt:1734
 #, c-format
 msgid "Wrote %ld bytes to tun after waiting\n"
-msgstr ""
+msgstr "Menulis %ld byte ke tun setelah menunggu\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l268
 #: ../openconnect-strings.txt:1737
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to write to TAP device: %lx\n"
-msgstr "Gagal menulis ke soket SSL: %s\n"
+msgstr "Gagal menulis ke perangkat TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/0ad3510d40:/tun-win32.c#l293
 #: ../openconnect-strings.txt:1740
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
-msgstr ""
-
-#~ msgid "Failed to initialise DTLS secret\n"
-#~ msgstr "Gagal menginisialisasi rahasia DTLS\n"
-
-#~ msgid "Open XML config file"
-#~ msgstr "Buka berkas konfig XML"
-
-#~ msgid "fstat XML config file"
-#~ msgstr "fstat berkas konfig XML"
-
-#~ msgid "mmap XML config file"
-#~ msgstr "mmap berkas konfig XML"
-
-#~ msgid "DTLS rekey failed\n"
-#~ msgstr "Kunci ulang DTLS gagal\n"
-
-#~ msgid "open tun"
-#~ msgstr "buka tun"
-
-#~ msgid "socketpair"
-#~ msgstr "socketpair"
-
-#~ msgid "fork"
-#~ msgstr "fork"
+msgstr "Span skrip tunnel belum didukung pada Windows\n"
