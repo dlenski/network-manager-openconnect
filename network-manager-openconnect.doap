@@ -8,7 +8,7 @@
   <name xml:lang="en">network-manager-openconnect</name>
   <shortdesc xml:lang="en">Openconnect support for NetworkManager</shortdesc>
 
-  <homepage rdf:resource="http://projects.gnome.org/NetworkManager/" />
+  <homepage rdf:resource="https://wiki.gnome.org/Projects/NetworkManager" />
   <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/networkmanager-list" />
   <download-page rdf:resource="http://download.gnome.org/sources/NetworkManager-openconnect/" />
   <bug-database rdf:resource="http://bugzilla.gnome.org/browse.cgi?product=NetworkManager&amp;component=VPN:%20openconnect" />
