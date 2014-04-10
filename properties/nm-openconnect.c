@@ -95,6 +95,26 @@ typedef struct {
 #define COL_AUTH_PAGE 1
 #define COL_AUTH_TYPE 2
 
+/************** import/export **************/
+
+typedef enum {
+	NM_OPENCONNECT_IMPORT_ERROR_UNKNOWN = 0,
+	NM_OPENCONNECT_IMPORT_ERROR_NOT_OPENCONNECT,
+	NM_OPENCONNECT_IMPORT_ERROR_BAD_DATA,
+} NMOpenconnectImportError;
+
+#define NM_OPENCONNECT_IMPORT_ERROR nm_openconnect_import_error_quark ()
+
+static GQuark
+nm_openconnect_import_error_quark (void)
+{
+	static GQuark quark = 0;
+
+	if (G_UNLIKELY (quark == 0))
+		quark = g_quark_from_static_string ("nm-openconnect-import-error-quark");
+	return quark;
+}
+
 static NMConnection *
 import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 {
@@ -110,8 +130,12 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 	keyfile = g_key_file_new ();
 	flags = G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS;
 
-	if (!g_key_file_load_from_file (keyfile, path, flags, error)) {
-		g_set_error (error, 0, 0, "does not look like a %s VPN connection (parse failed)", OPENCONNECT_PLUGIN_NAME);
+	if (!g_key_file_load_from_file (keyfile, path, flags, NULL)) {
+		g_set_error (error,
+		             NM_OPENCONNECT_IMPORT_ERROR,
+		             NM_OPENCONNECT_IMPORT_ERROR_NOT_OPENCONNECT,
+		             "does not look like a %s VPN connection (parse failed)",
+		             OPENCONNECT_PLUGIN_NAME);
 		return NULL;
 	}
 
@@ -131,7 +155,11 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 	if (buf) {
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY, buf);
 	} else {
-		g_set_error (error, 0, 0, "does not look like a %s VPN connection (no Host)", OPENCONNECT_PLUGIN_NAME);
+		g_set_error (error,
+		             NM_OPENCONNECT_IMPORT_ERROR,
+		             NM_OPENCONNECT_IMPORT_ERROR_BAD_DATA,
+		             "does not look like a %s VPN connection (no Host)",
+		             OPENCONNECT_PLUGIN_NAME);
 		g_object_unref (connection);
 		return NULL;
 	}
