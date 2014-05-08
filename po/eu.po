@@ -2,35 +2,35 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009, 2010.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2009, 2010, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-02 11:23+0100\n"
-"PO-Revision-Date: 2010-03-20 19:27+0100\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"POT-Creation-Date: 2014-05-08 21:26+0200\n"
+"PO-Revision-Date: 2014-05-08 21:26+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../auth-dialog/main.c:841
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
-msgstr ""
+msgstr "OpenConnect: %s: %s:%s"
 
 #: ../auth-dialog/main.c:871
 #, c-format
 msgid "Connect to VPN '%s'"
-msgstr ""
+msgstr "Konektatu '%s' VPN-ra"
 
 #: ../auth-dialog/main.c:873
 msgid "Connect to VPN"
-msgstr ""
+msgstr "Konektatu VPN-ra"
 
 #: ../auth-dialog/main.c:916
 #, c-format
@@ -39,46 +39,49 @@ msgid ""
 "Reason: %s\n"
 "Do you want to accept it?"
 msgstr ""
+"Huts egin du '%s' VPN zerbitzariaren ziurtagiria egiaztatzean.\n"
+"Zergatia: %s\n"
+"Onartzea nahi duzu?"
 
 #: ../auth-dialog/main.c:1539
 msgid "_Close"
-msgstr ""
+msgstr "_Itxi"
 
 #: ../auth-dialog/main.c:1556
 msgid "VPN host"
-msgstr ""
+msgstr "VPN ostalaria"
 
 #: ../auth-dialog/main.c:1567
 msgid "C_onnect"
-msgstr ""
+msgstr "_Konektatu"
 
 #: ../auth-dialog/main.c:1574
 msgid "Automatically start connecting next time"
-msgstr ""
+msgstr "Hasi konektatzen automatikoki hurrengo aldian"
 
 #: ../auth-dialog/main.c:1591
 msgid "Select a host to fetch the login form"
-msgstr ""
+msgstr "Hautatu ostalaria saioaren inprimakia lortzeko"
 
 #: ../auth-dialog/main.c:1596
 msgid "Contacting host, please wait..."
-msgstr ""
+msgstr "Ostalariarekin konektatzen. Itxaron..."
 
 #: ../auth-dialog/main.c:1608
 msgid "_Login"
-msgstr ""
+msgstr "_Saio-hasiera"
 
 #: ../auth-dialog/main.c:1614
 msgid "_Cancel"
-msgstr ""
+msgstr "_Utzi"
 
 #: ../auth-dialog/main.c:1620
 msgid "Save passwords"
-msgstr ""
+msgstr "Gorde pasahitzak"
 
 #: ../auth-dialog/main.c:1628
 msgid "Log"
-msgstr ""
+msgstr "Erregistratu"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
@@ -121,7 +124,6 @@ msgid "_Proxy:"
 msgstr "_Proxy-a:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:5
-#, fuzzy
 msgid "CA C_ertificate:"
 msgstr "_ZE ziurtagiria:"
 
@@ -156,147 +158,153 @@ msgstr "<b>Ziurtagiriaren autentifikazioa</b>"
 
 #: ../properties/nm-openconnect-dialog.ui.h:13
 msgid "Token _Mode:"
-msgstr ""
+msgstr "Token-aren modua:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:14
 msgid "Token Sec_ret:"
-msgstr ""
+msgstr "_Ezkutuko tokena:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:15
 msgid "Disabled"
-msgstr ""
+msgstr "Desgaituta"
 
 #: ../properties/nm-openconnect-dialog.ui.h:16
 msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr ""
+msgstr "ID segurua (RSA SecurID) - ~/.stokenrc fitxategitik irakurrita"
 
 #: ../properties/nm-openconnect-dialog.ui.h:17
 msgid "RSA SecurID - manually entered"
-msgstr ""
+msgstr "ID segurua (RSA SecurID) - eskuz sartuta"
 
 #: ../properties/nm-openconnect-dialog.ui.h:18
 msgid "TOTP - manually entered"
-msgstr ""
+msgstr "TOTP - eskuz sartuta"
 
 #: ../src/nm-openconnect-service.c:151
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr ""
+"baliogabeko '%s' propietatearen zenbaki osokoa edo [%d -> %d] barrutitik "
+"kanpo"
 
 #: ../src/nm-openconnect-service.c:161
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
-msgstr ""
+msgstr "baliogabeko 's' propietatearen boolearra (ez bai/ez)"
 
 #: ../src/nm-openconnect-service.c:168
 #, c-format
 msgid "unhandled property '%s' type %s"
-msgstr ""
+msgstr "kudeatu gabeko '%s' propietatearen '%s' mota"
 
 #: ../src/nm-openconnect-service.c:181
 #, c-format
 msgid "property '%s' invalid or not supported"
-msgstr ""
+msgstr "'%s' propietatea baliogabea edo ez dago onartuta"
 
 #: ../src/nm-openconnect-service.c:197
 msgid "No VPN configuration options."
-msgstr ""
+msgstr "Ez dago VPNaren konfigurazioaren aukerarik."
 
 #: ../src/nm-openconnect-service.c:215
 msgid "No VPN secrets!"
-msgstr ""
+msgstr "Ez dago VPNaren ezkutukorik."
 
 #: ../src/nm-openconnect-service.c:383
 msgid "Could not find openconnect binary."
-msgstr ""
+msgstr "Ezin izan da openconnect bitarra aurkitu."
 
 #: ../src/nm-openconnect-service.c:395
 msgid "No VPN gateway specified."
-msgstr ""
+msgstr "Ez da VPN atebiderik zehaztu."
 
 #: ../src/nm-openconnect-service.c:405
 msgid "No WebVPN cookie provided."
-msgstr ""
+msgstr "Ez da WebVPN cookie-rik eman."
 
 #: ../src/nm-openconnect-service.c:640
 msgid "Don't quit when VPN connection terminates"
-msgstr ""
+msgstr "Ez irten VPNaren konexioa amaitzean"
 
 #: ../src/nm-openconnect-service.c:641
 msgid "Enable verbose debug logging (may expose passwords)"
-msgstr ""
+msgstr "Gaitu arazketaren erregistro xehea (pasahitzak erakuts ditzake)"
 
 #: ../src/nm-openconnect-service.c:664
 msgid ""
 "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
 "capability to NetworkManager."
 msgstr ""
+"'nm-openconnect-service' zerbitzuak Cisco-ren AnyConnect SSL-tik jasotako "
+"VPN gaitasuna erabiltzea baimentzen dio NetworkManager-i."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l42
 #: ../openconnect-strings.txt:14
 #, c-format
 msgid "Failed to open XML config file: %s\n"
-msgstr ""
+msgstr "Huts egin du XML konfigurazio-fitxategia irekitzean: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l49
 #: ../openconnect-strings.txt:17
 #, c-format
 msgid "Failed to fstat() XML config file: %s\n"
-msgstr ""
+msgstr "Huts egin du XML konfigurazio-fitxategiari fstat() aplikatzean: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l57
 #: ../openconnect-strings.txt:20
 #, c-format
 msgid "Failed to allocate %lu bytes for XML config file\n"
-msgstr ""
+msgstr "Huts egin du %lu byte esleitzean XML konfigurazio-fitxategiarentzako\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l64
 #: ../openconnect-strings.txt:23
 #, c-format
 msgid "Failed to read XML config file: %s\n"
-msgstr ""
+msgstr "Huts egin du XML konfigurazio-fitxategia irakurtzean: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l97
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l120
 #: ../openconnect-strings.txt:27
 #, c-format
 msgid "Treating host \"%s\" as a raw hostname\n"
-msgstr ""
+msgstr "'%s' ostalaria ostalari-izen gordin gisa tratatzen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l103
 #: ../openconnect-strings.txt:30
 msgid "Failed to SHA1 existing file\n"
-msgstr ""
+msgstr "Huts egin du existitzen den fitxategiaren SHA1 kalkulatzean\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l110
 #: ../openconnect-strings.txt:33
 #, c-format
 msgid "XML config file SHA1: %s\n"
-msgstr ""
+msgstr "XML konfigurazio-fitxategiaren SHA1: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l118
 #: ../openconnect-strings.txt:36
 #, c-format
 msgid "Failed to parse XML config file %s\n"
-msgstr ""
+msgstr "Huts egin du XML konfigurazio-fitxategia analizatzean: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l155
 #: ../openconnect-strings.txt:39
 #, c-format
 msgid "Host \"%s\" has address \"%s\"\n"
-msgstr ""
+msgstr "'%s' ostalariak '%s' helbidea du\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l164
 #: ../openconnect-strings.txt:42
 #, c-format
 msgid "Host \"%s\" has UserGroup \"%s\"\n"
-msgstr ""
+msgstr "'%s' ostalariak '%s' erabiltzaile-taldea du\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l178
 #: ../openconnect-strings.txt:45
 #, c-format
 msgid "Host \"%s\" not listed in config; treating as raw hostname\n"
 msgstr ""
+"'%s' ostalaria ez dago konfigurazioan zerrendatuta; ostalari-izen gordin "
+"gisa erabiltzen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l243
 #: ../openconnect-strings.txt:48
@@ -304,26 +312,28 @@ msgid ""
 "For assistance with OpenConnect, please see the web page at\n"
 " http://www.infradead.org/openconnect/mail.html\n"
 msgstr ""
+"OpenConnect-ekin laguntzarik behar izanez gero, ikusi webgune hau\n"
+" http://www.infradead.org/openconnect/mail.html\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l252
 #: ../openconnect-strings.txt:53
 msgid "Using OpenSSL. Features present:"
-msgstr ""
+msgstr "OpenSSL erabiltzen. Dituen eginbideak:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l254
 #: ../openconnect-strings.txt:56
 msgid "Using GnuTLS. Features present:"
-msgstr ""
+msgstr "GnuTLS erabiltzen. Dituen eginbideak:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l263
 #: ../openconnect-strings.txt:59
 msgid "OpenSSL ENGINE not present"
-msgstr ""
+msgstr "Ez dago OpenSSL motorra"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l287
 #: ../openconnect-strings.txt:62
 msgid "using OpenSSL"
-msgstr ""
+msgstr "OpenSSL erabiltzen"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l291
 #: ../openconnect-strings.txt:65
@@ -331,22 +341,25 @@ msgid ""
 "\n"
 "WARNING: No DTLS support in this binary. Performance will be impaired.\n"
 msgstr ""
+"\n"
+"ABISUA: ez dago DTLS euskarririk bitar honetan. Errendimenduan eragina "
+"izango du.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l305
 #: ../openconnect-strings.txt:70
 #, c-format
 msgid "Cannot process this executable path \"%s\""
-msgstr ""
+msgstr "Ezin da '%s' bide-izen exekutagarria prozesatu"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l311
 #: ../openconnect-strings.txt:73
 msgid "Allocation for vpnc-script path failed\n"
-msgstr ""
+msgstr "Huts egin du vpnc-script bide-izenaren esleipenak\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l322
 #: ../openconnect-strings.txt:76
 msgid "Usage:  openconnect [options] <server>\n"
-msgstr ""
+msgstr "Erabilera: openconnect [aukerak] <zerbitzaria>\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l323
 #: ../openconnect-strings.txt:79
@@ -355,151 +368,153 @@ msgid ""
 "Open client for Cisco AnyConnect VPN, version %s\n"
 "\n"
 msgstr ""
+"Cisco AnyConnect VPN-ren bezero irekia, %s bertsioa\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l325
 #: ../openconnect-strings.txt:84
 msgid "Read options from config file"
-msgstr ""
+msgstr "Irakurri aukerak konfigurazio-fitxategitik"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l327
 #: ../openconnect-strings.txt:87
 msgid "Continue in background after startup"
-msgstr ""
+msgstr "Jarraitu atzeko planoan abiatu ondoren"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l328
 #: ../openconnect-strings.txt:90
 msgid "Write the daemon's PID to this file"
-msgstr ""
+msgstr "Idatzi daemon-aren PIDa fitxategi honetan"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l330
 #: ../openconnect-strings.txt:93
 msgid "Use SSL client certificate CERT"
-msgstr ""
+msgstr "Erabili SSL bezeroaren CERT ziurtagiria"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l331
 #: ../openconnect-strings.txt:96
 msgid "Warn when certificate lifetime < DAYS"
-msgstr ""
+msgstr "Abisatu ziurtagiriaren bizi-iraupena < EGUN denean"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l332
 #: ../openconnect-strings.txt:99
 msgid "Use SSL private key file KEY"
-msgstr ""
+msgstr "Erabili SSL-ren gako pribatuaren KEY fitxategia"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l333
 #: ../openconnect-strings.txt:102
 msgid "Use WebVPN cookie COOKIE"
-msgstr ""
+msgstr "Erabili WebVPN-ren COOKIE cookie-a"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l334
 #: ../openconnect-strings.txt:105
 msgid "Read cookie from standard input"
-msgstr ""
+msgstr "Irakurri cookie-a sarrera estandarretik"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l335
 #: ../openconnect-strings.txt:108
 msgid "Enable compression (default)"
-msgstr ""
+msgstr "Gaitu konpresioa (lehenetsia)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l336
 #: ../openconnect-strings.txt:111
 msgid "Disable compression"
-msgstr ""
+msgstr "Desgaitu konpresioa"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l337
 #: ../openconnect-strings.txt:114
 msgid "Set minimum Dead Peer Detection interval"
-msgstr ""
+msgstr "Ezarri  Hildako _Parekoen Detekzioaren (DPD) bitartea"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l338
 #: ../openconnect-strings.txt:117
 msgid "Set login usergroup"
-msgstr ""
+msgstr "Ezarri saio-hasieraren erabiltzaile-taldea"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l339
 #: ../openconnect-strings.txt:120
 msgid "Display help text"
-msgstr ""
+msgstr "Bistaratu laguntzaren testua"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l340
 #: ../openconnect-strings.txt:123
 msgid "Use IFNAME for tunnel interface"
-msgstr ""
+msgstr "Erabili IFNAME tunelaren interfazearentzako"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l342
 #: ../openconnect-strings.txt:126
 msgid "Use syslog for progress messages"
-msgstr ""
+msgstr "Erabili sistemaren egunkaria (syslog) aurrerapenen mezuentzako"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l344
 #: ../openconnect-strings.txt:129
 msgid "Prepend timestamp to progress messages"
-msgstr ""
+msgstr "Atxikitu denbora-zigilua aurretik aurrerapenen mezuei"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l346
 #: ../openconnect-strings.txt:132
 msgid "Drop privileges after connecting"
-msgstr ""
+msgstr "Jaregin pribilegioak konektatu ondoren"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l347
 #: ../openconnect-strings.txt:135
 msgid "Drop privileges during CSD execution"
-msgstr ""
+msgstr "Jaregin pribilegioak CSV exekutatzean"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l348
 #: ../openconnect-strings.txt:138
 msgid "Run SCRIPT instead of CSD binary"
-msgstr ""
+msgstr "Exekutatu SCRIPT, CSD bitarraren ordez"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l350
 #: ../openconnect-strings.txt:141
 msgid "Request MTU from server"
-msgstr ""
+msgstr "Eskatu MTU zerbitzaritik"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l351
 #: ../openconnect-strings.txt:144
 msgid "Indicate path MTU to/from server"
-msgstr ""
+msgstr "Adierazi MTUren bide-izena zerbitzariari/zerbitzaritik"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l352
 #: ../openconnect-strings.txt:147
 msgid "Set key passphrase or TPM SRK PIN"
-msgstr ""
+msgstr "Ezarri pasaesaldia edo TPM SRK PINa"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l353
 #: ../openconnect-strings.txt:150
 msgid "Key passphrase is fsid of file system"
-msgstr ""
+msgstr "Gakoaren pasaesaldia fitxategi-sistemaren fsid-a da"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l354
 #: ../openconnect-strings.txt:153
 msgid "Set proxy server"
-msgstr ""
+msgstr "Ezarri proxy zerbitzaria"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l355
 #: ../openconnect-strings.txt:156
 msgid "Disable proxy"
-msgstr ""
+msgstr "Desgaitu proxy-a"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l356
 #: ../openconnect-strings.txt:159
 msgid "Use libproxy to automatically configure proxy"
-msgstr ""
+msgstr "Erabili 'libproxy' proxy-a automatikoki konfiguratzeko"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l358
 #: ../openconnect-strings.txt:162
 msgid "(NOTE: libproxy disabled in this build)"
-msgstr ""
+msgstr "(OHARRA: 'libproxy' desgaituta konpilazioan honetan)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l360
 #: ../openconnect-strings.txt:165
 msgid "Require perfect forward secrecy"
-msgstr ""
+msgstr "Konfidentzialtasun iraunkorra (PFS) behar da"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l361
 #: ../openconnect-strings.txt:168
 msgid "Less output"
-msgstr ""
+msgstr "Irteera laburragoa"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l362
 #: ../openconnect-strings.txt:171
