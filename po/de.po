@@ -9,17 +9,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager-openconnect\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-02 11:23+0100\n"
-"PO-Revision-Date: 2014-03-08 14:57+0100\n"
-"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-05-29 21:58+0000\n"
+"PO-Revision-Date: 2014-05-30 00:38+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../auth-dialog/main.c:841
 #, c-format
@@ -48,16 +49,15 @@ msgstr ""
 
 #: ../auth-dialog/main.c:1539
 msgid "_Close"
-msgstr ""
+msgstr "S_chließen"
 
 #: ../auth-dialog/main.c:1556
 msgid "VPN host"
 msgstr "VPN-Rechner"
 
 #: ../auth-dialog/main.c:1567
-#, fuzzy
 msgid "C_onnect"
-msgstr "Mit einem VPN verbinden"
+msgstr "_Verbinden"
 
 #: ../auth-dialog/main.c:1574
 msgid "Automatically start connecting next time"
@@ -77,7 +77,7 @@ msgstr "_Anmelden"
 
 #: ../auth-dialog/main.c:1614
 msgid "_Cancel"
-msgstr ""
+msgstr "_Abbrechen"
 
 #: ../auth-dialog/main.c:1620
 msgid "Save passwords"
