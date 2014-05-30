@@ -98,20 +98,20 @@ typedef struct {
 /************** import/export **************/
 
 typedef enum {
-	NM_OPENCONNECT_IMPORT_ERROR_UNKNOWN = 0,
-	NM_OPENCONNECT_IMPORT_ERROR_NOT_OPENCONNECT,
-	NM_OPENCONNECT_IMPORT_ERROR_BAD_DATA,
+	NM_OPENCONNECT_IMPORT_EXPORT_ERROR_UNKNOWN = 0,
+	NM_OPENCONNECT_IMPORT_EXPORT_ERROR_NOT_OPENCONNECT,
+	NM_OPENCONNECT_IMPORT_EXPORT_ERROR_BAD_DATA,
 } NMOpenconnectImportError;
 
-#define NM_OPENCONNECT_IMPORT_ERROR nm_openconnect_import_error_quark ()
+#define NM_OPENCONNECT_IMPORT_EXPORT_ERROR nm_openconnect_import_export_error_quark ()
 
 static GQuark
-nm_openconnect_import_error_quark (void)
+nm_openconnect_import_export_error_quark (void)
 {
 	static GQuark quark = 0;
 
 	if (G_UNLIKELY (quark == 0))
-		quark = g_quark_from_static_string ("nm-openconnect-import-error-quark");
+		quark = g_quark_from_static_string ("nm-openconnect-import-export-error-quark");
 	return quark;
 }
 
@@ -132,8 +132,8 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 
 	if (!g_key_file_load_from_file (keyfile, path, flags, NULL)) {
 		g_set_error (error,
-		             NM_OPENCONNECT_IMPORT_ERROR,
-		             NM_OPENCONNECT_IMPORT_ERROR_NOT_OPENCONNECT,
+		             NM_OPENCONNECT_IMPORT_EXPORT_ERROR,
+		             NM_OPENCONNECT_IMPORT_EXPORT_ERROR_NOT_OPENCONNECT,
 		             "does not look like a %s VPN connection (parse failed)",
 		             OPENCONNECT_PLUGIN_NAME);
 		return NULL;
@@ -156,8 +156,8 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY, buf);
 	} else {
 		g_set_error (error,
-		             NM_OPENCONNECT_IMPORT_ERROR,
-		             NM_OPENCONNECT_IMPORT_ERROR_BAD_DATA,
+		             NM_OPENCONNECT_IMPORT_EXPORT_ERROR,
+		             NM_OPENCONNECT_IMPORT_EXPORT_ERROR_BAD_DATA,
 		             "does not look like a %s VPN connection (no Host)",
 		             OPENCONNECT_PLUGIN_NAME);
 		g_object_unref (connection);
@@ -243,7 +243,10 @@ export (NMVpnPluginUiInterface *iface,
 
 	f = fopen (path, "w");
 	if (!f) {
-		g_set_error (error, 0, 0, "could not open file for writing");
+		g_set_error_literal (error,
+		                     NM_OPENCONNECT_IMPORT_EXPORT_ERROR,
+		                     NM_OPENCONNECT_IMPORT_EXPORT_ERROR_UNKNOWN,
+		                     "could not open file for writing");
 		return FALSE;
 	}
 
@@ -255,7 +258,10 @@ export (NMVpnPluginUiInterface *iface,
 	if (value && strlen (value))
 		gateway = value;
 	else {
-		g_set_error (error, 0, 0, "connection was incomplete (missing gateway)");
+		g_set_error_literal (error,
+		                     NM_OPENCONNECT_IMPORT_EXPORT_ERROR,
+		                     NM_OPENCONNECT_IMPORT_EXPORT_ERROR_BAD_DATA,
+		                     "connection was incomplete (missing gateway)");
 		goto done;
 	}
 
