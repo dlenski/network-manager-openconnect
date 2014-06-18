@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Jennie Petoumenou <epetoumenou@gmail.com>, 2008.
 # Michael Kotsarinis <mk73628@gmail.com>, 2011.
-# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2014.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD.el\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-02 11:23+0100\n"
-"PO-Revision-Date: 2014-02-11 10:52+0300\n"
-"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
-"Language-Team: team@lists.gnome.gr\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-06-13 09:56+0000\n"
+"PO-Revision-Date: 2014-06-18 13:17+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../auth-dialog/main.c:841
@@ -46,16 +47,15 @@ msgstr ""
 
 #: ../auth-dialog/main.c:1539
 msgid "_Close"
-msgstr ""
+msgstr "_Κλείσιμο"
 
 #: ../auth-dialog/main.c:1556
 msgid "VPN host"
-msgstr "Οικοδεσπότης VPN"
+msgstr "Κεντρικός υπολογιστής VPN"
 
 #: ../auth-dialog/main.c:1567
-#, fuzzy
 msgid "C_onnect"
-msgstr "Σύνδεση στο VPN"
+msgstr "_Σύνδεση"
 
 #: ../auth-dialog/main.c:1574
 msgid "Automatically start connecting next time"
@@ -63,19 +63,19 @@ msgstr "Αυτόματη έναρξη σύνδεσης την επόμενη φ�
 
 #: ../auth-dialog/main.c:1591
 msgid "Select a host to fetch the login form"
-msgstr "Επιλέξτε έναν οικοδεσπότη για τη προσκόμιση της μορφής σύνδεσης"
+msgstr "Επιλέξτε έναν κεντρικό υπολογιστή για την ανάκτηση της φόρμας εισόδου"
 
 #: ../auth-dialog/main.c:1596
 msgid "Contacting host, please wait..."
-msgstr "Επικοινωνία με τον οικοδεσπότη, παρακαλούμε περιμένετε..."
+msgstr "Επικοινωνία με τον κεντρικό υπολογιστή, παρακαλούμε περιμένετε..."
 
 #: ../auth-dialog/main.c:1608
 msgid "_Login"
-msgstr "_Σύνδεση"
+msgstr "Σύ_νδεση"
 
 #: ../auth-dialog/main.c:1614
 msgid "_Cancel"
-msgstr ""
+msgstr "_Ακύρωση"
 
 #: ../auth-dialog/main.c:1620
 msgid "Save passwords"
@@ -87,7 +87,7 @@ msgstr "Καταγραφή"
 
 #: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
-msgstr "Επιλέξτε πιστοποιητικό αρχής πιστοποίησης..."
+msgstr "Επιλέξτε ένα πιστοποιητικό της αρχής έκδοσης πιστοποιητικών..."
 
 #: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
@@ -107,7 +107,7 @@ msgstr "Συμβατό VPN με Cisco AnyConnect (openconnect)"
 
 #: ../properties/nm-openconnect.c:64
 msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Συμβατός με το Cisco AnyConnect SSL VPN."
+msgstr "Συμβατό με το Cisco AnyConnect SSL VPN."
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>General</b>"
@@ -123,11 +123,11 @@ msgstr "_Πύλη:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "_Proxy:"
-msgstr "_Μεσολαβητής:"
+msgstr "_Διαμεσολαβητής:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:5
 msgid "CA C_ertificate:"
-msgstr "_Πιστοποιητικό CA:"
+msgstr "Π_ιστοποιητικό CA:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Allow Cisco Secure Desktop _trojan"
@@ -135,11 +135,11 @@ msgstr "Να επιτρέπεται ο ασφαλής _δούρειος ίππο
 
 #: ../properties/nm-openconnect-dialog.ui.h:7
 msgid "CSD _Wrapper Script:"
-msgstr "Σενάριο CSD _προσαρμογέα:"
+msgstr "Δέσμη ενεργειών CSD _Wrapper:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:8
 msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Επικύρωση πιστοποιητικού</b>"
+msgstr "<b>Πιστοποίηση πιστοποιητικού</b>"
 
 #: ../properties/nm-openconnect-dialog.ui.h:9
 msgid "_User Certificate:"
@@ -151,7 +151,7 @@ msgstr "Ιδιωτικό _κλειδί:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:11
 msgid "Use _FSID for key passphrase"
-msgstr "Χρήση _FSID για το κλειδί του συνθηματικού"
+msgstr "Χρήση _FSID για το κλειδί της συνθηματικής φράσης"
 
 #: ../properties/nm-openconnect-dialog.ui.h:12
 msgid "<b>Software Token Authentication</b>"
@@ -159,15 +159,15 @@ msgstr "<b>Πιστοποίηση διακριτικού λογισμικού</b
 
 #: ../properties/nm-openconnect-dialog.ui.h:13
 msgid "Token _Mode:"
-msgstr "_Κατάσταση διακριτικού:"
+msgstr "_Λειτουργία διακριτικού:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:14
 msgid "Token Sec_ret:"
-msgstr "Μ_υστικό διακριτικό:"
+msgstr "_Μυστικό διακριτικού:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:15
 msgid "Disabled"
-msgstr "Ανενεργό"
+msgstr "Απενεργοποιημένο"
 
 #: ../properties/nm-openconnect-dialog.ui.h:16
 msgid "RSA SecurID - read from ~/.stokenrc"
@@ -189,17 +189,17 @@ msgstr "άκυρη ακέραια ιδιότητα '%s' ή εκτός ορίου
 #: ../src/nm-openconnect-service.c:161
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "άκυρη ιδιότητα τιμής Μπουλ '%s' (ούτε ναι, ούτε όχι)"
+msgstr "άκυρη ιδιότητα λογικής τιμής '%s' (ούτε ναι ούτε όχι)"
 
 #: ../src/nm-openconnect-service.c:168
 #, c-format
 msgid "unhandled property '%s' type %s"
-msgstr "ανυποστήρικτη ιδιότητα '%s' τύπου %s"
+msgstr "ανεπίλυτη ιδιότητα '%s' τύπου %s"
 
 #: ../src/nm-openconnect-service.c:181
 #, c-format
 msgid "property '%s' invalid or not supported"
-msgstr "άκυρη ή μη υποστηριζόμενη ιδιότητα '%s'"
+msgstr "άκυρη ή ανυποστήρικτη ιδιότητα '%s'"
 
 #: ../src/nm-openconnect-service.c:197
 msgid "No VPN configuration options."
@@ -211,15 +211,15 @@ msgstr "Δεν υπάρχουν μυστικά VPN!"
 
 #: ../src/nm-openconnect-service.c:383
 msgid "Could not find openconnect binary."
-msgstr "Αδύνατη η εύρεση του δυαδικού openconnect."
+msgstr "Αδύνατη η εύρεση του εκτελέσιμου openconnect."
 
 #: ../src/nm-openconnect-service.c:395
 msgid "No VPN gateway specified."
-msgstr "Δεν έχει ορισθεί πύλη VPN."
+msgstr "Δεν έχει ορισθεί η πύλη VPN."
 
 #: ../src/nm-openconnect-service.c:405
 msgid "No WebVPN cookie provided."
-msgstr "Δεν παρέχεται μπισκότο WebVPN."
+msgstr "Δεν παρέχεται cookie WebVPN."
 
 #: ../src/nm-openconnect-service.c:640
 msgid "Don't quit when VPN connection terminates"
@@ -242,24 +242,28 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l42
 #: ../openconnect-strings.txt:14
 #, c-format
+#| msgid "Failed to parse XML config file %s\n"
 msgid "Failed to open XML config file: %s\n"
 msgstr "Αποτυχία ανοίγματος του αρχείου ρυθμίσεων XML: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l49
 #: ../openconnect-strings.txt:17
-#, c-format
+#, fuzzy, c-format
+#| msgid "Failed to parse XML config file %s\n"
 msgid "Failed to fstat() XML config file: %s\n"
 msgstr "Αποτυχία του αρχείου ρυθμίσεων fstat() XML: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l57
 #: ../openconnect-strings.txt:20
 #, c-format
+#| msgid "Failed to parse XML config file %s\n"
 msgid "Failed to allocate %lu bytes for XML config file\n"
-msgstr "Αποτυχία κατανομής %lu ψηφιολέξεων για το αρχείο ρυθμίσεων XML\n"
+msgstr "Αποτυχία κατανομής %lu bytes για το αρχείο ρυθμίσεων XML\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l64
 #: ../openconnect-strings.txt:23
 #, c-format
+#| msgid "Failed to parse XML config file %s\n"
 msgid "Failed to read XML config file: %s\n"
 msgstr "Αποτυχία ανάγνωσης του αρχείου ρυθμίσεων XML: %s\n"
 
@@ -269,7 +273,8 @@ msgstr "Αποτυχία ανάγνωσης του αρχείου ρυθμίσε
 #, c-format
 msgid "Treating host \"%s\" as a raw hostname\n"
 msgstr ""
-"Αντιμετώπιση του οικοδεσπότη \"%s\" ως ακατέργαστου ονόματος οικοδεσπότη\n"
+"Αντιμετώπιση του κεντρικού υπολογιστή \"%s\" ως ακατέργαστου ονόματος "
+"κεντρικού υπολογιστή\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l103
 #: ../openconnect-strings.txt:30
@@ -292,21 +297,21 @@ msgstr "Αποτυχία ανάλυσης του αρχείου ρυθμίσεω
 #: ../openconnect-strings.txt:39
 #, c-format
 msgid "Host \"%s\" has address \"%s\"\n"
-msgstr "Ο οικοδεσπότης \"%s\" έχει διεύθυνση \"%s\"\n"
+msgstr "Ο κεντρικός υπολογιστής \"%s\" έχει διεύθυνση \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l164
 #: ../openconnect-strings.txt:42
 #, c-format
 msgid "Host \"%s\" has UserGroup \"%s\"\n"
-msgstr "Ο οικοδεσπότης \"%s\" έχει UserGroup \"%s\"\n"
+msgstr "Ο κεντρικός υπολογιστής \"%s\" έχει ΟμάδαΧρηστών \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/xml.c#l178
 #: ../openconnect-strings.txt:45
 #, c-format
 msgid "Host \"%s\" not listed in config; treating as raw hostname\n"
 msgstr ""
-"Ο οικοδεσπότης \"%s\" δεν αναφέρεται στις ρυθμίσεις· αντιμετωπίζεται ως "
-"ακατέργαστο όνομα οικοδεσπότη\n"
+"Ο κεντρικός υπολογιστής \"%s\" δεν αναφέρεται στις ρυθμίσεις· "
+"αντιμετωπίζεται ως ακατέργαστο όνομα κεντρικού υπολογιστή\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l243
 #: ../openconnect-strings.txt:48
@@ -320,17 +325,17 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l252
 #: ../openconnect-strings.txt:53
 msgid "Using OpenSSL. Features present:"
-msgstr "Χρήση του OpenSSL. Τα γνωρίσματα παρουσιάζουν:"
+msgstr "Χρήση του OpenSSL. Παρόντα χαρακτηριστικά:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l254
 #: ../openconnect-strings.txt:56
 msgid "Using GnuTLS. Features present:"
-msgstr "Χρήση του GnuTLS. Τα γνωρίσματα παρουσιάζουν:"
+msgstr "Χρήση του GnuTLS. Παρόντα χαρακτηριστικά:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l263
 #: ../openconnect-strings.txt:59
 msgid "OpenSSL ENGINE not present"
-msgstr "Το OpenSSL ENGINE δεν είναι παρόν"
+msgstr "Δεν είναι παρόν το OpenSSL ENGINE"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l287
 #: ../openconnect-strings.txt:62
@@ -344,18 +349,19 @@ msgid ""
 "WARNING: No DTLS support in this binary. Performance will be impaired.\n"
 msgstr ""
 "\n"
-"ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Χωρίς υποστήριξη DTLS σε αυτό το δυαδικό. Η απόδοση θα "
+"ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Χωρίς υποστήριξη DTLS σε αυτό το εκτελέσιμο. Η απόδοση θα "
 "εξασθενίσει.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l305
 #: ../openconnect-strings.txt:70
-#, c-format
+#, fuzzy, c-format
 msgid "Cannot process this executable path \"%s\""
-msgstr ""
+msgstr "Αδύνατη η επεξεργασία του μηνύματος: %s"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l311
 #: ../openconnect-strings.txt:73
 #, fuzzy
+#| msgid "Allocation of deflate buffer failed\n"
 msgid "Allocation for vpnc-script path failed\n"
 msgstr "Αποτυχία κατανομής ενδιάμεσης μνήμης συμπίεσης\n"
 
@@ -407,12 +413,12 @@ msgstr "Χρήση αρχείου ιδιωτικού κλειδιού SSL KEY"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l333
 #: ../openconnect-strings.txt:102
 msgid "Use WebVPN cookie COOKIE"
-msgstr "Χρήση μπισκότου WebVPN COOKIE"
+msgstr "Χρήση cookie WebVPN COOKIE"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l334
 #: ../openconnect-strings.txt:105
 msgid "Read cookie from standard input"
-msgstr "Ανάγνωση μπισκότου από την τυπική είσοδο"
+msgstr "Ανάγνωση cookie από την τυπική είσοδο"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l335
 #: ../openconnect-strings.txt:108
@@ -451,6 +457,7 @@ msgstr "Χρήση του syslog για μηνύματα προόδου"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l344
 #: ../openconnect-strings.txt:129
+#| msgid "Use syslog for progress messages"
 msgid "Prepend timestamp to progress messages"
 msgstr "Πρόταξη χρονικής σήμανσης σε μηνύματα προόδου"
 
@@ -467,7 +474,7 @@ msgstr "Απόρριψη προνομίων κατά τη διάρκεια εκ�
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l348
 #: ../openconnect-strings.txt:138
 msgid "Run SCRIPT instead of CSD binary"
-msgstr "Εκτέλεση SCRIPT αντί για δυαδικό CSD"
+msgstr "Εκτέλεση SCRIPT αντί για το εκτελέσιμο CSD"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l350
 #: ../openconnect-strings.txt:141
@@ -492,17 +499,17 @@ msgstr "Το συνθηματικό του κλειδιού είναι fsid το
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l354
 #: ../openconnect-strings.txt:153
 msgid "Set proxy server"
-msgstr "Ορισμός διακομιστή μεσολάβησης"
+msgstr "Ορισμός διακομιστή διαμεσολάβησης"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l355
 #: ../openconnect-strings.txt:156
 msgid "Disable proxy"
-msgstr "Απενεργοποίηση μεσολαβητή"
+msgstr "Απενεργοποίηση διαμεσολαβητή"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l356
 #: ../openconnect-strings.txt:159
 msgid "Use libproxy to automatically configure proxy"
-msgstr "Χρήση του libproxy για αυτόματη ρύθμιση του μεσολαβητή"
+msgstr "Χρήση του libproxy για αυτόματη ρύθμιση του διαμεσολαβητή"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l358
 #: ../openconnect-strings.txt:162
@@ -528,7 +535,8 @@ msgstr "Ορισμός ορίου ουράς πακέτου σε LEN πακέτ�
 #: ../openconnect-strings.txt:174
 msgid "Shell command line for using a vpnc-compatible config script"
 msgstr ""
-"Γραμμή εντολών κελύφους για χρήση ενός συμβατού με vpnc σεναρίου ρυθμίσεων"
+"Γραμμή εντολών κελύφους για χρήση μιας δέσμης ενεργειών ρυθμίσεων συμβατής "
+"με vpnc "
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l364
 #: ../openconnect-strings.txt:177
@@ -538,7 +546,7 @@ msgstr "προεπιλογή"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l366
 #: ../openconnect-strings.txt:180
 msgid "Pass traffic to 'script' program, not tun"
-msgstr "Πέρασμα κυκλοφορίας σε πρόγραμμα 'σεναρίου', όχι tun"
+msgstr "Διοχέτευση κυκλοφορίας σε πρόγραμμα 'δέσμης ενεργειών', όχι tun"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l368
 #: ../openconnect-strings.txt:183
@@ -557,6 +565,7 @@ msgstr "Περισσότερη έξοδος"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l371
 #: ../openconnect-strings.txt:192
+#, fuzzy
 msgid "Dump HTTP authentication traffic (implies --verbose"
 msgstr "Αποτύπωση κυκλοφορίας πιστοποίησης HTTP (υπονοεί --verbose"
 
@@ -578,12 +587,12 @@ msgstr "Πιστοποίηση μόνο και εκτύπωση πληροφορ
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l375
 #: ../openconnect-strings.txt:204
 msgid "Fetch webvpn cookie only; don't connect"
-msgstr "Προσκόμιση μόνο μπισκότου webvpn· όχι σύνδεση"
+msgstr "Προσκόμιση μόνο cookie webvpn· όχι σύνδεση"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l376
 #: ../openconnect-strings.txt:207
 msgid "Print webvpn cookie before connecting"
-msgstr "Εκτύπωση μπισκότου webvpn πριν την σύνδεση"
+msgstr "Εκτύπωση cookie webvpn πριν την σύνδεση"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l377
 #: ../openconnect-strings.txt:210
@@ -622,6 +631,7 @@ msgstr "Να μην απαιτείται πιστοποιητικό SSL διακ
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l384
 #: ../openconnect-strings.txt:231
+#, fuzzy
 msgid "Do not attempt XML POST authentication"
 msgstr "Να μην προσπαθείτε πιστοποίηση XML POST"
 
@@ -637,9 +647,8 @@ msgstr "Ανάγνωση κωδικού πρόσβασης από την τυπ�
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l387
 #: ../openconnect-strings.txt:240
-#, fuzzy
 msgid "Software token type: rsa, totp or hotp"
-msgstr "Τύπος διακριτικού λογισμικού: rsa ή totp"
+msgstr "Τύποι διακριτικού λογισμικού: rsa, totp ή hotp"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l388
 #: ../openconnect-strings.txt:243
@@ -648,15 +657,16 @@ msgstr "Μυστικό διακριτικό λογισμικού"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l390
 #: ../openconnect-strings.txt:246
+#| msgid "(NOTE: libstoken disabled in this build)"
 msgid "(NOTE: libstoken (RSA SecurID) disabled in this build)"
 msgstr ""
 "(ΣΗΜΕΙΩΣΗ: απενεργοποίηση του libstoken (RSA SecurID) σε αυτή τη δόμηση)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l393
 #: ../openconnect-strings.txt:249
-#, fuzzy
+#| msgid "(NOTE: libproxy disabled in this build)"
 msgid "(NOTE: liboath (TOTP,HOTP) disabled in this build)"
-msgstr "(ΣΗΜΕΙΩΣΗ: απενεργοποιήθηκε το liboath (TOTP) σε αυτή τη δόμηση)"
+msgstr "(ΣΗΜΕΙΩΣΗ: απενεργοποιήθηκε το liboath (TOTP,HOTP) σε αυτή τη δόμηση)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l395
 #: ../openconnect-strings.txt:252
@@ -675,8 +685,9 @@ msgstr "Κεφαλίδα HTTP μεσολαβητή χρήστη: πεδίο"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l398
 #: ../openconnect-strings.txt:261
+#| msgid "OS type (linux,linux-64,mac,win) to report"
 msgid "OS type (linux,linux-64,win,...) to report"
-msgstr "Τύπος λειτουργικού (Λίνουξ, λίνουξ-64, win,...) για αναφορά"
+msgstr "Τύπος λειτουργικού (linux, linux-64, mac, win,...) για αναφορά"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l399
 #: ../openconnect-strings.txt:264
@@ -695,6 +706,7 @@ msgstr "fgets (τυπική είσοδος)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l490
 #: ../openconnect-strings.txt:273
+#| msgid "Failed to allocate sockaddr storage\n"
 msgid "Failed to allocate string\n"
 msgstr "Αποτυχία κατανομής συμβολοσειράς\n"
 
@@ -771,7 +783,7 @@ msgstr ""
 #: ../openconnect-strings.txt:312
 #, c-format
 msgid "Invalid user \"%s\"\n"
-msgstr "Άκυρος χρήστης \"%s\"\n"
+msgstr "Άκυρος χρήστη \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l851
 #: ../openconnect-strings.txt:315
@@ -787,6 +799,7 @@ msgstr "Έκδοση OpenConnect %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l892
 #: ../openconnect-strings.txt:321
 #, c-format
+#| msgid "Invalid cookie offered: %s\n"
 msgid "Invalid software token mode \"%s\"\n"
 msgstr "Άκυρη κατάσταση διακριτικού λογισμικού \"%s\"\n"
 
@@ -794,7 +807,7 @@ msgstr "Άκυρη κατάσταση διακριτικού λογισμικο�
 #: ../openconnect-strings.txt:324
 #, c-format
 msgid "Invalid OS identity \"%s\"\n"
-msgstr "Άκυρη ταυτότητα λειτουργικού \"%s\"\n"
+msgstr "Άκυρο αναγνωριστικό λειτουργικού \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l923
 #: ../openconnect-strings.txt:327
@@ -819,7 +832,7 @@ msgstr "Σφάλμα κατά το άνοιγμα διοχέτευσης cmd\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1011
 #: ../openconnect-strings.txt:339
 msgid "Failed to obtain WebVPN cookie\n"
-msgstr "Αποτυχία λήψης μπισκότου WebVPN\n"
+msgstr "Αποτυχία λήψης cookie WebVPN\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1035
 #: ../openconnect-strings.txt:342
@@ -828,6 +841,7 @@ msgstr "Αποτυχία δημιουργίας σύνδεσης SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1045
 #: ../openconnect-strings.txt:345
+#| msgid "Set up tun device failed\n"
 msgid "Set up tun script failed\n"
 msgstr "Αποτυχία ρύθμισης δέσμης ενεργειών tun\n"
 
@@ -876,7 +890,7 @@ msgstr "Αποτυχία ανοίγματος του '%s' για εγγραφή:
 #: ../openconnect-strings.txt:370
 #, c-format
 msgid "Continuing in background; pid %d\n"
-msgstr "Συνέχιση στο παρασκήνιο, ταυτότητα διεργασίας (pid) %d\n"
+msgstr "Συνέχιση στο παρασκήνιο· αναγνωριστικό διεργασίας (pid) %d.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1125
 #: ../openconnect-strings.txt:373
@@ -936,6 +950,7 @@ msgstr "Δακτυλικό αποτύπωμα SHA1: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1286
 #: ../openconnect-strings.txt:402
 #, c-format
+#| msgid "Auth choice \"%s\" not valid\n"
 msgid "Auth choice \"%s\" matches multiple options\n"
 msgstr "Η επιλογή πιστοποίησης \"%s\" ταιριάζει με πολλαπλές επιλογές\n"
 
@@ -963,6 +978,7 @@ msgstr "Αδύνατο το άνοιγμα του αρχείου ~/.stokenrc\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1466
 #: ../openconnect-strings.txt:418
+#| msgid "OpenConnect was not built with soft token support\n"
 msgid "OpenConnect was not built with libstoken support\n"
 msgstr "Το OpenConnect δεν δομήθηκε με υποστήριξη libstoken\n"
 
@@ -973,13 +989,15 @@ msgstr "Γενική αποτυχία στο libstoken\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1484
 #: ../openconnect-strings.txt:424
+#| msgid "OpenConnect was not built with soft token support\n"
 msgid "OpenConnect was not built with liboath support\n"
 msgstr "Το OpenConnect δεν δομήθηκε με υποστήριξη liboath\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/main.c#l1487
 #: ../openconnect-strings.txt:427
+#| msgid "General failure in libstoken\n"
 msgid "General failure in liboath\n"
-msgstr "Γενική αποτυχία στο libstoken\n"
+msgstr "Γενική αποτυχία στο liboath\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/openssl.c#l103
 #: ../openconnect-strings.txt:430
@@ -1123,7 +1141,7 @@ msgstr "Αποτυχία φόρτωσης ιδιωτικού κλειδιού (�
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l916
 #: ../openconnect-strings.txt:516
 msgid "This binary built without PKCS#11 support\n"
-msgstr "Αυτό το δυαδικό δημιουργήθηκε χωρίς υποστήριξη PKCS#11\n"
+msgstr "Αυτό το εκτελέσιμο δημιουργήθηκε χωρίς υποστήριξη PKCS#11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/openssl.c#l651
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l990
@@ -1263,7 +1281,7 @@ msgstr "Συμφωνία ονόματος θέματος πιστοποιητι�
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l1791
 #: ../openconnect-strings.txt:591
 msgid "certificate does not match hostname"
-msgstr "Το πιστοποιητικό δεν ταιριάζει με το όνομα του οικοδεσπότη."
+msgstr "Το πιστοποιητικό δεν ταιριάζει με το όνομα του κεντρικού υπολογιστή"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/openssl.c#l1136
 #: ../openconnect-strings.txt:594
@@ -1351,8 +1369,9 @@ msgstr "Αποτυχία εγγραφής στην υποδοχή SSL: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l124
 #: ../openconnect-strings.txt:642
 #, fuzzy
+#| msgid "Socket connect cancelled\n"
 msgid "SSL socket closed uncleanly\n"
-msgstr "Ακύρωση σύνδεσης υποδοχής\n"
+msgstr "Αποτυχία εγγραφής στην υποδοχή SSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l128
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l183
@@ -1364,7 +1383,7 @@ msgstr "Αποτυχία ανάγνωσης από την υποδοχή SSL: %s
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l201
 #: ../openconnect-strings.txt:649
 msgid "Could not extract expiration time of certificate\n"
-msgstr "Αδύνατη η εξαγωγή χρόνου λήξης του πιστοποιητικού\n"
+msgstr "Αδυναμία εξαγωγής του χρόνου λήξης του πιστοποιητικού\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l275
 #: ../openconnect-strings.txt:652
@@ -1429,7 +1448,7 @@ msgstr "Αποτυχία ρύθμισης πιστοποιητικού PKCS#11: 
 #: ../openconnect-strings.txt:682
 #, c-format
 msgid "Could not initialise MD5 hash: %s\n"
-msgstr "Αδύνατη η αρχικοποίηση του κατακερματισμού MD5: %s\n"
+msgstr "Αδυναμία αρχικοποίησης του κατακερματισμού MD5: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l618
 #: ../openconnect-strings.txt:685
@@ -1457,6 +1476,7 @@ msgstr "Μη υποστηριζόμενος τύπος κρυπτογράφησ�
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l721
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l734
 #: ../openconnect-strings.txt:698
+#, fuzzy
 msgid "Invalid salt in encrypted PEM file\n"
 msgstr "Άκυρο αλάτι σε κρυπτογραφημένο αρχείο PEM\n"
 
@@ -1464,7 +1484,7 @@ msgstr "Άκυρο αλάτι σε κρυπτογραφημένο αρχείο P
 #: ../openconnect-strings.txt:701
 #, c-format
 msgid "Error base64-decoding encrypted PEM file: %s\n"
-msgstr "Σφάλμα κρυπτογραφημένου αρχείου PEM με αποκωδικοποίηση βάση64: %s\n"
+msgstr "Σφάλμα κρυπτογραφημένου αρχείου PEM με αποκωδικοποίηση base64: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l766
 #: ../openconnect-strings.txt:704
@@ -1616,6 +1636,8 @@ msgstr "Αποτυχία ορισμού λίστας ανάκλησης πιστ
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l1445
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l1455
 #: ../openconnect-strings.txt:781
+#, fuzzy
+#| msgid "Failed to allocate memory for supporting certificates\n"
 msgid "Failed to allocate memory for certificate\n"
 msgstr "Αποτυχία κατανομής μνήμης για πιστοποιητικό\n"
 
@@ -1629,7 +1651,7 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l1516
 #: ../openconnect-strings.txt:788
-#, c-format
+#, fuzzy, c-format
 msgid "Got next CA '%s' from PKCS11\n"
 msgstr "Ελήφθη επόμενο CA '%s' από το PKCS11\n"
 
@@ -1693,7 +1715,7 @@ msgstr "Το πιστοποιητικό δεν έχει ακόμη ενεργο�
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l1770
 #: ../openconnect-strings.txt:824
 msgid "certificate expired"
-msgstr "Το πιστοποιητικό έληξε"
+msgstr "το πιστοποιητικό έληξε"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l1775
 #: ../openconnect-strings.txt:827
@@ -1749,7 +1771,7 @@ msgstr "GnuTLS μη μοιραία επιστροφή κατά τη διάρκε
 #: ../openconnect-strings.txt:854
 #, c-format
 msgid "Renegotiated SSL on %s\n"
-msgstr ""
+msgstr "Διαπραγμάτευση SSL με %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls.c#l2214
 #: ../openconnect-strings.txt:857
@@ -1787,7 +1809,7 @@ msgstr "Αποτυχία δεδομένων εισαγωγής στο SHA1 γι�
 #: ../openconnect-strings.txt:875
 #, c-format
 msgid "TPM sign function called for %d bytes.\n"
-msgstr "Η συνάρτηση υπογραφής κάλεσε %d οκτάδες.\n"
+msgstr "Η συνάρτηση υπογραφής κάλεσε %d bytes.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/gnutls_tpm.c#l111
 #: ../openconnect-strings.txt:878
@@ -1888,43 +1910,43 @@ msgstr "Αποτυχία ορισμού PIN κλειδιού: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l81
 #: ../openconnect-strings.txt:928
 msgid "Socket connect cancelled\n"
-msgstr "Ακύρωση σύνδεσης υποδοχής\n"
+msgstr "Ακυρώθηκε η σύνδεση υποδοχής\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l130
 #: ../openconnect-strings.txt:931
 #, c-format
 msgid "Failed to reconnect to proxy %s\n"
-msgstr "Αποτυχία επανασύνδεσης στον μεσολαβητή %s\n"
+msgstr "Αποτυχία επανασύνδεσης στον διαμεσολαβητή %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l134
 #: ../openconnect-strings.txt:934
 #, c-format
 msgid "Failed to reconnect to host %s\n"
-msgstr "Αποτυχία επανασύνδεσης στον οικοδεσπότη %s\n"
+msgstr "Αποτυχία επανασύνδεσης στον κεντρικό υπολογιστή %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l197
 #: ../openconnect-strings.txt:937
 #, c-format
 msgid "Proxy from libproxy: %s://%s:%d/\n"
-msgstr "Μεσολαβητής από libproxy: %s://%s:%d/\n"
+msgstr "Διαμεσολαβητής από libproxy: %s://%s:%d/\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l226
 #: ../openconnect-strings.txt:940
 #, c-format
 msgid "getaddrinfo failed for host '%s': %s\n"
-msgstr "Αποτυχία getaddrinfo για οικοδεσπότη '%s': %s\n"
+msgstr "Αποτυχία getaddrinfo για κεντρικό υπολογιστή '%s': %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l242
 #: ../openconnect-strings.txt:943
 #, c-format
 msgid "Attempting to connect to proxy %s%s%s:%s\n"
-msgstr "Προσπάθεια σύνδεσης στον μεσολαβητή %s%s%s:%s\n"
+msgstr "Προσπάθεια σύνδεσης στον διαμεσολαβητή %s%s%s:%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l243
 #: ../openconnect-strings.txt:946
 #, c-format
 msgid "Attempting to connect to server %s%s%s:%s\n"
-msgstr "Προσπάθεια σύνδεσης στον μεσολαβητή %s%s%s:%s\n"
+msgstr "Προσπάθεια σύνδεσης στον διακομιστή %s%s%s:%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l260
 #: ../openconnect-strings.txt:949
@@ -1935,7 +1957,7 @@ msgstr "Αποτυχία κατανομής αποθήκευσης sockaddr\n"
 #: ../openconnect-strings.txt:952
 #, c-format
 msgid "Failed to connect to host %s\n"
-msgstr "Αποτυχία σύνδεσης με τον οικοδεσπότη %s\n"
+msgstr "Αποτυχία σύνδεσης με τον κεντρικό υπολογιστή %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l364
 #: ../openconnect-strings.txt:955
@@ -1957,7 +1979,7 @@ msgstr "Χωρίς σφάλμα"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l488
 #: ../openconnect-strings.txt:964
 msgid "Keystore locked"
-msgstr "Η αποθήκη κλειδιών κλειδώθηκε"
+msgstr "Κλείδωμα της αποθήκης κλειδιών"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l489
 #: ../openconnect-strings.txt:967
@@ -1997,7 +2019,7 @@ msgstr "Αόριστη ενέργεια"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l499
 #: ../openconnect-strings.txt:988
 msgid "Wrong password"
-msgstr "Εσφαλμένος κωδικός πρόσβασης"
+msgstr "Λάθος κωδικός πρόσβασης"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/ssl.c#l500
 #: ../openconnect-strings.txt:991
@@ -2007,7 +2029,7 @@ msgstr "Άγνωστο σφάλμα"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l138
 #: ../openconnect-strings.txt:994
 msgid "No memory for allocating cookies\n"
-msgstr "Χωρίς μνήμη για κατανομή μπισκότων\n"
+msgstr "Χωρίς μνήμη για κατανομή cookie\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l193
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l228
@@ -2042,7 +2064,7 @@ msgstr "Παράβλεψη άγνωστης γραμμής απάντησης HT
 #: ../openconnect-strings.txt:1013
 #, c-format
 msgid "Invalid cookie offered: %s\n"
-msgstr "Προσφορά άκυρου μπισκότου: %s\n"
+msgstr "Προσφορά άκυρου cookie: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l253
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l312
@@ -2116,11 +2138,11 @@ msgstr "Αποτυχία αποστολής αιτήματος GET για νέα
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l514
 #: ../openconnect-strings.txt:1056
 msgid "Downloaded config file did not match intended SHA1\n"
-msgstr ""
-"Το μεταφορτωμένο αρχείο ρυθμίσεων δεν ταιριάζει με το προοριζόμενο SHA1\n"
+msgstr "Το ληφθέντο αρχείο ρυθμίσεων δεν ταιριάζει με το προοριζόμενο SHA1\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l528
 #: ../openconnect-strings.txt:1059
+#, fuzzy
 msgid ""
 "Error: Running the 'Cisco Secure Desktop' trojan on Windows is not yet "
 "implemented.\n"
@@ -2134,7 +2156,8 @@ msgid ""
 "Error: Server asked us to run CSD hostscan.\n"
 "You need to provide a suitable --csd-wrapper argument.\n"
 msgstr ""
-"Σφάλμα: Ο διακομιστής ζήτησε την εκτέλεση της σάρωσης οικοδεσπότη CSD.\n"
+"Σφάλμα: Ο διακομιστής ζήτησε την εκτέλεση της σάρωσης κεντρικού υπολογιστή "
+"CSD.\n"
 "Χρειάζεται να δώσετε ένα κατάλληλο όρισμα --csd-wrapper.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l543
@@ -2144,7 +2167,7 @@ msgid ""
 "This facility is disabled by default for security reasons, so you may wish "
 "to enable it.\n"
 msgstr ""
-"Σφάλμα: Ο διακομιστής ζήτησε τη μεταφόρτωση και εκτέλεση ενός δούρειου ίππου "
+"Σφάλμα: Ο διακομιστής ζήτησε τη λήψη και εκτέλεση ενός δούρειου ίππου "
 "'ασφαλούς επιφάνειας εργασίας Cisco'.\n"
 "Αυτή η διευκόλυνση είναι ανενεργή από προεπιλογή για λόγους ασφάλειας, έτσι "
 "μπορεί να θέλετε να την ενεργοποιήσετε.\n"
@@ -2152,19 +2175,19 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l550
 #: ../openconnect-strings.txt:1075
 msgid "Trying to run Linux CSD trojan script.\n"
-msgstr "Προσπάθεια εκτέλεσης σεναρίου δούρειου ίππου CSD Λίνουξ.\n"
+msgstr "Προσπάθεια εκτέλεσης δέσμης ενεργειών δούρειου ίππου CSD Linux.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l561
 #: ../openconnect-strings.txt:1078
 #, c-format
 msgid "Failed to open temporary CSD script file: %s\n"
-msgstr "Αποτυχία ανοίγματος προσωρινού αρχείου σεναρίου CSD: %s\n"
+msgstr "Αποτυχία ανοίγματος προσωρινού αρχείου δέσμης ενεργειών CSD: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l570
 #: ../openconnect-strings.txt:1081
 #, c-format
 msgid "Failed to write temporary CSD script file: %s\n"
-msgstr "Αποτυχία εγγραφής προσωρινού αρχείου σεναρίου CSD: %s\n"
+msgstr "Αποτυχία εγγραφής προσωρινού αρχείου δέσμης ενεργειών CSD: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l593
 #: ../openconnect-strings.txt:1084
@@ -2191,7 +2214,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1095
 #, c-format
 msgid "Failed to exec CSD script %s\n"
-msgstr "Αποτυχία εκτέλεσης σεναρίου CSD %s\n"
+msgstr "Αποτυχία εκτέλεσης δέσμης ενεργειών CSD %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l764
 #: ../openconnect-strings.txt:1098
@@ -2224,11 +2247,14 @@ msgstr "Άγνωστη απάντηση από διακομιστή\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1114
 #: ../openconnect-strings.txt:1113
+#, fuzzy
 msgid "Server requested SSL client certificate after one was provided\n"
 msgstr "Ο διακομιστής ζήτησε πιστοποιητικό πελάτη SSL μετά την παροχή ενός\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1118
 #: ../openconnect-strings.txt:1116
+#, fuzzy
+#| msgid "Server presented no certificate\n"
 msgid "Server requested SSL client certificate; none was configured\n"
 msgstr "Ο διακομιστής ζήτησε πιστοποιητικό πελάτη SSL· κανένα δεν ρυθμίστηκε\n"
 
@@ -2266,12 +2292,12 @@ msgstr "Απροσπέλαστο δίκτυο"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1388
 #: ../openconnect-strings.txt:1137
 msgid "host unreachable"
-msgstr "Απροσπέλαστος οικοδεσπότης"
+msgstr "Απροσπέλαστος κεντρικός υπολογιστής"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1389
 #: ../openconnect-strings.txt:1140
 msgid "connection refused by destination host"
-msgstr "Άρνηση σύνδεσης από τον οικοδεσπότη προορισμού"
+msgstr "Άρνηση σύνδεσης από τον κεντρικό υπολογιστή προορισμού"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1390
 #: ../openconnect-strings.txt:1143
@@ -2293,45 +2319,47 @@ msgstr "Δεν υποστηρίζεται αυτός ο τύπος διεύθυ�
 #, c-format
 msgid "Error writing auth request to SOCKS proxy: %s\n"
 msgstr ""
-"Σφάλμα κατά την εγγραφή αιτήματος πιστοποίησης σε μεσολαβητή SOCKS: %s\n"
+"Σφάλμα κατά την εγγραφή αιτήματος πιστοποίησης σε διαμεσολαβητή SOCKS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1413
 #: ../openconnect-strings.txt:1155
 #, c-format
 msgid "Error reading auth response from SOCKS proxy: %s\n"
 msgstr ""
-"Σφάλμα κατά την ανάγνωση απάντησης πιστοποίησης από τον μεσολαβητή SOCKS: "
+"Σφάλμα κατά την ανάγνωση απάντησης πιστοποίησης από τον διαμεσολαβητή SOCKS: "
 "%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1419
 #: ../openconnect-strings.txt:1158
 #, c-format
 msgid "Unexpected auth response from SOCKS proxy: %02x %02x\n"
-msgstr "Αναπάντεχη απάντηση πιστοποίησης από τον μεσολαβητή SOCKS: %02x %02x\n"
+msgstr ""
+"Αναπάντεχη απάντηση πιστοποίησης από τον διαμεσολαβητή SOCKS: %02x %02x\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1427
 #: ../openconnect-strings.txt:1161
 #, c-format
 msgid "SOCKS proxy error %02x: %s\n"
-msgstr "Σφάλμα μεσολαβητή SOCKS %02x: %s\n"
+msgstr "Σφάλμα διαμεσολαβητή SOCKS %02x: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1431
 #: ../openconnect-strings.txt:1164
 #, c-format
 msgid "SOCKS proxy error %02x\n"
-msgstr "Σφάλμα μεσολαβητή SOCKS %02x\n"
+msgstr "Σφάλμα διαμεσολαβητή SOCKS %02x\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1437
 #: ../openconnect-strings.txt:1167
 #, c-format
 msgid "Requesting SOCKS proxy connection to %s:%d\n"
-msgstr "Αίτημα σύνδεσης μεσολαβητή SOCKS στο %s:%d\n"
+msgstr "Αίτημα σύνδεσης διαμεσολαβητή SOCKS στο %s:%d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1452
 #: ../openconnect-strings.txt:1170
 #, c-format
 msgid "Error writing connect request to SOCKS proxy: %s\n"
-msgstr "Σφάλμα κατά την εγγραφή αιτήματος σύνδεσης σε μεσολαβητή SOCKS: %s\n"
+msgstr ""
+"Σφάλμα κατά την εγγραφή αιτήματος σύνδεσης σε διαμεσολαβητή SOCKS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1460
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1493
@@ -2339,13 +2367,14 @@ msgstr "Σφάλμα κατά την εγγραφή αιτήματος σύνδ�
 #, c-format
 msgid "Error reading connect response from SOCKS proxy: %s\n"
 msgstr ""
-"Σφάλμα κατά την ανάγνωση απάντησης σύνδεσης από τον μεσολαβητή SOCKS: %s\n"
+"Σφάλμα κατά την ανάγνωση απάντησης σύνδεσης από τον διαμεσολαβητή SOCKS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1466
 #: ../openconnect-strings.txt:1177
 #, c-format
 msgid "Unexpected connect response from SOCKS proxy: %02x %02x...\n"
-msgstr "Αναπάντεχη απάντηση σύνδεσης από τον μεσολαβητή SOCKS: %02x %02x...\n"
+msgstr ""
+"Αναπάντεχη απάντηση σύνδεσης από τον διαμεσολαβητή SOCKS: %02x %02x...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1486
 #: ../openconnect-strings.txt:1180
@@ -2357,35 +2386,35 @@ msgstr "Αναπάντεχος τύπος διεύθυνσης %02x σε απά�
 #: ../openconnect-strings.txt:1183
 #, c-format
 msgid "Requesting HTTP proxy connection to %s:%d\n"
-msgstr "Αίτημα σύνδεσης μεσολαβητή HTTP στο %s:%d\n"
+msgstr "Αίτημα σύνδεσης διαμεσολαβητή HTTP στο %s:%d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1527
 #: ../openconnect-strings.txt:1186
 #, c-format
 msgid "Sending proxy request failed: %s\n"
-msgstr "Αποτυχία αιτήματος αποστολής μεσολαβητή: %s\n"
+msgstr "Αποτυχία αιτήματος αποστολής διαμεσολαβητή: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1534
 #: ../openconnect-strings.txt:1189
 msgid "Error fetching proxy response\n"
-msgstr "Σφάλμα κατά την προσκόμιση απάντησης μεσολαβητή\n"
+msgstr "Σφάλμα κατά την προσκόμιση απάντησης διαμεσολαβητή\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1541
 #: ../openconnect-strings.txt:1192
 #, c-format
 msgid "Failed to parse proxy response '%s'\n"
-msgstr "Αποτυχία ανάλυσης απάντησης μεσολαβητή '%s'\n"
+msgstr "Αποτυχία ανάλυσης απάντησης διαμεσολαβητή '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1547
 #: ../openconnect-strings.txt:1195
 #, c-format
 msgid "Proxy CONNECT request failed: %s\n"
-msgstr "Αποτυχία αιτήματος CONNECT μεσολαβητή: %s\n"
+msgstr "Αποτυχία αιτήματος CONNECT διαμεσολαβητή: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1554
 #: ../openconnect-strings.txt:1198
 msgid "Failed to read proxy response\n"
-msgstr "Αποτυχία ανάγνωσης απάντησης μεσολαβητή\n"
+msgstr "Αποτυχία ανάγνωσης απάντησης διαμεσολαβητή\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1558
 #: ../openconnect-strings.txt:1201
@@ -2397,17 +2426,17 @@ msgstr "Αναπάντεχη γραμμή συνέχισης μετά την α�
 #: ../openconnect-strings.txt:1204
 #, c-format
 msgid "Unknown proxy type '%s'\n"
-msgstr "Άγνωστος τύπος μεσολαβητή '%s'\n"
+msgstr "Άγνωστος τύπος διαμεσολαβητή '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/http.c#l1602
 #: ../openconnect-strings.txt:1207
 msgid "Only http or socks(5) proxies supported\n"
-msgstr "Υποστηρίζονται μόνο μεσολαβητές http ή socks(5)\n"
+msgstr "Υποστηρίζονται μόνο διαμεσολαβητές http ή socks(5)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l159
 #: ../openconnect-strings.txt:1210
 msgid "Form choice has no name\n"
-msgstr "Η επιλογή μορφής δεν έχει κανένα όνομα\n"
+msgstr "Η φόρμα δεν έχει κανένα όνομα\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l244
 #: ../openconnect-strings.txt:1213
@@ -2418,24 +2447,24 @@ msgstr "Χωρίς όνομα %s στην είσοδο\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l251
 #: ../openconnect-strings.txt:1216
 msgid "No input type in form\n"
-msgstr "Χωρίς τύπο εισόδου στη μορφή\n"
+msgstr "Χωρίς τύπο εισόδου στη φόρμα\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l263
 #: ../openconnect-strings.txt:1219
 msgid "No input name in form\n"
-msgstr "Χωρίς όνομα εισόδου στη μορφή\n"
+msgstr "Χωρίς όνομα εισόδου στη φόρμα\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l295
 #: ../openconnect-strings.txt:1222
 #, c-format
 msgid "Unknown input type %s in form\n"
-msgstr "Άγνωστος τύπος εισόδου %s στη μορφή\n"
+msgstr "Άγνωστος τύπος εισόδου %s στη φόρμα\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l490
 #: ../openconnect-strings.txt:1225
 #, c-format
 msgid "Cannot handle form method='%s', action='%s'\n"
-msgstr "Αδύνατος ο χειρισμός μεθόδου μορφής='%s', ενέργεια='%s'\n"
+msgstr "Αδύνατος ο χειρισμός της φόρμας μεθόδου='%s', ενέργεια='%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l559
 #: ../openconnect-strings.txt:1228
@@ -2455,6 +2484,7 @@ msgstr "Η απάντηση ήταν:%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l594
 #: ../openconnect-strings.txt:1237
+#, fuzzy
 msgid "Received <client-cert-request> when not expected.\n"
 msgstr "Λήψη <client-cert-request>, ενώ δεν αναμενόταν.\n"
 
@@ -2550,31 +2580,35 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l1242
 #: ../openconnect-strings.txt:1295
+#| msgid "Generating tokencode\n"
 msgid "Generating RSA token code\n"
 msgstr "Δημιουργείται κώδικας διακριτικού RSA\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l1270
 #: ../openconnect-strings.txt:1298
+#| msgid "Generating tokencode\n"
 msgid "Generating OATH TOTP token code\n"
-msgstr "Δημιουργείται κώδικας διακριτικού TOTP OATH\n"
+msgstr "Δημιουργείται κώδικας διακριτικού OATH TOTP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l1280
 #: ../openconnect-strings.txt:1301
 #, c-format
+#| msgid "OK to generate NEXT tokencode\n"
 msgid "Unable to generate OATH TOTP token code: %s\n"
-msgstr "Αδύνατη η δημιουργία κώδικα διακριτικού TOTP OATH: %s\n"
+msgstr "Αδύνατη η δημιουργία κώδικα διακριτικού OATH TOTP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l1301
 #: ../openconnect-strings.txt:1304
-#, fuzzy
+#| msgid "Generating tokencode\n"
 msgid "Generating OATH HOTP token code\n"
-msgstr "Δημιουργείται κώδικας διακριτικού TOTP OATH\n"
+msgstr "Δημιουργείται κώδικας διακριτικού OATH HOTP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/auth.c#l1310
 #: ../openconnect-strings.txt:1307
-#, fuzzy, c-format
+#, c-format
+#| msgid "OK to generate NEXT tokencode\n"
 msgid "Unable to generate OATH HOTP token code: %s\n"
-msgstr "Αδύνατη η δημιουργία κώδικα διακριτικού TOTP OATH: %s\n"
+msgstr "Αδύνατη η δημιουργία κώδικα διακριτικού OATH HOTP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/library.c#l355
 #: ../openconnect-strings.txt:1310
@@ -2630,6 +2664,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l215
 #: ../openconnect-strings.txt:1338
 #, c-format
+#| msgid "Established DTLS connection (using OpenSSL)\n"
 msgid "Established DTLS connection (using OpenSSL). Ciphersuite %s.\n"
 msgstr "Επίτευξη σύνδεσης DTLS (με χρήση του OpenSSL). Ciphersuite %s.\n"
 
@@ -2689,6 +2724,7 @@ msgstr "Αποτυχία ορισμού DTLS MTU: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l428
 #: ../openconnect-strings.txt:1369
 #, c-format
+#| msgid "Established DTLS connection (using GnuTLS)\n"
 msgid "Established DTLS connection (using GnuTLS). Ciphersuite %s.\n"
 msgstr "Επίτευξη σύνδεσης DTLS (με χρήση του GnuTLS). Ciphersuite %s.\n"
 
@@ -2716,7 +2752,7 @@ msgstr "Ο διακομιστής δεν προσέφερε επιλογή κρ�
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l487
 #: ../openconnect-strings.txt:1384
 msgid "No DTLS when connected via proxy\n"
-msgstr "Χωρίς DTLS κατά τη σύνδεση μέσα από μεσολαβητή\n"
+msgstr "Χωρίς DTLS κατά τη σύνδεση μέσα από διαμεσολαβητή\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l494
 #: ../openconnect-strings.txt:1387
@@ -2733,7 +2769,7 @@ msgstr "Άγνωστη οικογένεια πρωτοκόλλου %d. Αδύν�
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l533
 #: ../openconnect-strings.txt:1394
 msgid "Bind UDP socket for DTLS"
-msgstr "Άνοιγμα υποδοχής UDP για DTLS"
+msgstr "Συσχέτιση υποδοχής UDP για DTLS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l540
 #: ../openconnect-strings.txt:1397
@@ -2761,7 +2797,7 @@ msgstr "Προσπάθεια νέας σύνδεσης DTLS\n"
 #: ../openconnect-strings.txt:1409
 #, c-format
 msgid "Received DTLS packet 0x%02x of %d bytes\n"
-msgstr "Ελήφθη πακέτο DTLS 0x%02x από %d οκτάδες\n"
+msgstr "Ελήφθη πακέτο DTLS 0x%02x από %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l728
 #: ../openconnect-strings.txt:1412
@@ -2797,8 +2833,9 @@ msgstr "Αναμενόμενη αλλαγή κλειδιού DTLS\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l775
 #: ../openconnect-strings.txt:1430
 #, fuzzy
+#| msgid "DTLS handshake failed: %d\n"
 msgid "DTLS Rehandshake failed; reconnecting.\n"
-msgstr "Αποτυχία χειραψίας DTLS: %d\n"
+msgstr "Αποτυχία αλλαγής κλειδιού DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l784
 #: ../openconnect-strings.txt:1433
@@ -2842,7 +2879,7 @@ msgstr "Το DTLS έλαβε σφάλμα εγγραφής %s. Υποχώρησ�
 #: ../openconnect-strings.txt:1454
 #, c-format
 msgid "Sent DTLS packet of %d bytes; DTLS send returned %d\n"
-msgstr "Αποστολή πακέτου DTLS από %d οκτάδες· η αποστολή DTLS επέστρεψε %d\n"
+msgstr "Αποστολή πακέτου DTLS από %d bytes· η αποστολή DTLS επέστρεψε %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/dtls.c#l892
 #: ../openconnect-strings.txt:1457
@@ -2953,7 +2990,7 @@ msgstr "Αποτυχία κατανομής ενδιάμεσης μνήμης σ
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l578
 #: ../openconnect-strings.txt:1512
 msgid "Cookie is no longer valid, ending session\n"
-msgstr "Το μπισκότο δεν είναι πια έγκυρο, τερματισμός συνεδρίας\n"
+msgstr "Το cookie δεν είναι πια έγκυρο, τερματισμός συνεδρίας\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l582
 #: ../openconnect-strings.txt:1515
@@ -2970,7 +3007,7 @@ msgstr "Αποτυχία αποσυμπίεσης\n"
 #: ../openconnect-strings.txt:1521
 #, c-format
 msgid "Received compressed data packet of %ld bytes\n"
-msgstr "Λήψη πακέτου συμπιεσμένων δεδομένων από %ld οκτάδες\n"
+msgstr "Λήψη πακέτου συμπιεσμένων δεδομένων από %ld bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l653
 #: ../openconnect-strings.txt:1524
@@ -3024,7 +3061,7 @@ msgstr "Λήψη διατήρησης σύνδεσης του CSTP\n"
 #: ../openconnect-strings.txt:1548
 #, c-format
 msgid "Received uncompressed data packet of %d bytes\n"
-msgstr "Λήψη πακέτου ασυμπίεστων δεδομένων από %d οκτάδες\n"
+msgstr "Λήψη πακέτου ασυμπίεστων δεδομένων από %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l791
 #: ../openconnect-strings.txt:1551
@@ -3052,7 +3089,7 @@ msgstr "Άγνωστο πακέτο %02x %02x %02x %02x %02x %02x %02x %02x\n"
 #: ../openconnect-strings.txt:1563
 #, c-format
 msgid "SSL wrote too few bytes! Asked for %d, sent %d\n"
-msgstr "Το SSL έγραψε υπερβολικά λίγες οκτάδες! Ζητήθηκαν %d, στάλθηκαν %d\n"
+msgstr "Το SSL έγραψε υπερβολικά λίγες bytes! Ζητήθηκαν %d, στάλθηκαν %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l884
 #: ../openconnect-strings.txt:1566
@@ -3094,13 +3131,13 @@ msgstr "Αποτυχία συμπίεσης %d\n"
 #: ../openconnect-strings.txt:1587
 #, c-format
 msgid "Sending compressed data packet of %d bytes\n"
-msgstr "Αποστολή πακέτου συμπιεσμένων δεδομένων από %d οκτάδες\n"
+msgstr "Αποστολή πακέτου συμπιεσμένων δεδομένων από %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l992
 #: ../openconnect-strings.txt:1590
 #, c-format
 msgid "Sending uncompressed data packet of %d bytes\n"
-msgstr "Αποστολή πακέτου ασυμπίεστων δεδομένων από %d οκτάδες\n"
+msgstr "Αποστολή πακέτου ασυμπίεστων δεδομένων από %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/cstp.c#l1032
 #: ../openconnect-strings.txt:1593
@@ -3117,7 +3154,7 @@ msgstr "Ο καλών διέκοψε τη σύνδεση\n"
 #: ../openconnect-strings.txt:1599
 #, c-format
 msgid "No work to do; sleeping for %d ms...\n"
-msgstr "Χωρίς εργασία· ύπνος για %d ms...\n"
+msgstr "Χωρίς εργασία· αναμονή για %d ms...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/mainloop.c#l203
 #: ../openconnect-strings.txt:1602
@@ -3142,19 +3179,19 @@ msgstr "Απόρριψη εσφαλμένης διαίρεσης αποκλει�
 #: ../openconnect-strings.txt:1612
 #, c-format
 msgid "Failed to spawn script '%s' for %s: %s\n"
-msgstr "Αποτυχία παραγωγής σεναρίου '%s' για το %s: %s\n"
+msgstr "Αποτυχία παραγωγής δέσμης ενεργειών '%s' για το %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/script.c#l338
 #: ../openconnect-strings.txt:1615
 #, c-format
 msgid "Script '%s' exited abnormally (%x)\n"
-msgstr "Το σενάριο '%s' εξήλθε ανώμαλα (%x)\n"
+msgstr "H δέσμη ενεργειών '%s' εξήλθε ανώμαλα (%x)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/script.c#l347
 #: ../openconnect-strings.txt:1618
 #, c-format
 msgid "Script '%s' returned error %d\n"
-msgstr "Το σενάριο '%s' επέστρεψε σφάλμα %d\n"
+msgstr "H δέσμη ενεργειών '%s' επέστρεψε σφάλμα %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun.c#l81
 #: ../openconnect-strings.txt:1621
@@ -3198,7 +3235,7 @@ msgstr "Αδύνατη η σωλήνωση του %s για IPv%d: %s\n"
 #: ../openconnect-strings.txt:1643
 #, c-format
 msgid "Failed to open tun device: %s\n"
-msgstr "Αποτυχία ανοίγματος συσκευής tun: %s\n"
+msgstr "Αποτυχία ανοίγματος της συσκευής tun: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun.c#l209
 #: ../openconnect-strings.txt:1646
@@ -3243,12 +3280,14 @@ msgstr "TUNSIFHEAD"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun.c#l358
 #: ../openconnect-strings.txt:1667
 #, c-format
+#| msgid "SSL send failed: %s\n"
 msgid "socketpair failed: %s\n"
 msgstr "Αποτυχία του socketpair: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun.c#l363
 #: ../openconnect-strings.txt:1670
 #, c-format
+#| msgid "SSL send failed: %s\n"
 msgid "fork failed: %s\n"
 msgstr "Αποτυχία διακλάδωσης: %s\n"
 
@@ -3265,7 +3304,7 @@ msgstr "execl"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun.c#l376
 #: ../openconnect-strings.txt:1679
 msgid "(script)"
-msgstr "(σενάριο)"
+msgstr "(δέσμη ενεργειών )"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun.c#l419
 #: ../openconnect-strings.txt:1682
@@ -3293,23 +3332,26 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l128
 #: ../openconnect-strings.txt:1694
 msgid "No Windows-TAP adapters found. Is the driver installed?\n"
-msgstr ""
+msgstr "Δεν βρέθηκαν υποδοχείς Windows-TAP. Είναι εγκατεστημένος ο οδηγός;\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l146
 #: ../openconnect-strings.txt:1697
-#, fuzzy, c-format
+#, c-format
+#| msgid "Failed to open CA file '%s'\n"
 msgid "Failed to open %s\n"
-msgstr "Αποτυχία ανοίγματος αρχείου CA '%s'\n"
+msgstr "Αποτυχία ανοίγματος του %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l151
 #: ../openconnect-strings.txt:1700
 #, fuzzy, c-format
+#| msgid "Failed to open tun device: %s\n"
 msgid "Opened tun device %s\n"
 msgstr "Αποτυχία ανοίγματος συσκευής tun: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l158
 #: ../openconnect-strings.txt:1703
 #, fuzzy, c-format
+#| msgid "Failed to load TPM private key\n"
 msgid "Failed to obtain TAP driver version: %lx\n"
 msgstr "Αποτυχία φόρτωσης ιδιωτικού κλειδιού TPM\n"
 
@@ -3318,74 +3360,65 @@ msgstr "Αποτυχία φόρτωσης ιδιωτικού κλειδιού TP
 #, c-format
 msgid "Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n"
 msgstr ""
+"Σφάλμα: Απαιτείται ο οδηγός TAP για Windows με έκδοση v9.9 ή μεγαλύτερη "
+"(βρέθηκε %ld.%ld)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l179
 #: ../openconnect-strings.txt:1709
-#, fuzzy, c-format
+#, c-format
+#| msgid "Failed to set TPM PIN: %s\n"
 msgid "Failed to set TAP IP addresses: %lx\n"
-msgstr "Αποτυχία ορισμού PIN TPM: %s\n"
+msgstr "Αποτυχία ορισμού διεύθυνσης IP για το TAP : %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l189
 #: ../openconnect-strings.txt:1712
 #, fuzzy, c-format
+#| msgid "Failed to setup PKCS#12 data structure: %s\n"
 msgid "Failed to set TAP media status: %lx\n"
 msgstr "Αποτυχία ρύθμισης δομής δεδομένων PKCS#12: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l217
 #: ../openconnect-strings.txt:1715
-#, fuzzy, c-format
+#, c-format
+#| msgid "Failed to read from SSL socket: %s\n"
 msgid "Failed to read from TAP device: %lx\n"
-msgstr "Αποτυχία ανάγνωσης από την υποδοχή SSL: %s\n"
+msgstr "Αποτυχία ανάγνωσης από την συσκευή TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l228
 #: ../openconnect-strings.txt:1718
-#, fuzzy, c-format
+#, c-format
+#| msgid "Failed to read from SSL socket: %s\n"
 msgid "Failed to complete read from TAP device: %lx\n"
-msgstr "Αποτυχία ανάγνωσης από την υποδοχή SSL: %s\n"
+msgstr "Αποτυχία ολοκλήρωσης της ανάγνωσης από την συσκευή TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l249
 #: ../openconnect-strings.txt:1721
 #, c-format
 msgid "Wrote %ld bytes to tun\n"
-msgstr ""
+msgstr "Γράφτηκαν %ld bytes στο tun\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l259
 #: ../openconnect-strings.txt:1724
 msgid "Waiting for tun write...\n"
-msgstr ""
+msgstr "Αναμονή για εγγραφή στο tun...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l262
 #: ../openconnect-strings.txt:1727
 #, c-format
 msgid "Wrote %ld bytes to tun after waiting\n"
-msgstr ""
+msgstr "Γράφτηκαν %ld bytes στο tun μετά την αναμονή\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l268
 #: ../openconnect-strings.txt:1730
-#, fuzzy, c-format
+#, c-format
+#| msgid "Failed to write to SSL socket: %s\n"
 msgid "Failed to write to TAP device: %lx\n"
-msgstr "Αποτυχία εγγραφής στην υποδοχή SSL: %s\n"
+msgstr "Αποτυχία εγγραφής στην συσκευή TAP: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e2cd5f5741:/tun-win32.c#l293
 #: ../openconnect-strings.txt:1733
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
 msgstr ""
-
-#~ msgid "Parse PKCS#12 failed (wrong passphrase?)\n"
-#~ msgstr "Αποτυχία ανάλυσης PKCS#12 (εσφαλμένο συνθηματικό;)\n"
-
-#~ msgid ""
-#~ "Try the --no-xmlpost option. If that works, please report as an "
-#~ "OpenConnect bug\n"
-#~ msgstr ""
-#~ "Δοκιμάστε την επιλογή --no-xmlpost. Αν αυτό δουλεύει, παρακαλούμε "
-#~ "αναφέρτε το ως σφάλμα OpenConnect\n"
-
-#~ msgid "Failed to initialise DTLS secret\n"
-#~ msgstr "Αποτυχία αρχικοποίησης σε μυστικό DTLS\n"
-
-#~ msgid "DTLS rekey failed\n"
-#~ msgstr "Αποτυχία αλλαγής κλειδιού DTLS\n"
 
 #~ msgid "Open XML config file"
 #~ msgstr "Άνοιγμα αρχείου διαμόρφωσης XML"
@@ -3396,6 +3429,15 @@ msgstr ""
 #~ msgid "mmap XML config file"
 #~ msgstr "Αρχείο ρυθμίσεων mmap XML"
 
+#~ msgid "Use software token to generate password"
+#~ msgstr "Χρήση διακριτικού λογισμικού για δημιουργία κωδικού πρόσβασης"
+
+#~ msgid "DTLS rekey failed\n"
+#~ msgstr "Αποτυχία αλλαγής κλειδιού DTLS\n"
+
+#~ msgid "Failed to initialise DTLS secret\n"
+#~ msgstr "Αποτυχία αρχικοποίησης σε μυστικό DTLS\n"
+
 #~ msgid "open tun"
 #~ msgstr "άνοιγμα του tun"
 
@@ -3404,6 +3446,12 @@ msgstr ""
 
 #~ msgid "fork"
 #~ msgstr "διακλάδωση"
+
+#~ msgid "Parse PKCS#12 failed (wrong passphrase?)\n"
+#~ msgstr "Αποτυχία ανάλυσης PKCS#12 (εσφαλμένο συνθηματικό;)\n"
+
+#~ msgid "Failed to read from SSL socket: %s"
+#~ msgstr "Αποτυχία ανάγνωσης από την υποδοχή SSL: %s"
 
 #~ msgid "Password / SecurID"
 #~ msgstr "Συνθηματικό / SecurID"
