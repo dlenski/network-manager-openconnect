@@ -906,7 +906,7 @@ _("Downloaded new XML profile\n");
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/http.c#l678
 _(""
 "Error: Running the 'Cisco Secure Desktop' trojan on Windows is not yet "
-"implemented.\n" );
+"implemented.\n");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/http.c#l686
 _(""
@@ -1113,7 +1113,7 @@ _("Allocation failure for string from stdin\n");
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l525
 _(""
 "For assistance with OpenConnect, please see the web page at\n"
-" http://www.infradead.org/openconnect/mail.html\n");
+"  http://www.infradead.org/openconnect/mail.html\n");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l534
 _("Using OpenSSL. Features present:");
@@ -1129,7 +1129,7 @@ _("using OpenSSL");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l573
 _(""
-"\n" 
+"\n"
 "WARNING: No DTLS support in this binary. Performance will be impaired.\n");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l597
@@ -1147,7 +1147,7 @@ _("Usage:  openconnect [options] <server>\n");
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l660
 _(""
 "Open client for Cisco AnyConnect VPN, version %s\n"
-"\n" );
+"\n");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l662
 _("Read options from config file");
@@ -1353,13 +1353,13 @@ _("Option '%s' requires an argument at line %d\n");
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l925
 _(""
 "WARNING: This version of openconnect was built without iconv\n"
-" support but you appear to be using the legacy character\n"
-" set \"%s\". Expect strangeness.\n");
+"         support but you appear to be using the legacy character\n"
+"         set \"%s\". Expect strangeness.\n");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l932
 _(""
 "WARNING: This version of openconnect is %s but\n"
-" the libopenconnect library is %s\n");
+"         the libopenconnect library is %s\n");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l942
 _("Failed to allocate vpninfo structure\n");
@@ -1463,7 +1463,7 @@ _("Failed to write config to %s: %s\n");
 
 // http://git.infradead.org/users/dwmw2/openconnect.git/blob/c48013ff58:/main.c#l1534
 _(""
-"\n" 
+"\n"
 "Certificate from VPN server \"%s\" failed verification.\n"
 "Reason: %s\n");
 

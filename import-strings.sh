@@ -40,24 +40,24 @@ link to the original source code.
 EOF
 
 cat $OPENCONNECT_BUILD_DIR/po/openconnect.pot |
-while read -r a b; do
-    case "$a" in
-	"#:")
+while read -r line; do
+    case "$line" in
+	"#:"*)
 	    echo >>$OUTFILE
 	    # FIXME: If it was already in openconnect-strings.txt can we keep the
 	    #   previous URL instead of using the latest commit, to reduce churn?
-	    for src in $b; do
+	    for src in ${line###: }; do
 		echo "// ${GITWEB}${src%%:*}#l${src##*:}" >>$OUTFILE
 	    done
 	    real_strings=yes
 	    ;;
-	"msgid")
+	"msgid "*)
 	    if [ "$real_strings" = "yes" ]; then
-		echo -n "_($b" >>$OUTFILE
+		echo -n "_(${line##msgid }" >>$OUTFILE
 		in_msgid=yes
 	    fi
 	    ;;
-	"msgstr"|"")
+	"msgstr "*|"")
 	    if [ "$in_msgid" = "yes" ]; then
 		in_msgid=no
 		echo ");" >>$OUTFILE
@@ -66,7 +66,7 @@ while read -r a b; do
 	*)
 	    if [ "$in_msgid" = "yes" ]; then
 		echo >>$OUTFILE
-		echo -n "$a $b" >>$OUTFILE
+		echo -n "$line" >>$OUTFILE
 	    fi
 	    ;;
    esac
