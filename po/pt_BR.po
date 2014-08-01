@@ -9,9 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-31 16:23+0100\n"
-"PO-Revision-Date: 2014-07-20 14:08-0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-07-31 15:25+0000\n"
+"PO-Revision-Date: 2014-07-31 23:49-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -85,6 +86,158 @@ msgstr "Salvar senhas"
 #: ../auth-dialog/main.c:1628
 msgid "Log"
 msgstr "Registro"
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Escolha um certificado de autoridade certificadora..."
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "Escolha seu certificado pessoal..."
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "Escolha sua chave privada..."
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certificados PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:63
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN Compatível com Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:64
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Compatível com Cisco AnyConnect SSL VPN."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Geral</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Selecione um arquivo"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_Gateway:"
+msgstr "_Gateway:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "CA C_ertificate:"
+msgstr "C_ertificado da AC:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Permitir _trojan de Cisco Secure Desktop"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Script _wrapper de CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Certificado de autenticação</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_User Certificate:"
+msgstr "Certificado do _usuário:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "C_have privada:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Usar _FSID como frase secreta da chave"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Autenticação por token de software</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "Token _Mode:"
+msgstr "_Modo do token:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token Sec_ret:"
+msgstr "Seg_redo do token:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Disabled"
+msgstr "Desabilitado"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "RSA SecurID - lido de ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - manually entered"
+msgstr "RSA SecurID - inserido manualmente"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "TOTP - manually entered"
+msgstr "TOTP - inserido manualmente"
+
+#: ../src/nm-openconnect-service.c:151
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "propriedade do inteiro \"%s\" inválido ou fora do intervalo [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:161
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "propriedade do booleano \"%s\" inválido (não sim ou não)"
+
+#: ../src/nm-openconnect-service.c:168
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "propriedade \"%s\" não-manipulada, tipo %s"
+
+#: ../src/nm-openconnect-service.c:181
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "propriedade \"%s\" inválida ou sem suporte"
+
+#: ../src/nm-openconnect-service.c:197
+msgid "No VPN configuration options."
+msgstr "Sem opções de configuração de VPN."
+
+#: ../src/nm-openconnect-service.c:215
+msgid "No VPN secrets!"
+msgstr "Nenhum segredo de VPN!"
+
+#: ../src/nm-openconnect-service.c:383
+msgid "Could not find openconnect binary."
+msgstr "Não foi possível encontrar binário do openconnect."
+
+#: ../src/nm-openconnect-service.c:395
+msgid "No VPN gateway specified."
+msgstr "Nenhum gateway VPN especificado."
+
+#: ../src/nm-openconnect-service.c:405
+msgid "No WebVPN cookie provided."
+msgstr "Nenhum cookie WebVPN fornecido."
+
+#: ../src/nm-openconnect-service.c:640
+msgid "Don't quit when VPN connection terminates"
+msgstr "Não sair até que a conexão com a VPN termine"
+
+#: ../src/nm-openconnect-service.c:641
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr "Habilitar registro de depuração detalhado (pode expôr senhas)"
+
+#: ../src/nm-openconnect-service.c:664
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"nm-openconnect-service fornece as funcionalidades de Cisco AnyConnect SSL "
+"VPN integradas ao NetworkManager."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/auth.c#l130
 #: ../openconnect-strings.txt:14
@@ -2045,25 +2198,25 @@ msgstr "Somente https:// é permitido como URL de servidor\n"
 #: ../openconnect-strings.txt:1097
 #, c-format
 msgid "CommandLineToArgvW() failed: %lx\n"
-msgstr ""
+msgstr "CommandLineToArgvW() falhou: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l312
 #: ../openconnect-strings.txt:1100
 msgid "Fatal error in command line handling\n"
-msgstr ""
+msgstr "Erro fatal ao manipular a linha de comando\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l347
 #: ../openconnect-strings.txt:1103
 #, c-format
 msgid "ReadConsole() error %lx\n"
-msgstr ""
+msgstr "ReadConsole() erro %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l358
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l370
 #: ../openconnect-strings.txt:1107
 #, c-format
 msgid "Error converting console input: %lx\n"
-msgstr ""
+msgstr "Erro ao converter a entrada de console: %lx\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l364
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l586
@@ -2077,6 +2230,8 @@ msgid ""
 "For assistance with OpenConnect, please see the web page at\n"
 "  http://www.infradead.org/openconnect/mail.html\n"
 msgstr ""
+"Para assistência com OpenConnect, por favor veja a página web em\n"
+"  http://www.infradead.org/openconnect/mail.html\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l534
 #: ../openconnect-strings.txt:1119
@@ -2487,6 +2642,9 @@ msgid ""
 "         support but you appear to be using the legacy character\n"
 "         set \"%s\". Expect strangeness.\n"
 msgstr ""
+"AVISO: Essa versão do openconnect foi compilada sem suporte\n"
+"         a iconv, mas você parece estar usando o conjunto de\n"
+"         caracteres legado \"%s\". Espere coisas estranhas.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l935
 #: ../openconnect-strings.txt:1360
@@ -2495,6 +2653,8 @@ msgid ""
 "WARNING: This version of openconnect is %s but\n"
 "         the libopenconnect library is %s\n"
 msgstr ""
+"AVISO: Essa versão do openconnect é %s, mas\n"
+"         a biblioteca libopenconnect é %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/main.c#l945
 #: ../openconnect-strings.txt:1365
@@ -2847,7 +3007,7 @@ msgstr "PKCS#12 continha nenhuma chave privada!"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l502
 #: ../openconnect-strings.txt:1559
 msgid "PKCS#12"
-msgstr ""
+msgstr "PKCS#12"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l520
 #: ../openconnect-strings.txt:1562
@@ -2889,17 +3049,19 @@ msgstr "Carregamento de certificado falhou\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l632
 #: ../openconnect-strings.txt:1584
 msgid "Failed to install certificate in OpenSSL context\n"
-msgstr ""
+msgstr "Falhou ao instalar certificado em contexto OpenSSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l654
 #: ../openconnect-strings.txt:1587
 msgid "Failed to process all supporting certs. Trying anyway...\n"
 msgstr ""
+"Falhou ao processar todos os certificados suportados. Tentando mesmo "
+"assim...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l667
 #: ../openconnect-strings.txt:1590
 msgid "PEM file"
-msgstr ""
+msgstr "Arquivo PEM"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l696
 #: ../openconnect-strings.txt:1593
@@ -2953,7 +3115,7 @@ msgstr "Falhou ao identificar o tipo de chave privada em \"%s\"\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l878
 #: ../openconnect-strings.txt:1621
 msgid "Loading private key failed\n"
-msgstr ""
+msgstr "Carregamento de chaves privadas falhou\n"
 
 # %s = host
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/openssl.c#l1056
@@ -3169,12 +3331,13 @@ msgstr "statvfs: %s\n"
 #: ../openconnect-strings.txt:1732
 msgid "Could not obtain file system ID for passphrase\n"
 msgstr ""
+"Não foi possível obter o ID de sistema de arquivos para palavra frase\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/ssl.c#l419
 #: ../openconnect-strings.txt:1735
 #, c-format
 msgid "Failed to open private key file '%s': %s\n"
-msgstr ""
+msgstr "Falhou ao abrir o arquivo de chaves privadas \"%s\": %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/ssl.c#l447
 #: ../openconnect-strings.txt:1738
@@ -3241,7 +3404,7 @@ msgstr "Erro desconhecido"
 #: ../openconnect-strings.txt:1774
 #, c-format
 msgid "fopen_utf8() used with unsupported mode '%s'\n"
-msgstr ""
+msgstr "fopen_utf8() usado com modo sem suporte \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/sspi.c#l196
 #: ../openconnect-strings.txt:1777
@@ -3349,7 +3512,7 @@ msgstr "Erro ao acessar chave de registro de adaptadores de rede\n"
 #: ../openconnect-strings.txt:1830
 #, c-format
 msgid "Ignoring non-matching TAP interface \"%s\"\n"
-msgstr ""
+msgstr "Ignorando interface TAP não correspondente \"%s\"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/tun-win32.c#l153
 #: ../openconnect-strings.txt:1833
@@ -3624,158 +3787,6 @@ msgid "Host \"%s\" not listed in config; treating as raw hostname\n"
 msgstr ""
 "O host \"%s\" não está listado na configuração - tratando-o como um hostname "
 "simples\n"
-
-#: ../properties/auth-helpers.c:64
-msgid "Choose a Certificate Authority certificate..."
-msgstr "Escolha um certificado de autoridade certificadora..."
-
-#: ../properties/auth-helpers.c:80
-msgid "Choose your personal certificate..."
-msgstr "Escolha seu certificado pessoal..."
-
-#: ../properties/auth-helpers.c:96
-msgid "Choose your private key..."
-msgstr "Escolha sua chave privada..."
-
-#: ../properties/auth-helpers.c:256
-msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr "Certificados PEM (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Geral</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Selecione um arquivo"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_Gateway:"
-msgstr "_Gateway:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Proxy:"
-msgstr "_Proxy:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "CA C_ertificate:"
-msgstr "C_ertificado da AC:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Permitir _trojan de Cisco Secure Desktop"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "CSD _Wrapper Script:"
-msgstr "Script _wrapper de CSD:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Certificado de autenticação</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "_User Certificate:"
-msgstr "Certificado do _usuário:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "Private _Key:"
-msgstr "C_have privada:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Use _FSID for key passphrase"
-msgstr "Usar _FSID como frase secreta da chave"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Autenticação por token de software</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "Token _Mode:"
-msgstr "_Modo do token:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token Sec_ret:"
-msgstr "Seg_redo do token:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Disabled"
-msgstr "Desabilitado"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "RSA SecurID - lido de ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - manually entered"
-msgstr "RSA SecurID - inserido manualmente"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "TOTP - manually entered"
-msgstr "TOTP - inserido manualmente"
-
-#: ../properties/nm-openconnect.c:63
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "VPN Compatível com Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect.c:64
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Compatível com Cisco AnyConnect SSL VPN."
-
-#: ../src/nm-openconnect-service.c:151
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr "propriedade do inteiro \"%s\" inválido ou fora do intervalo [%d -> %d]"
-
-#: ../src/nm-openconnect-service.c:161
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "propriedade do booleano \"%s\" inválido (não sim ou não)"
-
-#: ../src/nm-openconnect-service.c:168
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "propriedade \"%s\" não-manipulada, tipo %s"
-
-#: ../src/nm-openconnect-service.c:181
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "propriedade \"%s\" inválida ou sem suporte"
-
-#: ../src/nm-openconnect-service.c:197
-msgid "No VPN configuration options."
-msgstr "Sem opções de configuração de VPN."
-
-#: ../src/nm-openconnect-service.c:215
-msgid "No VPN secrets!"
-msgstr "Nenhum segredo de VPN!"
-
-#: ../src/nm-openconnect-service.c:383
-msgid "Could not find openconnect binary."
-msgstr "Não foi possível encontrar binário do openconnect."
-
-#: ../src/nm-openconnect-service.c:395
-msgid "No VPN gateway specified."
-msgstr "Nenhum gateway VPN especificado."
-
-#: ../src/nm-openconnect-service.c:405
-msgid "No WebVPN cookie provided."
-msgstr "Nenhum cookie WebVPN fornecido."
-
-#: ../src/nm-openconnect-service.c:640
-msgid "Don't quit when VPN connection terminates"
-msgstr "Não sair até que a conexão com a VPN termine"
-
-#: ../src/nm-openconnect-service.c:641
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr "Habilitar registro de depuração detalhado (pode expôr senhas)"
-
-#: ../src/nm-openconnect-service.c:664
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"nm-openconnect-service fornece as funcionalidades de Cisco AnyConnect SSL "
-"VPN integradas ao NetworkManager."
 
 #~ msgid ""
 #~ "Error: Server asked us to download and run a 'Cisco Secure Desktop' "
