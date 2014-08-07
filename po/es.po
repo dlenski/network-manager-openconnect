@@ -3438,7 +3438,7 @@ msgstr "Error desconocido"
 #: ../openconnect-strings.txt:1787
 #, c-format
 msgid "openconnect_fopen_utf8() used with unsupported mode '%s'\n"
-msgstr "Usado openconnect_fopen_utf8() con el modo «%» no soportado'\n"
+msgstr "Usado openconnect_fopen_utf8() con el modo «%s» no soportado'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/e5fedab1b7:/sspi.c#l205
 #: ../openconnect-strings.txt:1790
