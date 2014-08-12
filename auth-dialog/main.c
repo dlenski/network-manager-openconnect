@@ -1194,7 +1194,9 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 		openconnect_passphrase_from_fsid(vpninfo);
 
 	token_mode = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_TOKEN_MODE);
-	token_secret = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_TOKEN_SECRET);
+	token_secret = g_hash_table_lookup (secrets, NM_OPENCONNECT_KEY_TOKEN_SECRET);
+	if (!token_secret || !token_secret[0])
+		token_secret = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_TOKEN_SECRET);
 	if (token_mode) {
 		int ret = 0;
 
@@ -1204,6 +1206,10 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 			ret = __openconnect_set_token_mode(vpninfo, OC_TOKEN_MODE_STOKEN, NULL);
 		else if (!strcmp(token_mode, "totp") && token_secret)
 			ret = __openconnect_set_token_mode(vpninfo, OC_TOKEN_MODE_TOTP, token_secret);
+#if OPENCONNECT_CHECK_VER(3,4)
+		else if (!strcmp(token_mode, "hotp") && token_secret)
+			ret = __openconnect_set_token_mode(vpninfo, OC_TOKEN_MODE_HOTP, token_secret);
+#endif
 
 		if (ret)
 			fprintf(stderr, "Failed to initialize software token: %d\n", ret);
@@ -1228,6 +1234,17 @@ static void populate_vpnhost_combo(auth_ui_data *ui_data)
 
 	}
 }
+
+#if OPENCONNECT_CHECK_VER(3,4)
+static int update_token(void *cbdata, const char *tok)
+{
+	auth_ui_data *ui_data = cbdata;
+	g_hash_table_insert (ui_data->secrets, g_strdup (NM_OPENCONNECT_KEY_TOKEN_SECRET),
+			     g_strdup(tok));
+
+	return 0;
+}
+#endif
 
 static int write_new_config(void *cbdata, char *buf, int buflen)
 {
@@ -1801,6 +1818,11 @@ int main (int argc, char **argv)
 		fprintf(stderr, "Failed to find VPN UUID %s\n", vpn_uuid);
 		return 1;
 	}
+
+#if OPENCONNECT_CHECK_VER(3,4)
+	openconnect_set_token_callbacks (_ui_data->vpninfo, _ui_data, NULL, update_token);
+#endif
+
 	build_main_dialog(_ui_data);
 
 #ifdef OPENCONNECT_OPENSSL

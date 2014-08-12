@@ -214,7 +214,7 @@ import (NMVpnPluginUiInterface *iface, const char *path, GError **error)
 	/* Soft token secret */
 	buf = g_key_file_get_string (keyfile, "openconnect", "StokenString", NULL);
 	if (buf)
-		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET, buf);
+		nm_setting_vpn_add_secret (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET, buf);
 
 	return connection;
 }
@@ -297,9 +297,14 @@ export (NMVpnPluginUiInterface *iface,
 	if (value && strlen (value))
 		token_mode = value;
 
-	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
+	value = nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
 	if (value && strlen (value))
 		token_secret = value;
+	else {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
+		if (value && strlen (value))
+			token_secret = value;
+	}
 
 	fprintf (f,
 		 "[openconnect]\n"
@@ -427,6 +432,9 @@ init_token_mode_options (GtkComboBox *token_mode)
 			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
 		else if (!strcmp (token_type, "totp") && !openconnect_has_oath_support ())
 			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
+		else if (!strcmp (token_type, "hotp") &&
+				 (!openconnect_has_oath_support () || !OPENCONNECT_CHECK_VER(3,4)))
+			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
 		else {
 			iter_valid = gtk_tree_model_iter_next (model, &iter);
 			valid_rows++;
@@ -492,7 +500,9 @@ init_token_ui (OpenconnectPluginUiWidget *self,
 	if (!buffer)
 		return FALSE;
 	if (s_vpn) {
-		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
+		value = nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
+		if (!value)
+			value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET);
 		if (value)
 			gtk_text_buffer_set_text (buffer, value, -1);
 	}
@@ -653,7 +663,7 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 		*dst = 0;
 
 		if (strlen (str))
-			nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET, str);
+			nm_setting_vpn_add_secret (s_vpn, NM_OPENCONNECT_KEY_TOKEN_SECRET, str);
 	}
 
 	if (!check_validity (self, error))

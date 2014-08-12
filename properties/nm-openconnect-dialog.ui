@@ -766,6 +766,12 @@
             <col id="2" translatable="no">totp</col>
             <col id="3" translatable="no">True</col>
           </row>
+          <row>
+            <col id="0" translatable="yes">HOTP - manually entered</col>
+            <col id="1" translatable="no">hotp</col>
+            <col id="2" translatable="no">hotp</col>
+            <col id="3" translatable="no">True</col>
+          </row>
         </data>
       </object>
 </interface>
