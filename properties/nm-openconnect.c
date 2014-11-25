@@ -248,9 +248,9 @@ export (NMVpnPluginUiInterface *iface,
 		return FALSE;
 	}
 
-	s_con = NM_SETTING_CONNECTION (nm_connection_get_setting (connection, NM_TYPE_SETTING_CONNECTION));
+	s_con = nm_connection_get_setting_connection (connection);
 
-	s_vpn = (NMSettingVPN *) nm_connection_get_setting (connection, NM_TYPE_SETTING_VPN);
+	s_vpn = nm_connection_get_setting_vpn (connection);
 
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_GATEWAY);
 	if (value && strlen (value))
@@ -517,7 +517,7 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 	GtkWidget *widget;
 	const char *value;
 
-	s_vpn = (NMSettingVPN *) nm_connection_get_setting (connection, NM_TYPE_SETTING_VPN);
+	s_vpn = nm_connection_get_setting_vpn (connection);
 
 	priv->group = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
 
