@@ -7,7 +7,6 @@ nm_openconnect_auth_dialog_CPPFLAGS = \
 	$(OPENCONNECT_CFLAGS) \
 	$(LIBXML_CFLAGS) \
 	$(LIBSECRET_CFLAGS) \
-	-I${top_srcdir} \
 	-DICONDIR=\""$(datadir)/pixmaps"\" \
 	-DBINDIR=\""$(bindir)"\" \
 	-DG_DISABLE_DEPRECATED \
