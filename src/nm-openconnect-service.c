@@ -51,14 +51,14 @@
 # define DIST_VERSION VERSION
 #endif
 
-G_DEFINE_TYPE (NMOPENCONNECTPlugin, nm_openconnect_plugin, NM_TYPE_VPN_PLUGIN)
+G_DEFINE_TYPE (NMOpenconnectPlugin, nm_openconnect_plugin, NM_TYPE_VPN_PLUGIN)
 
 typedef struct {
 	GPid pid;
 	char *tun_name;
-} NMOPENCONNECTPluginPrivate;
+} NMOpenconnectPluginPrivate;
 
-#define NM_OPENCONNECT_PLUGIN_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), NM_TYPE_OPENCONNECT_PLUGIN, NMOPENCONNECTPluginPrivate))
+#define NM_OPENCONNECT_PLUGIN_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), NM_TYPE_OPENCONNECT_PLUGIN, NMOpenconnectPluginPrivate))
 
 static const char *openconnect_binary_paths[] =
 {
@@ -311,8 +311,8 @@ static void openconnect_drop_child_privs(gpointer user_data)
 static void
 openconnect_watch_cb (GPid pid, gint status, gpointer user_data)
 {
-	NMOPENCONNECTPlugin *plugin = NM_OPENCONNECT_PLUGIN (user_data);
-	NMOPENCONNECTPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
+	NMOpenconnectPlugin *plugin = NM_OPENCONNECT_PLUGIN (user_data);
+	NMOpenconnectPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
 	guint error = 0;
 
 	if (WIFEXITED (status)) {
@@ -355,11 +355,11 @@ openconnect_watch_cb (GPid pid, gint status, gpointer user_data)
 }
 
 static gint
-nm_openconnect_start_openconnect_binary (NMOPENCONNECTPlugin *plugin,
+nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
                                          NMSettingVPN *s_vpn,
                                          GError **error)
 {
-	NMOPENCONNECTPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
+	NMOpenconnectPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
 	GPid	pid;
 	const char **openconnect_binary = NULL;
 	GPtrArray *openconnect_argv;
@@ -560,7 +560,7 @@ static gboolean
 real_disconnect (NMVPNPlugin   *plugin,
                  GError       **err)
 {
-	NMOPENCONNECTPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
+	NMOpenconnectPluginPrivate *priv = NM_OPENCONNECT_PLUGIN_GET_PRIVATE (plugin);
 
 	if (priv->pid) {
 		if (kill (priv->pid, SIGTERM) == 0)
@@ -576,17 +576,17 @@ real_disconnect (NMVPNPlugin   *plugin,
 }
 
 static void
-nm_openconnect_plugin_init (NMOPENCONNECTPlugin *plugin)
+nm_openconnect_plugin_init (NMOpenconnectPlugin *plugin)
 {
 }
 
 static void
-nm_openconnect_plugin_class_init (NMOPENCONNECTPluginClass *openconnect_class)
+nm_openconnect_plugin_class_init (NMOpenconnectPluginClass *openconnect_class)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (openconnect_class);
 	NMVPNPluginClass *parent_class = NM_VPN_PLUGIN_CLASS (openconnect_class);
 
-	g_type_class_add_private (object_class, sizeof (NMOPENCONNECTPluginPrivate));
+	g_type_class_add_private (object_class, sizeof (NMOpenconnectPluginPrivate));
 
 	/* virtual methods */
 	parent_class->connect    = real_connect;
@@ -594,10 +594,10 @@ nm_openconnect_plugin_class_init (NMOPENCONNECTPluginClass *openconnect_class)
 	parent_class->disconnect = real_disconnect;
 }
 
-NMOPENCONNECTPlugin *
+NMOpenconnectPlugin *
 nm_openconnect_plugin_new (void)
 {
-	return (NMOPENCONNECTPlugin *) g_object_new (NM_TYPE_OPENCONNECT_PLUGIN,
+	return (NMOpenconnectPlugin *) g_object_new (NM_TYPE_OPENCONNECT_PLUGIN,
 	                                             NM_VPN_PLUGIN_DBUS_SERVICE_NAME, NM_DBUS_SERVICE_OPENCONNECT,
 	                                             NULL);
 }
@@ -624,14 +624,14 @@ setup_signals (void)
 }
 
 static void
-quit_mainloop (NMOPENCONNECTPlugin *plugin, gpointer user_data)
+quit_mainloop (NMOpenconnectPlugin *plugin, gpointer user_data)
 {
 	g_main_loop_quit ((GMainLoop *) user_data);
 }
 
 int main (int argc, char *argv[])
 {
-	NMOPENCONNECTPlugin *plugin;
+	NMOpenconnectPlugin *plugin;
 
 	gboolean persist = FALSE;
 	GOptionContext *opt_ctx = NULL;

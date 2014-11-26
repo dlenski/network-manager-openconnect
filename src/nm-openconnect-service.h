@@ -29,11 +29,11 @@
 #include <nm-vpn-plugin.h>
 
 #define NM_TYPE_OPENCONNECT_PLUGIN            (nm_openconnect_plugin_get_type ())
-#define NM_OPENCONNECT_PLUGIN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), NM_TYPE_OPENCONNECT_PLUGIN, NMOPENCONNECTPlugin))
-#define NM_OPENCONNECT_PLUGIN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), NM_TYPE_OPENCONNECT_PLUGIN, NMOPENCONNECTPluginClass))
+#define NM_OPENCONNECT_PLUGIN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), NM_TYPE_OPENCONNECT_PLUGIN, NMOpenconnectPlugin))
+#define NM_OPENCONNECT_PLUGIN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), NM_TYPE_OPENCONNECT_PLUGIN, NMOpenconnectPluginClass))
 #define NM_IS_OPENCONNECT_PLUGIN(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), NM_TYPE_OPENCONNECT_PLUGIN))
 #define NM_IS_OPENCONNECT_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), NM_TYPE_OPENCONNECT_PLUGIN))
-#define NM_OPENCONNECT_PLUGIN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), NM_TYPE_OPENCONNECT_PLUGIN, NMOPENCONNECTPluginClass))
+#define NM_OPENCONNECT_PLUGIN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), NM_TYPE_OPENCONNECT_PLUGIN, NMOpenconnectPluginClass))
 
 #define NM_DBUS_SERVICE_OPENCONNECT    "org.freedesktop.NetworkManager.openconnect"
 #define NM_DBUS_INTERFACE_OPENCONNECT  "org.freedesktop.NetworkManager.openconnect"
@@ -56,15 +56,15 @@
 
 typedef struct {
 	NMVPNPlugin parent;
-} NMOPENCONNECTPlugin;
+} NMOpenconnectPlugin;
 
 typedef struct {
 	NMVPNPluginClass parent;
-} NMOPENCONNECTPluginClass;
+} NMOpenconnectPluginClass;
 
 GType nm_openconnect_plugin_get_type (void);
 
-NMOPENCONNECTPlugin *nm_openconnect_plugin_new (void);
+NMOpenconnectPlugin *nm_openconnect_plugin_new (void);
 
 #define NM_OPENCONNECT_USER "nm-openconnect"
 
