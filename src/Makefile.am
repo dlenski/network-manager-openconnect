@@ -19,8 +19,8 @@ libexec_PROGRAMS = \
 
 nm_openconnect_service_SOURCES = \
 	nm-openconnect-service.c \
-	nm-openconnect-service.h
-
+	nm-openconnect-service.h \
+	nm-openconnect-service-defines.h
 
 nm_openconnect_service_LDADD = \
 	$(DBUS_LIBS) \

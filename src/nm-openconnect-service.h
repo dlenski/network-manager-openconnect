@@ -28,31 +28,14 @@
 #include <glib.h>
 #include <nm-vpn-plugin.h>
 
+#include "nm-openconnect-service-defines.h"
+
 #define NM_TYPE_OPENCONNECT_PLUGIN            (nm_openconnect_plugin_get_type ())
 #define NM_OPENCONNECT_PLUGIN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), NM_TYPE_OPENCONNECT_PLUGIN, NMOpenconnectPlugin))
 #define NM_OPENCONNECT_PLUGIN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), NM_TYPE_OPENCONNECT_PLUGIN, NMOpenconnectPluginClass))
 #define NM_IS_OPENCONNECT_PLUGIN(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), NM_TYPE_OPENCONNECT_PLUGIN))
 #define NM_IS_OPENCONNECT_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), NM_TYPE_OPENCONNECT_PLUGIN))
 #define NM_OPENCONNECT_PLUGIN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), NM_TYPE_OPENCONNECT_PLUGIN, NMOpenconnectPluginClass))
-
-#define NM_DBUS_SERVICE_OPENCONNECT    "org.freedesktop.NetworkManager.openconnect"
-#define NM_DBUS_INTERFACE_OPENCONNECT  "org.freedesktop.NetworkManager.openconnect"
-#define NM_DBUS_PATH_OPENCONNECT       "/org/freedesktop/NetworkManager/openconnect"
-
-#define NM_OPENCONNECT_KEY_GATEWAY "gateway"
-#define NM_OPENCONNECT_KEY_COOKIE "cookie"
-#define NM_OPENCONNECT_KEY_GWCERT "gwcert"
-#define NM_OPENCONNECT_KEY_AUTHTYPE "authtype"
-#define NM_OPENCONNECT_KEY_USERCERT "usercert"
-#define NM_OPENCONNECT_KEY_CACERT "cacert"
-#define NM_OPENCONNECT_KEY_PRIVKEY "userkey"
-#define NM_OPENCONNECT_KEY_MTU "mtu"
-#define NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID "pem_passphrase_fsid"
-#define NM_OPENCONNECT_KEY_PROXY "proxy"
-#define NM_OPENCONNECT_KEY_CSD_ENABLE "enable_csd_trojan"
-#define NM_OPENCONNECT_KEY_CSD_WRAPPER "csd_wrapper"
-#define NM_OPENCONNECT_KEY_TOKEN_MODE "stoken_source"
-#define NM_OPENCONNECT_KEY_TOKEN_SECRET "stoken_string"
 
 typedef struct {
 	NMVPNPlugin parent;

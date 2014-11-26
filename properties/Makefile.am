@@ -15,6 +15,7 @@ libnm_openconnect_properties_la_CFLAGS =                \
 	$(GTK_CFLAGS)                                   \
 	$(NM_CFLAGS)                                    \
 	$(OPENCONNECT_CFLAGS)                           \
+	-I$(top_srcdir)/src				\
 	-DICONDIR=\""$(datadir)/pixmaps"\"              \
 	-DUIDIR=\""$(uidir)"\"                          \
 	-DG_DISABLE_DEPRECATED                          \

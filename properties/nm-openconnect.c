@@ -54,7 +54,7 @@
 #include <nm-setting-connection.h>
 #include <nm-setting-ip4-config.h>
 
-#include "../src/nm-openconnect-service.h"
+#include "nm-openconnect-service-defines.h"
 #include "nm-openconnect.h"
 #include "auth-helpers.h"
 
