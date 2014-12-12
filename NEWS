@@ -1,4 +1,26 @@
 =======================================================
+network-manager-openconnect-1.0
+Overview of changes since network-manager-openconnect-0.9.10
+=======================================================
+
+This is a new stable release of network-manager-openconnect.  Notable changes include:
+
+* Dropped support for libopenconnect.so.1
+* Added support for libopenconnect.so.4
+* Added support HMAC-based One Time Password (HOTP)
+* Updated translations
+
+=======================================================
+network-manager-openconnect-0.9.10
+Overview of changes since network-manager-openconnect-0.9.8
+=======================================================
+
+This is a new stable release of network-manager-openconnect.  Notable changes include:
+
+* Updated translations
+* Use libsecret for password storage instead of gnome-keyring
+
+=======================================================
 network-manager-openconnect-0.9.8
 Overview of changes since network-manager-openconnect-0.9.6.2
 =======================================================
