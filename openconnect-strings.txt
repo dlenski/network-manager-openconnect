@@ -10,2210 +10,2225 @@ For translators looking to see source comments in their original context
 in order to translate them properly, the URLs by each one will give a
 link to the original source code.
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l148
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l148
 _("Form choice has no name\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l233
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l233
 _("name %s not input\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l240
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l240
 _("No input type in form\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l252
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l252
 _("No input name in form\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l284
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l284
 _("Unknown input type %s in form\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l494
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l494
 _("Cannot handle form method='%s', action='%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l620
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l620
 _("Empty response from server\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l631
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l631
 _("Failed to parse server response\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l633
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l633
 _("Response was:%s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l655
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l655
 _("Received <client-cert-request> when not expected.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l683
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l683
 _("XML response has no \"auth\" node\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l717
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l717
 _("No form handler; cannot authenticate.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l791
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l791
 _("Asked for password but '--no-passwd' set\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/auth.c#l822
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/auth.c#l822
 _("Failed to generate OTP tokencode; disabling token\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/compat.c#l206
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/compat.c#l206
 _("(error 0x%x)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/compat.c#l209
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/compat.c#l209
 _("(Error while describing error!)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/compat.c#l232
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/compat.c#l232
 _("ERROR: Cannot initialize sockets\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l91
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l91
 _("TCP_INFO rcv mss %d, snd mss %d, adv mss %d, pmtu %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l110
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l110
 _("TCP_MAXSEG %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l214
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l218
 _(""
 "CRITICAL ERROR: DTLS master secret is uninitialised. Please report this.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l223
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l229
 _("Error creating HTTPS CONNECT request\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l235
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l353
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l241
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l353
 _("Error fetching HTTPS response\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l242
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l633
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1134
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l248
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l633
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1134
 _("Failed to open HTTPS connection to %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l262
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l268
 _("VPN service unavailable; reason: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l267
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l273
 _("Got inappropriate HTTP CONNECT response: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l274
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l280
 _("Got CONNECT response: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l302
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l310
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l308
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l316
 _("No memory for options\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l319
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l413
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l325
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l413
 _("<elided>");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l336
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l342
 _("X-DTLS-Session-ID not 64 characters; is: \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l380
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l363
+_("Unknown DTLS-Content-Encoding %s\n");
+
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l397
 _("Unknown CSTP-Content-Encoding %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l453
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l470
 _("No MTU received. Aborting\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l460
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l477
 _("No IP address received. Aborting\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l466
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l483
 _("IPv6 configuration received but MTU %d is too small.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l472
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l489
 _("Reconnect gave different Legacy IP address (%s != %s)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l480
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l497
 _("Reconnect gave different Legacy IP netmask (%s != %s)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l488
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l505
 _("Reconnect gave different IPv6 address (%s != %s)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l496
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l513
 _("Reconnect gave different IPv6 netmask (%s != %s)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l516
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l533
 _("CSTP connected. DPD %d, Keepalive %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l518
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l535
 _("CSTP Ciphersuite: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l570
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l591
 _("Compression setup failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l587
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l608
 _("Allocation of deflate buffer failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l636
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l657
 _("Cookie is no longer valid, ending session\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l640
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l661
 _("sleep %ds, remaining timeout %ds\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l675
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l692
+_("deflate");
+
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l702
 _("inflate failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l692
-_("Received compressed data packet of %ld bytes\n");
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l723
+_("LZS decompression failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l711
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l730
+_("Received %s compressed data packet of %d bytes (was %d)\n");
+
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l749
 _("SSL read error %d (server probably closed connection); reconnecting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l736
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l774
 _("SSL_write failed: %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l752
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l790
 _("SSL read error: %s; reconnecting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l775
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l813
 _("SSL send failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l802
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l715
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/mainloop.c#l64
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l840
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l715
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/mainloop.c#l64
 _("Allocation failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l813
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l851
 _("Short packet received (%d bytes)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l826
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l864
 _("Unexpected packet length. SSL_read returned %d but packet is\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l840
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l878
 _("Got CSTP DPD request\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l846
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l884
 _("Got CSTP DPD response\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l851
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l889
 _("Got CSTP Keepalive\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l856
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l894
 _("Received uncompressed data packet of %d bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l872
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l910
 _("Received server disconnect: %02x '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l880
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l918
 _("Compressed packet received in !deflate mode\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l888
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l927
 _("received server terminate packet\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l895
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l934
 _("Unknown packet %02x %02x %02x %02x %02x %02x %02x %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l938
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l977
 _("SSL wrote too few bytes! Asked for %d, sent %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l965
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1004
 _("CSTP rekey due\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l972
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1011
 _("Rehandshake failed; attempting new-tunnel\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l983
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1022
 _("CSTP Dead Peer Detection detected dead peer!\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l987
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1026
 _("Reconnect failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l1003
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1042
 _("Send CSTP DPD\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l1014
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1053
 _("Send CSTP Keepalive\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l1041
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1079
 _("deflate failed %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l1061
-_("Sending compressed data packet of %d bytes\n");
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1099
+_("Sending deflate compressed data packet of %d bytes (was %d)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l1073
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1119
+_("Sending LZS compressed data packet of %d bytes (was %d)\n");
+
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1131
 _("Sending uncompressed data packet of %d bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/cstp.c#l1113
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/cstp.c#l1171
 _("Send BYE packet: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/digest.c#l242
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/digest.c#l242
 _("Attempting Digest authentication to proxy\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l125
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l125
 _("Initialise DTLSv1 CTX failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l137
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l137
 _("Set DTLS cipher list failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l150
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l150
 _("Initialise DTLSv1 session failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l171
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l171
 _("Not precisely one DTLS cipher\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l189
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l189
 _(""
 "SSL_set_session() failed with old protocol version 0x%x\n"
 "Are you using a version of OpenSSL older than 0.9.8m?\n"
 "See http://rt.openssl.org/Ticket/Display.html?id=1751\n"
 "Use the --no-dtls command line option to avoid this message\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l217
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l217
 _("Established DTLS connection (using OpenSSL). Ciphersuite %s.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l243
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l243
 _("Your OpenSSL is older than the one you built against, so DTLS may fail!");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l292
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l296
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l449
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l292
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l296
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l449
 _("DTLS handshake timed out\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l293
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l293
 _(""
 "This is probably because your OpenSSL is broken\n"
 "See http://rt.openssl.org/Ticket/Display.html?id=2984\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l300
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l300
 _("DTLS handshake failed: %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l356
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l356
 _("Unknown DTLS parameters for requested CipherSuite '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l369
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l369
 _("Failed to set DTLS priority: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l390
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l390
 _("Failed to set DTLS session parameters: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l413
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l413
 _("Failed to set DTLS MTU: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l434
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l434
 _("Established DTLS connection (using GnuTLS). Ciphersuite %s.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l452
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l452
 _("DTLS handshake failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l456
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l456
 _("(Is a firewall preventing you from sending UDP packets?)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l477
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l477
 _("DTLS connection attempted with an existing fd\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l483
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l483
 _("No DTLS address\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l490
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l490
 _("Server offered no DTLS cipher option\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l497
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l497
 _("No DTLS when connected via proxy\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l504
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l504
 _("Open UDP socket for DTLS:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l535
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l664
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l535
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l664
 _("Unknown protocol family %d. Cannot do DTLS\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l543
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l543
 _("Bind UDP socket for DTLS");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l550
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l550
 _("UDP (DTLS) connect:\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l616
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l616
 _("DTLS option %s : %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l674
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l674
 _("DTLS initialised. DPD %d, Keepalive %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l700
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l700
 _("Attempt new DTLS connection\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l726
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l726
 _("Received DTLS packet 0x%02x of %d bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l740
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l740
 _("Got DTLS DPD request\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l746
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l746
 _("Failed to send DPD response. Expect disconnect\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l750
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l750
 _("Got DTLS DPD response\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l754
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l754
 _("Got DTLS Keepalive\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l759
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l760
+_("Compressed DTLS packet received when compression not enabled\n");
+
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l768
 _("Unknown DTLS packet type %02x, len %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l780
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l790
 _("DTLS rekey due\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l787
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l797
 _("DTLS Rehandshake failed; reconnecting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l796
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l806
 _("DTLS Dead Peer Detection detected dead peer!\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l802
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l812
 _("Send DTLS DPD\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l807
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l817
 _("Failed to send DPD request. Expect disconnect\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l820
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l830
 _("Send DTLS Keepalive\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l825
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l835
 _("Failed to send keepalive request. Expect disconnect\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l860
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l885
 _("DTLS got write error %d. Falling back to SSL\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l875
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l900
 _("DTLS got write error: %s. Falling back to SSL\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l892
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l917
 _("Sent DTLS packet of %d bytes; DTLS send returned %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/dtls.c#l904
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/dtls.c#l929
 _("Built against SSL library with no Cisco DTLS support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l107
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l123
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l107
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l123
 _("SSL write cancelled\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l111
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l111
 _("Failed to write to SSL socket: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l140
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l202
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l155
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l208
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l140
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l202
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l155
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l208
 _("SSL read cancelled\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l148
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l148
 _("SSL socket closed uncleanly\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l152
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l207
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l152
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l207
 _("Failed to read from SSL socket: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l225
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l225
 _("Could not extract expiration time of certificate\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l230
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1302
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l230
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1302
 _("Client certificate has expired at");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l232
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1307
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l232
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1307
 _("Client certificate expires soon at");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l281
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l691
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l281
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l691
 _("Failed to load item '%s' from keystore: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l294
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l294
 _("Failed to open key/certificate file %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l301
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l301
 _("Failed to stat key/certificate file %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l310
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l310
 _("Failed to allocate certificate buffer\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l318
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l318
 _("Failed to read certificate into memory: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l349
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l349
 _("Failed to setup PKCS#12 data structure: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l372
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l460
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l372
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l460
 _("Failed to decrypt PKCS#12 certificate file\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l376
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l463
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l376
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l463
 _("Enter PKCS#12 pass phrase:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l399
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l399
 _("Failed to process PKCS#12 file: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l411
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l411
 _("Failed to load PKCS#12 certificate: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l571
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l571
 _("Importing X509 certificate failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l581
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l581
 _("Setting PKCS#11 certificate failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l621
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l621
 _("Could not initialise MD5 hash: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l631
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l631
 _("MD5 hash error: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l689
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l689
 _("Missing DEK-Info: header from OpenSSL encrypted key\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l696
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l696
 _("Cannot determine PEM encryption type\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l709
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l709
 _("Unsupported PEM encryption type: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l734
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l747
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l734
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l747
 _("Invalid salt in encrypted PEM file\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l771
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l771
 _("Error base64-decoding encrypted PEM file: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l779
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l779
 _("Encrypted PEM file too short\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l807
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l807
 _("Failed to initialise cipher for decrypting PEM file: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l818
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l818
 _("Failed to decrypt PEM key: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l870
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l870
 _("Decrypting PEM key failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l875
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1401
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l386
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l875
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1401
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l386
 _("Enter PEM pass phrase:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l934
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l934
 _("This binary built without system key support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l941
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l941
 _("This binary built without PKCS#11 support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l999
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l383
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l999
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l383
 _("Using PKCS#11 certificate %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1000
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1000
 _("Using system certificate %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1018
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1018
 _("Error loading certificate from PKCS#11: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1019
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1019
 _("Error loading system certificate: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1030
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l745
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1030
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l745
 _("Using certificate file %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1058
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1058
 _("PKCS#11 file contained no certificate\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1084
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1084
 _("No certificate found in file");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1089
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1089
 _("Loading certificate failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1104
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1104
 _("Using system key %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1109
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1273
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1109
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1273
 _("Error initialising private key structure: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1120
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1120
 _("Error importing system key %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1131
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1221
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1249
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1131
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1221
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1249
 _("Trying PKCS#11 key URL %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1136
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1136
 _("Error initialising PKCS#11 key structure: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1261
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1261
 _("Error importing PKCS#11 URL %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1268
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l549
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1268
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l549
 _("Using PKCS#11 key %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1283
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1283
 _("Error importing PKCS#11 key into private key structure: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1311
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1311
 _("Using private key file %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1322
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l571
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1322
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l571
 _("This version of OpenConnect was built without TPM support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1343
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1343
 _("Failed to interpret PEM file\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1362
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1362
 _("Failed to load PKCS#1 private key: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1375
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1389
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1375
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1389
 _("Failed to load private key as PKCS#8: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1397
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1397
 _("Failed to decrypt PKCS#8 certificate file\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1411
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1411
 _("Failed to determine type of private key %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1423
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1423
 _("Failed to get key ID: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1468
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1468
 _("Error signing test data with private key: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1483
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1483
 _("Error validating signature against certificate: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1507
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1507
 _("No SSL certificate found to match private key\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1519
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l486
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l629
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1519
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l486
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l629
 _("Using client certificate '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1526
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1526
 _("Setting certificate recovation list failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1547
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1557
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1547
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1557
 _("Failed to allocate memory for certificate\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1593
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1593
 _(""
 "WARNING: GnuTLS returned incorrect issuer certs; authentication may fail!\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1621
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1621
 _("Got next CA '%s' from PKCS11\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1647
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1647
 _("Failed to allocate memory for supporting certificates\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1670
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1670
 _("Adding supporting CA '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1698
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1698
 _("Setting certificate failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1886
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1886
 _("Server presented no certificate\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1892
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1892
 _("Error initialising X509 cert structure\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1898
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1898
 _("Error importing server's cert\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1907
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1586
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1907
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1587
 _("Could not calculate hash of server's certificate\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1912
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1912
 _("Error checking server cert status\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1917
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1917
 _("certificate revoked");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1919
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1919
 _("signer not found");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1921
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1921
 _("signer not a CA certificate");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1923
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1923
 _("insecure algorithm");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1925
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1925
 _("certificate not yet activated");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1927
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1927
 _("certificate expired");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1932
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1932
 _("signature verification failed");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1980
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1217
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1980
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1217
 _("certificate does not match hostname");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l1985
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1221
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l1985
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1221
 _("Server certificate verify failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2073
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2073
 _("Failed to allocate memory for cafile certs\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2094
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2094
 _("Failed to read certs from cafile: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2110
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2110
 _("Failed to open CA file '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2123
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1365
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2123
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1365
 _("Loading certificate failed. Aborting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2155
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2155
 _("Failed to set TLS priority string: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2167
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1470
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2167
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1470
 _("SSL negotiation with %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2214
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1496
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2214
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1496
 _("SSL connection cancelled\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2221
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2221
 _("SSL connection failure: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2230
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2230
 _("GnuTLS non-fatal return during handshake: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2236
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1521
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2236
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1521
 _("Connected to HTTPS on %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2239
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2239
 _("Renegotiated SSL on %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2422
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l182
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2422
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l182
 _("PIN required for %s");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2426
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l185
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2426
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l185
 _("Wrong PIN");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2429
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2429
 _("This is the final try before locking!");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2431
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2431
 _("Only a few tries left before locking!");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls.c#l2436
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l189
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls.c#l2436
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l189
 _("Enter PIN:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l84
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l84
 _("Failed to SHA1 input data for signing: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l106
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l106
 _("TPM sign function called for %d bytes.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l113
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l113
 _("Failed to create TPM hash object: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l120
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l120
 _("Failed to set value in TPM hash object: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l130
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l130
 _("TPM hash signature failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l152
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l152
 _("Error decoding TSS key blob: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l159
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l170
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l183
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l159
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l170
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l183
 _("Error in TSS key blob\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l190
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l190
 _("Failed to create TPM context: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l197
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l197
 _("Failed to connect TPM context: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l205
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l205
 _("Failed to load TPM SRK key: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l212
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l212
 _("Failed to load TPM SRK policy object: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l233
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l233
 _("Failed to set TPM PIN: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l249
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l249
 _("Failed to load TPM key blob: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l256
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l256
 _("Enter TPM SRK PIN:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l281
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l281
 _("Failed to create key policy object: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l289
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l289
 _("Failed to assign policy to key: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l295
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l295
 _("Enter TPM key PIN:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gnutls_tpm.c#l306
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gnutls_tpm.c#l306
 _("Failed to set key PIN: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l73
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l73
 _("Error importing GSSAPI name for authentication:\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l121
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l121
 _("Error generating GSSAPI response:\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l137
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l137
 _("Attempting GSSAPI authentication to proxy\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l183
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l240
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l186
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l245
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l183
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l240
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l186
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l245
 _("GSSAPI authentication completed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l194
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l194
 _("GSSAPI token too large (%zd bytes)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l208
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l208
 _("Sending GSSAPI token of %zu bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l213
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l213
 _("Failed to send GSSAPI authentication token to proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l221
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l248
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l221
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l248
 _("Failed to receive GSSAPI authentication token from proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l227
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l227
 _("SOCKS server reported GSSAPI context failure\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l231
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l231
 _("Unknown GSSAPI status response (0x%02x) from SOCKS server\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l252
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l252
 _("Got GSSAPI token of %zu bytes: %02x %02x %02x %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l279
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l279
 _("Sending GSSAPI protection negotiation of %zu bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l284
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l284
 _("Failed to send GSSAPI protection response to proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l292
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l302
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l292
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l302
 _("Failed to receive GSSAPI protection response from proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l307
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l307
 _("Got GSSAPI protection response of %zu bytes: %02x %02x %02x %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l317
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l317
 _("Invalid GSSAPI protection response from proxy (%zu bytes)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l326
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l405
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l326
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l405
 _("SOCKS proxy demands message integrity, which is not supported\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l330
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l409
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l330
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l409
 _("SOCKS proxy demands message confidentiality, which is not supported\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/gssapi.c#l334
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l413
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/gssapi.c#l334
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l413
 _("SOCKS proxy demands protection unknown type 0x%02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l297
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l297
 _("No memory for allocating cookies\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l363
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l363
 _("Failed to parse HTTP response '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l369
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l369
 _("Got HTTP response: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l377
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l377
 _("Error processing HTTP response\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l384
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l384
 _("Ignoring unknown HTTP response line '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l404
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l404
 _("Invalid cookie offered: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l423
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l423
 _("SSL certificate authentication failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l454
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l454
 _("Response body has negative size (%d)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l465
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l465
 _("Unknown Transfer-Encoding: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l484
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l484
 _("HTTP body %s (%d)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l498
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l525
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l498
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l525
 _("Error reading HTTP response body\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l511
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l511
 _("Error fetching chunk header\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l535
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l535
 _("Error fetching HTTP response body\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l538
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l538
 _("Error in chunked decoding. Expected '', got: '%s'");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l550
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l550
 _("Cannot receive HTTP 1.0 body without closing connection\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l627
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l627
 _("Not downloading XML profile because SHA1 already matches\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l650
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l650
 _("Failed to send GET request for new config\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l674
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l674
 _("Downloaded config file did not match intended SHA1\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l679
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l679
 _("Downloaded new XML profile\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l690
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l690
 _(""
 "Error: Running the 'Cisco Secure Desktop' trojan on Windows is not yet "
 "implemented.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l698
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l698
 _(""
 "Error: Server asked us to run CSD hostscan.\n"
 "You need to provide a suitable --csd-wrapper argument.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l705
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l705
 _(""
 "Error: Server asked us to download and run a 'Cisco Secure Desktop' trojan.\n"
 "This facility is disabled by default for security reasons, so you may wish "
 "to enable it.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l712
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l712
 _("Trying to run Linux CSD trojan script.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l739
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l739
 _("Temporary directory '%s' is not writable: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l747
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l747
 _("Failed to open temporary CSD script file: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l756
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l756
 _("Failed to write temporary CSD script file: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l774
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1414
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l774
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1414
 _("Failed to set uid %ld\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l779
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l779
 _("Invalid user uid=%ld\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l785
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l785
 _("Failed to change to CSD home directory '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l791
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l791
 _(""
 "Warning: you are running insecure CSD code with root privileges\n"
 "\t Use command line option \"--csd-user\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l836
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l836
 _("Failed to exec CSD script %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l960
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l960
 _("Failed to parse redirected URL '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l984
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l984
 _("Cannot follow redirection to non-https URL '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1012
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1012
 _("Allocating new path for relative redirect failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1175
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1175
 _("Unexpected %d result from server\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1202
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1202
 _("Unknown response from server\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1326
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1326
 _("Server requested SSL client certificate after one was provided\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1330
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1330
 _("Server requested SSL client certificate; none was configured\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1346
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1346
 _("XML POST enabled\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1389
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1389
 _("Refreshing %s after 1 second...\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1609
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1609
 _("request granted");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1610
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1610
 _("general failure");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1611
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1611
 _("connection not allowed by ruleset");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1612
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1612
 _("network unreachable");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1613
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1613
 _("host unreachable");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1614
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1614
 _("connection refused by destination host");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1615
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1615
 _("TTL expired");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1616
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1616
 _("command not supported / protocol error");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1617
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1617
 _("address type not supported");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1627
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1627
 _("SOCKS server requested username/password but we have none\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1635
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1635
 _("Username and password for SOCKS authentication must be < 255 bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1650
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1706
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1650
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1706
 _("Error writing auth request to SOCKS proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1658
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1713
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1658
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1713
 _("Error reading auth response from SOCKS proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1665
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1719
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1665
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1719
 _("Unexpected auth response from SOCKS proxy: %02x %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1671
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1671
 _("Authenticated to SOCKS server using password\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1675
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1675
 _("Password authentication to SOCKS server failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1731
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1738
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1731
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1738
 _("SOCKS server requested GSSAPI authentication\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1744
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1744
 _("SOCKS server requested password authentication\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1751
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1751
 _("SOCKS server requires authentication\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1753
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1993
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1753
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1993
 _("This version of OpenConnect was built without GSSAPI support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1758
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1758
 _("SOCKS server requested unknown authentication type %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1764
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1764
 _("Requesting SOCKS proxy connection to %s:%d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1779
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1779
 _("Error writing connect request to SOCKS proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1787
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1829
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1787
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1829
 _("Error reading connect response from SOCKS proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1793
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1793
 _("Unexpected connect response from SOCKS proxy: %02x %02x...\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1801
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1801
 _("SOCKS proxy error %02x: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1805
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1805
 _("SOCKS proxy error %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1822
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1822
 _("Unexpected address type %02x in SOCKS connect response\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1961
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1961
 _("Proxy requested Basic authentication which is disabled by default\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l1983
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l1983
 _("Attempting HTTP Basic authentication to proxy\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l2030
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l2030
 _("No more authentication methods to try\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l2115
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l2115
 _("Requesting HTTP proxy connection to %s:%d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l2150
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l2150
 _("Sending proxy request failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l2173
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l2173
 _("Proxy CONNECT request failed: %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l2200
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l2200
 _("Unknown proxy type '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/http.c#l2279
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/http.c#l2279
 _("Only http or socks(5) proxies supported\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/library.c#l469
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/library.c#l469
 _("Failed to parse server URL '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/library.c#l475
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/library.c#l475
 _("Only https:// permitted for server URL\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l319
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l319
 _("CommandLineToArgvW() failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l332
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l332
 _("Fatal error in command line handling\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l368
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l368
 _("ReadConsole() failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l381
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l394
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l381
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l394
 _("Error converting console input: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l388
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l624
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l388
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l624
 _("Allocation failure for string from stdin\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l555
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l555
 _(""
 "For assistance with OpenConnect, please see the web page at\n"
 "  http://www.infradead.org/openconnect/mail.html\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l564
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l564
 _("Using OpenSSL. Features present:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l566
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l566
 _("Using GnuTLS. Features present:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l575
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l575
 _("OpenSSL ENGINE not present");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l607
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l607
 _("using OpenSSL");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l611
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l611
 _(""
 "\n"
 "WARNING: No DTLS support in this binary. Performance will be impaired.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l643
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l643
 _("fgets (stdin)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l682
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l682
 _("Cannot process this executable path \"%s\"");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l688
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l688
 _("Allocation for vpnc-script path failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l699
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l699
 _("Usage:  openconnect [options] <server>\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l700
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l700
 _(""
 "Open client for Cisco AnyConnect VPN, version %s\n"
 "\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l702
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l702
 _("Read options from config file");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l704
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l704
 _("Continue in background after startup");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l705
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l705
 _("Write the daemon's PID to this file");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l707
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l707
 _("Use SSL client certificate CERT");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l708
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l708
 _("Warn when certificate lifetime < DAYS");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l709
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l709
 _("Use SSL private key file KEY");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l710
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l710
 _("Use WebVPN cookie COOKIE");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l711
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l711
 _("Read cookie from standard input");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l712
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l712
 _("Enable compression (default)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l713
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l713
 _("Disable compression");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l714
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l714
 _("Set minimum Dead Peer Detection interval");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l715
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l715
 _("Set login usergroup");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l716
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l716
 _("Display help text");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l717
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l717
 _("Use IFNAME for tunnel interface");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l719
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l719
 _("Use syslog for progress messages");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l721
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l721
 _("Prepend timestamp to progress messages");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l723
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l723
 _("Drop privileges after connecting");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l724
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l724
 _("Drop privileges during CSD execution");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l725
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l725
 _("Run SCRIPT instead of CSD binary");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l727
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l727
 _("Request MTU from server");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l728
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l728
 _("Indicate path MTU to/from server");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l729
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l729
 _("Set key passphrase or TPM SRK PIN");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l730
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l730
 _("Key passphrase is fsid of file system");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l731
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l731
 _("Set proxy server");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l732
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l732
 _("Set proxy authentication methods");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l733
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l733
 _("Disable proxy");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l734
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l734
 _("Use libproxy to automatically configure proxy");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l736
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l736
 _("(NOTE: libproxy disabled in this build)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l738
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l738
 _("Require perfect forward secrecy");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l739
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l739
 _("Less output");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l740
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l740
 _("Set packet queue limit to LEN pkts");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l741
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l741
 _("Shell command line for using a vpnc-compatible config script");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l742
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l742
 _("default");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l744
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l744
 _("Pass traffic to 'script' program, not tun");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l746
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l746
 _("Set login username");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l747
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l747
 _("Report version number");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l748
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l748
 _("More output");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l749
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l749
 _("Dump HTTP authentication traffic (implies --verbose");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l750
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l750
 _("XML config file");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l751
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l751
 _("Choose authentication login selection");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l752
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l752
 _("Authenticate only and print login info");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l753
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l753
 _("Fetch webvpn cookie only; don't connect");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l754
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l754
 _("Print webvpn cookie before connecting");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l755
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l755
 _("Cert file for server verification");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l756
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l756
 _("Do not ask for IPv6 connectivity");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l757
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l757
 _("OpenSSL ciphers to support for DTLS");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l758
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l758
 _("Disable DTLS");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l759
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l759
 _("Disable HTTP connection re-use");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l760
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l760
 _("Disable password/SecurID authentication");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l761
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l761
 _("Do not require server SSL cert to be valid");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l762
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l762
 _("Disable default system certificate authorities");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l763
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l763
 _("Do not attempt XML POST authentication");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l764
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l764
 _("Do not expect user input; exit if it is required");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l765
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l765
 _("Read password from standard input");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l766
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l766
 _("Software token type: rsa, totp or hotp");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l767
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l767
 _("Software token secret");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l769
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l769
 _("(NOTE: libstoken (RSA SecurID) disabled in this build)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l772
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l772
 _("(NOTE: liboath (TOTP,HOTP) disabled in this build)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l775
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l775
 _("(NOTE: Yubikey OATH disabled in this build)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l777
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l777
 _("Connection retry timeout in seconds");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l778
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l778
 _("Server's certificate SHA1 fingerprint");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l779
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l779
 _("HTTP header User-Agent: field");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l780
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l780
 _("OS type (linux,linux-64,win,...) to report");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l781
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l781
 _("Set local port for DTLS datagrams");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l802
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l802
 _("Failed to allocate string\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l863
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l863
 _("Failed to get line from config file: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l903
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l903
 _("Unrecognised option at line %d: '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l913
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l913
 _("Option '%s' does not take an argument at line %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l917
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l917
 _("Option '%s' requires an argument at line %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l973
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l973
 _(""
 "WARNING: This version of openconnect was built without iconv\n"
 "         support but you appear to be using the legacy character\n"
 "         set \"%s\". Expect strangeness.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l980
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l980
 _(""
 "WARNING: This version of openconnect is %s but\n"
 "         the libopenconnect library is %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l990
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l990
 _("Failed to allocate vpninfo structure\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1026
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1040
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1026
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1040
 _("Invalid user \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1055
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1055
 _("Cannot use 'config' option inside config file\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1063
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1063
 _("Cannot open config file '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1152
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1161
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1152
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1161
 _("MTU %d too small\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1188
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1188
 _(""
 "Disabling all HTTP connection re-use due to --no-http-keepalive option.\n"
 "If this helps, please report to <openconnect-devel@lists.infradead.org>.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1208
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1208
 _("Queue length zero not permitted; using 1\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1222
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1222
 _("OpenConnect version %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1252
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1252
 _("Invalid software token mode \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1262
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1262
 _("Invalid OS identity \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1289
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1289
 _("Too many arguments on command line\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1292
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1292
 _("No server specified\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1308
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1308
 _("This version of openconnect was built without libproxy support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1335
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1335
 _("Error opening cmd pipe\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1368
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1368
 _("Failed to obtain WebVPN cookie\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1389
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1389
 _("Creating SSL connection failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1399
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1399
 _("Set up tun script failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1406
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1406
 _("Set up tun device failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1423
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1423
 _("Set up DTLS failed; using SSL instead\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1427
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1427
 _("Connected %s as %s%s%s, using %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1437
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1438
 _("No --script argument provided; DNS and routing are not configured\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1439
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1440
 _("See http://www.infradead.org/openconnect/vpnc-script.html\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1452
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1453
 _("Failed to open '%s' for write: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1464
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1465
 _("Continuing in background; pid %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1479
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1480
 _("User requested reconnect\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1487
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1488
 _("Cookie was rejected on reconnection; exiting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1491
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1492
 _("Session terminated by server; exiting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1495
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1496
 _("User cancelled (SIGINT); exiting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1499
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1500
 _("User detached from session (SIGHUP); exiting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1503
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1504
 _("Unknown error; exiting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1522
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1523
 _("Failed to open %s for write: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1530
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1531
 _("Failed to write config to %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1589
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1590
 _("Server SSL certificate didn't match: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1611
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1612
 _(""
 "\n"
 "Certificate from VPN server \"%s\" failed verification.\n"
 "Reason: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1617
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1618
 _("Enter '%s' to accept, '%s' to abort; anything else to view: ");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1618
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1636
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1619
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1637
 _("no");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1618
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1624
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1619
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1625
 _("yes");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1645
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1646
 _("Server key hash: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1679
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1680
 _("Auth choice \"%s\" matches multiple options\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1682
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1683
 _("Auth choice \"%s\" not available\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1699
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1700
 _("User input required in non-interactive mode\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1870
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1871
 _("Failed to open token file for write: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1878
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1879
 _("Failed to write token: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1923
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1944
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1924
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1945
 _("Soft token string is invalid\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1926
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1927
 _("Can't open ~/.stokenrc file\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1929
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1930
 _("OpenConnect was not built with libstoken support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1932
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1933
 _("General failure in libstoken\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1947
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1948
 _("OpenConnect was not built with liboath support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1950
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1951
 _("General failure in liboath\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1961
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1962
 _("Yubikey token not found\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1964
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1965
 _("OpenConnect was not built with Yubikey support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/main.c#l1967
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/main.c#l1968
 _("General Yubikey failure: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/mainloop.c#l182
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/mainloop.c#l182
 _("Caller paused the connection\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/mainloop.c#l190
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/mainloop.c#l190
 _("No work to do; sleeping for %d ms...\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/mainloop.c#l211
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/mainloop.c#l211
 _("WaitForMultipleObjects failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ntlm.c#l86
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l113
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l192
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ntlm.c#l86
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l113
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l192
 _("InitializeSecurityContext() failed: %lx\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ntlm.c#l110
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l48
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ntlm.c#l110
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l48
 _("AcquireCredentialsHandle() failed: %lx\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ntlm.c#l235
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ntlm.c#l235
 _("Error communicating with ntlm_auth helper\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ntlm.c#l251
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ntlm.c#l251
 _("Attempting HTTP NTLM authentication to proxy (single-sign-on)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ntlm.c#l1011
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ntlm.c#l1011
 _("Attempting HTTP NTLMv%d authentication to proxy\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l114
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l114
 _("This version of OpenConnect was built without PSKC support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l240
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l268
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l275
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l446
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l240
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l268
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l275
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l446
 _("OK to generate INITIAL tokencode\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l244
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l271
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l280
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l450
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l244
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l271
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l280
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l450
 _("OK to generate NEXT tokencode\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l249
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l275
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l285
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l249
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l275
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l285
 _("Server is rejecting the soft token; switching to manual entry\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l291
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l291
 _("Generating OATH TOTP token code\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l301
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l301
 _("Unable to generate OATH TOTP token code: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l405
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l405
 _("Generating OATH HOTP token code\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/oath.c#l422
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/oath.c#l422
 _("Unable to generate OATH HOTP token code: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openconnect-internal.h#l795
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openconnect-internal.h#l803
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openconnect-internal.h#l802
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openconnect-internal.h#l810
 _("ERROR: %s() called with invalid UTF-8 for '%s' argument\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l42
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l42
 _("Failed to establish libp11 PKCS#11 context:\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l48
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l48
 _("Failed to load PKCS#11 provider module (p11-kit-proxy.so):\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l252
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l252
 _("PIN locked\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l255
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l255
 _("PIN expired\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l258
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l258
 _("Another user already logged in\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l262
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l262
 _("Unknown error logging in to PKCS#11 token\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l269
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l269
 _("Logged in to PKCS#11 slot '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l283
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l283
 _("Failed to enumerate certs in PKCS#11 slot '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l289
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l289
 _("Found %d certs in slot '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l321
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l473
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l321
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l473
 _("Failed to parse PKCS#11 URI '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l328
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l483
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l328
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l483
 _("Failed to enumerate PKCS#11 slots\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l362
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l525
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l362
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l525
 _("Logging in to PKCS#11 slot '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l377
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l377
 _("Certificate X.509 content not fetched by libp11\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l388
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l633
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l388
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l633
 _("Failed to install certificate in OpenSSL context\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l434
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l434
 _("Failed to enumerate keys in PKCS#11 slot '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l440
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l440
 _("Found %d keys in slot '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l554
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l554
 _("Failed to instantiated private key from PKCS#11\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l561
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l561
 _("Add key from PKCS#11 failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l593
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl-pkcs11.c#l599
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l593
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl-pkcs11.c#l599
 _("This version of OpenConnect was built without PKCS#11 support\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l116
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l116
 _("Failed to write to SSL socket\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l148
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l200
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l148
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l200
 _("Failed to read from SSL socket\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l286
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l286
 _("Unhandled SSL UI request type %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l393
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l393
 _("PEM password too long (%d >= %d)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l424
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l424
 _("Extra cert from %s: '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l474
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l474
 _("Parse PKCS#12 failed (see above errors)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l489
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l489
 _("PKCS#12 contained no certificate!");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l498
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l498
 _("PKCS#12 contained no private key!");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l503
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l503
 _("PKCS#12");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l521
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l521
 _("Can't load TPM engine.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l527
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l527
 _("Failed to init TPM engine\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l537
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l537
 _("Failed to set TPM SRK password\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l551
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l551
 _("Failed to load TPM private key\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l557
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l557
 _("Add key from TPM failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l607
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l753
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l607
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l753
 _("Failed to open certificate file %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l617
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l617
 _("Loading certificate failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l655
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l655
 _("Failed to process all supporting certs. Trying anyway...\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l668
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l668
 _("PEM file");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l697
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l697
 _("Failed to create BIO for keystore item '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l722
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l722
 _("Loading private key failed (wrong passphrase?)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l728
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l728
 _("Loading private key failed (see above errors)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l776
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l776
 _("Failed to load X509 certificate from keystore\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l782
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l782
 _("Failed to use X509 certificate from keystore\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l815
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l815
 _("Failed to use private key from keystore\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l830
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l830
 _("Failed to open private key file %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l850
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l850
 _("Loading private key failed\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l871
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l871
 _("Failed to identify private key type in '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1048
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1048
 _("Matched DNS altname '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1055
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1055
 _("No match for altname '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1069
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1069
 _("Certificate has GEN_IPADD altname with bogus length %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1080
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1080
 _("Matched %s address '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1087
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1087
 _("No match for %s address '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1129
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1129
 _("URI '%s' has non-empty path; ignoring\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1134
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1134
 _("Matched URI '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1145
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1145
 _("No match for URI '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1160
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1160
 _("No altname in peer cert matched '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1168
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1168
 _("No subject name in peer cert!\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1188
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1188
 _("Failed to parse subject name in peer cert\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1195
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1195
 _("Peer cert subject mismatch ('%s' != '%s')\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1200
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1200
 _("Matched peer certificate subject name '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1268
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1268
 _("Extra cert from cafile: '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1299
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1299
 _("Error in client cert notAfter field\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1312
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1312
 _("<error>");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1411
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1411
 _("Failed to read certs from CA file '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1444
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1444
 _("Failed to open CA file '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/openssl.c#l1486
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/openssl.c#l1486
 _("SSL connection failure\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/script.c#l96
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/script.c#l96
 _("Discard bad split include: \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/script.c#l100
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/script.c#l100
 _("Discard bad split exclude: \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/script.c#l465
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/script.c#l513
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/script.c#l465
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/script.c#l513
 _("Failed to spawn script '%s' for %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/script.c#l520
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/script.c#l520
 _("Script '%s' exited abnormally (%x)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/script.c#l528
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/script.c#l528
 _("Script '%s' returned error %d\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l83
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l83
 _("Socket connect cancelled\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l154
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l154
 _("Failed to reconnect to proxy %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l158
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l158
 _("Failed to reconnect to host %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l224
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l224
 _("Proxy from libproxy: %s://%s:%d/\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l249
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l249
 _("getaddrinfo failed for host '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l258
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l349
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l258
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l349
 _("Reconnecting to DynDNS server using previously cached IP address\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l273
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l273
 _("Attempting to connect to proxy %s%s%s:%s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l274
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l274
 _("Attempting to connect to server %s%s%s:%s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l293
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l293
 _("Failed to allocate sockaddr storage\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l334
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l334
 _("Forgetting non-functional previous peer address\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l344
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l344
 _("Failed to connect to host %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l363
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l363
 _("Reconnecting to proxy %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l434
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l434
 _("statvfs: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l462
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l462
 _("Could not obtain file system ID for passphrase\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l473
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l473
 _("Failed to open private key file '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l501
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l501
 _("statfs: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l587
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l587
 _("No error");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l588
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l588
 _("Keystore locked");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l589
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l589
 _("Keystore uninitialized");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l590
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l590
 _("System error");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l591
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l591
 _("Protocol error");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l592
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l592
 _("Permission denied");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l593
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l593
 _("Key not found");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l594
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l594
 _("Value corrupted");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l595
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l595
 _("Undefined action");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l599
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l599
 _("Wrong password");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l600
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l600
 _("Unknown error");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/ssl.c#l790
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/ssl.c#l790
 _("openconnect_fopen_utf8() used with unsupported mode '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l198
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l198
 _("SSPI token too large (%ld bytes)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l212
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l212
 _("Sending SSPI token of %lu bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l217
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l217
 _("Failed to send SSPI authentication token to proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l225
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l253
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l225
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l253
 _("Failed to receive SSPI authentication token from proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l231
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l231
 _("SOCKS server reported SSPI context failure\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l235
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l235
 _("Unknown SSPI status response (0x%02x) from SOCKS server\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l257
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l257
 _("Got SSPI token of %lu bytes: %02x %02x %02x %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l273
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l273
 _("QueryContextAttributes() failed: %lx\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l309
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l309
 _("EncryptMessage() failed: %lx\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l321
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l321
 _("EncryptMessage() result too large (%lu + %lu + %lu)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l347
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l347
 _("Sending SSPI protection negotiation of %u bytes\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l352
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l352
 _("Failed to send SSPI protection response to proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l360
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l370
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l360
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l370
 _("Failed to receive SSPI protection response from proxy: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l375
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l375
 _("Got SSPI protection response of %d bytes: %02x %02x %02x %02x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l391
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l391
 _("DecryptMessage failed: %lx\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/sspi.c#l396
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/sspi.c#l396
 _("Invalid SSPI protection response from proxy (%lu bytes)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l77
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l77
 _("Enter credentials to unlock software token.");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l82
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l82
 _("Device ID:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l89
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l89
 _("Password:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l118
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l118
 _("User bypassed soft token.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l124
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l209
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l124
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l209
 _("All fields are required; try again.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l134
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l304
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l134
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l304
 _("General failure in libstoken.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l138
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l138
 _("Incorrect device ID or password; try again.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l142
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l142
 _("Soft token init was successful.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l185
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l185
 _("Enter software token PIN.");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l189
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l189
 _("PIN:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l216
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l216
 _("Invalid PIN format; try again.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/stoken.c#l299
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/stoken.c#l299
 _("Generating RSA token code\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l75
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l75
 _("Error accessing registry key for network adapters\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l138
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l138
 _("Ignoring non-matching TAP interface \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l153
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l153
 _("No Windows-TAP adapters found. Is the driver installed?\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l171
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l171
 _("Failed to open %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l176
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l176
 _("Opened tun device %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l184
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l184
 _("Failed to obtain TAP driver version: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l190
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l190
 _("Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l207
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l207
 _("Failed to set TAP IP addresses: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l219
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l219
 _("Failed to set TAP media status: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l249
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l249
 _("TAP device aborted connectivity. Disconnecting.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l254
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l254
 _("Failed to read from TAP device: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l268
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l268
 _("Failed to complete read from TAP device: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l291
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l291
 _("Wrote %ld bytes to tun\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l301
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l301
 _("Waiting for tun write...\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l304
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l304
 _("Wrote %ld bytes to tun after waiting\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l311
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l311
 _("Failed to write to TAP device: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun-win32.c#l338
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun-win32.c#l338
 _("Spawning tunnel scripts is not yet supported on Windows\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l88
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l88
 _("Could not open /dev/tun for plumbing");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l92
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l92
 _("Can't push IP");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l102
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l102
 _("Can't set ifname");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l109
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l109
 _("Can't open %s: %s");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l118
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l118
 _("Can't plumb %s for IPv%d: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l139
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l139
 _("open /dev/tun");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l145
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l145
 _("Failed to create new tun");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l151
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l151
 _("Failed to put tun file descriptor into message-discard mode");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l196
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l196
 _("open net");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l205
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l205
 _("SIOCSIFMTU");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l233
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l413
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l233
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l413
 _("Failed to open tun device: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l243
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l243
 _("TUNSETIFF failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l307
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l307
 _("Invalid interface name '%s'; must match 'utun%%d' or 'tun%%d'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l316
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l316
 _("Failed to open SYSPROTO_CONTROL socket: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l325
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l325
 _("Failed to query utun control id: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l343
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l343
 _("Failed to allocate utun device name\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l354
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l354
 _("Failed to connect utun unit: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l373
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l373
 _("Invalid interface name '%s'; must match 'tun%%d'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l383
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l383
 _("Cannot open '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l422
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l422
 _("TUNSIFHEAD");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l464
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l464
 _("socketpair failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l469
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l469
 _("fork failed: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l473
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l473
 _("setpgid");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l478
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l478
 _("execl");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l483
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l483
 _("(script)");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l526
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l526
 _("Unknown packet (len %d) received: %02x %02x %02x %02x...\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/tun.c#l543
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/tun.c#l543
 _("Failed to write incoming packet: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l45
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l45
 _("Failed to open %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l52
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l52
 _("Failed to fstat() %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l62
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l62
 _("Failed to allocate %d bytes for %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l70
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l70
 _("Failed to read %s: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l124
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l148
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l124
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l148
 _("Treating host \"%s\" as a raw hostname\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l131
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l131
 _("Failed to SHA1 existing file\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l138
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l138
 _("XML config file SHA1: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l146
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l146
 _("Failed to parse XML config file %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l183
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l183
 _("Host \"%s\" has address \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l193
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l193
 _("Host \"%s\" has UserGroup \"%s\"\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/xml.c#l207
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/xml.c#l207
 _("Host \"%s\" not listed in config; treating as raw hostname\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l80
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l80
 _("Failed to send \"%s\" to ykneo-oath applet: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l87
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l87
 _("Invalid short response to \"%s\" from ykneo-oath applet\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l106
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l106
 _("Failure response to \"%s\": %04x\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l158
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l158
 _("select applet command");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l169
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l368
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l169
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l368
 _("Unrecognised response from ykneo-oath applet\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l185
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l185
 _("Found ykneo-oath applet v%d.%d.%d.\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l206
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l206
 _("PIN required for Yubikey OATH applet");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l211
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l211
 _("Yubikey PIN:");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l233
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l233
 _("Failed to calculate Yubikey unlock response\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l249
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l249
 _("unlock command");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l286
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l286
 _("Failed to establish PC/SC context: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l291
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l291
 _("Established PC/SC context\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l297
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l309
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l297
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l309
 _("Failed to query reader list: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l336
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l336
 _("Failed to connect to PC/SC reader '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l341
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l341
 _("Connected PC/SC reader '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l346
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l346
 _("Failed to obtain exclusive access to reader '%s': %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l356
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l356
 _("list keys command");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l389
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l389
 _("Found %s/%s key '%s' on '%s'\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l406
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l406
 _(""
 "Token '%s' not found on Yubikey '%s'. Searching for another Yubikey...\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l455
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l455
 _("Server is rejecting the Yubikey token; switching to manual entry\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l510
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l510
 _("Generating Yubikey token code\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l515
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l515
 _("Failed to obtain exclusive access to Yubikey: %s\n");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l561
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l561
 _("calculate command");
 
-// http://git.infradead.org/users/dwmw2/openconnect.git/blob/9c843196e0:/yubikey.c#l569
+// http://git.infradead.org/users/dwmw2/openconnect.git/blob/362150dc24:/yubikey.c#l569
 _("Unrecognised response from Yubikey when generating tokencode\n");
