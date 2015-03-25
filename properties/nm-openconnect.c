@@ -68,16 +68,16 @@
 static void openconnect_plugin_ui_interface_init (NMVpnPluginUiInterface *iface_class);
 
 G_DEFINE_TYPE_EXTENDED (OpenconnectPluginUi, openconnect_plugin_ui, G_TYPE_OBJECT, 0,
-						G_IMPLEMENT_INTERFACE (NM_TYPE_VPN_PLUGIN_UI_INTERFACE,
-											   openconnect_plugin_ui_interface_init))
+                        G_IMPLEMENT_INTERFACE (NM_TYPE_VPN_PLUGIN_UI_INTERFACE,
+                                               openconnect_plugin_ui_interface_init))
 
 /************** UI widget class **************/
 
 static void openconnect_plugin_ui_widget_interface_init (NMVpnPluginUiWidgetInterface *iface_class);
 
 G_DEFINE_TYPE_EXTENDED (OpenconnectPluginUiWidget, openconnect_plugin_ui_widget, G_TYPE_OBJECT, 0,
-						G_IMPLEMENT_INTERFACE (NM_TYPE_VPN_PLUGIN_UI_WIDGET_INTERFACE,
-											   openconnect_plugin_ui_widget_interface_init))
+                        G_IMPLEMENT_INTERFACE (NM_TYPE_VPN_PLUGIN_UI_WIDGET_INTERFACE,
+                                               openconnect_plugin_ui_widget_interface_init))
 
 #define OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET, OpenconnectPluginUiWidgetPrivate))
 
@@ -446,8 +446,8 @@ init_token_mode_options (GtkComboBox *token_mode)
 
 static gboolean
 init_token_ui (OpenconnectPluginUiWidget *self,
-				OpenconnectPluginUiWidgetPrivate *priv,
-				NMSettingVPN *s_vpn)
+               OpenconnectPluginUiWidgetPrivate *priv,
+               NMSettingVPN *s_vpn)
 {
 	GtkWidget *widget;
 	GtkComboBox *token_mode;
@@ -669,21 +669,21 @@ update_connection (NMVpnPluginUiWidgetInterface *iface,
 
 	/* These are different for every login session, and should not be stored */
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gwcert",
-								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
+	                             NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "cookie",
-								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
+	                             NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "gateway",
-								 NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
+	                             NM_SETTING_SECRET_FLAG_NOT_SAVED, NULL);
 
 	/* These are purely internal data for the auth-dialog, and should be stored */
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "xmlconfig",
-								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	                             NM_SETTING_SECRET_FLAG_NONE, NULL);
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "lasthost",
-								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	                             NM_SETTING_SECRET_FLAG_NONE, NULL);
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "autoconnect",
-								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	                             NM_SETTING_SECRET_FLAG_NONE, NULL);
 	nm_setting_set_secret_flags (NM_SETTING (s_vpn), "certsigs",
-								 NM_SETTING_SECRET_FLAG_NONE, NULL);
+	                             NM_SETTING_SECRET_FLAG_NONE, NULL);
 	/* Note that the auth-dialog will also store "extra" secrets for form
 	   entries, depending on the arbitrary forms that we're offered by the
 	   server during authentication. We can't know about those in advance,
@@ -811,7 +811,7 @@ ui_factory (NMVpnPluginUiInterface *iface, NMConnection *connection, GError **er
 
 static void
 get_property (GObject *object, guint prop_id,
-			  GValue *value, GParamSpec *pspec)
+              GValue *value, GParamSpec *pspec)
 {
 	switch (prop_id) {
 	case NM_VPN_PLUGIN_UI_INTERFACE_PROP_NAME:
@@ -837,16 +837,16 @@ openconnect_plugin_ui_class_init (OpenconnectPluginUiClass *req_class)
 	object_class->get_property = get_property;
 
 	g_object_class_override_property (object_class,
-									  NM_VPN_PLUGIN_UI_INTERFACE_PROP_NAME,
-									  NM_VPN_PLUGIN_UI_INTERFACE_NAME);
+	                                  NM_VPN_PLUGIN_UI_INTERFACE_PROP_NAME,
+	                                  NM_VPN_PLUGIN_UI_INTERFACE_NAME);
 
 	g_object_class_override_property (object_class,
-									  NM_VPN_PLUGIN_UI_INTERFACE_PROP_DESC,
-									  NM_VPN_PLUGIN_UI_INTERFACE_DESC);
+	                                  NM_VPN_PLUGIN_UI_INTERFACE_PROP_DESC,
+	                                  NM_VPN_PLUGIN_UI_INTERFACE_DESC);
 
 	g_object_class_override_property (object_class,
-									  NM_VPN_PLUGIN_UI_INTERFACE_PROP_SERVICE,
-									  NM_VPN_PLUGIN_UI_INTERFACE_SERVICE);
+	                                  NM_VPN_PLUGIN_UI_INTERFACE_PROP_SERVICE,
+	                                  NM_VPN_PLUGIN_UI_INTERFACE_SERVICE);
 }
 
 static void

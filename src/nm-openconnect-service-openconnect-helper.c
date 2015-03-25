@@ -631,7 +631,7 @@ main (int argc, char *argv[])
 
 	if (g_hash_table_size (ip4config)) {
 		g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_HAS_IP4,
-							 bool_to_gvalue (TRUE));
+		                     bool_to_gvalue (TRUE));
 	} else {
 		g_hash_table_destroy (ip4config);
 		ip4config = NULL;
@@ -639,7 +639,7 @@ main (int argc, char *argv[])
 
 	if (g_hash_table_size (ip6config)) {
 		g_hash_table_insert (config, NM_VPN_PLUGIN_CONFIG_HAS_IP6,
-							 bool_to_gvalue (TRUE));
+		                     bool_to_gvalue (TRUE));
 	} else {
 		g_hash_table_destroy (ip6config);
 		ip6config = NULL;

@@ -71,7 +71,7 @@ static const char *openconnect_binary_paths[] =
 	NULL
 };
 
-#define NM_OPENCONNECT_HELPER_PATH		LIBEXECDIR"/nm-openconnect-service-openconnect-helper"
+#define NM_OPENCONNECT_HELPER_PATH LIBEXECDIR"/nm-openconnect-service-openconnect-helper"
 
 typedef struct {
 	const char *name;
@@ -661,7 +661,8 @@ int main (int argc, char *argv[])
 	g_option_context_add_main_entries (opt_ctx, options, NULL);
 
 	g_option_context_set_summary (opt_ctx,
-		_("nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN capability to NetworkManager."));
+	                              _("nm-openconnect-service provides integrated "
+	                                "Cisco AnyConnect SSL VPN capability to NetworkManager."));
 
 	g_option_context_parse (opt_ctx, &argc, &argv, NULL);
 	g_option_context_free (opt_ctx);
