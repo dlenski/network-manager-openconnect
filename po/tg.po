@@ -850,7 +850,7 @@ msgstr ""
 
 #: gnutls.c:1413
 #, c-format
-msgid "Setting certificate recovation list failed: %s\n"
+msgid "Setting certificate revocation list failed: %s\n"
 msgstr ""
 
 #: gnutls.c:1434 gnutls.c:1444

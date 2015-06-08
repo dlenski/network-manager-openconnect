@@ -1725,7 +1725,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/fa7b00d8cd:/gnutls.c#l1577
 #: ../openconnect-strings.txt:842
 #, c-format
-msgid "Setting certificate recovation list failed: %s\n"
+msgid "Setting certificate revocation list failed: %s\n"
 msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/fa7b00d8cd:/gnutls.c#l1598

@@ -1071,7 +1071,7 @@ msgstr "Usando el certificado del cliente '%s'\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/97b49dbcd2:/gnutls.c#l1412
 #: ../openconnect-strings.txt:555
 #, c-format
-msgid "Setting certificate recovation list failed: %s\n"
+msgid "Setting certificate revocation list failed: %s\n"
 msgstr "Configuración de lista de revocación del certificado fallida: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/97b49dbcd2:/gnutls.c#l1433

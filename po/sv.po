@@ -1726,7 +1726,7 @@ msgstr "Använder klientcertifikatet ”%s”\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9218aedf94:/gnutls.c#l1577
 #: ../openconnect-strings.txt:842
 #, c-format
-msgid "Setting certificate recovation list failed: %s\n"
+msgid "Setting certificate revocation list failed: %s\n"
 msgstr "Misslyckades med att sätta certifikatindragningslistan: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9218aedf94:/gnutls.c#l1598

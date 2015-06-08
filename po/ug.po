@@ -1143,7 +1143,7 @@ msgstr "خېرىدار گۇۋاھنامىسى '%s' نى ئىشلىتىدۇ\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/gnutls.c#l1421
 #: ../openconnect-strings.txt:607
 #, c-format
-msgid "Setting certificate recovation list failed: %s\n"
+msgid "Setting certificate revocation list failed: %s\n"
 msgstr "گۇۋاھنامە كۈچتىن قېلىش تىزىمىنى تەڭشەۋاتقاندا خاتالىق كۆرۈلدى: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/39c7877406:/gnutls.c#l1442
