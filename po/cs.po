@@ -257,7 +257,7 @@ msgstr "Ignoruje se neznámý typ vstupu „%s“ ve formuláři\n"
 #: ../openconnect-strings.txt:20
 #, c-format
 msgid "Discarding duplicate option '%s'\n"
-msgstr "Ignoruje se zdvojená volba: „%s“"
+msgstr "Ignoruje se zdvojená volba: „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/db3501d5c7:/auth-juniper.c#l224
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/db3501d5c7:/auth.c#l406
@@ -3745,7 +3745,7 @@ msgstr "Neznámá zpráva KMP %d délky %d:\n"
 #: ../openconnect-strings.txt:1967
 #, c-format
 msgid ".... + %d more bytes unreceived\n"
-msgstr "… + dalších %d nepřijatých batjů"
+msgstr "… + dalších %d nepřijatých batjů\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/db3501d5c7:/oncp.c#l1084
 #: ../openconnect-strings.txt:1970
