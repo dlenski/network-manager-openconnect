@@ -2652,7 +2652,7 @@ msgstr "no"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/97b49dbcd2:/main.c#l1567
 #: ../openconnect-strings.txt:1431
 msgid "yes"
-msgstr "sí"
+msgstr "sí"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/97b49dbcd2:/main.c#l1588
 #: ../openconnect-strings.txt:1434
