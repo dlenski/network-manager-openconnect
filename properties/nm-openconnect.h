@@ -25,20 +25,6 @@
 
 #include <glib-object.h>
 
-typedef enum
-{
-	OPENCONNECT_PLUGIN_UI_ERROR_UNKNOWN = 0,
-	OPENCONNECT_PLUGIN_UI_ERROR_INVALID_PROPERTY,
-	OPENCONNECT_PLUGIN_UI_ERROR_MISSING_PROPERTY
-} OpenconnectPluginUiError;
-
-
-GQuark openconnect_plugin_ui_error_quark (void);
-#define OPENCONNECT_PLUGIN_UI_ERROR openconnect_plugin_ui_error_quark ()
-
-#define OPENCONNECT_TYPE_PLUGIN_UI_ERROR (openconnect_plugin_ui_error_get_type ()) 
-GType openconnect_plugin_ui_error_get_type (void);
-
 #define OPENCONNECT_TYPE_PLUGIN_UI            (openconnect_plugin_ui_get_type ())
 #define OPENCONNECT_PLUGIN_UI(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), OPENCONNECT_TYPE_PLUGIN_UI, OpenconnectPluginUi))
 #define OPENCONNECT_PLUGIN_UI_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), OPENCONNECT_TYPE_PLUGIN_UI, OpenconnectPluginUiClass))
