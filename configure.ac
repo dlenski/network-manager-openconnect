@@ -70,11 +70,11 @@ if test x"$with_gnome" != xno; then
 	fi
 fi
 
-PKG_CHECK_MODULES(NM,
-                  NetworkManager >= 0.9.10
-                  libnm-util >= 0.9.10
-                  libnm-glib  >= 0.9.10
-                  libnm-glib-vpn >= 0.9.10)
+PKG_CHECK_MODULES(LIBNM_GLIB,
+                  NetworkManager >= 1.1.0
+                  libnm-util >= 1.1.0
+                  libnm-glib  >= 1.1.0
+                  libnm-glib-vpn >= 1.1.0)
 
 dnl
 dnl Distribution version string
@@ -83,6 +83,10 @@ AC_ARG_WITH(dist-version, AS_HELP_STRING([--with-dist-version=<dist-version>], [
 if ! test x"$ac_distver" = x""; then
   AC_DEFINE_UNQUOTED(DIST_VERSION, "$ac_distver", [Define the distribution version string])
 fi
+
+PKG_CHECK_MODULES(LIBNM, libnm >= 1.1.0)
+LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_2"
+LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_2"
 
 NM_COMPILER_WARNINGS
 

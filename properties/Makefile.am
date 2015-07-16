@@ -27,21 +27,21 @@ common_CFLAGS =                                         \
 
 libnm_vpn_plugin_openconnect_la_CFLAGS =                \
 	$(common_CFLAGS)                                \
-	$(NM_CFLAGS)
+	$(LIBNM_CFLAGS)
 
 libnm_openconnect_properties_la_CFLAGS =            \
 	-DNM_OPENCONNECT_OLD                            \
 	$(common_CFLAGS)                                \
-	$(NM_CFLAGS)
+	$(LIBNM_GLIB_CFLAGS)
 
 libnm_vpn_plugin_openconnect_la_LIBADD = \
 	$(GTK_LIBS) \
-	$(NM_LIBS) \
+	$(LIBNM_LIBS) \
 	$(OPENCONNECT_LIBS)
 
 libnm_openconnect_properties_la_LIBADD = \
 	$(GTK_LIBS) \
-	$(NM_LIBS) \
+	$(LIBNM_GLIB_LIBS) \
 	$(OPENCONNECT_LIBS)
 
 libnm_vpn_plugin_openconnect_la_LDFLAGS = \
