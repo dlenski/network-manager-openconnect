@@ -34,7 +34,6 @@
 #include <dbus/dbus-glib-lowlevel.h>
 #include <dbus/dbus-glib.h>
 #include <NetworkManager.h>
-#include <nm-vpn-plugin-utils.h>
 
 #include "nm-openconnect-service.h"
 #include "nm-utils.h"
@@ -385,6 +384,63 @@ get_ip4_routes (void)
 	return value;
 }
 
+/* Taken from libnm-util; will be gone and replaced with a call to
+ * nm_utils_ip_routes_to_variant with port to GDBus. */
+static void
+nm_utils_ip6_routes_to_gvalue (GSList *list, GValue *value)
+{
+	GPtrArray *routes;
+	GSList *iter;
+
+	routes = g_ptr_array_new ();
+
+	for (iter = list; iter; iter = iter->next) {
+		NMIPRoute *route = (NMIPRoute *) iter->data;
+		GValueArray *array;
+		const struct in6_addr *addr;
+		GByteArray *ba;
+		GValue element = G_VALUE_INIT;
+
+		array = g_value_array_new (4);
+
+		g_value_init (&element, DBUS_TYPE_G_UCHAR_ARRAY);
+		if (inet_pton (AF_INET6, nm_ip_route_get_dest (route), &addr) <= 0) {
+			g_warning ("Bad route destination: '%s", nm_ip_route_get_dest (route));
+			continue;
+		}
+		ba = g_byte_array_new ();
+		g_byte_array_append (ba, (guchar *)addr, sizeof (*addr));
+		g_value_take_boxed (&element, ba);
+		g_value_array_append (array, &element);
+		g_value_unset (&element);
+
+		g_value_init (&element, G_TYPE_UINT);
+		g_value_set_uint (&element, nm_ip_route_get_prefix (route));
+		g_value_array_append (array, &element);
+		g_value_unset (&element);
+
+		g_value_init (&element, DBUS_TYPE_G_UCHAR_ARRAY);
+		if (inet_pton (AF_INET6, nm_ip_route_get_next_hop (route), &addr) <= 0) {
+			g_warning ("Bad gateway: '%s", nm_ip_route_get_next_hop (route));
+			continue;
+		}
+		ba = g_byte_array_new ();
+		g_byte_array_append (ba, (guchar *)addr, sizeof (*addr));
+		g_value_take_boxed (&element, ba);
+		g_value_array_append (array, &element);
+		g_value_unset (&element);
+
+		g_value_init (&element, G_TYPE_UINT);
+		g_value_set_uint (&element, nm_ip_route_get_metric (route));
+		g_value_array_append (array, &element);
+		g_value_unset (&element);
+
+		g_ptr_array_add (routes, array);
+	}
+
+	g_value_take_boxed (value, routes);
+}
+
 static GValue *
 get_ip6_routes (void)
 {
@@ -405,15 +461,16 @@ get_ip6_routes (void)
 	routes = NULL;
 
 	for (i = 0; i < num; i++) {
-		NMIP6Route *route;
+		NMIPRoute *route;
 		char buf[BUFLEN];
-		struct in6_addr network;
+		char *network;
 		guint32 prefix;
+		GError *error = NULL;
 
 		snprintf (buf, BUFLEN, "CISCO_IPV6_SPLIT_INC_%d_ADDR", i);
-		tmp = getenv (buf);
-		if (!tmp || inet_pton (AF_INET6, tmp, &network) <= 0) {
-			g_warning ("Ignoring invalid static route address '%s'", tmp ? tmp : "NULL");
+		network = getenv (buf);
+		if (!network) {
+			g_warning ("Ignoring invalid static route address '%s'", network ? network : "NULL");
 			continue;
 		}
 
@@ -434,9 +491,12 @@ get_ip6_routes (void)
 			continue;
 		}
 
-		route = nm_ip6_route_new ();
-		nm_ip6_route_set_dest (route, &network);
-		nm_ip6_route_set_prefix (route, prefix);
+		route = nm_ip_route_new (AF_INET6, network, prefix, NULL, -1, &error);
+		if (!route) {
+			g_warning ("Ignoring a route: %s", error->message);
+			g_error_free (error);
+			continue;
+		}
 
 		routes = g_slist_append (routes, route);
 	}
@@ -449,7 +509,7 @@ get_ip6_routes (void)
 		nm_utils_ip6_routes_to_gvalue (routes, value);
 
 		for (iter = routes; iter; iter = iter->next)
-			nm_ip6_route_unref (iter->data);
+			nm_ip_route_unref (iter->data);
 		g_slist_free (routes);
 	}
 
