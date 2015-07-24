@@ -40,7 +40,8 @@
 #include <glib/gi18n.h>
 #include <glib-unix.h>
 
-#include <nm-vpn-plugin-utils.h>
+#include <NetworkManager.h>
+#include <nm-vpn-service-plugin.h>
 
 #define SECRET_API_SUBJECT_TO_CHANGE
 #include <libsecret/secret.h>
@@ -1628,7 +1629,7 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	if (!nm_vpn_plugin_utils_read_vpn_details (0, &options, &secrets)) {
+	if (!nm_vpn_service_plugin_read_vpn_details (0, &options, &secrets)) {
 		fprintf (stderr, "Failed to read '%s' (%s) data and secrets from stdin.\n",
 		         vpn_name, vpn_uuid);
 		return 1;
