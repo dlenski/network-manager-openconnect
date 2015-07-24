@@ -61,15 +61,15 @@
 #define OPENCONNECT_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
 #define OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
 
-#define OPENCONNECT_PLUGIN_UI_ERROR                   NM_SETTING_VPN_ERROR
-#define OPENCONNECT_PLUGIN_UI_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
+#define OPENCONNECT_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
+#define OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
 
 #else /* !NM_OPENCONNECT_OLD */
 
 #include <NetworkManager.h>
 
-#define OPENCONNECT_PLUGIN_UI_ERROR                   NM_CONNECTION_ERROR
-#define OPENCONNECT_PLUGIN_UI_ERROR_INVALID_PROPERTY  NM_CONNECTION_ERROR_INVALID_PROPERTY
+#define OPENCONNECT_EDITOR_PLUGIN_ERROR                   NM_CONNECTION_ERROR
+#define OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_CONNECTION_ERROR_INVALID_PROPERTY
 #endif
 
 #include "nm-openconnect-service-defines.h"
@@ -88,21 +88,21 @@ enum {
 	PROP_SERVICE
 };
 
-static void openconnect_plugin_ui_interface_init (NMVpnEditorPluginInterface *iface_class);
+static void openconnect_editor_plugin_interface_init (NMVpnEditorPluginInterface *iface_class);
 
-G_DEFINE_TYPE_EXTENDED (OpenconnectPluginUi, openconnect_plugin_ui, G_TYPE_OBJECT, 0,
+G_DEFINE_TYPE_EXTENDED (OpenconnectEditorPlugin, openconnect_editor_plugin, G_TYPE_OBJECT, 0,
                         G_IMPLEMENT_INTERFACE (NM_TYPE_VPN_EDITOR_PLUGIN,
-                                               openconnect_plugin_ui_interface_init))
+                                               openconnect_editor_plugin_interface_init))
 
 /************** UI widget class **************/
 
-static void openconnect_plugin_ui_widget_interface_init (NMVpnEditorInterface *iface_class);
+static void openconnect_editor_interface_init (NMVpnEditorInterface *iface_class);
 
-G_DEFINE_TYPE_EXTENDED (OpenconnectPluginUiWidget, openconnect_plugin_ui_widget, G_TYPE_OBJECT, 0,
+G_DEFINE_TYPE_EXTENDED (OpenconnectEditor, openconnect_editor, G_TYPE_OBJECT, 0,
                         G_IMPLEMENT_INTERFACE (NM_TYPE_VPN_EDITOR,
-                                               openconnect_plugin_ui_widget_interface_init))
+                                               openconnect_editor_interface_init))
 
-#define OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET, OpenconnectPluginUiWidgetPrivate))
+#define OPENCONNECT_EDITOR_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OPENCONNECT_TYPE_EDITOR, OpenconnectEditorPrivate))
 
 typedef struct {
 	GtkBuilder *builder;
@@ -110,7 +110,7 @@ typedef struct {
 	GtkSizeGroup *group;
 	GtkWindowGroup *window_group;
 	gboolean window_added;
-} OpenconnectPluginUiWidgetPrivate;
+} OpenconnectEditorPrivate;
 
 #define COL_AUTH_NAME 0
 #define COL_AUTH_PAGE 1
@@ -360,9 +360,9 @@ done:
 }
 
 static gboolean
-check_validity (OpenconnectPluginUiWidget *self, GError **error)
+check_validity (OpenconnectEditor *self, GError **error)
 {
-	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
+	OpenconnectEditorPrivate *priv = OPENCONNECT_EDITOR_GET_PRIVATE (self);
 	GtkWidget *widget;
 	const char *str;
 
@@ -370,8 +370,8 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 	str = gtk_entry_get_text (GTK_ENTRY (widget));
 	if (!str || !strlen (str)) {
 		g_set_error (error,
-		             OPENCONNECT_PLUGIN_UI_ERROR,
-		             OPENCONNECT_PLUGIN_UI_ERROR_INVALID_PROPERTY,
+		             OPENCONNECT_EDITOR_PLUGIN_ERROR,
+		             OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY,
 		             NM_OPENCONNECT_KEY_GATEWAY);
 		return FALSE;
 	}
@@ -382,8 +382,8 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 	if (str && str[0] &&
 		strncmp(str, "socks://", 8) && strncmp(str, "http://", 7)) {
 		g_set_error (error,
-		             OPENCONNECT_PLUGIN_UI_ERROR,
-		             OPENCONNECT_PLUGIN_UI_ERROR_INVALID_PROPERTY,
+		             OPENCONNECT_EDITOR_PLUGIN_ERROR,
+		             OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY,
 		             NM_OPENCONNECT_KEY_PROXY);
 		return FALSE;
 	}
@@ -397,7 +397,7 @@ check_validity (OpenconnectPluginUiWidget *self, GError **error)
 static void
 stuff_changed_cb (GtkWidget *widget, gpointer user_data)
 {
-	g_signal_emit_by_name (OPENCONNECT_PLUGIN_UI_WIDGET (user_data), "changed");
+	g_signal_emit_by_name (OPENCONNECT_EDITOR (user_data), "changed");
 }
 
 static gboolean
@@ -434,8 +434,8 @@ init_token_mode_options (GtkComboBox *token_mode)
 }
 
 static gboolean
-init_token_ui (OpenconnectPluginUiWidget *self,
-               OpenconnectPluginUiWidgetPrivate *priv,
+init_token_ui (OpenconnectEditor *self,
+               OpenconnectEditorPrivate *priv,
                NMSettingVpn *s_vpn)
 {
 	GtkWidget *widget;
@@ -499,9 +499,9 @@ init_token_ui (OpenconnectPluginUiWidget *self,
 }
 
 static gboolean
-init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GError **error)
+init_editor_plugin (OpenconnectEditor *self, NMConnection *connection, GError **error)
 {
-	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
+	OpenconnectEditorPrivate *priv = OPENCONNECT_EDITOR_GET_PRIVATE (self);
 	NMSettingVpn *s_vpn;
 	GtkWidget *widget;
 	const char *value;
@@ -573,8 +573,8 @@ init_plugin_ui (OpenconnectPluginUiWidget *self, NMConnection *connection, GErro
 static GObject *
 get_widget (NMVpnEditor *iface)
 {
-	OpenconnectPluginUiWidget *self = OPENCONNECT_PLUGIN_UI_WIDGET (iface);
-	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
+	OpenconnectEditor *self = OPENCONNECT_EDITOR (iface);
+	OpenconnectEditorPrivate *priv = OPENCONNECT_EDITOR_GET_PRIVATE (self);
 
 	return G_OBJECT (priv->widget);
 }
@@ -584,8 +584,8 @@ update_connection (NMVpnEditor *iface,
                    NMConnection *connection,
                    GError **error)
 {
-	OpenconnectPluginUiWidget *self = OPENCONNECT_PLUGIN_UI_WIDGET (iface);
-	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (self);
+	OpenconnectEditor *self = OPENCONNECT_EDITOR (iface);
+	OpenconnectEditorPrivate *priv = OPENCONNECT_EDITOR_GET_PRIVATE (self);
 	NMSettingVpn *s_vpn;
 	GtkWidget *widget;
 	char *str;
@@ -688,22 +688,22 @@ update_connection (NMVpnEditor *iface,
 }
 
 static NMVpnEditor *
-nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
+nm_vpn_editor_interface_new (NMConnection *connection, GError **error)
 {
 	NMVpnEditor *object;
-	OpenconnectPluginUiWidgetPrivate *priv;
+	OpenconnectEditorPrivate *priv;
 	char *ui_file;
 
 	if (error)
 		g_return_val_if_fail (*error == NULL, NULL);
 
-	object = g_object_new (OPENCONNECT_TYPE_PLUGIN_UI_WIDGET, NULL);
+	object = g_object_new (OPENCONNECT_TYPE_EDITOR, NULL);
 	if (!object) {
-		g_set_error (error, OPENCONNECT_PLUGIN_UI_ERROR, 0, "could not create openconnect object");
+		g_set_error (error, OPENCONNECT_EDITOR_PLUGIN_ERROR, 0, "could not create openconnect object");
 		return NULL;
 	}
 
-	priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (object);
+	priv = OPENCONNECT_EDITOR_GET_PRIVATE (object);
 
 	ui_file = g_strdup_printf ("%s/%s", UIDIR, "nm-openconnect-dialog.ui");
 	priv->builder = gtk_builder_new ();
@@ -714,7 +714,7 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 		g_warning ("Couldn't load builder file: %s",
 		           error && *error ? (*error)->message : "(unknown)");
 		g_clear_error (error);
-		g_set_error (error, OPENCONNECT_PLUGIN_UI_ERROR, 0,
+		g_set_error (error, OPENCONNECT_EDITOR_PLUGIN_ERROR, 0,
 		             "could not load required resources at %s", ui_file);
 		g_free (ui_file);
 		g_object_unref (object);
@@ -724,7 +724,7 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 
 	priv->widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "openconnect-vbox"));
 	if (!priv->widget) {
-		g_set_error (error, OPENCONNECT_PLUGIN_UI_ERROR, 0, "could not load UI widget");
+		g_set_error (error, OPENCONNECT_EDITOR_PLUGIN_ERROR, 0, "could not load UI widget");
 		g_object_unref (object);
 		return NULL;
 	}
@@ -732,7 +732,7 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 
 	priv->window_group = gtk_window_group_new ();
 
-	if (!init_plugin_ui (OPENCONNECT_PLUGIN_UI_WIDGET (object), connection, error)) {
+	if (!init_editor_plugin (OPENCONNECT_EDITOR (object), connection, error)) {
 		g_object_unref (object);
 		return NULL;
 	}
@@ -743,8 +743,8 @@ nm_vpn_plugin_ui_widget_interface_new (NMConnection *connection, GError **error)
 static void
 dispose (GObject *object)
 {
-	OpenconnectPluginUiWidget *plugin = OPENCONNECT_PLUGIN_UI_WIDGET (object);
-	OpenconnectPluginUiWidgetPrivate *priv = OPENCONNECT_PLUGIN_UI_WIDGET_GET_PRIVATE (plugin);
+	OpenconnectEditor *plugin = OPENCONNECT_EDITOR (object);
+	OpenconnectEditorPrivate *priv = OPENCONNECT_EDITOR_GET_PRIVATE (plugin);
 
 	if (priv->group)
 		g_object_unref (priv->group);
@@ -758,26 +758,26 @@ dispose (GObject *object)
 	if (priv->builder)
 		g_object_unref (priv->builder);
 
-	G_OBJECT_CLASS (openconnect_plugin_ui_widget_parent_class)->dispose (object);
+	G_OBJECT_CLASS (openconnect_editor_parent_class)->dispose (object);
 }
 
 static void
-openconnect_plugin_ui_widget_class_init (OpenconnectPluginUiWidgetClass *req_class)
+openconnect_editor_class_init (OpenconnectEditorClass *req_class)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (req_class);
 
-	g_type_class_add_private (req_class, sizeof (OpenconnectPluginUiWidgetPrivate));
+	g_type_class_add_private (req_class, sizeof (OpenconnectEditorPrivate));
 
 	object_class->dispose = dispose;
 }
 
 static void
-openconnect_plugin_ui_widget_init (OpenconnectPluginUiWidget *plugin)
+openconnect_editor_init (OpenconnectEditor *plugin)
 {
 }
 
 static void
-openconnect_plugin_ui_widget_interface_init (NMVpnEditorInterface *iface_class)
+openconnect_editor_interface_init (NMVpnEditorInterface *iface_class)
 {
 	/* interface implementation */
 	iface_class->get_widget = get_widget;
@@ -795,7 +795,7 @@ get_capabilities (NMVpnEditorPlugin *iface)
 static NMVpnEditor *
 get_editor (NMVpnEditorPlugin *iface, NMConnection *connection, GError **error)
 {
-	return nm_vpn_plugin_ui_widget_interface_new (connection, error);
+	return nm_vpn_editor_interface_new (connection, error);
 }
 
 static void
@@ -819,7 +819,7 @@ get_property (GObject *object, guint prop_id,
 }
 
 static void
-openconnect_plugin_ui_class_init (OpenconnectPluginUiClass *req_class)
+openconnect_editor_plugin_class_init (OpenconnectEditorPluginClass *req_class)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (req_class);
 
@@ -839,12 +839,12 @@ openconnect_plugin_ui_class_init (OpenconnectPluginUiClass *req_class)
 }
 
 static void
-openconnect_plugin_ui_init (OpenconnectPluginUi *plugin)
+openconnect_editor_plugin_init (OpenconnectEditorPlugin *plugin)
 {
 }
 
 static void
-openconnect_plugin_ui_interface_init (NMVpnEditorPluginInterface *iface_class)
+openconnect_editor_plugin_interface_init (NMVpnEditorPluginInterface *iface_class)
 {
 	/* interface implementation */
 	iface_class->get_editor = get_editor;
@@ -862,6 +862,6 @@ nm_vpn_editor_plugin_factory (GError **error)
 	bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
-	return g_object_new (OPENCONNECT_TYPE_PLUGIN_UI, NULL);
+	return g_object_new (OPENCONNECT_TYPE_EDITOR_PLUGIN, NULL);
 }
 

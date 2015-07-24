@@ -25,46 +25,46 @@
 
 #include <glib-object.h>
 
-#define OPENCONNECT_TYPE_PLUGIN_UI            (openconnect_plugin_ui_get_type ())
-#define OPENCONNECT_PLUGIN_UI(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), OPENCONNECT_TYPE_PLUGIN_UI, OpenconnectPluginUi))
-#define OPENCONNECT_PLUGIN_UI_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), OPENCONNECT_TYPE_PLUGIN_UI, OpenconnectPluginUiClass))
-#define OPENCONNECT_IS_PLUGIN_UI(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), OPENCONNECT_TYPE_PLUGIN_UI))
-#define OPENCONNECT_IS_PLUGIN_UI_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), OPENCONNECT_TYPE_PLUGIN_UI))
-#define OPENCONNECT_PLUGIN_UI_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), OPENCONNECT_TYPE_PLUGIN_UI, OpenconnectPluginUiClass))
+#define OPENCONNECT_TYPE_EDITOR_PLUGIN            (openconnect_editor_plugin_get_type ())
+#define OPENCONNECT_EDITOR_PLUGIN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), OPENCONNECT_TYPE_EDITOR_PLUGIN, OpenconnectEditorPlugin))
+#define OPENCONNECT_EDITOR_PLUGIN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), OPENCONNECT_TYPE_EDITOR_PLUGIN, OpenconnectEditorPluginClass))
+#define OPENCONNECT_IS_EDITOR_PLUGIN(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), OPENCONNECT_TYPE_EDITOR_PLUGIN))
+#define OPENCONNECT_IS_EDITOR_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), OPENCONNECT_TYPE_EDITOR_PLUGIN))
+#define OPENCONNECT_EDITOR_PLUGIN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), OPENCONNECT_TYPE_EDITOR_PLUGIN, OpenconnectEditorPluginClass))
 
-typedef struct _OpenconnectPluginUi OpenconnectPluginUi;
-typedef struct _OpenconnectPluginUiClass OpenconnectPluginUiClass;
+typedef struct _OpenconnectEditorPlugin OpenconnectEditorPlugin;
+typedef struct _OpenconnectEditorPluginClass OpenconnectEditorPluginClass;
 
-struct _OpenconnectPluginUi {
+struct _OpenconnectEditorPlugin {
 	GObject parent;
 };
 
-struct _OpenconnectPluginUiClass {
+struct _OpenconnectEditorPluginClass {
 	GObjectClass parent;
 };
 
-GType openconnect_plugin_ui_get_type (void);
+GType openconnect_editor_plugin_get_type (void);
 
 
-#define OPENCONNECT_TYPE_PLUGIN_UI_WIDGET            (openconnect_plugin_ui_widget_get_type ())
-#define OPENCONNECT_PLUGIN_UI_WIDGET(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET, OpenconnectPluginUiWidget))
-#define OPENCONNECT_PLUGIN_UI_WIDGET_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET, OpenconnectPluginUiWidgetClass))
-#define OPENCONNECT_IS_PLUGIN_UI_WIDGET(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET))
-#define OPENCONNECT_IS_PLUGIN_UI_WIDGET_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET))
-#define OPENCONNECT_PLUGIN_UI_WIDGET_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), OPENCONNECT_TYPE_PLUGIN_UI_WIDGET, OpenconnectPluginUiWidgetClass))
+#define OPENCONNECT_TYPE_EDITOR            (openconnect_editor_get_type ())
+#define OPENCONNECT_EDITOR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), OPENCONNECT_TYPE_EDITOR, OpenconnectEditor))
+#define OPENCONNECT_EDITOR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), OPENCONNECT_TYPE_EDITOR, OpenconnectEditorClass))
+#define OPENCONNECT_IS_EDITOR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), OPENCONNECT_TYPE_EDITOR))
+#define OPENCONNECT_IS_EDITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), OPENCONNECT_TYPE_EDITOR))
+#define OPENCONNECT_EDITOR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), OPENCONNECT_TYPE_EDITOR, OpenconnectEditorClass))
 
-typedef struct _OpenconnectPluginUiWidget OpenconnectPluginUiWidget;
-typedef struct _OpenconnectPluginUiWidgetClass OpenconnectPluginUiWidgetClass;
+typedef struct _OpenconnectEditor OpenconnectEditor;
+typedef struct _OpenconnectEditorClass OpenconnectEditorClass;
 
-struct _OpenconnectPluginUiWidget {
+struct _OpenconnectEditor {
 	GObject parent;
 };
 
-struct _OpenconnectPluginUiWidgetClass {
+struct _OpenconnectEditorClass {
 	GObjectClass parent;
 };
 
-GType openconnect_plugin_ui_widget_get_type (void);
+GType openconnect_editor_get_type (void);
 
 #endif	/* _NM_OPENCONNECT_H_ */
 
