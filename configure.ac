@@ -42,6 +42,9 @@ dnl
 AC_ARG_WITH(gnome, AS_HELP_STRING([--without-gnome], [Build NetworkManager-openconnect without GNOME support, e.g. vpn service only]))
 AM_CONDITIONAL(WITH_GNOME, test x"$with_gnome" != xno)
 
+AC_ARG_WITH(libnm-glib, AS_HELP_STRING([--without-libnm-glib], [Build NetworkManager-openconnect without libnm-glib comatibility]))
+AM_CONDITIONAL(WITH_LIBNM_GLIB, test x"$with_libnm_glib" != xno)
+
 AC_ARG_WITH(authdlg, AS_HELP_STRING([--without-authdlg], [Build NetworkManager-openconnect without authentication dialog]))
 AM_CONDITIONAL(WITH_AUTHDLG, test x"$with_authdlg" != xno)
 
@@ -68,13 +71,15 @@ if test x"$with_gnome" != xno; then
 	if test x"$with_authdlg" != xno; then
 		PKG_CHECK_MODULES(OPENCONNECT, openconnect >= 3.02)
 	fi
-fi
 
-PKG_CHECK_MODULES(LIBNM_GLIB,
-                  NetworkManager >= 1.1.0
-                  libnm-util >= 1.1.0
-                  libnm-glib  >= 1.1.0
-                  libnm-glib-vpn >= 1.1.0)
+	if test x"$with_libnm_glib" != xno; then
+		PKG_CHECK_MODULES(LIBNM_GLIB,
+				  NetworkManager >= 1.1.0
+				  libnm-util >= 1.1.0
+				  libnm-glib  >= 1.1.0
+				  libnm-glib-vpn >= 1.1.0)
+	fi
+fi
 
 dnl
 dnl Distribution version string

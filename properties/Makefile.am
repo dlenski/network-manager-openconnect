@@ -1,5 +1,8 @@
 plugindir = $(libdir)/NetworkManager
-plugin_LTLIBRARIES = libnm-vpn-plugin-openconnect.la libnm-openconnect-properties.la
+plugin_LTLIBRARIES = libnm-vpn-plugin-openconnect.la
+if WITH_LIBNM_GLIB
+plugin_LTLIBRARIES += libnm-openconnect-properties.la
+endif
 
 libnm_vpn_plugin_openconnect_la_SOURCES = \
 	auth-helpers.c \
