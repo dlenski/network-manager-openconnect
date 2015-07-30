@@ -2625,7 +2625,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/563e3b63d5:/main.c#l1444
 #: ../openconnect-strings.txt:1456
 msgid "User cancelled (SIGINT); exiting.\n"
-msgstr "USer canceled (SIGINT); exiting;\n"
+msgstr "User canceled (SIGINT); exiting;\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/563e3b63d5:/main.c#l1448
 #: ../openconnect-strings.txt:1459
