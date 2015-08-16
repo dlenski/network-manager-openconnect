@@ -1,5 +1,4 @@
 AM_CPPFLAGS = \
-	$(DBUS_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(LIBNM_CFLAGS) \
 	-DG_DISABLE_DEPRECATED \
@@ -23,7 +22,6 @@ nm_openconnect_service_SOURCES = \
 	nm-openconnect-service-defines.h
 
 nm_openconnect_service_LDADD = \
-	$(DBUS_LIBS) \
 	$(GLIB_LIBS) \
 	$(LIBNM_LIBS)
 
@@ -32,7 +30,6 @@ nm_openconnect_service_openconnect_helper_SOURCES = \
 	nm-openconnect-service-openconnect-helper.c
 
 nm_openconnect_service_openconnect_helper_LDADD = \
-	$(DBUS_LIBS) \
 	$(GTHREAD_LIBS) \
 	$(LIBNM_LIBS)
 
