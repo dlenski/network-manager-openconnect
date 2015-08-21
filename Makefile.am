@@ -13,8 +13,13 @@ endif
 dbusservicedir = $(sysconfdir)/dbus-1/system.d
 dbusservice_DATA = nm-openconnect-service.conf
 
-nmvpnservicedir = $(sysconfdir)/NetworkManager/VPN
+nmvpnservicedir = $(NM_VPN_SERVICE_DIR)
 nmvpnservice_DATA = nm-openconnect-service.name
+
+if WITH_LIBNM_GLIB
+nmvpnoldservicedir = $(sysconfdir)/NetworkManager/VPN
+nmvpnoldservice_DATA = nm-openconnect-service.name
+endif
 
 nm-openconnect-service.name: $(srcdir)/nm-openconnect-service.name.in
 	sed -e 's|[@]LIBEXECDIR[@]|$(libexecdir)|g' \
