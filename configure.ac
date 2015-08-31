@@ -42,6 +42,9 @@ dnl
 AC_ARG_WITH(gnome, AS_HELP_STRING([--without-gnome], [Build NetworkManager-openconnect without GNOME support, e.g. vpn service only]))
 AM_CONDITIONAL(WITH_GNOME, test x"$with_gnome" != xno)
 
+AC_ARG_WITH(libnm-glib, AS_HELP_STRING([--without-libnm-glib], [Build NetworkManager-openconnect without libnm-glib comatibility]))
+AM_CONDITIONAL(WITH_LIBNM_GLIB, test x"$with_libnm_glib" != xno)
+
 AC_ARG_WITH(authdlg, AS_HELP_STRING([--without-authdlg], [Build NetworkManager-openconnect without authentication dialog]))
 AM_CONDITIONAL(WITH_AUTHDLG, test x"$with_authdlg" != xno)
 
@@ -57,8 +60,6 @@ GLIB_CFLAGS="$GLIB_CFLAGS -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_32"
 
 PKG_CHECK_MODULES(LIBXML, libxml-2.0)
 
-PKG_CHECK_MODULES(DBUS, dbus-glib-1 >= 0.74)
-
 if test x"$with_gnome" != xno; then
 	PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.4)
 	GTK_CFLAGS="$GTK_CFLAGS -DGDK_VERSION_MIN_REQUIRED=GDK_VERSION_3_4"
@@ -68,13 +69,15 @@ if test x"$with_gnome" != xno; then
 	if test x"$with_authdlg" != xno; then
 		PKG_CHECK_MODULES(OPENCONNECT, openconnect >= 3.02)
 	fi
-fi
 
-PKG_CHECK_MODULES(NM,
-                  NetworkManager >= 0.9.10
-                  libnm-util >= 0.9.10
-                  libnm-glib  >= 0.9.10
-                  libnm-glib-vpn >= 0.9.10)
+	if test x"$with_libnm_glib" != xno; then
+		PKG_CHECK_MODULES(LIBNM_GLIB,
+				  NetworkManager >= 1.1.0
+				  libnm-util >= 1.1.0
+				  libnm-glib  >= 1.1.0
+				  libnm-glib-vpn >= 1.1.0)
+	fi
+fi
 
 dnl
 dnl Distribution version string
@@ -83,6 +86,13 @@ AC_ARG_WITH(dist-version, AS_HELP_STRING([--with-dist-version=<dist-version>], [
 if ! test x"$ac_distver" = x""; then
   AC_DEFINE_UNQUOTED(DIST_VERSION, "$ac_distver", [Define the distribution version string])
 fi
+
+PKG_CHECK_MODULES(LIBNM, libnm >= 1.1.0)
+LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_2"
+LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_2"
+
+NM_VPN_SERVICE_DIR=`$PKG_CONFIG --define-variable prefix='\${prefix}' --variable vpnservicedir libnm`
+AC_SUBST(NM_VPN_SERVICE_DIR)
 
 NM_COMPILER_WARNINGS
 

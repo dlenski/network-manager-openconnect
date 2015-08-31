@@ -3,6 +3,9 @@ name=openconnect
 service=org.freedesktop.NetworkManager.openconnect
 program=@LIBEXECDIR@/nm-openconnect-service
 
+[libnm]
+plugin=@PLUGINDIR@/libnm-vpn-plugin-openconnect.so
+
 [GNOME]
 auth-dialog=@LIBEXECDIR@/nm-openconnect-auth-dialog
 properties=@PLUGINDIR@/libnm-openconnect-properties

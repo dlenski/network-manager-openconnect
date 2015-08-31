@@ -37,12 +37,12 @@
 
 #include "auth-helpers.h"
 #include "nm-openconnect.h"
-#include "../src/nm-openconnect-service.h"
+#include "../src/nm-openconnect-service-defines.h"
 
 void
 tls_pw_init_auth_widget (GtkBuilder *builder,
                          GtkSizeGroup *group,
-                         NMSettingVPN *s_vpn,
+                         NMSettingVpn *s_vpn,
                          ChangedCallback changed_cb,
                          gpointer user_data)
 {
@@ -113,7 +113,7 @@ static void
 update_from_filechooser (GtkBuilder *builder,
                          const char *key,
                          const char *widget_name,
-                         NMSettingVPN *s_vpn)
+                         NMSettingVpn *s_vpn)
 {
 	GtkWidget *widget;
 	char *filename;
@@ -143,7 +143,7 @@ update_from_filechooser (GtkBuilder *builder,
 gboolean
 auth_widget_update_connection (GtkBuilder *builder,
                                const char *contype,
-                               NMSettingVPN *s_vpn)
+                               NMSettingVpn *s_vpn)
 {
 	update_from_filechooser (builder, NM_OPENCONNECT_KEY_CACERT, "ca_cert_chooser", s_vpn);
 	update_from_filechooser (builder, NM_OPENCONNECT_KEY_USERCERT, "cert_user_cert_chooser", s_vpn);

@@ -26,20 +26,25 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 
+#ifdef NM_OPENCONNECT_OLD
+#define NM_VPN_LIBNM_COMPAT
 #include <nm-connection.h>
 #include <nm-setting-vpn.h>
+#else /* !NM_OPENCONNECT_OLD */
+#include <NetworkManager.h>
+#endif
 
 typedef void (*ChangedCallback) (GtkWidget *widget, gpointer user_data);
 
 void tls_pw_init_auth_widget (GtkBuilder *builder,
                               GtkSizeGroup *group,
-                              NMSettingVPN *s_vpn,
+                              NMSettingVpn *s_vpn,
                               ChangedCallback changed_cb,
                               gpointer user_data);
 
 void sk_init_auth_widget (GtkBuilder *builder,
                           GtkSizeGroup *group,
-                          NMSettingVPN *s_vpn,
+                          NMSettingVpn *s_vpn,
                           ChangedCallback changed_cb,
                           gpointer user_data);
 
@@ -47,7 +52,7 @@ gboolean auth_widget_check_validity (GtkBuilder *builder, GError **error);
 
 gboolean auth_widget_update_connection (GtkBuilder *builder,
                                         const char *contype,
-                                        NMSettingVPN *s_vpn);
+                                        NMSettingVpn *s_vpn);
 
 GtkFileFilter *tls_file_chooser_filter_new (void);
 
