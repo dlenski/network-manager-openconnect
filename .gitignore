@@ -32,3 +32,4 @@ src/nm-openconnect-service
 src/nm-openconnect-service-openconnect-helper
 auth-dialog/nm-openconnect-auth-dialog
 
+/NetworkManager-openconnect*.tar*
