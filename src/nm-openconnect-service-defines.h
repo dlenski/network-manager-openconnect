@@ -25,7 +25,7 @@
 #ifndef NM_OPENCONNECT_SERVICE_DEFINES_H
 #define NM_OPENCONNECT_SERVICE_DEFINES_H
 
-#define NM_VPN_SERVICE_TYPE_OPENCONNECT    "org.freedesktop.NetworkManager.openconnect"
+#define NM_VPN_SERVICE_TYPE_OPENCONNECT "org.freedesktop.NetworkManager.openconnect"
 
 #define NM_DBUS_SERVICE_OPENCONNECT    "org.freedesktop.NetworkManager.openconnect"
 #define NM_DBUS_INTERFACE_OPENCONNECT  "org.freedesktop.NetworkManager.openconnect"

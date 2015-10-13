@@ -2,6 +2,7 @@
 name=openconnect
 service=org.freedesktop.NetworkManager.openconnect
 program=@LIBEXECDIR@/nm-openconnect-service
+supports-multiple-connections=true
 
 [libnm]
 plugin=@PLUGINDIR@/libnm-vpn-plugin-openconnect.so

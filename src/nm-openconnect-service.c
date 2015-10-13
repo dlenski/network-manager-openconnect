@@ -593,13 +593,13 @@ nm_openconnect_plugin_class_init (NMOpenconnectPluginClass *openconnect_class)
 }
 
 NMOpenconnectPlugin *
-nm_openconnect_plugin_new (void)
+nm_openconnect_plugin_new (const char *bus_name)
 {
 	NMOpenconnectPlugin *plugin;
 	GError *error = NULL;
 
 	plugin = (NMOpenconnectPlugin *) g_initable_new (NM_TYPE_OPENCONNECT_PLUGIN, NULL, &error,
-	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_SERVICE_NAME, NM_VPN_SERVICE_TYPE_OPENCONNECT,
+	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_SERVICE_NAME, bus_name,
 	                                                 NULL);
 	if (!plugin) {
 		g_warning ("Failed to initialize a plugin instance: %s", error->message);
@@ -639,13 +639,14 @@ quit_mainloop (NMOpenconnectPlugin *plugin, gpointer user_data)
 int main (int argc, char *argv[])
 {
 	NMOpenconnectPlugin *plugin;
-
 	gboolean persist = FALSE;
 	GOptionContext *opt_ctx = NULL;
+	gchar *bus_name = NM_DBUS_SERVICE_OPENCONNECT;
 
 	GOptionEntry options[] = {
 		{ "persist", 0, 0, G_OPTION_ARG_NONE, &persist, N_("Don't quit when VPN connection terminates"), NULL },
 		{ "debug", 0, 0, G_OPTION_ARG_NONE, &debug, N_("Enable verbose debug logging (may expose passwords)"), NULL },
+		{ "bus-name", 0, 0, G_OPTION_ARG_STRING, &bus_name, N_("DBus name to use for this instance"), NULL },
 		{NULL}
 	};
 
@@ -683,7 +684,10 @@ int main (int argc, char *argv[])
 	if (system ("/sbin/modprobe tun") == -1)
 		exit (EXIT_FAILURE);
 
-	plugin = nm_openconnect_plugin_new ();
+	if (bus_name)
+		setenv ("NM_DBUS_SERVICE_OPENCONNECT", bus_name, 0);
+
+	plugin = nm_openconnect_plugin_new (bus_name);
 	if (!plugin)
 		exit (EXIT_FAILURE);
 
