@@ -599,7 +599,7 @@ nm_openconnect_plugin_new (void)
 	GError *error = NULL;
 
 	plugin = (NMOpenconnectPlugin *) g_initable_new (NM_TYPE_OPENCONNECT_PLUGIN, NULL, &error,
-	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_SERVICE_NAME, NM_DBUS_SERVICE_OPENCONNECT,
+	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_SERVICE_NAME, NM_VPN_SERVICE_TYPE_OPENCONNECT,
 	                                                 NULL);
 	if (!plugin) {
 		g_warning ("Failed to initialize a plugin instance: %s", error->message);

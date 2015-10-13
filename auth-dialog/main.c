@@ -1623,9 +1623,9 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	if (strcmp(vpn_service, NM_DBUS_SERVICE_OPENCONNECT) != 0) {
+	if (strcmp(vpn_service, NM_VPN_SERVICE_TYPE_OPENCONNECT) != 0) {
 		fprintf (stderr, "This dialog only works with the '%s' service\n",
-			 NM_DBUS_SERVICE_OPENCONNECT);
+			 NM_VPN_SERVICE_TYPE_OPENCONNECT);
 		return 1;
 	}
 

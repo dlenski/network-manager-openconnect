@@ -165,7 +165,7 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 	nm_connection_add_setting (connection, NM_SETTING (s_con));
 
 	s_vpn = NM_SETTING_VPN (nm_setting_vpn_new ());
-	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_DBUS_SERVICE_OPENCONNECT, NULL);
+	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_VPN_SERVICE_TYPE_OPENCONNECT, NULL);
 	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
 
 	s_ip4 = NM_SETTING_IP4_CONFIG (nm_setting_ip4_config_new ());
@@ -597,7 +597,7 @@ update_connection (NMVpnEditor *iface,
 	const char *auth_type = NULL;
 
 	s_vpn = NM_SETTING_VPN (nm_setting_vpn_new ());
-	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_DBUS_SERVICE_OPENCONNECT, NULL);
+	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_VPN_SERVICE_TYPE_OPENCONNECT, NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "gateway_entry"));
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
@@ -810,7 +810,7 @@ get_property (GObject *object, guint prop_id,
 		g_value_set_string (value, OPENCONNECT_PLUGIN_DESC);
 		break;
 	case PROP_SERVICE:
-		g_value_set_string (value, NM_DBUS_SERVICE_OPENCONNECT);
+		g_value_set_string (value, NM_VPN_SERVICE_TYPE_OPENCONNECT);
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
