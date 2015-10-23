@@ -23,10 +23,7 @@ common_CFLAGS =                                         \
 	-I$(top_srcdir)/src                             \
 	-DICONDIR=\""$(datadir)/pixmaps"\"              \
 	-DUIDIR=\""$(uidir)"\"                          \
-	-DG_DISABLE_DEPRECATED                          \
-	-DGDK_DISABLE_DEPRECATED                        \
-	-DLOCALEDIR=\"$(datadir)/locale\"               \
-	-DVERSION=\"$(VERSION)\"
+	-DLOCALEDIR=\"$(datadir)/locale\"
 
 libnm_vpn_plugin_openconnect_la_CFLAGS =                \
 	$(common_CFLAGS)                                \
