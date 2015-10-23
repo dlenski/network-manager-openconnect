@@ -395,6 +395,7 @@ main (int argc, char *argv[])
 	GVariant *val;
 	GError *err = NULL;
 	struct in_addr temp_addr;
+	char *bus_path;
 
 #if !GLIB_CHECK_VERSION (2, 35, 0)
 	g_type_init ();
@@ -407,10 +408,14 @@ main (int argc, char *argv[])
 	if (tmp && strcmp (tmp, "connect") != 0)
 		exit (0);
 
+	bus_path = getenv ("NM_DBUS_SERVICE_OPENCONNECT");
+	if (!bus_path)
+		bus_path = NM_DBUS_SERVICE_OPENCONNECT;
+
 	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
 	                                       G_DBUS_PROXY_FLAGS_NONE,
 	                                       NULL,
-	                                       NM_DBUS_SERVICE_OPENCONNECT,
+	                                       bus_path,
 	                                       NM_VPN_DBUS_PLUGIN_PATH,
 	                                       NM_VPN_DBUS_PLUGIN_INTERFACE,
 	                                       NULL, &err);
