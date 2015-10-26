@@ -236,8 +236,7 @@ get_ip4_routes (void)
 	GVariantBuilder builder;
 	GVariant *value;
 	char *tmp;
-	int num;
-	int i;
+	int size = 0, num, i;
 
 #define BUFLEN 256
 
@@ -295,10 +294,11 @@ get_ip4_routes (void)
 		g_variant_builder_add_value (&array, g_variant_new_uint32 (next_hop));
 		g_variant_builder_add_value (&array, g_variant_new_uint32 (metric));
 		g_variant_builder_add_value (&builder, g_variant_builder_end (&array));
+		size++;
 	}
 
 	value = g_variant_builder_end (&builder);
-	if (i > 1)
+	if (size > 0)
 		return value;
 
 	g_variant_unref (value);
