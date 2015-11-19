@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the network-manager-openconnect package.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2010-2013.
-# Wolfgang Stöggl <c72578@yahoo.de>, 2010.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2010, 2015.
 # Christian Kirbach <christian.kirbach@gmail.com>, 2012, 2013.
 # Benjamin Steinwender <b@stbe.at>, 2014.
 #
@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: NetworkManager-openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-29 17:38+0000\n"
-"PO-Revision-Date: 2015-01-27 21:13+0100\n"
-"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"POT-Creation-Date: 2015-11-19 21:50+0000\n"
+"PO-Revision-Date: 2015-11-19 10:57+0100\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #: ../auth-dialog/main.c:660
 #, c-format
@@ -207,7 +207,7 @@ msgstr "Unbehandelte Eigenschaft »%s« des Typs %s"
 #: ../src/nm-openconnect-service.c:181
 #, c-format
 msgid "property '%s' invalid or not supported"
-msgstr "Eingenschaft »%s« ist ungültig oder wird nicht unterstützt"
+msgstr "Eigenschaft »%s« ist ungültig oder wird nicht unterstützt"
 
 #: ../src/nm-openconnect-service.c:197
 msgid "No VPN configuration options."
@@ -356,8 +356,8 @@ msgstr "TCP_MAXSEG %d\n"
 msgid ""
 "CRITICAL ERROR: DTLS master secret is uninitialised. Please report this.\n"
 msgstr ""
-"KRITISCHER FEHLER: DTLS-Hauptschlüssel ist  nicht initialisiert. Bitte "
-"melden Sie dies.\n"
+"KRITISCHER FEHLER: DTLS-Hauptschlüssel ist nicht initialisiert. Bitte melden "
+"Sie dies.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/cstp.c#l216
 #: ../openconnect-strings.txt:75
@@ -594,7 +594,7 @@ msgstr "Erneuter CSTP-Schlüsselaustausch fällig\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/cstp.c#l921
 #: ../openconnect-strings.txt:200
 msgid "Rehandshake failed; attempting new-tunnel\n"
-msgstr ""
+msgstr "Rehandshake fehlgeschlagen; neuer Tunnel wird versucht\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/cstp.c#l932
 #: ../openconnect-strings.txt:203
@@ -743,7 +743,7 @@ msgstr "Festlegen der DTLS-MTU schlug fehl: %s\n"
 #: ../openconnect-strings.txt:280
 #, c-format
 msgid "Established DTLS connection (using GnuTLS). Ciphersuite %s.\n"
-msgstr "DTLS-Verbindung aufgebaut (mit GnuTLS).Schiffrierwerk %s.\n"
+msgstr "DTLS-Verbindung aufgebaut (mit GnuTLS). Schiffrierwerk %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/dtls.c#l452
 #: ../openconnect-strings.txt:283
@@ -1071,8 +1071,7 @@ msgstr "Ungültiges Salt in der verschlüsselten PEM-Datei\n"
 #: ../openconnect-strings.txt:463
 #, c-format
 msgid "Error base64-decoding encrypted PEM file: %s\n"
-msgstr ""
-"Fehler beim Dekodieren der verschlüsselten PEM-Datei nach  base64: %s\n"
+msgstr "Fehler beim Dekodieren der verschlüsselten PEM-Datei nach base64: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/gnutls.c#l779
 #: ../openconnect-strings.txt:466
@@ -1227,7 +1226,7 @@ msgstr "Private Schlüsseldatei %s wird verwendet\n"
 #: ../openconnect-strings.txt:546
 msgid "This version of OpenConnect was built without TPM support\n"
 msgstr ""
-"Diese Version von Openconnect wurde ohne Unterstützung für TPM erstellt\n"
+"Diese Version von OpenConnect wurde ohne Unterstützung für TPM erstellt\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/gnutls.c#l1343
 #: ../openconnect-strings.txt:549
@@ -1292,8 +1291,8 @@ msgstr "Client-Zertifikat »%s« wird verwendet\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/gnutls.c#l1526
 #: ../openconnect-strings.txt:582
 #, c-format
-msgid "Setting certificate revocation list failed: %s\n"
-msgstr "Festlegen der Zertifikat-Wiederrufsliste schlug fehl: %s\n"
+msgid "Setting certificate recovation list failed: %s\n"
+msgstr "Festlegen der Zertifikat-Widerrufsliste schlug fehl: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/gnutls.c#l1547
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/gnutls.c#l1557
@@ -1755,7 +1754,7 @@ msgstr "Fehler beim Verarbeitung der HTTP-Antwort\n"
 #: ../openconnect-strings.txt:835
 #, c-format
 msgid "Ignoring unknown HTTP response line '%s'\n"
-msgstr "Unbekannte  Zeile »%s« in HTTP-Antwort wird ignoriert\n"
+msgstr "Unbekannte Zeile »%s« in HTTP-Antwort wird ignoriert\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/http.c#l404
 #: ../openconnect-strings.txt:838
@@ -2054,7 +2053,7 @@ msgstr "Fehler beim Lesen der auth-Anforderung von SOCKS-Proxy: %s\n"
 #: ../openconnect-strings.txt:996
 #, c-format
 msgid "Unexpected auth response from SOCKS proxy: %02x %02x\n"
-msgstr "UNerwartete auth-Antwort von SOCKS-Proxy: %02x %02x\n"
+msgstr "Unerwartete auth-Antwort von SOCKS-Proxy: %02x %02x\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/http.c#l1671
 #: ../openconnect-strings.txt:999
@@ -2118,7 +2117,7 @@ msgstr "Fehler beim Lesen der Verbindungsantwort von SOCKS-Proxy: %s\n"
 #: ../openconnect-strings.txt:1032
 #, c-format
 msgid "Unexpected connect response from SOCKS proxy: %02x %02x...\n"
-msgstr "Unerwartete Verbindungsantwort vom SOCKS-Proxy: %02x %02x...\n"
+msgstr "Unerwartete Verbindungsantwort vom SOCKS-Proxy: %02x %02x …\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/http.c#l1801
 #: ../openconnect-strings.txt:1035
@@ -2142,6 +2141,8 @@ msgstr "Unerwarteter Adresstyp %02x in SOCKS-Verbindungsantwort\n"
 #: ../openconnect-strings.txt:1044
 msgid "Proxy requested Basic authentication which is disabled by default\n"
 msgstr ""
+"Der Proxy verlangte nach Basislegitimierung, die standardmäßig deaktiviert "
+"ist\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/http.c#l1983
 #: ../openconnect-strings.txt:1047
@@ -2548,7 +2549,7 @@ msgstr "Gültigkeit des SSL-Serverzertifikats nicht voraussetzen"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l751
 #: ../openconnect-strings.txt:1280
 msgid "Disable default system certificate authorities"
-msgstr ""
+msgstr "Standard-Zertifizierungsstellen des Systems deaktivieren"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l752
 #: ../openconnect-strings.txt:1283
@@ -2609,7 +2610,7 @@ msgstr "HTTP-Kopf User-Agent: Feld"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l769
 #: ../openconnect-strings.txt:1316
 msgid "OS type (linux,linux-64,win,...) to report"
-msgstr "zu berichtender Typ des Betriebssystems (linux,linux-64,win,...)"
+msgstr "zu berichtender Typ des Betriebssystems (linux, linux-64, win, …)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l770
 #: ../openconnect-strings.txt:1319
@@ -2619,7 +2620,7 @@ msgstr "Lokalen Port für DTLS-Datagramme festlegen"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l791
 #: ../openconnect-strings.txt:1322
 msgid "Failed to allocate string\n"
-msgstr "Anfordern der Zeichnkette ist fehlgeschlagen\n"
+msgstr "Anfordern der Zeichenkette ist fehlgeschlagen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l852
 #: ../openconnect-strings.txt:1325
@@ -2806,7 +2807,7 @@ msgstr "Öffnen von »%s« zum Schreiben schlug fehl: %s\n"
 #: ../openconnect-strings.txt:1421
 #, c-format
 msgid "Continuing in background; pid %d\n"
-msgstr "Fortsetzung im Hintergrund;  pid %d\n"
+msgstr "Fortsetzung im Hintergrund; pid %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l1462
 #: ../openconnect-strings.txt:1424
@@ -2816,7 +2817,7 @@ msgstr "Benutzer forderte eine Neuverbindung an\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l1470
 #: ../openconnect-strings.txt:1427
 msgid "Cookie was rejected on reconnection; exiting.\n"
-msgstr ""
+msgstr "Cookie wurde bei Wiederverbindung abgelehnt; Vorgang wird beendet.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l1474
 #: ../openconnect-strings.txt:1430
@@ -2957,22 +2958,19 @@ msgstr "Allgemeiner Fehler in liboath\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l1944
 #: ../openconnect-strings.txt:1505
-#, fuzzy
 msgid "Yubikey token not found\n"
-msgstr "Yubikey Token konnte nicht gefunden werden\n"
+msgstr "Yubikey-Token nicht gefunden\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l1947
 #: ../openconnect-strings.txt:1508
-#, fuzzy
 msgid "OpenConnect was not built with Yubikey support\n"
-msgstr "OpenConnect wurde ohne Unterstützung für libstoken erstellt\n"
+msgstr "OpenConnect wurde ohne Unterstützung für Yubikey erstellt\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/main.c#l1950
 #: ../openconnect-strings.txt:1511
-#, fuzzy, c-format
-#| msgid "general failure"
+#, c-format
 msgid "General Yubikey failure: %s\n"
-msgstr "Allgemeiner Fehler in libstoken\n"
+msgstr "Allgemeiner Fehler in Yubikey: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/mainloop.c#l182
 #: ../openconnect-strings.txt:1514
@@ -3097,7 +3095,7 @@ msgstr "Lesen vom SSL-Socket schlug fehl\n"
 #: ../openconnect-strings.txt:1584
 #, c-format
 msgid "Unhandled SSL UI request type %d\n"
-msgstr ""
+msgstr "Unbehandelter SSL-UI-Anfragetyp %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/openssl.c#l393
 #: ../openconnect-strings.txt:1587
@@ -3177,6 +3175,8 @@ msgstr "Fehler beim Installieren des Zertifikats im OpenSSL-Kontext\n"
 #: ../openconnect-strings.txt:1630
 msgid "Failed to process all supporting certs. Trying anyway...\n"
 msgstr ""
+"Verarbeitung aller unterstützten Zertifikate fehlgeschlagen. Es wird "
+"trotzdem versucht …\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/openssl.c#l668
 #: ../openconnect-strings.txt:1633
@@ -3187,7 +3187,7 @@ msgstr "PEM-Datei"
 #: ../openconnect-strings.txt:1636
 #, c-format
 msgid "Failed to create BIO for keystore item '%s'\n"
-msgstr "Erstellen des BIO für das Schlüsselspeicher-Objekt  »%s« schlug fehl\n"
+msgstr "Erstellen des BIO für das Schlüsselspeicher-Objekt »%s« schlug fehl\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/openssl.c#l722
 #: ../openconnect-strings.txt:1639
@@ -3413,7 +3413,7 @@ msgstr "getaddrinfo für Rechner »%s« gescheitert: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/ssl.c#l342
 #: ../openconnect-strings.txt:1752
 msgid "Reconnecting to DynDNS server using previously cached IP address\n"
-msgstr ""
+msgstr "Neue Verbindung zum DynDNS-Server mit zuvor gesicherter IP-Adresse\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/ssl.c#l273
 #: ../openconnect-strings.txt:1755
@@ -3435,7 +3435,7 @@ msgstr "Zuweisen des sockaddr-Speichers ist fehlgeschlagen.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/ssl.c#l327
 #: ../openconnect-strings.txt:1764
 msgid "Forgetting non-functional previous peer address\n"
-msgstr ""
+msgstr "Nicht funktionierende, frühere Peer-Adressen werden vergessen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/ssl.c#l337
 #: ../openconnect-strings.txt:1767
@@ -3458,7 +3458,7 @@ msgstr "statvfs: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/ssl.c#l455
 #: ../openconnect-strings.txt:1776
 msgid "Could not obtain file system ID for passphrase\n"
-msgstr ""
+msgstr "Dateisystemadresse (ID) der Passphrase konnte nicht erhalten werden\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/ssl.c#l466
 #: ../openconnect-strings.txt:1779
@@ -3532,6 +3532,7 @@ msgstr "Unbekannter Fehler"
 #, c-format
 msgid "openconnect_fopen_utf8() used with unsupported mode '%s'\n"
 msgstr ""
+"openconnect_fopen_utf8() wurde in nicht unterstütztem Modus »%s« verwendet'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/sspi.c#l198
 #: ../openconnect-strings.txt:1821
@@ -3628,7 +3629,7 @@ msgstr "DecryptMessage schlug fehl: %lx\n"
 #: ../openconnect-strings.txt:1868
 #, c-format
 msgid "Invalid SSPI protection response from proxy (%lu bytes)\n"
-msgstr ""
+msgstr "Ungültige SSPI-Schutzantwort von Proxy (%lu Byte)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/stoken.c#l77
 #: ../openconnect-strings.txt:1871
@@ -3699,9 +3700,9 @@ msgstr "Fehler beim Zugriff auf Registrierungsschlüssel für Netzwerk-Adapter\n
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l138
 #: ../openconnect-strings.txt:1912
-#, fuzzy, c-format
+#, c-format
 msgid "Ignoring non-matching TAP interface \"%s\"\n"
-msgstr "Nicht zutreffende TAP-Schnittstelle »%s« wird ignoriert"
+msgstr "Nicht zutreffende TAP-Schnittstelle »%s« wird ignoriert\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l153
 #: ../openconnect-strings.txt:1915
@@ -3749,7 +3750,7 @@ msgstr "Festlegen des TAP Medienstatus fehlgeschlagen: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l249
 #: ../openconnect-strings.txt:1936
 msgid "TAP device aborted connectivity. Disconnecting.\n"
-msgstr ""
+msgstr "TAP-Gerät brach die Verbindung ab. Sie wird getrennt.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l254
 #: ../openconnect-strings.txt:1939
@@ -3765,21 +3766,22 @@ msgstr "Abschließen des Lesens von TAP-Gerät fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l291
 #: ../openconnect-strings.txt:1945
-#, fuzzy, c-format
+#, c-format
 msgid "Wrote %ld bytes to tun\n"
-msgstr "Komprimiertes Datenpaket mit %ld Byte erhalten\n"
+msgstr "%ld Bytes wurden an »tun« geschrieben\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l301
 #: ../openconnect-strings.txt:1948
-#, fuzzy
 msgid "Waiting for tun write...\n"
-msgstr "tun-Gerät %s geöffnet\n"
+msgstr ""
+"Auf das Schreiben von »tun« wird gewartet …\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l304
 #: ../openconnect-strings.txt:1951
 #, c-format
 msgid "Wrote %ld bytes to tun after waiting\n"
-msgstr ""
+msgstr "%ld Bytes wurden nach dem Warten an »tun« geschrieben\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun-win32.c#l311
 #: ../openconnect-strings.txt:1954
@@ -3791,6 +3793,7 @@ msgstr "Schreiben auf das TAP-Gerät fehlgeschlagen: %s\n"
 #: ../openconnect-strings.txt:1957
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
 msgstr ""
+"Das Anlegen von Tunnel-Skripten wird unter Windows noch nicht unterstützt\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun.c#l88
 #: ../openconnect-strings.txt:1960
@@ -3875,24 +3878,20 @@ msgstr "Öffnen des Socket SYSPROTO_CONTROL schlug fehl: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun.c#l325
 #: ../openconnect-strings.txt:2003
-#, fuzzy, c-format
-#| msgid "Failed to write config to %s: %s\n"
+#, c-format
 msgid "Failed to query utun control id: %s\n"
-msgstr "Schreiben der Konfiguration nach %s schlug fehl: %s\n"
+msgstr "Abfrage der »utun«-Kontrolladresse fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun.c#l343
 #: ../openconnect-strings.txt:2006
-#, fuzzy
-#| msgid "Failed to open tun device: %s\n"
 msgid "Failed to allocate utun device name\n"
-msgstr "Öffnen des tun-Geräts ist gescheitert: %s\n"
+msgstr "Zuweisung des »utun«-Gerätenamens fehlgeschlagen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun.c#l354
 #: ../openconnect-strings.txt:2009
-#, fuzzy, c-format
-#| msgid "Failed to connect to host %s\n"
+#, c-format
 msgid "Failed to connect utun unit: %s\n"
-msgstr "Verbindung zum Server %s fehlgeschlagen\n"
+msgstr "Verbindung zur utun-Einheit fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun.c#l373
 #: ../openconnect-strings.txt:2012
@@ -3942,7 +3941,7 @@ msgstr "(script)"
 #: ../openconnect-strings.txt:2036
 #, c-format
 msgid "Unknown packet (len %d) received: %02x %02x %02x %02x...\n"
-msgstr "Unbekanntes Paket empfangen (Länge %d) : %02x %02x %02x %02x...\n"
+msgstr "Unbekanntes Paket empfangen (Länge %d) : %02x %02x %02x %02x …\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/tun.c#l543
 #: ../openconnect-strings.txt:2039
@@ -4020,23 +4019,21 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l80
 #: ../openconnect-strings.txt:2076
-#, fuzzy, c-format
-#| msgid "Failed to open %s for write: %s\n"
+#, c-format
 msgid "Failed to send \"%s\" to ykneo-oath applet: %s\n"
-msgstr "Öffnen von %s zum Schreiben schlug fehl: %s\n"
+msgstr "Senden von »%s« an ykneo-oath-Applet fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l87
 #: ../openconnect-strings.txt:2079
 #, c-format
 msgid "Invalid short response to \"%s\" from ykneo-oath applet\n"
-msgstr ""
+msgstr "Ungültige kurze Antwort des ykneo-oath-Applet auf »%s«\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l106
 #: ../openconnect-strings.txt:2082
-#, fuzzy, c-format
-#| msgid "Failed to write config to %s: %s\n"
+#, c-format
 msgid "Failure response to \"%s\": %04x\n"
-msgstr "Antwort lautete: »%s«\n"
+msgstr "Fehler in Antwort auf: »%s«: %04x\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l158
 #: ../openconnect-strings.txt:2085
@@ -4047,20 +4044,18 @@ msgstr "»Applet wählen«-Befehl"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l368
 #: ../openconnect-strings.txt:2089
 msgid "Unrecognised response from ykneo-oath applet\n"
-msgstr ""
+msgstr "Nicht erkannte Antwort des ykneo.oath-Applets\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l185
 #: ../openconnect-strings.txt:2092
 #, c-format
 msgid "Found ykneo-oath applet v%d.%d.%d.\n"
-msgstr ""
+msgstr "ykneo.oath-Applet v%d.%d.%d. gefunden\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l206
 #: ../openconnect-strings.txt:2095
-#, fuzzy
-#| msgid "PIN required for %s"
 msgid "PIN required for Yubikey OATH applet"
-msgstr "Für %s wird eine PIN benötigt"
+msgstr "Für das Yubikey-OATH-Applet wird ein PIN benötigt"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l211
 #: ../openconnect-strings.txt:2098
@@ -4069,10 +4064,8 @@ msgstr "Yubikey PIN:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l233
 #: ../openconnect-strings.txt:2101
-#, fuzzy
-#| msgid "Failed to parse server response\n"
 msgid "Failed to calculate Yubikey unlock response\n"
-msgstr "Verarbeitung der Serverantwort ist gescheitert\n"
+msgstr "Die Yubikey-Entsperrantwort konnte nicht berechnet werden\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l249
 #: ../openconnect-strings.txt:2104
@@ -4081,10 +4074,9 @@ msgstr "Entsperren-Befehl"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l286
 #: ../openconnect-strings.txt:2107
-#, fuzzy, c-format
-#| msgid "Failed to create TPM context: %s\n"
+#, c-format
 msgid "Failed to establish PC/SC context: %s\n"
-msgstr "Erstellen des TPM-Kontexts fehlgeschlagen: %s\n"
+msgstr "Erstellung eines PC/SC-Kontext fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l291
 #: ../openconnect-strings.txt:2110
@@ -4100,10 +4092,9 @@ msgstr "Anfragen der Leserliste ist fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l336
 #: ../openconnect-strings.txt:2117
-#, fuzzy, c-format
-#| msgid "Failed to change to CSD home directory '%s': %s\n"
+#, c-format
 msgid "Failed to connect to PC/SC reader '%s': %s\n"
-msgstr "Wechseln in den Ordner »%s« der CSD-Datei schlug fehl: %s\n"
+msgstr "Verbindung zum PC/SC-Leser »%s« fehlgeschlagen: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l341
 #: ../openconnect-strings.txt:2120
@@ -4113,10 +4104,10 @@ msgstr "Verbundener PC/SC-Leser »%s«\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l346
 #: ../openconnect-strings.txt:2123
-#, fuzzy, c-format
-#| msgid "Failed to open private key file '%s': %s\n"
+#, c-format
 msgid "Failed to obtain exclusive access to reader '%s': %s\n"
-msgstr "Öffnen der privaten Schlüsseldatei »%s« schlug fehl: %s\n"
+msgstr ""
+"Exklusiver Zugriff auf Einleser »%s« konnte nicht erhalten werden: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l356
 #: ../openconnect-strings.txt:2126
@@ -4135,14 +4126,14 @@ msgstr "%s/%s Schlüssel »%s« auf »%s« wurde gefunden\n"
 msgid ""
 "Token '%s' not found on Yubikey '%s'. Searching for another Yubikey...\n"
 msgstr ""
+"Token »%s« nicht in Yubikey »%s« gefunden. Ein anderer Yubikey wird gesucht "
+"…\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l455
 #: ../openconnect-strings.txt:2136
-#, fuzzy
-#| msgid "Server is rejecting the soft token; switching to manual entry\n"
 msgid "Server is rejecting the Yubikey token; switching to manual entry\n"
 msgstr ""
-"Server hat den Soft-Token abgewiesen, es wird zur manuellen Eingabe "
+"Server hat den Yubikey-Token abgewiesen, es wird zur manuellen Eingabe "
 "gewechselt\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l510
@@ -4152,10 +4143,9 @@ msgstr "Yubikey Token-Code wird erzeugt\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l515
 #: ../openconnect-strings.txt:2142
-#, fuzzy, c-format
-#| msgid "Failed to assign policy to key: %s\n"
+#, c-format
 msgid "Failed to obtain exclusive access to Yubikey: %s\n"
-msgstr "Zuweisen der Richtlinie zum Schlüssel ist fehlgeschlagen: %s\n"
+msgstr "Exklusiver Zugriff auf Yubikey konnte nicht erhalten werden: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l561
 #: ../openconnect-strings.txt:2145
@@ -4165,7 +4155,7 @@ msgstr "Berechnen-Befehl"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/216939c93f:/yubikey.c#l569
 #: ../openconnect-strings.txt:2148
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
-msgstr ""
+msgstr "Nicht erkannte Antwort von Yubikey bei Erstellung des Token-Codes\n"
 
 #~ msgid "Error converting console input: %lx\n"
 #~ msgstr "Fehler beim Umwandeln der Konsoleneingabe: %lx\n"
