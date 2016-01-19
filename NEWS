@@ -1,4 +1,15 @@
 =======================================================
+NetworkManager-openconnect-1.2
+Overview of changes since network-manager-openconnect-1.0
+=======================================================
+
+This is a new stable release of NetworkManager-openconnect.  Notable changes include:
+
+* Ported to libnm, libnma and GDBus
+* Support multiple concurrent VPN connections
+* Translation updates
+
+=======================================================
 network-manager-openconnect-1.0
 Overview of changes since network-manager-openconnect-0.9.10
 =======================================================
