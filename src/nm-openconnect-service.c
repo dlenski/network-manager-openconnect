@@ -600,6 +600,7 @@ nm_openconnect_plugin_new (const char *bus_name)
 
 	plugin = (NMOpenconnectPlugin *) g_initable_new (NM_TYPE_OPENCONNECT_PLUGIN, NULL, &error,
 	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_SERVICE_NAME, bus_name,
+	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_WATCH_PEER, !debug,
 	                                                 NULL);
 	if (!plugin) {
 		g_warning ("Failed to initialize a plugin instance: %s", error->message);
