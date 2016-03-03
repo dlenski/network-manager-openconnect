@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-23 08:04+0000\n"
-"PO-Revision-Date: 2016-02-26 08:54+0100\n"
+"POT-Creation-Date: 2016-03-02 14:06+0000\n"
+"PO-Revision-Date: 2016-03-03 09:01+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -349,7 +349,7 @@ msgstr ""
 #: ../openconnect-strings.txt:60
 #, c-format
 msgid "Received unsuccessful %s response from TNCC\n"
-msgstr ""
+msgstr "Se recibió respuesta fallida %s de TNCC\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/auth-juniper.c#l474
 #: ../openconnect-strings.txt:63
@@ -754,7 +754,7 @@ msgstr "CSTP conectado. DPD %d, Keepalive %d\n"
 #: ../openconnect-strings.txt:277
 #, c-format
 msgid "CSTP Ciphersuite: %s\n"
-msgstr ""
+msgstr "Conjunto de cifrado CSTP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/cstp.c#l620
 #: ../openconnect-strings.txt:280
@@ -1367,17 +1367,17 @@ msgstr "Paquete ESP recibido con la carga útil de tipo desconocido %02x\n"
 #: ../openconnect-strings.txt:608
 #, c-format
 msgid "Invalid padding length %02x in ESP\n"
-msgstr ""
+msgstr "Longitud de relleno %02x no válida en ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/esp.c#l313
 #: ../openconnect-strings.txt:611
 msgid "Invalid padding bytes in ESP\n"
-msgstr ""
+msgstr "Bytes de relleno no válidos en ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/esp.c#l321
 #: ../openconnect-strings.txt:614
 msgid "ESP session established with server\n"
-msgstr ""
+msgstr "Sesión ESP establecida con el servidor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/esp.c#l332
 #: ../openconnect-strings.txt:617
@@ -1397,12 +1397,12 @@ msgstr "Falló la configuración de compresión\n"
 #: ../openconnect-strings.txt:623
 #, c-format
 msgid "LZO decompressed %d bytes into %d\n"
-msgstr ""
+msgstr "LZO descomprime %d bytes en %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/esp.c#l358
 #: ../openconnect-strings.txt:626
 msgid "Rekey not implemented for ESP\n"
-msgstr ""
+msgstr "Renegociación de la clave no implementada para ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/esp.c#l362
 #: ../openconnect-strings.txt:629
@@ -1417,7 +1417,7 @@ msgstr "Enviar pruebas ESP para DPD\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/esp.c#l375
 #: ../openconnect-strings.txt:635
 msgid "Keepalive not implemented for ESP\n"
-msgstr ""
+msgstr "Keepalive no está implementado para ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/esp.c#l398
 #: ../openconnect-strings.txt:638
@@ -1464,7 +1464,7 @@ msgstr "Falló al escribir en el socket SSL: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/openssl-esp.c#l148
 #: ../openconnect-strings.txt:658
 msgid "Received ESP packet with invalid HMAC\n"
-msgstr ""
+msgstr "Paquete ESP recibido con HMAC no válida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/gnutls-esp.c#l169
 #: ../openconnect-strings.txt:661
@@ -2743,7 +2743,7 @@ msgstr "Error fatal al gestionar la línea de comandos\n"
 #: ../openconnect-strings.txt:1354
 #, c-format
 msgid "ReadConsole() failed: %s\n"
-msgstr ""
+msgstr "ReadConsole() ha fallado: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l391
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l404
@@ -2817,7 +2817,7 @@ msgstr "Falló la ubicación de la ruta de vpnc-script\n"
 #: ../openconnect-strings.txt:1396
 #, c-format
 msgid "Override hostname '%s' to '%s'\n"
-msgstr ""
+msgstr "Cambiar nombre de servidor «%s» a «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l737
 #: ../openconnect-strings.txt:1399
@@ -3090,6 +3090,8 @@ msgstr "No se requiere certificado SSL del servidor para ser válido"
 #: ../openconnect-strings.txt:1557
 msgid "Disable default system certificate authorities"
 msgstr ""
+"Desactivar de manera predeterminada las autoridades de certificación del "
+"sistema"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l801
 #: ../openconnect-strings.txt:1560
@@ -3146,7 +3148,7 @@ msgstr "Cabecera HTTP User_Agent: campo"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l815
 #: ../openconnect-strings.txt:1590
 msgid "Use IP when connecting to HOST"
-msgstr ""
+msgstr "Usar IP cuando al conectar a HOST"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l816
 #: ../openconnect-strings.txt:1593
@@ -3248,7 +3250,7 @@ msgstr "Modo de compresión «%s» no válido\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l1153
 #: ../openconnect-strings.txt:1643
 msgid "Missing colon in resolve option\n"
-msgstr ""
+msgstr "Faltan los dos puntos en la opción de resolución\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l1158
 #: ../openconnect-strings.txt:1646
@@ -3445,7 +3447,7 @@ msgstr "sí"
 #: ../openconnect-strings.txt:1750
 #, c-format
 msgid "Server key hash: %s\n"
-msgstr ""
+msgstr "Servidor de clave hash: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/main.c#l1766
 #: ../openconnect-strings.txt:1753
@@ -3660,7 +3662,7 @@ msgstr "Cookie «%s» no válida\n"
 #: ../openconnect-strings.txt:1870
 #, c-format
 msgid "Unexpected length %d for TLV %d/%d\n"
-msgstr ""
+msgstr "Longitud %d inesperada para TLV %d/%d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/oncp.c#l182
 #: ../openconnect-strings.txt:1873
@@ -3679,7 +3681,7 @@ msgstr "Recibido servidor DNS %s\n"
 #: ../openconnect-strings.txt:1879
 #, c-format
 msgid "Received DNS search domain %.*s\n"
-msgstr ""
+msgstr "Dominio de búsqueda DNS recibido %.*s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/oncp.c#l217
 #: ../openconnect-strings.txt:1882
@@ -3691,13 +3693,13 @@ msgstr "Recibida dirección IP interna %s\n"
 #: ../openconnect-strings.txt:1885
 #, c-format
 msgid "Received netmask %s\n"
-msgstr ""
+msgstr "Máscara de red recibida %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/oncp.c#l235
 #: ../openconnect-strings.txt:1888
 #, c-format
 msgid "Received internal gateway address %s\n"
-msgstr ""
+msgstr "Dirección de puerta de enlace interna recibida %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/oncp.c#l248
 #: ../openconnect-strings.txt:1891
@@ -3747,7 +3749,7 @@ msgstr "Puerto ESP: %d\n"
 #: ../openconnect-strings.txt:1912
 #, c-format
 msgid "ESP key lifetime: %u bytes\n"
-msgstr ""
+msgstr "Tiempo de vida de la clave ESP: %u bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/b3ba140b2b:/oncp.c#l361
 #: ../openconnect-strings.txt:1915
