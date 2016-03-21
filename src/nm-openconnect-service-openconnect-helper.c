@@ -413,7 +413,7 @@ main (int argc, char *argv[])
 		bus_path = NM_DBUS_SERVICE_OPENCONNECT;
 
 	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-	                                       G_DBUS_PROXY_FLAGS_NONE,
+	                                       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
 	                                       NULL,
 	                                       bus_path,
 	                                       NM_VPN_DBUS_PLUGIN_PATH,
