@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-21 12:39+0000\n"
-"PO-Revision-Date: 2016-03-21 16:24+0200\n"
+"POT-Creation-Date: 2016-03-21 14:24+0000\n"
+"PO-Revision-Date: 2016-03-22 12:43+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -65,15 +65,15 @@ msgstr "Aloita yhdistäminen automaattisesti seuraavalla kerralla"
 
 #: ../auth-dialog/main.c:1433
 msgid "Select a host to fetch the login form"
-msgstr ""
+msgstr "Valitse palvelin, josta kirjautumislomake noudetaan"
 
 #: ../auth-dialog/main.c:1438
 msgid "Contacting host, please wait..."
-msgstr ""
+msgstr "Yhdistetään palvelimeen, odota hetki..."
 
 #: ../auth-dialog/main.c:1450
 msgid "_Login"
-msgstr ""
+msgstr "_Kirjaudu"
 
 #: ../auth-dialog/main.c:1456
 msgid "_Cancel"
@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../src/nm-openconnect-service.c:648
 msgid "Don't quit when VPN connection terminates"
-msgstr ""
+msgstr "Älä lopeta, kun VPN-yhteys päättyy"
 
 #: ../src/nm-openconnect-service.c:649
 msgid "Enable verbose debug logging (may expose passwords)"
@@ -314,7 +314,6 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth-juniper.c#l410
 #: ../openconnect-strings.txt:51
 #, c-format
-#| msgid "Got HTTP response: %s\n"
 msgid ""
 "TNCC response: -->\n"
 "%s\n"
@@ -426,7 +425,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth.c#l630
 #: ../openconnect-strings.txt:112
 msgid "Asked for password but '--no-passwd' set\n"
-msgstr ""
+msgstr "Kysyttiin salasanaa, mutta valitsin '--no-passwd' asetettu\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth.c#l910
 #: ../openconnect-strings.txt:115
@@ -481,7 +480,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth.c#l996
 #: ../openconnect-strings.txt:148
 msgid "Trying to run Linux CSD trojan script.\n"
-msgstr ""
+msgstr "Yritetään suorittaa Linux CSD -troijalaisskripti.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth.c#l1023
 #: ../openconnect-strings.txt:151
@@ -609,7 +608,6 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/cstp.c#l245
 #: ../openconnect-strings.txt:220
-#| msgid "Error processing HTTP response\n"
 msgid "Error creating HTTPS CONNECT request\n"
 msgstr "Virhe luotaessa HTTPS CONNECT -pyyntöä\n"
 
@@ -2642,7 +2640,6 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/main.c#l379
 #: ../openconnect-strings.txt:1354
 #, c-format
-#| msgid "Reconnect failed\n"
 msgid "ReadConsole() failed: %s\n"
 msgstr "ReadConsole() epäonnistui: %s\n"
 
