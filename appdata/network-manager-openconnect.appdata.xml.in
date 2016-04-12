@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright Lubomir Rintel 2016 -->
+<component type="addon">
+  <id>network-manager-openconnect</id>
+  <project_license>GPL-2.0+</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <extends>nm-connection-editor.desktop</extends>
+  <extends>gnome-control-center.desktop</extends>
+  <_name>Cisco AnyConnect SSL VPN client</_name>
+  <_summary>Client for Cisco AnyConnect SSL VPN virtual private networks</_summary>
+
+  <keywords>
+    <keyword>network</keyword>
+    <keyword>manager</keyword>
+    <keyword>NetworkManager</keyword>
+    <keyword>connection</keyword>
+    <keyword>VPN</keyword>
+    <keyword>Cisco</keyword>
+    <keyword>SSLVPN</keyword>
+    <keyword>AnyConnect</keyword>
+    <keyword>Juniper</keyword>
+    <keyword>openconnect</keyword>
+  </keywords>
+
+  <description>
+    <_p>Support for configuring SSL VPN virtual private network connections using OpenConnect.</_p>
+    <_p>Compatible with Cisco AnyConnect, Juniper and ocserv based networks.</_p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <image width="800" height="734">https://git.gnome.org/browse/network-manager-openconnect/plain/appdata/openconnect.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://wiki.gnome.org/Projects/NetworkManager/VPN</url>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager</url>
+  <update_contact>networkmanager-maint@gnome.bugs</update_contact>
+  <translation type="gettext">NetworkManager-openconnect</translation>
+  <_developer_name>The NetworkManager Developers</_developer_name>
+</component>
