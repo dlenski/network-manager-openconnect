@@ -21,6 +21,11 @@ nmvpnoldservicedir = $(sysconfdir)/NetworkManager/VPN
 nmvpnoldservice_DATA = nm-openconnect-service.name
 endif
 
+appdatadir = $(datadir)/appdata
+appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+appdata_in_files = appdata/network-manager-openconnect.appdata.xml.in
+@INTLTOOL_XML_RULE@
+
 nm-openconnect-service.name: $(srcdir)/nm-openconnect-service.name.in
 	sed -e 's|[@]LIBEXECDIR[@]|$(libexecdir)|g' \
 	    -e 's|[@]PLUGINDIR[@]|$(libdir)/NetworkManager|g' \
@@ -32,12 +37,17 @@ EXTRA_DIST = nm-openconnect-service.name.in \
              $(dbusservice_DATA)  \
              $(desktop_in_files)  \
              $(icon_DATA)         \
+             $(appdata_in_files)  \
+             $(appdata_DATA)      \
              intltool-extract.in  \
              intltool-merge.in    \
              intltool-update.in   \
              openconnect-strings.txt
 
-CLEANFILES = $(nmvpnservice_DATA) $(desktop_DATA) *~
+CLEANFILES = $(nmvpnservice_DATA) \
+             $(desktop_DATA)      \
+             $(appdata_DATA)
+
 DISTCLEANFILES = intltool-extract intltool-merge intltool-update
 
 ACLOCAL_AMFLAGS = -I m4
