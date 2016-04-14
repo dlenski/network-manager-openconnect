@@ -6,7 +6,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <extends>nm-connection-editor.desktop</extends>
   <extends>gnome-control-center.desktop</extends>
-  <_name>Cisco AnyConnect SSL VPN client</_name>
+  <_name>OpenConnect VPN client</_name>
   <_summary>Client for Cisco AnyConnect SSL VPN virtual private networks</_summary>
 
   <keywords>
