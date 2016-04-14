@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-08 14:35+0100\n"
-"PO-Revision-Date: 2016-03-08 14:37+0100\n"
+"POT-Creation-Date: 2016-04-14 15:54+0200\n"
+"PO-Revision-Date: 2016-04-14 15:55+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -25,6 +25,30 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:1
+msgid "OpenConnect VPN client"
+msgstr "Klient VPN OpenConnect"
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:2
+msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
+msgstr "Klient dla wirtualnych sieci prywatnych Cisco AnyConnect SSL VPN"
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:3
+msgid ""
+"Support for configuring SSL VPN virtual private network connections using "
+"OpenConnect."
+msgstr ""
+"Obsługa konfigurowania wirtualnych sieci prywatnych SSL VPN używając "
+"OpenConnect."
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:4
+msgid "Compatible with Cisco AnyConnect, Juniper and ocserv based networks."
+msgstr "Zgodne z sieciami opartymi na Cisco AnyConnect, Juniper i ocserv."
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:5
+msgid "The NetworkManager Developers"
+msgstr "Programiści projektu NetworkManager"
 
 #: ../auth-dialog/main.c:661
 #, c-format
@@ -90,171 +114,6 @@ msgstr "Zapisywanie haseł"
 #: ../auth-dialog/main.c:1470
 msgid "Log"
 msgstr "Dziennik"
-
-#: ../properties/auth-helpers.c:64
-msgid "Choose a Certificate Authority certificate..."
-msgstr "Wybierz certyfikat CA…"
-
-#: ../properties/auth-helpers.c:80
-msgid "Choose your personal certificate..."
-msgstr "Wybierz certyfikat prywatny…"
-
-#: ../properties/auth-helpers.c:96
-msgid "Choose your private key..."
-msgstr "Wybierz klucz prywatny…"
-
-#: ../properties/auth-helpers.c:256
-msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect.c:79
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "VPN zgodny z Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect.c:80
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Zgodny z VPN Cisco AnyConnect SSL."
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Ogólne</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Wybór pliku"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_Gateway:"
-msgstr "_Brama:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Proxy:"
-msgstr "_Pośrednik:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "CA C_ertificate:"
-msgstr "C_ertyfikat CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "CSD _Wrapper Script:"
-msgstr "Skrypt _wrappera CSD:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Uwierzytelnianie certyfikatu</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "_User Certificate:"
-msgstr "Certyfikat _użytkownika:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "Private _Key:"
-msgstr "_Klucz prywatny:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Use _FSID for key passphrase"
-msgstr "Użycie _FSID dla hasła klucza"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Uwierzytelnianie tokenem programowym</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "Token _Mode:"
-msgstr "_Tryb tokena:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token Sec_ret:"
-msgstr "_Hasło tokena:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Disabled"
-msgstr "Wyłączone"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "SecurID RSA — odczytywanie z ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - manually entered"
-msgstr "SecurID RSA — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "TOTP - manually entered"
-msgstr "TOTP — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "HOTP - manually entered"
-msgstr "HOTP — wprowadzane ręcznie"
-
-#: ../src/nm-openconnect-service.c:150
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr ""
-"nieprawidłowa własność liczby całkowitej „%s” lub jest poza zakresem [%d -> "
-"%d]"
-
-#: ../src/nm-openconnect-service.c:160
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr ""
-"nieprawidłowa własność zmiennej logicznej „%s” (nie wynosi „yes” lub „no”)"
-
-#: ../src/nm-openconnect-service.c:167
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "nieobsługiwana własność „%s” typu „%s”"
-
-#: ../src/nm-openconnect-service.c:180
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "własność „%s” jest nieprawidłowa lub nieobsługiwana"
-
-#: ../src/nm-openconnect-service.c:196
-msgid "No VPN configuration options."
-msgstr "Brak opcji konfiguracji VPN."
-
-#: ../src/nm-openconnect-service.c:214
-msgid "No VPN secrets!"
-msgstr "Brak haseł VPN."
-
-#: ../src/nm-openconnect-service.c:381
-msgid "Could not find openconnect binary."
-msgstr "Nie można odnaleźć pliku binarnego openconnect."
-
-#: ../src/nm-openconnect-service.c:393
-msgid "No VPN gateway specified."
-msgstr "Nie podano bramy VPN."
-
-#: ../src/nm-openconnect-service.c:403
-msgid "No WebVPN cookie provided."
-msgstr "Nie podano ciasteczka WebVPN."
-
-#: ../src/nm-openconnect-service.c:648
-msgid "Don't quit when VPN connection terminates"
-msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
-
-#: ../src/nm-openconnect-service.c:649
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr ""
-"Włącza zapisywanie większej liczby komunikatów debugowania w dzienniku (może "
-"ujawnić hasła)"
-
-#: ../src/nm-openconnect-service.c:650
-msgid "D-Bus name to use for this instance"
-msgstr "Nazwa D-Bus dla tego wystąpienia"
-
-#: ../src/nm-openconnect-service.c:673
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"nm-openconnect-service dostarcza zintegrowaną możliwość VPN SSL Cisco "
-"AnyConnect dla usługi NetworkManager."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth-juniper.c#l128
 #: ../openconnect-strings.txt:14
@@ -5244,3 +5103,168 @@ msgstr "polecenie obliczania"
 #: ../openconnect-strings.txt:2744
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Nierozpoznana odpowiedź z Yubikey podczas tworzenia kodu tokena\n"
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Wybierz certyfikat CA…"
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "Wybierz certyfikat prywatny…"
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "Wybierz klucz prywatny…"
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:79
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN zgodny z Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:80
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Zgodny z VPN Cisco AnyConnect SSL."
+
+#: ../src/nm-openconnect-service.c:150
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr ""
+"nieprawidłowa własność liczby całkowitej „%s” lub jest poza zakresem [%d -> "
+"%d]"
+
+#: ../src/nm-openconnect-service.c:160
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr ""
+"nieprawidłowa własność zmiennej logicznej „%s” (nie wynosi „yes” lub „no”)"
+
+#: ../src/nm-openconnect-service.c:167
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "nieobsługiwana własność „%s” typu „%s”"
+
+#: ../src/nm-openconnect-service.c:180
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "własność „%s” jest nieprawidłowa lub nieobsługiwana"
+
+#: ../src/nm-openconnect-service.c:196
+msgid "No VPN configuration options."
+msgstr "Brak opcji konfiguracji VPN."
+
+#: ../src/nm-openconnect-service.c:214
+msgid "No VPN secrets!"
+msgstr "Brak haseł VPN."
+
+#: ../src/nm-openconnect-service.c:381
+msgid "Could not find openconnect binary."
+msgstr "Nie można odnaleźć pliku binarnego openconnect."
+
+#: ../src/nm-openconnect-service.c:393
+msgid "No VPN gateway specified."
+msgstr "Nie podano bramy VPN."
+
+#: ../src/nm-openconnect-service.c:403
+msgid "No WebVPN cookie provided."
+msgstr "Nie podano ciasteczka WebVPN."
+
+#: ../src/nm-openconnect-service.c:648
+msgid "Don't quit when VPN connection terminates"
+msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
+
+#: ../src/nm-openconnect-service.c:649
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr ""
+"Włącza zapisywanie większej liczby komunikatów debugowania w dzienniku (może "
+"ujawnić hasła)"
+
+#: ../src/nm-openconnect-service.c:650
+msgid "D-Bus name to use for this instance"
+msgstr "Nazwa D-Bus dla tego wystąpienia"
+
+#: ../src/nm-openconnect-service.c:673
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"nm-openconnect-service dostarcza zintegrowaną możliwość VPN SSL Cisco "
+"AnyConnect dla usługi NetworkManager."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Ogólne</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Wybór pliku"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_Gateway:"
+msgstr "_Brama:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Proxy:"
+msgstr "_Pośrednik:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "CA C_ertificate:"
+msgstr "C_ertyfikat CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Skrypt _wrappera CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Uwierzytelnianie certyfikatu</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_User Certificate:"
+msgstr "Certyfikat _użytkownika:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "_Klucz prywatny:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Użycie _FSID dla hasła klucza"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Uwierzytelnianie tokenem programowym</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "Token _Mode:"
+msgstr "_Tryb tokena:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token Sec_ret:"
+msgstr "_Hasło tokena:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Disabled"
+msgstr "Wyłączone"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "SecurID RSA — odczytywanie z ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - manually entered"
+msgstr "SecurID RSA — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "TOTP - manually entered"
+msgstr "TOTP — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "HOTP - manually entered"
+msgstr "HOTP — wprowadzane ręcznie"
