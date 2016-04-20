@@ -47,6 +47,7 @@ AM_CONDITIONAL(WITH_GNOME, test x"$with_gnome" != xno)
 
 AC_ARG_WITH(libnm-glib, AS_HELP_STRING([--without-libnm-glib], [Build NetworkManager-openconnect without libnm-glib comatibility]))
 AM_CONDITIONAL(WITH_LIBNM_GLIB, test x"$with_libnm_glib" != xno)
+AC_ARG_ENABLE(absolute-paths, AS_HELP_STRING([--enable-absolute-paths], [Use absolute paths to in .name files. Useful for development. (default is no)]))
 
 AC_ARG_WITH(authdlg, AS_HELP_STRING([--without-authdlg], [Build NetworkManager-openconnect without authentication dialog]))
 AM_CONDITIONAL(WITH_AUTHDLG, test x"$with_authdlg" != xno)
@@ -81,6 +82,9 @@ if test x"$with_gnome" != xno; then
 				  libnm-glib-vpn >= 1.1.0)
 	fi
 fi
+
+test x"$enable_absolute_paths" = x"yes" && NM_PLUGIN_DIR='$(libdir)/NetworkManager/'
+AC_SUBST(NM_PLUGIN_DIR)
 
 dnl
 dnl Distribution version string
