@@ -1,6 +1,6 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-appdata/network-manager-openconnect.appdata.xml.in
+appdata/network-manager-openconnect.metainfo.xml.in
 auth-dialog/main.c
 openconnect-strings.txt
 properties/auth-helpers.c

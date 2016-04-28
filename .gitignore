@@ -26,7 +26,7 @@ m4/gtk-doc.m4
 m4/intltool.m4
 m4/libtool.m4
 m4/lt*.m4
-appdata/network-manager-openconnect.appdata.xml
+appdata/network-manager-openconnect.metainfo.xml
 
 nm-openconnect-service.name
 src/nm-openconnect-service
