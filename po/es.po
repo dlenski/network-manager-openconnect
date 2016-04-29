@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-16 14:03+0000\n"
-"PO-Revision-Date: 2016-03-17 09:58+0100\n"
+"POT-Creation-Date: 2016-04-14 10:36+0000\n"
+"PO-Revision-Date: 2016-04-28 15:30+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -23,6 +23,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:1
+#| msgid "Connect UDP socket\n"
+msgid "OpenConnect VPN client"
+msgstr "Cliente de VPN OpenConnect"
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:2
+#| msgid ""
+#| "Open client for Cisco AnyConnect VPN, version %s\n"
+#| "\n"
+msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
+msgstr ""
+"Cliente para redes privadas virtuales de Cisco VPN AnyConnect SSL"
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:3
+msgid ""
+"Support for configuring SSL VPN virtual private network connections using "
+"OpenConnect."
+msgstr ""
+"Soporte para configurar conexiones a redes privadas virtuales SSL VPN usando "
+"OpenConnect."
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:4
+#| msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgid "Compatible with Cisco AnyConnect, Juniper and ocserv based networks."
+msgstr "Compatible con Cisco AnyConnect, Juniper y redes basadas en ocserv."
+
+#: ../appdata/network-manager-openconnect.appdata.xml.in.h:5
+msgid "The NetworkManager Developers"
+msgstr "Los desarrolladores de NetworkManager"
 
 #: ../auth-dialog/main.c:661
 #, c-format
@@ -88,169 +118,6 @@ msgstr "Guardar contraseñas"
 #: ../auth-dialog/main.c:1470
 msgid "Log"
 msgstr "Registro"
-
-#: ../properties/auth-helpers.c:64
-msgid "Choose a Certificate Authority certificate..."
-msgstr "Elija un certificado CA…"
-
-#: ../properties/auth-helpers.c:80
-msgid "Choose your personal certificate..."
-msgstr "Elija su certificado personal…"
-
-#: ../properties/auth-helpers.c:96
-msgid "Choose your private key..."
-msgstr "Elija su clave privada…"
-
-#: ../properties/auth-helpers.c:256
-msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr "Certificados PEM (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect.c:79
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "Compatible con VPN Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect.c:80
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Compatible con VPN Cisco AnyConnect SSL."
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>General</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Seleccione un archivo"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_Gateway:"
-msgstr "_Pasarela:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Proxy:"
-msgstr "_Proxy:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "CA C_ertificate:"
-msgstr "Certificado _CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Permitir el _troyano de escritorio Cisco Secure"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "CSD _Wrapper Script:"
-msgstr "Script CSD _envolvente:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Certificado de autenticación</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "_User Certificate:"
-msgstr "Certificado del _usuario:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "Private _Key:"
-msgstr "Clave pri_vada:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Use _FSID for key passphrase"
-msgstr "Usar _FSID para la frase de paso de la clave"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Testigo software de autenticación</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "Token _Mode:"
-msgstr "_Modo del testigo:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token Sec_ret:"
-msgstr "Cadena del testigo:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Disabled"
-msgstr "Desactivado"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "ID seguro (SecurID RSA): leído de ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - manually entered"
-msgstr "ID seguro (SecurID RSA: introducido manualmente"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "TOTP - manually entered"
-msgstr ""
-"Contraseña TOTP (Contraseña de uso único basada en la hora): introducida "
-"manualmente"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "HOTP - manually entered"
-msgstr "HOTP: introducida manualmente"
-
-#: ../src/nm-openconnect-service.c:150
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr "propiedad entera «%s» no válida o fuera de rango [%d -> %d]"
-
-#: ../src/nm-openconnect-service.c:160
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "propiedad booleana «%s» no válida (no es «sí» o «no»)"
-
-#: ../src/nm-openconnect-service.c:167
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "propiedad «%s» de tipo %s no controlada"
-
-#: ../src/nm-openconnect-service.c:180
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "propiedad «%s» no válida o no soportada"
-
-#: ../src/nm-openconnect-service.c:196
-msgid "No VPN configuration options."
-msgstr "No hay opciones de configuración de VPN."
-
-#: ../src/nm-openconnect-service.c:214
-msgid "No VPN secrets!"
-msgstr "No hay secretos VPN."
-
-#: ../src/nm-openconnect-service.c:381
-msgid "Could not find openconnect binary."
-msgstr "No se pudo encontrar el binario «openconnect»."
-
-#: ../src/nm-openconnect-service.c:393
-msgid "No VPN gateway specified."
-msgstr "No se especificó ninguna puerta de enlace."
-
-#: ../src/nm-openconnect-service.c:403
-msgid "No WebVPN cookie provided."
-msgstr "No se proporcionó una cookie WebVPN."
-
-#: ../src/nm-openconnect-service.c:648
-msgid "Don't quit when VPN connection terminates"
-msgstr "No abandonar cuando finaliza la conexión VPN"
-
-#: ../src/nm-openconnect-service.c:649
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr ""
-"Activar el registro detallado de depuración (puede exponer las contraseñas)"
-
-#: ../src/nm-openconnect-service.c:650
-msgid "D-Bus name to use for this instance"
-msgstr "Nombre de D-Bus que usar para esta instancia"
-
-#: ../src/nm-openconnect-service.c:673
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"nm-openconnect-service proporciona a NetworkManager la capacidad Cisco "
-"AnyConnect SSL VPN integrada."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth-juniper.c#l128
 #: ../openconnect-strings.txt:14
@@ -527,7 +394,6 @@ msgstr "Falló al establecer gid %ld: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/mainloop.c#l147
 #: ../openconnect-strings.txt:165
 #, c-format
-#| msgid "Failed to set uid %ld\n"
 msgid "Failed to set groups to %ld: %s\n"
 msgstr "Falló al establecer grupos de %ld: %s\n"
 
@@ -535,7 +401,6 @@ msgstr "Falló al establecer grupos de %ld: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/mainloop.c#l154
 #: ../openconnect-strings.txt:169
 #, c-format
-#| msgid "Failed to set uid %ld\n"
 msgid "Failed to set uid %ld: %s\n"
 msgstr "Falló al establecer uid %ld: %s\n"
 
@@ -682,7 +547,6 @@ msgstr "X-DTLS-Session no es de 64 caracteres; es: «%s»\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/cstp.c#l385
 #: ../openconnect-strings.txt:247
 #, c-format
-#| msgid "Unknown CSTP-Content-Encoding %s\n"
 msgid "Unknown DTLS-Content-Encoding %s\n"
 msgstr "DTLS-Content-Encoding %s desconocido\n"
 
@@ -779,7 +643,6 @@ msgstr "Tipo de compresión %d desconocido\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/cstp.c#l745
 #: ../openconnect-strings.txt:298
 #, c-format
-#| msgid "Received compressed data packet of %ld bytes\n"
 msgid "Received %s compressed data packet of %d bytes (was %d)\n"
 msgstr "Paquete de datos comprimidos %s de %d bytes recibido (eran %d)\n"
 
@@ -908,7 +771,6 @@ msgstr "Enviar CSTP Keepalive\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/cstp.c#l1079
 #: ../openconnect-strings.txt:375
 #, c-format
-#| msgid "Sending compressed data packet of %d bytes\n"
 msgid "Sending compressed data packet of %d bytes (was %d)\n"
 msgstr "Enviando paquete de datos comprimidos de %d bytes (eran %d)\n"
 
@@ -933,14 +795,12 @@ msgstr "Intentando la autenticación Digest en el proxy\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/digest.c#l257
 #: ../openconnect-strings.txt:388
 #, c-format
-#| msgid "Attempting Digest authentication to proxy\n"
 msgid "Attempting Digest authentication to server '%s'\n"
 msgstr "Intentando la autenticación Digest al servidor «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l180
 #: ../openconnect-strings.txt:391
 #, c-format
-#| msgid "Failed to create BIO for keystore item '%s'\n"
 msgid "Failed to create SSL_SESSION ASN.1 for OpenSSL: %s\n"
 msgstr "Falló al crear SSL_SESSION ASN.1 para OpenSSL: %s\n"
 
@@ -993,7 +853,6 @@ msgstr "Establecida la conexíon DTLS (usando OpenSSL). Ciphersuite %s.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l656
 #: ../openconnect-strings.txt:420
 #, c-format
-#| msgid "DTLS connection attempted with an existing fd\n"
 msgid "DTLS connection compression using %s.\n"
 msgstr "Compresión de la conexión DTLS utilizando %s.\n"
 
@@ -1133,7 +992,6 @@ msgstr "Obtenido Keepalive DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l917
 #: ../openconnect-strings.txt:496
-#| msgid "Compressed packet received in !deflate mode\n"
 msgid "Compressed DTLS packet received when compression not enabled\n"
 msgstr ""
 "Paquete DTLS comprimido recibido cuando la compresión no estaba activada\n"
@@ -1217,7 +1075,6 @@ msgstr "Demasiado tiempo en detectar el bucle MTU; liberando.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l1234
 #: ../openconnect-strings.txt:542
 #, c-format
-#| msgid "Failed to send DPD request. Expect disconnect\n"
 msgid "Failed to send DPD request (%d): %s\n"
 msgstr "Falló al enviar la solicitud DPD (%d): %s\n"
 
@@ -1233,7 +1090,6 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l1276
 #: ../openconnect-strings.txt:550
 #, c-format
-#| msgid "Failed to reconnect to host %s\n"
 msgid "Failed to recv DPD request (%d): %s\n"
 msgstr "Falló al recibir la solicitud DPD (%d): %s\n"
 
@@ -1245,7 +1101,6 @@ msgstr "Iniciando detección de MTU IPv6\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l1329
 #: ../openconnect-strings.txt:556
 #, c-format
-#| msgid "Sending compressed data packet of %d bytes\n"
 msgid "Detected MTU of %d bytes (was %d)\n"
 msgstr "Detectado MTU de %d bytes (eran %d)\n"
 
@@ -1297,14 +1152,12 @@ msgstr "Parametros para %s ESP: SPI 0x%08x\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l155
 #: ../openconnect-strings.txt:580
 #, c-format
-#| msgid "Unsupported PEM encryption type: %s\n"
 msgid "ESP encryption type %s key 0x%s\n"
 msgstr "Tipo de cifrado ESP %s clave 0x%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l158
 #: ../openconnect-strings.txt:583
 #, c-format
-#| msgid "GSSAPI authentication completed\n"
 msgid "ESP authentication type %s key 0x%s\n"
 msgstr "Tipo de autenticación ESP %s clave 0x%s\n"
 
@@ -1327,7 +1180,6 @@ msgstr "Enviar pruebas ESP\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l264
 #: ../openconnect-strings.txt:596
 #, c-format
-#| msgid "Received DTLS packet 0x%02x of %d bytes\n"
 msgid "Received ESP packet of %d bytes\n"
 msgstr "Paquete ESP recibido de %d bytes\n"
 
@@ -1369,17 +1221,15 @@ msgstr "Sesión ESP establecida con el servidor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l332
 #: ../openconnect-strings.txt:617
-#, fuzzy
 #| msgid "Failed to allocate memory for certificate\n"
 msgid "Failed to allocate memory to decrypt ESP packet\n"
-msgstr "Falló al asignar memoria para el certificado\n"
+msgstr "Falló al asignar memoria para descifrar el paquete ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l338
 #: ../openconnect-strings.txt:620
-#, fuzzy
 #| msgid "Compression setup failed\n"
 msgid "LZO decompression of ESP packet failed\n"
-msgstr "Falló la configuración de compresión\n"
+msgstr "Falló la descompresión LZO del paquete ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l344
 #: ../openconnect-strings.txt:623
@@ -1421,32 +1271,32 @@ msgstr "Enviando paquete ESP de %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l56
 #: ../openconnect-strings.txt:644
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to initialise DTLS secret\n"
 msgid "Failed to initialise ESP cipher: %s\n"
-msgstr "Falló al inicializar el secreto DTLS\n"
+msgstr "Falló al inicializar el cifrado ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l66
 #: ../openconnect-strings.txt:647
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to initialise DTLS secret\n"
 msgid "Failed to initialize ESP HMAC: %s\n"
-msgstr "Falló al inicializar el secreto DTLS\n"
+msgstr "Falló al inicializar ESP HMAC: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l116
 #: ../openconnect-strings.txt:650
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to open private key file %s: %s\n"
 msgid "Failed to generate random keys for ESP: %s\n"
-msgstr "Falló al abrir el archivo de clave privada %s: %s\n"
+msgstr "Falló al generar las claves aleatorias para ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l146
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l212
 #: ../openconnect-strings.txt:654
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to write to SSL socket: %s\n"
 msgid "Failed to calculate HMAC for ESP packet: %s\n"
-msgstr "Falló al escribir en el socket SSL: %s\n"
+msgstr "Falló al calcular HMAC para el paquete ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l153
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-esp.c#l148
@@ -1456,10 +1306,10 @@ msgstr "Paquete ESP recibido con HMAC no válida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l169
 #: ../openconnect-strings.txt:661
-#, fuzzy, c-format
+#, c-format
 #| msgid "Decrypting PEM key failed\n"
 msgid "Decrypting ESP packet failed: %s\n"
-msgstr "Falló al descifrar la clave PEM\n"
+msgstr "Falló al descifrar el paquete ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l189
 #: ../openconnect-strings.txt:664
@@ -3516,10 +3366,10 @@ msgstr "OpenConnect no se compiló con soporte para libstoken\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/main.c#l2073
 #: ../openconnect-strings.txt:1796
-#, fuzzy, c-format
+#, c-format
 #| msgid "general failure"
 msgid "General Yubikey failure: %s\n"
-msgstr "fallo general"
+msgstr "Fallo general de Yubikey: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/mainloop.c#l123
 #: ../openconnect-strings.txt:1799
@@ -4629,10 +4479,9 @@ msgstr "Familia de protocolo %d desconocida. No se puede realizar DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l932
 #: ../openconnect-strings.txt:2388
-#, fuzzy
 #| msgid "Open UDP socket for DTLS:"
 msgid "Open UDP socket"
-msgstr "Abrir socket UDP para DTLS:"
+msgstr "Abrir socket UDP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l963
 #: ../openconnect-strings.txt:2391
@@ -5203,10 +5052,9 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l206
 #: ../openconnect-strings.txt:2688
-#, fuzzy
 #| msgid "PIN required for %s"
 msgid "PIN required for Yubikey OATH applet"
-msgstr "PIN requerido por %s"
+msgstr "PIN requerido por la miniaplicación Yubikey OATH"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l211
 #: ../openconnect-strings.txt:2691
@@ -5315,6 +5163,169 @@ msgstr "calcular comando"
 #: ../openconnect-strings.txt:2744
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr ""
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Elija un certificado CA…"
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "Elija su certificado personal…"
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "Elija su clave privada…"
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certificados PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:79
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Compatible con VPN Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:80
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Compatible con VPN Cisco AnyConnect SSL."
+
+#: ../src/nm-openconnect-service.c:150
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "propiedad entera «%s» no válida o fuera de rango [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:160
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "propiedad booleana «%s» no válida (no es «sí» o «no»)"
+
+#: ../src/nm-openconnect-service.c:167
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "propiedad «%s» de tipo %s no controlada"
+
+#: ../src/nm-openconnect-service.c:180
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "propiedad «%s» no válida o no soportada"
+
+#: ../src/nm-openconnect-service.c:196
+msgid "No VPN configuration options."
+msgstr "No hay opciones de configuración de VPN."
+
+#: ../src/nm-openconnect-service.c:214
+msgid "No VPN secrets!"
+msgstr "No hay secretos VPN."
+
+#: ../src/nm-openconnect-service.c:381
+msgid "Could not find openconnect binary."
+msgstr "No se pudo encontrar el binario «openconnect»."
+
+#: ../src/nm-openconnect-service.c:393
+msgid "No VPN gateway specified."
+msgstr "No se especificó ninguna puerta de enlace."
+
+#: ../src/nm-openconnect-service.c:403
+msgid "No WebVPN cookie provided."
+msgstr "No se proporcionó una cookie WebVPN."
+
+#: ../src/nm-openconnect-service.c:648
+msgid "Don't quit when VPN connection terminates"
+msgstr "No abandonar cuando finaliza la conexión VPN"
+
+#: ../src/nm-openconnect-service.c:649
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr ""
+"Activar el registro detallado de depuración (puede exponer las contraseñas)"
+
+#: ../src/nm-openconnect-service.c:650
+msgid "D-Bus name to use for this instance"
+msgstr "Nombre de D-Bus que usar para esta instancia"
+
+#: ../src/nm-openconnect-service.c:673
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"nm-openconnect-service proporciona a NetworkManager la capacidad Cisco "
+"AnyConnect SSL VPN integrada."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>General</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Seleccione un archivo"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_Gateway:"
+msgstr "_Pasarela:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "CA C_ertificate:"
+msgstr "Certificado _CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Permitir el _troyano de escritorio Cisco Secure"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Script CSD _envolvente:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Certificado de autenticación</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_User Certificate:"
+msgstr "Certificado del _usuario:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "Clave pri_vada:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Usar _FSID para la frase de paso de la clave"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Testigo software de autenticación</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "Token _Mode:"
+msgstr "_Modo del testigo:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token Sec_ret:"
+msgstr "Cadena del testigo:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "ID seguro (SecurID RSA): leído de ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - manually entered"
+msgstr "ID seguro (SecurID RSA: introducido manualmente"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "TOTP - manually entered"
+msgstr ""
+"Contraseña TOTP (Contraseña de uso único basada en la hora): introducida "
+"manualmente"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "HOTP - manually entered"
+msgstr "HOTP: introducida manualmente"
 
 #~ msgid "UDP (DTLS) connect:\n"
 #~ msgstr "Conectar UDP(DTLS):\n"
