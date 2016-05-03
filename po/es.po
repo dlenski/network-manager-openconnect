@@ -35,7 +35,7 @@ msgstr "Cliente de VPN OpenConnect"
 #| "\n"
 msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
 msgstr ""
-"Cliente para redes privadas virtuales de Cisco VPN AnyConnect SSL
+"Cliente para redes privadas virtuales de Cisco VPN AnyConnect SSL"
 
 #: ../appdata/network-manager-openconnect.appdata.xml.in.h:3
 msgid ""
