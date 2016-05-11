@@ -1,4 +1,14 @@
 =======================================================
+NetworkManager-openconnect-1.2.2
+Overview of changes since NetworkManager-openconnect-1.2
+=======================================================
+
+This is a new stable release of NetworkManager-openconnect.  Notable changes include:
+
+* Use a proper name for the AppStream metadata
+* Updated Hungarian translation
+
+=======================================================
 NetworkManager-openconnect-1.2
 Overview of changes since network-manager-openconnect-1.0
 =======================================================
