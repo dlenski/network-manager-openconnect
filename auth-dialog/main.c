@@ -937,6 +937,7 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	char *hostname;
 	char *group;
 	char *csd;
+	char *protocol;
 	char *sslkey, *cert;
 	char *csd_wrapper;
 	char *pem_passphrase_fsid;
@@ -983,6 +984,18 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 		g_checksum_free(sha1);
 		
 		parse_xmlconfig (config_str);
+	}
+
+	protocol = g_hash_table_lookup(options, NM_SETTING_VPN_SERVICE_TYPE);
+	if (protocol && g_str_has_prefix(protocol, NM_DBUS_SERVICE_OPENCONNECT ".")) {
+#if OPENCONNECT_CHECK_VER(5,2)
+		int ret = openconnect_set_protocol(vpninfo, protocol +
+				  strlen(NM_DBUS_SERVICE_OPENCONENCT "."));
+		if (ret)
+			return ret;
+#else
+		return -EINVAL;
+#endif
 	}
 
 	cafile = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_CACERT);
@@ -1623,7 +1636,7 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	if (strcmp(vpn_service, NM_VPN_SERVICE_TYPE_OPENCONNECT) != 0) {
+	if (!g_str_has_prefix(vpn_service, NM_VPN_SERVICE_TYPE_OPENCONNECT)) {
 		fprintf (stderr, "This dialog only works with the '%s' service\n",
 			 NM_VPN_SERVICE_TYPE_OPENCONNECT);
 		return 1;

@@ -364,7 +364,8 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	GSource *openconnect_watch;
 	gint	stdin_fd;
 	const char *props_vpn_gw, *props_cookie, *props_cacert, *props_mtu, *props_gwcert, *props_proxy;
-	
+	const char *service;
+
 	/* Find openconnect */
 	openconnect_binary = openconnect_binary_paths;
 	while (*openconnect_binary != NULL) {
@@ -409,9 +410,22 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	props_mtu = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_MTU);
 
 	props_proxy = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY);
+	service = nm_setting_vpn_get_service_type (s_vpn);
 
 	openconnect_argv = g_ptr_array_new ();
 	g_ptr_array_add (openconnect_argv, (gpointer) (*openconnect_binary));
+
+	if (service && g_str_has_prefix(service, NM_DBUS_SERVICE_OPENCONNECT ".")) {
+		service += strlen(NM_DBUS_SERVICE_OPENCONNECT ".");
+
+		/* Special case for OpenConnect 7.06 which had --juniper but not --protocol */
+		if (!strcmp(service, "juniper"))
+			g_ptr_array_add (openconnect_argv, (gpointer) "--juniper");
+		else {
+			g_ptr_array_add (openconnect_argv, (gpointer) "--protocol");
+			g_ptr_array_add (openconnect_argv, (gpointer) service);
+		}
+	}
 
 	if (props_gwcert && strlen(props_gwcert)) {
 		g_ptr_array_add (openconnect_argv, (gpointer) "--servercert");
