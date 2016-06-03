@@ -937,7 +937,6 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	char *hostname;
 	char *group;
 	char *csd;
-	char *protocol;
 	char *sslkey, *cert;
 	char *csd_wrapper;
 	char *pem_passphrase_fsid;
@@ -984,18 +983,6 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 		g_checksum_free(sha1);
 		
 		parse_xmlconfig (config_str);
-	}
-
-	protocol = g_hash_table_lookup(options, NM_SETTING_VPN_SERVICE_TYPE);
-	if (protocol && g_str_has_prefix(protocol, NM_DBUS_SERVICE_OPENCONNECT ".")) {
-#if OPENCONNECT_CHECK_VER(5,2)
-		int ret = openconnect_set_protocol(vpninfo, protocol +
-				  strlen(NM_DBUS_SERVICE_OPENCONENCT "."));
-		if (ret)
-			return ret;
-#else
-		return -EINVAL;
-#endif
 	}
 
 	cafile = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_CACERT);
@@ -1654,6 +1641,17 @@ int main (int argc, char **argv)
 	if (get_config(options, secrets, _ui_data->vpninfo)) {
 		fprintf(stderr, "Failed to find VPN UUID %s\n", vpn_uuid);
 		return 1;
+	}
+
+	if (g_str_has_prefix(vpn_service, NM_VPN_SERVICE_TYPE_OPENCONNECT ".")) {
+		char *proto = vpn_service + strlen(NM_VPN_SERVICE_TYPE_OPENCONNECT ".");
+#if OPENCONNECT_CHECK_VER(5,1)
+		if (openconnect_set_protocol(_ui_data->vpninfo, proto))
+#endif
+		{
+			fprintf (stderr, "Protocol '%s' not supported\n", proto);
+			return 1;
+		}
 	}
 
 #if OPENCONNECT_CHECK_VER(3,4)
