@@ -20,6 +20,7 @@ common_CFLAGS =                                         \
 	$(GLIB_CFLAGS)                                  \
 	$(GTK_CFLAGS)                                   \
 	$(OPENCONNECT_CFLAGS)                           \
+	-I$(top_srcdir)/shared                          \
 	-I$(top_srcdir)/src                             \
 	-DICONDIR=\""$(datadir)/pixmaps"\"              \
 	-DUIDIR=\""$(uidir)"\"                          \

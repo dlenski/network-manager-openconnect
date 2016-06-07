@@ -1,6 +1,5 @@
 [VPN Connection]
 name=openconnect
-aliases=org.freedesktop.NetworkManager.openconnect.anyconnect;org.freedesktop.NetworkManager.openconnect.nc
 service=org.freedesktop.NetworkManager.openconnect
 program=@LIBEXECDIR@/nm-openconnect-service
 supports-multiple-connections=true
@@ -11,3 +10,6 @@ plugin=@PLUGINDIR@/libnm-vpn-plugin-openconnect.so
 [GNOME]
 auth-dialog=@LIBEXECDIR@/nm-openconnect-auth-dialog
 properties=@PLUGINDIR@/libnm-openconnect-properties
+
+[openconnect]
+supported-protocols=anyconnect,nc
