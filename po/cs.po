@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-22 10:44+0000\n"
+"POT-Creation-Date: 2016-06-03 15:51+0000\n"
 "PO-Revision-Date: 2016-03-22 14:42+0100\n"
 "Last-Translator: Zdeněk Hataš <zdenek.hatas@gmail.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -19,6 +19,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Poedit 1.5.4\n"
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
+msgid "OpenConnect VPN client"
+msgstr "VPN klient OpenConnect"
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:2
+msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
+msgstr "Klient pro virtuální privátní sítě Cisco AnyConnect SLL VPN"
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:3
+msgid ""
+"Support for configuring SSL VPN virtual private network connections using "
+"OpenConnect."
+msgstr ""
+"Podpora pro nastavení připojení k virtuálním privátním sítím SSL VPN pomocí "
+"OpenConnect."
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:4
+msgid "Compatible with Cisco AnyConnect, Juniper and ocserv based networks."
+msgstr "Kompatibilní s Cisco AnyConnect, Juniper a sítěmi založenými na ocserv."
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:5
+msgid "The NetworkManager Developers"
+msgstr "Vývojáři NetworkManageru"
 
 #: ../auth-dialog/main.c:661
 #, c-format
@@ -84,166 +108,6 @@ msgstr "Uložit hesla"
 #: ../auth-dialog/main.c:1470
 msgid "Log"
 msgstr "Záznam"
-
-#: ../properties/auth-helpers.c:64
-msgid "Choose a Certificate Authority certificate..."
-msgstr "Zvolit certifikát certifikační autority…"
-
-#: ../properties/auth-helpers.c:80
-msgid "Choose your personal certificate..."
-msgstr "Zvolte svůj osobní certifikát…"
-
-#: ../properties/auth-helpers.c:96
-msgid "Choose your private key..."
-msgstr "Zvolte svůj soukromý klíč…"
-
-#: ../properties/auth-helpers.c:256
-msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr "Certifikáty PEM (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect.c:79
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "VPN kompatibilní s Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect.c:80
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Kompatibilní s Cisco AnyConnect SSL VPN."
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Obecné</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Zvolte soubor"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_Gateway:"
-msgstr "_Brána:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Proxy:"
-msgstr "_Proxy:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "CA C_ertificate:"
-msgstr "Certifikát _CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Povolit Cisco Secure Desktop _trojan"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "CSD _Wrapper Script:"
-msgstr "CSD _obalující skript:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Autentizace certifikátem<b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "_User Certificate:"
-msgstr "Certifikát _uživatele:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "Private _Key:"
-msgstr "Soukromý _klíč"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Use _FSID for key passphrase"
-msgstr "Použít _FSID jako heslo klíče"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Softwarový autentizační token </b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "Token _Mode:"
-msgstr "Reži_m tokenu:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token Sec_ret:"
-msgstr "He_slo tokenu:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Disabled"
-msgstr "Zakázáno"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "RSA SecurID – přečteno ze souboru ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - manually entered"
-msgstr "RSA SecurID – zadáno ručně"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "TOTP - manually entered"
-msgstr "TOTP – zadáno ručně"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "HOTP - manually entered"
-msgstr "HOTP – zadáno ručně"
-
-#: ../src/nm-openconnect-service.c:150
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr "celočíselná volba „%s“ je neplatná nebo mimo rozsah [%d -> %d]"
-
-#: ../src/nm-openconnect-service.c:160
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "pravdivostní volba „%s“ je neplatná (není ano či ne)"
-
-#: ../src/nm-openconnect-service.c:167
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "neošetřená volba „%s“ typu %s"
-
-#: ../src/nm-openconnect-service.c:180
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "volba „%s“ není platná nebo podorovaná"
-
-#: ../src/nm-openconnect-service.c:196
-msgid "No VPN configuration options."
-msgstr "Žádné volby nastavení VPN."
-
-#: ../src/nm-openconnect-service.c:214
-msgid "No VPN secrets!"
-msgstr "Žádná hesla VPN!"
-
-#: ../src/nm-openconnect-service.c:381
-msgid "Could not find openconnect binary."
-msgstr "Nelze nalézt program openconnect."
-
-#: ../src/nm-openconnect-service.c:393
-msgid "No VPN gateway specified."
-msgstr "Nebyla zadána žádná brána VPN."
-
-#: ../src/nm-openconnect-service.c:403
-msgid "No WebVPN cookie provided."
-msgstr "Nebyla poskytnuta žádná cookie WebVPN."
-
-#: ../src/nm-openconnect-service.c:648
-msgid "Don't quit when VPN connection terminates"
-msgstr "Nevypínat, když se spojení VPN ukončuje"
-
-#: ../src/nm-openconnect-service.c:649
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr "Povolit podrobný ladicí výpis (může prozradit hesla)"
-
-#: ../src/nm-openconnect-service.c:650
-msgid "D-Bus name to use for this instance"
-msgstr "Název použitý v D-Bus pro tuto instanci"
-
-#: ../src/nm-openconnect-service.c:673
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"Služba nm-openconnect-service poskytuje integraci podpory pro Cisco "
-"AnyConnect SSL do aplikace NetworkManager."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth-juniper.c#l128
 #: ../openconnect-strings.txt:14
@@ -462,8 +326,7 @@ msgid ""
 "Error: Running the 'Cisco Secure Desktop' trojan on this platform is not yet "
 "implemented.\n"
 msgstr ""
-"Chyba: Spuštění „Cisco Secure Desktop“ na této platformě ještě není "
-"implementováno.\n"
+"Chyba: Spuštění „Cisco Secure Desktop“ není na této platformě ještě implementováno.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth.c#l982
 #: ../openconnect-strings.txt:137
@@ -5165,3 +5028,163 @@ msgstr "příkaz výpočtu"
 #: ../openconnect-strings.txt:2744
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Nerozpoznaná odpověď od Yubikey při generování kódu tokenu\n"
+
+#: ../properties/auth-helpers.c:64
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Zvolit certifikát certifikační autority…"
+
+#: ../properties/auth-helpers.c:80
+msgid "Choose your personal certificate..."
+msgstr "Zvolte svůj osobní certifikát…"
+
+#: ../properties/auth-helpers.c:96
+msgid "Choose your private key..."
+msgstr "Zvolte svůj soukromý klíč…"
+
+#: ../properties/auth-helpers.c:256
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certifikáty PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect.c:79
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN kompatibilní s Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect.c:80
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Kompatibilní s Cisco AnyConnect SSL VPN."
+
+#: ../src/nm-openconnect-service.c:150
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "celočíselná volba „%s“ je neplatná nebo mimo rozsah [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:160
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "pravdivostní volba „%s“ je neplatná (není ano či ne)"
+
+#: ../src/nm-openconnect-service.c:167
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "neošetřená volba „%s“ typu %s"
+
+#: ../src/nm-openconnect-service.c:180
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "volba „%s“ není platná nebo podorovaná"
+
+#: ../src/nm-openconnect-service.c:196
+msgid "No VPN configuration options."
+msgstr "Žádné volby nastavení VPN."
+
+#: ../src/nm-openconnect-service.c:214
+msgid "No VPN secrets!"
+msgstr "Žádná hesla VPN!"
+
+#: ../src/nm-openconnect-service.c:382
+msgid "Could not find openconnect binary."
+msgstr "Nelze nalézt program openconnect."
+
+#: ../src/nm-openconnect-service.c:394
+msgid "No VPN gateway specified."
+msgstr "Nebyla zadána žádná brána VPN."
+
+#: ../src/nm-openconnect-service.c:404
+msgid "No WebVPN cookie provided."
+msgstr "Nebyla poskytnuta žádná cookie WebVPN."
+
+#: ../src/nm-openconnect-service.c:662
+msgid "Don't quit when VPN connection terminates"
+msgstr "Nevypínat, když se spojení VPN ukončuje"
+
+#: ../src/nm-openconnect-service.c:663
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr "Povolit podrobný ladicí výpis (může prozradit hesla)"
+
+#: ../src/nm-openconnect-service.c:664
+msgid "D-Bus name to use for this instance"
+msgstr "Název použitý v D-Bus pro tuto instanci"
+
+#: ../src/nm-openconnect-service.c:687
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"Služba nm-openconnect-service poskytuje integraci podpory pro Cisco "
+"AnyConnect SSL do aplikace NetworkManager."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Obecné</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Zvolte soubor"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_Gateway:"
+msgstr "_Brána:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "CA C_ertificate:"
+msgstr "Certifikát _CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Povolit Cisco Secure Desktop _trojan"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "CSD _obalující skript:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Autentizace certifikátem<b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_User Certificate:"
+msgstr "Certifikát _uživatele:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "Soukromý _klíč"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Použít _FSID jako heslo klíče"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Softwarový autentizační token </b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "Token _Mode:"
+msgstr "Reži_m tokenu:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token Sec_ret:"
+msgstr "He_slo tokenu:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Disabled"
+msgstr "Zakázáno"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "RSA SecurID – přečteno ze souboru ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - manually entered"
+msgstr "RSA SecurID – zadáno ručně"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "TOTP - manually entered"
+msgstr "TOTP – zadáno ručně"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "HOTP - manually entered"
+msgstr "HOTP – zadáno ručně"
