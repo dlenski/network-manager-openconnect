@@ -9,7 +9,9 @@ nm_openconnect_auth_dialog_CPPFLAGS = \
 	$(LIBSECRET_CFLAGS) \
 	-DICONDIR=\""$(datadir)/pixmaps"\" \
 	-DBINDIR=\""$(bindir)"\" \
-	-DGNOMELOCALEDIR=\"$(datadir)/locale\"
+	-DGNOMELOCALEDIR=\"$(datadir)/locale\" \
+	-I"$(top_srcdir)/shared" \
+	$(NULL)
 
 nm_openconnect_auth_dialog_SOURCES = \
 	main.c \

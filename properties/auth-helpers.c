@@ -37,7 +37,7 @@
 
 #include "auth-helpers.h"
 #include "nm-openconnect.h"
-#include "../src/nm-openconnect-service-defines.h"
+#include "nm-service-defines.h"
 
 void
 tls_pw_init_auth_widget (GtkBuilder *builder,

@@ -8,7 +8,9 @@ AM_CPPFLAGS = \
 	-DLIBEXECDIR=\""$(libexecdir)"\" \
 	-DLOCALSTATEDIR=\""$(localstatedir)"\" \
 	-DDATADIR=\"$(datadir)\" \
-	-DNM_OPENCONNECT_LOCALEDIR=\"$(datadir)/locale\"
+	-DNM_OPENCONNECT_LOCALEDIR=\"$(datadir)/locale\" \
+	-I"$(top_srcdir)"/shared \
+	$(NULL)
 
 libexec_PROGRAMS = \
 	nm-openconnect-service \
@@ -17,7 +19,7 @@ libexec_PROGRAMS = \
 nm_openconnect_service_SOURCES = \
 	nm-openconnect-service.c \
 	nm-openconnect-service.h \
-	nm-openconnect-service-defines.h
+	$(NULL)
 
 nm_openconnect_service_LDADD = \
 	$(GLIB_LIBS) \

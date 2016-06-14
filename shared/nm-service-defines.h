@@ -22,8 +22,8 @@
  *   Copyright © 2007 - 2008 Novell, Inc.
  */
 
-#ifndef NM_OPENCONNECT_SERVICE_DEFINES_H
-#define NM_OPENCONNECT_SERVICE_DEFINES_H
+#ifndef __NM_SERVICE_DEFINES_H__
+#define __NM_SERVICE_DEFINES_H__
 
 #define NM_VPN_SERVICE_TYPE_OPENCONNECT "org.freedesktop.NetworkManager.openconnect"
 
@@ -47,4 +47,4 @@
 #define NM_OPENCONNECT_KEY_TOKEN_MODE "stoken_source"
 #define NM_OPENCONNECT_KEY_TOKEN_SECRET "stoken_string"
 
-#endif /* NM_OPENCONNECT_SERVICE_DEFINES_H */
+#endif /* __NM_SERVICE_DEFINES_H__ */
