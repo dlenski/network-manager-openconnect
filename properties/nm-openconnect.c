@@ -58,18 +58,18 @@
 
 #define nm_simple_connection_new nm_connection_new
 
-#define OPENCONNECT_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
-#define OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
+#define NMV_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
+#define NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
 
-#define OPENCONNECT_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
-#define OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
+#define NMV_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
+#define NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
 
 #else /* !NM_VPN_OLD */
 
 #include <NetworkManager.h>
 
-#define OPENCONNECT_EDITOR_PLUGIN_ERROR                   NM_CONNECTION_ERROR
-#define OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_CONNECTION_ERROR_INVALID_PROPERTY
+#define NMV_EDITOR_PLUGIN_ERROR                   NM_CONNECTION_ERROR
+#define NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_CONNECTION_ERROR_INVALID_PROPERTY
 #endif
 
 #include "nm-service-defines.h"
@@ -380,8 +380,8 @@ check_validity (OpenconnectEditor *self, GError **error)
 	str = gtk_entry_get_text (GTK_ENTRY (widget));
 	if (!str || !strlen (str)) {
 		g_set_error (error,
-		             OPENCONNECT_EDITOR_PLUGIN_ERROR,
-		             OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY,
+		             NMV_EDITOR_PLUGIN_ERROR,
+		             NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY,
 		             NM_OPENCONNECT_KEY_GATEWAY);
 		return FALSE;
 	}
@@ -392,8 +392,8 @@ check_validity (OpenconnectEditor *self, GError **error)
 	if (str && str[0] &&
 		strncmp(str, "socks://", 8) && strncmp(str, "http://", 7)) {
 		g_set_error (error,
-		             OPENCONNECT_EDITOR_PLUGIN_ERROR,
-		             OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY,
+		             NMV_EDITOR_PLUGIN_ERROR,
+		             NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY,
 		             NM_OPENCONNECT_KEY_PROXY);
 		return FALSE;
 	}
@@ -717,7 +717,7 @@ nm_vpn_editor_interface_new (NMConnection *connection, GError **error)
 
 	object = g_object_new (OPENCONNECT_TYPE_EDITOR, NULL);
 	if (!object) {
-		g_set_error (error, OPENCONNECT_EDITOR_PLUGIN_ERROR, 0, "could not create openconnect object");
+		g_set_error (error, NMV_EDITOR_PLUGIN_ERROR, 0, "could not create openconnect object");
 		return NULL;
 	}
 
@@ -732,7 +732,7 @@ nm_vpn_editor_interface_new (NMConnection *connection, GError **error)
 		g_warning ("Couldn't load builder file: %s",
 		           error && *error ? (*error)->message : "(unknown)");
 		g_clear_error (error);
-		g_set_error (error, OPENCONNECT_EDITOR_PLUGIN_ERROR, 0,
+		g_set_error (error, NMV_EDITOR_PLUGIN_ERROR, 0,
 		             "could not load required resources at %s", ui_file);
 		g_free (ui_file);
 		g_object_unref (object);
@@ -742,7 +742,7 @@ nm_vpn_editor_interface_new (NMConnection *connection, GError **error)
 
 	priv->widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "openconnect-vbox"));
 	if (!priv->widget) {
-		g_set_error (error, OPENCONNECT_EDITOR_PLUGIN_ERROR, 0, "could not load UI widget");
+		g_set_error (error, NMV_EDITOR_PLUGIN_ERROR, 0, "could not load UI widget");
 		g_object_unref (object);
 		return NULL;
 	}
