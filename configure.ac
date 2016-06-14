@@ -68,7 +68,11 @@ if test x"$with_gnome" != xno; then
 	PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.4)
 	GTK_CFLAGS="$GTK_CFLAGS -DGDK_VERSION_MIN_REQUIRED=GDK_VERSION_3_4"
 
-	PKG_CHECK_MODULES(LIBSECRET, libsecret-unstable)
+	PKG_CHECK_MODULES(LIBSECRET, libsecret-1 >= 0.18, [], [
+		dnl We use the secret service API that went stable in 0.18
+		PKG_CHECK_MODULES(LIBSECRET, libsecret-unstable)
+		LIBSECRET_CFLAGS="$LIBSECRET_CFLAGS -DSECRET_API_SUBJECT_TO_CHANGE"
+	])
 
 	if test x"$with_authdlg" != xno; then
 		PKG_CHECK_MODULES(OPENCONNECT, openconnect >= 3.02)
