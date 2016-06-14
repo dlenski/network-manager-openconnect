@@ -407,7 +407,7 @@ update_connection (NMVpnEditor *iface,
 }
 
 NMVpnEditor *
-nm_vpn_editor_interface_new (NMConnection *connection, GError **error)
+nm_vpn_editor_new (NMConnection *connection, GError **error)
 {
 	NMVpnEditor *object;
 	OpenconnectEditorPrivate *priv;
@@ -502,4 +502,21 @@ openconnect_editor_interface_init (NMVpnEditorInterface *iface_class)
 	iface_class->get_widget = get_widget;
 	iface_class->update_connection = update_connection;
 }
+
+/*****************************************************************************/
+
+#ifndef NM_VPN_OLD
+
+#include "nm-openconnect-editor-plugin.h"
+
+G_MODULE_EXPORT NMVpnEditor *
+nm_vpn_editor_factory_openconnect (NMVpnEditorPlugin *editor_plugin,
+                                   NMConnection *connection,
+                                   GError **error)
+{
+	g_return_val_if_fail (!error || !*error, NULL);
+
+	return nm_vpn_editor_new (connection, error);
+}
+#endif
 

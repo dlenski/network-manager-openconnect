@@ -44,10 +44,11 @@
 #define openconnect_has_oath_support() 0
 #endif
 
+#ifdef NM_VPN_OLD
 #include "nm-openconnect-editor.h"
-
-#ifndef NM_VPN_OLD
+#else
 #include "nm-utils/nm-vpn-editor-plugin-call.h"
+#include "nm-utils/nm-vpn-plugin-utils.h"
 #endif
 
 #define OPENCONNECT_PLUGIN_NAME    _("Cisco AnyConnect Compatible VPN (openconnect)")
@@ -410,12 +411,39 @@ NM_VPN_EDITOR_PLUGIN_VT_DEFINE (vt, _get_vt,
 	.fcn_get_service_add_detail  = _vt_impl_get_service_add_detail,
 )
 
+static NMVpnEditor *
+_call_editor_factory (gpointer factory,
+                      NMVpnEditorPlugin *editor_plugin,
+                      NMConnection *connection,
+                      gpointer user_data,
+                      GError **error)
+{
+	return ((NMVpnEditorFactory) factory) (editor_plugin,
+	                                       connection,
+	                                       error);
+}
 #endif
 
 static NMVpnEditor *
 get_editor (NMVpnEditorPlugin *iface, NMConnection *connection, GError **error)
 {
-	return nm_vpn_editor_interface_new (connection, error);
+	g_return_val_if_fail (OPENCONNECT_IS_EDITOR_PLUGIN (iface), NULL);
+	g_return_val_if_fail (NM_IS_CONNECTION (connection), NULL);
+	g_return_val_if_fail (!error || !*error, NULL);
+
+	{
+#ifdef NM_VPN_OLD
+		return nm_vpn_editor_new (connection, error);
+#else
+		return nm_vpn_plugin_utils_load_editor (NM_PLUGIN_DIR"/libnm-vpn-plugin-openconnect-editor.so",
+		                                        "nm_vpn_editor_factory_openconnect",
+		                                        _call_editor_factory,
+		                                        iface,
+		                                        connection,
+		                                        NULL,
+		                                        error);
+#endif
+	}
 }
 
 static void

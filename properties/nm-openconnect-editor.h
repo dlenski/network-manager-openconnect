@@ -41,7 +41,7 @@ struct _OpenconnectEditorClass {
 
 GType openconnect_editor_get_type (void);
 
-NMVpnEditor *nm_vpn_editor_interface_new (NMConnection *connection, GError **error);
+NMVpnEditor *nm_vpn_editor_new (NMConnection *connection, GError **error);
 
 #endif /* __NM_OPENCONNECT_EDITOR_H__ */
 

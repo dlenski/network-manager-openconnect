@@ -1,9 +1,9 @@
 AUTOMAKE_OPTIONS = foreign
 
-SUBDIRS = shared src
+SUBDIRS = shared properties src
 
 if WITH_GNOME
-SUBDIRS += properties po
+SUBDIRS += po
 
 if WITH_AUTHDLG
 SUBDIRS += auth-dialog

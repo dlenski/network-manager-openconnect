@@ -41,6 +41,13 @@ struct _OpenconnectEditorPluginClass {
 
 GType openconnect_editor_plugin_get_type (void);
 
+typedef NMVpnEditor *(*NMVpnEditorFactory) (NMVpnEditorPlugin *editor_plugin,
+                                            NMConnection *connection,
+                                            GError **error);
+
+NMVpnEditor *
+nm_vpn_editor_factory_openconnect (NMVpnEditorPlugin *editor_plugin,
+                                  NMConnection *connection,
+                                  GError **error);
 
 #endif /* __NM_OPENCONNECT_EDITOR_PLUGIN_H__ */
-
