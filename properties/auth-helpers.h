@@ -26,11 +26,11 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 
-#ifdef NM_OPENCONNECT_OLD
+#ifdef NM_VPN_OLD
 #define NM_VPN_LIBNM_COMPAT
 #include <nm-connection.h>
 #include <nm-setting-vpn.h>
-#else /* !NM_OPENCONNECT_OLD */
+#else /* !NM_VPN_OLD */
 #include <NetworkManager.h>
 #endif
 

@@ -31,7 +31,7 @@ libnm_vpn_plugin_openconnect_la_CFLAGS =                \
 	$(LIBNM_CFLAGS)
 
 libnm_openconnect_properties_la_CFLAGS =            \
-	-DNM_OPENCONNECT_OLD                            \
+	-DNM_VPN_OLD \
 	$(common_CFLAGS)                                \
 	$(LIBNM_GLIB_CFLAGS)
 

@@ -49,7 +49,7 @@
 #define openconnect_has_oath_support() 0
 #endif
 
-#ifdef NM_OPENCONNECT_OLD
+#ifdef NM_VPN_OLD
 #define NM_VPN_LIBNM_COMPAT
 #include <nm-vpn-plugin-ui-interface.h>
 #include <nm-setting-vpn.h>
@@ -64,7 +64,7 @@
 #define OPENCONNECT_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
 #define OPENCONNECT_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
 
-#else /* !NM_OPENCONNECT_OLD */
+#else /* !NM_VPN_OLD */
 
 #include <NetworkManager.h>
 
@@ -76,7 +76,7 @@
 #include "nm-openconnect.h"
 #include "auth-helpers.h"
 
-#ifndef NM_OPENCONNECT_OLD
+#ifndef NM_VPN_OLD
 #include "nm-utils/nm-vpn-editor-plugin-call.h"
 #endif
 
@@ -810,7 +810,7 @@ get_capabilities (NMVpnEditorPlugin *iface)
 	        NM_VPN_EDITOR_PLUGIN_CAPABILITY_IPV6);
 }
 
-#ifndef NM_OPENCONNECT_OLD
+#ifndef NM_VPN_OLD
 static void
 notify_plugin_info_set (NMVpnEditorPlugin *plugin,
                         NMVpnPluginInfo *plugin_info)
@@ -979,7 +979,7 @@ openconnect_editor_plugin_interface_init (NMVpnEditorPluginInterface *iface_clas
 	iface_class->get_capabilities = get_capabilities;
 	iface_class->import_from_file = import;
 	iface_class->export_to_file = export;
-#ifndef NM_OPENCONNECT_OLD
+#ifndef NM_VPN_OLD
 	iface_class->notify_plugin_info_set = notify_plugin_info_set;
 	iface_class->get_vt = _get_vt;
 #endif
