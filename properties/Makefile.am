@@ -39,7 +39,8 @@ libnm_vpn_plugin_openconnect_la_LIBADD = \
 	$(OPENCONNECT_LIBS)
 
 libnm_vpn_plugin_openconnect_la_LDFLAGS = \
-	-avoid-version
+	-avoid-version \
+	-Wl,--version-script="$(srcdir)/libnm-vpn-plugin-openconnect.ver"
 
 ###############################################################################
 
@@ -58,11 +59,15 @@ libnm_openconnect_properties_la_LIBADD = \
 	$(OPENCONNECT_LIBS)
 
 libnm_openconnect_properties_la_LDFLAGS = \
-	-avoid-version
+	-avoid-version \
+	-Wl,--version-script="$(srcdir)/libnm-openconnect-properties.ver"
 
 ###############################################################################
 
 CLEANFILES = *.bak *~
 
-EXTRA_DIST =                            \
-	$(ui_DATA)
+EXTRA_DIST = \
+	$(ui_DATA) \
+	libnm-openconnect-properties.ver \
+	libnm-vpn-plugin-openconnect.ver \
+	$(NULL)
