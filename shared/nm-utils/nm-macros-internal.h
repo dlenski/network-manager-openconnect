@@ -24,6 +24,8 @@
 
 #include <stdlib.h>
 
+#include "nm-glib.h"
+
 /********************************************************/
 
 #define _nm_packed __attribute__ ((packed))
@@ -485,8 +487,8 @@ nm_strstrip (char *str)
 }
 
 /* g_ptr_array_sort()'s compare function takes pointers to the
- * contentaining value. Thus, you cannot use strcmp directly. You
- * can use nm_strcmp_p().
+ * value. Thus, you cannot use strcmp directly. You can use
+ * nm_strcmp_p().
  *
  * Like strcmp(), this function is not forgiving to accept %NULL. */
 static inline int
@@ -500,8 +502,8 @@ nm_strcmp_p (gconstpointer a, gconstpointer b)
 
 /* like nm_strcmp_p(), suitable for g_ptr_array_sort_with_data().
  * g_ptr_array_sort() just casts nm_strcmp_p() to a function of different
- * signature. I guess, in glib there are knowledgeble people that ensure
- * that this additinal argument doesn't cause problems due to different ABI
+ * signature. I guess, in glib there are knowledgeable people that ensure
+ * that this additional argument doesn't cause problems due to different ABI
  * for every architecture that glib supports.
  * For NetworkManager, we'd rather avoid such stunts.
  **/

@@ -6,4 +6,5 @@ openconnect-strings.txt
 properties/auth-helpers.c
 properties/nm-openconnect.c
 src/nm-openconnect-service.c
+shared/nm-utils/nm-vpn-plugin-utils.c
 [type: gettext/glade]properties/nm-openconnect-dialog.ui
