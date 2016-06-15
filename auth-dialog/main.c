@@ -943,6 +943,7 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 	char *cafile;
 	char *token_mode;
 	char *token_secret;
+	char *protocol;
 
 	hostname = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_GATEWAY);
 	if (!hostname) {
@@ -983,6 +984,14 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 		g_checksum_free(sha1);
 		
 		parse_xmlconfig (config_str);
+	}
+
+	protocol = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_PROTOCOL);
+	if (protocol && strcmp(protocol, "anyconnect")) {
+#if OPENCONNECT_CHECK_VER(5,1)
+		if (openconnect_set_protocol(vpninfo, protocol))
+#endif
+			return -EINVAL;
 	}
 
 	cafile = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_CACERT);
@@ -1623,7 +1632,7 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	if (!g_str_has_prefix(vpn_service, NM_VPN_SERVICE_TYPE_OPENCONNECT)) {
+	if (strcmp(vpn_service, NM_VPN_SERVICE_TYPE_OPENCONNECT) != 0) {
 		fprintf (stderr, "This dialog only works with the '%s' service\n",
 			 NM_VPN_SERVICE_TYPE_OPENCONNECT);
 		return 1;
@@ -1641,17 +1650,6 @@ int main (int argc, char **argv)
 	if (get_config(options, secrets, _ui_data->vpninfo)) {
 		fprintf(stderr, "Failed to find VPN UUID %s\n", vpn_uuid);
 		return 1;
-	}
-
-	if (g_str_has_prefix(vpn_service, NM_VPN_SERVICE_TYPE_OPENCONNECT ".")) {
-		char *proto = vpn_service + strlen(NM_VPN_SERVICE_TYPE_OPENCONNECT ".");
-#if OPENCONNECT_CHECK_VER(5,1)
-		if (openconnect_set_protocol(_ui_data->vpninfo, proto))
-#endif
-		{
-			fprintf (stderr, "Protocol '%s' not supported\n", proto);
-			return 1;
-		}
 	}
 
 #if OPENCONNECT_CHECK_VER(3,4)
