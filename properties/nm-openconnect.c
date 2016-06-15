@@ -76,6 +76,10 @@
 #include "nm-openconnect.h"
 #include "auth-helpers.h"
 
+#ifndef NM_OPENCONNECT_OLD
+#include "nm-utils/nm-vpn-editor-plugin-call.h"
+#endif
+
 #define OPENCONNECT_PLUGIN_NAME    _("Cisco AnyConnect Compatible VPN (openconnect)")
 #define OPENCONNECT_PLUGIN_DESC    _("Compatible with Cisco AnyConnect SSL VPN.")
 
@@ -93,6 +97,12 @@ static void openconnect_editor_plugin_interface_init (NMVpnEditorPluginInterface
 G_DEFINE_TYPE_EXTENDED (OpenconnectEditorPlugin, openconnect_editor_plugin, G_TYPE_OBJECT, 0,
                         G_IMPLEMENT_INTERFACE (NM_TYPE_VPN_EDITOR_PLUGIN,
                                                openconnect_editor_plugin_interface_init))
+
+typedef struct {
+	char **supported_protocols;
+} OpenconnectEditorPluginPrivate;
+
+#define OPENCONNECT_EDITOR_PLUGIN_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OPENCONNECT_TYPE_EDITOR_PLUGIN, OpenconnectEditorPluginPrivate))
 
 /************** UI widget class **************/
 
@@ -595,9 +605,17 @@ update_connection (NMVpnEditor *iface,
 	GtkTextIter iter_start, iter_end;
 	GtkTextBuffer *buffer;
 	const char *auth_type = NULL;
+	const char *protocol = NULL;
+
+	s_vpn = nm_connection_get_setting_vpn (connection);
+	if (s_vpn)
+		protocol = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL);
 
 	s_vpn = NM_SETTING_VPN (nm_setting_vpn_new ());
 	g_object_set (s_vpn, NM_SETTING_VPN_SERVICE_TYPE, NM_VPN_SERVICE_TYPE_OPENCONNECT, NULL);
+
+	if (protocol)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL, protocol);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "gateway_entry"));
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
@@ -792,6 +810,93 @@ get_capabilities (NMVpnEditorPlugin *iface)
 	        NM_VPN_EDITOR_PLUGIN_CAPABILITY_IPV6);
 }
 
+#ifndef NM_OPENCONNECT_OLD
+static void
+notify_plugin_info_set (NMVpnEditorPlugin *plugin,
+                        NMVpnPluginInfo *plugin_info)
+{
+	OpenconnectEditorPluginPrivate *priv = OPENCONNECT_EDITOR_PLUGIN_GET_PRIVATE (plugin);
+	const char *supported_protocols;
+	guint i, j;
+
+	if (!plugin_info)
+		return;
+
+	supported_protocols = nm_vpn_plugin_info_lookup_property (plugin_info, "openconnect", "supported-protocols");
+
+	g_strfreev (priv->supported_protocols);
+	priv->supported_protocols = supported_protocols
+	    ? g_strsplit_set (supported_protocols, ",", -1)
+	    : g_new0 (char *, 1);
+
+	/*remove empty entries and whitespace */
+	for (i = 0, j = 0; priv->supported_protocols[j]; j++) {
+		g_strstrip (priv->supported_protocols[j]);
+		if (priv->supported_protocols[j][0] == '\0')
+			g_free (priv->supported_protocols[j]);
+		else
+			priv->supported_protocols[i++] = priv->supported_protocols[j];
+	}
+	priv->supported_protocols[i] = NULL;
+}
+
+static char **
+_vt_impl_get_service_add_details (NMVpnEditorPlugin *plugin,
+                                  const char *service_type)
+{
+	return g_strdupv (OPENCONNECT_EDITOR_PLUGIN_GET_PRIVATE (plugin)->supported_protocols);
+}
+
+static gboolean
+_vt_impl_get_service_add_detail (NMVpnEditorPlugin *plugin,
+                                 const char *service_type,
+                                 const char *add_detail,
+                                 char **out_pretty_name,
+                                 char **out_description,
+                                 char **out_add_detail_key,
+                                 char **out_add_detail_val,
+                                 guint *out_flags)
+{
+	OpenconnectEditorPluginPrivate *priv;
+	guint i;
+
+	if (!nm_streq (service_type, NM_VPN_SERVICE_TYPE_OPENCONNECT))
+		return FALSE;
+
+	priv = OPENCONNECT_EDITOR_PLUGIN_GET_PRIVATE (plugin);
+	for (i = 0; priv->supported_protocols[i]; i++) {
+		if (!nm_streq (add_detail, priv->supported_protocols[i]))
+			continue;
+		if (nm_streq (add_detail, "anyconnect")) {
+			NM_SET_OUT (out_pretty_name, g_strdup (OPENCONNECT_PLUGIN_NAME));
+			NM_SET_OUT (out_description, g_strdup (OPENCONNECT_PLUGIN_DESC));
+			/* we unset @add_detail, because "anyconnect" is the default and no need
+			 * to set the protocol explicitly. */
+			add_detail = NULL;
+		} else if (nm_streq (add_detail, "nc")) {
+			NM_SET_OUT (out_pretty_name, g_strdup (_("Juniper Network Connect (openconnect)")));
+			NM_SET_OUT (out_description, g_strdup (_("Compatible with Juniper Network Connect / Pulse Secure SSL VPN")));
+		} else {
+			/* we don't know this protocol by name, but it's configured in the .name file,
+			 * so just take it. */
+			NM_SET_OUT (out_pretty_name, g_strdup_printf (_("Openconnect VPN (%s)"), add_detail));
+			NM_SET_OUT (out_description, g_strdup_printf (_("Openconnect SSL VPN with %s protocol"), add_detail));
+		}
+		NM_SET_OUT (out_add_detail_key, g_strdup (add_detail ? NM_OPENCONNECT_KEY_PROTOCOL : NULL));
+		NM_SET_OUT (out_add_detail_val, g_strdup (add_detail));
+		NM_SET_OUT (out_flags, 0);
+		return TRUE;
+	}
+	return FALSE;
+}
+
+NM_VPN_EDITOR_PLUGIN_VT_DEFINE (vt, _get_vt,
+	.fcn_get_service_add_details = _vt_impl_get_service_add_details,
+	.fcn_get_service_add_detail  = _vt_impl_get_service_add_detail,
+)
+
+#endif
+
 static NMVpnEditor *
 get_editor (NMVpnEditorPlugin *iface, NMConnection *connection, GError **error)
 {
@@ -819,11 +924,26 @@ get_property (GObject *object, guint prop_id,
 }
 
 static void
+openconnect_editor_plugin_dispose (GObject *object)
+{
+	OpenconnectEditorPlugin *plugin = OPENCONNECT_EDITOR_PLUGIN (object);
+	OpenconnectEditorPluginPrivate *priv = OPENCONNECT_EDITOR_PLUGIN_GET_PRIVATE (plugin);
+
+	g_strfreev (priv->supported_protocols);
+	priv->supported_protocols = NULL;
+
+	G_OBJECT_CLASS (openconnect_editor_plugin_parent_class)->dispose (object);
+}
+
+static void
 openconnect_editor_plugin_class_init (OpenconnectEditorPluginClass *req_class)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (req_class);
 
+	g_type_class_add_private (req_class, sizeof (OpenconnectEditorPluginPrivate));
+
 	object_class->get_property = get_property;
+	object_class->dispose = openconnect_editor_plugin_dispose;
 
 	g_object_class_override_property (object_class,
 	                                  PROP_NAME,
@@ -841,6 +961,14 @@ openconnect_editor_plugin_class_init (OpenconnectEditorPluginClass *req_class)
 static void
 openconnect_editor_plugin_init (OpenconnectEditorPlugin *plugin)
 {
+	OpenconnectEditorPluginPrivate *priv = OPENCONNECT_EDITOR_PLUGIN_GET_PRIVATE (plugin);
+	char *dflt[] = {
+		"anyconnect",
+		"nc",
+		NULL,
+	};
+
+	priv->supported_protocols = g_strdupv (dflt);
 }
 
 static void
@@ -851,6 +979,10 @@ openconnect_editor_plugin_interface_init (NMVpnEditorPluginInterface *iface_clas
 	iface_class->get_capabilities = get_capabilities;
 	iface_class->import_from_file = import;
 	iface_class->export_to_file = export;
+#ifndef NM_OPENCONNECT_OLD
+	iface_class->notify_plugin_info_set = notify_plugin_info_set;
+	iface_class->get_vt = _get_vt;
+#endif
 }
 
 G_MODULE_EXPORT NMVpnEditorPlugin *
