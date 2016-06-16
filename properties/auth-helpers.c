@@ -21,9 +21,9 @@
  *
  **************************************************************************/
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
+#include "nm-default.h"
+
+#include "auth-helpers.h"
 
 #include <string.h>
 #include <sys/types.h>
@@ -32,12 +32,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
-
-#include <glib/gi18n-lib.h>
-
-#include "auth-helpers.h"
-#include "nm-openconnect.h"
-#include "../src/nm-openconnect-service-defines.h"
 
 void
 tls_pw_init_auth_widget (GtkBuilder *builder,

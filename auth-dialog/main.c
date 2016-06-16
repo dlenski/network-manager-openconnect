@@ -23,9 +23,7 @@
  *   Boston, MA 02110-1301 USA
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
+#include "nm-default.h"
 
 #include <string.h>
 #include <errno.h>
@@ -37,16 +35,9 @@
 #include <libxml/tree.h>
 
 #include <gtk/gtk.h>
-#include <glib/gi18n.h>
 #include <glib-unix.h>
 
-#include <NetworkManager.h>
-#include <nm-vpn-service-plugin.h>
-
-#define SECRET_API_SUBJECT_TO_CHANGE
 #include <libsecret/secret.h>
-
-#include "../src/nm-openconnect-service-defines.h"
 
 #include "openconnect.h"
 

@@ -23,16 +23,7 @@
 #ifndef _AUTH_HELPERS_H_
 #define _AUTH_HELPERS_H_
 
-#include <glib.h>
 #include <gtk/gtk.h>
-
-#ifdef NM_OPENCONNECT_OLD
-#define NM_VPN_LIBNM_COMPAT
-#include <nm-connection.h>
-#include <nm-setting-vpn.h>
-#else /* !NM_OPENCONNECT_OLD */
-#include <NetworkManager.h>
-#endif
 
 typedef void (*ChangedCallback) (GtkWidget *widget, gpointer user_data);
 

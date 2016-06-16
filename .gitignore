@@ -27,6 +27,7 @@ m4/intltool.m4
 m4/libtool.m4
 m4/lt*.m4
 appdata/network-manager-openconnect.metainfo.xml
+/cscope.*
 
 nm-openconnect-service.name
 src/nm-openconnect-service
