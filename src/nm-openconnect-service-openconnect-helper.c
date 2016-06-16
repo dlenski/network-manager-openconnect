@@ -35,6 +35,8 @@
 #include "nm-utils/nm-shared-utils.h"
 #include "nm-utils/nm-vpn-plugin-macros.h"
 
+extern char **environ;
+
 /*****************************************************************************/
 
 static struct {
@@ -55,6 +57,13 @@ static struct {
 		} \
 	} G_STMT_END
 
+static gboolean
+_LOGD_enabled (void)
+{
+	return gl.log_level >= LOG_INFO;
+}
+
+#define _LOGD(...) _NMLOG(LOG_INFO,    __VA_ARGS__)
 #define _LOGW(...) _NMLOG(LOG_WARNING, __VA_ARGS__)
 
 /*****************************************************************************/
@@ -409,7 +418,7 @@ get_ip6_routes (void)
  * CISCO_BANNER           -- banner from server
  *
  */
-int 
+int
 main (int argc, char *argv[])
 {
 	GDBusProxy *proxy;
@@ -429,6 +438,27 @@ main (int argc, char *argv[])
 	                                             10, 0, LOG_DEBUG,
 	                                             LOG_NOTICE);
 	gl.log_prefix_token = getenv ("NM_VPN_LOG_PREFIX_TOKEN") ?: "???";
+
+	if (_LOGD_enabled ()) {
+		GString *args;
+		const char **iter;
+		guint i;
+
+		args = g_string_new (NULL);
+		for (i = 0; i < argc; i++) {
+			if (i > 0)
+				g_string_append_c (args, ' ');
+			tmp = g_strescape (argv[i], NULL);
+			g_string_append_printf (args, "\"%s\"", tmp);
+			g_free (tmp);
+		}
+
+		_LOGD ("command line: %s", args->str);
+		g_string_free (args, TRUE);
+
+		for (iter = (const char **) environ; iter && *iter; iter++)
+			_LOGD ("environment: %s", *iter);
+	}
 
 	/* openconnect gives us a "reason" code.  If we are given one,
 	 * don't proceed unless its "connect".
