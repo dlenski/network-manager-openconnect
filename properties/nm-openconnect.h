@@ -23,8 +23,6 @@
 #ifndef _NM_OPENCONNECT_H_
 #define _NM_OPENCONNECT_H_
 
-#include <glib-object.h>
-
 #define OPENCONNECT_TYPE_EDITOR_PLUGIN            (openconnect_editor_plugin_get_type ())
 #define OPENCONNECT_EDITOR_PLUGIN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), OPENCONNECT_TYPE_EDITOR_PLUGIN, OpenconnectEditorPlugin))
 #define OPENCONNECT_EDITOR_PLUGIN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), OPENCONNECT_TYPE_EDITOR_PLUGIN, OpenconnectEditorPluginClass))
@@ -66,5 +64,5 @@ struct _OpenconnectEditorClass {
 
 GType openconnect_editor_get_type (void);
 
-#endif	/* _NM_OPENCONNECT_H_ */
+#endif /* _NM_OPENCONNECT_H_ */
 

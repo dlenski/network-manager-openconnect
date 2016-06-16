@@ -22,9 +22,9 @@
  *   Copyright © 2007 - 2008 Novell, Inc.
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
+#include "nm-default.h"
+
+#include "nm-openconnect-service.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -41,10 +41,6 @@
 #include <pwd.h>
 #include <grp.h>
 #include <locale.h>
-#include <glib/gi18n.h>
-
-#include "nm-openconnect-service.h"
-#include "nm-utils.h"
 
 #if !defined(DIST_VERSION)
 # define DIST_VERSION VERSION

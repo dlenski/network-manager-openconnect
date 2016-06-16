@@ -19,7 +19,6 @@ common_CFLAGS = \
 	$(GTK_CFLAGS) \
 	$(OPENCONNECT_CFLAGS) \
 	-I$(top_srcdir)/shared \
-	-I$(top_srcdir)/src \
 	-DICONDIR=\""$(datadir)/pixmaps"\" \
 	-DUIDIR=\""$(uidir)"\" \
 	-DLOCALEDIR=\"$(datadir)/locale\"
@@ -30,6 +29,7 @@ libnm_vpn_plugin_openconnect_la_SOURCES = \
 	$(plugin_sources)
 
 libnm_vpn_plugin_openconnect_la_CFLAGS = \
+	-DNETWORKMANAGER_COMPILATION=NM_NETWORKMANAGER_COMPILATION_LIB \
 	$(common_CFLAGS) \
 	$(LIBNM_CFLAGS)
 
@@ -48,6 +48,7 @@ libnm_openconnect_properties_la_SOURCES = \
 
 libnm_openconnect_properties_la_CFLAGS = \
 	-DNM_VPN_OLD \
+	-DNETWORKMANAGER_COMPILATION=NM_NETWORKMANAGER_COMPILATION_LIB \
 	$(common_CFLAGS) \
 	$(LIBNM_GLIB_CFLAGS)
 

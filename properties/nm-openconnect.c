@@ -24,15 +24,14 @@
  *
  **************************************************************************/
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
+#include "nm-default.h"
+
+#include "nm-openconnect.h"
 
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <errno.h>
 #include <stdlib.h>
-#include <glib/gi18n-lib.h>
 #include <string.h>
 #include <gtk/gtk.h>
 
@@ -49,31 +48,6 @@
 #define openconnect_has_oath_support() 0
 #endif
 
-#ifdef NM_VPN_OLD
-#define NM_VPN_LIBNM_COMPAT
-#include <nm-vpn-plugin-ui-interface.h>
-#include <nm-setting-vpn.h>
-#include <nm-setting-connection.h>
-#include <nm-setting-ip4-config.h>
-
-#define nm_simple_connection_new nm_connection_new
-
-#define NMV_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
-#define NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
-
-#define NMV_EDITOR_PLUGIN_ERROR                   NM_SETTING_VPN_ERROR
-#define NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_SETTING_VPN_ERROR_INVALID_PROPERTY
-
-#else /* !NM_VPN_OLD */
-
-#include <NetworkManager.h>
-
-#define NMV_EDITOR_PLUGIN_ERROR                   NM_CONNECTION_ERROR
-#define NMV_EDITOR_PLUGIN_ERROR_INVALID_PROPERTY  NM_CONNECTION_ERROR_INVALID_PROPERTY
-#endif
-
-#include "nm-service-defines.h"
-#include "nm-openconnect.h"
 #include "auth-helpers.h"
 
 #ifndef NM_VPN_OLD
