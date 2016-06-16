@@ -684,6 +684,7 @@ int main (int argc, char *argv[])
 	gboolean persist = FALSE;
 	GOptionContext *opt_ctx = NULL;
 	gchar *bus_name = NM_DBUS_SERVICE_OPENCONNECT;
+	char sbuf[30];
 
 	GOptionEntry options[] = {
 		{ "persist", 0, 0, G_OPTION_ARG_NONE, &persist, N_("Don't quit when VPN connection terminates"), NULL },
@@ -723,6 +724,10 @@ int main (int argc, char *argv[])
 	gl.log_level = _nm_utils_ascii_str_to_int64 (getenv ("NM_VPN_LOG_LEVEL"),
 	                                             10, 0, LOG_DEBUG,
 	                                             gl.debug ? LOG_INFO : LOG_NOTICE);
+
+	/* set logging options for helper script. */
+	setenv ("NM_VPN_LOG_LEVEL", nm_sprintf_buf (sbuf, "%d", gl.log_level), TRUE);
+	setenv ("NM_VPN_LOG_PREFIX_TOKEN", nm_sprintf_buf (sbuf, "%ld", (long) getpid ()), TRUE);
 
 	_LOGD ("nm-openconnect-service (version " DIST_VERSION ") starting...");
 
