@@ -42,6 +42,7 @@
 #include <grp.h>
 #include <locale.h>
 
+#include "nm-utils/nm-shared-utils.h"
 #include "nm-utils/nm-vpn-plugin-macros.h"
 
 #if !defined(DIST_VERSION)
@@ -110,6 +111,7 @@ static struct {
 	uid_t tun_owner;
 	gid_t tun_group;
 	gboolean debug;
+	int log_level;
 	GMainLoop *loop;
 } gl/*obal*/;
 
@@ -117,7 +119,7 @@ static struct {
 
 #define _NMLOG(level, ...) \
 	G_STMT_START { \
-		if ((level) > LOG_INFO || gl.debug) { \
+		if (gl.log_level >= (level)) { \
 			g_print ("nm-openconnect[%ld] %-7s " _NM_UTILS_MACRO_FIRST (__VA_ARGS__) "\n", \
 			         (long) getpid (), \
 			         nm_utils_syslog_to_str (level) \
@@ -128,7 +130,7 @@ static struct {
 static gboolean
 _LOGD_enabled (void)
 {
-	return gl.debug;
+	return gl.log_level >= LOG_INFO;
 }
 
 #define _LOGD(...) _NMLOG(LOG_INFO,    __VA_ARGS__)
@@ -481,8 +483,11 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 
 	g_ptr_array_add (openconnect_argv, (gpointer) props_vpn_gw);
 
-	if (gl.debug)
+	if (gl.log_level >= LOG_INFO) {
 		g_ptr_array_add (openconnect_argv, (gpointer) "--verbose");
+		if (gl.log_level >= LOG_DEBUG)
+			g_ptr_array_add (openconnect_argv, (gpointer) "--verbose");
+	}
 
 	g_ptr_array_add (openconnect_argv, NULL);
 
@@ -714,6 +719,10 @@ int main (int argc, char *argv[])
 
 	if (getenv ("OPENCONNECT_DEBUG"))
 		gl.debug = TRUE;
+
+	gl.log_level = _nm_utils_ascii_str_to_int64 (getenv ("NM_VPN_LOG_LEVEL"),
+	                                             10, 0, LOG_DEBUG,
+	                                             gl.debug ? LOG_INFO : LOG_NOTICE);
 
 	_LOGD ("nm-openconnect-service (version " DIST_VERSION ") starting...");
 
