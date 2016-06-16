@@ -4,15 +4,21 @@ if WITH_LIBNM_GLIB
 plugin_LTLIBRARIES += libnm-openconnect-properties.la
 endif
 
-uidir = $(datadir)/gnome-vpn-properties/openconnect
-ui_DATA = nm-openconnect-dialog.ui
-
 plugin_sources = \
+	$(top_srcdir)/shared/nm-utils/nm-vpn-editor-plugin-call.h \
+	nm-openconnect-editor-plugin.c \
+	nm-openconnect-editor-plugin.h \
+	$(NULL)
+
+editor_sources = \
 	auth-helpers.c \
 	auth-helpers.h \
-	nm-openconnect.c \
-	nm-openconnect.h
+	nm-openconnect-editor.c \
+	nm-openconnect-editor.h
 	$(NULL)
+
+uidir = $(datadir)/gnome-vpn-properties/openconnect
+ui_DATA = nm-openconnect-dialog.ui
 
 common_CFLAGS = \
 	$(GLIB_CFLAGS) \
@@ -26,7 +32,8 @@ common_CFLAGS = \
 ###############################################################################
 
 libnm_vpn_plugin_openconnect_la_SOURCES = \
-	$(plugin_sources)
+	$(plugin_sources) \
+	$(editor_sources)
 
 libnm_vpn_plugin_openconnect_la_CFLAGS = \
 	-DNETWORKMANAGER_COMPILATION=NM_NETWORKMANAGER_COMPILATION_LIB \
@@ -45,7 +52,8 @@ libnm_vpn_plugin_openconnect_la_LDFLAGS = \
 ###############################################################################
 
 libnm_openconnect_properties_la_SOURCES = \
-	$(plugin_sources)
+	$(plugin_sources) \
+	$(editor_sources)
 
 libnm_openconnect_properties_la_CFLAGS = \
 	-DNM_VPN_OLD \
@@ -67,7 +75,7 @@ libnm_openconnect_properties_la_LDFLAGS = \
 CLEANFILES = *.bak *~
 
 EXTRA_DIST = \
-	$(ui_DATA) \
 	libnm-openconnect-properties.ver \
 	libnm-vpn-plugin-openconnect.ver \
+	nm-openconnect-dialog.ui \
 	$(NULL)

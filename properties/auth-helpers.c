@@ -33,8 +33,6 @@
 #include <unistd.h>
 #include <errno.h>
 
-#include "nm-openconnect.h"
-
 void
 tls_pw_init_auth_widget (GtkBuilder *builder,
                          GtkSizeGroup *group,

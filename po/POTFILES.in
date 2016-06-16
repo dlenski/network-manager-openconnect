@@ -4,7 +4,8 @@ appdata/network-manager-openconnect.metainfo.xml.in
 auth-dialog/main.c
 openconnect-strings.txt
 properties/auth-helpers.c
-properties/nm-openconnect.c
+properties/nm-openconnect-editor-plugin.c
+properties/nm-openconnect-editor.c
 src/nm-openconnect-service.c
 shared/nm-utils/nm-vpn-plugin-utils.c
 [type: gettext/glade]properties/nm-openconnect-dialog.ui
