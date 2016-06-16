@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-14 15:54+0200\n"
-"PO-Revision-Date: 2016-04-14 15:55+0200\n"
+"POT-Creation-Date: 2016-06-16 14:09+0200\n"
+"PO-Revision-Date: 2016-06-16 14:10+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -26,15 +26,15 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../appdata/network-manager-openconnect.appdata.xml.in.h:1
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
 msgid "OpenConnect VPN client"
 msgstr "Klient VPN OpenConnect"
 
-#: ../appdata/network-manager-openconnect.appdata.xml.in.h:2
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:2
 msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
 msgstr "Klient dla wirtualnych sieci prywatnych Cisco AnyConnect SSL VPN"
 
-#: ../appdata/network-manager-openconnect.appdata.xml.in.h:3
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:3
 msgid ""
 "Support for configuring SSL VPN virtual private network connections using "
 "OpenConnect."
@@ -42,11 +42,11 @@ msgstr ""
 "Obsługa konfigurowania wirtualnych sieci prywatnych SSL VPN używając "
 "OpenConnect."
 
-#: ../appdata/network-manager-openconnect.appdata.xml.in.h:4
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:4
 msgid "Compatible with Cisco AnyConnect, Juniper and ocserv based networks."
 msgstr "Zgodne z sieciami opartymi na Cisco AnyConnect, Juniper i ocserv."
 
-#: ../appdata/network-manager-openconnect.appdata.xml.in.h:5
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:5
 msgid "The NetworkManager Developers"
 msgstr "Programiści projektu NetworkManager"
 
@@ -75,43 +75,43 @@ msgstr ""
 "Przyczyna: %s\n"
 "Zaakceptować go?"
 
-#: ../auth-dialog/main.c:1381
+#: ../auth-dialog/main.c:1390
 msgid "_Close"
 msgstr "Za_mknij"
 
-#: ../auth-dialog/main.c:1398
+#: ../auth-dialog/main.c:1407
 msgid "VPN host"
 msgstr "Komputer VPN"
 
-#: ../auth-dialog/main.c:1409
+#: ../auth-dialog/main.c:1418
 msgid "C_onnect"
 msgstr "P_ołącz"
 
-#: ../auth-dialog/main.c:1416
+#: ../auth-dialog/main.c:1425
 msgid "Automatically start connecting next time"
 msgstr "Automatyczne rozpoczynanie połączenie następnym razem"
 
-#: ../auth-dialog/main.c:1433
+#: ../auth-dialog/main.c:1442
 msgid "Select a host to fetch the login form"
 msgstr "Wybór komputera, z którego pobrać login"
 
-#: ../auth-dialog/main.c:1438
+#: ../auth-dialog/main.c:1447
 msgid "Contacting host, please wait..."
 msgstr "Łączenie się z komputerem, proszę czekać…"
 
-#: ../auth-dialog/main.c:1450
+#: ../auth-dialog/main.c:1459
 msgid "_Login"
 msgstr "Za_loguj"
 
-#: ../auth-dialog/main.c:1456
+#: ../auth-dialog/main.c:1465
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: ../auth-dialog/main.c:1462
+#: ../auth-dialog/main.c:1471
 msgid "Save passwords"
 msgstr "Zapisywanie haseł"
 
-#: ../auth-dialog/main.c:1470
+#: ../auth-dialog/main.c:1479
 msgid "Log"
 msgstr "Dziennik"
 
@@ -5120,13 +5120,33 @@ msgstr "Wybierz klucz prywatny…"
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect.c:79
+#: ../properties/nm-openconnect.c:83
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "VPN zgodny z Cisco AnyConnect (openconnect)"
 
-#: ../properties/nm-openconnect.c:80
+#: ../properties/nm-openconnect.c:84
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Zgodny z VPN Cisco AnyConnect SSL."
+
+#: ../properties/nm-openconnect.c:877
+msgid "Juniper Network Connect (openconnect)"
+msgstr "Juniper Network Connect (openconnect)"
+
+#: ../properties/nm-openconnect.c:878
+msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
+msgstr "Zgodny z VPN SSL Juniper Network Connect/Pulse Secure"
+
+#. we don't know this protocol by name, but it's configured in the .name file,
+#. * so just take it.
+#: ../properties/nm-openconnect.c:882
+#, c-format
+msgid "Openconnect VPN (%s)"
+msgstr "VPN OpenConnect (%s)"
+
+#: ../properties/nm-openconnect.c:883
+#, c-format
+msgid "Openconnect SSL VPN with %s protocol"
+msgstr "VPN SSL OpenConnect z protokołem %s"
 
 #: ../src/nm-openconnect-service.c:150
 #, c-format
@@ -5159,33 +5179,33 @@ msgstr "Brak opcji konfiguracji VPN."
 msgid "No VPN secrets!"
 msgstr "Brak haseł VPN."
 
-#: ../src/nm-openconnect-service.c:381
+#: ../src/nm-openconnect-service.c:382
 msgid "Could not find openconnect binary."
 msgstr "Nie można odnaleźć pliku binarnego openconnect."
 
-#: ../src/nm-openconnect-service.c:393
+#: ../src/nm-openconnect-service.c:394
 msgid "No VPN gateway specified."
 msgstr "Nie podano bramy VPN."
 
-#: ../src/nm-openconnect-service.c:403
+#: ../src/nm-openconnect-service.c:404
 msgid "No WebVPN cookie provided."
 msgstr "Nie podano ciasteczka WebVPN."
 
-#: ../src/nm-openconnect-service.c:648
+#: ../src/nm-openconnect-service.c:660
 msgid "Don't quit when VPN connection terminates"
 msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
 
-#: ../src/nm-openconnect-service.c:649
+#: ../src/nm-openconnect-service.c:661
 msgid "Enable verbose debug logging (may expose passwords)"
 msgstr ""
 "Włącza zapisywanie większej liczby komunikatów debugowania w dzienniku (może "
 "ujawnić hasła)"
 
-#: ../src/nm-openconnect-service.c:650
+#: ../src/nm-openconnect-service.c:662
 msgid "D-Bus name to use for this instance"
 msgstr "Nazwa D-Bus dla tego wystąpienia"
 
-#: ../src/nm-openconnect-service.c:673
+#: ../src/nm-openconnect-service.c:685
 msgid ""
 "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
 "capability to NetworkManager."
