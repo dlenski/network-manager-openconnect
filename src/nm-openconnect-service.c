@@ -75,7 +75,7 @@ typedef struct {
 	gint int_max;
 } ValidProperty;
 
-static ValidProperty valid_properties[] = {
+static const ValidProperty valid_properties[] = {
 	{ NM_OPENCONNECT_KEY_GATEWAY,     G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_CACERT,      G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_AUTHTYPE,    G_TYPE_STRING, 0, 0 },
@@ -91,7 +91,7 @@ static ValidProperty valid_properties[] = {
 	{ NULL,                           G_TYPE_NONE, 0, 0 }
 };
 
-static ValidProperty valid_secrets[] = {
+static const ValidProperty valid_secrets[] = {
 	{ NM_OPENCONNECT_KEY_COOKIE,  G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_GATEWAY, G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_GWCERT,  G_TYPE_STRING, 0, 0 },
@@ -104,7 +104,7 @@ static gboolean debug = FALSE;
 static GMainLoop *loop = NULL;
 
 typedef struct ValidateInfo {
-	ValidProperty *table;
+	const ValidProperty *table;
 	GError **error;
 	gboolean have_items;
 } ValidateInfo;
