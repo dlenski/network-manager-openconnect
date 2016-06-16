@@ -42,6 +42,8 @@
 #include <grp.h>
 #include <locale.h>
 
+#include "nm-utils/nm-vpn-plugin-macros.h"
+
 #if !defined(DIST_VERSION)
 # define DIST_VERSION VERSION
 #endif
@@ -111,6 +113,30 @@ static struct {
 	GMainLoop *loop;
 } gl/*obal*/;
 
+/*****************************************************************************/
+
+#define _NMLOG(level, ...) \
+	G_STMT_START { \
+		if ((level) > LOG_INFO || gl.debug) { \
+			g_print ("nm-openconnect[%ld] %-7s " _NM_UTILS_MACRO_FIRST (__VA_ARGS__) "\n", \
+			         (long) getpid (), \
+			         nm_utils_syslog_to_str (level) \
+			         _NM_UTILS_MACRO_REST (__VA_ARGS__)); \
+		} \
+	} G_STMT_END
+
+static gboolean
+_LOGD_enabled (void)
+{
+	return gl.debug;
+}
+
+#define _LOGD(...) _NMLOG(LOG_INFO,    __VA_ARGS__)
+#define _LOGI(...) _NMLOG(LOG_NOTICE,  __VA_ARGS__)
+#define _LOGW(...) _NMLOG(LOG_WARNING, __VA_ARGS__)
+
+/*****************************************************************************/
+
 static void
 validate_one_property (const char *key, const char *value, gpointer user_data)
 {
@@ -170,7 +196,7 @@ validate_one_property (const char *key, const char *value, gpointer user_data)
 
 	/* Did not find the property from valid_properties or the type did not match */
 	if (!info->table[i].name && strncmp(key, "form:", 5)) {
-		g_warning ("property '%s' unknown", key);
+		_LOGW ("property '%s' unknown", key);
 		if (0)
 		g_set_error (info->error,
 		             NM_VPN_PLUGIN_ERROR,
@@ -259,7 +285,7 @@ create_persistent_tundev(void)
 		exit(EXIT_FAILURE);
 	}
 	close(fd);
-	g_warning("Created tundev %s\n", ifr.ifr_name);
+	_LOGW ("Created tundev %s\n", ifr.ifr_name);
 	return g_strdup(ifr.ifr_name);
 }
 
@@ -288,7 +314,7 @@ destroy_persistent_tundev(char *tun_name)
 		perror("TUNSETPERSIST");
 		exit(EXIT_FAILURE);
 	}
-	g_warning("Destroyed  tundev %s\n", tun_name);
+	_LOGW ("Destroyed  tundev %s\n", tun_name);
 	close(fd);
 }
 
@@ -299,7 +325,7 @@ static void openconnect_drop_child_privs(gpointer user_data)
 	if (tun_name) {
 		if (initgroups (NM_OPENCONNECT_USER, gl.tun_group) ||
 		    setgid (gl.tun_group) || setuid (gl.tun_owner)) {
-			g_warning ("Failed to drop privileges when spawning openconnect");
+			_LOGW ("Failed to drop privileges when spawning openconnect");
 			exit (1);
 		}
 	}
@@ -315,14 +341,14 @@ openconnect_watch_cb (GPid pid, gint status, gpointer user_data)
 	if (WIFEXITED (status)) {
 		error = WEXITSTATUS (status);
 		if (error != 0)
-			g_warning ("openconnect exited with error code %d", error);
+			_LOGW ("openconnect exited with error code %d", error);
 	}
 	else if (WIFSTOPPED (status))
-		g_warning ("openconnect stopped unexpectedly with signal %d", WSTOPSIG (status));
+		_LOGW ("openconnect stopped unexpectedly with signal %d", WSTOPSIG (status));
 	else if (WIFSIGNALED (status))
-		g_warning ("openconnect died with signal %d", WTERMSIG (status));
+		_LOGW ("openconnect died with signal %d", WTERMSIG (status));
 	else
-		g_warning ("openconnect died from an unknown cause");
+		_LOGW ("openconnect died from an unknown cause");
 
 	/* Reap child if needed. */
 	waitpid (priv->pid, NULL, WNOHANG);
@@ -465,16 +491,16 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	                               openconnect_drop_child_privs, priv->tun_name,
 	                               &pid, &stdin_fd, NULL, NULL, error)) {
 		g_ptr_array_free (openconnect_argv, TRUE);
-		g_warning ("openconnect failed to start.  error: '%s'", (*error)->message);
+		_LOGW ("openconnect failed to start.  error: '%s'", (*error)->message);
 		return -1;
 	}
 	g_ptr_array_free (openconnect_argv, TRUE);
 
-	g_message ("openconnect started with pid %d", pid);
+	_LOGI ("openconnect started with pid %d", pid);
 
 	if (write(stdin_fd, props_cookie, strlen(props_cookie)) != strlen(props_cookie) ||
 	    write(stdin_fd, "\n", 1) != 1) {
-		g_warning ("openconnect didn't eat the cookie we fed it");
+		_LOGW ("openconnect didn't eat the cookie we fed it");
 		return -1;
 	}
 
@@ -503,7 +529,7 @@ real_connect (NMVpnServicePlugin   *plugin,
 	if (!nm_openconnect_secrets_validate (s_vpn, error))
 		goto out;
 
-	if (gl.debug)
+	if (_LOGD_enabled ())
 		nm_connection_dump (connection);
 
 	openconnect_fd = nm_openconnect_start_openconnect_binary (NM_OPENCONNECT_PLUGIN (plugin), s_vpn, error);
@@ -576,7 +602,7 @@ real_disconnect (NMVpnServicePlugin   *plugin,
 		else
 			kill (priv->pid, SIGKILL);
 
-		g_message ("Terminated openconnect daemon with PID %d.", priv->pid);
+		_LOGI ("Terminated openconnect daemon with PID %d.", priv->pid);
 		priv->pid = 0;
 	}
 
@@ -613,7 +639,7 @@ nm_openconnect_plugin_new (const char *bus_name)
 	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_WATCH_PEER, !gl.debug,
 	                                                 NULL);
 	if (!plugin) {
-		g_warning ("Failed to initialize a plugin instance: %s", error->message);
+		_LOGW ("Failed to initialize a plugin instance: %s", error->message);
 		g_error_free (error);
 	}
 
@@ -689,8 +715,7 @@ int main (int argc, char *argv[])
 	if (getenv ("OPENCONNECT_DEBUG"))
 		gl.debug = TRUE;
 
-	if (gl.debug)
-		g_message ("nm-openconnect-service (version " DIST_VERSION ") starting...");
+	_LOGD ("nm-openconnect-service (version " DIST_VERSION ") starting...");
 
 	if (system ("/sbin/modprobe tun") == -1)
 		exit (EXIT_FAILURE);
