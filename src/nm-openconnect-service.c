@@ -98,16 +98,18 @@ static const ValidProperty valid_secrets[] = {
 	{ NULL,                       G_TYPE_NONE, 0, 0 }
 };
 
-static uid_t tun_owner;
-static gid_t tun_group;
-static gboolean debug = FALSE;
-static GMainLoop *loop = NULL;
-
 typedef struct ValidateInfo {
 	const ValidProperty *table;
 	GError **error;
 	gboolean have_items;
 } ValidateInfo;
+
+static struct {
+	uid_t tun_owner;
+	gid_t tun_group;
+	gboolean debug;
+	GMainLoop *loop;
+} gl/*obal*/;
 
 static void
 validate_one_property (const char *key, const char *value, gpointer user_data)
@@ -226,8 +228,8 @@ create_persistent_tundev(void)
 	if (!pw)
 		return NULL;
 
-	tun_owner = pw->pw_uid;
-	tun_group = pw->pw_gid;
+	gl.tun_owner = pw->pw_uid;
+	gl.tun_group = pw->pw_gid;
 
 	fd = open("/dev/net/tun", O_RDWR);
 	if (fd < 0) {
@@ -247,7 +249,7 @@ create_persistent_tundev(void)
 	if (i == 256)
 		exit(EXIT_FAILURE);
 
-	if (ioctl(fd, TUNSETOWNER, tun_owner) < 0) {
+	if (ioctl(fd, TUNSETOWNER, gl.tun_owner) < 0) {
 		perror("TUNSETOWNER");
 		exit(EXIT_FAILURE);
 	}
@@ -295,8 +297,8 @@ static void openconnect_drop_child_privs(gpointer user_data)
 	char *tun_name = user_data;
 
 	if (tun_name) {
-		if (initgroups(NM_OPENCONNECT_USER, tun_group) ||
-		    setgid(tun_group) || setuid(tun_owner)) {
+		if (initgroups (NM_OPENCONNECT_USER, gl.tun_group) ||
+		    setgid (gl.tun_group) || setuid (gl.tun_owner)) {
 			g_warning ("Failed to drop privileges when spawning openconnect");
 			exit (1);
 		}
@@ -453,7 +455,7 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 
 	g_ptr_array_add (openconnect_argv, (gpointer) props_vpn_gw);
 
-	if (debug)
+	if (gl.debug)
 		g_ptr_array_add (openconnect_argv, (gpointer) "--verbose");
 
 	g_ptr_array_add (openconnect_argv, NULL);
@@ -501,7 +503,7 @@ real_connect (NMVpnServicePlugin   *plugin,
 	if (!nm_openconnect_secrets_validate (s_vpn, error))
 		goto out;
 
-	if (debug)
+	if (gl.debug)
 		nm_connection_dump (connection);
 
 	openconnect_fd = nm_openconnect_start_openconnect_binary (NM_OPENCONNECT_PLUGIN (plugin), s_vpn, error);
@@ -608,7 +610,7 @@ nm_openconnect_plugin_new (const char *bus_name)
 
 	plugin = (NMOpenconnectPlugin *) g_initable_new (NM_TYPE_OPENCONNECT_PLUGIN, NULL, &error,
 	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_SERVICE_NAME, bus_name,
-	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_WATCH_PEER, !debug,
+	                                                 NM_VPN_SERVICE_PLUGIN_DBUS_WATCH_PEER, !gl.debug,
 	                                                 NULL);
 	if (!plugin) {
 		g_warning ("Failed to initialize a plugin instance: %s", error->message);
@@ -622,7 +624,7 @@ static void
 signal_handler (int signo)
 {
 	if (signo == SIGINT || signo == SIGTERM)
-		g_main_loop_quit (loop);
+		g_main_loop_quit (gl.loop);
 }
 
 static void
@@ -654,7 +656,7 @@ int main (int argc, char *argv[])
 
 	GOptionEntry options[] = {
 		{ "persist", 0, 0, G_OPTION_ARG_NONE, &persist, N_("Don't quit when VPN connection terminates"), NULL },
-		{ "debug", 0, 0, G_OPTION_ARG_NONE, &debug, N_("Enable verbose debug logging (may expose passwords)"), NULL },
+		{ "debug", 0, 0, G_OPTION_ARG_NONE, &gl.debug, N_("Enable verbose debug logging (may expose passwords)"), NULL },
 		{ "bus-name", 0, 0, G_OPTION_ARG_STRING, &bus_name, N_("D-Bus name to use for this instance"), NULL },
 		{NULL}
 	};
@@ -685,9 +687,9 @@ int main (int argc, char *argv[])
 	g_option_context_free (opt_ctx);
 
 	if (getenv ("OPENCONNECT_DEBUG"))
-		debug = TRUE;
+		gl.debug = TRUE;
 
-	if (debug)
+	if (gl.debug)
 		g_message ("nm-openconnect-service (version " DIST_VERSION ") starting...");
 
 	if (system ("/sbin/modprobe tun") == -1)
@@ -700,15 +702,15 @@ int main (int argc, char *argv[])
 	if (!plugin)
 		exit (EXIT_FAILURE);
 
-	loop = g_main_loop_new (NULL, FALSE);
+	gl.loop = g_main_loop_new (NULL, FALSE);
 
 	if (!persist)
-		g_signal_connect (plugin, "quit", G_CALLBACK (quit_mainloop), loop);
+		g_signal_connect (plugin, "quit", G_CALLBACK (quit_mainloop), gl.loop);
 
 	setup_signals ();
-	g_main_loop_run (loop);
+	g_main_loop_run (gl.loop);
 
-	g_main_loop_unref (loop);
+	g_clear_pointer (&gl.loop, g_main_loop_unref);
 	g_object_unref (plugin);
 
 	exit (EXIT_SUCCESS);
