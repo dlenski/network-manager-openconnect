@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-16 14:09+0200\n"
-"PO-Revision-Date: 2016-06-16 14:10+0200\n"
+"POT-Creation-Date: 2016-06-17 14:09+0200\n"
+"PO-Revision-Date: 2016-06-17 14:10+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -50,21 +50,21 @@ msgstr "Zgodne z sieciami opartymi na Cisco AnyConnect, Juniper i ocserv."
 msgid "The NetworkManager Developers"
 msgstr "Programiści projektu NetworkManager"
 
-#: ../auth-dialog/main.c:661
+#: ../auth-dialog/main.c:652
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
 msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:691
+#: ../auth-dialog/main.c:682
 #, c-format
 msgid "Connect to VPN '%s'"
 msgstr "Połącz z siecią VPN „%s”"
 
-#: ../auth-dialog/main.c:693
+#: ../auth-dialog/main.c:684
 msgid "Connect to VPN"
 msgstr "Połącz z siecią VPN"
 
-#: ../auth-dialog/main.c:733
+#: ../auth-dialog/main.c:724
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -75,43 +75,43 @@ msgstr ""
 "Przyczyna: %s\n"
 "Zaakceptować go?"
 
-#: ../auth-dialog/main.c:1390
+#: ../auth-dialog/main.c:1381
 msgid "_Close"
 msgstr "Za_mknij"
 
-#: ../auth-dialog/main.c:1407
+#: ../auth-dialog/main.c:1398
 msgid "VPN host"
 msgstr "Komputer VPN"
 
-#: ../auth-dialog/main.c:1418
+#: ../auth-dialog/main.c:1409
 msgid "C_onnect"
 msgstr "P_ołącz"
 
-#: ../auth-dialog/main.c:1425
+#: ../auth-dialog/main.c:1416
 msgid "Automatically start connecting next time"
 msgstr "Automatyczne rozpoczynanie połączenie następnym razem"
 
-#: ../auth-dialog/main.c:1442
+#: ../auth-dialog/main.c:1433
 msgid "Select a host to fetch the login form"
 msgstr "Wybór komputera, z którego pobrać login"
 
-#: ../auth-dialog/main.c:1447
+#: ../auth-dialog/main.c:1438
 msgid "Contacting host, please wait..."
 msgstr "Łączenie się z komputerem, proszę czekać…"
 
-#: ../auth-dialog/main.c:1459
+#: ../auth-dialog/main.c:1450
 msgid "_Login"
 msgstr "Za_loguj"
 
-#: ../auth-dialog/main.c:1465
+#: ../auth-dialog/main.c:1456
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: ../auth-dialog/main.c:1471
+#: ../auth-dialog/main.c:1462
 msgid "Save passwords"
 msgstr "Zapisywanie haseł"
 
-#: ../auth-dialog/main.c:1479
+#: ../auth-dialog/main.c:1470
 msgid "Log"
 msgstr "Dziennik"
 
@@ -5104,114 +5104,133 @@ msgstr "polecenie obliczania"
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Nierozpoznana odpowiedź z Yubikey podczas tworzenia kodu tokena\n"
 
-#: ../properties/auth-helpers.c:64
+#: ../properties/auth-helpers.c:58
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Wybierz certyfikat CA…"
 
-#: ../properties/auth-helpers.c:80
+#: ../properties/auth-helpers.c:74
 msgid "Choose your personal certificate..."
 msgstr "Wybierz certyfikat prywatny…"
 
-#: ../properties/auth-helpers.c:96
+#: ../properties/auth-helpers.c:90
 msgid "Choose your private key..."
 msgstr "Wybierz klucz prywatny…"
 
-#: ../properties/auth-helpers.c:256
+#: ../properties/auth-helpers.c:250
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect.c:83
+#: ../properties/nm-openconnect-editor-plugin.c:54
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "VPN zgodny z Cisco AnyConnect (openconnect)"
 
-#: ../properties/nm-openconnect.c:84
+#: ../properties/nm-openconnect-editor-plugin.c:55
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Zgodny z VPN Cisco AnyConnect SSL."
 
-#: ../properties/nm-openconnect.c:877
+#: ../properties/nm-openconnect-editor-plugin.c:393
 msgid "Juniper Network Connect (openconnect)"
 msgstr "Juniper Network Connect (openconnect)"
 
-#: ../properties/nm-openconnect.c:878
+#: ../properties/nm-openconnect-editor-plugin.c:394
 msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
 msgstr "Zgodny z VPN SSL Juniper Network Connect/Pulse Secure"
 
 #. we don't know this protocol by name, but it's configured in the .name file,
 #. * so just take it.
-#: ../properties/nm-openconnect.c:882
+#: ../properties/nm-openconnect-editor-plugin.c:398
 #, c-format
 msgid "Openconnect VPN (%s)"
 msgstr "VPN OpenConnect (%s)"
 
-#: ../properties/nm-openconnect.c:883
+#: ../properties/nm-openconnect-editor-plugin.c:399
 #, c-format
 msgid "Openconnect SSL VPN with %s protocol"
 msgstr "VPN SSL OpenConnect z protokołem %s"
 
-#: ../src/nm-openconnect-service.c:150
+#: ../src/nm-openconnect-service.c:146
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr ""
 "nieprawidłowa własność liczby całkowitej „%s” lub jest poza zakresem [%d -> "
 "%d]"
 
-#: ../src/nm-openconnect-service.c:160
+#: ../src/nm-openconnect-service.c:156
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr ""
 "nieprawidłowa własność zmiennej logicznej „%s” (nie wynosi „yes” lub „no”)"
 
-#: ../src/nm-openconnect-service.c:167
+#: ../src/nm-openconnect-service.c:163
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "nieobsługiwana własność „%s” typu „%s”"
 
-#: ../src/nm-openconnect-service.c:180
+#: ../src/nm-openconnect-service.c:176
 #, c-format
 msgid "property '%s' invalid or not supported"
 msgstr "własność „%s” jest nieprawidłowa lub nieobsługiwana"
 
-#: ../src/nm-openconnect-service.c:196
+#: ../src/nm-openconnect-service.c:192
 msgid "No VPN configuration options."
 msgstr "Brak opcji konfiguracji VPN."
 
-#: ../src/nm-openconnect-service.c:214
+#: ../src/nm-openconnect-service.c:210
 msgid "No VPN secrets!"
 msgstr "Brak haseł VPN."
 
-#: ../src/nm-openconnect-service.c:382
+#: ../src/nm-openconnect-service.c:378
 msgid "Could not find openconnect binary."
 msgstr "Nie można odnaleźć pliku binarnego openconnect."
 
-#: ../src/nm-openconnect-service.c:394
+#: ../src/nm-openconnect-service.c:390
 msgid "No VPN gateway specified."
 msgstr "Nie podano bramy VPN."
 
-#: ../src/nm-openconnect-service.c:404
+#: ../src/nm-openconnect-service.c:400
 msgid "No WebVPN cookie provided."
 msgstr "Nie podano ciasteczka WebVPN."
 
-#: ../src/nm-openconnect-service.c:660
+#: ../src/nm-openconnect-service.c:656
 msgid "Don't quit when VPN connection terminates"
 msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
 
-#: ../src/nm-openconnect-service.c:661
+#: ../src/nm-openconnect-service.c:657
 msgid "Enable verbose debug logging (may expose passwords)"
 msgstr ""
 "Włącza zapisywanie większej liczby komunikatów debugowania w dzienniku (może "
 "ujawnić hasła)"
 
-#: ../src/nm-openconnect-service.c:662
+#: ../src/nm-openconnect-service.c:658
 msgid "D-Bus name to use for this instance"
 msgstr "Nazwa D-Bus dla tego wystąpienia"
 
-#: ../src/nm-openconnect-service.c:685
+#: ../src/nm-openconnect-service.c:681
 msgid ""
 "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
 "capability to NetworkManager."
 msgstr ""
 "nm-openconnect-service dostarcza zintegrowaną możliwość VPN SSL Cisco "
 "AnyConnect dla usługi NetworkManager."
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr "brak pliku wtyczki „%s”"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr "nie można wczytać wtyczki edytora: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr "nie można wczytać generatora %s z wtyczki: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
+msgid "unknown error creating editor instance"
+msgstr "nieznany błąd podczas tworzenia wystąpienia edytora"
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>General</b>"
