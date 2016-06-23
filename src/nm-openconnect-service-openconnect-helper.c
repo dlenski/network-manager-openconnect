@@ -32,19 +32,55 @@
 #include <arpa/inet.h>
 #include <errno.h>
 
+#include "nm-utils/nm-shared-utils.h"
+#include "nm-utils/nm-vpn-plugin-macros.h"
+
+extern char **environ;
+
+/*****************************************************************************/
+
+static struct {
+	int log_level;
+	const char *log_prefix_token;
+} gl/*obal*/;
+
+/*****************************************************************************/
+
+#define _NMLOG(level, ...) \
+	G_STMT_START { \
+		if (gl.log_level >= (level)) { \
+			g_print ("nm-openconnect[%s] %-7s [helper-%ld] " _NM_UTILS_MACRO_FIRST (__VA_ARGS__) "\n", \
+			         gl.log_prefix_token, \
+			         nm_utils_syslog_to_str (level), \
+			         (long) getpid () \
+			         _NM_UTILS_MACRO_REST (__VA_ARGS__)); \
+		} \
+	} G_STMT_END
+
+static gboolean
+_LOGD_enabled (void)
+{
+	return gl.log_level >= LOG_INFO;
+}
+
+#define _LOGD(...) _NMLOG(LOG_INFO,    __VA_ARGS__)
+#define _LOGW(...) _NMLOG(LOG_WARNING, __VA_ARGS__)
+
+/*****************************************************************************/
+
 static void
 helper_failed (GDBusProxy *proxy, const char *reason)
 {
 	GError *err = NULL;
 
-	g_warning ("nm-nopenconnect-service-openconnect-helper did not receive a valid %s from openconnect", reason);
+	_LOGW ("nm-nopenconnect-service-openconnect-helper did not receive a valid %s from openconnect", reason);
 
 	if (!g_dbus_proxy_call_sync (proxy, "SetFailure",
 	                             g_variant_new ("(s)", reason),
 	                             G_DBUS_CALL_FLAGS_NONE, -1,
 	                             NULL,
 	                             &err)) {
-		g_warning ("Could not send failure information: %s", err->message);
+		_LOGW ("Could not send failure information: %s", err->message);
 		g_error_free (err);
 	}
 
@@ -84,7 +120,7 @@ send_config (GDBusProxy *proxy, GVariant *config,
 
 	return;
 error:
-	g_warning ("Could not send configuration information: %s", err->message);
+	_LOGW ("Could not send configuration information: %s", err->message);
 	g_error_free (err);
 }
 
@@ -257,7 +293,7 @@ get_ip4_routes (void)
 		snprintf (buf, BUFLEN, "CISCO_SPLIT_INC_%d_ADDR", i);
 		tmp = getenv (buf);
 		if (!tmp || inet_pton (AF_INET, tmp, &network) <= 0) {
-			g_warning ("Ignoring invalid static route address '%s'", tmp ? tmp : "NULL");
+			_LOGW ("Ignoring invalid static route address '%s'", tmp ? tmp : "NULL");
 			continue;
 		}
 
@@ -269,7 +305,7 @@ get_ip4_routes (void)
 			errno = 0;
 			tmp_prefix = strtol (tmp, NULL, 10);
 			if (errno || tmp_prefix <= 0 || tmp_prefix > 32) {
-				g_warning ("Ignoring invalid static route prefix '%s'", tmp ? tmp : "NULL");
+				_LOGW ("Ignoring invalid static route prefix '%s'", tmp ? tmp : "NULL");
 				continue;
 			}
 			prefix = (guint32) tmp_prefix;
@@ -279,7 +315,7 @@ get_ip4_routes (void)
 			snprintf (buf, BUFLEN, "CISCO_SPLIT_INC_%d_MASK", i);
 			tmp = getenv (buf);
 			if (!tmp || inet_pton (AF_INET, tmp, &netmask) <= 0) {
-				g_warning ("Ignoring invalid static route netmask '%s'", tmp ? tmp : "NULL");
+				_LOGW ("Ignoring invalid static route netmask '%s'", tmp ? tmp : "NULL");
 				continue;
 			}
 			prefix = nm_utils_ip4_netmask_to_prefix (netmask.s_addr);
@@ -331,7 +367,7 @@ get_ip6_routes (void)
 		snprintf (buf, BUFLEN, "CISCO_IPV6_SPLIT_INC_%d_ADDR", i);
 		network = getenv (buf);
 		if (!network) {
-			g_warning ("Ignoring invalid static route address '%s'", network ? network : "NULL");
+			_LOGW ("Ignoring invalid static route address '%s'", network ? network : "NULL");
 			continue;
 		}
 
@@ -343,18 +379,18 @@ get_ip6_routes (void)
 			errno = 0;
 			tmp_prefix = strtol (tmp, NULL, 10);
 			if (errno || tmp_prefix <= 0 || tmp_prefix > 128) {
-				g_warning ("Ignoring invalid static route prefix '%s'", tmp ? tmp : "NULL");
+				_LOGW ("Ignoring invalid static route prefix '%s'", tmp ? tmp : "NULL");
 				continue;
 			}
 			prefix = (guint32) tmp_prefix;
 		} else {
-			g_warning ("Ignoring static route %d with no prefix length", i);
+			_LOGW ("Ignoring static route %d with no prefix length", i);
 			continue;
 		}
 
 		route = nm_ip_route_new (AF_INET6, network, prefix, NULL, -1, &error);
 		if (!route) {
-			g_warning ("Ignoring a route: %s", error->message);
+			_LOGW ("Ignoring a route: %s", error->message);
 			g_error_free (error);
 			continue;
 		}
@@ -382,7 +418,7 @@ get_ip6_routes (void)
  * CISCO_BANNER           -- banner from server
  *
  */
-int 
+int
 main (int argc, char *argv[])
 {
 	GDBusProxy *proxy;
@@ -397,6 +433,32 @@ main (int argc, char *argv[])
 #if !GLIB_CHECK_VERSION (2, 35, 0)
 	g_type_init ();
 #endif
+
+	gl.log_level = _nm_utils_ascii_str_to_int64 (getenv ("NM_VPN_LOG_LEVEL"),
+	                                             10, 0, LOG_DEBUG,
+	                                             LOG_NOTICE);
+	gl.log_prefix_token = getenv ("NM_VPN_LOG_PREFIX_TOKEN") ?: "???";
+
+	if (_LOGD_enabled ()) {
+		GString *args;
+		const char **iter;
+		guint i;
+
+		args = g_string_new (NULL);
+		for (i = 0; i < argc; i++) {
+			if (i > 0)
+				g_string_append_c (args, ' ');
+			tmp = g_strescape (argv[i], NULL);
+			g_string_append_printf (args, "\"%s\"", tmp);
+			g_free (tmp);
+		}
+
+		_LOGD ("command line: %s", args->str);
+		g_string_free (args, TRUE);
+
+		for (iter = (const char **) environ; iter && *iter; iter++)
+			_LOGD ("environment: %s", *iter);
+	}
 
 	/* openconnect gives us a "reason" code.  If we are given one,
 	 * don't proceed unless its "connect".
@@ -417,7 +479,7 @@ main (int argc, char *argv[])
 	                                       NM_VPN_DBUS_PLUGIN_INTERFACE,
 	                                       NULL, &err);
 	if (!proxy) {
-		g_warning ("Could not create a D-Bus proxy: %s", err->message);
+		_LOGW ("Could not create a D-Bus proxy: %s", err->message);
 		g_error_free (err);
 		exit (1);
 	}
@@ -460,7 +522,7 @@ main (int argc, char *argv[])
 		errno = 0;
 		mtu = strtol (tmp, NULL, 10);
 		if (errno || mtu < 0 || mtu > 20000) {
-			g_warning ("Ignoring invalid tunnel MTU '%s'", tmp);
+			_LOGW ("Ignoring invalid tunnel MTU '%s'", tmp);
 		} else {
 			val = g_variant_new_uint32 ((guint32) mtu);
 			g_variant_builder_add (&builder, "{sv}", NM_VPN_PLUGIN_CONFIG_MTU, val);

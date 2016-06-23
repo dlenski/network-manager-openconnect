@@ -19,6 +19,8 @@ AM_CPPFLAGS = \
 ###############################################################################
 
 nm_openconnect_service_SOURCES = \
+	$(top_srcdir)/shared/nm-utils/nm-shared-utils.c \
+	$(top_srcdir)/shared/nm-utils/nm-shared-utils.h \
 	nm-openconnect-service.c \
 	nm-openconnect-service.h \
 	$(NULL)
@@ -30,6 +32,8 @@ nm_openconnect_service_LDADD = \
 ###############################################################################
 
 nm_openconnect_service_openconnect_helper_SOURCES = \
+	$(top_srcdir)/shared/nm-utils/nm-shared-utils.c \
+	$(top_srcdir)/shared/nm-utils/nm-shared-utils.h \
 	nm-openconnect-service-openconnect-helper.c
 
 nm_openconnect_service_openconnect_helper_LDADD = \
