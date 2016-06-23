@@ -514,6 +514,11 @@ main (int argc, char *argv[])
 	if (val)
 		g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_DOMAIN, val);
 
+	/* Proxy */
+	val = str_to_gvariant (getenv ("CISCO_PROXY_PAC"), TRUE);
+	if (val)
+		g_variant_builder_add (&builder, "{sv}", NM_VPN_PLUGIN_CONFIG_PROXY_PAC, val);
+
 	/* MTU  */
 	tmp = getenv ("INTERNAL_IP4_MTU");
 	if (tmp && strlen (tmp)) {
