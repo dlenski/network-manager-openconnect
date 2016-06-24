@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-17 14:09+0200\n"
-"PO-Revision-Date: 2016-06-17 14:10+0200\n"
+"POT-Creation-Date: 2016-06-24 15:52+0200\n"
+"PO-Revision-Date: 2016-06-24 15:53+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -5148,70 +5148,109 @@ msgstr "VPN OpenConnect (%s)"
 msgid "Openconnect SSL VPN with %s protocol"
 msgstr "VPN SSL OpenConnect z protokołem %s"
 
-#: ../src/nm-openconnect-service.c:146
+#: ../src/nm-openconnect-service.c:176
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr ""
 "nieprawidłowa własność liczby całkowitej „%s” lub jest poza zakresem [%d -> "
 "%d]"
 
-#: ../src/nm-openconnect-service.c:156
+#: ../src/nm-openconnect-service.c:186
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr ""
 "nieprawidłowa własność zmiennej logicznej „%s” (nie wynosi „yes” lub „no”)"
 
-#: ../src/nm-openconnect-service.c:163
+#: ../src/nm-openconnect-service.c:193
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "nieobsługiwana własność „%s” typu „%s”"
 
-#: ../src/nm-openconnect-service.c:176
+#: ../src/nm-openconnect-service.c:206
 #, c-format
 msgid "property '%s' invalid or not supported"
 msgstr "własność „%s” jest nieprawidłowa lub nieobsługiwana"
 
-#: ../src/nm-openconnect-service.c:192
+#: ../src/nm-openconnect-service.c:222
 msgid "No VPN configuration options."
 msgstr "Brak opcji konfiguracji VPN."
 
-#: ../src/nm-openconnect-service.c:210
+#: ../src/nm-openconnect-service.c:240
 msgid "No VPN secrets!"
 msgstr "Brak haseł VPN."
 
-#: ../src/nm-openconnect-service.c:378
+#: ../src/nm-openconnect-service.c:408
 msgid "Could not find openconnect binary."
 msgstr "Nie można odnaleźć pliku binarnego openconnect."
 
-#: ../src/nm-openconnect-service.c:390
+#: ../src/nm-openconnect-service.c:420
 msgid "No VPN gateway specified."
 msgstr "Nie podano bramy VPN."
 
-#: ../src/nm-openconnect-service.c:400
+#: ../src/nm-openconnect-service.c:430
 msgid "No WebVPN cookie provided."
 msgstr "Nie podano ciasteczka WebVPN."
 
-#: ../src/nm-openconnect-service.c:656
+#: ../src/nm-openconnect-service.c:690
 msgid "Don't quit when VPN connection terminates"
 msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
 
-#: ../src/nm-openconnect-service.c:657
+#: ../src/nm-openconnect-service.c:691
 msgid "Enable verbose debug logging (may expose passwords)"
 msgstr ""
 "Włącza zapisywanie większej liczby komunikatów debugowania w dzienniku (może "
 "ujawnić hasła)"
 
-#: ../src/nm-openconnect-service.c:658
+#: ../src/nm-openconnect-service.c:692
 msgid "D-Bus name to use for this instance"
 msgstr "Nazwa D-Bus dla tego wystąpienia"
 
-#: ../src/nm-openconnect-service.c:681
+#: ../src/nm-openconnect-service.c:715
 msgid ""
 "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
 "capability to NetworkManager."
 msgstr ""
 "nm-openconnect-service dostarcza zintegrowaną możliwość VPN SSL Cisco "
 "AnyConnect dla usługi NetworkManager."
+
+#: ../shared/nm-utils/nm-shared-utils.c:185
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr "klasa obiektów „%s” nie posiada właściwości o nazwie „%s”"
+
+#: ../shared/nm-utils/nm-shared-utils.c:192
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr "właściwość „%s” klasy obiektów „%s” nie jest zapisywalna"
+
+#: ../shared/nm-utils/nm-shared-utils.c:199
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr ""
+"właściwość konstruktu „%s” dla obiektu „%s” nie może zostać ustawiona po "
+"konstrukcji"
+
+#: ../shared/nm-utils/nm-shared-utils.c:207
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr ""
+"„%s::%s” nie jest prawidłową nazwą właściwości; „%s” nie jest podtypem "
+"GObject"
+
+#: ../shared/nm-utils/nm-shared-utils.c:216
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr "nie można ustawić właściwości „%s” typu „%s” z wartości typu „%s”"
+
+#: ../shared/nm-utils/nm-shared-utils.c:227
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr ""
+"wartość „%s” typu „%s” jest nieprawidłowa lub spoza zakresu dla właściwości "
+"„%s” typu „%s”"
 
 #: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
 #, c-format
