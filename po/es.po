@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-16 14:03+0000\n"
-"PO-Revision-Date: 2016-03-17 09:58+0100\n"
+"POT-Creation-Date: 2016-06-28 13:14+0000\n"
+"PO-Revision-Date: 2016-06-28 15:09+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -24,21 +24,45 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../auth-dialog/main.c:661
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
+msgid "OpenConnect VPN client"
+msgstr "Cliente de VPN OpenConnect"
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:2
+msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
+msgstr "Cliente para redes privadas virtuales de Cisco VPN AnyConnect SSL"
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:3
+msgid ""
+"Support for configuring SSL VPN virtual private network connections using "
+"OpenConnect."
+msgstr ""
+"Soporte para configurar conexiones a redes privadas virtuales SSL VPN usando "
+"OpenConnect."
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:4
+msgid "Compatible with Cisco AnyConnect, Juniper and ocserv based networks."
+msgstr "Compatible con Cisco AnyConnect, Juniper y redes basadas en ocserv."
+
+#: ../appdata/network-manager-openconnect.metainfo.xml.in.h:5
+msgid "The NetworkManager Developers"
+msgstr "Los desarrolladores de NetworkManager"
+
+#: ../auth-dialog/main.c:652
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
 msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:691
+#: ../auth-dialog/main.c:682
 #, c-format
 msgid "Connect to VPN '%s'"
 msgstr "Conectarse a la VPN «%s»"
 
-#: ../auth-dialog/main.c:693
+#: ../auth-dialog/main.c:684
 msgid "Connect to VPN"
 msgstr "Conectar a la VPN"
 
-#: ../auth-dialog/main.c:733
+#: ../auth-dialog/main.c:724
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -88,169 +112,6 @@ msgstr "Guardar contraseñas"
 #: ../auth-dialog/main.c:1470
 msgid "Log"
 msgstr "Registro"
-
-#: ../properties/auth-helpers.c:64
-msgid "Choose a Certificate Authority certificate..."
-msgstr "Elija un certificado CA…"
-
-#: ../properties/auth-helpers.c:80
-msgid "Choose your personal certificate..."
-msgstr "Elija su certificado personal…"
-
-#: ../properties/auth-helpers.c:96
-msgid "Choose your private key..."
-msgstr "Elija su clave privada…"
-
-#: ../properties/auth-helpers.c:256
-msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr "Certificados PEM (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect.c:79
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "Compatible con VPN Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect.c:80
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Compatible con VPN Cisco AnyConnect SSL."
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>General</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Seleccione un archivo"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_Gateway:"
-msgstr "_Pasarela:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Proxy:"
-msgstr "_Proxy:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "CA C_ertificate:"
-msgstr "Certificado _CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Permitir el _troyano de escritorio Cisco Secure"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "CSD _Wrapper Script:"
-msgstr "Script CSD _envolvente:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Certificado de autenticación</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "_User Certificate:"
-msgstr "Certificado del _usuario:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "Private _Key:"
-msgstr "Clave pri_vada:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Use _FSID for key passphrase"
-msgstr "Usar _FSID para la frase de paso de la clave"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Testigo software de autenticación</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "Token _Mode:"
-msgstr "_Modo del testigo:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token Sec_ret:"
-msgstr "Cadena del testigo:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Disabled"
-msgstr "Desactivado"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "ID seguro (SecurID RSA): leído de ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - manually entered"
-msgstr "ID seguro (SecurID RSA: introducido manualmente"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "TOTP - manually entered"
-msgstr ""
-"Contraseña TOTP (Contraseña de uso único basada en la hora): introducida "
-"manualmente"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "HOTP - manually entered"
-msgstr "HOTP: introducida manualmente"
-
-#: ../src/nm-openconnect-service.c:150
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr "propiedad entera «%s» no válida o fuera de rango [%d -> %d]"
-
-#: ../src/nm-openconnect-service.c:160
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "propiedad booleana «%s» no válida (no es «sí» o «no»)"
-
-#: ../src/nm-openconnect-service.c:167
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "propiedad «%s» de tipo %s no controlada"
-
-#: ../src/nm-openconnect-service.c:180
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "propiedad «%s» no válida o no soportada"
-
-#: ../src/nm-openconnect-service.c:196
-msgid "No VPN configuration options."
-msgstr "No hay opciones de configuración de VPN."
-
-#: ../src/nm-openconnect-service.c:214
-msgid "No VPN secrets!"
-msgstr "No hay secretos VPN."
-
-#: ../src/nm-openconnect-service.c:381
-msgid "Could not find openconnect binary."
-msgstr "No se pudo encontrar el binario «openconnect»."
-
-#: ../src/nm-openconnect-service.c:393
-msgid "No VPN gateway specified."
-msgstr "No se especificó ninguna puerta de enlace."
-
-#: ../src/nm-openconnect-service.c:403
-msgid "No WebVPN cookie provided."
-msgstr "No se proporcionó una cookie WebVPN."
-
-#: ../src/nm-openconnect-service.c:648
-msgid "Don't quit when VPN connection terminates"
-msgstr "No abandonar cuando finaliza la conexión VPN"
-
-#: ../src/nm-openconnect-service.c:649
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr ""
-"Activar el registro detallado de depuración (puede exponer las contraseñas)"
-
-#: ../src/nm-openconnect-service.c:650
-msgid "D-Bus name to use for this instance"
-msgstr "Nombre de D-Bus que usar para esta instancia"
-
-#: ../src/nm-openconnect-service.c:673
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"nm-openconnect-service proporciona a NetworkManager la capacidad Cisco "
-"AnyConnect SSL VPN integrada."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/auth-juniper.c#l128
 #: ../openconnect-strings.txt:14
@@ -527,7 +388,6 @@ msgstr "Falló al establecer gid %ld: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/mainloop.c#l147
 #: ../openconnect-strings.txt:165
 #, c-format
-#| msgid "Failed to set uid %ld\n"
 msgid "Failed to set groups to %ld: %s\n"
 msgstr "Falló al establecer grupos de %ld: %s\n"
 
@@ -535,7 +395,6 @@ msgstr "Falló al establecer grupos de %ld: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/mainloop.c#l154
 #: ../openconnect-strings.txt:169
 #, c-format
-#| msgid "Failed to set uid %ld\n"
 msgid "Failed to set uid %ld: %s\n"
 msgstr "Falló al establecer uid %ld: %s\n"
 
@@ -682,7 +541,6 @@ msgstr "X-DTLS-Session no es de 64 caracteres; es: «%s»\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/cstp.c#l385
 #: ../openconnect-strings.txt:247
 #, c-format
-#| msgid "Unknown CSTP-Content-Encoding %s\n"
 msgid "Unknown DTLS-Content-Encoding %s\n"
 msgstr "DTLS-Content-Encoding %s desconocido\n"
 
@@ -779,7 +637,6 @@ msgstr "Tipo de compresión %d desconocido\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/cstp.c#l745
 #: ../openconnect-strings.txt:298
 #, c-format
-#| msgid "Received compressed data packet of %ld bytes\n"
 msgid "Received %s compressed data packet of %d bytes (was %d)\n"
 msgstr "Paquete de datos comprimidos %s de %d bytes recibido (eran %d)\n"
 
@@ -908,7 +765,6 @@ msgstr "Enviar CSTP Keepalive\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/cstp.c#l1079
 #: ../openconnect-strings.txt:375
 #, c-format
-#| msgid "Sending compressed data packet of %d bytes\n"
 msgid "Sending compressed data packet of %d bytes (was %d)\n"
 msgstr "Enviando paquete de datos comprimidos de %d bytes (eran %d)\n"
 
@@ -933,14 +789,12 @@ msgstr "Intentando la autenticación Digest en el proxy\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/digest.c#l257
 #: ../openconnect-strings.txt:388
 #, c-format
-#| msgid "Attempting Digest authentication to proxy\n"
 msgid "Attempting Digest authentication to server '%s'\n"
 msgstr "Intentando la autenticación Digest al servidor «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l180
 #: ../openconnect-strings.txt:391
 #, c-format
-#| msgid "Failed to create BIO for keystore item '%s'\n"
 msgid "Failed to create SSL_SESSION ASN.1 for OpenSSL: %s\n"
 msgstr "Falló al crear SSL_SESSION ASN.1 para OpenSSL: %s\n"
 
@@ -993,7 +847,6 @@ msgstr "Establecida la conexíon DTLS (usando OpenSSL). Ciphersuite %s.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l656
 #: ../openconnect-strings.txt:420
 #, c-format
-#| msgid "DTLS connection attempted with an existing fd\n"
 msgid "DTLS connection compression using %s.\n"
 msgstr "Compresión de la conexión DTLS utilizando %s.\n"
 
@@ -1133,7 +986,6 @@ msgstr "Obtenido Keepalive DTLS\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l917
 #: ../openconnect-strings.txt:496
-#| msgid "Compressed packet received in !deflate mode\n"
 msgid "Compressed DTLS packet received when compression not enabled\n"
 msgstr ""
 "Paquete DTLS comprimido recibido cuando la compresión no estaba activada\n"
@@ -1217,7 +1069,6 @@ msgstr "Demasiado tiempo en detectar el bucle MTU; liberando.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l1234
 #: ../openconnect-strings.txt:542
 #, c-format
-#| msgid "Failed to send DPD request. Expect disconnect\n"
 msgid "Failed to send DPD request (%d): %s\n"
 msgstr "Falló al enviar la solicitud DPD (%d): %s\n"
 
@@ -1233,7 +1084,6 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l1276
 #: ../openconnect-strings.txt:550
 #, c-format
-#| msgid "Failed to reconnect to host %s\n"
 msgid "Failed to recv DPD request (%d): %s\n"
 msgstr "Falló al recibir la solicitud DPD (%d): %s\n"
 
@@ -1245,7 +1095,6 @@ msgstr "Iniciando detección de MTU IPv6\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/dtls.c#l1329
 #: ../openconnect-strings.txt:556
 #, c-format
-#| msgid "Sending compressed data packet of %d bytes\n"
 msgid "Detected MTU of %d bytes (was %d)\n"
 msgstr "Detectado MTU de %d bytes (eran %d)\n"
 
@@ -1297,14 +1146,12 @@ msgstr "Parametros para %s ESP: SPI 0x%08x\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l155
 #: ../openconnect-strings.txt:580
 #, c-format
-#| msgid "Unsupported PEM encryption type: %s\n"
 msgid "ESP encryption type %s key 0x%s\n"
 msgstr "Tipo de cifrado ESP %s clave 0x%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l158
 #: ../openconnect-strings.txt:583
 #, c-format
-#| msgid "GSSAPI authentication completed\n"
 msgid "ESP authentication type %s key 0x%s\n"
 msgstr "Tipo de autenticación ESP %s clave 0x%s\n"
 
@@ -1327,7 +1174,6 @@ msgstr "Enviar pruebas ESP\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l264
 #: ../openconnect-strings.txt:596
 #, c-format
-#| msgid "Received DTLS packet 0x%02x of %d bytes\n"
 msgid "Received ESP packet of %d bytes\n"
 msgstr "Paquete ESP recibido de %d bytes\n"
 
@@ -1369,17 +1215,13 @@ msgstr "Sesión ESP establecida con el servidor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l332
 #: ../openconnect-strings.txt:617
-#, fuzzy
-#| msgid "Failed to allocate memory for certificate\n"
 msgid "Failed to allocate memory to decrypt ESP packet\n"
-msgstr "Falló al asignar memoria para el certificado\n"
+msgstr "Falló al asignar memoria para descifrar el paquete ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l338
 #: ../openconnect-strings.txt:620
-#, fuzzy
-#| msgid "Compression setup failed\n"
 msgid "LZO decompression of ESP packet failed\n"
-msgstr "Falló la configuración de compresión\n"
+msgstr "Falló la descompresión LZO del paquete ESP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/esp.c#l344
 #: ../openconnect-strings.txt:623
@@ -1421,32 +1263,28 @@ msgstr "Enviando paquete ESP de %d bytes\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l56
 #: ../openconnect-strings.txt:644
-#, fuzzy, c-format
-#| msgid "Failed to initialise DTLS secret\n"
+#, c-format
 msgid "Failed to initialise ESP cipher: %s\n"
-msgstr "Falló al inicializar el secreto DTLS\n"
+msgstr "Falló al inicializar el cifrado ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l66
 #: ../openconnect-strings.txt:647
-#, fuzzy, c-format
-#| msgid "Failed to initialise DTLS secret\n"
+#, c-format
 msgid "Failed to initialize ESP HMAC: %s\n"
-msgstr "Falló al inicializar el secreto DTLS\n"
+msgstr "Falló al inicializar ESP HMAC: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l116
 #: ../openconnect-strings.txt:650
-#, fuzzy, c-format
-#| msgid "Failed to open private key file %s: %s\n"
+#, c-format
 msgid "Failed to generate random keys for ESP: %s\n"
-msgstr "Falló al abrir el archivo de clave privada %s: %s\n"
+msgstr "Falló al generar las claves aleatorias para ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l146
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l212
 #: ../openconnect-strings.txt:654
-#, fuzzy, c-format
-#| msgid "Failed to write to SSL socket: %s\n"
+#, c-format
 msgid "Failed to calculate HMAC for ESP packet: %s\n"
-msgstr "Falló al escribir en el socket SSL: %s\n"
+msgstr "Falló al calcular HMAC para el paquete ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l153
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-esp.c#l148
@@ -1456,24 +1294,21 @@ msgstr "Paquete ESP recibido con HMAC no válida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l169
 #: ../openconnect-strings.txt:661
-#, fuzzy, c-format
-#| msgid "Decrypting PEM key failed\n"
+#, c-format
 msgid "Decrypting ESP packet failed: %s\n"
-msgstr "Falló al descifrar la clave PEM\n"
+msgstr "Falló al descifrar el paquete ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l189
 #: ../openconnect-strings.txt:664
-#, fuzzy, c-format
-#| msgid "Failed to get key ID: %s\n"
+#, c-format
 msgid "Failed to generate ESP packet IV: %s\n"
-msgstr "Falló al obtener el ID de la clave: %s\n"
+msgstr "Falló al generar el VI del paquete ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls-esp.c#l204
 #: ../openconnect-strings.txt:667
-#, fuzzy, c-format
-#| msgid "Failed to decrypt PEM key: %s\n"
+#, c-format
 msgid "Failed to encrypt ESP packet: %s\n"
-msgstr "Falló al descrifrar la clave PEM: %s\n"
+msgstr "Falló al cifrar el paquete ESP: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l126
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl.c#l128
@@ -1680,10 +1515,8 @@ msgstr "Introduzca contraseña PEM:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1010
 #: ../openconnect-strings.txt:785
-#, fuzzy
-#| msgid "This binary built without PKCS#11 support\n"
 msgid "This binary built without system key support\n"
-msgstr "Este binario se compiló sin soporte PKCS#11\n"
+msgstr "Este binario se compiló sin soporte para sistema de claves\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1017
 #: ../openconnect-strings.txt:788
@@ -1761,10 +1594,9 @@ msgstr "Error al importar la clave del sistema %s: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1297
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1325
 #: ../openconnect-strings.txt:829
-#, fuzzy, c-format
-#| msgid "Using PKCS#11 key %s\n"
+#, c-format
 msgid "Trying PKCS#11 key URL %s\n"
-msgstr "Usando clave PKCS#11 %s\n"
+msgstr "Probando URL de clave PKCS#11 %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1212
 #: ../openconnect-strings.txt:832
@@ -1915,26 +1747,25 @@ msgstr "El servidor no presentó ningún certificado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1970
 #: ../openconnect-strings.txt:911
-#, fuzzy, c-format
-#| msgid "Error importing server's cert\n"
+#, c-format
 msgid "Error comparing server's cert on rehandshake: %s\n"
-msgstr "Error al importar el certificado del servidor\n"
+msgstr ""
+"Error al comparar el certificado del servidor en la renegociación: %s\n"
+"\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1975
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl.c#l1338
 #: ../openconnect-strings.txt:915
-#, fuzzy
-#| msgid "Server presented no certificate\n"
 msgid "Server presented different cert on rehandshake\n"
-msgstr "El servidor no presentó ningún certificado\n"
+msgstr ""
+"El servidor ha presentado un certificado diferente en la renegociación\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1980
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl.c#l1341
 #: ../openconnect-strings.txt:919
-#, fuzzy
-#| msgid "Server presented no certificate\n"
 msgid "Server presented identical cert on rehandshake\n"
-msgstr "El servidor no presentó ningún certificado\n"
+msgstr ""
+"El servidor ha presentado un certificado idéntico en la renegociación\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l1986
 #: ../openconnect-strings.txt:922
@@ -1949,10 +1780,8 @@ msgstr "Error al importar el certificado del servidor\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l2001
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/main.c#l1681
 #: ../openconnect-strings.txt:929
-#, fuzzy
-#| msgid "Could not calculate SHA1 of server's certificate\n"
 msgid "Could not calculate hash of server's certificate\n"
-msgstr "No se pudo calcular el SHA1 del certificado del servidor\n"
+msgstr "No se pudo calcular hash del certificado del servidor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l2006
 #: ../openconnect-strings.txt:932
@@ -2034,10 +1863,9 @@ msgstr "Carga de certificado fallida. Abortando.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l2270
 #: ../openconnect-strings.txt:979
-#, fuzzy, c-format
-#| msgid "Failed to set TLS priority string: %s\n"
+#, c-format
 msgid "Failed to set TLS priority string (\"%s\"): %s\n"
-msgstr "Falló al establecer la cadena de prioridad TLS: %s\n"
+msgstr "Falló al establecer la cadena de prioridad TLS («%s»): %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gnutls.c#l2282
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl.c#l1583
@@ -2242,10 +2070,9 @@ msgstr "Intentando la autenticación GSSAPI en el proxy\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gssapi.c#l148
 #: ../openconnect-strings.txt:1093
-#, fuzzy, c-format
-#| msgid "Attempting GSSAPI authentication to proxy\n"
+#, c-format
 msgid "Attempting GSSAPI authentication to server '%s'\n"
-msgstr "Intentando la autenticación GSSAPI en el proxy\n"
+msgstr "Intentando la autenticación GSSAPI en el servidor «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gssapi.c#l200
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/gssapi.c#l256
@@ -2357,10 +2184,9 @@ msgstr "Intentando la autenticación HTTP Bacis en el proxy\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/http-auth.c#l186
 #: ../openconnect-strings.txt:1155
-#, fuzzy, c-format
-#| msgid "Attempting HTTP Basic authentication to proxy\n"
+#, c-format
 msgid "Attempting HTTP Basic authentication to server '%s'\n"
-msgstr "Intentando la autenticación HTTP Bacis en el proxy\n"
+msgstr "Intentando la autenticación HTTP básica en el servidor «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/http-auth.c#l200
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/http.c#l1200
@@ -2377,13 +2203,12 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/http-auth.c#l243
 #: ../openconnect-strings.txt:1165
-#, fuzzy, c-format
-#| msgid "Proxy requested Basic authentication which is disabled by default\n"
+#, c-format
 msgid ""
 "Server '%s' requested Basic authentication which is disabled by default\n"
 msgstr ""
-"El proxy ha solicitado autenticación básica, que está desactivada de manera "
-"predeterminada\n"
+"El servidor «%s» ha solicitado autenticación básica, que está desactivada de "
+"manera predeterminada\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/http-auth.c#l256
 #: ../openconnect-strings.txt:1169
@@ -2690,10 +2515,9 @@ msgstr "Sólo se soportan proxies HTTP o socks(5)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/library.c#l139
 #: ../openconnect-strings.txt:1333
-#, fuzzy, c-format
-#| msgid "Unknown proxy type '%s'\n"
+#, c-format
 msgid "Unknown VPN protocol '%s'\n"
-msgstr "Tipo de proxy desconocido '%s'\n"
+msgstr "Protocolo VPN '%s' desconocido\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/library.c#l160
 #: ../openconnect-strings.txt:1336
@@ -3113,10 +2937,8 @@ msgstr "(Nota: libstoken (RSA SecurID) está desactivado en esta versión)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/main.c#l812
 #: ../openconnect-strings.txt:1578
-#, fuzzy
-#| msgid "(NOTE: libproxy disabled in this build)"
 msgid "(NOTE: Yubikey OATH disabled in this build)"
-msgstr "(NOTA: libproxy está desactivado en esta versión)"
+msgstr "(NOTA: Yubikey está desactivado en esta versión)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/main.c#l814
 #: ../openconnect-strings.txt:1581
@@ -3509,17 +3331,14 @@ msgstr "Testigo Yubkey no encontrado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/main.c#l2070
 #: ../openconnect-strings.txt:1793
-#, fuzzy
-#| msgid "OpenConnect was not built with libstoken support\n"
 msgid "OpenConnect was not built with Yubikey support\n"
-msgstr "OpenConnect no se compiló con soporte para libstoken\n"
+msgstr "OpenConnect no se compiló con soporte para Yubikey\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/main.c#l2073
 #: ../openconnect-strings.txt:1796
-#, fuzzy, c-format
-#| msgid "general failure"
+#, c-format
 msgid "General Yubikey failure: %s\n"
-msgstr "fallo general"
+msgstr "Fallo general de Yubikey: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/mainloop.c#l123
 #: ../openconnect-strings.txt:1799
@@ -3576,11 +3395,11 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ntlm.c#l268
 #: ../openconnect-strings.txt:1829
-#, fuzzy, c-format
-#| msgid "Attempting HTTP NTLM authentication to proxy (single-sign-on)\n"
+#, c-format
 msgid "Attempting HTTP NTLM authentication to server '%s' (single-sign-on)\n"
 msgstr ""
-"Intentando la autenticación HTTP NTLM en el proxy (inicio de sesión único)\n"
+"Intentando la autenticación HTTP NTLM en el servidor «%s» (inicio de sesión "
+"único)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ntlm.c#l978
 #: ../openconnect-strings.txt:1832
@@ -3590,17 +3409,14 @@ msgstr "Intentando la autenticación HTTP NTLM %d en el proxy\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ntlm.c#l982
 #: ../openconnect-strings.txt:1835
-#, fuzzy, c-format
-#| msgid "Attempting HTTP NTLMv%d authentication to proxy\n"
+#, c-format
 msgid "Attempting HTTP NTLMv%d authentication to server '%s'\n"
-msgstr "Intentando la autenticación HTTP NTLM %d en el proxy\n"
+msgstr "Intentando la autenticación HTTP NTLM v%d en el servidor «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oath.c#l97
 #: ../openconnect-strings.txt:1838
-#, fuzzy
-#| msgid "Invalid software token mode \"%s\"\n"
 msgid "Invalid base32 token string\n"
-msgstr "Modo de testigo software no válido: «%s»\n"
+msgstr "Cadena de testigo base32 no válida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oath.c#l105
 #: ../openconnect-strings.txt:1841
@@ -3659,10 +3475,9 @@ msgstr "Longitud %d inesperada para TLV %d/%d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l182
 #: ../openconnect-strings.txt:1876
-#, fuzzy, c-format
-#| msgid "Request MTU from server"
+#, c-format
 msgid "Received MTU %d from server\n"
-msgstr "Solicitar MTU desde servidor"
+msgstr "Recibida MTU %d desde el servidor\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l191
 #: ../openconnect-strings.txt:1879
@@ -3776,10 +3591,9 @@ msgstr "%d bytes de ESP secretos\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l405
 #: ../openconnect-strings.txt:1933
-#, fuzzy, c-format
-#| msgid "Unknown DTLS packet type %02x, len %d\n"
+#, c-format
 msgid "Unknown TLV group %d attr %d len %d:%s\n"
-msgstr "Paquete DTLS tipo %02x desconocido, longitud %d\n"
+msgstr "Grupo TLV %d desconocido atrib %d longitud %d:%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l482
 #: ../openconnect-strings.txt:1936
@@ -3808,10 +3622,8 @@ msgstr "TLV no ESP recibidos (grupo %d) en la negociación ESP KMP\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l644
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l770
 #: ../openconnect-strings.txt:1951
-#, fuzzy
-#| msgid "Error creating HTTPS CONNECT request\n"
 msgid "Error creating oNCP negotiation request\n"
-msgstr "Error al crear la solicitud HTTPS CONNECT\n"
+msgstr "Error al crear la solicitud de negociación oNCP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l653
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l804
@@ -3866,10 +3678,8 @@ msgstr "Se obtuvo un mensaje KMP 301 de longitud %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l728
 #: ../openconnect-strings.txt:1980
-#, fuzzy
-#| msgid "Failed to read certificate into memory: %s\n"
 msgid "Failed to read continuation record length\n"
-msgstr "Falló al leer el certificado en memoria: %s\n"
+msgstr "Falló al leer la longitud de la continuación del registro\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l734
 #: ../openconnect-strings.txt:1983
@@ -3879,10 +3689,9 @@ msgstr "El registro de %d bytes adicionales es demasiado grande; harían %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l743
 #: ../openconnect-strings.txt:1986
-#, fuzzy, c-format
-#| msgid "Failed to read certificate into memory: %s\n"
+#, c-format
 msgid "Failed to read continuation record of length %d\n"
-msgstr "Falló al leer el certificado en memoria: %s\n"
+msgstr "Falló al leer la longitud %d de la continuación del registro\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l749
 #: ../openconnect-strings.txt:1989
@@ -3992,10 +3801,8 @@ msgstr "Falló al inicializar ESP HMAC\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-esp.c#l112
 #: ../openconnect-strings.txt:2047
-#, fuzzy
-#| msgid "Failed to use private key from keystore\n"
 msgid "Failed to generate random keys for ESP:\n"
-msgstr "Falló al usar la clave privada del almacén de claves\n"
+msgstr "Falló al generar las claves aleatorias para ESP:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-esp.c#l163
 #: ../openconnect-strings.txt:2050
@@ -4010,10 +3817,8 @@ msgstr "Falló al descifrar el paquete ESP:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-esp.c#l192
 #: ../openconnect-strings.txt:2056
-#, fuzzy
-#| msgid "Failed to read from SSL socket\n"
 msgid "Failed to generate random IV for ESP packet:\n"
-msgstr "Falló al leer del socket SSL\n"
+msgstr "Falló al generar el VI aleatorio para el paquete ESP:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-esp.c#l206
 #: ../openconnect-strings.txt:2059
@@ -4055,7 +3860,7 @@ msgstr "Otro usuario ya ha iniciado sesión\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l262
 #: ../openconnect-strings.txt:2080
 msgid "Unknown error logging in to PKCS#11 token\n"
-msgstr ""
+msgstr "Error desconocido al iniciar sesión en el testigo PKCS#11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l269
 #: ../openconnect-strings.txt:2083
@@ -4074,15 +3879,14 @@ msgstr "Falló al leer certificados desde el archivo CA «%s»\n"
 #: ../openconnect-strings.txt:2089
 #, c-format
 msgid "Found %d certs in slot '%s'\n"
-msgstr ""
+msgstr "Encontrados %d certificados en la ranura «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l321
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l473
 #: ../openconnect-strings.txt:2093
-#, fuzzy, c-format
-#| msgid "Failed to parse server URL '%s'\n"
+#, c-format
 msgid "Failed to parse PKCS#11 URI '%s'\n"
-msgstr "Falló al analizar el URL del servidor '%s'\n"
+msgstr "Falló al analizar el URI PKCS#11 '%s'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l328
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l483
@@ -4103,7 +3907,7 @@ msgstr "Usando clave PKCS#11 %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l377
 #: ../openconnect-strings.txt:2104
 msgid "Certificate X.509 content not fetched by libp11\n"
-msgstr ""
+msgstr "libp11 no pudo obtener el contenido del certificado X.509\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l388
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl.c#l681
@@ -4122,7 +3926,7 @@ msgstr "Falló al cargar la clave privada como PKCS#8: %s\n"
 #: ../openconnect-strings.txt:2114
 #, c-format
 msgid "Found %d keys in slot '%s'\n"
-msgstr ""
+msgstr "Encontradas %d claves en la ranura «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l554
 #: ../openconnect-strings.txt:2117
@@ -4133,18 +3937,14 @@ msgstr "Falló al cargar la clave privada como PKCS#8: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l561
 #: ../openconnect-strings.txt:2120
-#, fuzzy
-#| msgid "Add key from TPM failed\n"
 msgid "Add key from PKCS#11 failed\n"
-msgstr "Falló al añadir clave desde TPM\n"
+msgstr "Falló al añadir clave desde PKCS#11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l593
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l599
 #: ../openconnect-strings.txt:2124
-#, fuzzy
-#| msgid "This version of OpenConnect was built without PSKC support\n"
 msgid "This version of OpenConnect was built without PKCS#11 support\n"
-msgstr "Esta versión de OpenConnect se compiló sin soporte PSKC\n"
+msgstr "Esta versión de OpenConnect se compiló sin soporte de PKCS#11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl.c#l121
 #: ../openconnect-strings.txt:2127
@@ -4175,7 +3975,7 @@ msgstr "Falló el SSL_write: %d\n"
 #: ../openconnect-strings.txt:2140
 #, c-format
 msgid "Unhandled SSL UI request type %d\n"
-msgstr ""
+msgstr "Tipo %d de solicitud SSL UI no gestionado\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl.c#l441
 #: ../openconnect-strings.txt:2143
@@ -4466,10 +4266,9 @@ msgstr "Falló al reconectar al proxy %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l212
 #: ../openconnect-strings.txt:2300
-#, fuzzy, c-format
-#| msgid "Failed to reconnect to host %s\n"
+#, c-format
 msgid "Failed to reconnect to host %s: %s\n"
-msgstr "Falló al reconectar al servidor %s\n"
+msgstr "Falló al reconectar al servidor %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l282
 #: ../openconnect-strings.txt:2303
@@ -4488,6 +4287,7 @@ msgstr "getaddrinfo falló para el servidor '%s':%s\n"
 #: ../openconnect-strings.txt:2310
 msgid "Reconnecting to DynDNS server using previously cached IP address\n"
 msgstr ""
+"Reconectando al servidor DynDNS usado la dirección IP previamente en caché\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l334
 #: ../openconnect-strings.txt:2313
@@ -4521,7 +4321,7 @@ msgstr "Falló al conectar a %s%s%s:%s: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l427
 #: ../openconnect-strings.txt:2328
 msgid "Forgetting non-functional previous peer address\n"
-msgstr ""
+msgstr "Olvidando la dirección anterior no funcional del par\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l439
 #: ../openconnect-strings.txt:2331
@@ -4622,31 +4422,28 @@ msgstr "Usado openconnect_fopen_utf8() con el modo «%s» no soportado'\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l918
 #: ../openconnect-strings.txt:2385
-#, fuzzy, c-format
-#| msgid "Unknown protocol family %d. Cannot do DTLS\n"
+#, c-format
 msgid "Unknown protocol family %d. Cannot create UDP server address\n"
-msgstr "Familia de protocolo %d desconocida. No se puede realizar DTLS\n"
+msgstr ""
+"Familia de protocolo %d desconocida. No se puede crear la dirección del "
+"servidor UDP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l932
 #: ../openconnect-strings.txt:2388
-#, fuzzy
-#| msgid "Open UDP socket for DTLS:"
 msgid "Open UDP socket"
-msgstr "Abrir socket UDP para DTLS:"
+msgstr "Abrir socket UDP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l963
 #: ../openconnect-strings.txt:2391
-#, fuzzy, c-format
-#| msgid "Unknown protocol family %d. Cannot do DTLS\n"
+#, c-format
 msgid "Unknown protocol family %d. Cannot use UDP transport\n"
-msgstr "Familia de protocolo %d desconocida. No se puede realizar DTLS\n"
+msgstr ""
+"Familia de protocolo %d desconocida. No se puede usar el protocolo UDP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l971
 #: ../openconnect-strings.txt:2394
-#, fuzzy
-#| msgid "Bind UDP socket for DTLS"
 msgid "Bind UDP socket"
-msgstr "Enlace del socket UDP para DTLS"
+msgstr "Vincular socket UDP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/ssl.c#l978
 #: ../openconnect-strings.txt:2397
@@ -4883,7 +4680,7 @@ msgstr "Falló al establecer el estado del medio TAP: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun-win32.c#l249
 #: ../openconnect-strings.txt:2521
 msgid "TAP device aborted connectivity. Disconnecting.\n"
-msgstr ""
+msgstr "El dispositivo TAP ha abortado la conectividad. Desconectando.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun-win32.c#l254
 #: ../openconnect-strings.txt:2524
@@ -4972,7 +4769,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l183
 #: ../openconnect-strings.txt:2569
 msgid "tun device is unsupported on this platform\n"
-msgstr ""
+msgstr "dispositivo tun no soportado en esta plataforma\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l205
 #: ../openconnect-strings.txt:2572
@@ -5004,6 +4801,9 @@ msgid ""
 "To configure local networking, openconnect must be running as root\n"
 "See http://www.infradead.org/openconnect/nonroot.html for more information\n"
 msgstr ""
+"Para configurar la red local openconnect debe ejecutarse como root\n"
+"Consulte http://www.infradead.org/openconnect/nonroot.html para obtener más "
+"información\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l322
 #: ../openconnect-strings.txt:2590
@@ -5014,10 +4814,9 @@ msgstr "Nombre de interfaz '%s' no válido; debe coincidir con «tun%%d»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l331
 #: ../openconnect-strings.txt:2593
-#, fuzzy, c-format
-#| msgid "Failed to write to SSL socket: %s\n"
+#, c-format
 msgid "Failed to open SYSPROTO_CONTROL socket: %s\n"
-msgstr "Falló al escribir en el socket SSL: %s\n"
+msgstr "Falló al abrir el socket SYSPROTO_CONTROL: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l340
 #: ../openconnect-strings.txt:2596
@@ -5028,17 +4827,14 @@ msgstr "Falló al guardar configuración en %s: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l358
 #: ../openconnect-strings.txt:2599
-#, fuzzy
-#| msgid "Failed to open tun device: %s\n"
 msgid "Failed to allocate utun device name\n"
-msgstr "Falló al abrir el dispositivo TUN: %s\n"
+msgstr "Falló al reservar el nombre del dispositivo utun\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l369
 #: ../openconnect-strings.txt:2602
-#, fuzzy, c-format
-#| msgid "Failed to connect to host %s\n"
+#, c-format
 msgid "Failed to connect utun unit: %s\n"
-msgstr "Falló al conectar al servidor %s\n"
+msgstr "Falló al conectar a la unidad utun: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l388
 #: ../openconnect-strings.txt:2605
@@ -5166,47 +4962,43 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l80
 #: ../openconnect-strings.txt:2669
-#, fuzzy, c-format
-#| msgid "Failed to open %s for write: %s\n"
+#, c-format
 msgid "Failed to send \"%s\" to ykneo-oath applet: %s\n"
-msgstr "Falló al abrir %s para escritura: %s\n"
+msgstr "Falló al enviar «%s» a la miniaplicación ykneo-oath: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l87
 #: ../openconnect-strings.txt:2672
 #, c-format
 msgid "Invalid short response to \"%s\" from ykneo-oath applet\n"
-msgstr ""
+msgstr "Respuesta corta a «%s» no válida de la miniaplicación ykneo-oath\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l104
 #: ../openconnect-strings.txt:2675
-#, fuzzy, c-format
-#| msgid "Failed to write config to %s: %s\n"
+#, c-format
 msgid "Failure response to \"%s\": %04x\n"
-msgstr "Falló al guardar configuración en %s: %s\n"
+msgstr "Falló la respuesta a «%s»: %04x\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l158
 #: ../openconnect-strings.txt:2678
 msgid "select applet command"
-msgstr ""
+msgstr "seleccionar comando de la miniaplicación"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l169
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l410
 #: ../openconnect-strings.txt:2682
 msgid "Unrecognised response from ykneo-oath applet\n"
-msgstr ""
+msgstr "Respuesta de la miniaplicación ykneo-oath no reconocida\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l185
 #: ../openconnect-strings.txt:2685
 #, c-format
 msgid "Found ykneo-oath applet v%d.%d.%d.\n"
-msgstr ""
+msgstr "Encontrada miniaplicación ykneo-oath v%d.%d.%d.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l206
 #: ../openconnect-strings.txt:2688
-#, fuzzy
-#| msgid "PIN required for %s"
 msgid "PIN required for Yubikey OATH applet"
-msgstr "PIN requerido por %s"
+msgstr "PIN requerido por la miniaplicación Yubikey OATH"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l211
 #: ../openconnect-strings.txt:2691
@@ -5215,10 +5007,8 @@ msgstr "PIN Yubkey:"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l239
 #: ../openconnect-strings.txt:2694
-#, fuzzy
-#| msgid "Failed to parse server response\n"
 msgid "Failed to calculate Yubikey unlock response\n"
-msgstr "Falló al analizar la respuesta del servidor\n"
+msgstr "Falló al calcular la respuesta de desbloqueo de Yubikey\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l256
 #: ../openconnect-strings.txt:2697
@@ -5244,17 +5034,15 @@ msgstr "Contexto PS/SC establecido\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l339
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l351
 #: ../openconnect-strings.txt:2710
-#, fuzzy, c-format
-#| msgid "Failed to read %s: %s\n"
+#, c-format
 msgid "Failed to query reader list: %s\n"
-msgstr "Falló al leer %s: %s\n"
+msgstr "Falló al consultar la lista de lectores: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l378
 #: ../openconnect-strings.txt:2713
-#, fuzzy, c-format
-#| msgid "Failed to change to CSD home directory '%s': %s\n"
+#, c-format
 msgid "Failed to connect to PC/SC reader '%s': %s\n"
-msgstr "Falló al cambiar a la carpeta local «%s» de CSD: %s\n"
+msgstr "Falló al conectar al lector PC/SC «%s»: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l383
 #: ../openconnect-strings.txt:2716
@@ -5264,21 +5052,20 @@ msgstr "Lector PC/SC conectado «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l388
 #: ../openconnect-strings.txt:2719
-#, fuzzy, c-format
-#| msgid "Failed to open private key file '%s': %s\n"
+#, c-format
 msgid "Failed to obtain exclusive access to reader '%s': %s\n"
-msgstr "Falló al abrir el archivo de clave privada «%s»: %s\n"
+msgstr "Falló al obtener el acceso exclusivo al lector «%s»: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l398
 #: ../openconnect-strings.txt:2722
 msgid "list keys command"
-msgstr ""
+msgstr "comando de listar claves"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l431
 #: ../openconnect-strings.txt:2725
 #, c-format
 msgid "Found %s/%s key '%s' on '%s'\n"
-msgstr ""
+msgstr "Encontrada %s/%s clave «%s» en «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l448
 #: ../openconnect-strings.txt:2728
@@ -5289,10 +5076,10 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l497
 #: ../openconnect-strings.txt:2732
-#, fuzzy
-#| msgid "Server is rejecting the soft token; switching to manual entry\n"
 msgid "Server is rejecting the Yubikey token; switching to manual entry\n"
-msgstr "El servidor está rechazando el testigo; cambiando a acceso manual\n"
+msgstr ""
+"El servidor está rechazando el testigo de Yubikey; cambiando a entrada "
+"manual\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l551
 #: ../openconnect-strings.txt:2735
@@ -5301,10 +5088,9 @@ msgstr "Generando código de testigo Yubikey\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l556
 #: ../openconnect-strings.txt:2738
-#, fuzzy, c-format
-#| msgid "Failed to assign policy to key: %s\n"
+#, c-format
 msgid "Failed to obtain exclusive access to Yubikey: %s\n"
-msgstr "Falló al asignar la política a la clave: %s\n"
+msgstr "Falló al obtener el acceso exclusivo a Yubikey: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l600
 #: ../openconnect-strings.txt:2741
@@ -5314,7 +5100,249 @@ msgstr "calcular comando"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l608
 #: ../openconnect-strings.txt:2744
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
+msgstr "Respuesta de Yubikey desconocida al generar el código del testigo\n"
+
+#: ../properties/auth-helpers.c:58
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Elija un certificado CA…"
+
+#: ../properties/auth-helpers.c:74
+msgid "Choose your personal certificate..."
+msgstr "Elija su certificado personal…"
+
+#: ../properties/auth-helpers.c:90
+msgid "Choose your private key..."
+msgstr "Elija su clave privada…"
+
+#: ../properties/auth-helpers.c:250
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certificados PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:54
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "Compatible con VPN Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:55
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Compatible con VPN Cisco AnyConnect SSL."
+
+#: ../properties/nm-openconnect-editor-plugin.c:393
+msgid "Juniper Network Connect (openconnect)"
+msgstr "Juniper Network Connect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:394
+msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
+msgstr "Compatible con Juniper Network Connect / Pulse Secure SSL VPN"
+
+#. we don't know this protocol by name, but it's configured in the .name file,
+#. * so just take it.
+#: ../properties/nm-openconnect-editor-plugin.c:398
+#, c-format
+msgid "Openconnect VPN (%s)"
+msgstr "Openconnect VPN (%s)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:399
+#, c-format
+msgid "Openconnect SSL VPN with %s protocol"
+msgstr "Openconnect SSL VPN con protocolo %s"
+
+#: ../src/nm-openconnect-service.c:176
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "propiedad entera «%s» no válida o fuera de rango [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:186
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "propiedad booleana «%s» no válida (no es «sí» o «no»)"
+
+#: ../src/nm-openconnect-service.c:193
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "propiedad «%s» de tipo %s no controlada"
+
+#: ../src/nm-openconnect-service.c:206
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "propiedad «%s» no válida o no soportada"
+
+#: ../src/nm-openconnect-service.c:222
+msgid "No VPN configuration options."
+msgstr "No hay opciones de configuración de VPN."
+
+#: ../src/nm-openconnect-service.c:240
+msgid "No VPN secrets!"
+msgstr "No hay secretos VPN."
+
+#: ../src/nm-openconnect-service.c:408
+msgid "Could not find openconnect binary."
+msgstr "No se pudo encontrar el binario «openconnect»."
+
+#: ../src/nm-openconnect-service.c:420
+msgid "No VPN gateway specified."
+msgstr "No se especificó ninguna puerta de enlace."
+
+#: ../src/nm-openconnect-service.c:430
+msgid "No WebVPN cookie provided."
+msgstr "No se proporcionó una cookie WebVPN."
+
+#: ../src/nm-openconnect-service.c:690
+msgid "Don't quit when VPN connection terminates"
+msgstr "No abandonar cuando finaliza la conexión VPN"
+
+#: ../src/nm-openconnect-service.c:691
+msgid "Enable verbose debug logging (may expose passwords)"
 msgstr ""
+"Activar el registro detallado de depuración (puede exponer las contraseñas)"
+
+#: ../src/nm-openconnect-service.c:692
+msgid "D-Bus name to use for this instance"
+msgstr "Nombre de D-Bus que usar para esta instancia"
+
+#: ../src/nm-openconnect-service.c:715
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"nm-openconnect-service proporciona a NetworkManager la capacidad Cisco "
+"AnyConnect SSL VPN integrada."
+
+#: ../shared/nm-utils/nm-shared-utils.c:185
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr "el objeto de clase «%s» no tiene ninguna propiedad llamada «%s»"
+
+#: ../shared/nm-utils/nm-shared-utils.c:192
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr "no se puede escribir en la propiedad «%s» del objeto de clase «%s»"
+
+#: ../shared/nm-utils/nm-shared-utils.c:199
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr ""
+"no se puede establecer la propiedad «%s» del constructor para el objeto «%s» "
+"después de la construcción"
+
+#: ../shared/nm-utils/nm-shared-utils.c:207
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr ""
+"«%s»::«%s» no es un nombre de propiedad válido; «%s» no es un subtipo de "
+"GObject"
+
+#: ../shared/nm-utils/nm-shared-utils.c:216
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr ""
+"no se puede establecer la propiedad «%s» de tipo «%s» al valor de tipo «%s»"
+
+#: ../shared/nm-utils/nm-shared-utils.c:227
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr ""
+"el valor «%s» de tipo «%s» no es válido o está fuera de rango para la "
+"propiedad «%s» de tipo «%s»"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr "falta el archivo del complemento «%s»"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr "no se puede cargar el complemento del editor: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr ""
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
+msgid "unknown error creating editor instance"
+msgstr "error desconocido al crear la instancia del editor"
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>General</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Seleccione un archivo"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_Gateway:"
+msgstr "_Pasarela:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "CA C_ertificate:"
+msgstr "Certificado _CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Permitir el _troyano de escritorio Cisco Secure"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "CSD _Wrapper Script:"
+msgstr "Script CSD _envolvente:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Certificado de autenticación</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "_User Certificate:"
+msgstr "Certificado del _usuario:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "Private _Key:"
+msgstr "Clave pri_vada:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Use _FSID for key passphrase"
+msgstr "Usar _FSID para la frase de paso de la clave"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Testigo software de autenticación</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "Token _Mode:"
+msgstr "_Modo del testigo:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token Sec_ret:"
+msgstr "Cadena del testigo:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "ID seguro (SecurID RSA): leído de ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - manually entered"
+msgstr "ID seguro (SecurID RSA: introducido manualmente"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "TOTP - manually entered"
+msgstr ""
+"Contraseña TOTP (Contraseña de uso único basada en la hora): introducida "
+"manualmente"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "HOTP - manually entered"
+msgstr "HOTP: introducida manualmente"
 
 #~ msgid "UDP (DTLS) connect:\n"
 #~ msgstr "Conectar UDP(DTLS):\n"
