@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-06-28 13:14+0000\n"
-"PO-Revision-Date: 2016-06-28 15:09+0200\n"
+"POT-Creation-Date: 2016-06-29 09:40+0000\n"
+"PO-Revision-Date: 2016-06-30 10:02+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -48,21 +48,21 @@ msgstr "Compatible con Cisco AnyConnect, Juniper y redes basadas en ocserv."
 msgid "The NetworkManager Developers"
 msgstr "Los desarrolladores de NetworkManager"
 
-#: ../auth-dialog/main.c:652
+#: ../auth-dialog/main.c:661
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
 msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:682
+#: ../auth-dialog/main.c:691
 #, c-format
 msgid "Connect to VPN '%s'"
 msgstr "Conectarse a la VPN «%s»"
 
-#: ../auth-dialog/main.c:684
+#: ../auth-dialog/main.c:693
 msgid "Connect to VPN"
 msgstr "Conectar a la VPN"
 
-#: ../auth-dialog/main.c:724
+#: ../auth-dialog/main.c:733
 #, c-format
 msgid ""
 "Certificate from VPN server \"%s\" failed verification.\n"
@@ -3511,17 +3511,17 @@ msgstr "Dirección de puerta de enlace interna recibida %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l248
 #: ../openconnect-strings.txt:1894
-#, fuzzy, c-format
+#, c-format
 #| msgid "Discard bad split include: \"%s\"\n"
 msgid "Received split include route %s\n"
-msgstr "Descartar mala división que incluye: «%s»\n"
+msgstr "Recibida ruta incluida dividida %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l270
 #: ../openconnect-strings.txt:1897
-#, fuzzy, c-format
+#, c-format
 #| msgid "Discard bad split exclude: \"%s\"\n"
 msgid "Received split exclude route %s\n"
-msgstr "Descartar mala división que excluye: «%s»\n"
+msgstr "Recibida ruta excluida dividida %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l290
 #: ../openconnect-strings.txt:1900
@@ -3665,10 +3665,10 @@ msgstr "Se esperaba mensaje KMP 301 del servidor pero se obtuvo %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l715
 #: ../openconnect-strings.txt:1974
-#, fuzzy, c-format
+#, c-format
 #| msgid "SSPI token too large (%ld bytes)\n"
 msgid "KMP message 301 from server too large (%d bytes)\n"
-msgstr "Testigo SSPI demasiado largo (%ld bytes)\n"
+msgstr "Mensaje 301 de KMP del servidor demasiado largo (%d bytes)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/oncp.c#l721
 #: ../openconnect-strings.txt:1977
@@ -3837,10 +3837,9 @@ msgstr "Falló al establecer el contexto PKCS#11 de libp11:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l48
 #: ../openconnect-strings.txt:2068
-#, fuzzy
 #| msgid "Failed to load PKCS#1 private key: %s\n"
 msgid "Failed to load PKCS#11 provider module (p11-kit-proxy.so):\n"
-msgstr "Falló al cargar la clave privada PKCS#1: %s\n"
+msgstr "Falló al cargar el módulo del proveedor PKCS#11 (p11-kit-proxy.so):\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l252
 #: ../openconnect-strings.txt:2071
@@ -3866,14 +3865,14 @@ msgstr "Error desconocido al iniciar sesión en el testigo PKCS#11\n"
 #: ../openconnect-strings.txt:2083
 #, c-format
 msgid "Logged in to PKCS#11 slot '%s'\n"
-msgstr ""
+msgstr "Sesión iniciada en el slot PKCS#11 «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l283
 #: ../openconnect-strings.txt:2086
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to read certs from CA file '%s'\n"
 msgid "Failed to enumerate certs in PKCS#11 slot '%s'\n"
-msgstr "Falló al leer certificados desde el archivo CA «%s»\n"
+msgstr "Falló al enumerar los certificados en la ranura PKCS#11 «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l289
 #: ../openconnect-strings.txt:2089
@@ -3891,18 +3890,17 @@ msgstr "Falló al analizar el URI PKCS#11 '%s'\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l328
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l483
 #: ../openconnect-strings.txt:2097
-#, fuzzy
 #| msgid "Failed to import PKCS#12 file: %s\n"
 msgid "Failed to enumerate PKCS#11 slots\n"
-msgstr "Falló al importar el archivo PKCS#12: %s\n"
+msgstr "Falló al enumerar las ranuras PKCS#11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l362
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l525
 #: ../openconnect-strings.txt:2101
-#, fuzzy, c-format
+#, c-format
 #| msgid "Using PKCS#11 key %s\n"
 msgid "Logging in to PKCS#11 slot '%s'\n"
-msgstr "Usando clave PKCS#11 %s\n"
+msgstr "Sesión iniciada en la ranura PKCS#11 «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l377
 #: ../openconnect-strings.txt:2104
@@ -3917,10 +3915,10 @@ msgstr "Falló al instalar el certificado en el contexto de OpenSSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l434
 #: ../openconnect-strings.txt:2111
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to load private key as PKCS#8: %s\n"
 msgid "Failed to enumerate keys in PKCS#11 slot '%s'\n"
-msgstr "Falló al cargar la clave privada como PKCS#8: %s\n"
+msgstr "Falló al enumerar las claves en la ranura PKCS#11 «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l440
 #: ../openconnect-strings.txt:2114
@@ -3930,10 +3928,9 @@ msgstr "Encontradas %d claves en la ranura «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l554
 #: ../openconnect-strings.txt:2117
-#, fuzzy
 #| msgid "Failed to load private key as PKCS#8: %s\n"
 msgid "Failed to instantiated private key from PKCS#11\n"
-msgstr "Falló al cargar la clave privada como PKCS#8: %s\n"
+msgstr "Falló al instancia la clave privada desde PKCS#11\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l561
 #: ../openconnect-strings.txt:2120
@@ -4790,10 +4787,10 @@ msgstr "Falló al abrir el dispositivo TUN: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l253
 #: ../openconnect-strings.txt:2582
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to open tun device: %s\n"
 msgid "Failed to bind local tun device (TUNSETIFF): %s\n"
-msgstr "Falló al abrir el dispositivo TUN: %s\n"
+msgstr "Falló al vincular el dispositivo tun local (TUNSETIFF): %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l257
 #: ../openconnect-strings.txt:2585
@@ -4807,10 +4804,12 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l322
 #: ../openconnect-strings.txt:2590
-#, fuzzy, c-format
+#, c-format
 #| msgid "Invalid interface name '%s'; must match 'tun%%d'\n"
 msgid "Invalid interface name '%s'; must match 'utun%%d' or 'tun%%d'\n"
-msgstr "Nombre de interfaz '%s' no válido; debe coincidir con «tun%%d»\n"
+msgstr ""
+"Nombre de interfaz '%s' no válido; debe coincidir con «utun%%d» o con «tun"
+"%%d»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l331
 #: ../openconnect-strings.txt:2593
@@ -4820,10 +4819,10 @@ msgstr "Falló al abrir el socket SYSPROTO_CONTROL: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l340
 #: ../openconnect-strings.txt:2596
-#, fuzzy, c-format
+#, c-format
 #| msgid "Failed to write config to %s: %s\n"
 msgid "Failed to query utun control id: %s\n"
-msgstr "Falló al guardar configuración en %s: %s\n"
+msgstr "Falló al consultar el ID de control utun: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/tun.c#l358
 #: ../openconnect-strings.txt:2599
@@ -5018,7 +5017,7 @@ msgstr "desbloquear comando"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l289
 #: ../openconnect-strings.txt:2700
 msgid "Trying truncated-char PBKBF2 variant of Yubikey PIN\n"
-msgstr ""
+msgstr "Probando variante PBKBF2 de carácter truncado del PIN Yubikey\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l328
 #: ../openconnect-strings.txt:2703
@@ -5072,7 +5071,7 @@ msgstr "Encontrada %s/%s clave «%s» en «%s»\n"
 #, c-format
 msgid ""
 "Token '%s' not found on Yubikey '%s'. Searching for another Yubikey...\n"
-msgstr ""
+msgstr "Testigo «%s» no encontrado en Yubikey «%s». Buscando otra Yubikey…\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/yubikey.c#l497
 #: ../openconnect-strings.txt:2732
@@ -5102,169 +5101,90 @@ msgstr "calcular comando"
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Respuesta de Yubikey desconocida al generar el código del testigo\n"
 
-#: ../properties/auth-helpers.c:58
+#: ../properties/auth-helpers.c:64
 msgid "Choose a Certificate Authority certificate..."
 msgstr "Elija un certificado CA…"
 
-#: ../properties/auth-helpers.c:74
+#: ../properties/auth-helpers.c:80
 msgid "Choose your personal certificate..."
 msgstr "Elija su certificado personal…"
 
-#: ../properties/auth-helpers.c:90
+#: ../properties/auth-helpers.c:96
 msgid "Choose your private key..."
 msgstr "Elija su clave privada…"
 
-#: ../properties/auth-helpers.c:250
+#: ../properties/auth-helpers.c:256
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certificados PEM (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect-editor-plugin.c:54
+#: ../properties/nm-openconnect.c:79
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "Compatible con VPN Cisco AnyConnect (openconnect)"
 
-#: ../properties/nm-openconnect-editor-plugin.c:55
+#: ../properties/nm-openconnect.c:80
 msgid "Compatible with Cisco AnyConnect SSL VPN."
 msgstr "Compatible con VPN Cisco AnyConnect SSL."
 
-#: ../properties/nm-openconnect-editor-plugin.c:393
-msgid "Juniper Network Connect (openconnect)"
-msgstr "Juniper Network Connect (openconnect)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:394
-msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
-msgstr "Compatible con Juniper Network Connect / Pulse Secure SSL VPN"
-
-#. we don't know this protocol by name, but it's configured in the .name file,
-#. * so just take it.
-#: ../properties/nm-openconnect-editor-plugin.c:398
-#, c-format
-msgid "Openconnect VPN (%s)"
-msgstr "Openconnect VPN (%s)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:399
-#, c-format
-msgid "Openconnect SSL VPN with %s protocol"
-msgstr "Openconnect SSL VPN con protocolo %s"
-
-#: ../src/nm-openconnect-service.c:176
+#: ../src/nm-openconnect-service.c:150
 #, c-format
 msgid "invalid integer property '%s' or out of range [%d -> %d]"
 msgstr "propiedad entera «%s» no válida o fuera de rango [%d -> %d]"
 
-#: ../src/nm-openconnect-service.c:186
+#: ../src/nm-openconnect-service.c:160
 #, c-format
 msgid "invalid boolean property '%s' (not yes or no)"
 msgstr "propiedad booleana «%s» no válida (no es «sí» o «no»)"
 
-#: ../src/nm-openconnect-service.c:193
+#: ../src/nm-openconnect-service.c:167
 #, c-format
 msgid "unhandled property '%s' type %s"
 msgstr "propiedad «%s» de tipo %s no controlada"
 
-#: ../src/nm-openconnect-service.c:206
+#: ../src/nm-openconnect-service.c:180
 #, c-format
 msgid "property '%s' invalid or not supported"
 msgstr "propiedad «%s» no válida o no soportada"
 
-#: ../src/nm-openconnect-service.c:222
+#: ../src/nm-openconnect-service.c:196
 msgid "No VPN configuration options."
 msgstr "No hay opciones de configuración de VPN."
 
-#: ../src/nm-openconnect-service.c:240
+#: ../src/nm-openconnect-service.c:214
 msgid "No VPN secrets!"
 msgstr "No hay secretos VPN."
 
-#: ../src/nm-openconnect-service.c:408
+#: ../src/nm-openconnect-service.c:381
 msgid "Could not find openconnect binary."
 msgstr "No se pudo encontrar el binario «openconnect»."
 
-#: ../src/nm-openconnect-service.c:420
+#: ../src/nm-openconnect-service.c:393
 msgid "No VPN gateway specified."
 msgstr "No se especificó ninguna puerta de enlace."
 
-#: ../src/nm-openconnect-service.c:430
+#: ../src/nm-openconnect-service.c:403
 msgid "No WebVPN cookie provided."
 msgstr "No se proporcionó una cookie WebVPN."
 
-#: ../src/nm-openconnect-service.c:690
+#: ../src/nm-openconnect-service.c:648
 msgid "Don't quit when VPN connection terminates"
 msgstr "No abandonar cuando finaliza la conexión VPN"
 
-#: ../src/nm-openconnect-service.c:691
+#: ../src/nm-openconnect-service.c:649
 msgid "Enable verbose debug logging (may expose passwords)"
 msgstr ""
 "Activar el registro detallado de depuración (puede exponer las contraseñas)"
 
-#: ../src/nm-openconnect-service.c:692
+#: ../src/nm-openconnect-service.c:650
 msgid "D-Bus name to use for this instance"
 msgstr "Nombre de D-Bus que usar para esta instancia"
 
-#: ../src/nm-openconnect-service.c:715
+#: ../src/nm-openconnect-service.c:673
 msgid ""
 "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
 "capability to NetworkManager."
 msgstr ""
 "nm-openconnect-service proporciona a NetworkManager la capacidad Cisco "
 "AnyConnect SSL VPN integrada."
-
-#: ../shared/nm-utils/nm-shared-utils.c:185
-#, c-format
-msgid "object class '%s' has no property named '%s'"
-msgstr "el objeto de clase «%s» no tiene ninguna propiedad llamada «%s»"
-
-#: ../shared/nm-utils/nm-shared-utils.c:192
-#, c-format
-msgid "property '%s' of object class '%s' is not writable"
-msgstr "no se puede escribir en la propiedad «%s» del objeto de clase «%s»"
-
-#: ../shared/nm-utils/nm-shared-utils.c:199
-#, c-format
-msgid ""
-"construct property \"%s\" for object '%s' can't be set after construction"
-msgstr ""
-"no se puede establecer la propiedad «%s» del constructor para el objeto «%s» "
-"después de la construcción"
-
-#: ../shared/nm-utils/nm-shared-utils.c:207
-#, c-format
-msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
-msgstr ""
-"«%s»::«%s» no es un nombre de propiedad válido; «%s» no es un subtipo de "
-"GObject"
-
-#: ../shared/nm-utils/nm-shared-utils.c:216
-#, c-format
-msgid "unable to set property '%s' of type '%s' from value of type '%s'"
-msgstr ""
-"no se puede establecer la propiedad «%s» de tipo «%s» al valor de tipo «%s»"
-
-#: ../shared/nm-utils/nm-shared-utils.c:227
-#, c-format
-msgid ""
-"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
-"type '%s'"
-msgstr ""
-"el valor «%s» de tipo «%s» no es válido o está fuera de rango para la "
-"propiedad «%s» de tipo «%s»"
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
-#, c-format
-msgid "missing plugin file \"%s\""
-msgstr "falta el archivo del complemento «%s»"
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
-#, c-format
-msgid "cannot load editor plugin: %s"
-msgstr "no se puede cargar el complemento del editor: %s"
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
-#, c-format
-msgid "cannot load factory %s from plugin: %s"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
-msgid "unknown error creating editor instance"
-msgstr "error desconocido al crear la instancia del editor"
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>General</b>"
@@ -5343,6 +5263,56 @@ msgstr ""
 #: ../properties/nm-openconnect-dialog.ui.h:19
 msgid "HOTP - manually entered"
 msgstr "HOTP: introducida manualmente"
+
+#~ msgid "Juniper Network Connect (openconnect)"
+#~ msgstr "Juniper Network Connect (openconnect)"
+
+#~ msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
+#~ msgstr "Compatible con Juniper Network Connect / Pulse Secure SSL VPN"
+
+#~ msgid "Openconnect VPN (%s)"
+#~ msgstr "Openconnect VPN (%s)"
+
+#~ msgid "Openconnect SSL VPN with %s protocol"
+#~ msgstr "Openconnect SSL VPN con protocolo %s"
+
+#~ msgid "object class '%s' has no property named '%s'"
+#~ msgstr "el objeto de clase «%s» no tiene ninguna propiedad llamada «%s»"
+
+#~ msgid "property '%s' of object class '%s' is not writable"
+#~ msgstr "no se puede escribir en la propiedad «%s» del objeto de clase «%s»"
+
+#~ msgid ""
+#~ "construct property \"%s\" for object '%s' can't be set after construction"
+#~ msgstr ""
+#~ "no se puede establecer la propiedad «%s» del constructor para el objeto "
+#~ "«%s» después de la construcción"
+
+#~ msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+#~ msgstr ""
+#~ "«%s»::«%s» no es un nombre de propiedad válido; «%s» no es un subtipo de "
+#~ "GObject"
+
+#~ msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+#~ msgstr ""
+#~ "no se puede establecer la propiedad «%s» de tipo «%s» al valor de tipo "
+#~ "«%s»"
+
+#~ msgid ""
+#~ "value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+#~ "type '%s'"
+#~ msgstr ""
+#~ "el valor «%s» de tipo «%s» no es válido o está fuera de rango para la "
+#~ "propiedad «%s» de tipo «%s»"
+
+#~ msgid "missing plugin file \"%s\""
+#~ msgstr "falta el archivo del complemento «%s»"
+
+#~ msgid "cannot load editor plugin: %s"
+#~ msgstr "no se puede cargar el complemento del editor: %s"
+
+#~ msgid "unknown error creating editor instance"
+#~ msgstr "error desconocido al crear la instancia del editor"
 
 #~ msgid "UDP (DTLS) connect:\n"
 #~ msgstr "Conectar UDP(DTLS):\n"
