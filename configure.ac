@@ -95,18 +95,18 @@ if test x"$with_gnome" != xno; then
 
 	if test x"$with_libnm_glib" != xno; then
 		PKG_CHECK_MODULES(LIBNM_GLIB,
-			NetworkManager >= 1.3.0
-			libnm-util >= 1.3.0
-			libnm-glib >= 1.3.0
-			libnm-glib-vpn >= 1.3.0);
+			NetworkManager >= 1.2.0
+			libnm-util >= 1.2.0
+			libnm-glib >= 1.2.0
+			libnm-glib-vpn >= 1.2.0);
 
-		LIBNM_GLIB_CFLAGS="$LIBNM_GLIB_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_4"
+		LIBNM_GLIB_CFLAGS="$LIBNM_GLIB_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_2"
 		LIBNM_GLIB_CFLAGS="$LIBNM_GLIB_CFLAGS -DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_4"
 	fi
 fi
 
-PKG_CHECK_MODULES(LIBNM, libnm >= 1.3.0)
-LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_4"
+PKG_CHECK_MODULES(LIBNM, libnm >= 1.2.0)
+LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_2"
 LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_4"
 
 AC_ARG_WITH(authdlg, AS_HELP_STRING([--without-authdlg], [Build NetworkManager-openconnect without authentication dialog]), [], [with_authdlg_specified=no])

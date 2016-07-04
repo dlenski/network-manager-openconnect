@@ -45,10 +45,12 @@
 #endif
 
 #ifdef NM_VPN_OLD
-#include "nm-openconnect-editor.h"
+# include "nm-openconnect-editor.h"
 #else
-#include "nm-utils/nm-vpn-editor-plugin-call.h"
-#include "nm-utils/nm-vpn-plugin-utils.h"
+# if NM_CHECK_VERSION(1,3,0)
+#  include "nm-utils/nm-vpn-editor-plugin-call.h"
+# endif
+# include "nm-utils/nm-vpn-plugin-utils.h"
 #endif
 
 #define OPENCONNECT_PLUGIN_NAME    _("Cisco AnyConnect Compatible VPN (openconnect)")
@@ -327,6 +329,7 @@ get_capabilities (NMVpnEditorPlugin *iface)
 }
 
 #ifndef NM_VPN_OLD
+#if NM_CHECK_VERSION(1,3,0)
 static void
 notify_plugin_info_set (NMVpnEditorPlugin *plugin,
                         NMVpnPluginInfo *plugin_info)
@@ -410,6 +413,7 @@ NM_VPN_EDITOR_PLUGIN_VT_DEFINE (vt, _get_vt,
 	.fcn_get_service_add_details = _vt_impl_get_service_add_details,
 	.fcn_get_service_add_detail  = _vt_impl_get_service_add_detail,
 )
+#endif
 
 static NMVpnEditor *
 _call_editor_factory (gpointer factory,
@@ -523,8 +527,10 @@ openconnect_editor_plugin_interface_init (NMVpnEditorPluginInterface *iface_clas
 	iface_class->import_from_file = import;
 	iface_class->export_to_file = export;
 #ifndef NM_VPN_OLD
+#if NM_CHECK_VERSION(1,3,0)
 	iface_class->notify_plugin_info_set = notify_plugin_info_set;
 	iface_class->get_vt = _get_vt;
+#endif
 #endif
 }
 
