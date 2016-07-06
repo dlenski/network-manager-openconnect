@@ -251,16 +251,36 @@ addr6_list_to_gvariant (const char *str)
 static GVariant *
 split_dns_list_to_gvariant (const char *str)
 {
+	GVariant *var = NULL;
 	gchar **split;
+	int i, j;
 
 	if (!str || strlen (str) < 1)
 		return NULL;
 
-	split = g_strsplit (str, ",", -1);
-	if (g_strv_length (split) == 0)
+	split = g_strsplit_set (str, ", ", -1);
+	if (!split)
 		return NULL;
 
-	return g_variant_new_strv ((const gchar **) split, -1);
+	/* Eliminate empty strings */
+	for (i = 0, j = 0; split[i]; i++) {
+		if (split[i][0]) {
+			if (j != i) {
+				split[j] = split[i];
+				split[i] = NULL;
+			}
+			j++;
+		} else {
+			g_free(split[i]);
+			split[i] = NULL;
+		}
+	}
+
+	if (j)
+		var = g_variant_new_strv ((const gchar **)split, -1);
+	g_strfreev (split);
+
+	return var;
 }
 
 static GVariant *
@@ -415,6 +435,7 @@ get_ip6_routes (void)
  * INTERNAL_IP4_DNS       -- list of dns serverss
  * INTERNAL_IP4_NBNS      -- list of wins servers
  * CISCO_DEF_DOMAIN       -- default domain name
+ * CISCO_SPLIT_DNS        -- default domain name
  * CISCO_BANNER           -- banner from server
  *
  */
@@ -509,11 +530,6 @@ main (int argc, char *argv[])
 	if (val)
 		g_variant_builder_add (&builder, "{sv}", NM_VPN_PLUGIN_CONFIG_BANNER, val);
 
-	/* Default domain */
-	val = str_to_gvariant (getenv ("CISCO_DEF_DOMAIN"), TRUE);
-	if (val)
-		g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_DOMAIN, val);
-
 	/* Proxy */
 	val = str_to_gvariant (getenv ("CISCO_PROXY_PAC"), TRUE);
 	if (val)
@@ -565,10 +581,27 @@ main (int argc, char *argv[])
 	if (val)
 		g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_NBNS, val);
 
-	/* Split DNS domains */
+	/* We have two environment variables with domains --
+	   CISCO_SPLIT_DNS and CISCO_DEF_DOMAIN. On Cisco,
+	   CISCO_DEF_DOMAIN can only be a single domain, while
+	   CISCO_SPLIT_DNS can have multiple domains separated by
+	   comma. On Juniper, CISCO_SPLIT_DNS is not supported but
+	   CISCO_DEF_DOMAIN can have multiple domains separated by ", ".
+
+	   The upshot of all this is we use CISCO_SPLIT_DNS if available,
+	   CISCO_DEF_DOMAIN if not. */
+
 	val = split_dns_list_to_gvariant (getenv ("CISCO_SPLIT_DNS"));
-	if (val)
-		g_variant_builder_add (&builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_DOMAINS, val);
+	if (val) {
+		g_variant_builder_add (&ip4builder, "{sv}",
+				       NM_VPN_PLUGIN_IP4_CONFIG_DOMAINS, val);
+	} else {
+		val = split_dns_list_to_gvariant (getenv ("CISCO_DEF_DOMAIN"));
+		if (val) {
+			g_variant_builder_add (&ip4builder, "{sv}",
+					       NM_VPN_PLUGIN_IP4_CONFIG_DOMAINS, val);
+		}
+	}
 
 	/* Routes */
 	val = get_ip4_routes ();
