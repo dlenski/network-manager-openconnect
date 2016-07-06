@@ -39,5 +39,23 @@ nm_utils_syslog_to_str (int syslog_level)
 	return "<error>";
 }
 
+/*****************************************************************************/
+
+/* possibly missing defines from newer libnm API. */
+
+#ifndef NM_VPN_PLUGIN_CONFIG_PROXY_PAC
+#define NM_VPN_PLUGIN_CONFIG_PROXY_PAC   "pac"
+#endif
+
+#ifndef NM_VPN_PLUGIN_IP4_CONFIG_PRESERVE_ROUTES
+#define NM_VPN_PLUGIN_IP4_CONFIG_PRESERVE_ROUTES "preserve-routes"
+#endif
+
+#ifndef NM_VPN_PLUGIN_IP6_CONFIG_PRESERVE_ROUTES
+#define NM_VPN_PLUGIN_IP6_CONFIG_PRESERVE_ROUTES "preserve-routes"
+#endif
+
+/*****************************************************************************/
+
 #endif /* __NM_VPN_PLUGIN_MACROS_H__ */
 
