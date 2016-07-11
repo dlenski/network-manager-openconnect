@@ -3785,7 +3785,7 @@ msgstr "Gagal menjalin konteks PKCS#11 libp11:\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/90e1555494:/openssl-pkcs11.c#l48
 #: ../openconnect-strings.txt:2071
 msgid "Failed to load PKCS#11 provider module (%s):\n"
-msgstr "Gagal memuat modul penyedia PKCS#11 (%s): %s\n"
+msgstr "Gagal memuat modul penyedia PKCS#11 (%s):\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/90e1555494:/openssl-pkcs11.c#l252
 #: ../openconnect-strings.txt:2074
