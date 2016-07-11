@@ -3728,7 +3728,7 @@ msgstr "Huts egin du TPM-ren testuingurua sortzean: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/cfe8cc43ee:/openssl-pkcs11.c#l48
 #: ../openconnect-strings.txt:1937
 #, fuzzy
-msgid "Failed to load PKCS#11 provider module (p11-kit-proxy.so):\n"
+msgid "Failed to load PKCS#11 provider module (%s):\n"
 msgstr "Huts egin du PKCS#1 gako pribatua kargatzean: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/cfe8cc43ee:/openssl-pkcs11.c#l252

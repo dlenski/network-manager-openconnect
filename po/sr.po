@@ -3932,8 +3932,8 @@ msgstr "Нисам успео да успоставим либп11 ПКЦС#11 �
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l48
 #: ../openconnect-strings.txt:2068
-msgid "Failed to load PKCS#11 provider module (p11-kit-proxy.so):\n"
-msgstr "Нисам успео да учитам модул ПКЦС#11 достављача (p11-kit-proxy.so):\n"
+msgid "Failed to load PKCS#11 provider module (%s):\n"
+msgstr "Нисам успео да учитам модул ПКЦС#11 достављача (%s):\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l252
 #: ../openconnect-strings.txt:2071

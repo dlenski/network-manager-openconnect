@@ -3857,9 +3857,9 @@ msgstr "Error en establir el context PKCS#11 libp11:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l48
 #: ../openconnect-strings.txt:2068
-msgid "Failed to load PKCS#11 provider module (p11-kit-proxy.so):\n"
+msgid "Failed to load PKCS#11 provider module (%s):\n"
 msgstr ""
-"Error en carregar el mòdul que proporciona PKCS#11 (p11-kit-proxy.so):\n"
+"Error en carregar el mòdul que proporciona PKCS#11 (%s):\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f43252839:/openssl-pkcs11.c#l252
 #: ../openconnect-strings.txt:2071

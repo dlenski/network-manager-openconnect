@@ -3918,8 +3918,8 @@ msgstr "Falha ao estabelecer contexto PKCS#11:\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/2b03c29919:/openssl-pkcs11.c#l48
 #: ../openconnect-strings.txt:2013
 #| msgid "Failed to load PKCS#1 private key: %s\n"
-msgid "Failed to load PKCS#11 provider module (p11-kit-proxy.so):\n"
-msgstr "Falha ao carregar módulo de fornecedor PKCS#11 (p11-kit-proxy.so):\n"
+msgid "Failed to load PKCS#11 provider module (%s):\n"
+msgstr "Falha ao carregar módulo de fornecedor PKCS#11 (%s):\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/2b03c29919:/openssl-pkcs11.c#l252
 #: ../openconnect-strings.txt:2016
