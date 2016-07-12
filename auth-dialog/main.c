@@ -165,7 +165,12 @@ typedef struct auth_ui_data {
 	GtkWidget *cancel_button;
 	GtkWidget *login_button;
 	GtkWidget *last_notice_icon;
+	GtkWidget *autoconnect;
+
 	GtkTextBuffer *log;
+
+	oc_token_mode_t token_mode;
+	const char *token_secret;
 
 	int cookie_retval;
 
@@ -920,9 +925,10 @@ static int parse_xmlconfig(gchar *xmlconfig)
 	return 0;
 }
 
-static int get_config (GHashTable *options, GHashTable *secrets,
-		       struct openconnect_info *vpninfo)
+static int get_config (auth_ui_data *ui_data,
+		       GHashTable *options, GHashTable *secrets)
 {
+	struct openconnect_info *vpninfo = ui_data->vpninfo;
 	char *proxy;
 	char *xmlconfig;
 	char *hostname;
@@ -1030,7 +1036,17 @@ static int get_config (GHashTable *options, GHashTable *secrets,
 		else if (!strcmp(token_mode, "hotp") && token_secret)
 			ret = __openconnect_set_token_mode(vpninfo, OC_TOKEN_MODE_HOTP, token_secret);
 #endif
-
+#if OPENCONNECT_CHECK_VER(5,0)
+		else if (!strcmp(token_mode, "yubioath")) {
+			/* This needs to be done from a thread because it can call back to
+			   ask for the PIN */
+			ui_data->token_mode = OC_TOKEN_MODE_YUBIOATH;
+			if (token_secret && token_secret[0])
+				ui_data->token_secret = token_secret;
+			else
+				ui_data->token_secret = NULL;
+		}
+#endif
 		if (ret)
 			fprintf(stderr, "Failed to initialize software token: %d\n", ret);
 	}
@@ -1419,6 +1435,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(autocon), 1);
 		g_signal_connect(autocon, "toggled", G_CALLBACK(autocon_toggled), NULL);
 		gtk_widget_show(autocon);
+		ui_data->autoconnect = autocon;
 	}
 	frame = gtk_frame_new(NULL);
 	gtk_box_pack_start(GTK_BOX(vbox), frame, TRUE, TRUE, 0);
@@ -1570,12 +1587,28 @@ static struct option long_options[] = {
 	{NULL, 0, 0, 0},
 };
 
+static gpointer init_connection (auth_ui_data *ui_data)
+{
+	if (ui_data->token_mode != OC_TOKEN_MODE_NONE)
+		__openconnect_set_token_mode(ui_data->vpninfo, ui_data->token_mode, ui_data->token_secret);
+
+	gtk_widget_set_sensitive (ui_data->combo, TRUE);
+	gtk_widget_set_sensitive (ui_data->connect_button, TRUE);
+
+	/* Start connecting now if there's only one host. Or if configured to */
+	if (!vpnhosts->next || gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui_data->autoconnect)))
+		queue_connect_host(_ui_data);
+
+	return NULL;
+}
+
 int main (int argc, char **argv)
 {
 	char *vpn_name = NULL, *vpn_uuid = NULL, *vpn_service = NULL;
 	GHashTable *options = NULL, *secrets = NULL;
 	gboolean allow_interaction = FALSE;
 	GHashTableIter iter;
+	GThread *init_thread;
 	gchar *key, *value;
 	int opt;
 
@@ -1638,7 +1671,7 @@ int main (int argc, char **argv)
 	gtk_init(0, NULL);
 
 	_ui_data = init_ui_data(vpn_name, options, secrets, vpn_uuid);
-	if (get_config(options, secrets, _ui_data->vpninfo)) {
+	if (get_config(_ui_data, options, secrets)) {
 		fprintf(stderr, "Failed to find VPN UUID %s\n", vpn_uuid);
 		return 1;
 	}
@@ -1651,9 +1684,12 @@ int main (int argc, char **argv)
 
 	openconnect_init_ssl();
 
-	/* Start connecting now if there's only one host. Or if configured to */
-	if (!vpnhosts->next || get_autoconnect (secrets))
-		queue_connect_host(_ui_data);
+	/* These can't be done until token password handled */
+	gtk_widget_set_sensitive (_ui_data->combo, FALSE);
+	gtk_widget_set_sensitive (_ui_data->connect_button, FALSE);
+
+	init_thread = g_thread_new("init_connection", (GThreadFunc)init_connection, _ui_data);
+	g_thread_unref(init_thread);
 
 	gtk_window_present(GTK_WINDOW(_ui_data->dialog));
 	gtk_main();

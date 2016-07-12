@@ -43,6 +43,9 @@
 #if !OPENCONNECT_CHECK_VER(2,2)
 #define openconnect_has_oath_support() 0
 #endif
+#if !OPENCONNECT_CHECK_VER(5,0)
+#define openconnect_has_yubioath_support() 0
+#endif
 
 #include "auth-helpers.h"
 
@@ -132,6 +135,8 @@ init_token_mode_options (GtkComboBox *token_mode)
 			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
 		else if (!strcmp (token_type, "hotp") &&
 				 (!openconnect_has_oath_support () || !OPENCONNECT_CHECK_VER(3,4)))
+			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
+		else if (!strcmp (token_type, "yubioath") && !openconnect_has_yubioath_support ())
 			iter_valid = gtk_list_store_remove (token_mode_list, &iter);
 		else {
 			iter_valid = gtk_tree_model_iter_next (model, &iter);
