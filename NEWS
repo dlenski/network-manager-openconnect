@@ -10,6 +10,7 @@ This is a new stable release of NetworkManager-openconnect.  Notable changes inc
 * Support NM_VPN_LOG_LEVEL environment variable to control debug
   logging from NetworkManager.
 * Support Juniper Network Connect / Junos Pulse Secure VPN
+* Add Yubikey OATH support
 * Translation updates
 
 =======================================================
