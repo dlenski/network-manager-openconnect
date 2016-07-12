@@ -158,6 +158,11 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 	if (buf)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT, buf);
 
+	/* Protocol */
+	buf = g_key_file_get_string (keyfile, "openconnect", "Protocol", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL, buf);
+
 	/* Proxy */
 	buf = g_key_file_get_string (keyfile, "openconnect", "Proxy", NULL);
 	if (buf)
@@ -212,6 +217,7 @@ export (NMVpnEditorPlugin *iface,
 	const char *value;
 	const char *gateway = NULL;
 	const char *cacert = NULL;
+	const char *protocol = NULL;
 	const char *proxy = NULL;
 	gboolean csd_enable = FALSE;
 	const char *csd_wrapper = NULL;
@@ -250,6 +256,10 @@ export (NMVpnEditorPlugin *iface,
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT);
 	if (value && strlen (value))
 		cacert = value;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL);
+	if (value && strlen (value))
+		protocol = value;
 
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY);
 	if (value && strlen (value))
@@ -293,6 +303,7 @@ export (NMVpnEditorPlugin *iface,
 		 "Description=%s\n"
 		 "Host=%s\n"
 		 "CACert=%s\n"
+		 "Protocol=%s\n"
 		 "Proxy=%s\n"
 		 "CSDEnable=%s\n"
 		 "CSDWrapper=%s\n"
@@ -304,6 +315,7 @@ export (NMVpnEditorPlugin *iface,
 		 /* Description */           nm_setting_connection_get_id (s_con),
 		 /* Host */                  gateway,
 		 /* CA Certificate */        cacert,
+		 /* Protocol */              protocol ? protocol : "anyconnect",
 		 /* Proxy */                 proxy ? proxy : "",
 		 /* Cisco Secure Desktop */  csd_enable ? "1" : "0",
 		 /* CSD Wrapper Script */    csd_wrapper ? csd_wrapper : "",

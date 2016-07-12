@@ -210,6 +210,74 @@ init_token_ui (OpenconnectEditor *self,
 }
 
 static gboolean
+init_protocol_combo_options (GtkComboBox *protocol_combo)
+{
+#if OPENCONNECT_CHECK_VER(5,1)
+	GtkListStore *protocol_combo_list = GTK_LIST_STORE (gtk_combo_box_get_model (protocol_combo));
+	GtkTreeIter iter;
+
+	gtk_list_store_append(protocol_combo_list, &iter);
+	gtk_list_store_set(protocol_combo_list, &iter,
+					   0, _("Juniper/Pulse Network Connect"),
+					   1, "nc",
+					   -1);
+	return TRUE;
+#else
+	return FALSE;
+#endif
+}
+
+static gboolean
+init_protocol_ui (OpenconnectEditor *self,
+				  OpenconnectEditorPrivate *priv,
+				  NMSettingVpn *s_vpn)
+{
+	GtkComboBox *protocol_combo;
+	const char *value;
+
+	protocol_combo = GTK_COMBO_BOX (gtk_builder_get_object (priv->builder, "protocol_combo"));
+	if (!protocol_combo)
+		return FALSE;
+	if (!init_protocol_combo_options (protocol_combo))
+		return TRUE;
+
+#if 0
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "token_vbox"));
+	if (!widget)
+		return FALSE;
+	gtk_box_pack_start (GTK_BOX (priv->widget), widget, FALSE, FALSE, 0);
+#endif
+
+	if (s_vpn) {
+		GtkTreeModel *model = gtk_combo_box_get_model (protocol_combo);
+		int active_option = 0;
+
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL);
+		if (value) {
+			int i;
+			GtkTreeIter iter;
+
+			if (!gtk_tree_model_get_iter_first (model, &iter))
+				return FALSE;
+			for (i = 0; ; i++) {
+				char *pref_value;
+
+				gtk_tree_model_get (model, &iter, 1, &pref_value, -1);
+				if (!strcmp (value, pref_value))
+					active_option = i;
+				g_free (pref_value);
+				if (!gtk_tree_model_iter_next (model, &iter))
+					break;
+			}
+		}
+		gtk_combo_box_set_active (protocol_combo, active_option);
+	}
+	g_signal_connect (G_OBJECT (protocol_combo), "changed", G_CALLBACK (stuff_changed_cb), self);
+
+	return TRUE;
+}
+
+static gboolean
 init_editor_plugin (OpenconnectEditor *self, NMConnection *connection, GError **error)
 {
 	OpenconnectEditorPrivate *priv = OPENCONNECT_EDITOR_GET_PRIVATE (self);
@@ -276,6 +344,9 @@ init_editor_plugin (OpenconnectEditor *self, NMConnection *connection, GError **
 	if (init_token_ui (self, priv, s_vpn) == FALSE)
 		return FALSE;
 
+	if (init_protocol_ui (self, priv, s_vpn) == FALSE)
+		return FALSE;
+
 	tls_pw_init_auth_widget (priv->builder, priv->group, s_vpn, stuff_changed_cb, self);
 
 	return TRUE;
@@ -317,6 +388,14 @@ update_connection (NMVpnEditor *iface,
 
 	if (protocol)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL, protocol);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "protocol_combo"));
+	model = gtk_combo_box_get_model (GTK_COMBO_BOX (widget));
+	if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (widget), &iter)) {
+		gtk_tree_model_get (model, &iter, 1, &str, -1);
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL, str);
+		g_free(str);
+	}
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "gateway_entry"));
 	str = (char *) gtk_entry_get_text (GTK_ENTRY (widget));
