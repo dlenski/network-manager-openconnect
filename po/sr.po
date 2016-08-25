@@ -6,40 +6,44 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 17:01+0100\n"
-"PO-Revision-Date: 2016-03-09 09:27+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=Network"
+"Manager&keywords=I18N+L10N&component=VPN: openconnect\n"
+"POT-Creation-Date: 2016-08-25 16:20+0000\n"
+"PO-Revision-Date: 2016-08-25 22:04+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <(nothing)>\n"
+"Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
 msgid "OpenConnect VPN client"
-msgstr ""
+msgstr "ВПН клијент Отореног повезивања"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:2
 msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
-msgstr ""
+msgstr "Клијент за Цискове Ени конект ССЛ ВПН виртуелне приватне мреже"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:3
 msgid ""
 "Support for configuring SSL VPN virtual private network connections using "
 "OpenConnect."
 msgstr ""
+"Подршка за подешавање веза ССЛ ВПН виртуелних приватних мрежа које користе "
+"Отворено повезивање."
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:4
 msgid "Compatible with Cisco AnyConnect, Juniper and ocserv based networks."
 msgstr ""
+"Сагласно са мрежама заснованим на Цисковом Ени конекту, Џаниперу и оцсерв-у."
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:5
 msgid "The NetworkManager Developers"
-msgstr ""
+msgstr "Програмери Управника мреже"
 
 #: ../auth-dialog/main.c:657
 #, c-format
@@ -135,7 +139,7 @@ msgstr "Не могу да радим са начином=„%s“ обрасц�
 #: ../openconnect-strings.txt:27
 #, c-format
 msgid "Unknown textarea field: '%s'\n"
-msgstr ""
+msgstr "Непознато поље текстуалне области: „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/20ef5700c1:/auth-juniper.c#l328
 #: ../openconnect-strings.txt:30
@@ -810,7 +814,7 @@ msgstr "Није успело покретање ДТЛСв1 ЦТХ-а\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/20ef5700c1:/dtls.c#l275
 #: ../openconnect-strings.txt:406
 msgid "Set DTLS CTX version failed\n"
-msgstr ""
+msgstr "Подешавање ДТЛС ЦТИкс издања није успело\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/20ef5700c1:/dtls.c#l290
 #: ../openconnect-strings.txt:409
@@ -4066,7 +4070,7 @@ msgstr "Учитавање личног кључа није успело\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/20ef5700c1:/openssl.c#l995
 #: ../openconnect-strings.txt:2226
 msgid "Failed to convert PKCS#8 to OpenSSL EVP_PKEY\n"
-msgstr ""
+msgstr "Нисам успео да претворим ПКЦС#8 у ОпенССЛ ЕВП_ПКЉУЧ\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/20ef5700c1:/openssl.c#l1006
 #: ../openconnect-strings.txt:2229
@@ -4171,7 +4175,7 @@ msgstr "<грешка>"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/20ef5700c1:/openssl.c#l1618
 #: ../openconnect-strings.txt:2282
 msgid "Create TLSv1 CTX failed\n"
-msgstr ""
+msgstr "Стварање ТЛСв1 ЦТИкс-а није успело\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/20ef5700c1:/openssl.c#l1673
 #: ../openconnect-strings.txt:2285
@@ -5083,6 +5087,152 @@ msgstr "Изаберите лични кључ..."
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "ПЕМ уверења (*.pem, *.crt, *.key)"
 
+#: ../properties/nm-openconnect-editor-plugin.c:56
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "ВПН сагласан са Циско Ени Конектом (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:57
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Сагласно са ССЛ ВПН-ом Циско Ени Конекта."
+
+#: ../properties/nm-openconnect-editor-plugin.c:408
+msgid "Juniper Network Connect (openconnect)"
+msgstr "Повезивање Џанипер мреже (отворено повезивање)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:409
+msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
+msgstr "Сагласно са повезивањем Џанипер мреже / Пулс безбедни ССЛ ВПН"
+
+#. we don't know this protocol by name, but it's configured in the .name file,
+#. * so just take it.
+#: ../properties/nm-openconnect-editor-plugin.c:413
+#, c-format
+msgid "Openconnect VPN (%s)"
+msgstr "ВПН Отвореног повезивања (%s)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:414
+#, c-format
+msgid "Openconnect SSL VPN with %s protocol"
+msgstr "ССЛ ВПН Отвореног повезивања са „%s“ протоколом"
+
+#: ../properties/nm-openconnect-editor.c:226
+msgid "Juniper/Pulse Network Connect"
+msgstr "Повезивање Џанипер/Пулс мреже"
+
+#: ../shared/nm-utils/nm-shared-utils.c:185
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr "класа објекта „%s“ нема својство под називом „%s“"
+
+#: ../shared/nm-utils/nm-shared-utils.c:192
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr "својство „%s“ класе објекта „%s“ није уписиво"
+
+#: ../shared/nm-utils/nm-shared-utils.c:199
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr "својство творбе „%s“ за објекат „%s“ се не може поставити након творбе"
+
+#: ../shared/nm-utils/nm-shared-utils.c:207
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr "„%s::%s“ није исправан назив својства; „%s“ није подврста Гобјекта"
+
+#: ../shared/nm-utils/nm-shared-utils.c:216
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr "не могу да поставим својство „%s“ врсте „%s“ из вредности врсте „%s“"
+
+#: ../shared/nm-utils/nm-shared-utils.c:227
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr ""
+"вредност „%s“ врсте „%s“ није исправна или је ван опсега за својство „%s“ "
+"врсте „%s“"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr "недостаје датотека прикључка „%s“"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr "не могу да учитам прикључак уређивача: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr "не могу да учитам погон „%s“ из прикључка: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
+msgid "unknown error creating editor instance"
+msgstr "непозната грешка приликом стварања примерка уређивача"
+
+#: ../src/nm-openconnect-service.c:177
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "неисправно својство целог броја „%s“ или је ван опсега [%d —> %d]"
+
+#: ../src/nm-openconnect-service.c:187
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "неисправно логичко својство „%s“ (није „да“ или „не“)"
+
+#: ../src/nm-openconnect-service.c:194
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "неруковано својство „%s“ врсте %s"
+
+#: ../src/nm-openconnect-service.c:207
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "својство „%s“ је неисправно или није подржано"
+
+#: ../src/nm-openconnect-service.c:223
+msgid "No VPN configuration options."
+msgstr "Нема опција ВПН подешавања."
+
+#: ../src/nm-openconnect-service.c:241
+msgid "No VPN secrets!"
+msgstr "Нема ВПН тајни!"
+
+#: ../src/nm-openconnect-service.c:409
+msgid "Could not find openconnect binary."
+msgstr "Не могу да пронађем извршни отвореног повезивања."
+
+#: ../src/nm-openconnect-service.c:421
+msgid "No VPN gateway specified."
+msgstr "Није наведен ВПН мрежни пролаз."
+
+#: ../src/nm-openconnect-service.c:431
+msgid "No WebVPN cookie provided."
+msgstr "Није достављен колачић ВебВПН-а."
+
+#: ../src/nm-openconnect-service.c:691
+msgid "Don't quit when VPN connection terminates"
+msgstr "Не прекида када се завршава ВПН веза"
+
+#: ../src/nm-openconnect-service.c:692
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr "Укључује опширно записивање прочишћавања (може изложити лозинке)"
+
+#: ../src/nm-openconnect-service.c:693
+msgid "D-Bus name to use for this instance"
+msgstr "Назив Д-сабирнице који се користи за овај примерак"
+
+#: ../src/nm-openconnect-service.c:716
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"нм-опенконект-услуга обезбеђује Управнику мреже обједињену Циско Ени Конект "
+"ССЛ ВПН могућност."
+
 #: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>General</b>"
 msgstr "<b>Опште</b>"
@@ -5093,7 +5243,7 @@ msgstr "Изаберите датотеку"
 
 #: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "_VPN Protocol:"
-msgstr ""
+msgstr "_ВПН протокол:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "_Gateway:"
@@ -5165,155 +5315,11 @@ msgstr "ХОТП — ручно унешено"
 
 #: ../properties/nm-openconnect-dialog.ui.h:21
 msgid "Yubikey OATH"
-msgstr ""
+msgstr "Јубики ОАТХ"
 
 #: ../properties/nm-openconnect-dialog.ui.h:22
 msgid "Cisco AnyConnect"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:56
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "ВПН сагласан са Циско Ени Конектом (openconnect)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:57
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Сагласно са ССЛ ВПН-ом Циско Ени Конекта."
-
-#: ../properties/nm-openconnect-editor-plugin.c:408
-msgid "Juniper Network Connect (openconnect)"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:409
-msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
-msgstr ""
-
-#. we don't know this protocol by name, but it's configured in the .name file,
-#. * so just take it.
-#: ../properties/nm-openconnect-editor-plugin.c:413
-#, c-format
-msgid "Openconnect VPN (%s)"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:414
-#, c-format
-msgid "Openconnect SSL VPN with %s protocol"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor.c:226
-msgid "Juniper/Pulse Network Connect"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:185
-#, c-format
-msgid "object class '%s' has no property named '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:192
-#, c-format
-msgid "property '%s' of object class '%s' is not writable"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:199
-#, c-format
-msgid ""
-"construct property \"%s\" for object '%s' can't be set after construction"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:207
-#, c-format
-msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:216
-#, c-format
-msgid "unable to set property '%s' of type '%s' from value of type '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:227
-#, c-format
-msgid ""
-"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
-"type '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
-#, c-format
-msgid "missing plugin file \"%s\""
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
-#, c-format
-msgid "cannot load editor plugin: %s"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
-#, c-format
-msgid "cannot load factory %s from plugin: %s"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
-msgid "unknown error creating editor instance"
-msgstr ""
-
-#: ../src/nm-openconnect-service.c:177
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr "неисправно својство целог броја „%s“ или је ван опсега [%d —> %d]"
-
-#: ../src/nm-openconnect-service.c:187
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "неисправно логичко својство „%s“ (није „да“ или „не“)"
-
-#: ../src/nm-openconnect-service.c:194
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "неруковано својство „%s“ врсте %s"
-
-#: ../src/nm-openconnect-service.c:207
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "својство „%s“ је неисправно или није подржано"
-
-#: ../src/nm-openconnect-service.c:223
-msgid "No VPN configuration options."
-msgstr "Нема опција ВПН подешавања."
-
-#: ../src/nm-openconnect-service.c:241
-msgid "No VPN secrets!"
-msgstr "Нема ВПН тајни!"
-
-#: ../src/nm-openconnect-service.c:409
-msgid "Could not find openconnect binary."
-msgstr "Не могу да пронађем извршни отвореног повезивања."
-
-#: ../src/nm-openconnect-service.c:421
-msgid "No VPN gateway specified."
-msgstr "Није наведен ВПН мрежни пролаз."
-
-#: ../src/nm-openconnect-service.c:431
-msgid "No WebVPN cookie provided."
-msgstr "Није достављен колачић ВебВПН-а."
-
-#: ../src/nm-openconnect-service.c:691
-msgid "Don't quit when VPN connection terminates"
-msgstr "Не прекида када се завршава ВПН веза"
-
-#: ../src/nm-openconnect-service.c:692
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr "Укључује опширно записивање прочишћавања (може изложити лозинке)"
-
-#: ../src/nm-openconnect-service.c:693
-msgid "D-Bus name to use for this instance"
-msgstr "Назив Д-сабирнице који се користи за овај примерак"
-
-#: ../src/nm-openconnect-service.c:716
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"нм-опенконект-услуга обезбеђује Управнику мреже обједињену Циско Ени Конект "
-"ССЛ ВПН могућност."
+msgstr "Циско Ени конект"
 
 #~ msgid "TUNSETIFF failed: %s\n"
 #~ msgstr "Није успело „TUNSETIFF“: %s\n"
