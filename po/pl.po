@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-27 21:30+0100\n"
-"PO-Revision-Date: 2016-08-25 18:45+0200\n"
+"POT-Creation-Date: 2016-08-28 14:14+0200\n"
+"PO-Revision-Date: 2016-08-28 14:15+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -1054,12 +1054,12 @@ msgstr "Otrzymano nieznany pakiet (len %d): %02x %02x %02x %02x…\n"
 #: ../openconnect-strings.txt:533
 #, c-format
 msgid "TOS this: %d, TOS last: %d\n"
-msgstr ""
+msgstr "Ten TOS: %d, ostatni TOS: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/dtls.c#l1049
 #: ../openconnect-strings.txt:536
 msgid "UDP setsockopt"
-msgstr ""
+msgstr "setsockopt UDP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/dtls.c#l1080
 #: ../openconnect-strings.txt:539
@@ -2769,7 +2769,7 @@ msgstr "Poprzedza komunikaty postępu czasem"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l766
 #: ../openconnect-strings.txt:1478
 msgid "copy TOS / TCLASS when using DTLS"
-msgstr ""
+msgstr "kopiuje TOS/TCLASS podczas używania DTLS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l768
 #: ../openconnect-strings.txt:1481
@@ -2789,12 +2789,12 @@ msgstr "Wykonuje SKRYPT zamiast pliku binarnego CSD"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l772
 #: ../openconnect-strings.txt:1490
 msgid "Request MTU from server (legacy servers only)"
-msgstr ""
+msgstr "Żąda MTU z serwera (tylko przestarzałe serwery)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l773
 #: ../openconnect-strings.txt:1493
 msgid "Indicate path MTU to/from server"
-msgstr "Wskazuje ścieżkę MTU do/z serwera"
+msgstr "Wskazuje ścieżkę MTU do/z serwera"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l774
 #: ../openconnect-strings.txt:1496
@@ -5160,94 +5160,6 @@ msgstr "Wybierz klucz prywatny…"
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Ogólne</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Wybór pliku"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_VPN Protocol:"
-msgstr "Protokół _VPN:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Gateway:"
-msgstr "_Brama:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "_Proxy:"
-msgstr "_Pośrednik:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "CA C_ertificate:"
-msgstr "C_ertyfikat CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "CSD _Wrapper Script:"
-msgstr "Skrypt _wrappera CSD:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Uwierzytelnianie certyfikatu</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "_User Certificate:"
-msgstr "Certyfikat _użytkownika:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Private _Key:"
-msgstr "_Klucz prywatny:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "Use _FSID for key passphrase"
-msgstr "Użycie _FSID dla hasła klucza"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Uwierzytelnianie tokenem programowym</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token _Mode:"
-msgstr "_Tryb tokena:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Token Sec_ret:"
-msgstr "_Hasło tokena:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "Disabled"
-msgstr "Wyłączone"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "SecurID RSA — odczytywanie z ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "RSA SecurID - manually entered"
-msgstr "SecurID RSA — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "TOTP - manually entered"
-msgstr "TOTP — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:20
-msgid "HOTP - manually entered"
-msgstr "HOTP — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:21
-msgid "Yubikey OATH"
-msgstr "OATH Yubikey"
-
-#: ../properties/nm-openconnect-dialog.ui.h:22
-msgid "Cisco AnyConnect"
-msgstr "Cisco AnyConnect"
-
 #: ../properties/nm-openconnect-editor-plugin.c:56
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "VPN zgodny z Cisco AnyConnect (openconnect)"
@@ -5403,11 +5315,90 @@ msgstr ""
 "nm-openconnect-service dostarcza zintegrowaną możliwość VPN SSL Cisco "
 "AnyConnect dla usługi NetworkManager."
 
-#~ msgid "PKCS#12 contained no private key!"
-#~ msgstr "PKCS#12 nie zawiera żadnego klucza prywatnego"
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Ogólne</b>"
 
-#~ msgid "PKCS#12 contained no certificate!"
-#~ msgstr "PKCS#12 nie zawiera żadnego certyfikatu"
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Wybór pliku"
 
-#~ msgid "Request MTU from server"
-#~ msgstr "Żąda MTU z serwera"
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_VPN Protocol:"
+msgstr "Protokół _VPN:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Gateway:"
+msgstr "_Brama:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_Proxy:"
+msgstr "_Pośrednik:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "CA C_ertificate:"
+msgstr "C_ertyfikat CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "CSD _Wrapper Script:"
+msgstr "Skrypt _wrappera CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Uwierzytelnianie certyfikatu</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_User Certificate:"
+msgstr "Certyfikat _użytkownika:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Private _Key:"
+msgstr "_Klucz prywatny:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "Use _FSID for key passphrase"
+msgstr "Użycie _FSID dla hasła klucza"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Uwierzytelnianie tokenem programowym</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token _Mode:"
+msgstr "_Tryb tokena:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Token Sec_ret:"
+msgstr "_Hasło tokena:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "Disabled"
+msgstr "Wyłączone"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "SecurID RSA — odczytywanie z ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "RSA SecurID - manually entered"
+msgstr "SecurID RSA — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "TOTP - manually entered"
+msgstr "TOTP — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:20
+msgid "HOTP - manually entered"
+msgstr "HOTP — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:21
+msgid "Yubikey OATH"
+msgstr "OATH Yubikey"
+
+#: ../properties/nm-openconnect-dialog.ui.h:22
+msgid "Cisco AnyConnect"
+msgstr "Cisco AnyConnect"
