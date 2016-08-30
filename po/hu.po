@@ -9,9 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: networkmanager-openconnect master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-27 21:30+0100\n"
-"PO-Revision-Date: 2016-07-31 16:25+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=VPN: openconnect\n"
+"POT-Creation-Date: 2016-08-27 20:34+0000\n"
+"PO-Revision-Date: 2016-08-30 16:26+0200\n"
 "Last-Translator: Meskó Balázs <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -818,7 +819,7 @@ msgstr "A DTLSv1 CTX előkészítése nem sikerült\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/dtls.c#l275
 #: ../openconnect-strings.txt:406
 msgid "Set DTLS CTX version failed\n"
-msgstr ""
+msgstr "A DTLS CTX verzió beállítása sikertelen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/dtls.c#l290
 #: ../openconnect-strings.txt:409
@@ -1052,12 +1053,12 @@ msgstr "Ismeretlen csomag (hossz: %d) érkezett: %02x %02x %02x %02x…\n"
 #: ../openconnect-strings.txt:533
 #, c-format
 msgid "TOS this: %d, TOS last: %d\n"
-msgstr ""
+msgstr "TOS ez: %d, TOS utolsó: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/dtls.c#l1049
 #: ../openconnect-strings.txt:536
 msgid "UDP setsockopt"
-msgstr ""
+msgstr "UDP setsockopt"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/dtls.c#l1080
 #: ../openconnect-strings.txt:539
@@ -2759,7 +2760,7 @@ msgstr "Időbélyeg eléfűzése az üzenetek múlásához"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l766
 #: ../openconnect-strings.txt:1478
 msgid "copy TOS / TCLASS when using DTLS"
-msgstr ""
+msgstr "TOS / TCLASS másolása DTLS használata esetén"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l768
 #: ../openconnect-strings.txt:1481
@@ -2779,7 +2780,7 @@ msgstr "SCRIPT futtatása a CSD program helyett"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l772
 #: ../openconnect-strings.txt:1490
 msgid "Request MTU from server (legacy servers only)"
-msgstr ""
+msgstr "MTU kérése a kiszolgálótól (csak örökölt kiszolgálóknál)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/main.c#l773
 #: ../openconnect-strings.txt:1493
@@ -4125,7 +4126,7 @@ msgstr "A személyes kulcs betöltése nem sikerült\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/openssl.c#l997
 #: ../openconnect-strings.txt:2239
 msgid "Failed to convert PKCS#8 to OpenSSL EVP_PKEY\n"
-msgstr ""
+msgstr "A PKCS#8 átalakítása OpenSSL EVP_PKEY kulcsra sikertelen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/openssl.c#l1008
 #: ../openconnect-strings.txt:2242
@@ -4232,7 +4233,7 @@ msgstr "<hiba>"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/openssl.c#l1620
 #: ../openconnect-strings.txt:2295
 msgid "Create TLSv1 CTX failed\n"
-msgstr ""
+msgstr "TLSv1 CTX létrehozása sikertelen\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/ce975493fe:/openssl.c#l1675
 #: ../openconnect-strings.txt:2298
@@ -5141,94 +5142,6 @@ msgstr "Válassza ki a személyes kulcsát…"
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM tanúsítványok (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Általános</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Válasszon ki egy fájlt"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_VPN Protocol:"
-msgstr "_VPN Protokoll:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Gateway:"
-msgstr "Á_tjáró:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "_Proxy:"
-msgstr "_Proxy:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "CA C_ertificate:"
-msgstr "_CA tanúsítvány:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "A Cisco Secure Desktop _trójai engedélyezése"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "CSD _Wrapper Script:"
-msgstr "_CSD átalakító parancsfájl:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Tanúsítvány hitelesítése</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "_User Certificate:"
-msgstr "F_elhasználói tanúsítvány:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Private _Key:"
-msgstr "S_zemélyes kulcs:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "Use _FSID for key passphrase"
-msgstr "_FSID használata a kulcs jelszavához"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Szoftveres token hitelesítése</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token _Mode:"
-msgstr "Token _mód:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Token Sec_ret:"
-msgstr "Token _titok:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "Disabled"
-msgstr "Kikapcsolva"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "RSA SecurID - beolvasás a ~/.stokenrc fájlból"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "RSA SecurID - manually entered"
-msgstr "RSA SecurID - kézzel megadott"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "TOTP - manually entered"
-msgstr "TOTP - kézzel megadott"
-
-#: ../properties/nm-openconnect-dialog.ui.h:20
-msgid "HOTP - manually entered"
-msgstr "HOTP - kézzel megadott"
-
-#: ../properties/nm-openconnect-dialog.ui.h:21
-msgid "Yubikey OATH"
-msgstr "Yubikey OATH"
-
-#: ../properties/nm-openconnect-dialog.ui.h:22
-msgid "Cisco AnyConnect"
-msgstr "Cisco AnyConnect"
-
 #: ../properties/nm-openconnect-editor-plugin.c:56
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "Cisco AnyConnect-kompatibilis VPN (openconnect)"
@@ -5239,11 +5152,11 @@ msgstr "Kompatibilis a Cisco AnyConnect SSL VPN-nel"
 
 #: ../properties/nm-openconnect-editor-plugin.c:408
 msgid "Juniper Network Connect (openconnect)"
-msgstr "Juniper Network Connect (openconnect)"
+msgstr "Juniper hálózati csatlakozás (openconnect)"
 
 #: ../properties/nm-openconnect-editor-plugin.c:409
 msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
-msgstr "Kompatibilis a Juniper Network Connect / Pulse Secure SSL VPN-nel"
+msgstr "Kompatibilis a Juniper hálózati csatlakozás / Pulse Secure SSL VPN-nel"
 
 #. we don't know this protocol by name, but it's configured in the .name file,
 #. * so just take it.
@@ -5259,7 +5172,7 @@ msgstr "Openconnect SSL VPN %s protokollal"
 
 #: ../properties/nm-openconnect-editor.c:226
 msgid "Juniper/Pulse Network Connect"
-msgstr "Juniper/Pulse Network Connect"
+msgstr "Juniper/Pulse hálózati csatlakozás"
 
 #: ../shared/nm-utils/nm-shared-utils.c:185
 #, c-format
@@ -5379,6 +5292,94 @@ msgid ""
 msgstr ""
 "Az nm-openconnect-service integrált Cisco AnyConnect SSL VPN képességet "
 "biztosít a Hálózatkezelőnek."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Általános</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Válasszon ki egy fájlt"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_VPN Protocol:"
+msgstr "_VPN Protokoll:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Gateway:"
+msgstr "Á_tjáró:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "CA C_ertificate:"
+msgstr "_CA tanúsítvány:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "A Cisco Secure Desktop _trójai engedélyezése"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "CSD _Wrapper Script:"
+msgstr "_CSD átalakító parancsfájl:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Tanúsítvány hitelesítése</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_User Certificate:"
+msgstr "F_elhasználói tanúsítvány:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Private _Key:"
+msgstr "S_zemélyes kulcs:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "Use _FSID for key passphrase"
+msgstr "_FSID használata a kulcs jelszavához"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Szoftveres token hitelesítése</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token _Mode:"
+msgstr "Token _mód:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Token Sec_ret:"
+msgstr "Token _titok:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "Disabled"
+msgstr "Kikapcsolva"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "RSA SecurID - beolvasás a ~/.stokenrc fájlból"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "RSA SecurID - manually entered"
+msgstr "RSA SecurID - kézzel megadott"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "TOTP - manually entered"
+msgstr "TOTP - kézzel megadott"
+
+#: ../properties/nm-openconnect-dialog.ui.h:20
+msgid "HOTP - manually entered"
+msgstr "HOTP - kézzel megadott"
+
+#: ../properties/nm-openconnect-dialog.ui.h:21
+msgid "Yubikey OATH"
+msgstr "Yubikey OATH"
+
+#: ../properties/nm-openconnect-dialog.ui.h:22
+msgid "Cisco AnyConnect"
+msgstr "Cisco AnyConnect"
 
 #~ msgid "UDP (DTLS) connect:\n"
 #~ msgstr "UDP (DTLS) csatlakozás:\n"
