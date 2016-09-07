@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 22:36+0100\n"
-"PO-Revision-Date: 2016-04-05 16:51+0200\n"
+"POT-Creation-Date: 2016-09-07 20:58+0200\n"
+"PO-Revision-Date: 2016-09-06 18:09+0200\n"
 "Last-Translator: Walter Garcia-Fontes <walter.garcia@upf·edu>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
 "Language: ca\n"
@@ -23,31 +23,28 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
-#, fuzzy
 msgid "OpenConnect VPN client"
-msgstr "Connecta el sòcol UDP\n"
+msgstr "Client VPN OpenConnect"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:2
-#, fuzzy
 msgid "Client for Cisco AnyConnect SSL VPN virtual private networks"
-msgstr ""
-"Client obert per a Cisco AnyConnect VPN, versió %s\n"
-"\n"
+msgstr "Client per a xarxes privades virtuals Cisco AnyConnect SSL VPN"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:3
 msgid ""
 "Support for configuring SSL VPN virtual private network connections using "
 "OpenConnect."
 msgstr ""
+"Suport per configurar connexions de xarxes privades virtuals SSL VPN usant "
+"l'OpenConnect."
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:4
-#, fuzzy
 msgid "Compatible with Cisco AnyConnect, Juniper and ocserv based networks."
-msgstr "VPN SSL compatible amb Cisco AnyConnect."
+msgstr "Compatible amb xarxes basades en Cisco AnyConnect, Juniper o ocserv."
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:5
 msgid "The NetworkManager Developers"
-msgstr ""
+msgstr "Els desenvolupadors del NetworkManager"
 
 #: ../auth-dialog/main.c:657
 #, c-format
@@ -143,7 +140,7 @@ msgstr "No es pot gestionar el mètode = «%s» al formulari, acció = «%s»\n"
 #: ../openconnect-strings.txt:27
 #, c-format
 msgid "Unknown textarea field: '%s'\n"
-msgstr ""
+msgstr "Camp desconegut d'àrea de text: «%s»\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/auth-juniper.c#l328
 #: ../openconnect-strings.txt:30
@@ -825,7 +822,7 @@ msgstr "La inicialització de CTX DTLSv1 ha fallat\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/dtls.c#l275
 #: ../openconnect-strings.txt:406
 msgid "Set DTLS CTX version failed\n"
-msgstr ""
+msgstr "L'establiment de la versió DTLS CTX ha fallat\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/dtls.c#l290
 #: ../openconnect-strings.txt:409
@@ -1057,12 +1054,12 @@ msgstr ""
 #: ../openconnect-strings.txt:533
 #, c-format
 msgid "TOS this: %d, TOS last: %d\n"
-msgstr ""
+msgstr "TOS aquest: %d, TOS últim: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/dtls.c#l1049
 #: ../openconnect-strings.txt:536
 msgid "UDP setsockopt"
-msgstr ""
+msgstr "UDP setsockopt"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/dtls.c#l1080
 #: ../openconnect-strings.txt:539
@@ -2795,7 +2792,7 @@ msgstr "Avantposa la marca horària per al progrés dels missatges"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/main.c#l766
 #: ../openconnect-strings.txt:1479
 msgid "copy TOS / TCLASS when using DTLS"
-msgstr ""
+msgstr "copia TOS / TCLASS quan s'usa DTLS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/main.c#l768
 #: ../openconnect-strings.txt:1482
@@ -2815,7 +2812,7 @@ msgstr "Executa SCRIPT en lloc de binari CSD"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/main.c#l772
 #: ../openconnect-strings.txt:1491
 msgid "Request MTU from server (legacy servers only)"
-msgstr ""
+msgstr "Demana del MTU al servidor (sols servidors antics)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/main.c#l773
 #: ../openconnect-strings.txt:1494
@@ -4162,7 +4159,7 @@ msgstr "La càrrega de la clau privativa ha fallat\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/openssl.c#l997
 #: ../openconnect-strings.txt:2240
 msgid "Failed to convert PKCS#8 to OpenSSL EVP_PKEY\n"
-msgstr ""
+msgstr "No s'ha pogut convertir PKCS#8 a OpenSSL EVP_PKEY\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/openssl.c#l1008
 #: ../openconnect-strings.txt:2243
@@ -4268,7 +4265,7 @@ msgstr "<error>"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/openssl.c#l1620
 #: ../openconnect-strings.txt:2296
 msgid "Create TLSv1 CTX failed\n"
-msgstr ""
+msgstr "Ha fallat la creació de TLSv1 CTX\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/9984124b4c:/openssl.c#l1675
 #: ../openconnect-strings.txt:2299
@@ -5196,6 +5193,159 @@ msgstr "Trieu la vostra clau privada..."
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certificats PEM (*.pem, *.crt, *.key)"
 
+#: ../properties/nm-openconnect-editor-plugin.c:56
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN compatible amb Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:57
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "VPN SSL compatible amb Cisco AnyConnect."
+
+#: ../properties/nm-openconnect-editor-plugin.c:408
+msgid "Juniper Network Connect (openconnect)"
+msgstr "Juniper Network Connect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:409
+msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
+msgstr "Compatible amb Juniper Network Connect / Pulse Secure SSL VPN"
+
+#. we don't know this protocol by name, but it's configured in the .name file,
+#. * so just take it.
+#: ../properties/nm-openconnect-editor-plugin.c:413
+#, c-format
+msgid "Openconnect VPN (%s)"
+msgstr "Openconnect VPN (%s)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:414
+#, c-format
+msgid "Openconnect SSL VPN with %s protocol"
+msgstr "Openconnect SSL VPN amb protocol %s"
+
+#: ../properties/nm-openconnect-editor.c:226
+msgid "Juniper/Pulse Network Connect"
+msgstr "Juniper/Pulse Network Connect"
+
+#: ../shared/nm-utils/nm-shared-utils.c:185
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr "l'objecte de classe «%s» no té cap propietat anomenada «%s»"
+
+#: ../shared/nm-utils/nm-shared-utils.c:192
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr "la propietat «%s» de l'objecte de classe «%s» no es pot escriure"
+
+#: ../shared/nm-utils/nm-shared-utils.c:199
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr ""
+"la propietat «%s» de construcció per a l'objecte «%s» no es pot establir "
+"després de la construcció"
+
+#: ../shared/nm-utils/nm-shared-utils.c:207
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr ""
+"«%s::%s» no és un nom de propietat vàlid; «%s» no és un subtipus GObject<"
+
+#: ../shared/nm-utils/nm-shared-utils.c:216
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr ""
+"no s'ha pogut establir la propietat «%s» del tipus «%s» a partir del valor "
+"de tipus «%s»"
+
+#: ../shared/nm-utils/nm-shared-utils.c:227
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr ""
+"el valor «%s» de tipus «%s» no és vàlid o esta fora de rang per a la "
+"propietat «%s» de tipus «%s»"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr "fitxer «%s» de connector absent"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr "no s'ha pogut carregar el connector d'editor: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr "no es pot carregar la fàbrica %s des del connector: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
+msgid "unknown error creating editor instance"
+msgstr ""
+"s'ha produït un error desconegut quan es creava la instància de l'editor"
+
+#: ../src/nm-openconnect-service.c:177
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "nombre enter no vàlid en la propietat «%s» o fora de rang [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:187
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "booleà no vàlid a la propietat «%s» (cal posar sí o no) "
+
+#: ../src/nm-openconnect-service.c:194
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "Propietat no gestionada «%s» del tipus %s"
+
+#: ../src/nm-openconnect-service.c:207
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "Propietat «%s» no vàlida o no suportada"
+
+#: ../src/nm-openconnect-service.c:223
+msgid "No VPN configuration options."
+msgstr "Sense opcions de configuració VPN."
+
+#: ../src/nm-openconnect-service.c:241
+msgid "No VPN secrets!"
+msgstr "Sense secrets VPN!"
+
+#: ../src/nm-openconnect-service.c:409
+msgid "Could not find openconnect binary."
+msgstr "No es pot trobar el binari d'openconnect."
+
+#: ../src/nm-openconnect-service.c:421
+msgid "No VPN gateway specified."
+msgstr "Sense especificar la passarel·la de la VPN."
+
+#: ../src/nm-openconnect-service.c:431
+msgid "No WebVPN cookie provided."
+msgstr "Sense proporcionar la galeta WebVPN."
+
+#: ../src/nm-openconnect-service.c:691
+msgid "Don't quit when VPN connection terminates"
+msgstr "No sortiu quan la connexió VPN acabi"
+
+#: ../src/nm-openconnect-service.c:692
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr ""
+"Habilita l'accés amb depuració detallada (pot exposar les contrasenyes)"
+
+#: ../src/nm-openconnect-service.c:693
+msgid "D-Bus name to use for this instance"
+msgstr "Nom D-Bus a usar per a aquesta instància"
+
+#: ../src/nm-openconnect-service.c:716
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"El nm-openconnect-service proporciona la capacitat VPN SSL AnyConnect Cisco "
+"amb el gestor de xarxa."
+
 #: ../properties/nm-openconnect-dialog.ui.h:1
 msgid "<b>General</b>"
 msgstr "<b>General</b>"
@@ -5206,7 +5356,7 @@ msgstr "Seleccioneu un fitxer"
 
 #: ../properties/nm-openconnect-dialog.ui.h:3
 msgid "_VPN Protocol:"
-msgstr ""
+msgstr "Protocol _VPN:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:4
 msgid "_Gateway:"
@@ -5278,156 +5428,11 @@ msgstr "HOTP - entrat manualment"
 
 #: ../properties/nm-openconnect-dialog.ui.h:21
 msgid "Yubikey OATH"
-msgstr ""
+msgstr "Yubikey OATH"
 
 #: ../properties/nm-openconnect-dialog.ui.h:22
 msgid "Cisco AnyConnect"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:56
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "VPN compatible amb Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:57
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "VPN SSL compatible amb Cisco AnyConnect."
-
-#: ../properties/nm-openconnect-editor-plugin.c:408
-msgid "Juniper Network Connect (openconnect)"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:409
-msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
-msgstr ""
-
-#. we don't know this protocol by name, but it's configured in the .name file,
-#. * so just take it.
-#: ../properties/nm-openconnect-editor-plugin.c:413
-#, c-format
-msgid "Openconnect VPN (%s)"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:414
-#, c-format
-msgid "Openconnect SSL VPN with %s protocol"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor.c:226
-msgid "Juniper/Pulse Network Connect"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:185
-#, c-format
-msgid "object class '%s' has no property named '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:192
-#, c-format
-msgid "property '%s' of object class '%s' is not writable"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:199
-#, c-format
-msgid ""
-"construct property \"%s\" for object '%s' can't be set after construction"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:207
-#, c-format
-msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:216
-#, c-format
-msgid "unable to set property '%s' of type '%s' from value of type '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:227
-#, c-format
-msgid ""
-"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
-"type '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
-#, c-format
-msgid "missing plugin file \"%s\""
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
-#, c-format
-msgid "cannot load editor plugin: %s"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
-#, c-format
-msgid "cannot load factory %s from plugin: %s"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
-msgid "unknown error creating editor instance"
-msgstr ""
-
-#: ../src/nm-openconnect-service.c:177
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr "nombre enter no vàlid en la propietat «%s» o fora de rang [%d -> %d]"
-
-#: ../src/nm-openconnect-service.c:187
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "booleà no vàlid a la propietat «%s» (cal posar sí o no) "
-
-#: ../src/nm-openconnect-service.c:194
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "Propietat no gestionada «%s» del tipus %s"
-
-#: ../src/nm-openconnect-service.c:207
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "Propietat «%s» no vàlida o no suportada"
-
-#: ../src/nm-openconnect-service.c:223
-msgid "No VPN configuration options."
-msgstr "Sense opcions de configuració VPN."
-
-#: ../src/nm-openconnect-service.c:241
-msgid "No VPN secrets!"
-msgstr "Sense secrets VPN!"
-
-#: ../src/nm-openconnect-service.c:409
-msgid "Could not find openconnect binary."
-msgstr "No es pot trobar el binari d'openconnect."
-
-#: ../src/nm-openconnect-service.c:421
-msgid "No VPN gateway specified."
-msgstr "Sense especificar la passarel·la de la VPN."
-
-#: ../src/nm-openconnect-service.c:431
-msgid "No WebVPN cookie provided."
-msgstr "Sense proporcionar la galeta WebVPN."
-
-#: ../src/nm-openconnect-service.c:691
-msgid "Don't quit when VPN connection terminates"
-msgstr "No sortiu quan la connexió VPN acabi"
-
-#: ../src/nm-openconnect-service.c:692
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr ""
-"Habilita l'accés amb depuració detallada (pot exposar les contrasenyes)"
-
-#: ../src/nm-openconnect-service.c:693
-msgid "D-Bus name to use for this instance"
-msgstr "Nom D-Bus a usar per a aquesta instància"
-
-#: ../src/nm-openconnect-service.c:716
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"El nm-openconnect-service proporciona la capacitat VPN SSL AnyConnect Cisco "
-"amb el gestor de xarxa."
+msgstr "Cisco AnyConnect"
 
 #~ msgid "Request MTU from server"
 #~ msgstr "Sol·licitud MTU del servidor"
