@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 12:49+0100\n"
-"PO-Revision-Date: 2016-08-28 14:15+0200\n"
+"POT-Creation-Date: 2016-09-10 18:07+0200\n"
+"PO-Revision-Date: 2016-09-10 18:08+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -33,7 +33,7 @@ msgid ""
 "Support for configuring SSL VPN virtual private network connections using "
 "OpenConnect."
 msgstr ""
-"Obsługa konfigurowania wirtualnych sieci prywatnych SSL VPN używając "
+"Obsługa konfigurowania wirtualnych sieci prywatnych SSL VPN za pomocą "
 "OpenConnect."
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:4
@@ -108,6 +108,265 @@ msgstr "Zapisywanie haseł"
 #: ../auth-dialog/main.c:1487
 msgid "Log"
 msgstr "Dziennik"
+
+#: ../properties/auth-helpers.c:58
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Wybierz certyfikat CA…"
+
+#: ../properties/auth-helpers.c:74
+msgid "Choose your personal certificate..."
+msgstr "Wybierz certyfikat prywatny…"
+
+#: ../properties/auth-helpers.c:90
+msgid "Choose your private key..."
+msgstr "Wybierz klucz prywatny…"
+
+#: ../properties/auth-helpers.c:250
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Ogólne</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Wybór pliku"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_VPN Protocol:"
+msgstr "Protokół _VPN:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Gateway:"
+msgstr "_Brama:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_Proxy:"
+msgstr "_Pośrednik:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "CA C_ertificate:"
+msgstr "C_ertyfikat CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "CSD _Wrapper Script:"
+msgstr "Skrypt _wrappera CSD:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Uwierzytelnianie certyfikatu</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_User Certificate:"
+msgstr "Certyfikat _użytkownika:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Private _Key:"
+msgstr "_Klucz prywatny:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "Use _FSID for key passphrase"
+msgstr "Użycie _FSID dla hasła klucza"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Uwierzytelnianie tokenem programowym</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token _Mode:"
+msgstr "_Tryb tokena:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Token Sec_ret:"
+msgstr "_Hasło tokena:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "Disabled"
+msgstr "Wyłączone"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "SecurID RSA — odczytywanie z ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "RSA SecurID - manually entered"
+msgstr "SecurID RSA — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "TOTP - manually entered"
+msgstr "TOTP — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:20
+msgid "HOTP - manually entered"
+msgstr "HOTP — wprowadzane ręcznie"
+
+#: ../properties/nm-openconnect-dialog.ui.h:21
+msgid "Yubikey OATH"
+msgstr "OATH Yubikey"
+
+#: ../properties/nm-openconnect-dialog.ui.h:22
+msgid "Cisco AnyConnect"
+msgstr "Cisco AnyConnect"
+
+#: ../properties/nm-openconnect-editor.c:226
+msgid "Juniper/Pulse Network Connect"
+msgstr "Juniper/Pulse Network Connect"
+
+#: ../properties/nm-openconnect-editor-plugin.c:56
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN zgodny z Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:57
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Zgodny z VPN Cisco AnyConnect SSL."
+
+#: ../properties/nm-openconnect-editor-plugin.c:408
+msgid "Juniper Network Connect (openconnect)"
+msgstr "Juniper Network Connect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:409
+msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
+msgstr "Zgodny z VPN SSL Juniper Network Connect/Pulse Secure"
+
+#. we don't know this protocol by name, but it's configured in the .name file,
+#. * so just take it.
+#: ../properties/nm-openconnect-editor-plugin.c:413
+#, c-format
+msgid "Openconnect VPN (%s)"
+msgstr "VPN OpenConnect (%s)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:414
+#, c-format
+msgid "Openconnect SSL VPN with %s protocol"
+msgstr "VPN SSL OpenConnect z protokołem %s"
+
+#: ../shared/nm-utils/nm-shared-utils.c:185
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr "klasa obiektów „%s” nie ma właściwości o nazwie „%s”"
+
+#: ../shared/nm-utils/nm-shared-utils.c:192
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr "właściwość „%s” klasy obiektów „%s” nie jest zapisywalna"
+
+#: ../shared/nm-utils/nm-shared-utils.c:199
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr ""
+"właściwość konstruktu „%s” dla obiektu „%s” nie może zostać ustawiona po "
+"konstrukcji"
+
+#: ../shared/nm-utils/nm-shared-utils.c:207
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr ""
+"„%s::%s” nie jest prawidłową nazwą właściwości; „%s” nie jest podtypem "
+"GObject"
+
+#: ../shared/nm-utils/nm-shared-utils.c:216
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr "nie można ustawić właściwości „%s” typu „%s” z wartości typu „%s”"
+
+#: ../shared/nm-utils/nm-shared-utils.c:227
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr ""
+"wartość „%s” typu „%s” jest nieprawidłowa lub spoza zakresu dla właściwości "
+"„%s” typu „%s”"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr "brak pliku wtyczki „%s”"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr "nie można wczytać wtyczki edytora: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr "nie można wczytać generatora %s z wtyczki: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
+msgid "unknown error creating editor instance"
+msgstr "nieznany błąd podczas tworzenia wystąpienia edytora"
+
+#: ../src/nm-openconnect-service.c:177
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr ""
+"nieprawidłowa własność liczby całkowitej „%s” lub jest poza zakresem [%d -> "
+"%d]"
+
+#: ../src/nm-openconnect-service.c:187
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr ""
+"nieprawidłowa własność zmiennej logicznej „%s” (nie wynosi „yes” lub „no”)"
+
+#: ../src/nm-openconnect-service.c:194
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "nieobsługiwana własność „%s” typu „%s”"
+
+#: ../src/nm-openconnect-service.c:207
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "własność „%s” jest nieprawidłowa lub nieobsługiwana"
+
+#: ../src/nm-openconnect-service.c:223
+msgid "No VPN configuration options."
+msgstr "Brak opcji konfiguracji VPN."
+
+#: ../src/nm-openconnect-service.c:241
+msgid "No VPN secrets!"
+msgstr "Brak haseł VPN."
+
+#: ../src/nm-openconnect-service.c:409
+msgid "Could not find openconnect binary."
+msgstr "Nie można odnaleźć pliku binarnego openconnect."
+
+#: ../src/nm-openconnect-service.c:421
+msgid "No VPN gateway specified."
+msgstr "Nie podano bramy VPN."
+
+#: ../src/nm-openconnect-service.c:431
+msgid "No WebVPN cookie provided."
+msgstr "Nie podano ciasteczka WebVPN."
+
+#: ../src/nm-openconnect-service.c:691
+msgid "Don't quit when VPN connection terminates"
+msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
+
+#: ../src/nm-openconnect-service.c:692
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr ""
+"Włącza zapisywanie większej liczby komunikatów debugowania w dzienniku (może "
+"ujawnić hasła)"
+
+#: ../src/nm-openconnect-service.c:693
+msgid "D-Bus name to use for this instance"
+msgstr "Nazwa D-Bus dla tego wystąpienia"
+
+#: ../src/nm-openconnect-service.c:716
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"nm-openconnect-service dostarcza zintegrowaną możliwość VPN SSL Cisco "
+"AnyConnect dla usługi NetworkManager."
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth-juniper.c#l135
 #: ../openconnect-strings.txt:14
@@ -242,7 +501,7 @@ msgstr "Utworzenie kodu tokena OTP się nie powiodło. Wyłączanie tokena\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth.c#l96
 #: ../openconnect-strings.txt:85
 msgid "Form choice has no name\n"
-msgstr "Wybór formularza nie posiada nazwy\n"
+msgstr "Wybór formularza nie ma nazwy\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth.c#l181
 #: ../openconnect-strings.txt:88
@@ -290,7 +549,7 @@ msgstr "Otrzymano nieoczekiwane <client-cert-request>.\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth.c#l597
 #: ../openconnect-strings.txt:112
 msgid "XML response has no \"auth\" node\n"
-msgstr "Odpowiedź XML nie posiada węzła „auth”\n"
+msgstr "Odpowiedź XML nie ma węzła „auth”\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth.c#l630
 #: ../openconnect-strings.txt:115
@@ -852,14 +1111,15 @@ msgstr ""
 #, c-format
 msgid "Established DTLS connection (using OpenSSL). Ciphersuite %s.\n"
 msgstr ""
-"Nawiązano połączenie DTLS (używając biblioteki OpenSSL). Zestaw szyfrów %s.\n"
+"Nawiązano połączenie DTLS (za pomocą biblioteki OpenSSL). Zestaw szyfrów "
+"%s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l364
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l671
 #: ../openconnect-strings.txt:426
 #, c-format
 msgid "DTLS connection compression using %s.\n"
-msgstr "Kompresja połączenia DTLS używając %s.\n"
+msgstr "Kompresja połączenia DTLS za pomocą %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l395
 #: ../openconnect-strings.txt:429
@@ -919,7 +1179,7 @@ msgstr "Ustawienie „MTU” DTLS się nie powiodło: %s\n"
 #, c-format
 msgid "Established DTLS connection (using GnuTLS). Ciphersuite %s.\n"
 msgstr ""
-"Nawiązano połączenie DTLS (używając biblioteki GnuTLS). Zestaw szyfrów %s.\n"
+"Nawiązano połączenie DTLS (za pomocą biblioteki GnuTLS). Zestaw szyfrów %s.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l689
 #: ../openconnect-strings.txt:460
@@ -2454,7 +2714,7 @@ msgstr ""
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/http.c#l1118
 #: ../openconnect-strings.txt:1301
 msgid "Authenticated to SOCKS server using password\n"
-msgstr "Uwierzytelniono z serwerem SOCKS używając hasła\n"
+msgstr "Uwierzytelniono z serwerem SOCKS za pomocą hasła\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/http.c#l1122
 #: ../openconnect-strings.txt:1304
@@ -3134,7 +3394,7 @@ msgstr ""
 "Wyłączanie wszystkich ponownych użyć połączeń HTTP z powodu opcji --no-http-"
 "keepalive.\n"
 "Jeśli to pomoże, to prosimy to zgłosić na adres <openconnect-devel@lists."
-"infradead.org> (w języku angielskim).\n"
+"infradead.org> (w języku angielskim).\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1294
 #: ../openconnect-strings.txt:1688
@@ -3142,6 +3402,9 @@ msgid ""
 "The --no-cert-check option was insecure and has been removed.\n"
 "Fix your server's certificate or use --servercert to trust it.\n"
 msgstr ""
+"Opcja --no-cert-check była niebezpieczna i została usunięta.\n"
+"Należy naprawić certyfikat serwera lub użyć opcji --servercert, aby mu "
+"zaufać.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1311
 #: ../openconnect-strings.txt:1693
@@ -3206,7 +3469,7 @@ msgstr "Ustawienie DTLS się nie powiodło. Używanie SSL zamiast tego\n"
 #: ../openconnect-strings.txt:1726
 #, c-format
 msgid "Connected as %s%s%s, using %s%s\n"
-msgstr "Połączono jako %s%s%s, używając %s%s\n"
+msgstr "Połączono jako %s%s%s za pomocą %s%s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1544
 #: ../openconnect-strings.txt:1729
@@ -3280,7 +3543,7 @@ msgstr "Zapisanie konfiguracji do %s się nie powiodło: %s\n"
 #: ../openconnect-strings.txt:1765
 #, c-format
 msgid "Server SSL certificate didn't match: %s\n"
-msgstr "Certyfikat SSL serwera się nie zgadza: %s\n"
+msgstr "Certyfikat SSL serwera nie pasuje: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1717
 #: ../openconnect-strings.txt:1768
@@ -3299,12 +3562,13 @@ msgstr ""
 msgid ""
 "To trust this server in future, perhaps add this to your command line:\n"
 msgstr ""
+"Aby zaufać temu serwerowi w przyszłości, można dodać to do wiersza poleceń:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1721
 #: ../openconnect-strings.txt:1778
 #, c-format
 msgid "    --servercert %s\n"
-msgstr ""
+msgstr "    --servercert %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1726
 #: ../openconnect-strings.txt:1781
@@ -3966,7 +4230,7 @@ msgstr "Logowanie do gniazda PKCS#11 „%s”\n"
 #: ../openconnect-strings.txt:2143
 #, c-format
 msgid "Failed to find PKCS#11 cert '%s'\n"
-msgstr ""
+msgstr "Odnalezienie certyfikatu PKCS#11 „%s” się nie powiodło\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l401
 #: ../openconnect-strings.txt:2146
@@ -3995,34 +4259,36 @@ msgstr "Odnaleziono %d kluczy w gnieździe PKCS#11 „%s”\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l497
 #: ../openconnect-strings.txt:2159
 msgid "Certificate has no public key\n"
-msgstr ""
+msgstr "Certyfikat nie ma klucza publicznego\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l503
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l526
 #: ../openconnect-strings.txt:2163
 msgid "Certificate does not match private key\n"
-msgstr ""
+msgstr "Certyfikat nie pasuje do klucza prywatnego\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l506
 #: ../openconnect-strings.txt:2166
 msgid "Checking EC key matches cert\n"
-msgstr ""
+msgstr "Sprawdzanie, czy klucz EC pasuje do certyfikatu\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l510
 #: ../openconnect-strings.txt:2169
 msgid "Failed to allocate signature buffer\n"
-msgstr ""
+msgstr "Przydzielenie bufora podpisu się nie powiodło\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l520
 #: ../openconnect-strings.txt:2172
 msgid "Failed to sign dummy data to validate EC key\n"
 msgstr ""
+"Podpisanie pustych danych, aby sprawdzić poprawność klucza EC, się nie "
+"powiodło\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l638
 #: ../openconnect-strings.txt:2175
 #, c-format
 msgid "Failed to find PKCS#11 key '%s'\n"
-msgstr ""
+msgstr "Odnalezienie klucza PKCS#11 „%s” się nie powiodło\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l649
 #: ../openconnect-strings.txt:2178
@@ -4224,7 +4490,7 @@ msgstr "Nic nie pasuje do „altname” „%s”\n"
 #: ../openconnect-strings.txt:2289
 #, c-format
 msgid "Certificate has GEN_IPADD altname with bogus length %d\n"
-msgstr "Certyfikat posiada „altname” GEN_IPADD z fałszywą długością %d\n"
+msgstr "Certyfikat ma „altname” GEN_IPADD z fałszywą długością %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1222
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1367
@@ -4243,7 +4509,7 @@ msgstr "Nic nie pasuje do adresu %s „%s”\n"
 #: ../openconnect-strings.txt:2299
 #, c-format
 msgid "URI '%s' has non-empty path; ignoring\n"
-msgstr "Adres URI „%s” posiada niepustą ścieżkę. Ignorowanie\n"
+msgstr "Adres URI „%s” ma niepustą ścieżkę. Ignorowanie\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1276
 #: ../openconnect-strings.txt:2302
@@ -4310,7 +4576,7 @@ msgstr "Utworzenie „CTX” TLSv1 się nie powiodło\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1655
 #: ../openconnect-strings.txt:2336
 msgid "SSL certificate and key do not match\n"
-msgstr ""
+msgstr "Certyfikat SSL i klucz nie pasują\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1700
 #: ../openconnect-strings.txt:2339
@@ -4399,7 +4665,7 @@ msgstr "getaddrinfo się nie powiodło dla komputera „%s”: %s\n"
 #: ../openconnect-strings.txt:2383
 msgid "Reconnecting to DynDNS server using previously cached IP address\n"
 msgstr ""
-"Ponowne łączenie z serwerem DynDNS używając poprzednio buforowanego adresu "
+"Ponowne łączenie z serwerem DynDNS za pomocą poprzednio buforowanego adresu "
 "IP\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l332
@@ -4484,7 +4750,7 @@ msgstr "Zablokowano bazę kluczy"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l687
 #: ../openconnect-strings.txt:2428
 msgid "Keystore uninitialized"
-msgstr "Niezainicjowano bazy kluczy"
+msgstr "Nie zainicjowano bazy kluczy"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l688
 #: ../openconnect-strings.txt:2431
@@ -5054,13 +5320,13 @@ msgstr "Przetworzenie pliku konfiguracji XML %s się nie powiodło\n"
 #: ../openconnect-strings.txt:2730
 #, c-format
 msgid "Host \"%s\" has address \"%s\"\n"
-msgstr "Komputer „%s” posiada adres „%s”\n"
+msgstr "Komputer „%s” ma adres „%s”\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/xml.c#l194
 #: ../openconnect-strings.txt:2733
 #, c-format
 msgid "Host \"%s\" has UserGroup \"%s\"\n"
-msgstr "Komputer „%s” posiada „UserGroup” „%s”\n"
+msgstr "Komputer „%s” ma „UserGroup” „%s”\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/xml.c#l208
 #: ../openconnect-strings.txt:2736
@@ -5210,277 +5476,3 @@ msgstr "polecenie obliczania"
 #: ../openconnect-strings.txt:2814
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Nierozpoznana odpowiedź z Yubikey podczas tworzenia kodu tokena\n"
-
-#: ../properties/auth-helpers.c:58
-msgid "Choose a Certificate Authority certificate..."
-msgstr "Wybierz certyfikat CA…"
-
-#: ../properties/auth-helpers.c:74
-msgid "Choose your personal certificate..."
-msgstr "Wybierz certyfikat prywatny…"
-
-#: ../properties/auth-helpers.c:90
-msgid "Choose your private key..."
-msgstr "Wybierz klucz prywatny…"
-
-#: ../properties/auth-helpers.c:250
-msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Ogólne</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Wybór pliku"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_VPN Protocol:"
-msgstr "Protokół _VPN:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Gateway:"
-msgstr "_Brama:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "_Proxy:"
-msgstr "_Pośrednik:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "CA C_ertificate:"
-msgstr "C_ertyfikat CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "_Zezwolenie na trojana Cisco Secure Desktop"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "CSD _Wrapper Script:"
-msgstr "Skrypt _wrappera CSD:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Uwierzytelnianie certyfikatu</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "_User Certificate:"
-msgstr "Certyfikat _użytkownika:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Private _Key:"
-msgstr "_Klucz prywatny:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "Use _FSID for key passphrase"
-msgstr "Użycie _FSID dla hasła klucza"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Uwierzytelnianie tokenem programowym</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token _Mode:"
-msgstr "_Tryb tokena:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Token Sec_ret:"
-msgstr "_Hasło tokena:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "Disabled"
-msgstr "Wyłączone"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "SecurID RSA — odczytywanie z ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "RSA SecurID - manually entered"
-msgstr "SecurID RSA — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "TOTP - manually entered"
-msgstr "TOTP — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:20
-msgid "HOTP - manually entered"
-msgstr "HOTP — wprowadzane ręcznie"
-
-#: ../properties/nm-openconnect-dialog.ui.h:21
-msgid "Yubikey OATH"
-msgstr "OATH Yubikey"
-
-#: ../properties/nm-openconnect-dialog.ui.h:22
-msgid "Cisco AnyConnect"
-msgstr "Cisco AnyConnect"
-
-#: ../properties/nm-openconnect-editor-plugin.c:56
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "VPN zgodny z Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:57
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Zgodny z VPN Cisco AnyConnect SSL."
-
-#: ../properties/nm-openconnect-editor-plugin.c:408
-msgid "Juniper Network Connect (openconnect)"
-msgstr "Juniper Network Connect (openconnect)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:409
-msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
-msgstr "Zgodny z VPN SSL Juniper Network Connect/Pulse Secure"
-
-#. we don't know this protocol by name, but it's configured in the .name file,
-#. * so just take it.
-#: ../properties/nm-openconnect-editor-plugin.c:413
-#, c-format
-msgid "Openconnect VPN (%s)"
-msgstr "VPN OpenConnect (%s)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:414
-#, c-format
-msgid "Openconnect SSL VPN with %s protocol"
-msgstr "VPN SSL OpenConnect z protokołem %s"
-
-#: ../properties/nm-openconnect-editor.c:226
-msgid "Juniper/Pulse Network Connect"
-msgstr "Juniper/Pulse Network Connect"
-
-#: ../shared/nm-utils/nm-shared-utils.c:185
-#, c-format
-msgid "object class '%s' has no property named '%s'"
-msgstr "klasa obiektów „%s” nie posiada właściwości o nazwie „%s”"
-
-#: ../shared/nm-utils/nm-shared-utils.c:192
-#, c-format
-msgid "property '%s' of object class '%s' is not writable"
-msgstr "właściwość „%s” klasy obiektów „%s” nie jest zapisywalna"
-
-#: ../shared/nm-utils/nm-shared-utils.c:199
-#, c-format
-msgid ""
-"construct property \"%s\" for object '%s' can't be set after construction"
-msgstr ""
-"właściwość konstruktu „%s” dla obiektu „%s” nie może zostać ustawiona po "
-"konstrukcji"
-
-#: ../shared/nm-utils/nm-shared-utils.c:207
-#, c-format
-msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
-msgstr ""
-"„%s::%s” nie jest prawidłową nazwą właściwości; „%s” nie jest podtypem "
-"GObject"
-
-#: ../shared/nm-utils/nm-shared-utils.c:216
-#, c-format
-msgid "unable to set property '%s' of type '%s' from value of type '%s'"
-msgstr "nie można ustawić właściwości „%s” typu „%s” z wartości typu „%s”"
-
-#: ../shared/nm-utils/nm-shared-utils.c:227
-#, c-format
-msgid ""
-"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
-"type '%s'"
-msgstr ""
-"wartość „%s” typu „%s” jest nieprawidłowa lub spoza zakresu dla właściwości "
-"„%s” typu „%s”"
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
-#, c-format
-msgid "missing plugin file \"%s\""
-msgstr "brak pliku wtyczki „%s”"
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
-#, c-format
-msgid "cannot load editor plugin: %s"
-msgstr "nie można wczytać wtyczki edytora: %s"
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
-#, c-format
-msgid "cannot load factory %s from plugin: %s"
-msgstr "nie można wczytać generatora %s z wtyczki: %s"
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
-msgid "unknown error creating editor instance"
-msgstr "nieznany błąd podczas tworzenia wystąpienia edytora"
-
-#: ../src/nm-openconnect-service.c:177
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr ""
-"nieprawidłowa własność liczby całkowitej „%s” lub jest poza zakresem [%d -> "
-"%d]"
-
-#: ../src/nm-openconnect-service.c:187
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr ""
-"nieprawidłowa własność zmiennej logicznej „%s” (nie wynosi „yes” lub „no”)"
-
-#: ../src/nm-openconnect-service.c:194
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "nieobsługiwana własność „%s” typu „%s”"
-
-#: ../src/nm-openconnect-service.c:207
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "własność „%s” jest nieprawidłowa lub nieobsługiwana"
-
-#: ../src/nm-openconnect-service.c:223
-msgid "No VPN configuration options."
-msgstr "Brak opcji konfiguracji VPN."
-
-#: ../src/nm-openconnect-service.c:241
-msgid "No VPN secrets!"
-msgstr "Brak haseł VPN."
-
-#: ../src/nm-openconnect-service.c:409
-msgid "Could not find openconnect binary."
-msgstr "Nie można odnaleźć pliku binarnego openconnect."
-
-#: ../src/nm-openconnect-service.c:421
-msgid "No VPN gateway specified."
-msgstr "Nie podano bramy VPN."
-
-#: ../src/nm-openconnect-service.c:431
-msgid "No WebVPN cookie provided."
-msgstr "Nie podano ciasteczka WebVPN."
-
-#: ../src/nm-openconnect-service.c:691
-msgid "Don't quit when VPN connection terminates"
-msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
-
-#: ../src/nm-openconnect-service.c:692
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr ""
-"Włącza zapisywanie większej liczby komunikatów debugowania w dzienniku (może "
-"ujawnić hasła)"
-
-#: ../src/nm-openconnect-service.c:693
-msgid "D-Bus name to use for this instance"
-msgstr "Nazwa D-Bus dla tego wystąpienia"
-
-#: ../src/nm-openconnect-service.c:716
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"nm-openconnect-service dostarcza zintegrowaną możliwość VPN SSL Cisco "
-"AnyConnect dla usługi NetworkManager."
-
-#~ msgid "Discarding ancient ESP packet with seq %u (expected %u)\n"
-#~ msgstr "Odrzucanie starego pakietu ESP z sekwencją %u (oczekiwano %u)\n"
-
-#~ msgid "Accepting out-of-order ESP packet with seq %u (expected %u)\n"
-#~ msgstr ""
-#~ "Przyjmowanie pakietu ESP poza kolejnością z sekwencją %u (oczekiwano %u)\n"
-
-#~ msgid "Accepting later-than-expected ESP packet with seq %u (expected %u)\n"
-#~ msgstr ""
-#~ "Przyjmowanie pakietu ESP późniejszego niż oczekiwano z sekwencją %u "
-#~ "(oczekiwano %u)\n"
-
-#~ msgid "(error 0x%x)"
-#~ msgstr "(błąd 0x%x)"
