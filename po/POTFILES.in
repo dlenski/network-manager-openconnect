@@ -2,11 +2,11 @@
 # Please keep this file sorted alphabetically.
 appdata/network-manager-openconnect.metainfo.xml.in
 auth-dialog/main.c
-openconnect-strings.txt
 properties/auth-helpers.c
-properties/nm-openconnect-editor-plugin.c
+[type: gettext/glade]properties/nm-openconnect-dialog.ui
 properties/nm-openconnect-editor.c
+properties/nm-openconnect-editor-plugin.c
 shared/nm-utils/nm-shared-utils.c
 shared/nm-utils/nm-vpn-plugin-utils.c
 src/nm-openconnect-service.c
-[type: gettext/glade]properties/nm-openconnect-dialog.ui
+openconnect-strings.txt
