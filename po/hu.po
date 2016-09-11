@@ -9,9 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: networkmanager-openconnect master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 12:49+0100\n"
-"PO-Revision-Date: 2016-08-30 16:26+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=VPN: openconnect\n"
+"POT-Creation-Date: 2016-09-08 11:52+0000\n"
+"PO-Revision-Date: 2016-09-08 14:26+0200\n"
 "Last-Translator: Meskó Balázs <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -3129,6 +3130,9 @@ msgid ""
 "The --no-cert-check option was insecure and has been removed.\n"
 "Fix your server's certificate or use --servercert to trust it.\n"
 msgstr ""
+"A --no-cert-check kapcsoló nem volt biztonságos, és el lett távolítva.\n"
+"Hozza rendbe a kiszolgáló tanúsítványát, vagy használja a --servercert "
+"kapcsolót, ha megbízik benne.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1311
 #: ../openconnect-strings.txt:1693
@@ -3283,12 +3287,14 @@ msgstr ""
 msgid ""
 "To trust this server in future, perhaps add this to your command line:\n"
 msgstr ""
+"Ha megbízik a kiszolgálóban a jövőben, akkor hozzáadhatja ezt a parancs "
+"sorához:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1721
 #: ../openconnect-strings.txt:1778
 #, c-format
 msgid "    --servercert %s\n"
-msgstr ""
+msgstr "    --servercert %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1726
 #: ../openconnect-strings.txt:1781
@@ -3955,7 +3961,7 @@ msgstr "Bejelentkezés a következő PKCS#11 tárolóhelyre: „%s”\n"
 #: ../openconnect-strings.txt:2143
 #, c-format
 msgid "Failed to find PKCS#11 cert '%s'\n"
-msgstr ""
+msgstr "Nem sikerült megtalálni a(z) „%s” PKCS#11 tanúsítványt\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l401
 #: ../openconnect-strings.txt:2146
@@ -3984,34 +3990,34 @@ msgstr "%d kulcs található a következő tárolóhelyen: „%s”\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l497
 #: ../openconnect-strings.txt:2159
 msgid "Certificate has no public key\n"
-msgstr ""
+msgstr "A tanúsítványban nincs nyilvános kulcs\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l503
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l526
 #: ../openconnect-strings.txt:2163
 msgid "Certificate does not match private key\n"
-msgstr ""
+msgstr "A tanúsítvány nem egyezik a titkos kulccsal\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l506
 #: ../openconnect-strings.txt:2166
 msgid "Checking EC key matches cert\n"
-msgstr ""
+msgstr "Az EC kulcsellenőrzés egyezik a tanúsítvánnyal\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l510
 #: ../openconnect-strings.txt:2169
 msgid "Failed to allocate signature buffer\n"
-msgstr ""
+msgstr "Nem sikerült lefoglalni a mintapuffert\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l520
 #: ../openconnect-strings.txt:2172
 msgid "Failed to sign dummy data to validate EC key\n"
-msgstr ""
+msgstr "Nem sikerült aláírni a látszatadatokat az EC kulcs ellenőrzéséhez\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l638
 #: ../openconnect-strings.txt:2175
 #, c-format
 msgid "Failed to find PKCS#11 key '%s'\n"
-msgstr ""
+msgstr "Nem sikerült megtalálni a(z) „%s” PKCS#11 kulcsot\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l649
 #: ../openconnect-strings.txt:2178
@@ -4300,7 +4306,7 @@ msgstr "TLSv1 CTX létrehozása sikertelen\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1655
 #: ../openconnect-strings.txt:2336
 msgid "SSL certificate and key do not match\n"
-msgstr ""
+msgstr "Az SSL tanúsítvány és a kulcs nem egyezik\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1700
 #: ../openconnect-strings.txt:2339
@@ -5209,94 +5215,6 @@ msgstr "Válassza ki a személyes kulcsát…"
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM tanúsítványok (*.pem, *.crt, *.key)"
 
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Általános</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Válasszon ki egy fájlt"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_VPN Protocol:"
-msgstr "_VPN Protokoll:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Gateway:"
-msgstr "Á_tjáró:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "_Proxy:"
-msgstr "_Proxy:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "CA C_ertificate:"
-msgstr "_CA tanúsítvány:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "A Cisco Secure Desktop _trójai engedélyezése"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "CSD _Wrapper Script:"
-msgstr "_CSD átalakító parancsfájl:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Tanúsítvány hitelesítése</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "_User Certificate:"
-msgstr "F_elhasználói tanúsítvány:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Private _Key:"
-msgstr "S_zemélyes kulcs:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "Use _FSID for key passphrase"
-msgstr "_FSID használata a kulcs jelszavához"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Szoftveres token hitelesítése</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token _Mode:"
-msgstr "Token _mód:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Token Sec_ret:"
-msgstr "Token _titok:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "Disabled"
-msgstr "Kikapcsolva"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "RSA SecurID - beolvasás a ~/.stokenrc fájlból"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "RSA SecurID - manually entered"
-msgstr "RSA SecurID - kézzel megadott"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "TOTP - manually entered"
-msgstr "TOTP - kézzel megadott"
-
-#: ../properties/nm-openconnect-dialog.ui.h:20
-msgid "HOTP - manually entered"
-msgstr "HOTP - kézzel megadott"
-
-#: ../properties/nm-openconnect-dialog.ui.h:21
-msgid "Yubikey OATH"
-msgstr "Yubikey OATH"
-
-#: ../properties/nm-openconnect-dialog.ui.h:22
-msgid "Cisco AnyConnect"
-msgstr "Cisco AnyConnect"
-
 #: ../properties/nm-openconnect-editor-plugin.c:56
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
 msgstr "Cisco AnyConnect-kompatibilis VPN (openconnect)"
@@ -5447,6 +5365,94 @@ msgid ""
 msgstr ""
 "Az nm-openconnect-service integrált Cisco AnyConnect SSL VPN képességet "
 "biztosít a Hálózatkezelőnek."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Általános</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Válasszon ki egy fájlt"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_VPN Protocol:"
+msgstr "_VPN Protokoll:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Gateway:"
+msgstr "Á_tjáró:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "CA C_ertificate:"
+msgstr "_CA tanúsítvány:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "A Cisco Secure Desktop _trójai engedélyezése"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "CSD _Wrapper Script:"
+msgstr "_CSD átalakító parancsfájl:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Tanúsítvány hitelesítése</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_User Certificate:"
+msgstr "F_elhasználói tanúsítvány:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Private _Key:"
+msgstr "S_zemélyes kulcs:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "Use _FSID for key passphrase"
+msgstr "_FSID használata a kulcs jelszavához"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Szoftveres token hitelesítése</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token _Mode:"
+msgstr "Token _mód:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Token Sec_ret:"
+msgstr "Token _titok:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "Disabled"
+msgstr "Kikapcsolva"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "RSA SecurID - beolvasás a ~/.stokenrc fájlból"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "RSA SecurID - manually entered"
+msgstr "RSA SecurID - kézzel megadott"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "TOTP - manually entered"
+msgstr "TOTP - kézzel megadott"
+
+#: ../properties/nm-openconnect-dialog.ui.h:20
+msgid "HOTP - manually entered"
+msgstr "HOTP - kézzel megadott"
+
+#: ../properties/nm-openconnect-dialog.ui.h:21
+msgid "Yubikey OATH"
+msgstr "Yubikey OATH"
+
+#: ../properties/nm-openconnect-dialog.ui.h:22
+msgid "Cisco AnyConnect"
+msgstr "Cisco AnyConnect"
 
 #~ msgid "Discarding ancient ESP packet with seq %u (expected %u)\n"
 #~ msgstr "Régi ESP csomag eldobása %u sorszámmal (várt érték: %u)\n"
