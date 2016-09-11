@@ -3030,7 +3030,7 @@ msgstr "Nom d'amfitrió local per publicitar al servidor"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l822
 #: ../openconnect-strings.txt:1620
 msgid "Use IP when connecting to HOST"
-msgstr "Usa l'IP quan et connectis a HOST"
+msgstr "Usa la IP quan et connectis a HOST"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l823
 #: ../openconnect-strings.txt:1623
@@ -3752,7 +3752,7 @@ msgstr "Esperat el missatge 301 KMP del servidor però s'ha obtingut %d\n"
 #: ../openconnect-strings.txt:2013
 #, c-format
 msgid "KMP message 301 from server too large (%d bytes)\n"
-msgstr "El missatge 301 de KMP del servidor és massa llarg (%d bytes)\n"
+msgstr "El missatge 301 de KMP del servidor és massa gran (%d bytes)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/oncp.c#l722
 #: ../openconnect-strings.txt:2016
@@ -3769,7 +3769,7 @@ msgstr "No s'ha pogut llegir la longitud del registre de continuació\n"
 #: ../openconnect-strings.txt:2022
 #, c-format
 msgid "Record of additional %d bytes too large; would make %d\n"
-msgstr "El registre de %d bytes addicionals és massa llarg; es farà de %d\n"
+msgstr "El registre de %d bytes addicionals és massa gran; es farà de %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/oncp.c#l744
 #: ../openconnect-strings.txt:2025
@@ -4454,7 +4454,7 @@ msgstr "No s'ha pogut connectar a %s%s%s:%s: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l425
 #: ../openconnect-strings.txt:2401
 msgid "Forgetting non-functional previous peer address\n"
-msgstr "S'estan oblidant les adreces parell prèvies no funcionals\n"
+msgstr "S'estan oblidant les adreces parelles prèvies no funcionals\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l437
 #: ../openconnect-strings.txt:2404
