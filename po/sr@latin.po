@@ -6,17 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 12:49+0100\n"
-"PO-Revision-Date: 2016-09-01 18:03+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=Network"
+"Manager&keywords=I18N+L10N&component=VPN: openconnect\n"
+"POT-Creation-Date: 2016-09-08 11:52+0000\n"
+"PO-Revision-Date: 2016-09-11 08:45+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: srpski <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
@@ -1473,8 +1474,7 @@ msgstr "Greška MD5 heša: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/gnutls.c#l765
 #: ../openconnect-strings.txt:769
 msgid "Missing DEK-Info: header from OpenSSL encrypted key\n"
-msgstr ""
-"Nedostaje zaglavlje „DEK-Info:“ iz ključa šifrovanog Otvorenim SSl-om\n"
+msgstr "Nedostaje zaglavlje „DEK-Info:“ iz ključa šifrovanog Otvorenim SSl-om\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/gnutls.c#l772
 #: ../openconnect-strings.txt:772
@@ -1736,8 +1736,8 @@ msgstr "Nisam uspeo da dodelim memoriju za uverenje\n"
 msgid ""
 "WARNING: GnuTLS returned incorrect issuer certs; authentication may fail!\n"
 msgstr ""
-"UPOZORENJE: GnuTLS je vratio netačno uverenje izdavača; potvrđivanje "
-"identiteta možda neće uspeti!\n"
+"UPOZORENJE: GnuTLS je vratio netačno uverenje izdavača; potvrđivanje identiteta "
+"možda neće uspeti!\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/gnutls.c#l1732
 #: ../openconnect-strings.txt:920
@@ -1859,8 +1859,7 @@ msgstr "Nije uspela provera uverenja servera: %s\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/gnutls.c#l2219
 #: ../openconnect-strings.txt:990
 msgid "Failed to allocate memory for cafile certs\n"
-msgstr ""
-"Nisam uspeo da dodelim memoriju za uverenja datoteke izdavača uverenja\n"
+msgstr "Nisam uspeo da dodelim memoriju za uverenja datoteke izdavača uverenja\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/gnutls.c#l2240
 #: ../openconnect-strings.txt:993
@@ -2126,8 +2125,7 @@ msgstr ""
 #, c-format
 msgid "Failed to receive GSSAPI authentication token from proxy: %s\n"
 msgstr ""
-"Nisam uspeo da primim GSSAPI modul potvrđivanja identiteta od posrednika: "
-"%s\n"
+"Nisam uspeo da primim GSSAPI modul potvrđivanja identiteta od posrednika: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/gssapi.c#l243
 #: ../openconnect-strings.txt:1139
@@ -2407,16 +2405,14 @@ msgstr ""
 #: ../openconnect-strings.txt:1290
 #, c-format
 msgid "Error writing auth request to SOCKS proxy: %s\n"
-msgstr ""
-"Greška pisanja zahteva potvrđivanja identiteta na SOCKS posredniku: %s\n"
+msgstr "Greška pisanja zahteva potvrđivanja identiteta na SOCKS posredniku: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/http.c#l1105
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/http.c#l1160
 #: ../openconnect-strings.txt:1294
 #, c-format
 msgid "Error reading auth response from SOCKS proxy: %s\n"
-msgstr ""
-"Greška čitanja zahteva potvrđivanja identiteta sa SOCKS posrednika: %s\n"
+msgstr "Greška čitanja zahteva potvrđivanja identiteta sa SOCKS posrednika: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/http.c#l1112
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/http.c#l1166
@@ -2623,8 +2619,7 @@ msgid ""
 "WARNING: No DTLS support in this binary. Performance will be impaired.\n"
 msgstr ""
 "\n"
-"UPOZORENJE: Nema DTLS podrške u ovoj izvršnoj. Delotvornost će biti "
-"umanjena.\n"
+"UPOZORENJE: Nema DTLS podrške u ovoj izvršnoj. Delotvornost će biti umanjena.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l663
 #: ../openconnect-strings.txt:1411
@@ -2952,8 +2947,7 @@ msgstr "Tajna softverskog modula"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l813
 #: ../openconnect-strings.txt:1602
 msgid "(NOTE: libstoken (RSA SecurID) disabled in this build)"
-msgstr ""
-"(NAPOMENA: „libstoken“ (RSA Bezbedni IB) je isključena u ovoj izgradnji)"
+msgstr "(NAPOMENA: „libstoken“ (RSA Bezbedni IB) je isključena u ovoj izgradnji)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l816
 #: ../openconnect-strings.txt:1605
@@ -3114,6 +3108,8 @@ msgid ""
 "The --no-cert-check option was insecure and has been removed.\n"
 "Fix your server's certificate or use --servercert to trust it.\n"
 msgstr ""
+"Opcija „--no-cert-check“ nije bila bezbedna i uklonjena je.\n"
+"Ispravite vaše uverenje servera ili koristite „--servercert“ da mu verujete.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1311
 #: ../openconnect-strings.txt:1693
@@ -3267,13 +3263,13 @@ msgstr ""
 #: ../openconnect-strings.txt:1774
 msgid ""
 "To trust this server in future, perhaps add this to your command line:\n"
-msgstr ""
+msgstr "Da i dalje verujete ovom serveru, dodajte ovo na liniju naredbi:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1721
 #: ../openconnect-strings.txt:1778
 #, c-format
 msgid "    --servercert %s\n"
-msgstr ""
+msgstr "    --servercert %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1726
 #: ../openconnect-strings.txt:1781
@@ -3434,8 +3430,7 @@ msgstr ""
 #, c-format
 msgid "Attempting HTTP NTLM authentication to server '%s' (single-sign-on)\n"
 msgstr ""
-"Pokušavam HTTP NTML potvrđivanje identiteta sa serverom „%s“ (jedna-"
-"prijava)\n"
+"Pokušavam HTTP NTML potvrđivanje identiteta sa serverom „%s“ (jedna-prijava)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ntlm.c#l978
 #: ../openconnect-strings.txt:1871
@@ -3931,7 +3926,7 @@ msgstr "Prijavljujem se na PKCS#11 priključak „%s“\n"
 #: ../openconnect-strings.txt:2143
 #, c-format
 msgid "Failed to find PKCS#11 cert '%s'\n"
-msgstr ""
+msgstr "Nisam uspeo da nađem PKCS#11 uverenje „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l401
 #: ../openconnect-strings.txt:2146
@@ -3959,34 +3954,34 @@ msgstr "Nađoh %d ključa u priključku „%s“\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l497
 #: ../openconnect-strings.txt:2159
 msgid "Certificate has no public key\n"
-msgstr ""
+msgstr "Uverenje nema javni ključ\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l503
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l526
 #: ../openconnect-strings.txt:2163
 msgid "Certificate does not match private key\n"
-msgstr ""
+msgstr "Uverenje ne odgovara ličnom ključu\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l506
 #: ../openconnect-strings.txt:2166
 msgid "Checking EC key matches cert\n"
-msgstr ""
+msgstr "Provera EC ključa odgovara uverenju\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l510
 #: ../openconnect-strings.txt:2169
 msgid "Failed to allocate signature buffer\n"
-msgstr ""
+msgstr "Nisam uspeo da dodelim međumemoriju potpisa\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l520
 #: ../openconnect-strings.txt:2172
 msgid "Failed to sign dummy data to validate EC key\n"
-msgstr ""
+msgstr "Nisam uspeo da potpišem lažne podatke da bih potvrdio EC ključ\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l638
 #: ../openconnect-strings.txt:2175
 #, c-format
 msgid "Failed to find PKCS#11 key '%s'\n"
-msgstr ""
+msgstr "Nisam uspeo da nađem PKCS#11 ključ „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l649
 #: ../openconnect-strings.txt:2178
@@ -4272,7 +4267,7 @@ msgstr "Stvaranje TLSv1 CTIks-a nije uspelo\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1655
 #: ../openconnect-strings.txt:2336
 msgid "SSL certificate and key do not match\n"
-msgstr ""
+msgstr "SSL uverenje i ključ se ne podudaraju\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1700
 #: ../openconnect-strings.txt:2339
@@ -4735,8 +4730,8 @@ msgstr "Nisam uspeo da dobijem izdanje TAP upravljačkog programa: %s\n"
 #, c-format
 msgid "Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n"
 msgstr ""
-"Greška: Potreban je upravljački program TAP-Vindouza v9.9 ili veći (nađoh "
-"%ld.%ld)\n"
+"Greška: Potreban je upravljački program TAP-Vindouza v9.9 ili veći (nađoh %ld."
+"%ld)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/tun-win32.c#l207
 #: ../openconnect-strings.txt:2588
@@ -5134,8 +5129,7 @@ msgstr "Nađoh %s/%s kljzč „%s“ na „%s“\n"
 #, c-format
 msgid ""
 "Token '%s' not found on Yubikey '%s'. Searching for another Yubikey...\n"
-msgstr ""
-"Nisam našao modul „%s“ na Jubi ključu „%s“. Tražim drugi Jubi ključ...\n"
+msgstr "Nisam našao modul „%s“ na Jubi ključu „%s“. Tražim drugi Jubi ključ...\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/yubikey.c#l497
 #: ../openconnect-strings.txt:2802
@@ -5178,94 +5172,6 @@ msgstr "Izaberite lični ključ..."
 #: ../properties/auth-helpers.c:250
 msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "PEM uverenja (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Opšte</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Izaberite datoteku"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_VPN Protocol:"
-msgstr "_VPN protokol:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Gateway:"
-msgstr "_Mrežni prolaz:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "_Proxy:"
-msgstr "_Posrednik:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "CA C_ertificate:"
-msgstr "Uverenje _izdavača uverenja:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Dozvoli _trojanca Cisko bezbedne radne površi"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "CSD _Wrapper Script:"
-msgstr "Skripta CSD _omotača:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Potvrđivanje identiteta uverenja</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "_User Certificate:"
-msgstr "_Korisničko uverenje:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Private _Key:"
-msgstr "_Lični ključ:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "Use _FSID for key passphrase"
-msgstr "Koristi _FSID za lozinku ključa"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Potvrđivanje identiteta softverskim modulom</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token _Mode:"
-msgstr "_Režim modula:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Token Sec_ret:"
-msgstr "_Tajna modula:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "Disabled"
-msgstr "Isključeno"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "RSA bezbedni IB — čitam iz „~/.stokenrc“"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "RSA SecurID - manually entered"
-msgstr "RSA bezbedni IB — ručno je unešen"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "TOTP - manually entered"
-msgstr "TOTP — ručno unešeno"
-
-#: ../properties/nm-openconnect-dialog.ui.h:20
-msgid "HOTP - manually entered"
-msgstr "HOTP — ručno unešeno"
-
-#: ../properties/nm-openconnect-dialog.ui.h:21
-msgid "Yubikey OATH"
-msgstr "Jubiki OATH"
-
-#: ../properties/nm-openconnect-dialog.ui.h:22
-msgid "Cisco AnyConnect"
-msgstr "Cisko Eni konekt"
 
 #: ../properties/nm-openconnect-editor-plugin.c:56
 msgid "Cisco AnyConnect Compatible VPN (openconnect)"
@@ -5412,6 +5318,94 @@ msgid ""
 msgstr ""
 "nm-openkonekt-usluga obezbeđuje Upravniku mreže objedinjenu Cisko Eni Konekt "
 "SSL VPN mogućnost."
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Opšte</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Izaberite datoteku"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_VPN Protocol:"
+msgstr "_VPN protokol:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Gateway:"
+msgstr "_Mrežni prolaz:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_Proxy:"
+msgstr "_Posrednik:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "CA C_ertificate:"
+msgstr "Uverenje _izdavača uverenja:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Dozvoli _trojanca Cisko bezbedne radne površi"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "CSD _Wrapper Script:"
+msgstr "Skripta CSD _omotača:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Potvrđivanje identiteta uverenja</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_User Certificate:"
+msgstr "_Korisničko uverenje:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Private _Key:"
+msgstr "_Lični ključ:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "Use _FSID for key passphrase"
+msgstr "Koristi _FSID za lozinku ključa"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Potvrđivanje identiteta softverskim modulom</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token _Mode:"
+msgstr "_Režim modula:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Token Sec_ret:"
+msgstr "_Tajna modula:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "Disabled"
+msgstr "Isključeno"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "RSA bezbedni IB — čitam iz „~/.stokenrc“"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "RSA SecurID - manually entered"
+msgstr "RSA bezbedni IB — ručno je unešen"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "TOTP - manually entered"
+msgstr "TOTP — ručno unešeno"
+
+#: ../properties/nm-openconnect-dialog.ui.h:20
+msgid "HOTP - manually entered"
+msgstr "HOTP — ručno unešeno"
+
+#: ../properties/nm-openconnect-dialog.ui.h:21
+msgid "Yubikey OATH"
+msgstr "Jubiki OATH"
+
+#: ../properties/nm-openconnect-dialog.ui.h:22
+msgid "Cisco AnyConnect"
+msgstr "Cisko Eni konekt"
 
 #~ msgid "Discarding ancient ESP packet with seq %u (expected %u)\n"
 #~ msgstr "Odbacujem stari ESP paket sa nizom %u (očekivah %u)\n"
