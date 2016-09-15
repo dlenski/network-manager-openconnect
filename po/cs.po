@@ -7,9 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 12:49+0100\n"
-"PO-Revision-Date: 2016-03-22 14:42+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&keywords=I18N+L10N&component=VPN: openconnect\n"
+"POT-Creation-Date: 2016-09-10 16:07+0000\n"
+"PO-Revision-Date: 2016-06-30 14:41+0100\n"
 "Last-Translator: Zdeněk Hataš <zdenek.hatas@gmail.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -109,11 +110,260 @@ msgstr "Uložit hesla"
 msgid "Log"
 msgstr "Záznam"
 
+#: ../properties/auth-helpers.c:58
+msgid "Choose a Certificate Authority certificate..."
+msgstr "Zvolit certifikát certifikační autority…"
+
+#: ../properties/auth-helpers.c:74
+msgid "Choose your personal certificate..."
+msgstr "Zvolte svůj osobní certifikát…"
+
+#: ../properties/auth-helpers.c:90
+msgid "Choose your private key..."
+msgstr "Zvolte svůj soukromý klíč…"
+
+#: ../properties/auth-helpers.c:250
+msgid "PEM certificates (*.pem, *.crt, *.key)"
+msgstr "Certifikáty PEM (*.pem, *.crt, *.key)"
+
+#: ../properties/nm-openconnect-dialog.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Obecné</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:2
+msgid "Select A File"
+msgstr "Zvolte soubor"
+
+#: ../properties/nm-openconnect-dialog.ui.h:3
+msgid "_VPN Protocol:"
+msgstr "Protokol _VPN:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:4
+msgid "_Gateway:"
+msgstr "_Brána:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:5
+msgid "_Proxy:"
+msgstr "_Proxy:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:6
+msgid "CA C_ertificate:"
+msgstr "Certifikát _CA:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:7
+msgid "Allow Cisco Secure Desktop _trojan"
+msgstr "Povolit _trojského koně Cisco Secure Desktop"
+
+#: ../properties/nm-openconnect-dialog.ui.h:8
+msgid "CSD _Wrapper Script:"
+msgstr "CSD _obalující skript:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:9
+msgid "<b>Certificate Authentication</b>"
+msgstr "<b>Autentizace certifikátem<b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:10
+msgid "_User Certificate:"
+msgstr "Certifikát _uživatele:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:11
+msgid "Private _Key:"
+msgstr "Soukromý _klíč"
+
+#: ../properties/nm-openconnect-dialog.ui.h:12
+msgid "Use _FSID for key passphrase"
+msgstr "Použít _FSID jako heslo klíče"
+
+#: ../properties/nm-openconnect-dialog.ui.h:13
+msgid "<b>Software Token Authentication</b>"
+msgstr "<b>Softwarový ověřovací tiket</b>"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid "Token _Mode:"
+msgstr "Reži_m tiketu:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:15
+msgid "Token Sec_ret:"
+msgstr "He_slo tiketu:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:16
+msgid "Disabled"
+msgstr "Zakázáno"
+
+#: ../properties/nm-openconnect-dialog.ui.h:17
+msgid "RSA SecurID - read from ~/.stokenrc"
+msgstr "RSA SecurID – přečteno ze souboru ~/.stokenrc"
+
+#: ../properties/nm-openconnect-dialog.ui.h:18
+msgid "RSA SecurID - manually entered"
+msgstr "RSA SecurID – zadáno ručně"
+
+#: ../properties/nm-openconnect-dialog.ui.h:19
+msgid "TOTP - manually entered"
+msgstr "TOTP – zadáno ručně"
+
+#: ../properties/nm-openconnect-dialog.ui.h:20
+msgid "HOTP - manually entered"
+msgstr "HOTP – zadáno ručně"
+
+#: ../properties/nm-openconnect-dialog.ui.h:21
+msgid "Yubikey OATH"
+msgstr "Yubikey OATH:"
+
+#: ../properties/nm-openconnect-dialog.ui.h:22
+msgid "Cisco AnyConnect"
+msgstr "Cisco AnyConnect"
+
+#: ../properties/nm-openconnect-editor.c:226
+msgid "Juniper/Pulse Network Connect"
+msgstr "Juniper/Pulse Network Connect"
+
+#: ../properties/nm-openconnect-editor-plugin.c:56
+msgid "Cisco AnyConnect Compatible VPN (openconnect)"
+msgstr "VPN kompatibilní s Cisco AnyConnect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:57
+msgid "Compatible with Cisco AnyConnect SSL VPN."
+msgstr "Kompatibilní s Cisco AnyConnect SSL VPN."
+
+#: ../properties/nm-openconnect-editor-plugin.c:408
+msgid "Juniper Network Connect (openconnect)"
+msgstr "Juniper Network Connect (openconnect)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:409
+msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
+msgstr "Kompatibilní s  Juniper Network Connect / Pulse Secure SSL VPN"
+
+#. we don't know this protocol by name, but it's configured in the .name file,
+#. * so just take it.
+#: ../properties/nm-openconnect-editor-plugin.c:413
+#, c-format
+msgid "Openconnect VPN (%s)"
+msgstr "Openconnect VPN (%s)"
+
+#: ../properties/nm-openconnect-editor-plugin.c:414
+#, c-format
+msgid "Openconnect SSL VPN with %s protocol"
+msgstr "Openconnect SSL VPN s protokolem %s"
+
+#: ../shared/nm-utils/nm-shared-utils.c:185
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr "objektová třída „%s“ nemá vlastnost nazvanou „%s“"
+
+#: ../shared/nm-utils/nm-shared-utils.c:192
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr "vlastnost „%s“ objektové třídy „%s“ není zapisovatelná"
+
+#: ../shared/nm-utils/nm-shared-utils.c:199
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr ""
+"vytvoření vlastnosti „%s“ objektu „%s“ nemůže být nastaveno po vytváření"
+
+#: ../shared/nm-utils/nm-shared-utils.c:207
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr "„%s::%s“ není platný název vlastnosti; „%s“ není podtyp GObject"
+
+#: ../shared/nm-utils/nm-shared-utils.c:216
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr "nelze nastavit vlastnost „%s“ typu „%s“ z hodnoty typu „%s“"
+
+#: ../shared/nm-utils/nm-shared-utils.c:227
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr "hodnota „%s“ typu „%s“ je mimo rozsah vlastnosti „%s“ typu „%s“"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr "chybějící soubor zásuvného modulu „%s“"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr "nelze načíst editor zásuvného modulu: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr "nelze načíst generátor %s ze zásuvného modulu: %s"
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
+msgid "unknown error creating editor instance"
+msgstr "neznámá chyba vytváření instance editoru"
+
+#: ../src/nm-openconnect-service.c:177
+#, c-format
+msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgstr "celočíselná vlastnost „%s“ je neplatná nebo mimo rozsah [%d -> %d]"
+
+#: ../src/nm-openconnect-service.c:187
+#, c-format
+msgid "invalid boolean property '%s' (not yes or no)"
+msgstr "pravdivostní vlastnost „%s“ je neplatná (není ano či ne)"
+
+#: ../src/nm-openconnect-service.c:194
+#, c-format
+msgid "unhandled property '%s' type %s"
+msgstr "neošetřená vlastnost „%s“ typu %s"
+
+#: ../src/nm-openconnect-service.c:207
+#, c-format
+msgid "property '%s' invalid or not supported"
+msgstr "vlastnost „%s“ není platná nebo podorovaná"
+
+#: ../src/nm-openconnect-service.c:223
+msgid "No VPN configuration options."
+msgstr "Žádné volby nastavení VPN."
+
+#: ../src/nm-openconnect-service.c:241
+msgid "No VPN secrets!"
+msgstr "Žádná hesla VPN!"
+
+#: ../src/nm-openconnect-service.c:409
+msgid "Could not find openconnect binary."
+msgstr "Nelze nalézt program openconnect."
+
+#: ../src/nm-openconnect-service.c:421
+msgid "No VPN gateway specified."
+msgstr "Nebyla zadána žádná brána VPN."
+
+#: ../src/nm-openconnect-service.c:431
+msgid "No WebVPN cookie provided."
+msgstr "Nebyla poskytnuta žádná cookie WebVPN."
+
+#: ../src/nm-openconnect-service.c:691
+msgid "Don't quit when VPN connection terminates"
+msgstr "Nevypínat, když se ukončuje spojení VPN"
+
+#: ../src/nm-openconnect-service.c:692
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr "Povolit podrobný ladicí výpis (může prozradit hesla)"
+
+#: ../src/nm-openconnect-service.c:693
+msgid "D-Bus name to use for this instance"
+msgstr "Název použitý v D-Bus pro tuto instanci"
+
+#: ../src/nm-openconnect-service.c:716
+msgid ""
+"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
+"capability to NetworkManager."
+msgstr ""
+"Služba nm-openconnect-service poskytuje integraci podpory pro Cisco "
+"AnyConnect SSL do aplikace NetworkManager."
+
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth-juniper.c#l135
 #: ../openconnect-strings.txt:14
 #, c-format
 msgid "Ignoring unknown form submit item '%s'\n"
-msgstr "Ignoruje se neznámý prvek odeslání formuláře '%s'\n"
+msgstr "Ignoruje se neznámý prvek odeslání formuláře „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth-juniper.c#l146
 #: ../openconnect-strings.txt:17
@@ -125,7 +375,7 @@ msgstr "Ignoruje se neznámý typ vstupu „%s“ ve formuláři\n"
 #: ../openconnect-strings.txt:20
 #, c-format
 msgid "Discarding duplicate option '%s'\n"
-msgstr "Ignoruje se zdvojená volba: „%s“\n"
+msgstr "Ignoruje se zdvojená volba „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth-juniper.c#l229
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth.c#l408
@@ -139,7 +389,7 @@ msgstr ""
 #: ../openconnect-strings.txt:27
 #, c-format
 msgid "Unknown textarea field: '%s'\n"
-msgstr ""
+msgstr "Neznámé textové pole: „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/auth-juniper.c#l328
 #: ../openconnect-strings.txt:30
@@ -813,7 +1063,7 @@ msgstr "Inicializace DTLSv1 CTX se nepodařila\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l275
 #: ../openconnect-strings.txt:406
 msgid "Set DTLS CTX version failed\n"
-msgstr ""
+msgstr "Nastavení verze DTLS CTX se nezdařilo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l290
 #: ../openconnect-strings.txt:409
@@ -1042,12 +1292,12 @@ msgstr "Přijat neznámý paket (len %d): %02x %02x %02x %02x…\n"
 #: ../openconnect-strings.txt:533
 #, c-format
 msgid "TOS this: %d, TOS last: %d\n"
-msgstr ""
+msgstr "Toto TOS: %d, předchozí TOS: %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l1049
 #: ../openconnect-strings.txt:536
 msgid "UDP setsockopt"
-msgstr ""
+msgstr "Volba pro soket UDP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/dtls.c#l1080
 #: ../openconnect-strings.txt:539
@@ -1133,27 +1383,25 @@ msgstr "Přijímá se očekávaný ESP paket se sekv. č. %u\n"
 msgid ""
 "Accepting later-than-expected ESP packet with seq %u (expected %<PRIu64>)\n"
 msgstr ""
-"Přijímá se novější než očekávaný ESP paket se sekv. č. %u (očekáváno "
-"%<PRIu64>)\n"
+"Přijímá se novější než očekávaný ESP paket s pořadovým číslem %u (očekáváno %<PRIu64>)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/esp-seqno.c#l103
 #: ../openconnect-strings.txt:585
 #, c-format
 msgid "Discarding ancient ESP packet with seq %u (expected %<PRIu64>)\n"
-msgstr "Zahazuje se starý ESP paket se sekv. č. %u (očekáváno %<PRIu64>)\n"
+msgstr "Zahazuje se starý ESP paket s pořadovým číslem %u (očekáváno %<PRIu64>)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/esp-seqno.c#l110
 #: ../openconnect-strings.txt:588
 #, c-format
 msgid "Discarding replayed ESP packet with seq %u\n"
-msgstr "Zahazuje se opakovaný ESP paket se sekv. č. %u\n"
+msgstr "Zahazuje se opakovaný ESP paket s pořadovým číslem %u\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/esp-seqno.c#l122
 #: ../openconnect-strings.txt:591
 #, c-format
 msgid "Accepting out-of-order ESP packet with seq %u (expected %<PRIu64>)\n"
-msgstr ""
-"Přijímá se ESP paket mimo pořadí se sekv. č. %u (očekáváno %<PRIu64>)\n"
+msgstr "Přijímá se ESP paket mimo pořadí s pořadovým číslem %u (očekáváno %<PRIu64>)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/esp.c#l68
 #: ../openconnect-strings.txt:594
@@ -2740,7 +2988,7 @@ msgstr "Předřadit časové razítko ke zprávě o průběhu"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l765
 #: ../openconnect-strings.txt:1479
 msgid "copy TOS / TCLASS when using DTLS"
-msgstr ""
+msgstr "Při použití DTLS zkopírovat TOS/TCLASS"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l767
 #: ../openconnect-strings.txt:1482
@@ -2760,7 +3008,7 @@ msgstr "Spusit SCRIPT místo programu CSD"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l771
 #: ../openconnect-strings.txt:1491
 msgid "Request MTU from server (legacy servers only)"
-msgstr ""
+msgstr "Vyžádat MTU od serveru (jen pro zastarelé servery)"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l772
 #: ../openconnect-strings.txt:1494
@@ -3108,6 +3356,8 @@ msgid ""
 "The --no-cert-check option was insecure and has been removed.\n"
 "Fix your server's certificate or use --servercert to trust it.\n"
 msgstr ""
+"Volba --no-cert-check nebyla bezpečná a proto byla odstraněna.\n"
+"Opravte svůj serverový certifikát nebo mu důvěřujte pomocí --servercert.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1311
 #: ../openconnect-strings.txt:1693
@@ -3260,12 +3510,14 @@ msgstr ""
 msgid ""
 "To trust this server in future, perhaps add this to your command line:\n"
 msgstr ""
+"Jestli chcete tomuto serveru důvěřovat i do budoucna, zkuste přidat do "
+"příkazového řádku následující:\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1721
 #: ../openconnect-strings.txt:1778
 #, c-format
 msgid "    --servercert %s\n"
-msgstr ""
+msgstr "    --servercert %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/main.c#l1726
 #: ../openconnect-strings.txt:1781
@@ -3920,7 +4172,7 @@ msgstr "Přihlašuje se ke slotu PKCS#11 „%s“\n"
 #: ../openconnect-strings.txt:2143
 #, c-format
 msgid "Failed to find PKCS#11 cert '%s'\n"
-msgstr ""
+msgstr "Nezdařilo se vyhledání certifikátu PKCS#11 „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l401
 #: ../openconnect-strings.txt:2146
@@ -3948,34 +4200,34 @@ msgstr "Nalezeno %d klíčů ve slotu „%s“\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l497
 #: ../openconnect-strings.txt:2159
 msgid "Certificate has no public key\n"
-msgstr ""
+msgstr "Certifikát klienta nemá žádý veřejný klíč\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l503
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l526
 #: ../openconnect-strings.txt:2163
 msgid "Certificate does not match private key\n"
-msgstr ""
+msgstr "Certifikát nevyhovuje žádnému soukromému klíči\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l506
 #: ../openconnect-strings.txt:2166
 msgid "Checking EC key matches cert\n"
-msgstr ""
+msgstr "Kontroluje se shoda klíče EC s certifikátem\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l510
 #: ../openconnect-strings.txt:2169
 msgid "Failed to allocate signature buffer\n"
-msgstr ""
+msgstr "Nepodařilo se alokovat vyrovnávací paměť pro podpis\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l520
 #: ../openconnect-strings.txt:2172
 msgid "Failed to sign dummy data to validate EC key\n"
-msgstr ""
+msgstr "Nezdařilo se podepsat fiktivní data kvůli ověření klíče EC\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l638
 #: ../openconnect-strings.txt:2175
 #, c-format
 msgid "Failed to find PKCS#11 key '%s'\n"
-msgstr ""
+msgstr "Nepodařilo se vyhledat klíč PKCS#11 „%s“\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl-pkcs11.c#l649
 #: ../openconnect-strings.txt:2178
@@ -4044,7 +4296,7 @@ msgstr "Zpracování PKCS#12 se nezdařilo (viz chyby výše)\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l552
 #: ../openconnect-strings.txt:2213
 msgid "PKCS#12 contained no certificate!\n"
-msgstr "PKCS#12 neobsahoval žádné osvědčení!\n"
+msgstr "PKCS#12 neobsahoval žádný certifikát!\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l561
 #: ../openconnect-strings.txt:2216
@@ -4152,7 +4404,7 @@ msgstr "Nahrávání soukromého klíče selhalo\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1011
 #: ../openconnect-strings.txt:2277
 msgid "Failed to convert PKCS#8 to OpenSSL EVP_PKEY\n"
-msgstr ""
+msgstr "Nezdařil se převod PKCS#8 na OpenSSL EVP_PKEY\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1028
 #: ../openconnect-strings.txt:2280
@@ -4257,12 +4509,12 @@ msgstr "<chyba>"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1640
 #: ../openconnect-strings.txt:2333
 msgid "Create TLSv1 CTX failed\n"
-msgstr ""
+msgstr "Vytvoření TLSv1 CTX se nezdařilo\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1655
 #: ../openconnect-strings.txt:2336
 msgid "SSL certificate and key do not match\n"
-msgstr ""
+msgstr "Certifikát SSL a klíč k sobě napsují\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/openssl.c#l1700
 #: ../openconnect-strings.txt:2339
@@ -4320,7 +4572,7 @@ msgstr "Skript „%s“ vrátil chybu %d\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l99
 #: ../openconnect-strings.txt:2367
 msgid "Socket connect cancelled\n"
-msgstr "Připojení zásuvky bylo zrušeno\n"
+msgstr "Připojení soketu bylo zrušeno\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l208
 #: ../openconnect-strings.txt:2370
@@ -4492,7 +4744,7 @@ msgstr "Neznámá rodina protokolu %d. Nelze vytvořit adresu serveru UDP\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l939
 #: ../openconnect-strings.txt:2461
 msgid "Open UDP socket"
-msgstr "Otevřít zásuvku UDP"
+msgstr "Otevřít soketu UDP"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/4a991d3a29:/ssl.c#l970
 #: ../openconnect-strings.txt:2464
@@ -5145,273 +5397,3 @@ msgstr "příkaz výpočtu"
 #: ../openconnect-strings.txt:2814
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Nerozpoznaná odpověď od Yubikey při generování kódu tokenu\n"
-
-#: ../properties/auth-helpers.c:58
-msgid "Choose a Certificate Authority certificate..."
-msgstr "Zvolit certifikát certifikační autority…"
-
-#: ../properties/auth-helpers.c:74
-msgid "Choose your personal certificate..."
-msgstr "Zvolte svůj osobní certifikát…"
-
-#: ../properties/auth-helpers.c:90
-msgid "Choose your private key..."
-msgstr "Zvolte svůj soukromý klíč…"
-
-#: ../properties/auth-helpers.c:250
-msgid "PEM certificates (*.pem, *.crt, *.key)"
-msgstr "Certifikáty PEM (*.pem, *.crt, *.key)"
-
-#: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Obecné</b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:2
-msgid "Select A File"
-msgstr "Zvolte soubor"
-
-#: ../properties/nm-openconnect-dialog.ui.h:3
-msgid "_VPN Protocol:"
-msgstr ""
-
-#: ../properties/nm-openconnect-dialog.ui.h:4
-msgid "_Gateway:"
-msgstr "_Brána:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:5
-msgid "_Proxy:"
-msgstr "_Proxy:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:6
-msgid "CA C_ertificate:"
-msgstr "Certifikát _CA:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:7
-msgid "Allow Cisco Secure Desktop _trojan"
-msgstr "Povolit Cisco Secure Desktop _trojan"
-
-#: ../properties/nm-openconnect-dialog.ui.h:8
-msgid "CSD _Wrapper Script:"
-msgstr "CSD _obalující skript:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Autentizace certifikátem<b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:10
-msgid "_User Certificate:"
-msgstr "Certifikát _uživatele:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:11
-msgid "Private _Key:"
-msgstr "Soukromý _klíč"
-
-#: ../properties/nm-openconnect-dialog.ui.h:12
-msgid "Use _FSID for key passphrase"
-msgstr "Použít _FSID jako heslo klíče"
-
-#: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Softwarový autentizační token </b>"
-
-#: ../properties/nm-openconnect-dialog.ui.h:14
-msgid "Token _Mode:"
-msgstr "Reži_m tokenu:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:15
-msgid "Token Sec_ret:"
-msgstr "He_slo tokenu:"
-
-#: ../properties/nm-openconnect-dialog.ui.h:16
-msgid "Disabled"
-msgstr "Zakázáno"
-
-#: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - read from ~/.stokenrc"
-msgstr "RSA SecurID – přečteno ze souboru ~/.stokenrc"
-
-#: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "RSA SecurID - manually entered"
-msgstr "RSA SecurID – zadáno ručně"
-
-#: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "TOTP - manually entered"
-msgstr "TOTP – zadáno ručně"
-
-#: ../properties/nm-openconnect-dialog.ui.h:20
-msgid "HOTP - manually entered"
-msgstr "HOTP – zadáno ručně"
-
-#: ../properties/nm-openconnect-dialog.ui.h:21
-msgid "Yubikey OATH"
-msgstr ""
-
-#: ../properties/nm-openconnect-dialog.ui.h:22
-msgid "Cisco AnyConnect"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:56
-msgid "Cisco AnyConnect Compatible VPN (openconnect)"
-msgstr "VPN kompatibilní s Cisco AnyConnect (openconnect)"
-
-#: ../properties/nm-openconnect-editor-plugin.c:57
-msgid "Compatible with Cisco AnyConnect SSL VPN."
-msgstr "Kompatibilní s Cisco AnyConnect SSL VPN."
-
-#: ../properties/nm-openconnect-editor-plugin.c:408
-msgid "Juniper Network Connect (openconnect)"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:409
-msgid "Compatible with Juniper Network Connect / Pulse Secure SSL VPN"
-msgstr ""
-
-#. we don't know this protocol by name, but it's configured in the .name file,
-#. * so just take it.
-#: ../properties/nm-openconnect-editor-plugin.c:413
-#, c-format
-msgid "Openconnect VPN (%s)"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor-plugin.c:414
-#, c-format
-msgid "Openconnect SSL VPN with %s protocol"
-msgstr ""
-
-#: ../properties/nm-openconnect-editor.c:226
-msgid "Juniper/Pulse Network Connect"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:185
-#, c-format
-msgid "object class '%s' has no property named '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:192
-#, c-format
-msgid "property '%s' of object class '%s' is not writable"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:199
-#, c-format
-msgid ""
-"construct property \"%s\" for object '%s' can't be set after construction"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:207
-#, c-format
-msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:216
-#, c-format
-msgid "unable to set property '%s' of type '%s' from value of type '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-shared-utils.c:227
-#, c-format
-msgid ""
-"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
-"type '%s'"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:80
-#, c-format
-msgid "missing plugin file \"%s\""
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:86
-#, c-format
-msgid "cannot load editor plugin: %s"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:95
-#, c-format
-msgid "cannot load factory %s from plugin: %s"
-msgstr ""
-
-#: ../shared/nm-utils/nm-vpn-plugin-utils.c:121
-msgid "unknown error creating editor instance"
-msgstr ""
-
-#: ../src/nm-openconnect-service.c:177
-#, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
-msgstr "celočíselná volba „%s“ je neplatná nebo mimo rozsah [%d -> %d]"
-
-#: ../src/nm-openconnect-service.c:187
-#, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
-msgstr "pravdivostní volba „%s“ je neplatná (není ano či ne)"
-
-#: ../src/nm-openconnect-service.c:194
-#, c-format
-msgid "unhandled property '%s' type %s"
-msgstr "neošetřená volba „%s“ typu %s"
-
-#: ../src/nm-openconnect-service.c:207
-#, c-format
-msgid "property '%s' invalid or not supported"
-msgstr "volba „%s“ není platná nebo podorovaná"
-
-#: ../src/nm-openconnect-service.c:223
-msgid "No VPN configuration options."
-msgstr "Žádné volby nastavení VPN."
-
-#: ../src/nm-openconnect-service.c:241
-msgid "No VPN secrets!"
-msgstr "Žádná hesla VPN!"
-
-#: ../src/nm-openconnect-service.c:409
-msgid "Could not find openconnect binary."
-msgstr "Nelze nalézt program openconnect."
-
-#: ../src/nm-openconnect-service.c:421
-msgid "No VPN gateway specified."
-msgstr "Nebyla zadána žádná brána VPN."
-
-#: ../src/nm-openconnect-service.c:431
-msgid "No WebVPN cookie provided."
-msgstr "Nebyla poskytnuta žádná cookie WebVPN."
-
-#: ../src/nm-openconnect-service.c:691
-msgid "Don't quit when VPN connection terminates"
-msgstr "Nevypínat, když se spojení VPN ukončuje"
-
-#: ../src/nm-openconnect-service.c:692
-msgid "Enable verbose debug logging (may expose passwords)"
-msgstr "Povolit podrobný ladicí výpis (může prozradit hesla)"
-
-#: ../src/nm-openconnect-service.c:693
-msgid "D-Bus name to use for this instance"
-msgstr "Název použitý v D-Bus pro tuto instanci"
-
-#: ../src/nm-openconnect-service.c:716
-msgid ""
-"nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
-"capability to NetworkManager."
-msgstr ""
-"Služba nm-openconnect-service poskytuje integraci podpory pro Cisco "
-"AnyConnect SSL do aplikace NetworkManager."
-
-#~ msgid "Discarding ancient ESP packet with seq %u (expected %u)\n"
-#~ msgstr "Zahazuje se starý ESP paket se sekv. č. %u (očekáváno %u)\n"
-
-#~ msgid "Accepting out-of-order ESP packet with seq %u (expected %u)\n"
-#~ msgstr "Přijímá se ESP paket mimo pořadí se sekv. č. %u (očekáváno %u)\n"
-
-#~ msgid "Accepting later-than-expected ESP packet with seq %u (expected %u)\n"
-#~ msgstr ""
-#~ "Přijímá se novější než očekávaný ESP paket se sekv. č. %u (očekáváno %u)\n"
-
-#~ msgid "PKCS#12 contained no private key!"
-#~ msgstr "PKCS#12 neobsahoval žádný soukromý klíč!"
-
-#~ msgid "PKCS#12 contained no certificate!"
-#~ msgstr "PKCS#12 neobsahoval žádné osvědčení!"
-
-#~ msgid "Request MTU from server"
-#~ msgstr "Vyžádat MTU od serveru"
-
-#~ msgid "(error 0x%x)"
-#~ msgstr "(chyba 0x%x)"
