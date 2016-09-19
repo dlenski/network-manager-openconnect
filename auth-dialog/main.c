@@ -1160,6 +1160,7 @@ static gboolean write_notice_real(char *message)
 }
 
 /* runs in worker thread */
+ _nm_printf (3, 4)
 static void write_progress(void *cbdata, int level, const char *fmt, ...)
 {
 	va_list args;
