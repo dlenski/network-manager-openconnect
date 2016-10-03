@@ -16,9 +16,11 @@
             <child>
               <object class="GtkLabel" id="label22">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">&lt;b&gt;General&lt;/b&gt;</property>
+                <property name="label" translatable="yes">General</property>
                 <property name="use_underline">False</property>
-                <property name="use_markup">True</property>
+                <attributes>
+                  <attribute name="weight" value="bold"/>
+                </attributes>
                 <property name="justify">GTK_JUSTIFY_LEFT</property>
                 <property name="wrap">False</property>
                 <property name="selectable">False</property>
@@ -420,9 +422,11 @@
             <child>
               <object class="GtkLabel" id="label25">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">&lt;b&gt;Certificate Authentication&lt;/b&gt;</property>
+                <property name="label" translatable="yes">Certificate Authentication</property>
                 <property name="use_underline">False</property>
-                <property name="use_markup">True</property>
+                <attributes>
+                  <attribute name="weight" value="bold"/>
+                </attributes>
                 <property name="justify">GTK_JUSTIFY_LEFT</property>
                 <property name="wrap">False</property>
                 <property name="selectable">False</property>
@@ -620,9 +624,11 @@
         <child>
           <object class="GtkLabel" id="label26">
             <property name="visible">True</property>
-            <property name="label" translatable="yes">&lt;b&gt;Software Token Authentication&lt;/b&gt;</property>
+            <property name="label" translatable="yes">Software Token Authentication</property>
             <property name="use_underline">False</property>
-            <property name="use_markup">True</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
             <property name="justify">GTK_JUSTIFY_LEFT</property>
             <property name="wrap">False</property>
             <property name="selectable">False</property>
