@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-25 04:20+0200\n"
-"PO-Revision-Date: 2016-09-25 04:21+0200\n"
+"POT-Creation-Date: 2016-10-03 22:09+0200\n"
+"PO-Revision-Date: 2016-10-03 22:10+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
@@ -51,7 +51,7 @@ msgstr "OpenConnect: %s: %s:%s"
 
 #: ../auth-dialog/main.c:687
 #, c-format
-msgid "Connect to VPN '%s'"
+msgid "Connect to VPN “%s”"
 msgstr "Połącz z siecią VPN „%s”"
 
 #: ../auth-dialog/main.c:689
@@ -61,7 +61,7 @@ msgstr "Połącz z siecią VPN"
 #: ../auth-dialog/main.c:729
 #, c-format
 msgid ""
-"Certificate from VPN server \"%s\" failed verification.\n"
+"Certificate from VPN server “%s” failed verification.\n"
 "Reason: %s\n"
 "Do you want to accept it?"
 msgstr ""
@@ -90,7 +90,7 @@ msgid "Select a host to fetch the login form"
 msgstr "Wybór komputera, z którego pobrać login"
 
 #: ../auth-dialog/main.c:1456
-msgid "Contacting host, please wait..."
+msgid "Contacting host, please wait…"
 msgstr "Łączenie się z komputerem, proszę czekać…"
 
 #: ../auth-dialog/main.c:1468
@@ -110,15 +110,15 @@ msgid "Log"
 msgstr "Dziennik"
 
 #: ../properties/auth-helpers.c:58
-msgid "Choose a Certificate Authority certificate..."
+msgid "Choose a Certificate Authority certificate…"
 msgstr "Wybierz certyfikat CA…"
 
 #: ../properties/auth-helpers.c:74
-msgid "Choose your personal certificate..."
+msgid "Choose your personal certificate…"
 msgstr "Wybierz certyfikat prywatny…"
 
 #: ../properties/auth-helpers.c:90
-msgid "Choose your private key..."
+msgid "Choose your private key…"
 msgstr "Wybierz klucz prywatny…"
 
 #: ../properties/auth-helpers.c:250
@@ -126,8 +126,8 @@ msgid "PEM certificates (*.pem, *.crt, *.key)"
 msgstr "Certyfikaty PEM (*.pem, *.crt, *.key)"
 
 #: ../properties/nm-openconnect-dialog.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Ogólne</b>"
+msgid "General"
+msgstr "Ogólne"
 
 #: ../properties/nm-openconnect-dialog.ui.h:2
 msgid "Select A File"
@@ -158,8 +158,8 @@ msgid "CSD _Wrapper Script:"
 msgstr "Skrypt _wrappera CSD:"
 
 #: ../properties/nm-openconnect-dialog.ui.h:9
-msgid "<b>Certificate Authentication</b>"
-msgstr "<b>Uwierzytelnianie certyfikatu</b>"
+msgid "Certificate Authentication"
+msgstr "Uwierzytelnianie certyfikatu"
 
 #: ../properties/nm-openconnect-dialog.ui.h:10
 msgid "_User Certificate:"
@@ -174,8 +174,8 @@ msgid "Use _FSID for key passphrase"
 msgstr "Użycie _FSID dla hasła klucza"
 
 #: ../properties/nm-openconnect-dialog.ui.h:13
-msgid "<b>Software Token Authentication</b>"
-msgstr "<b>Uwierzytelnianie tokenem programowym</b>"
+msgid "Software Token Authentication"
+msgstr "Uwierzytelnianie tokenem programowym"
 
 #: ../properties/nm-openconnect-dialog.ui.h:14
 msgid "Token _Mode:"
@@ -190,19 +190,19 @@ msgid "Disabled"
 msgstr "Wyłączone"
 
 #: ../properties/nm-openconnect-dialog.ui.h:17
-msgid "RSA SecurID - read from ~/.stokenrc"
+msgid "RSA SecurID — read from ~/.stokenrc"
 msgstr "SecurID RSA — odczytywanie z ~/.stokenrc"
 
 #: ../properties/nm-openconnect-dialog.ui.h:18
-msgid "RSA SecurID - manually entered"
+msgid "RSA SecurID — manually entered"
 msgstr "SecurID RSA — wprowadzane ręcznie"
 
 #: ../properties/nm-openconnect-dialog.ui.h:19
-msgid "TOTP - manually entered"
+msgid "TOTP — manually entered"
 msgstr "TOTP — wprowadzane ręcznie"
 
 #: ../properties/nm-openconnect-dialog.ui.h:20
-msgid "HOTP - manually entered"
+msgid "HOTP — manually entered"
 msgstr "HOTP — wprowadzane ręcznie"
 
 #: ../properties/nm-openconnect-dialog.ui.h:21
@@ -305,25 +305,25 @@ msgstr "nieznany błąd podczas tworzenia wystąpienia edytora"
 
 #: ../src/nm-openconnect-service.c:177
 #, c-format
-msgid "invalid integer property '%s' or out of range [%d -> %d]"
+msgid "invalid integer property “%s” or out of range [%d -> %d]"
 msgstr ""
 "nieprawidłowa własność liczby całkowitej „%s” lub jest poza zakresem [%d -> "
 "%d]"
 
 #: ../src/nm-openconnect-service.c:187
 #, c-format
-msgid "invalid boolean property '%s' (not yes or no)"
+msgid "invalid boolean property “%s” (not yes or no)"
 msgstr ""
 "nieprawidłowa własność zmiennej logicznej „%s” (nie wynosi „yes” lub „no”)"
 
 #: ../src/nm-openconnect-service.c:194
 #, c-format
-msgid "unhandled property '%s' type %s"
+msgid "unhandled property “%s” type %s"
 msgstr "nieobsługiwana własność „%s” typu „%s”"
 
 #: ../src/nm-openconnect-service.c:207
 #, c-format
-msgid "property '%s' invalid or not supported"
+msgid "property “%s” invalid or not supported"
 msgstr "własność „%s” jest nieprawidłowa lub nieobsługiwana"
 
 #: ../src/nm-openconnect-service.c:223
@@ -347,7 +347,7 @@ msgid "No WebVPN cookie provided."
 msgstr "Nie podano ciasteczka WebVPN."
 
 #: ../src/nm-openconnect-service.c:691
-msgid "Don't quit when VPN connection terminates"
+msgid "Don’t quit when VPN connection terminates"
 msgstr "Bez kończenia działania, kiedy połączenie VPN zostaje zakończone"
 
 #: ../src/nm-openconnect-service.c:692
