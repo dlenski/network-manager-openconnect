@@ -55,7 +55,7 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
 	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (widget), filter);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (widget), TRUE);
 	gtk_file_chooser_button_set_title (GTK_FILE_CHOOSER_BUTTON (widget),
-	                                   _("Choose a Certificate Authority certificate..."));
+	                                   _("Choose a Certificate Authority certificate…"));
 	g_signal_connect (G_OBJECT (widget), "selection-changed", G_CALLBACK (changed_cb), user_data);
 
 	if (s_vpn) {
@@ -71,7 +71,7 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
 	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (widget), filter);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (widget), TRUE);
 	gtk_file_chooser_button_set_title (GTK_FILE_CHOOSER_BUTTON (widget),
-	                                   _("Choose your personal certificate..."));
+	                                   _("Choose your personal certificate…"));
 	g_signal_connect (G_OBJECT (widget), "selection-changed", G_CALLBACK (changed_cb), user_data);
 
 	if (s_vpn) {
@@ -87,7 +87,7 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
 	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (widget), filter);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (widget), TRUE);
 	gtk_file_chooser_button_set_title (GTK_FILE_CHOOSER_BUTTON (widget),
-	                                   _("Choose your private key..."));
+	                                   _("Choose your private key…"));
 	g_signal_connect (G_OBJECT (widget), "selection-changed", G_CALLBACK (changed_cb), user_data);
 
 	if (s_vpn) {

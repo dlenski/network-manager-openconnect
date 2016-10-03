@@ -684,7 +684,7 @@ static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 static char* get_title(const char *vpn_name)
 {
 	if (vpn_name)
-		return g_strdup_printf(_("Connect to VPN '%s'"), vpn_name);
+		return g_strdup_printf(_("Connect to VPN “%s”"), vpn_name);
 	else
 		return g_strdup(_("Connect to VPN"));
 }
@@ -726,7 +726,7 @@ static gboolean user_validate_cert(cert_data *data)
 	title = get_title(data->ui_data->vpn_name);
 	dlg = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION,
 				     GTK_BUTTONS_OK_CANCEL,
-	                             _("Certificate from VPN server \"%s\" failed verification.\n"
+	                             _("Certificate from VPN server “%s” failed verification.\n"
 			             "Reason: %s\nDo you want to accept it?"),
 			             openconnect_get_hostname(data->ui_data->vpninfo),
 			             data->reason);
@@ -1453,7 +1453,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 	gtk_box_pack_start(GTK_BOX(frame_box), ui_data->no_form_label, FALSE, FALSE, 0);
 	gtk_widget_show(ui_data->no_form_label);
 
-	ui_data->getting_form_label = gtk_label_new(_("Contacting host, please wait..."));
+	ui_data->getting_form_label = gtk_label_new(_("Contacting host, please wait…"));
 	gtk_widget_set_sensitive(ui_data->getting_form_label, FALSE);
 	gtk_box_pack_start(GTK_BOX(frame_box), ui_data->getting_form_label, FALSE, FALSE, 0);
 
