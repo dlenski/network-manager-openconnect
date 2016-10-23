@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=NetworkManager&keywords=I18N+L10N&component=VPN: openconnect\n"
-"POT-Creation-Date: 2016-10-03 20:11+0000\n"
-"PO-Revision-Date: 2016-06-30 14:41+0100\n"
+"POT-Creation-Date: 2016-10-07 06:33+0000\n"
+"PO-Revision-Date: 2016-10-19 11:38+0200\n"
 "Last-Translator: Zdeněk Hataš <zdenek.hatas@gmail.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
 msgid "OpenConnect VPN client"
@@ -1199,23 +1199,20 @@ msgstr "Zahajuje se detekce IPv4 MTU (min=%d, max=%d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l509
 #: ../openconnect-strings.txt:482
-#, fuzzy
-#| msgid "Too long time in MTU detect loop; bailing out.\n"
 msgid "Too long time in MTU detect loop; assuming negotiated MTU.\n"
-msgstr "Příliš dlouhé trvání detekční smyčky MTU, ukončuje se.\n"
+msgstr "Příliš dlouhé trvání detekční smyčky MTU, převezme se vyjednané MTU.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l513
 #: ../openconnect-strings.txt:485
-#, fuzzy, c-format
-#| msgid "Too long time in MTU detect loop; bailing out.\n"
+#, c-format
 msgid "Too long time in MTU detect loop; MTU set to %d.\n"
-msgstr "Příliš dlouhé trvání detekční smyčky MTU, ukončuje se.\n"
+msgstr "Příliš dlouhé trvání detekční smyčky MTU. MTU nastaveno na %d.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l522
 #: ../openconnect-strings.txt:488
 #, c-format
 msgid "Sending MTU DPD probe (%u bytes, min=%u, max=%u)\n"
-msgstr ""
+msgstr "Posílá se MTU DPD sonda (%u bajtů, min=%u, max=%u)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l526
 #: ../openconnect-strings.txt:491
@@ -1232,16 +1229,15 @@ msgstr "Při detekci MTU byl přijat neočekávaný paket (%.2x), přeskakuje se
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l552
 #: ../openconnect-strings.txt:498
-#, fuzzy, c-format
-#| msgid "Sent start; waiting for response from TNCC\n"
+#, c-format
 msgid "Timeout while waiting for DPD response; trying %d\n"
-msgstr "Odeslán start, čeká se na odpověď od TNCC\n"
+msgstr "Vypršel časový limit čekání na DPD odpověď, zkouší se %d\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l559
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l640
 #: ../openconnect-strings.txt:502
 msgid "Timeout while waiting for DPD response; resending probe.\n"
-msgstr ""
+msgstr "Vypršel časový limit čekání na DPD odpověď, posílá se nová sonda.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l566
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l667
@@ -1252,10 +1248,9 @@ msgstr "Nepodařilo se přijmout požadavek DPD (%d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l571
 #: ../openconnect-strings.txt:509
-#, fuzzy, c-format
-#| msgid "Detected MTU of %d bytes (was %d)\n"
+#, c-format
 msgid "Received MTU DPD probe (%u bytes of %u)\n"
-msgstr "Detekována MTU %d bajtů (bylo %d)\n"
+msgstr "Sonda MTU DPD byla přijata (%u bajtů z %u)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l609
 #: ../openconnect-strings.txt:512
@@ -1264,10 +1259,9 @@ msgstr "Zahajuje se detekce IPv6 MTU\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l624
 #: ../openconnect-strings.txt:515
-#, fuzzy, c-format
-#| msgid "Sending SSPI token of %lu bytes\n"
+#, c-format
 msgid "Sending MTU DPD probe (%u bytes)\n"
-msgstr "Odesílá se token SSPI délky %lu bajtů\n"
+msgstr "Odesílá se sonda MTU DPD (%u bajtů)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l628
 #: ../openconnect-strings.txt:518
@@ -1277,28 +1271,27 @@ msgstr "Nepodařilo se poslat požadavek DPD (%d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l653
 #: ../openconnect-strings.txt:521
-#, fuzzy, c-format
-#| msgid "Received ESP packet of %d bytes\n"
+#, c-format
 msgid "Received MTU DPD probe (%u bytes)\n"
-msgstr "Přijat ESP paket o velikosti %d bajtů\n"
+msgstr "Sonda MTU DPD byla přijata (%u bajtů)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l717
 #: ../openconnect-strings.txt:524
 #, c-format
 msgid "Detected MTU of %d bytes (was %d)\n"
-msgstr "Detekována MTU %d bajtů (bylo %d)\n"
+msgstr "Detekována MTU %d bajtů (bylo %d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/dtls.c#l720
 #: ../openconnect-strings.txt:527
 #, c-format
 msgid "No change in MTU after detection (was %d)\n"
-msgstr "Nedetekována žádná změna MTU (bylo %d)\n"
+msgstr "Nedetekována žádná změna MTU (bylo %d)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/esp-seqno.c#l61
 #: ../openconnect-strings.txt:530
 #, c-format
 msgid "Accepting expected ESP packet with seq %u\n"
-msgstr "Přijímá se očekávaný ESP paket se sekv. č. %u\n"
+msgstr "Přijímá se očekávaný paket ESP se pořadovým číslem %u\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/esp-seqno.c#l91
 #: ../openconnect-strings.txt:533
@@ -1306,7 +1299,7 @@ msgstr "Přijímá se očekávaný ESP paket se sekv. č. %u\n"
 msgid ""
 "Accepting later-than-expected ESP packet with seq %u (expected %<PRIu64>)\n"
 msgstr ""
-"Přijímá se novější než očekávaný ESP paket s pořadovým číslem %u (očekáváno "
+"Přijímá se novější než očekávaný ESP paket s pořadovým číslem %u (očekáváno "
 "%<PRIu64>)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/esp-seqno.c#l103
@@ -1314,20 +1307,20 @@ msgstr ""
 #, c-format
 msgid "Discarding ancient ESP packet with seq %u (expected %<PRIu64>)\n"
 msgstr ""
-"Zahazuje se starý ESP paket s pořadovým číslem %u (očekáváno %<PRIu64>)\n"
+"Zahazuje se starý ESP paket s pořadovým číslem %u (očekáváno %<PRIu64>)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/esp-seqno.c#l110
 #: ../openconnect-strings.txt:540
 #, c-format
 msgid "Discarding replayed ESP packet with seq %u\n"
-msgstr "Zahazuje se opakovaný ESP paket s pořadovým číslem %u\n"
+msgstr "Zahazuje se opakovaný ESP paket s pořadovým číslem %u\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/esp-seqno.c#l122
 #: ../openconnect-strings.txt:543
 #, c-format
 msgid "Accepting out-of-order ESP packet with seq %u (expected %<PRIu64>)\n"
 msgstr ""
-"Přijímá se ESP paket mimo pořadí s pořadovým číslem %u (očekáváno "
+"Přijímá se ESP paket mimo pořadí s pořadovým číslem %u (očekáváno "
 "%<PRIu64>)\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/esp.c#l68
@@ -1454,10 +1447,8 @@ msgstr "Odesláno %d bajtů v ESP paketu\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls-dtls.c#l164
 #: ../openconnect-strings.txt:613
-#, fuzzy
-#| msgid "Failed to set DTLS priority: %s\n"
 msgid "Failed to generate DTLS priority string\n"
-msgstr "Nezdařilo se nastavit DTLS prioritu: %s\n"
+msgstr "Selhalo generování řetězce DTLS priority\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls-dtls.c#l173
 #: ../openconnect-strings.txt:616
@@ -1473,10 +1464,9 @@ msgstr "Nezdařilo se nastavit DTLS prioritu: „%s“: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls-dtls.c#l194
 #: ../openconnect-strings.txt:622
-#, fuzzy, c-format
-#| msgid "Failed to allocate %d bytes for %s\n"
+#, c-format
 msgid "Failed to allocate credentials: %s\n"
-msgstr "Selhala alokace %d bajtů pro %s\n"
+msgstr "Selhala alokace přihlašovacích údajů: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls-dtls.c#l207
 #: ../openconnect-strings.txt:625
@@ -1492,10 +1482,9 @@ msgstr "Nezdařilo se nastavit klíč DTLS: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls-dtls.c#l229
 #: ../openconnect-strings.txt:631
-#, fuzzy, c-format
-#| msgid "Failed to set DTLS priority: %s\n"
+#, c-format
 msgid "Failed to set DTLS PSK credentials: %s\n"
-msgstr "Nezdařilo se nastavit DTLS prioritu: %s\n"
+msgstr "Selhalo nastavení přihlašovacích údajů DTLS PSK: %s\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls-dtls.c#l262
 #: ../openconnect-strings.txt:634
@@ -1520,6 +1509,7 @@ msgstr "Nezdařilo se nastavení parametrů sezení DTLS: %s\n"
 #: ../openconnect-strings.txt:644
 msgid "DTLS session resume failed; possible MITM attack. Disabling DTLS.\n"
 msgstr ""
+"Obnovení relace DTLS selhalo. Podezření na útok typu MITM. DTLS bude zakázáno.\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls-dtls.c#l334
 #: ../openconnect-strings.txt:647
@@ -2023,10 +2013,8 @@ msgstr ""
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls.c#l1772
 #: ../openconnect-strings.txt:927
-#, fuzzy
-#| msgid "Got next CA '%s' from PKCS11\n"
 msgid "Got no issuer from PKCS#11\n"
-msgstr "Získána další CA „%s“ z PKCS11\n"
+msgstr "Z PKCS#11 nebyl získán žádný vydavatel\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/gnutls.c#l1777
 #: ../openconnect-strings.txt:930
@@ -4119,14 +4107,12 @@ msgstr "Inicializace DTLSv1 sezení se nepodařila\n"
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/openssl-dtls.c#l188
 #: ../openconnect-strings.txt:2099
 msgid "PSK callback\n"
-msgstr ""
+msgstr "Zpětné volání PSK\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/openssl-dtls.c#l205
 #: ../openconnect-strings.txt:2102
-#, fuzzy
-#| msgid "Failed to create SSL_SESSION ASN.1 for OpenSSL: %s\n"
 msgid "Failed to create app-identity extension for OpenSSL\n"
-msgstr "Selhalo vytvoření SSL_SESSION ASN.1 pro OpenSSL: %s\n"
+msgstr "Selhalo vytvoření rozšíření app-identity pro OpenSSL\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/openssl-dtls.c#l269
 #: ../openconnect-strings.txt:2105
@@ -5090,6 +5076,8 @@ msgid ""
 "GetAdapterIndex() failed: %s\n"
 "Falling back to GetAdaptersInfo()\n"
 msgstr ""
+"GetAdapterIndex() selhala: %s\n"
+"Použije se znovu GetAdaptersInfo()\n"
 
 #. http://git.infradead.org/users/dwmw2/openconnect.git/blob/8f5fbe799e:/tun-win32.c#l200
 #: ../openconnect-strings.txt:2642
@@ -5547,8 +5535,3 @@ msgstr "příkaz výpočtu"
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Nerozpoznaná odpověď od Yubikey při generování kódu tokenu\n"
 
-#~ msgid "SSL operation cancelled\n"
-#~ msgstr "Spojení SSL bylo zrušeno\n"
-
-#~ msgid "using OpenSSL"
-#~ msgstr "používá se OpenSSL"
