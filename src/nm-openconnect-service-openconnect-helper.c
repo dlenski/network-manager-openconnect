@@ -450,6 +450,7 @@ main (int argc, char *argv[])
 	GError *err = NULL;
 	struct in_addr temp_addr;
 	char *bus_path;
+	gboolean has_ip4 = FALSE, has_ip6 = FALSE;
 
 #if !GLIB_CHECK_VERSION (2, 35, 0)
 	g_type_init ();
@@ -558,6 +559,7 @@ main (int argc, char *argv[])
 			g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_ADDRESS, val);
 		else
 			helper_failed (proxy, "IP4 Address");
+		has_ip4 = TRUE;
 	}
 
 	/* IPv4 PTP address; for openconnect PTP address == internal IPv4 address */
@@ -626,6 +628,7 @@ main (int argc, char *argv[])
 			g_variant_builder_add (&ip6builder, "{sv}", NM_VPN_PLUGIN_IP6_CONFIG_ADDRESS, val);
 		else
 			helper_failed (proxy, "IP6 Address");
+		has_ip6 = TRUE;
 	}
 
 	/* IPv6 PTP address; for openconnect PTP address == internal IPv6 address */
@@ -663,7 +666,7 @@ main (int argc, char *argv[])
 
 	ip4config = g_variant_builder_end (&ip4builder);
 
-	if (g_variant_n_children (ip4config)) {
+	if (has_ip4) {
 		val = g_variant_new_boolean (TRUE);
 		g_variant_builder_add (&builder, "{sv}", NM_VPN_PLUGIN_CONFIG_HAS_IP4, val);
 	} else {
@@ -673,7 +676,7 @@ main (int argc, char *argv[])
 
 	ip6config = g_variant_builder_end (&ip6builder);
 
-	if (g_variant_n_children (ip6config)) {
+	if (has_ip6) {
 		val = g_variant_new_boolean (TRUE);
 		g_variant_builder_add (&builder, "{sv}", NM_VPN_PLUGIN_CONFIG_HAS_IP6, val);
 	} else {
