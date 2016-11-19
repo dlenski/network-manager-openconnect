@@ -551,18 +551,24 @@ main (int argc, char *argv[])
 	}
 
 	/* IPv4 address */
-	val = addr4_to_gvariant (getenv ("INTERNAL_IP4_ADDRESS"));
-	if (val)
-		g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_ADDRESS, val);
-	else
-		helper_failed (proxy, "IP4 Address");
+	tmp = getenv ("INTERNAL_IP4_ADDRESS");
+	if (tmp && strlen (tmp)) {
+		val = addr4_to_gvariant (tmp);
+		if (val)
+			g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_ADDRESS, val);
+		else
+			helper_failed (proxy, "IP4 Address");
+	}
 
 	/* IPv4 PTP address; for openconnect PTP address == internal IPv4 address */
-	val = addr4_to_gvariant (getenv ("INTERNAL_IP4_ADDRESS"));
-	if (val)
-		g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_PTP, val);
-	else
-		helper_failed (proxy, "IP4 PTP Address");
+	tmp = getenv ("INTERNAL_IP4_ADDRESS");
+	if (tmp && strlen (tmp)) {
+		val = addr4_to_gvariant (tmp);
+		if (val)
+			g_variant_builder_add (&ip4builder, "{sv}", NM_VPN_PLUGIN_IP4_CONFIG_PTP, val);
+		else
+			helper_failed (proxy, "IP4 Address");
+	}
 
 	/* IPv4 Netmask */
 	tmp = getenv ("INTERNAL_IP4_NETMASK");
