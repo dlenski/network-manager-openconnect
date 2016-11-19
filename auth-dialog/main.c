@@ -82,6 +82,8 @@
 #define write_config_const		/* */
 #endif
 
+#define AUTOSUBMIT_LIMIT 5
+
 static const SecretSchema openconnect_secret_schema = {
 	"org.freedesktop.NetworkManager.Connection.Openconnect",
 	SECRET_SCHEMA_DONT_MATCH_NAME,
@@ -193,6 +195,9 @@ typedef struct auth_ui_data {
 
 	GCond cert_response_changed;
 	enum certificate_response cert_response;
+
+	int autosubmit;
+	int fields_pending;
 } auth_ui_data;
 
 enum {
@@ -448,6 +453,15 @@ static char *find_form_answer(GHashTable *secrets, struct oc_auth_form *form,
 	return result;
 }
 
+static void form_autosubmit(auth_ui_data *ui_data)
+{
+	if (ui_data->fields_pending == 0 && ui_data->autosubmit) {
+		ui_data->autosubmit--;
+		gtk_button_clicked (GTK_BUTTON(ui_data->login_button));
+		gtk_widget_set_sensitive (ui_data->login_button, FALSE);
+	}
+}
+
 /* Callback which is called when we got a reply from the secret store for any
  * password field. Updates the contents of the password field unless the user
  * entered anything in the meantime. */
@@ -459,6 +473,7 @@ static void got_keyring_pw(GObject *object, GAsyncResult *result, gpointer userd
 	SecretValue *value = NULL;
 	const char *string = NULL;
 
+	data->ui_data->fields_pending--;
 	list = secret_service_search_finish (SECRET_SERVICE (object), result, NULL);
 	if (list != NULL) {
 		item = list->data;
@@ -476,7 +491,8 @@ static void got_keyring_pw(GObject *object, GAsyncResult *result, gpointer userd
 			}
 		} else
 			data->entry_text = g_strdup (string);
-	}
+	} else
+		data->ui_data->autosubmit = 0;
 
 	if (value)
 		secret_value_unref (value);
@@ -485,6 +501,8 @@ static void got_keyring_pw(GObject *object, GAsyncResult *result, gpointer userd
 	/* zero the cancellable so that we don’t attempt to cancel it when
 	 * closing the dialog */
 	g_clear_object (&data->cancel);
+
+	form_autosubmit (data->ui_data);
 }
 
 /* This part for processing forms from openconnect directly, rather than
@@ -529,8 +547,10 @@ static gboolean ui_form (struct oc_auth_form *form)
 			if (opt->type != OC_FORM_OPT_PASSWORD) {
 				data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 									      form, opt));
-				if (!data->entry_text)
+				if (!data->entry_text) {
 					data->entry_text = dup_option_value(opt);
+					ui_data->autosubmit = 0;
+				}
 			} else {
 				GHashTable *attrs;
 
@@ -540,6 +560,7 @@ static gboolean ui_form (struct oc_auth_form *form)
 				                                 "auth_id", form->auth_id,
 				                                 "label", data->opt->name,
 				                                 NULL);
+				ui_data->fields_pending++;
 				secret_service_search (NULL, &openconnect_secret_schema, attrs,
 				                       SECRET_SEARCH_ALL | SECRET_SEARCH_UNLOCK | SECRET_SEARCH_LOAD_SECRETS,
 				                       data->cancel, got_keyring_pw, data);
@@ -553,6 +574,8 @@ static gboolean ui_form (struct oc_auth_form *form)
 			g_mutex_unlock (&ui_data->form_mutex);
 			data->entry_text = g_strdup (find_form_answer(ui_data->secrets,
 								      form, opt));
+			if (!data->entry_text)
+				ui_data->autosubmit = 0;
 
 			if (opt == AUTHGROUP_OPT(form))
 				data->initial_selection = AUTHGROUP_SELECTION(form);
@@ -563,6 +586,8 @@ static gboolean ui_form (struct oc_auth_form *form)
 		} else
 			g_slice_free (ui_fragment_data, data);
 	}
+
+	form_autosubmit (ui_data);
 	
 	return ui_show(ui_data);
 }
@@ -798,6 +823,8 @@ static int validate_peer_cert(void *cbdata,
 	accepted_hash = g_hash_table_lookup (ui_data->secrets, certkey);
 	if (accepted_hash && !openconnect_check_peer_cert_hash(ui_data->vpninfo, accepted_hash))
 		goto accepted;
+
+	ui_data->autosubmit = 0;
 
 	data = g_slice_new(cert_data);
 	data->ui_data = ui_data; /* FIXME uses global */
@@ -1196,6 +1223,8 @@ static gboolean cookie_obtained(auth_ui_data *ui_data)
 	ui_data->getting_cookie = FALSE;
 	gtk_widget_hide (ui_data->getting_form_label);
 
+	ui_data->autosubmit = 0;
+
 	if (ui_data->cancelled) {
 		/* user has chosen a new host, start from beginning */
 		g_hash_table_remove_all (ui_data->success_secrets);
@@ -1438,6 +1467,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 		gtk_widget_show(autocon);
 		ui_data->autoconnect = autocon;
 	}
+
 	frame = gtk_frame_new(NULL);
 	gtk_box_pack_start(GTK_BOX(vbox), frame, TRUE, TRUE, 0);
 	gtk_widget_set_size_request(frame, -1, -1);
@@ -1529,6 +1559,8 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 							  g_free, g_free);
 	ui_data->success_passwords = g_hash_table_new_full (g_str_hash, g_str_equal,
 							  g_free, keyring_password_free);
+	ui_data->autosubmit = AUTOSUBMIT_LIMIT;
+
 	if (pipe(ui_data->cancel_pipes)) {
 		/* This should never happen, and the world is probably about
 		   to come crashing down around our ears. But attempt to cope
@@ -1599,6 +1631,8 @@ static gpointer init_connection (auth_ui_data *ui_data)
 	/* Start connecting now if there's only one host. Or if configured to */
 	if (!vpnhosts->next || gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui_data->autoconnect)))
 		queue_connect_host(_ui_data);
+	else
+		ui_data->autosubmit = 0;
 
 	return NULL;
 }
@@ -1695,12 +1729,14 @@ int main (int argc, char **argv)
 	gtk_window_present(GTK_WINDOW(_ui_data->dialog));
 	gtk_main();
 
+	if (!g_hash_table_size (_ui_data->secrets))
+		return 0;
+
 	/* Dump all secrets to stdout */
 	g_hash_table_iter_init (&iter, _ui_data->secrets);
 	while (g_hash_table_iter_next (&iter, (gpointer *)&key,
 				       (gpointer *)&value))
 		printf("%s\n%s\n", key, value);
-
 	printf("\n\n");
 	fflush(stdout);
 
