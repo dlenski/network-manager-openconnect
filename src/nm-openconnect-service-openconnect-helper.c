@@ -620,6 +620,11 @@ main (int argc, char *argv[])
 		                       g_variant_new_boolean (TRUE));
 	}
 
+	/* Default domain */
+	val = str_to_gvariant (getenv ("CISCO_DEF_DOMAIN"), TRUE);
+	if (val)
+		g_variant_builder_add (&ip6builder, "{sv}", NM_VPN_PLUGIN_IP6_CONFIG_DOMAIN, val);
+
 	/* IPv6 address */
 	tmp = getenv ("INTERNAL_IP6_ADDRESS");
 	if (tmp && strlen (tmp)) {
