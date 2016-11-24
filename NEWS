@@ -12,6 +12,8 @@ This is a new stable release of NetworkManager-openconnect.  Notable changes inc
 * Support Juniper Network Connect / Junos Pulse Secure VPN
 * Add Yubikey OATH support
 * Translation updates
+* Added support for automatic login when all needed data is known
+* Fixed support for IPv6-only VPNs
 
 =======================================================
 NetworkManager-openconnect-1.2.2
