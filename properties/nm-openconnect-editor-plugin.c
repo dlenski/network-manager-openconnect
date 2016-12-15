@@ -192,6 +192,11 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 	bval = g_key_file_get_boolean (keyfile, "openconnect", "FSID", NULL);
 	if (bval)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, "yes");
+	
+	/* Prevent invalid cert */
+	bval = g_key_file_get_boolean (keyfile, "openconnect", "PreventInvalidCert", NULL);
+	if (true)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PREVENT_INVALID_CERT, "yes");
 
 	/* Soft token mode */
 	buf = g_key_file_get_string (keyfile, "openconnect", "StokenSource", NULL);
@@ -224,6 +229,7 @@ export (NMVpnEditorPlugin *iface,
 	const char *usercert = NULL;
 	const char *privkey = NULL;
 	gboolean pem_passphrase_fsid = FALSE;
+	gboolean prevent_invalid_cert = FALSE;
 	const char *token_mode = NULL;
 	const char *token_secret = NULL;
 	gboolean success = FALSE;
@@ -284,6 +290,10 @@ export (NMVpnEditorPlugin *iface,
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID);
 	if (value && !strcmp (value, "yes"))
 		pem_passphrase_fsid = TRUE;
+	
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PREVENT_INVALID_CERT);
+	if (value && !strcmp (value, "yes"))
+		prevent_invalid_cert = TRUE;
 
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE);
 	if (value && strlen (value))
@@ -310,6 +320,7 @@ export (NMVpnEditorPlugin *iface,
 		 "UserCertificate=%s\n"
 		 "PrivateKey=%s\n"
 		 "FSID=%s\n"
+		 "PreventInvalidCert=%s\n"
 		 "StokenSource=%s\n"
 		 "StokenString=%s\n",
 		 /* Description */           nm_setting_connection_get_id (s_con),
@@ -322,6 +333,7 @@ export (NMVpnEditorPlugin *iface,
 		 /* User Certificate */      usercert,
 		 /* Private Key */           privkey,
 		 /* FSID */                  pem_passphrase_fsid ? "1" : "0",
+		 /* Prevent invalid cert */  prevent_invalid_cert ? "1" : "0",
 		 /* Soft token mode */       token_mode ? token_mode : "",
 		 /* Soft token secret */     token_secret ? token_secret : "");
 

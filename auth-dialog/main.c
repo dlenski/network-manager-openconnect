@@ -756,6 +756,9 @@ static gboolean user_validate_cert(cert_data *data)
 {
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
 	
+	char *prevent_invalid_cert;
+	gboolean invalid_cert_allowed;
+	
 	GtkWidget *dlg;
 	char *title;
 	
@@ -813,21 +816,27 @@ static gboolean user_validate_cert(cert_data *data)
 	g_signal_connect(cancel_button, "clicked", G_CALLBACK(cert_dialog_cancel_clicked), dlg);
 	gtk_widget_show(cancel_button);
 	
-	security_expander = gtk_expander_new(_("I really know what I am doing"));
-	gtk_box_pack_start(GTK_BOX(vbox), security_expander, FALSE, FALSE, 0);
-	gtk_widget_show(security_expander);
+	prevent_invalid_cert = g_hash_table_lookup(ui_data->options,
+							NM_OPENCONNECT_KEY_PREVENT_INVALID_CERT);									
+	invalid_cert_allowed = prevent_invalid_cert ? !strcmp(prevent_invalid_cert, "no") : TRUE;
 	
-	expander_hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-	gtk_container_add(GTK_CONTAINER(security_expander), expander_hbox);
-	gtk_container_set_border_width(GTK_CONTAINER(expander_hbox), 0);
-	gtk_widget_show(expander_hbox);
+	if (invalid_cert_allowed) {
+		security_expander = gtk_expander_new(_("I really know what I am doing"));
+		gtk_box_pack_start(GTK_BOX(vbox), security_expander, FALSE, FALSE, 0);
+		gtk_widget_show(security_expander);
 	
-	connect_button = gtk_button_new_with_label(_("Connect anyway"));
-	gtk_box_pack_start(GTK_BOX(expander_hbox), connect_button, FALSE, FALSE, 0);
-	gtk_widget_set_margin_start(connect_button, 12);
-	gtk_widget_set_margin_top(connect_button, 8);
-	g_signal_connect(connect_button, "clicked", G_CALLBACK(cert_dialog_connect_clicked), dlg);
-	gtk_widget_show(connect_button);
+		expander_hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+		gtk_container_add(GTK_CONTAINER(security_expander), expander_hbox);
+		gtk_container_set_border_width(GTK_CONTAINER(expander_hbox), 0);
+		gtk_widget_show(expander_hbox);
+	
+		connect_button = gtk_button_new_with_label(_("Connect anyway"));
+		gtk_box_pack_start(GTK_BOX(expander_hbox), connect_button, FALSE, FALSE, 0);
+		gtk_widget_set_margin_start(connect_button, 12);
+		gtk_widget_set_margin_top(connect_button, 8);
+		g_signal_connect(connect_button, "clicked", G_CALLBACK(cert_dialog_connect_clicked), dlg);
+		gtk_widget_show(connect_button);
+	}
 
 	result = gtk_dialog_run(GTK_DIALOG(dlg));
 
