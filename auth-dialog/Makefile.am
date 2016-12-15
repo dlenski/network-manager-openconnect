@@ -4,6 +4,7 @@ nm_openconnect_auth_dialog_CPPFLAGS = \
 	$(LIBNM_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(GTK_CFLAGS) \
+	$(GCR_CFLAGS) \
 	$(OPENCONNECT_CFLAGS) \
 	$(LIBXML_CFLAGS) \
 	$(LIBSECRET_CFLAGS) \
@@ -19,6 +20,7 @@ nm_openconnect_auth_dialog_SOURCES = \
 
 nm_openconnect_auth_dialog_LDADD = \
 	$(GTK_LIBS) \
+	$(GCR_LIBS) \
 	$(LIBNM_LIBS) \
 	$(OPENCONNECT_LIBS) \
 	$(LIBXML_LIBS) \

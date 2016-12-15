@@ -37,6 +37,8 @@
 #include <gtk/gtk.h>
 #include <glib-unix.h>
 
+#include <gcr/gcr.h>
+
 #include <libsecret/secret.h>
 
 #include "openconnect.h"
@@ -740,41 +742,92 @@ static char *openconnect_get_cert_details(struct openconnect_info *vpninfo,
 }
 #endif
 
+static void cert_dialog_cancel_clicked (GtkButton *btn, GtkDialog *dlg)
+{
+	gtk_dialog_response(dlg, GTK_RESPONSE_CANCEL);
+}
+
+static void cert_dialog_connect_clicked (GtkButton *btn, GtkDialog *dlg)
+{
+	gtk_dialog_response(dlg, GTK_RESPONSE_OK);
+}
+
 static gboolean user_validate_cert(cert_data *data)
 {
 	auth_ui_data *ui_data = _ui_data; /* FIXME global */
+	
+	GtkWidget *dlg;
 	char *title;
-	GtkWidget *dlg, *text, *scroll;
-	GtkTextBuffer *buffer;
+	
+	GtkWidget *vbox, *hbox, *expander_hbox;
+	
+	char *warning_label_text;
+	GtkWidget *warning_label;
+	
+	unsigned char *der_cert;
+	int der_cert_size;
+	GcrCertificate *cert;
+	GcrCertificateWidget *cert_widget;
+	
+	GtkWidget *cancel_button;
+	GtkWidget *security_expander;
+	GtkWidget *connect_button;
+	
 	int result;
-
+	
 	title = get_title(data->ui_data->vpn_name);
-	dlg = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION,
-				     GTK_BUTTONS_OK_CANCEL,
-	                             _("Certificate from VPN server “%s” failed verification.\n"
-			             "Reason: %s\nDo you want to accept it?"),
-			             openconnect_get_hostname(data->ui_data->vpninfo),
-			             data->reason);
-	gtk_window_set_skip_taskbar_hint(GTK_WINDOW(dlg), FALSE);
-	gtk_window_set_skip_pager_hint(GTK_WINDOW(dlg), FALSE);
+	dlg = gtk_dialog_new();
+	gtk_window_set_modal(GTK_WINDOW(dlg), true);
 	gtk_window_set_title(GTK_WINDOW(dlg), title);
-	gtk_window_set_default_size(GTK_WINDOW(dlg), 550, 600);
-	gtk_window_set_resizable(GTK_WINDOW(dlg), TRUE);
-	gtk_dialog_set_default_response(GTK_DIALOG(dlg), GTK_RESPONSE_CANCEL);
-
+	gtk_window_set_default_size(GTK_WINDOW(dlg), 350, 200);
 	g_free(title);
 
-	scroll = gtk_scrolled_window_new(NULL, NULL);
-	gtk_box_pack_start(GTK_BOX (gtk_dialog_get_content_area(GTK_DIALOG (dlg))), scroll, TRUE, TRUE, 0);
-	gtk_widget_show(scroll);
-
-	text = gtk_text_view_new();
-	buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(text));
-	gtk_text_buffer_set_text(buffer, data->cert_details, -1);
-	gtk_text_view_set_editable(GTK_TEXT_VIEW(text), 0);
-	gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(text), FALSE);
-	gtk_container_add(GTK_CONTAINER(scroll), text);
-	gtk_widget_show(text);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+	gtk_box_pack_start(GTK_BOX (gtk_dialog_get_content_area(GTK_DIALOG (dlg))), vbox, TRUE, TRUE, 0);
+	gtk_container_set_border_width(GTK_CONTAINER(vbox), 8);
+	gtk_widget_show(vbox);
+	
+	warning_label_text = g_strconcat(_("<b>The certificate may be invalid or untrusted!</b>\n"),
+									 _("<b>Reason: "), data->reason, ".</b>",
+									 NULL);
+	warning_label = gtk_label_new(NULL);
+	gtk_label_set_markup(GTK_LABEL(warning_label), warning_label_text);
+	gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(warning_label), FALSE, FALSE, 0);
+	gtk_widget_set_halign(warning_label, GTK_ALIGN_START);
+	gtk_label_set_line_wrap(GTK_LABEL(warning_label), true);
+	gtk_widget_show(warning_label);
+	g_free(warning_label_text);
+	
+	der_cert_size = openconnect_get_peer_cert_DER(data->ui_data->vpninfo, &der_cert);
+	cert = gcr_simple_certificate_new_static(der_cert, der_cert_size);
+	cert_widget = gcr_certificate_widget_new(cert);
+	gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(cert_widget), FALSE, FALSE, 0);
+	gtk_widget_show(GTK_WIDGET(cert_widget));
+	
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 4);
+	gtk_box_pack_start(GTK_BOX(vbox), hbox, FALSE, FALSE, 0);
+	gtk_widget_show(hbox);
+	
+	cancel_button = gtk_button_new_with_mnemonic(_("_Cancel"));
+	gtk_box_pack_start(GTK_BOX(hbox), cancel_button, FALSE, FALSE, 0);
+	g_signal_connect(cancel_button, "clicked", G_CALLBACK(cert_dialog_cancel_clicked), dlg);
+	gtk_widget_show(cancel_button);
+	
+	security_expander = gtk_expander_new(_("I really know what I am doing"));
+	gtk_box_pack_start(GTK_BOX(vbox), security_expander, FALSE, FALSE, 0);
+	gtk_widget_show(security_expander);
+	
+	expander_hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+	gtk_container_add(GTK_CONTAINER(security_expander), expander_hbox);
+	gtk_container_set_border_width(GTK_CONTAINER(expander_hbox), 0);
+	gtk_widget_show(expander_hbox);
+	
+	connect_button = gtk_button_new_with_label(_("Connect anyway"));
+	gtk_box_pack_start(GTK_BOX(expander_hbox), connect_button, FALSE, FALSE, 0);
+	gtk_widget_set_margin_start(connect_button, 12);
+	gtk_widget_set_margin_top(connect_button, 8);
+	g_signal_connect(connect_button, "clicked", G_CALLBACK(cert_dialog_connect_clicked), dlg);
+	gtk_widget_show(connect_button);
 
 	result = gtk_dialog_run(GTK_DIALOG(dlg));
 
