@@ -153,9 +153,10 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 	if (buf)
 		g_object_set (s_con, NM_SETTING_CONNECTION_ID, buf, NULL);
 
-	/* CA Certificate */
+	/* CA Certificate. We have an exception for filename "(null)" because
+	 * the exporter used to do that wrongly. */
 	buf = g_key_file_get_string (keyfile, "openconnect", "CACert", NULL);
-	if (buf)
+	if (buf && strcmp(buf, "(null)"))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT, buf);
 
 	/* Protocol */
@@ -180,12 +181,12 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 
 	/* User Certificate */
 	buf = g_key_file_get_string (keyfile, "openconnect", "UserCertificate", NULL);
-	if (buf)
+	if (buf && strcmp(buf, "(null)"))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_USERCERT, buf);
 
 	/* Private Key */
 	buf = g_key_file_get_string (keyfile, "openconnect", "PrivateKey", NULL);
-	if (buf)
+	if (buf && strcmp(buf, "(null)"))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PRIVKEY, buf);
 
 	/* FSID */
@@ -325,13 +326,13 @@ export (NMVpnEditorPlugin *iface,
 		 "StokenString=%s\n",
 		 /* Description */           nm_setting_connection_get_id (s_con),
 		 /* Host */                  gateway,
-		 /* CA Certificate */        cacert,
+		 /* CA Certificate */        cacert ? cacert : "",
 		 /* Protocol */              protocol ? protocol : "anyconnect",
 		 /* Proxy */                 proxy ? proxy : "",
 		 /* Cisco Secure Desktop */  csd_enable ? "1" : "0",
 		 /* CSD Wrapper Script */    csd_wrapper ? csd_wrapper : "",
-		 /* User Certificate */      usercert,
-		 /* Private Key */           privkey,
+		 /* User Certificate */      usercert ? usercert : "",
+		 /* Private Key */           privkey ? privkey : "",
 		 /* FSID */                  pem_passphrase_fsid ? "1" : "0",
 		 /* Prevent invalid cert */  prevent_invalid_cert ? "1" : "0",
 		 /* Soft token mode */       token_mode ? token_mode : "",
