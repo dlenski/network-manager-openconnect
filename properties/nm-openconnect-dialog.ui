@@ -872,11 +872,5 @@
           <!-- column-name protocol_value -->
           <column type="gchararray"/>
         </columns>
-        <data>
-          <row>
-            <col id="0" translatable="yes">Cisco AnyConnect</col>
-            <col id="1" translatable="no">anyconnect</col>
-          </row>
-        </data>
       </object>
 </interface>
