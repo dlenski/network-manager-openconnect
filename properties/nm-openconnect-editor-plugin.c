@@ -360,15 +360,29 @@ notify_plugin_info_set (NMVpnEditorPlugin *plugin,
                         NMVpnPluginInfo *plugin_info)
 {
 	OpenconnectEditorPluginPrivate *priv = OPENCONNECT_EDITOR_PLUGIN_GET_PRIVATE (plugin);
-	const char *supported_protocols;
 	guint i, j;
 
 	if (!plugin_info)
 		return;
 
-	supported_protocols = nm_vpn_plugin_info_lookup_property (plugin_info, "openconnect", "supported-protocols");
-
 	g_strfreev (priv->supported_protocols);
+
+#if OPENCONNECT_CHECK_VER(5,5)
+	struct oc_vpn_proto *protos, *p;
+
+	if ((i = openconnect_get_supported_protocols(&protos)) < 0)
+		priv->supported_protocols = g_new0(gchar *, 1);
+	else {
+		priv->supported_protocols = g_new0(gchar *, i+1);
+		for (i=0, p=protos; p && p->name; p++) {
+			priv->supported_protocols[i] = g_strdup(p->name);
+		}
+		openconnect_free_supported_protocols(protos);
+	}
+
+#else
+	const char *supported_protocols = nm_vpn_plugin_info_lookup_property (plugin_info, "openconnect", "supported-protocols");
+
 	priv->supported_protocols = supported_protocols
 	    ? g_strsplit_set (supported_protocols, ",", -1)
 	    : g_new0 (char *, 1);
@@ -382,6 +396,7 @@ notify_plugin_info_set (NMVpnEditorPlugin *plugin,
 			priv->supported_protocols[i++] = priv->supported_protocols[j];
 	}
 	priv->supported_protocols[i] = NULL;
+#endif
 }
 
 static char **

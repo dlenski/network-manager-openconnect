@@ -217,19 +217,36 @@ init_token_ui (OpenconnectEditor *self,
 static gboolean
 init_protocol_combo_options (GtkComboBox *protocol_combo)
 {
-#if OPENCONNECT_CHECK_VER(5,1)
 	GtkListStore *protocol_combo_list = GTK_LIST_STORE (gtk_combo_box_get_model (protocol_combo));
 	GtkTreeIter iter;
 
+#if OPENCONNECT_CHECK_VER(5,5)
+	struct oc_vpn_proto *protos, *p;
+	openconnect_get_supported_protocols(&protos);
+	for (p=protos; p && p->name; p++) {
+		gtk_list_store_append(protocol_combo_list, &iter);
+		gtk_list_store_set(protocol_combo_list, &iter,
+						   0, p->pretty_name,
+						   1, p->name,
+						   -1);
+	}
+	openconnect_free_supported_protocols(protos);
+#else
+	gtk_list_store_append(protocol_combo_list, &iter);
+	gtk_list_store_set(protocol_combo_list, &iter,
+					   0, _("Cisco AnyConnect"),
+					   1, "anyconnect",
+					   -1);
+#  if OPENCONNECT_CHECK_VER(5,1)
 	gtk_list_store_append(protocol_combo_list, &iter);
 	gtk_list_store_set(protocol_combo_list, &iter,
 					   0, _("Juniper/Pulse Network Connect"),
 					   1, "nc",
 					   -1);
-	return TRUE;
-#else
-	return FALSE;
+#  endif
 #endif
+
+	return OPENCONNECT_CHECK_VER(5,1);
 }
 
 static gboolean
