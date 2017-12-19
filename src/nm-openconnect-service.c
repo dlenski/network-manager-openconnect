@@ -392,6 +392,7 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	GSource *openconnect_watch;
 	gint	stdin_fd;
 	const char *props_vpn_gw, *props_cookie, *props_cacert, *props_mtu, *props_gwcert, *props_proxy;
+	const char *props_csd_enable, *props_csd_wrapper;
 	const char *protocol;
 
 	/* Find openconnect */
@@ -476,6 +477,18 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 
 	g_ptr_array_add (openconnect_argv, (gpointer) "--script");
 	g_ptr_array_add (openconnect_argv, (gpointer) NM_OPENCONNECT_HELPER_PATH);
+
+	props_csd_enable = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE);
+	props_csd_wrapper = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_WRAPPER);
+	if (props_csd_enable && !strcmp (props_csd_enable, "yes") && props_csd_wrapper) {
+		/* Replicate the CSD parameters used in the authentication phase, for
+		   supported protocols which may need to invoke the security trojan ("CSD")
+		   in the tunnel/connection phase. */
+		g_ptr_array_add (openconnect_argv, (gpointer) "--csd-wrapper");
+		g_ptr_array_add (openconnect_argv, (gpointer) props_csd_wrapper);
+		g_ptr_array_add (openconnect_argv, (gpointer) "--csd-user");
+		g_ptr_array_add (openconnect_argv, (gpointer) g_strdup_printf ("%d", getuid()));
+	}
 
 	priv->tun_name = create_persistent_tundev ();
 	if (priv->tun_name) {
