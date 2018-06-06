@@ -53,8 +53,16 @@
 # include "nm-utils/nm-vpn-plugin-utils.h"
 #endif
 
-#define OPENCONNECT_PLUGIN_NAME    _("Cisco AnyConnect Compatible VPN (openconnect)")
-#define OPENCONNECT_PLUGIN_DESC    _("Compatible with Cisco AnyConnect SSL VPN.")
+#if OPENCONNECT_CHECK_VER(5,5)
+# define OPENCONNECT_PLUGIN_NAME    _("Multi-protocol VPN client (openconnect)")
+# define OPENCONNECT_PLUGIN_DESC    _("Compatible with Cisco AnyConnect, Juniper Network Connect and Junos Pulse, and PAN GlobalProtect SSL VPNs.")
+#elif OPENCONNECT_CHECK_VER(5,5)
+# define OPENCONNECT_PLUGIN_NAME    _("Multi-protocol VPN client (openconnect)")
+# define OPENCONNECT_PLUGIN_DESC    _("Compatible with Cisco AnyConnect and Juniper Network Connect and Junos Pulse SSL VPNs.")
+#else
+# define OPENCONNECT_PLUGIN_NAME    _("Cisco AnyConnect Compatible VPN (openconnect)")
+# define OPENCONNECT_PLUGIN_DESC    _("Compatible with Cisco AnyConnect SSL VPN.")
+#endif
 
 /************** plugin class **************/
 
