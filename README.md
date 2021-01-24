@@ -1,3 +1,5 @@
+**Archiving this repository. See upstream where this work continues (slowly 😂): https://gitlab.gnome.org/GNOME/NetworkManager-openconnect**
+
 # network-manager-openconnect
 
 This is [`network-manager-openconnect`](https://git.gnome.org/browse/network-manager-openconnect/) extended with the multiprotocol support that will (hopefully) soon be included in the `libopenconnect` API.
